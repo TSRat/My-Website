@@ -40,6 +40,7 @@ npm run build
 npm run build:pages
 ```
 
-`main` 分支更新后，GitHub Actions 会自动重新生成并发布 `docs/`。首次公开入口由 `gh-pages` 静态分支启用，后续更新使用 GitHub Pages 的专用发布权限。静态首页和每期日刊都使用相对路径，因此可直接运行在 `TSRat/My-Website` 的项目站点路径下。
+每日发布流程会先运行静态生成器，再以保留提交历史的方式更新 `gh-pages` 发布分支。静态首页和每期日刊都使用相对路径，因此可直接运行在 `TSRat/My-Website` 的项目站点路径下。
 
 本仓库是公开源码镜像；线上发布由 OpenAI Sites 托管。
+
