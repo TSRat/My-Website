@@ -8,6 +8,8 @@
 
 线上站点：<https://thought-briefing-archive.tsrat.chatgpt.site>
 
+GitHub Pages 公开镜像：<https://tsrat.github.io/My-Website/>
+
 ## 功能
 
 - 总页面汇总每日简报，并链接到各期独立页面
@@ -31,5 +33,13 @@ npm run dev
 npm run lint
 npm run build
 ```
+
+生成不依赖服务器的 GitHub Pages 静态镜像：
+
+```bash
+npm run build:pages
+```
+
+`main` 分支更新后，GitHub Actions 会自动重新生成并发布 `docs/`。静态首页和每期日刊都使用相对路径，因此可直接运行在 `TSRat/My-Website` 的项目站点路径下。
 
 本仓库是公开源码镜像；线上发布由 OpenAI Sites 托管。
