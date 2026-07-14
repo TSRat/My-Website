@@ -8,7 +8,7 @@
 
 线上站点：<https://thought-briefing-archive.tsrat.chatgpt.site>
 
-GitHub Pages 公开镜像：<https://tsrat.github.io/My-Website/>
+GitHub Pages 公开镜像：<https://tsrat.github.io/My-Website/IVORY-ARCHIVE/>
 
 ## 功能
 
@@ -40,7 +40,6 @@ npm run build
 npm run build:pages
 ```
 
-每日发布流程会先运行静态生成器，再以保留提交历史的方式更新 `gh-pages` 发布分支。静态首页和每期日刊都使用相对路径，因此可直接运行在 `TSRat/My-Website` 的项目站点路径下。
+`My-Website` 是多个公开静态网站的总仓库：根路径是网站目录，每个网站位于独立子目录。每日发布流程会先运行静态生成器，再以保留提交历史的方式更新 `gh-pages` 发布分支。IVORY ARCHIVE 位于 `IVORY-ARCHIVE/`，其首页和每期日刊都使用相对路径；新增网站时只需增加新的并列目录，不会覆盖已有站点。
 
 本仓库是公开源码镜像；线上发布由 OpenAI Sites 托管。
-

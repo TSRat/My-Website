@@ -3,7 +3,9 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const output = join(root, "docs");
+const pagesRoot = join(root, "docs");
+const siteSlug = "IVORY-ARCHIVE";
+const output = join(pagesRoot, siteSlug);
 const source = await readFile(join(root, "app/briefings.ts"), "utf8");
 const declaration = source.indexOf("export const briefings");
 const literalStart = source.indexOf("[", declaration);
@@ -40,6 +42,55 @@ const escapeHtml = (value = "") => String(value)
   .replaceAll("'", "&#039;");
 
 const storyImageName = (story) => story.image.split("/").at(-1);
+
+function hubPage() {
+  const latest = briefings[0];
+  return `<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TSRat 的公开静态网站总入口。">
+  <title>TSRat · Website Archive</title>
+  <link rel="icon" href="${siteSlug}/favicon.svg">
+  <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+  <main>
+    <header class="masthead">
+      <p class="kicker">TSRat · PUBLIC WEB ARCHIVE</p>
+      <h1>网站档案馆</h1>
+      <p>这里集中存放独立创作、阅读项目与持续更新的公开网站。每个项目拥有自己的目录和永久链接。</p>
+    </header>
+    <section aria-labelledby="sites-title">
+      <div class="section-heading"><span>01</span><h2 id="sites-title">公开网站</h2></div>
+      <div class="site-grid">
+        <a class="site-card ivory" href="${siteSlug}/">
+          <div class="card-art" aria-hidden="true"><span>IA</span></div>
+          <div class="card-copy">
+            <p>DAILY THOUGHT BRIEFING</p>
+            <h3>IVORY ARCHIVE</h3>
+            <p>中文思想简报档案馆：艺术人文、社会科学（包括天文学）与女性主义。</p>
+            <dl><div><dt>最新一期</dt><dd>${escapeHtml(latest.displayDate)}</dd></div><div><dt>收录</dt><dd>${briefings.length} 期 · ${briefings.reduce((count, issue) => count + issue.stories.length, 0)} 则</dd></div></dl>
+            <strong>进入网站 <span>→</span></strong>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer><span>TSRat</span><span>GitHub Pages · Public Static Archive</span></footer>
+</body>
+</html>`;
+}
+
+function root404Page() {
+  return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>页面未找到 · TSRat</title><link rel="stylesheet" href="/My-Website/hub.css"></head><body><main class="not-found"><p class="kicker">404 · ARCHIVE CARD MISSING</p><h1>这个页面还没有被收入档案</h1><a href="/My-Website/">返回网站总入口 →</a></main></body></html>`;
+}
+
+function legacyRedirect(target) {
+  const safeTarget = escapeHtml(target);
+  return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0; url=${safeTarget}"><link rel="canonical" href="${safeTarget}"><title>正在前往 IVORY ARCHIVE</title><script>location.replace(${JSON.stringify(target)} + location.search + location.hash)</script></head><body><p>页面已迁移至 <a href="${safeTarget}">IVORY ARCHIVE</a>。</p></body></html>`;
+}
 
 function shell({ title, description, prefix, body }) {
   return `<!doctype html>
@@ -115,11 +166,17 @@ function issuePage(briefing) {
 
 const styles = await readFile(join(root, "scripts/github-pages.css"), "utf8");
 const client = await readFile(join(root, "scripts/github-pages.js"), "utf8");
+const hubStyles = await readFile(join(root, "scripts/github-pages-hub.css"), "utf8");
 
 await rm(output, { recursive: true, force: true });
+await rm(join(pagesRoot, "briefings"), { recursive: true, force: true });
+await mkdir(pagesRoot, { recursive: true });
 await mkdir(join(output, "briefings"), { recursive: true });
 await mkdir(join(output, "story-images"), { recursive: true });
-await writeFile(join(output, ".nojekyll"), "");
+await writeFile(join(pagesRoot, ".nojekyll"), "");
+await writeFile(join(pagesRoot, "index.html"), hubPage());
+await writeFile(join(pagesRoot, "hub.css"), hubStyles);
+await writeFile(join(pagesRoot, "404.html"), root404Page());
 await writeFile(join(output, "index.html"), homePage());
 await writeFile(join(output, "styles.css"), styles);
 await writeFile(join(output, "site.js"), client);
@@ -129,12 +186,15 @@ await copyFile(join(root, "public/ivory-botanical-archive.png"), join(output, "i
 
 for (const briefing of briefings) {
   const issueDir = join(output, "briefings", briefing.date);
+  const legacyIssueDir = join(pagesRoot, "briefings", briefing.date);
   await mkdir(issueDir, { recursive: true });
+  await mkdir(legacyIssueDir, { recursive: true });
   await writeFile(join(issueDir, "index.html"), issuePage(briefing));
+  await writeFile(join(legacyIssueDir, "index.html"), legacyRedirect(`../../${siteSlug}/briefings/${briefing.date}/`));
   for (const story of briefing.stories) {
     const name = storyImageName(story);
     await copyFile(join(root, "public/story-images", name), join(output, "story-images", name));
   }
 }
 
-console.log(`Generated GitHub Pages archive with ${briefings.length} issue(s).`);
+console.log(`Generated ${siteSlug} with ${briefings.length} issue(s) and the multi-site hub.`);
