@@ -10,6 +10,8 @@
 
 GitHub Pages 公开镜像：<https://tsrat.github.io/My-Website/IVORY-ARCHIVE/>
 
+恩赫杜安娜专题：<https://tsrat.github.io/My-Website/ENHEDUANNA/>
+
 ## 功能
 
 - 总页面汇总每日简报，并链接到各期独立页面
@@ -40,6 +42,6 @@ npm run build
 npm run build:pages
 ```
 
-`My-Website` 是多个公开静态网站的总仓库：根路径是网站目录，每个网站位于独立子目录。每日发布流程会先运行静态生成器，再以保留提交历史的方式更新 `gh-pages` 发布分支。IVORY ARCHIVE 位于 `IVORY-ARCHIVE/`，其首页和每期日刊都使用相对路径；新增网站时只需增加新的并列目录，不会覆盖已有站点。
+`My-Website` 是多个公开静态网站的总仓库：根路径是网站目录，每个网站位于独立子目录。每日发布流程会先运行静态生成器，再以保留提交历史的方式更新 `gh-pages` 发布分支。目前包含 `IVORY-ARCHIVE/` 与 `ENHEDUANNA/`；新增网站时继续增加并列目录，不会覆盖已有站点。
 
 本仓库是公开源码镜像；线上发布由 OpenAI Sites 托管。

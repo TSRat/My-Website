@@ -1,10 +1,12 @@
 import { copyFile, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { build as viteBuild } from "vite";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const pagesRoot = join(root, "docs");
 const siteSlug = "IVORY-ARCHIVE";
+const enheduannaSlug = "ENHEDUANNA";
 const output = join(pagesRoot, siteSlug);
 const source = await readFile(join(root, "app/briefings.ts"), "utf8");
 const declaration = source.indexOf("export const briefings");
@@ -72,6 +74,16 @@ function hubPage() {
             <h3>IVORY ARCHIVE</h3>
             <p>中文思想简报档案馆：艺术人文、社会科学（包括天文学）与女性主义。</p>
             <dl><div><dt>最新一期</dt><dd>${escapeHtml(latest.displayDate)}</dd></div><div><dt>收录</dt><dd>${briefings.length} 期 · ${briefings.reduce((count, issue) => count + issue.stories.length, 0)} 则</dd></div></dl>
+            <strong>进入网站 <span>→</span></strong>
+          </div>
+        </a>
+        <a class="site-card enheduanna" href="${enheduannaSlug}/">
+          <div class="card-art" aria-hidden="true"><span>004</span></div>
+          <div class="card-copy">
+            <p>DAUGHTERS OF TIME · 004</p>
+            <h3>恩赫杜安娜：第一人</h3>
+            <p>从乌尔神庙、流放与伊南娜赞歌出发，认识公主、祭司、作者与先驱恩赫杜安娜。</p>
+            <dl><div><dt>时代</dt><dd>约公元前23世纪</dd></div><div><dt>地点</dt><dd>美索不达米亚 · 乌尔</dd></div></dl>
             <strong>进入网站 <span>→</span></strong>
           </div>
         </a>
@@ -197,4 +209,15 @@ for (const briefing of briefings) {
   }
 }
 
-console.log(`Generated ${siteSlug} with ${briefings.length} issue(s) and the multi-site hub.`);
+await viteBuild({
+  root: join(root, "static-sites/enheduanna"),
+  base: "./",
+  publicDir: join(root, "static-sites/enheduanna/public"),
+  configFile: false,
+  build: {
+    outDir: join(pagesRoot, enheduannaSlug),
+    emptyOutDir: true,
+  },
+});
+
+console.log(`Generated ${siteSlug}, ${enheduannaSlug}, and the multi-site hub.`);
