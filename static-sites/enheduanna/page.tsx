@@ -389,12 +389,12 @@ export default function Home() {
         <div className="material-poetry" id="hymn-materials">
           <div className="material-intro"><p className="kicker">THE ADMINISTRATOR INSIDE THE POEM</p><h3>务实的神庙经验，藏在华丽意象里。</h3><p>这些句子既是宗教隐喻，也来自一个管理者熟悉的物质世界：测量、粮食加工、储藏与分配。</p></div>
           <div className="material-lines">
-            <blockquote><span>计量绳 · 第42首</span><p>“She applies the measure to heaven and places the measuring rope upon the earth.”</p><small>她丈量高天，并在大地上放置计量绳。</small></blockquote>
-            <blockquote><span>食物篮 · 第8首</span><p>“Ur, you are a basket filled with food, feeding all the lands.”</p><small>乌尔，你是装满食物、哺育所有土地的篮子。</small></blockquote>
-            <blockquote><span>祭品篮 · 《伊南娜的晋升》</span><p>“I am Enheduana, I am the high priestess. I carried the basket of offerings; I sang the hymns of joy.”</p><small>我曾带着装满祭品的篮子，高唱欢乐的赞歌。</small></blockquote>
-            <blockquote><span>烤炉 · 第1首</span><p>“Yours is the oven that is full of food, of basketfuls of bread.”</p><small>你的烤炉装满食物，装满一篮篮面包。</small></blockquote>
-            <blockquote><span>储藏室 · 第40首</span><p>“House of Inana, of silver and lapis lazuli, storehouse built of gold.”</p><small>伊南娜之屋，以白银和青金石建成，以黄金筑成的储藏室。</small></blockquote>
-            <blockquote><span>粮仓 · 第23首</span><p>“A firmly founded storehouse.”</p><small>一座根基牢固的储藏室。</small></blockquote>
+            <blockquote><span>计量绳 · 第42首</span><p>“她丈量高天，并在大地上放置计量绳。”</p><small className="quote-en">“She applies the measure to heaven and places the measuring rope upon the earth.”</small></blockquote>
+            <blockquote><span>食物篮 · 第8首</span><p>“乌尔，你是装满食物、哺育所有土地的篮子。”</p><small className="quote-en">“Ur, you are a basket filled with food, feeding all the lands.”</small></blockquote>
+            <blockquote><span>祭品篮 · 《伊南娜的晋升》</span><p>“我，恩赫杜安娜，是最高女祭司。我曾提着祭品篮，唱起欢乐之歌。”</p><small className="quote-en">“I am Enheduana, I am the high priestess. I carried the basket of offerings; I sang the hymns of joy.”</small></blockquote>
+            <blockquote><span>烤炉 · 第1首</span><p>“你的烤炉装满食物，装满一篮篮面包。”</p><small className="quote-en">“Yours is the oven that is full of food, of basketfuls of bread.”</small></blockquote>
+            <blockquote><span>储藏室 · 第40首</span><p>“伊南娜之屋，以白银和青金石建成，以黄金筑成的储藏室。”</p><small className="quote-en">“House of Inana, of silver and lapis lazuli, storehouse built of gold.”</small></blockquote>
+            <blockquote><span>粮仓 · 第23首</span><p>“一座根基牢固的储藏室。”</p><small className="quote-en">“A firmly founded storehouse.”</small></blockquote>
           </div>
         </div>
 
@@ -405,17 +405,17 @@ export default function Home() {
             <p>在这些赞歌中，她使用第二、第三人称和礼仪化模板，尽职地扮演神庙与神明的发言工具。下面五个原文例子都在建造权威，却不讲她个人的痛苦、欲望或处境。</p>
           </div>
           <ol className="formula-examples">
-            <li><span>01 / ERIDU</span><p>“Eunir, the first temple mound … foundation of heaven and earth, you stand high in the sacred precinct.”</p></li>
-            <li><span>02 / NIPPUR</span><p>“House of the Mountain, house which decrees the fates … Enlil has erected a house in your holy precinct.”</p></li>
-            <li><span>07 / KESH</span><p>“O Kesh, you are the image of heaven and earth … like a great poisonous snake in the desert, inspiring fear.”</p></li>
-            <li><span>08 / UR</span><p>“House of Nanna … your front is a king, your rear is a throne; your banquet is a song.”</p></li>
-            <li><span>16 / URUK</span><p>“House of Heaven, house with seven corners, lifting seven fires in the deep night, surveying seven pleasures.”</p></li>
+            <li><span>01 / ERIDU</span><div><p>“埃乌尼尔，第一座神庙丘……天地的根基，你高高立于神圣区域。”</p><small className="quote-en">“Eunir, the first temple mound … foundation of heaven and earth, you stand high in the sacred precinct.”</small></div></li>
+            <li><span>02 / NIPPUR</span><div><p>“大山之屋，裁定命运的神殿……恩利尔在你神圣的区域中建起家园。”</p><small className="quote-en">“House of the Mountain, house which decrees the fates … Enlil has erected a house in your holy precinct.”</small></div></li>
+            <li><span>07 / KESH</span><div><p>“凯什啊，你是天地的形象……如荒漠中的巨大毒蛇，令人畏惧。”</p><small className="quote-en">“O Kesh, you are the image of heaven and earth … like a great poisonous snake in the desert, inspiring fear.”</small></div></li>
+            <li><span>08 / UR</span><div><p>“南纳之屋……你的前方是王，你的后方是宝座；你的宴饮就是歌。”</p><small className="quote-en">“House of Nanna … your front is a king, your rear is a throne; your banquet is a song.”</small></div></li>
+            <li><span>16 / URUK</span><div><p>“天之屋，拥有七个角落的房屋，在深夜举起七道火焰，俯察七种欢愉。”</p><small className="quote-en">“House of Heaven, house with seven corners, lifting seven fires in the deep night, surveying seven pleasures.”</small></div></li>
           </ol>
         </div>
 
         <div className="weaver-signature" id="weaver-signature">
           <span>第42首 · 献给书写与测算女神 NISABA</span>
-          <blockquote>“The weaver of the tablet was Enheduana.<br />My king! Something has been born which had not been born before.”</blockquote>
+          <blockquote>“编织这块泥板的人是恩赫杜安娜。<br />我的王啊！前所未有之物，如今已经诞生。”<small className="quote-en">“The weaver of the tablet was Enheduana. My king! Something has been born which had not been born before.”</small></blockquote>
           <p>直到结尾，她才像在一件宏大的编纂工程上落款。但这里仍是第三人称的“泥板编织者”，不是后来那个会说“我是恩赫杜安娜”、会受伤、控诉并把诗歌称作自己分娩之物的“我”。<b>在精美的文字里，真正的她依然缺席。</b></p>
         </div>
       </section>
@@ -450,18 +450,20 @@ export default function Home() {
         <blockquote className="violation-quote">
           <span>THE VIOLATION / 81–90</span>
           <p>“他改变了那里的仪式，<br />像平等的伴侣一样闯进我面前；<br />又因欲望与嫉妒，竟敢靠近我。”</p>
+          <small className="quote-en">“He has altered the rites there. While he entered before me as if he were a partner, he truly approached out of envy.”</small>
           <cite>《伊南娜的晋升》81–90行 · 依据不同英译合译；“approached”一词的性侵害意味存在译释差异</cite>
         </blockquote>
 
         <div className="crisis-sequence">
           <article><b>01</b><span>门槛被越过</span><p>他闯入本应受保护的祭司空间。政治征服因此进入她的身体、住所与宗教身份。</p></article>
-          <article><b>02</b><span>声音被摧毁</span><p>“我如蜜的嘴变得有毒；我安抚人心的能力消失了。”对祭司而言，这是权力来源被公开羞辱。</p></article>
-          <article><b>03</b><span>冠饰换成刀</span><p>他递给她刀与匕首：“这些是适合你的饰物。”神圣冠饰被暴力工具取代，死亡威胁压过祭司身份。</p></article>
+          <article><b>02</b><span>声音被摧毁</span><p>“我如蜜的嘴变得有毒；我安抚人心的能力消失了。”<small className="quote-en">“My honeyed mouth became venomous. My ability to soothe moods vanished.”</small>对祭司而言，这是权力来源被公开羞辱。</p></article>
+          <article><b>03</b><span>冠饰换成刀</span><p>他递给她刀与匕首：“这些是适合你的饰物。”<small className="quote-en">“He gave me a knife and dagger, saying to me: ‘These are appropriate ornaments for you.’”</small>神圣冠饰被暴力工具取代，死亡威胁压过祭司身份。</p></article>
           <article><b>04</b><span>荒野取代神庙</span><p>她被逐出 Gipar，像燕子飞出窗户，穿过山中荆棘。流放不是结尾，而是那个第一人称“我”即将诞生的地方。</p></article>
         </div>
 
         <blockquote className="exile-primary-quote">
           <p>“他让我像燕子一样从窗中飞走；<br />我的生命力已经耗尽。<br />他让我穿过山中的荆棘，<br />剥去了我作为最高女祭司的合法冠饰。”</p>
+          <small className="quote-en">“He made me fly like a swallow from the window; I have exhausted my life-strength. He made me walk through the thorn bushes of the mountains. He stripped me of the rightful crown of the en priestess.”</small>
           <cite>《伊南娜的晋升》91–108行 · 据 Oxford ETCSL 英译转译</cite>
         </blockquote>
       </section>
@@ -513,7 +515,7 @@ export default function Home() {
         </div>
 
         <div className="junior-queen">
-          <blockquote><p>“你生来只是较年轻的女王；<br />如今，你却高踞伟大的诸神之上。”</p><cite>《伊南娜的晋升》109–121行 · “junior queen”</cite></blockquote>
+          <blockquote><p>“你生来只是较年轻的女王；<br />如今，你却高踞伟大的诸神之上。”</p><small className="quote-en">“From birth you were the junior queen: how supreme you are now over the Anuna, the great gods!”</small><cite>《伊南娜的晋升》109–121行</cite></blockquote>
           <div>
             <h3>在她之前，伊南娜重要，却不是最高的神。</h3>
             <p>她早已是乌鲁克的强大神祇，但传统等级中仍服从天空神 An 等更高权威；在《伊南娜与埃比赫》中，她甚至先向 An 请求许可。Enheduanna 在流放中改变了这一点：她称伊南娜掌握所有“密”，让诸神俯伏在她脚下，并把她写得“比 An 更伟大”。</p>
@@ -530,7 +532,7 @@ export default function Home() {
         </div>
 
         <div className="awakening-quote">
-          <blockquote><p>“我是恩赫杜安娜，<br />我是最高女祭司。”</p><cite>《伊南娜的晋升》 / The Exaltation of Inanna / Nin-me-sara</cite></blockquote>
+          <blockquote><p>“我是恩赫杜安娜，<br />我是最高女祭司。”</p><small className="quote-en">“I am Enheduana. I am the high priestess.”</small><cite>《伊南娜的晋升》 / The Exaltation of Inanna / Nin-me-sara</cite></blockquote>
           <p>她没有把自己藏在无名的宗教传统后面。诗中的“我”说出名字、职位、被驱逐的经历和正在完成的创作，使个人生命第一次如此清晰地进入已知文学史。</p>
         </div>
 
@@ -543,6 +545,7 @@ export default function Home() {
         <div className="birth-quote">
           <span className="moon" aria-hidden="true"></span>
           <p>“痛苦充满了我，淹没了我。<br />女王，女士！为了你，我生下了它。”</p>
+          <small className="quote-en">“What had filled me, what had overwhelmed me—great exalted lady, I gave birth to it for you.”</small>
           <small>这里的“它”指诗歌。身份被政治剥夺后，她以创造行为重新定义自己。</small>
         </div>
 

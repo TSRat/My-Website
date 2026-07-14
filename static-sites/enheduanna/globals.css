@@ -1,3 +1,4 @@
+
 :root {
   --paper: #f4eedc;
   --paper-deep: #e7dcc1;
@@ -423,11 +424,13 @@ main { padding-left: 52px; }
 .material-lines span { color: #d8b668; font-family: var(--condensed); font-size: 11px; letter-spacing: .12em; }
 .material-lines p { margin: 13px 0 8px; font-family: var(--serif); font-size: 20px; line-height: 1.6; }
 .material-lines small { color: #aeb9cf; line-height: 1.7; }
+.quote-en { display: block; margin-top: 10px; font-family: var(--sans); font-size: 12px !important; line-height: 1.75 !important; font-weight: 400; font-style: italic; letter-spacing: .01em; opacity: .76; }
 .hymn-formula { margin-top: 100px; display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(40px, 7vw, 100px); padding-top: 55px; border-top: 2px solid #d8b668; }
 .formula-examples { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(244,238,220,.4); }
 .formula-examples li { display: grid; grid-template-columns: 110px 1fr; gap: 24px; padding: 22px 0; border-bottom: 1px solid rgba(244,238,220,.3); }
 .formula-examples span { color: #d8b668; font-family: var(--condensed); font-size: 11px; letter-spacing: .1em; }
 .formula-examples p { margin: 0; font-family: var(--serif); font-size: 17px; line-height: 1.75; }
+.formula-examples div { min-width: 0; }
 .weaver-signature { margin-top: 95px; padding: clamp(40px, 7vw, 90px); color: var(--ink); background: #d8b668; position: relative; overflow: hidden; }
 .weaver-signature::after { content: "𒀭"; position: absolute; right: -15px; bottom: -70px; color: rgba(16,16,16,.09); font-size: 300px; }
 .weaver-signature > span { font-family: var(--condensed); font-size: 11px; font-weight: 900; letter-spacing: .13em; }
@@ -495,7 +498,7 @@ main { padding-left: 52px; }
 .violation-quote { position: relative; z-index: 2; margin: 65px 0 0; padding: clamp(34px, 5vw, 70px); border: 1px solid rgba(216,182,104,.55); background: rgba(200,59,44,.1); }
 .violation-quote span { color: #d8b668; font-family: var(--condensed); font-size: 11px; font-weight: 900; letter-spacing: .13em; }
 .violation-quote p { margin: 24px 0; font-family: var(--serif); font-size: clamp(28px, 3.2vw, 46px); line-height: 1.6; }
-.violation-quote cite { color: #a9b3c7; font-size: 12px; font-style: normal; line-height: 1.7; }
+.violation-quote cite { display: block; margin-top: 20px; color: #a9b3c7; font-size: 12px; font-style: normal; line-height: 1.7; }
 .exile-primary-quote { position: relative; z-index: 2; margin: 85px 0 0; padding: clamp(38px, 6vw, 86px); border-left: 8px solid var(--red); background: rgba(244,238,220,.06); }
 .exile-primary-quote p { margin: 0; font-family: var(--serif); font-size: clamp(27px, 3.2vw, 48px); line-height: 1.72; }
 .exile-primary-quote cite { display: block; margin-top: 28px; color: #a9b3c7; font-size: 12px; font-style: normal; }
