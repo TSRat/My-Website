@@ -127,19 +127,19 @@ export default function Home() {
             <article>
               <span>01</span>
               <h3>艺术人文</h3>
-              <p>从艺术、电影、文学延伸至历史、哲学与宗教，理解作品如何诞生，又如何被解释、保存与遗忘。</p>
+              <p>艺术、设计、电影、音乐、文学、建筑、戏剧、历史、哲学、宗教与文化史。</p>
               <a href="#archive">本期 {latestCounts.humanities} 则 →</a>
             </article>
             <article>
               <span>02</span>
               <h3>社会科学（包括天文学）</h3>
-              <p>连接心理学、社会学、公共健康与天文学：既看发现本身，也看知识制度、技术基础设施和社会影响。</p>
+              <p>心理学、社会学、人类学、语言学、传播学等；也包括天文学和地理学，并关注科学发现背后的制度、技术基础设施和社会影响。</p>
               <a href="#archive">本期 {latestCounts.socialScience} 则 →</a>
             </article>
             <article>
               <span>03</span>
               <h3>女性主义</h3>
-              <p>关注被遮蔽的女性及性别少数，也追问制度、医学、文化和技术怎样生产差异与不平等。</p>
+              <p>女性历史、性别、女性主义理论、健康、照护与权力结构。</p>
               <a href="#archive">本期 {latestCounts.feminism} 则 →</a>
             </article>
           </div>

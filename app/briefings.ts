@@ -43,7 +43,7 @@ export const briefings: Briefing[] = [
     stories: [
       {
         category: "艺术人文 × 女性主义",
-        image: "/story-images/ana-mendieta.webp",
+        image: "/story-images/ana-mendieta.jpg",
         imageAlt: "土地上的身体空缺轮廓与胶片组成的 Ana Mendieta 主题编辑插图",
         imageCredit: "编辑插图 · 用于阐释主题，并非现场新闻摄影",
         title: "Ana Mendieta 不应只作为一桩死亡事件被记住",
@@ -65,7 +65,7 @@ export const briefings: Briefing[] = [
       },
       {
         category: "艺术人文 × 社会科学",
-        image: "/story-images/sarabande-studios.webp",
+        image: "/story-images/sarabande-studios.jpg",
         imageAlt: "历史住宅中的艺术家工作室与共享空间编辑插图",
         imageCredit: "编辑插图 · 用于阐释主题，并非现场新闻摄影",
         title: "当艺术家的工作室只要每平方英尺 £1",
@@ -88,7 +88,7 @@ export const briefings: Briefing[] = [
       },
       {
         category: "社会科学",
-        image: "/story-images/tms-treatment.webp",
+        image: "/story-images/tms-treatment.jpg",
         imageAlt: "匿名来访者接受经颅磁刺激治疗的科学编辑插图",
         imageCredit: "编辑插图 · 用于解释机制，并非真实患者或治疗现场",
         title: "TMS 正从抑郁治疗走向更多精神健康问题",
@@ -132,7 +132,7 @@ export const briefings: Briefing[] = [
       },
       {
         category: "女性主义 × 艺术人文",
-        image: "/story-images/unhidden-heroines.webp",
+        image: "/story-images/unhidden-heroines.jpg",
         imageAlt: "手机增强现实让五位女性形象出现在国家广场上空的编辑插图",
         imageCredit: "编辑插图 · 用于阐释增强现实与公共记忆，并非项目现场画面",
         title: "五位女性在国家广场上“重新出现”",
