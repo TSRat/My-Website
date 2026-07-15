@@ -1,12 +1,12 @@
 import { copyFile, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { build as viteBuild } from "vite";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const pagesRoot = join(root, "docs");
 const siteSlug = "IVORY-ARCHIVE";
 const enheduannaSlug = "ENHEDUANNA";
+const melromarcSlug = "MELROMARC-SISTERS";
 const output = join(pagesRoot, siteSlug);
 const source = await readFile(join(root, "app/briefings.ts"), "utf8");
 const declaration = source.indexOf("export const briefings");
@@ -84,6 +84,16 @@ function hubPage() {
             <h3>恩赫杜安娜：第一人</h3>
             <p>从乌尔神庙、流放与伊南娜赞歌出发，认识公主、祭司、作者与先驱恩赫杜安娜。</p>
             <dl><div><dt>时代</dt><dd>约公元前23世纪</dd></div><div><dt>地点</dt><dd>美索不达米亚 · 乌尔</dd></div></dl>
+            <strong>进入网站 <span>→</span></strong>
+          </div>
+        </a>
+        <a class="site-card melromarc" href="${melromarcSlug}/">
+          <div class="card-art" aria-hidden="true"><span>M&amp;M</span></div>
+          <div class="card-copy">
+            <p>FAN-CREATED STORY ARCHIVE</p>
+            <h3>Melromarc 姐妹故事</h3>
+            <p>Malty 与 Melty 的多重故事档案：两个名字，生长出许多命运。</p>
+            <dl><div><dt>故事线</dt><dd>13 条</dd></div><div><dt>整理方式</dt><dd>5 个改变时点</dd></div></dl>
             <strong>进入网站 <span>→</span></strong>
           </div>
         </a>
@@ -209,15 +219,4 @@ for (const briefing of briefings) {
   }
 }
 
-await viteBuild({
-  root: join(root, "static-sites/enheduanna"),
-  base: "./",
-  publicDir: join(root, "static-sites/enheduanna/public"),
-  configFile: false,
-  build: {
-    outDir: join(pagesRoot, enheduannaSlug),
-    emptyOutDir: true,
-  },
-});
-
-console.log(`Generated ${siteSlug}, ${enheduannaSlug}, and the multi-site hub.`);
+console.log(`Generated ${siteSlug} and its legacy redirects, preserved other site directories, and updated the multi-site hub for ${enheduannaSlug} and ${melromarcSlug}.`);

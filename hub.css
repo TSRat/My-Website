@@ -32,7 +32,7 @@ body::before {
   background-size: 5px 5px;
 }
 
-main, footer { width: min(1240px, calc(100% - 40px)); margin-inline: auto; }
+main, footer { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
 
 .masthead {
   display: grid;
@@ -74,12 +74,12 @@ section { padding: 58px 0 96px; }
 .site-card.enheduanna .card-art { background: #d8b668; }
 .site-card.enheduanna .card-art::before { border-color: rgba(24,24,23,.35); border-radius: 50%; transform: none; }
 .site-card.enheduanna .card-art span { color: #153a8a; font-size: 2.5rem; }
-.site-card.enheduanna .card-copy > p:first-child,
+.site-card.enheduanna .card-copy > p:first-child { color: #153a8a; }
 .site-card.enheduanna .card-copy strong { color: #153a8a; }
 .site-card.melromarc .card-art { background: linear-gradient(135deg, #7d2039 0 47%, #5d427d 50%, #263e73 53% 100%); }
 .site-card.melromarc .card-art::before { border-color: rgba(255,255,255,.38); border-radius: 50%; height: 150px; transform: rotate(45deg); }
 .site-card.melromarc .card-art span { color: #f4e4c8; font-size: 2.45rem; }
-.site-card.melromarc .card-copy > p:first-child,
+.site-card.melromarc .card-copy > p:first-child { color: #7d2039; }
 .site-card.melromarc .card-copy strong { color: #7d2039; }
 .card-copy { display: flex; flex-direction: column; padding: 32px 28px 28px; }
 .card-copy > p:first-child { margin: 0 0 16px; color: var(--wine); font-size: 0.64rem; font-weight: 600; letter-spacing: 0.14em; }
