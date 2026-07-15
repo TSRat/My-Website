@@ -1,47 +1,23 @@
-# 思想简报档案馆
+# TSRat（TS鼠）的网站
 
-一个持续生长的中文日刊网站：每天选择 5 个值得深入阅读的新故事，沿着三条长期线索展开，并在发布前与全部历史日刊进行语义去重。
+<p align="center">
+  <img src="./assets/tsrat-logo.png" alt="TSRat（TS鼠）Logo" width="720">
+</p>
 
-- 艺术人文：艺术、设计、电影、音乐、文学、建筑、戏剧、历史、哲学、宗教与文化史
-- 社会科学（包括天文学）：心理学、社会学、人类学、语言学、传播学等；也包括天文学和地理学，并关注科学发现背后的制度、技术基础设施和社会影响
-- 女性主义：女性历史、性别、女性主义理论、健康、照护与权力结构
+欢迎来到这里！这个仓库存放由 **TSRat（TS鼠）** 制作和维护的网站，包括我的自媒体内容、阅读与思想项目、人物专题、故事档案，以及一些其他想要持续分享的内容。
 
-线上站点：<https://thought-briefing-archive.tsrat.chatgpt.site>
+欢迎大家浏览，也欢迎以后再来看看新增加的网站。
 
-GitHub Pages 公开镜像：<https://tsrat.github.io/My-Website/IVORY-ARCHIVE/>
+## 网站总入口
 
-恩赫杜安娜专题：<https://tsrat.github.io/My-Website/ENHEDUANNA/>
+**[进入 TSRat 网站档案馆](https://tsrat.github.io/My-Website/)**
 
-## 功能
+## 当前网站
 
-- 总页面汇总每日简报，并链接到各期独立页面
-- 按长期线索筛选历史日刊
-- 每则故事包含事实、意义、创作角度、原始来源和配图
-- 发布前比较人物、作品、事件、核心判断与创作角度，避免实质重复
-- 图片优先采用可清楚标注来源的资料；没有合适资料图时使用明确标注的非纪实编辑插图。生产图片使用 JPEG 或 PNG，避免当前托管环境不稳定处理 WebP 源文件
+- [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/)：思想简报与长期阅读档案。
+- [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/)：关于古代女性作者恩赫杜安娜的专题网站。
+- [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/)：Malty 与 Melty 的多重故事档案。
 
-## 本地开发
+---
 
-需要 Node.js 22.13 或更高版本。
-
-```bash
-npm ci
-npm run dev
-```
-
-验证生产构建：
-
-```bash
-npm run lint
-npm run build
-```
-
-生成不依赖服务器的 GitHub Pages 静态镜像：
-
-```bash
-npm run build:pages
-```
-
-`My-Website` 是多个公开静态网站的总仓库：根路径是网站目录，每个网站位于独立子目录。每日发布流程会先运行静态生成器，再以保留提交历史的方式更新 `gh-pages` 发布分支。目前包含 `IVORY-ARCHIVE/` 与 `ENHEDUANNA/`；新增网站时继续增加并列目录，不会覆盖已有站点。
-
-本仓库是公开源码镜像；线上发布由 OpenAI Sites 托管。
+由 TSRat（TS鼠）制作与维护。
