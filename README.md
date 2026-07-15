@@ -16,6 +16,7 @@
 
 - [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/)：思想简报与长期阅读档案。
 - [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/)：关于古代女性作者恩赫杜安娜的专题网站。
+- [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/)：“时间的女儿 001”人物专题，重建希帕蒂娅作为教师、哲学家与公共人物的一生。
 - [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/)：Malty 与 Melty 的多重故事档案。
 
 ---
