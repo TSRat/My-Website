@@ -1,12 +1,39 @@
-import { copyFile, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { copyFile, cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const pagesRoot = join(root, "docs");
 const siteSlug = "IVORY-ARCHIVE";
-const enheduannaSlug = "ENHEDUANNA";
-const melromarcSlug = "MELROMARC-SISTERS";
+const staticSites = [
+  {
+    slug: "ENHEDUANNA",
+    className: "enheduanna",
+    artLabel: "004",
+    eyebrow: "DAUGHTERS OF TIME · 004",
+    title: "恩赫杜安娜：第一人",
+    description: "从乌尔神庙、流放与伊南娜赞歌出发，认识公主、祭司、作者与先驱恩赫杜安娜。",
+    metadata: [["时代", "约公元前23世纪"], ["地点", "美索不达米亚 · 乌尔"]],
+  },
+  {
+    slug: "HYPATIA",
+    className: "hypatia",
+    cover: "assets/hypatia-cover.png",
+    eyebrow: "DAUGHTERS OF TIME · 001",
+    title: "教师之死：希帕蒂娅",
+    description: "从教师、哲学家与公共人物出发，在古代史料与后世塑造之间重新认识希帕蒂娅。",
+    metadata: [["时代", "约 350/370—415"], ["地点", "亚历山大里亚"]],
+  },
+  {
+    slug: "MELROMARC-SISTERS",
+    className: "melromarc",
+    artLabel: "M&amp;M",
+    eyebrow: "FAN-CREATED STORY ARCHIVE",
+    title: "Melromarc 姐妹故事",
+    description: "Malty 与 Melty 的多重故事档案：两个名字，生长出许多命运。",
+    metadata: [["故事线", "13 条"], ["整理方式", "5 个改变时点"]],
+  },
+];
 const output = join(pagesRoot, siteSlug);
 const source = await readFile(join(root, "app/briefings.ts"), "utf8");
 const declaration = source.indexOf("export const briefings");
@@ -45,6 +72,27 @@ const escapeHtml = (value = "") => String(value)
 
 const storyImageName = (story) => story.image.split("/").at(-1);
 
+function staticSiteCard(site) {
+  const art = site.cover
+    ? `<div class="card-art" aria-hidden="true" style="background:#f7fbff"><img src="${escapeHtml(site.slug)}/${escapeHtml(site.cover)}" alt="" style="position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center"></div>`
+    : `<div class="card-art" aria-hidden="true"><span>${site.artLabel}</span></div>`;
+  const metadata = site.metadata
+    .map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`)
+    .join("");
+
+  return `
+        <a class="site-card ${escapeHtml(site.className)}" href="${escapeHtml(site.slug)}/">
+          ${art}
+          <div class="card-copy">
+            <p>${escapeHtml(site.eyebrow)}</p>
+            <h3>${escapeHtml(site.title)}</h3>
+            <p>${escapeHtml(site.description)}</p>
+            <dl>${metadata}</dl>
+            <strong>进入网站 <span>→</span></strong>
+          </div>
+        </a>`;
+}
+
 function hubPage() {
   const latest = briefings[0];
   return `<!doctype html>
@@ -77,26 +125,7 @@ function hubPage() {
             <strong>进入网站 <span>→</span></strong>
           </div>
         </a>
-        <a class="site-card enheduanna" href="${enheduannaSlug}/">
-          <div class="card-art" aria-hidden="true"><span>004</span></div>
-          <div class="card-copy">
-            <p>DAUGHTERS OF TIME · 004</p>
-            <h3>恩赫杜安娜：第一人</h3>
-            <p>从乌尔神庙、流放与伊南娜赞歌出发，认识公主、祭司、作者与先驱恩赫杜安娜。</p>
-            <dl><div><dt>时代</dt><dd>约公元前23世纪</dd></div><div><dt>地点</dt><dd>美索不达米亚 · 乌尔</dd></div></dl>
-            <strong>进入网站 <span>→</span></strong>
-          </div>
-        </a>
-        <a class="site-card melromarc" href="${melromarcSlug}/">
-          <div class="card-art" aria-hidden="true"><span>M&amp;M</span></div>
-          <div class="card-copy">
-            <p>FAN-CREATED STORY ARCHIVE</p>
-            <h3>Melromarc 姐妹故事</h3>
-            <p>Malty 与 Melty 的多重故事档案：两个名字，生长出许多命运。</p>
-            <dl><div><dt>故事线</dt><dd>13 条</dd></div><div><dt>整理方式</dt><dd>5 个改变时点</dd></div></dl>
-            <strong>进入网站 <span>→</span></strong>
-          </div>
-        </a>
+${staticSites.map(staticSiteCard).join("")}
       </div>
     </section>
   </main>
@@ -206,6 +235,12 @@ await writeFile(join(output, "404.html"), shell({ title: "页面未找到", desc
 await copyFile(join(root, "public/favicon.svg"), join(output, "favicon.svg"));
 await copyFile(join(root, "public/ivory-botanical-archive.png"), join(output, "ivory-botanical-archive.png"));
 
+for (const site of staticSites) {
+  const target = join(pagesRoot, site.slug);
+  await rm(target, { recursive: true, force: true });
+  await cp(join(root, site.slug), target, { recursive: true });
+}
+
 for (const briefing of briefings) {
   const issueDir = join(output, "briefings", briefing.date);
   const legacyIssueDir = join(pagesRoot, "briefings", briefing.date);
@@ -219,4 +254,4 @@ for (const briefing of briefings) {
   }
 }
 
-console.log(`Generated ${siteSlug} and its legacy redirects, preserved other site directories, and updated the multi-site hub for ${enheduannaSlug} and ${melromarcSlug}.`);
+console.log(`Generated ${siteSlug}, copied ${staticSites.map((site) => site.slug).join(", ")}, and updated the four-site hub.`);
