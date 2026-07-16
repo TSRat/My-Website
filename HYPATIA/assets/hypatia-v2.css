@@ -944,6 +944,10 @@ h4 {
   color: var(--ink);
 }
 
+.death-chapter .rival-profiles span {
+  color: var(--lake-900);
+}
+
 .death-chapter .rival-profiles p,
 .death-chapter .rival-profiles figcaption,
 .death-chapter .not-an-ending p {
