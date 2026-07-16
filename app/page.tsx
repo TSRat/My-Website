@@ -64,6 +64,7 @@ export default function Home() {
                 alt="森林绿色的植物标本枝叶"
                 width={800}
                 height={1000}
+                unoptimized
                 priority
               />
               <span className="archive-stamp">2026<br />07.14<br />No.01</span>
@@ -88,7 +89,13 @@ export default function Home() {
                 key={story.title}
               >
                 <div className="story-card-image">
-                  <Image src={story.image} alt={story.imageAlt} fill sizes="(max-width: 760px) 100vw, 45vw" />
+                  <Image
+                    src={story.image}
+                    alt={story.imageAlt}
+                    fill
+                    sizes="(max-width: 760px) 100vw, 45vw"
+                    unoptimized
+                  />
                 </div>
                 <div className="card-number">{String(index + 1).padStart(2, "0")}</div>
                 <div className="card-body">

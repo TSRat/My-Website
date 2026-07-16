@@ -1,4 +1,4 @@
-import { copyFile, cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -235,12 +235,6 @@ await writeFile(join(output, "404.html"), shell({ title: "页面未找到", desc
 await copyFile(join(root, "public/favicon.svg"), join(output, "favicon.svg"));
 await copyFile(join(root, "public/ivory-botanical-archive.png"), join(output, "ivory-botanical-archive.png"));
 
-for (const site of staticSites) {
-  const target = join(pagesRoot, site.slug);
-  await rm(target, { recursive: true, force: true });
-  await cp(join(root, site.slug), target, { recursive: true });
-}
-
 for (const briefing of briefings) {
   const issueDir = join(output, "briefings", briefing.date);
   const legacyIssueDir = join(pagesRoot, "briefings", briefing.date);
@@ -254,4 +248,4 @@ for (const briefing of briefings) {
   }
 }
 
-console.log(`Generated ${siteSlug}, copied ${staticSites.map((site) => site.slug).join(", ")}, and updated the four-site hub.`);
+console.log(`Generated ${siteSlug}, its legacy redirects, and the multi-site hub without touching other site directories.`);

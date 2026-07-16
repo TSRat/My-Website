@@ -32,6 +32,138 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    date: "2026-07-16",
+    displayDate: "2026.07.16",
+    issueNo: "03",
+    theme: "图像、档案与制度：谁被看见，谁承担代价？",
+    intro:
+      "今天的五个故事都在追问一套看似中性的系统如何分配可见性：工厂壁画替谁想象幸福，建筑绘图怎样给理论装上表情，望远镜档案如何让一颗暗行星现身，气候模型怎样把暴雨从天灾改写为可归责的风险，以及政党用什么规则决定谁能进入可胜选的席位。图像、数据与程序不是事实之外的包装，而是制造公共判断的基础设施。",
+    uniqueCount: 5,
+    topics: ["艺术人文", "社会科学（包括天文学）", "女性主义"],
+    stories: [
+      {
+        category: "艺术人文 × 女性主义 × 劳工史",
+        image: "/story-images/munch-freia-frieze.jpg",
+        imageAlt: "十二幅田园壁画、女性巧克力工人与可可运输路线组成的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释壁画、劳动与可可供应链，并非作品复制或新闻现场影像",
+        title: "蒙克的巧克力工厂壁画：田园幸福画给谁看？",
+        summary:
+          "MUNCH 博物馆把 Freia 工厂女工食堂里的 12 幅壁画搬进展厅；田园场景背后，是工资差距、女性劳动与殖民可可供应链。",
+        happened:
+          "奥斯陆 MUNCH 博物馆正在展出 Edvard Munch 受 Freia 巧克力厂委托创作的 12 幅壁画。作品 1922 年获委托、1923 年进入女工食堂，描绘采果、浇花、海滩与休憩；此次因原食堂翻修而外借至 2026 年 10 月 11 日。这是壁画首次在挪威的工厂之外公开展出，也是继 1968 年斯德哥尔摩展出后，整组作品第二次离开工厂。展览同时追溯 Freia 从南美、加勒比到英属殖民地黄金海岸（今加纳）的可可来源。",
+        importance:
+          "壁画被称为面向工人的公共艺术，但它没有描绘女工的生产、收入或居住条件，而是替她们安排了一套“应当理解”的田园生活。Freia 的福利制度在当时有进步面向，作品价格与女工微薄收入之间的落差却已在 1923 年遭劳工报纸批评。把美术史与供应链、性别分工并置后，公共艺术不再只是善意装饰，而成为谁有权替劳动者想象幸福的问题。",
+        creatorAngle:
+          "可以制作一张“壁画之外的巧克力”双层地图：上层逐幅分析 12 个田园场景，下层追踪食堂里的女工、80,000 挪威克朗的委托费与跨大西洋可可路线。重点不是给蒙克补一项道德判决，而是比较画面里被安排的闲暇和生产链里真实存在的劳动。",
+        facts: [
+          "整组 Freia 壁画共 12 幅，1922 年获委托、1923 年安装在奥斯陆工厂女工食堂",
+          "Johan Throne Holst 向蒙克支付 80,000 挪威克朗；报道估算相当于今日约 250 万挪威克朗或 19.2 万英镑",
+          "整组作品此前只在 1968 年离厂赴斯德哥尔摩展出过一次；本次展至 2026 年 10 月 11 日",
+          "Freia 的可可来源先包括南美和加勒比，后来包括当时仍为英国殖民地的加纳",
+        ],
+        sourceName: "The Guardian（展览与历史资料来自 MUNCH 策展团队）",
+        sourceUrl: "https://www.theguardian.com/culture/2026/jul/15/edvard-munch-and-the-chocolate-factory-the-bitter-truth-behind-the-freia-frieze",
+        sourceDate: "2026-07-15",
+      },
+      {
+        category: "艺术人文 × 设计与建筑",
+        image: "/story-images/vriesendorp-mind-games.jpg",
+        imageAlt: "拟人化纽约摩天楼、心理棋盘与废旧包装变成的生物组成的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释建筑拟人、游戏与材料再造，并非原作复制",
+        title: "让摩天楼谈恋爱：Madelon Vriesendorp 如何给建筑理论装上表情",
+        summary:
+          "Sir John Soane’s Museum 为 2025 年 Soane Medal 得主举办大型回顾展：从《Delirious New York》封面到废塑料雕塑，建筑思想被转换成角色、笑话和游戏。",
+        happened:
+          "《Madelon Vriesendorp: Mind Games》于 7 月 15 日在伦敦 Sir John Soane’s Museum 开幕，展至 9 月 20 日。展览覆盖蚀刻、绘画、书封、首饰、纸上新作与雕塑，并设置可被观众重新排列的放大版 Mind Game。Vriesendorp 1975 年创作《Flagrant Délit》，让 Empire State 与 Chrysler 两座摩天楼成为被撞见的恋人；作品后来成为 1978 年《Delirious New York》的封面。她也是 1975 年 OMA 的四位共同创办人之一。",
+        importance:
+          "建筑理论常以图纸、术语和大师姓名出现，Vriesendorp 的贡献在于把抽象观点变成可记忆的角色关系：城市不再是理性机器，而是欲望、拥挤、幽默和失控的舞台。新作又把牛奶瓶、蛋盒等包装材料转化为天鹅、怪兽与独裁者，显示她的设计方法不是固定的后现代风格，而是一种不断重命名日常物件的观看训练。",
+        creatorAngle:
+          "可做一期“谁替建筑理论画表情包”：以《Flagrant Délit》、OMA 早期未建项目和可互动 Mind Game 为三站，解释图像如何让艰深理论进入公共记忆。结尾再把 1970 年代的摩天楼欲望，与今天用废包装造生物的材料政治对照。",
+        facts: [
+          "展期为 2026 年 7 月 15 日至 9 月 20 日，地点是 Sir John Soane’s Museum",
+          "《Flagrant Délit》创作于 1975 年，并成为 1978 年《Delirious New York》的封面图像",
+          "Vriesendorp 于 1975 年与 Rem Koolhaas、Elia Zenghelis、Zoe Zenghelis 共同创办 OMA",
+          "展览涵盖 50 余件创作或收藏物，包括可供观众重排的 Mind Game 与用塑料瓶、蛋盒制作的新雕塑",
+        ],
+        sourceName: "Sir John Soane’s Museum（评论补充：The Guardian）",
+        sourceUrl: "https://www.soane.org/exhibitions/madelon-vriesendorp-mind-games",
+        sourceDate: "2026-07-15（开幕日期）",
+      },
+      {
+        category: "社会科学（包括天文学） × 天文学",
+        image: "/story-images/beta-pictoris-d.jpg",
+        imageAlt: "韦布望远镜、智利地面望远镜、年轻恒星碎屑盘与三颗行星组成的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释多台仪器与档案数据的联合发现，并非天体实拍影像",
+        title: "一颗暗行星藏了 11 年：β Pictoris d 是被两套基础设施共同“看见”的",
+        summary:
+          "两个彼此独立的团队用 JWST 与 VLT 发现同一颗冷气态巨行星；真正的突破不只是新天体，而是光谱匹配、长期档案与地空协同。",
+        happened:
+          "两个研究团队分别报告 β Pictoris 系统的第三颗确认行星 β Pic d。美国团队在 JWST/NIRSpec 积分视场光谱中偶然识别它，并以第二轮 NIRSpec 与 MIRI 数据确认；欧洲团队则用智利 VLT/ERIS 拍到它，再回查 JWST/NIRCam 与 VLT/SPHERE 的多时期档案，建立 11 年轨迹。两组结果于 7 月 15 日在《Astrophysical Journal Letters》公开；预印本已于 6 月 22 日发布。",
+        importance:
+          "它与前一期“星际糖”不是同一问题：后者讨论分子在恒星形成前的化学，这里讨论的是一颗行星如何被测量系统从强烈星光和碎屑盘中分离出来。β Pic d 约比系统内另外两颗行星暗 100 倍，说明发现能力不仅来自更大的镜面，也来自光谱模板、跨仪器校准、长期保存的数据和愿意重查旧档案的研究文化。",
+        creatorAngle:
+          "可以把它做成一场“同一颗行星的两份侦探报告”：左线追踪 JWST 如何用甲烷、一氧化碳和水的光谱指纹找到目标，右线追踪 VLT 如何从 11 年档案拼出轨道。用两组独立证据相遇的时刻，解释可重复发现比单张震撼图像更重要。",
+        facts: [
+          "β Pictoris 距地球约 63 光年，年龄约 2,000 万年；β Pic d 的公转周期约 91 年",
+          "JWST 光谱显示甲烷、一氧化碳与水吸收特征；团队估计质量约为木星的 2—4 倍",
+          "另一团队用 VLT/ERIS、JWST/NIRCam 与 VLT/SPHERE 拼出 11 年基线，估计质量为木星的 2.4±0.6 倍、有效温度约 600 K",
+          "它约比系统内另外两颗已知行星暗 100 倍；β Pictoris 因此成为第二个拥有三颗以上直接成像行星的系统",
+        ],
+        sourceName: "Astrophysical Journal Letters 预印本 · Gibbs et al.；Bonse et al.（AP 发布核验）",
+        sourceUrl: "https://arxiv.org/abs/2606.23789",
+        sourceDate: "2026-07-15（期刊发布；预印本 2026-06-22）",
+      },
+      {
+        category: "社会科学（包括天文学） × 地理学",
+        image: "/story-images/west-africa-flood-attribution.jpg",
+        imageAlt: "几内亚湾沿岸地图、降雨模型网格、雨量计与城市排水系统组成的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释气候归因与城市排水，并非洪灾现场影像",
+        title: "西非洪水不只是“雨太大”：归因科学把排水、数据与责任放进同一张图",
+        summary:
+          "World Weather Attribution 分析称，人为变暖让 6 月几内亚湾沿岸极端降雨约增至五倍可能；观测、模型和城市基础设施却给出不同尺度的答案。",
+        happened:
+          "6 月 20 日起的 72 小时内，科特迪瓦、加纳、多哥与尼日利亚沿海人口稠密地区遭遇强降雨，部分城市不到一天超过 140 毫米。World Weather Attribution 比较历史观测与气候模型，集中分析最极端的三天：观测资料显示三日强降雨强度较记录初期增加约 23%，模型给出的变暖增幅约 4%；团队综合判断，此类事件在今日气候中约为工业化前的五倍可能。",
+        importance:
+          "“五倍可能”并不意味着气候模型能精确复制每个被淹街区。研究者明确指出，全球南方的热带降水仍是模型薄弱区；与此同时，排水能力、湿地损失、非正规住区和预警覆盖决定同一场雨造成多大伤亡。归因科学的价值，是把“百年一遇”从宿命语言改写为可以讨论排放责任、城市投资和国际气候正义的制度问题。",
+        creatorAngle:
+          "可制作一张“同一场雨的三种地图”：天气图回答雨落在哪里，排水图回答水为何留在城市，责任图回答谁有资源适应。把观测的 23%、模型的 4% 和综合概率约五倍并列，解释不同数字并非互相否定，而是来自不同证据路径。",
+        facts: [
+          "研究窗口为 2026 年 6 月 20 日起 72 小时，覆盖科特迪瓦、加纳、多哥和尼日利亚沿海",
+          "部分城市不到 24 小时降雨超过 140 毫米，城市排水系统被迅速压垮",
+          "观测资料显示极端三日降雨强度增加约 23%；气候模型估计人为变暖贡献约 4% 强度增幅",
+          "在全球平均升温约 1.4°C 的今日，此类规模降雨约五倍更可能，预计每 2—4 年可再现一次",
+        ],
+        sourceName: "World Weather Attribution（The Guardian 报道与数据核验）",
+        sourceUrl: "https://www.theguardian.com/world/2026/jul/16/how-global-heating-supercharged-floods-west-africa-displacing-thousands",
+        sourceDate: "2026-07-16",
+      },
+      {
+        category: "女性主义 × 政治社会学",
+        image: "/story-images/australia-gender-quota.jpg",
+        imageAlt: "候选人队伍穿过狭窄入口进入澳大利亚议会，并与性别平衡刻度并置的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释候选人遴选与可胜选席位，并非真实议员或议会现场影像",
+        title: "当“择优”遇到可胜选席位：澳大利亚自由党重新争论性别配额",
+        summary:
+          "一份党内讨论稿把女性配额、开放初选和可胜选席位干预摆上桌面；领袖反对配额，女性高层则要求不要在讨论开始时排除选项。",
+        happened:
+          "澳大利亚自由党委员会向支持者散发改革讨论稿，提出更新老龄化党员基础、改善与女性、多元文化社群和年轻人的联系，并讨论在可胜选席位采取性别配额、开放初选、女性候选人激励或预选最低比例。党魁 Angus Taylor 7 月 16 日重申从未支持配额；副党魁 Jane Hume 表示草案仍在讨论，所有选项都会被考虑；影子内阁成员 Anne Ruston 则称，以往除配额外的方法未能改变众议院中的女性人数。",
+        importance:
+          "争论的关键不是“女性是否够优秀”，而是谁定义进入候选池、获得资源和分配可胜选席位的程序。2025 年大选后，女性已占澳大利亚议会近半，但自由党在众议院 28 席中只有 6 名女性；全国接近性别平衡，不能自动消除单一政党内部的入口瓶颈。“择优”如果只评价终点人物，却不检查候选人被放在哪些席位，就会隐藏制度本身的选择。",
+        creatorAngle:
+          "可画一条“从党员到议员”的漏斗：党员构成、提名、预选、资源投入、席位安全度和当选逐层比较。再把配额、开放初选、候选人激励三种工具放入漏斗，问它们分别改变哪一层，而不是把整场讨论压缩成支持或反对配额。",
+        facts: [
+          "党内讨论稿称女性约占自由党党员 21%、党内联邦议员约 33%",
+          "2025 年大选后，女性占澳大利亚联邦议会席位约 49.6%，并占参议院约 56.6%",
+          "自由党在 2025 年众议院赢得 28 席，其中女性 6 人，占约 21.4%",
+          "草案列出的工具包括可胜选席位配额、开放初选、女性候选人激励和预选最低比例；党内领导层意见公开分裂",
+        ],
+        sourceName: "The Guardian Australia（议会构成数据由 Australian Parliament 公开名单交叉核验）",
+        sourceUrl: "https://www.theguardian.com/australia-news/2026/jul/16/liberal-party-gender-quotas-angus-taylor-response",
+        sourceDate: "2026-07-16",
+      },
+    ],
+  },
+  {
     date: "2026-07-15",
     displayDate: "2026.07.15",
     issueNo: "02",

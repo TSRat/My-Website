@@ -62,7 +62,13 @@ export default async function BriefingPage({ params }: { params: Promise<{ date:
               </header>
 
               <figure className="long-story-image">
-                <Image src={story.image} alt={story.imageAlt} fill sizes="(max-width: 760px) 100vw, 1060px" />
+                <Image
+                  src={story.image}
+                  alt={story.imageAlt}
+                  fill
+                  sizes="(max-width: 760px) 100vw, 1060px"
+                  unoptimized
+                />
                 <figcaption>{story.imageCredit}</figcaption>
               </figure>
 
