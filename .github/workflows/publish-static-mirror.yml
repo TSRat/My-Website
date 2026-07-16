@@ -36,10 +36,13 @@ jobs:
           test -f docs/HYPATIA/assets/hypatia-v2.css
           test -f docs/HYPATIA/assets/hypatia-refresh.js
           test -f docs/HYPATIA/assets/approaching-hypatia.jpg
+          test -f docs/HYPATIA/assets/agora-hypatia-death.jpg
+          test -f docs/HYPATIA/assets/ionic-column.png
+          test -f docs/HYPATIA/assets/corinthian-column.png
           grep -q "希帕蒂娅：" docs/HYPATIA/index.html
           grep -q "教师之死" docs/HYPATIA/index.html
-          grep -q "lake-v10" docs/HYPATIA/index.html
-          grep -q "interactive-v10" docs/HYPATIA/index.html
+          grep -q "lake-v11" docs/HYPATIA/index.html
+          grep -q "interactive-v11" docs/HYPATIA/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
