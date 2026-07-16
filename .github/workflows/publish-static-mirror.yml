@@ -30,6 +30,11 @@ jobs:
         run: npm ci
       - name: Build GitHub Pages artifact
         run: npm run build:pages
+      - name: Validate Hypatia mirror
+        run: |
+          test -f docs/HYPATIA/index.html
+          test -f docs/HYPATIA/assets/hypatia-v2.css
+          grep -q "希帕蒂娅：教师之死" docs/HYPATIA/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
