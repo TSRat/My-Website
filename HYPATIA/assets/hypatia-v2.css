@@ -15,9 +15,9 @@
   --sand: #a87939;
   --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", STSong, serif;
   --sans: "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
-  --content-max: 1200px;
+  --content-max: 1280px;
   --reading-max: 800px;
-  --page-pad: clamp(24px, 5vw, 72px);
+  --page-pad: clamp(32px, 6vw, 88px);
   --section-space: clamp(88px, 8vw, 128px);
   --block-space: clamp(52px, 5vw, 76px);
   --card-pad: clamp(24px, 2.5vw, 34px);
@@ -35,6 +35,7 @@
 html {
   background: var(--paper);
   scroll-padding-top: 88px;
+  overflow-x: clip;
 }
 
 body {
@@ -45,6 +46,7 @@ body {
   line-height: 1.85;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 body::selection {
@@ -3602,4 +3604,394 @@ figure figcaption {
   .gender-portrait { height: 300px; }
 
   .epilogue-visual img { aspect-ratio: 4 / 3; }
+}
+
+/* v11 — full-width archaeological rhythm and three-part death sequence */
+.hypatia-site::before,
+.hypatia-site::after {
+  top: 80px;
+  bottom: 0;
+  width: 58px;
+  opacity: 0.92;
+  filter: none;
+  transform: none;
+  background-color: #fff;
+  background-position: center 16px;
+  background-size: 50px auto;
+  background-repeat: repeat-y;
+  border: 0;
+  box-shadow: 0 0 0 1px rgba(42, 36, 27, 0.08), 0 0 20px rgba(42, 36, 27, 0.04);
+}
+
+.hypatia-site::before { background-image: url("./ionic-column.png"); }
+.hypatia-site::after { background-image: url("./corinthian-column.png"); }
+
+.page-divider,
+.page-divider.inner-divider {
+  width: 100vw;
+  max-width: none;
+  height: 84px;
+  margin: 0 0;
+  padding: 0;
+  overflow: hidden;
+  background: #f6efe2;
+  border: 0;
+  border-block: 1px solid rgba(120, 71, 28, 0.28);
+  border-radius: 0;
+  opacity: 1;
+  filter: none;
+}
+
+.page-divider.inner-divider {
+  margin-top: 76px;
+  margin-bottom: 76px;
+  margin-left: calc(50% - 50vw);
+}
+
+.page-divider img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 53%;
+  opacity: 1;
+  filter: none;
+}
+
+.prologue-story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.28fr) minmax(330px, 0.72fr);
+  align-items: end;
+  gap: clamp(48px, 6vw, 84px);
+}
+
+.prologue-copy h2 {
+  font-size: var(--type-section);
+  white-space: nowrap;
+}
+
+.prologue-copy .deep { margin-top: 28px; }
+
+.prologue-story-grid .thesis-quote {
+  align-self: end;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 34px 36px;
+}
+
+.prologue-story-grid .thesis-quote h3 { font-size: 25px; }
+.prologue-story-grid .thesis-quote p { font-size: 20px; }
+
+.prologue-still {
+  margin: var(--block-space) 0 0;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--lake-200);
+  border-radius: 14px;
+}
+
+.prologue-still img {
+  display: block;
+  width: 100%;
+  height: clamp(420px, 46vw, 590px);
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 10px;
+}
+
+.prologue-still figcaption {
+  margin: 10px 4px 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.city-grid { align-items: stretch; }
+
+.map-figure {
+  position: sticky;
+  top: 108px;
+  align-self: start;
+  margin: 0;
+}
+
+.menstrual-story {
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  align-items: start;
+  gap: 30px 36px;
+}
+
+.menstrual-copy { grid-column: 1; grid-row: 1; }
+
+.menstrual-still {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  padding: 10px;
+  background: var(--lake-050);
+  border: 1px solid var(--lake-200);
+  border-radius: 10px;
+}
+
+.menstrual-still img {
+  display: block;
+  width: 100%;
+  height: clamp(320px, 32vw, 420px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 7px;
+}
+
+.menstrual-story blockquote {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: stretch;
+  margin: 0;
+}
+
+.menstrual-story .story-caveat {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: stretch;
+  margin: 0;
+  padding: 24px 28px;
+  color: var(--lake-950);
+  background: var(--lake-100);
+  border-left: 4px solid var(--lake-700);
+  border-radius: 0 9px 9px 0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.death-chapter {
+  padding: 0;
+  background: #07131b;
+}
+
+.death-page {
+  width: 100%;
+  color: #fff;
+  background: var(--lake-950);
+}
+
+.death-page-politics { background: #12344a; }
+.death-page-record { background: #07131b; }
+.death-page-aftermath { background: #102f43; }
+
+.death-page + .death-page { border-top: 1px solid rgba(255, 255, 255, 0.16); }
+
+.death-page-inner {
+  width: min(calc(100% - (2 * var(--page-pad))), var(--content-max));
+  margin-inline: auto;
+  padding-block: var(--section-space);
+}
+
+.death-subpage-header {
+  max-width: 920px;
+  margin-bottom: var(--block-space);
+}
+
+.death-subpage-header h3 {
+  margin: 12px 0 18px;
+  font-size: clamp(32px, 3.2vw, 44px);
+  white-space: nowrap;
+}
+
+.death-subpage-header > p:last-child {
+  color: #dbeaf4;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.death-black-screen {
+  min-height: 100vh;
+  min-height: 100svh;
+  background: #000;
+}
+
+.death-reveal {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  place-items: center;
+  overflow: hidden;
+  background: #000;
+}
+
+.death-reveal > img {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.death-reveal::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.6));
+}
+
+.death-reveal-copy {
+  width: min(760px, calc(100% - 64px));
+  text-align: center;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+}
+
+.death-reveal-copy h3 {
+  margin: 14px 0 20px;
+  font-size: clamp(44px, 6vw, 76px);
+}
+
+.death-reveal-copy > p:last-child {
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.death-reveal figcaption {
+  position: absolute;
+  right: 24px;
+  bottom: 20px;
+  max-width: 500px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 10px;
+  text-align: right;
+}
+
+.death-record-inner { padding-top: clamp(84px, 8vw, 124px); }
+
+.aftermath-sequence {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: var(--block-space);
+}
+
+.aftermath-sequence article {
+  min-height: 250px;
+  padding: 28px;
+  color: var(--ink);
+  background: #fff;
+  border-top: 5px solid var(--lake-600);
+  border-radius: 10px;
+}
+
+.aftermath-sequence time {
+  color: var(--lake-700);
+  font-family: Georgia, serif;
+  font-size: 22px;
+}
+
+.aftermath-sequence h3 {
+  margin: 18px 0 12px;
+  font-size: 21px;
+}
+
+.aftermath-sequence p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.82;
+}
+
+.death-page-aftermath .not-an-ending {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.045);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.death-page-aftermath .not-an-ending .kicker { color: var(--lake-300); }
+.death-page-aftermath .not-an-ending > p { color: #dbeaf4; }
+
+.death-page-aftermath .not-an-ending article {
+  color: var(--ink);
+  background: #fff;
+}
+
+.epilogue-visual {
+  min-height: 360px;
+  background: var(--lake-050) url("./approaching-hypatia.jpg") center / cover no-repeat;
+}
+
+.epilogue-visual img {
+  height: clamp(340px, 42vw, 540px);
+  min-height: 0;
+  background: var(--lake-050);
+}
+
+@media (max-width: 1120px) {
+  .prologue-story-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(290px, 0.8fr);
+    gap: 38px;
+  }
+}
+
+@media (max-width: 980px) {
+  .prologue-story-grid,
+  .menstrual-story,
+  .aftermath-sequence {
+    grid-template-columns: 1fr;
+  }
+
+  .prologue-copy h2,
+  .death-subpage-header h3 { white-space: normal; }
+
+  .prologue-story-grid .thesis-quote { margin-top: 0; }
+  .map-figure { position: static; }
+
+  .menstrual-copy,
+  .menstrual-still,
+  .menstrual-story blockquote,
+  .menstrual-story .story-caveat {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .aftermath-sequence article { min-height: 0; }
+}
+
+@media (max-width: 720px) {
+  :root { --page-pad: 20px; }
+
+  .page-divider,
+  .page-divider.inner-divider {
+    width: 100vw;
+    height: 66px;
+    margin-right: 0;
+    margin-left: calc(50% - 50vw);
+    padding: 0;
+  }
+
+  .page-divider:not(.inner-divider) { margin-left: 0; }
+
+  .prologue-still img { height: 300px; }
+  .menstrual-story { padding: 22px; }
+
+  .death-page-inner {
+    width: calc(100% - 40px);
+    padding-block: 72px;
+  }
+
+  .death-reveal-copy { width: calc(100% - 40px); }
+  .death-reveal-copy h3 { font-size: 44px; }
+  .death-reveal-copy > p:last-child { font-size: 16px; }
+
+  .death-reveal figcaption {
+    right: 16px;
+    bottom: 14px;
+    left: 16px;
+    text-align: center;
+  }
+
+  .death-page-aftermath .not-an-ending { padding: 24px; }
+  .epilogue-visual { min-height: 260px; }
+  .epilogue-visual img { height: 260px; min-height: 0; }
 }

@@ -1,8 +1,8 @@
 (() => {
   const init = () => {
     const site = document.querySelector(".hypatia-site");
-    if (!site || site.dataset.hypatiaBound === "true") return;
-    site.dataset.hypatiaBound = "true";
+    if (!site || site.dataset.hypatiaBound === "v11") return;
+    site.dataset.hypatiaBound = "v11";
 
     const all = (selector, root = document) => Array.from(root.querySelectorAll(selector));
     const setText = (selector, value, root = document) => {
