@@ -1,4 +1,4 @@
-import { copyFile, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { copyFile, cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -248,4 +248,7 @@ for (const briefing of briefings) {
   }
 }
 
-console.log(`Generated ${siteSlug}, its legacy redirects, and the multi-site hub without touching other site directories.`);
+await rm(join(pagesRoot, "HYPATIA"), { recursive: true, force: true });
+await cp(join(root, "HYPATIA"), join(pagesRoot, "HYPATIA"), { recursive: true });
+
+console.log(`Generated ${siteSlug}, copied HYPATIA, and built the multi-site hub.`);
