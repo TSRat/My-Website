@@ -1,4 +1,4 @@
-import { access, copyFile, cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { copyFile, cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -251,11 +251,8 @@ for (const briefing of briefings) {
 
 for (const site of staticSites) {
   const target = join(pagesRoot, site.slug);
-  try {
-    await access(target);
-  } catch {
-    await cp(join(root, site.slug), target, { recursive: true });
-  }
+  await rm(target, { recursive: true, force: true });
+  await cp(join(root, site.slug), target, { recursive: true });
 }
 
-console.log(`Generated ${siteSlug}, preserved existing site directories, and built the multi-site hub.`);
+console.log(`Generated ${siteSlug}, refreshed every static site directory, and built the multi-site hub.`);
