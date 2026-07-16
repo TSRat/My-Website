@@ -956,9 +956,18 @@ h4 {
 
 .two-schools article:first-child span,
 .comparison-grid .hypatian span,
-.faction-map article:not(.philosophy-side) span,
+.faction-map span,
+.memory-era,
+.memory-columns small,
 .reading-list span {
-  color: var(--lake-800);
+  color: var(--lake-900);
+}
+
+.two-schools article:nth-child(2) span,
+.faction-map .philosophy-side span,
+.creator-reading .kicker,
+.watch-links span {
+  color: #ffffff;
 }
 
 .memory-voices {
