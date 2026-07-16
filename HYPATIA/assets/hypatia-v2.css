@@ -3202,3 +3202,404 @@ figure figcaption {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* v10 — chapter rhythm, lake-blue contrast, and responsive editorial layout */
+.hypatia-site::before,
+.hypatia-site::after {
+  position: fixed;
+  z-index: 45;
+  top: 80px;
+  bottom: 0;
+  width: 42px;
+  content: "";
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.28)),
+    url("https://tsrat.github.io/My-Website/HYPATIA/assets/hellenistic-columns.png") center top / 116px auto repeat-y;
+  border-inline: 1px solid rgba(36, 123, 181, 0.16);
+  opacity: 0.3;
+  filter: grayscale(1) sepia(1) saturate(2.2) hue-rotate(158deg) brightness(0.92);
+  pointer-events: none;
+}
+
+.hypatia-site::before { left: 0; }
+.hypatia-site::after { right: 0; transform: scaleX(-1); }
+
+.chapter { border-top: 0; }
+
+.hero-grid {
+  grid-template-columns: minmax(560px, 1.12fr) minmax(360px, 0.88fr);
+  gap: clamp(42px, 4vw, 64px);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.hero-portrait {
+  z-index: 1;
+  min-width: 0;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 4.2vw, 62px);
+  letter-spacing: -0.035em;
+}
+
+.page-divider {
+  width: min(calc(100% - (2 * var(--page-pad))), var(--content-max));
+  height: 62px;
+  margin: 44px auto;
+  padding: 8px 0;
+  overflow: hidden;
+  opacity: 1;
+  background: #fff;
+  border-block: 1px solid var(--lake-200);
+  border-radius: 8px;
+  filter: none;
+}
+
+.page-divider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 53%;
+  opacity: 0.48;
+  filter: grayscale(1) sepia(1) saturate(2.15) hue-rotate(158deg) brightness(0.92) contrast(1.04);
+}
+
+.page-divider.inner-divider {
+  width: 100%;
+  margin: 72px auto;
+}
+
+.chapter-label {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 32px;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--lake-300);
+}
+
+.chapter-label span {
+  padding-bottom: 3px;
+  color: var(--lake-800);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.14em;
+}
+
+.chapter-label b {
+  color: var(--lake-200);
+  font-family: Georgia, serif;
+  font-size: clamp(68px, 6vw, 88px);
+  font-weight: 400;
+  line-height: 0.72;
+  letter-spacing: -0.06em;
+}
+
+.chapter-label-prologue b { font-size: clamp(82px, 8vw, 116px); }
+.chapter-label-dark { border-bottom-color: rgba(210, 232, 246, 0.38); }
+.chapter-label-dark span { color: var(--lake-300); }
+.chapter-label-dark b { color: rgba(169, 212, 239, 0.32); }
+.section-number { display: none; }
+
+.narrow-copy > .chapter-label,
+.narrow-copy > h2,
+.narrow-copy > .opening-paragraph,
+.narrow-copy > .deep,
+.narrow-copy > .thesis-quote {
+  max-width: var(--reading-max);
+}
+
+.narrow-copy > .chapter-label { max-width: 100%; }
+
+.classical-plates {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.classical-plates img { height: 340px; }
+
+.work-page {
+  padding: clamp(34px, 4vw, 52px);
+  background: #fff;
+  border: 1px solid var(--lake-200);
+  border-radius: 16px;
+}
+
+.subpage-header {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.subpage-header h3,
+.philosophy-page-intro h3 {
+  font-size: clamp(28px, 2.8vw, 38px);
+  white-space: nowrap;
+}
+
+.subpage-header > p:last-child,
+.philosophy-page-intro > div > p:last-child {
+  max-width: 68em;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.academic-page .evidence-toolbar { margin-top: 8px; }
+
+.philosophy-page {
+  background: var(--lake-050);
+}
+
+.philosophy-page-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+  align-items: start;
+  gap: 44px;
+}
+
+.philosophy-page-intro > div { padding-top: 8px; }
+.philosophy-page-intro h3 { margin: 10px 0 18px; }
+
+.philosophy-page-intro figure {
+  margin: 0;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--lake-200);
+  border-radius: 12px;
+}
+
+.philosophy-page-intro img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 8px;
+}
+
+.philosophy-page-intro figcaption,
+.conflict-stills figcaption,
+.epilogue-visual figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.public-alliance {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.public-alliance article {
+  min-height: 310px;
+  padding: 30px 32px;
+  background: var(--lake-050);
+  border: 1px solid var(--lake-200);
+  border-top: 5px solid var(--lake-700);
+  border-radius: 12px;
+}
+
+.public-alliance article:nth-child(2) { background: var(--lake-100); }
+
+.public-alliance span {
+  color: var(--lake-800);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.public-alliance h3 {
+  margin: 20px 0 16px;
+  font-size: 24px;
+}
+
+.public-alliance p { color: var(--muted); }
+.public-alliance p + p { margin-top: 18px; }
+
+.gender-reading {
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  align-items: start;
+  gap: 48px;
+  padding: 36px;
+  background: var(--lake-050);
+  border: 1px solid var(--lake-200);
+  border-radius: 14px;
+}
+
+.gender-reading h3 { white-space: nowrap; }
+
+.gender-copy > p:not(.kicker):not(.section-lead) {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.gender-copy > p + p { margin-top: 18px; }
+
+.gender-portrait {
+  align-self: start;
+  height: 430px;
+  margin: 0;
+}
+
+.conflict-analysis {
+  margin: 0 0 var(--block-space);
+  padding: clamp(30px, 3.5vw, 46px);
+  border: 1px solid rgba(169, 212, 239, 0.34);
+  border-radius: var(--radius);
+}
+
+.conflict-analysis header { max-width: 900px; }
+.conflict-analysis h3 { margin: 10px 0 16px; font-size: var(--type-module); }
+.conflict-analysis .section-lead { color: #dbeaf4; }
+
+.conflict-stills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.conflict-stills figure {
+  margin: 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+}
+
+.conflict-stills img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.conflict-stills figcaption { color: #cfe2ee; }
+
+.violence-reading {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.violence-reading article {
+  min-height: 210px;
+  padding: 24px;
+  color: var(--ink);
+  background: #fff;
+  border-top: 4px solid var(--lake-600);
+  border-radius: 9px;
+}
+
+.violence-reading b {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--lake-900);
+  font-family: var(--serif);
+  font-size: 19px;
+}
+
+.violence-reading p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.after-death { align-items: end; }
+.after-death blockquote { align-self: end; margin: 0; }
+
+.epilogue-visual {
+  margin: 38px 0 0;
+  padding: 12px;
+  background: var(--lake-050);
+  border: 1px solid var(--lake-200);
+  border-radius: 14px;
+}
+
+.epilogue-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 1120px) {
+  .hypatia-site::before,
+  .hypatia-site::after { display: none; }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .hero h1 {
+    max-width: 12em;
+    white-space: normal;
+    text-wrap: balance;
+  }
+
+  .hero-portrait { min-height: 560px; }
+}
+
+@media (max-width: 980px) {
+  .philosophy-page-intro,
+  .public-alliance,
+  .gender-reading,
+  .conflict-stills,
+  .violence-reading {
+    grid-template-columns: 1fr;
+  }
+
+  .subpage-header h3,
+  .philosophy-page-intro h3,
+  .gender-reading h3 { white-space: normal; }
+
+  .public-alliance article,
+  .violence-reading article { min-height: 0; }
+
+  .gender-portrait { height: 520px; }
+}
+
+@media (max-width: 720px) {
+  .page-divider {
+    width: calc(100% - 40px);
+    height: 50px;
+    margin: 32px auto;
+    padding: 6px 0;
+  }
+
+  .page-divider.inner-divider { margin: 52px auto; }
+
+  .chapter-label {
+    gap: 18px;
+    margin-bottom: 20px;
+  }
+
+  .chapter-label b,
+  .chapter-label-prologue b { font-size: 54px; }
+  .chapter-label span { font-size: 12px; letter-spacing: 0.1em; }
+
+  .work-page,
+  .gender-reading,
+  .conflict-analysis { padding: 24px; }
+
+  .classical-plates { grid-template-columns: 1fr; }
+  .classical-plates img { height: 270px; }
+
+  .philosophy-page-intro img,
+  .gender-portrait { height: 300px; }
+
+  .epilogue-visual img { aspect-ratio: 4 / 3; }
+}
