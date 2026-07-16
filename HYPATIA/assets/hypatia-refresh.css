@@ -1,0 +1,363 @@
+:root {
+  --aegean-950: #08243e;
+  --aegean-900: #0b3154;
+  --aegean-800: #0d416f;
+  --aegean-700: #15588f;
+  --aegean-500: #3b79ab;
+  --aegean-100: #dceaf3;
+  --aegean-050: #eef5f8;
+  --marble: #fbfaf5;
+  --paper: #f4f1e7;
+  --ink: #162331;
+  --muted: #5b6771;
+  --bronze: #9d7635;
+  --rule: rgba(13, 65, 111, .22);
+  --display: "Palatino Linotype", "Book Antiqua", "Noto Serif SC", "Source Han Serif SC", "Songti SC", STSong, serif;
+  --body-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", STSong, Georgia, serif;
+}
+html { background: var(--aegean-950); }
+
+body {
+  color: var(--ink);
+  background: var(--marble);
+  font-family: var(--body-serif);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border: 8px solid var(--aegean-900);
+}
+
+h1, h2, h3, h4,
+.series-lockup,
+.chapter-rail,
+.eyebrow,
+.kicker {
+  font-family: var(--display);
+}
+
+h1, h2, h3 { letter-spacing: -.035em; }
+
+.kicker {
+  color: var(--aegean-700);
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+
+.site-header {
+  background: rgba(251, 250, 245, .97);
+  border-bottom: 1px solid var(--aegean-800);
+  box-shadow: none;
+}
+
+.site-header::after {
+  content: "ΛΟΓΟΣ · ΜΑΘΗΜΑ · ΦΙΛΟΣΟΦΙΑ";
+  position: absolute;
+  left: 50%;
+  bottom: -19px;
+  transform: translateX(-50%);
+  padding: 3px 14px;
+  color: var(--marble);
+  background: var(--aegean-800);
+  font: 600 10px/1.2 Georgia, serif;
+  letter-spacing: .18em;
+  white-space: nowrap;
+}
+
+.site-nav a { font-family: var(--body-serif); }
+.site-nav a.is-active { color: var(--aegean-700); }
+
+.reading-progress { background: var(--aegean-100); }
+.reading-progress span { background: var(--bronze); }
+
+.hero {
+  color: #fff;
+  background: var(--aegean-900);
+  border-bottom: 12px solid var(--paper);
+}
+
+.hero::before {
+  content: "ΜΗΔΕΝ ΑΓΑΝ";
+  position: absolute;
+  top: 112px;
+  right: 4vw;
+  color: rgba(255,255,255,.08);
+  font: 700 clamp(40px, 8vw, 120px)/1 Georgia, serif;
+  letter-spacing: .08em;
+  writing-mode: vertical-rl;
+}
+
+.hero-orbit { display: none; }
+
+.hero-copy { border-left: 1px solid rgba(255,255,255,.36); padding-left: clamp(20px, 4vw, 58px); }
+
+.hero h1 span { color: var(--aegean-100); font-style: normal; }
+.hero h1 em { color: #fff; font-family: var(--display); font-style: normal; }
+.hero-lede { max-width: 760px; font-size: clamp(19px, 2.1vw, 28px); line-height: 1.75; }
+
+.hero-facts {
+  align-items: start;
+  text-align: left;
+  border-top: 1px solid rgba(255,255,255,.32);
+  border-bottom: 1px solid rgba(255,255,255,.32);
+}
+
+.hero-facts div { text-align: left; }
+.hero-facts small { color: #cfe3f1; }
+.hero-facts strong { justify-content: flex-start; text-align: left; }
+
+.portrait-frame {
+  background: var(--paper);
+  border: 1px solid rgba(255,255,255,.72);
+  box-shadow: 18px 18px 0 rgba(3,24,43,.42);
+}
+
+.portrait-frame::before,
+.portrait-frame::after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-color: var(--bronze);
+  z-index: 3;
+}
+
+.portrait-frame::before { top: 10px; left: 10px; border-top: 3px solid; border-left: 3px solid; }
+.portrait-frame::after { right: 10px; bottom: 10px; border-right: 3px solid; border-bottom: 3px solid; }
+.hero-portrait figcaption { color: #dce8f0; }
+.primary-action { color: var(--aegean-950); background: #fff; border-radius: 0; }
+.text-action { color: #fff; }
+
+.prologue { background: var(--paper); }
+.section-number { color: rgba(13,65,111,.08); font-family: Georgia, serif; }
+.thesis-quote { border-left-color: var(--bronze); }
+
+.reading-map { background: var(--marble); border: 1px solid var(--aegean-800); box-shadow: 10px 10px 0 var(--aegean-100); }
+.reading-map ol a { border-color: var(--rule); }
+.reading-map ol a:hover { background: var(--aegean-050); }
+
+.chapter { background: var(--marble); }
+.chapter:nth-of-type(even) { background: var(--aegean-050); }
+.chapter-rail { background: var(--aegean-900); color: #fff; }
+.chapter-rail.light { background: var(--paper); color: var(--aegean-900); }
+.chapter-rail > span { font-weight: 700; letter-spacing: .2em; }
+.chapter-header::before,
+.teacher-hero::before,
+.death-header::before {
+  content: "Ω  ·  ΛΟΓΟΣ  ·  ΦΙΛΟΣΟΦΙΑ";
+  display: block;
+  margin-bottom: 24px;
+  color: var(--bronze);
+  font: 700 11px/1 Georgia, serif;
+  letter-spacing: .25em;
+}
+
+.city-grid,
+.instrument-feature,
+.theon-panel,
+.teacher-grid,
+.public-essay,
+.after-death {
+  border-radius: 0;
+}
+
+.blueprint { background: var(--aegean-900); }
+.timeline li { border-color: var(--rule); }
+.timeline time { color: var(--aegean-800); font-family: var(--display); }
+.city-timeline { margin-top: 70px; }
+.city-timeline li:nth-child(even) { background: rgba(220,234,243,.45); }
+.theon-panel { background: var(--aegean-900); color: #fff; border-top: 6px solid var(--bronze); }
+.theon-panel .kicker { color: #cfe3f1; }
+
+.evidence-toolbar button,
+.comparison-controls button,
+.letter-controls button {
+  border-radius: 0;
+  font-family: var(--body-serif);
+}
+
+.evidence-toolbar button.is-active,
+.comparison-controls button.is-active,
+.letter-controls button.is-active {
+  color: #fff;
+  background: var(--aegean-800);
+}
+
+.work-ledger article { border-radius: 0; border-top-color: var(--aegean-800); background: #fff; }
+.work-glyph { color: var(--bronze); }
+
+.philosophy-lab {
+  color: #fff;
+  background: var(--aegean-950);
+  border-radius: 0;
+  border-top: 8px solid var(--bronze);
+}
+
+.philosophy-lab .kicker { color: #a9cee5; }
+.emanation-steps button { border-radius: 0; }
+.step-explanation { background: #fff; color: var(--ink); border-left: 6px solid var(--bronze); }
+
+.two-schools {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  margin-top: 42px;
+  background: rgba(255,255,255,.3);
+  border: 1px solid rgba(255,255,255,.3);
+}
+
+.two-schools article { padding: 30px; background: var(--aegean-900); }
+.two-schools span { color: #a9cee5; font-size: 12px; letter-spacing: .15em; }
+.two-schools h4 { margin: 10px 0 12px; font-size: 22px; }
+.two-schools p { color: #dbe7ef; line-height: 1.85; }
+
+.comparison-atlas {
+  margin-top: 72px;
+  padding: clamp(28px, 5vw, 60px);
+  background: var(--paper);
+  border: 1px solid var(--aegean-800);
+  box-shadow: 12px 12px 0 var(--aegean-100);
+}
+
+.comparison-atlas > header { max-width: 850px; }
+.comparison-atlas > header h3 { max-width: 760px; font-size: clamp(28px, 4vw, 48px); }
+.comparison-controls { display: flex; flex-wrap: wrap; gap: 0; margin: 32px 0; border: 1px solid var(--aegean-800); }
+.comparison-controls button { flex: 1 1 150px; min-height: 54px; padding: 10px 16px; border: 0; border-right: 1px solid var(--rule); background: transparent; color: var(--aegean-900); }
+.comparison-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.comparison-grid article { min-height: 250px; padding: 28px; background: #fff; border-top: 5px solid var(--aegean-500); }
+.comparison-grid article.christian { border-top-color: var(--bronze); }
+.comparison-grid article.hypatian { color: #fff; background: var(--aegean-900); border-top-color: #9fc7df; }
+.comparison-grid span { font-size: 12px; letter-spacing: .12em; }
+.comparison-grid h4 { margin: 15px 0 12px; font-size: 23px; }
+.comparison-grid p { line-height: 1.8; }
+.comparison-atlas > aside { display: grid; grid-template-columns: 140px 1fr; gap: 25px; margin-top: 24px; padding: 22px; border-left: 5px solid var(--bronze); background: #fff; }
+
+.teacher-hero { border-bottom-color: var(--aegean-800); }
+.teacher-proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin: 50px 0; background: var(--aegean-800); border: 1px solid var(--aegean-800); }
+.teacher-proof article { padding: 28px; background: #fff; }
+.teacher-proof span { color: var(--aegean-700); font-size: 12px; letter-spacing: .12em; }
+.teacher-proof b { display: block; margin: 12px 0; font-size: 21px; }
+.teacher-proof p { line-height: 1.75; }
+
+.teacher-principles article { border-radius: 0; border-color: var(--rule); }
+.letter-figure { border-radius: 0; }
+.evidence-caution { margin: 34px 0 56px; padding: 24px 28px; border-left: 5px solid var(--bronze); background: var(--paper); }
+.evidence-caution b { color: var(--aegean-800); }
+.letter-stage { color: #fff; background: var(--aegean-900); border-radius: 0; }
+
+.bilingual-quote > p { font-family: var(--display); font-size: clamp(26px, 3.4vw, 46px); line-height: 1.48; }
+.bilingual-quote > span { display: block; margin-top: 18px; color: inherit; opacity: .68; font: italic 15px/1.7 Georgia, serif; letter-spacing: .02em; }
+.bilingual-quote > footer { margin-top: 17px; }
+.bilingual-quote.compact > p { font-size: clamp(23px, 2.5vw, 33px); }
+
+.menstrual-story { display: grid; grid-template-columns: .9fr 1.1fr; gap: 36px; margin: 70px 0; padding: clamp(28px, 5vw, 58px); background: var(--paper); border-top: 7px solid var(--bronze); }
+.menstrual-story blockquote { margin: 0; padding-left: 30px; border-left: 1px solid var(--aegean-800); }
+.menstrual-story aside { grid-column: 1 / -1; padding: 22px 26px; color: #fff; background: var(--aegean-900); }
+.gender-reading { border-color: var(--aegean-800); }
+.core-claim { color: #fff; background: var(--aegean-950); }
+
+.faction-map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin: 58px 0; background: var(--aegean-800); border: 1px solid var(--aegean-800); }
+.faction-map article { padding: 32px; background: #fff; }
+.faction-map .philosophy-side { color: #fff; background: var(--aegean-900); }
+.faction-map span { color: var(--aegean-700); font-size: 12px; letter-spacing: .14em; }
+.faction-map .philosophy-side span { color: #a9cee5; }
+.faction-map h3 { margin: 14px 0 24px; font-size: 29px; }
+.faction-map p { line-height: 1.78; }
+
+.public-proof { margin: 60px auto; padding: 42px clamp(28px, 6vw, 86px); color: #fff; background: var(--aegean-950); border-left: 9px solid var(--bronze); }
+.public-essay { background: var(--paper); border: 1px solid var(--rule); }
+.pull-number { color: var(--aegean-800); font-family: Georgia, serif; }
+.turning-point { border-radius: 0; background: #fff; border-color: var(--aegean-800); }
+
+.death-chapter { background: var(--aegean-950); }
+.death-header { border-color: rgba(255,255,255,.35); }
+.rival-profiles { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 50px 0 70px; }
+.rival-profiles article { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 18px; color: var(--ink); background: var(--marble); }
+.rival-profiles figure { margin: 0; }
+.rival-profiles img { width: 100%; height: 230px; object-fit: cover; filter: saturate(.72) contrast(1.05); }
+.rival-profiles figcaption { margin-top: 9px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.rival-profiles span { color: var(--aegean-700); font-size: 12px; letter-spacing: .12em; }
+.rival-profiles h3 { margin: 10px 0; font-size: 30px; }
+.rival-profiles p { line-height: 1.8; }
+.crisis-sequence article { border-radius: 0; border-left-color: var(--bronze); }
+.source-witnesses details { border-radius: 0; }
+.responsibility-grid { border-radius: 0; }
+.after-death { border-top: 7px solid var(--bronze); }
+
+.not-an-ending { margin-top: 64px; padding: clamp(30px, 5vw, 58px); color: var(--ink); background: var(--paper); border: 1px solid rgba(255,255,255,.4); }
+.not-an-ending header { max-width: 780px; }
+.not-an-ending header h3 { font-size: clamp(28px, 4vw, 44px); }
+.not-an-ending > div { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 32px 0; }
+.not-an-ending article { padding: 24px; background: #fff; border-top: 4px solid var(--aegean-700); }
+.not-an-ending article b { display: block; margin-bottom: 12px; color: var(--aegean-800); }
+
+.memory-stage { border-radius: 0; }
+.memory-tabs button { border-radius: 0; }
+.memory-tabs button.is-active { background: var(--aegean-900); }
+.memory-voices { margin-top: 76px; }
+.memory-voices > header { max-width: 800px; }
+.memory-voices > header h3 { font-size: clamp(29px, 4vw, 48px); }
+.voice-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
+.voice-gallery > article { display: flex; flex-direction: column; padding: 16px; background: #fff; border: 1px solid var(--rule); }
+.voice-gallery figure { margin: 0 0 24px; }
+.voice-gallery img { width: 100%; height: 290px; object-fit: cover; object-position: top; filter: saturate(.74); }
+.voice-gallery figcaption { margin-top: 8px; color: var(--muted); font-size: 11px; }
+.voice-gallery blockquote { margin: 0; padding: 0; }
+.voice-gallery article > p { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--rule); line-height: 1.75; }
+
+.epilogue { background: var(--paper); }
+.epilogue::before { content: "ΓΝΩΘΙ ΣΕΑΥΤΟΝ"; color: rgba(13,65,111,.07); font: 700 clamp(38px, 9vw, 150px)/1 Georgia, serif; }
+.epilogue-argument { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin: 52px 0; background: var(--aegean-800); border: 1px solid var(--aegean-800); }
+.epilogue-argument article { padding: 28px; background: #fff; }
+.epilogue-argument span { color: var(--bronze); font: 700 26px/1 Georgia, serif; }
+.epilogue-argument h3 { margin: 16px 0 10px; }
+.epilogue-argument p { line-height: 1.75; }
+.creator-reading { padding: clamp(30px, 5vw, 60px); color: #fff; background: var(--aegean-900); border-top: 8px solid var(--bronze); }
+.creator-reading .kicker { color: #a9cee5; }
+.creator-reading h3 { max-width: 900px; font-size: clamp(29px, 4vw, 48px); }
+.creator-reading p { max-width: 920px; color: #e3edf3; line-height: 1.9; }
+.echoes article { border-radius: 0; background: #fff; }
+.final-quote { border-color: var(--bronze); }
+
+.watch-section { grid-template-columns: .65fr 1.35fr; background: var(--aegean-950); }
+.video-shell { min-width: 0; }
+.video-shell iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 1px solid rgba(255,255,255,.45); background: #000; }
+.watch-links { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 1px; background: rgba(255,255,255,.25); }
+.watch-links a { border: 0; border-radius: 0; background: rgba(255,255,255,.08); }
+
+.source-table { border-radius: 0; }
+.reading-list a { border-radius: 0; }
+.site-footer { background: var(--aegean-950); }
+
+@media (max-width: 980px) {
+  .comparison-grid,
+  .teacher-proof,
+  .faction-map,
+  .voice-gallery,
+  .epilogue-argument,
+  .not-an-ending > div { grid-template-columns: 1fr; }
+  .two-schools,
+  .menstrual-story,
+  .rival-profiles { grid-template-columns: 1fr; }
+  .rival-profiles article { grid-template-columns: 150px 1fr; }
+  .watch-section { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  body::before { border-width: 4px; }
+  .site-header::after { display: none; }
+  .hero-copy { border-left: 0; padding-left: 0; }
+  .hero::before { display: none; }
+  .comparison-atlas,
+  .menstrual-story,
+  .not-an-ending { padding: 24px 18px; }
+  .comparison-atlas > aside { grid-template-columns: 1fr; }
+  .rival-profiles article { grid-template-columns: 1fr; }
+  .rival-profiles img { height: 300px; }
+  .watch-links { grid-template-columns: 1fr; }
+  .bilingual-quote > p { font-size: 25px; }
+}
