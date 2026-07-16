@@ -280,22 +280,34 @@ h4 {
 
 /* Chapters */
 .chapter {
-  grid-template-columns: 72px minmax(0, 1fr);
+  display: block;
+  position: relative;
 }
 
 .chapter-rail {
-  min-width: 0;
-  padding-top: 112px;
+  display: none;
+}
+
+.chapter-rail > span,
+.chapter-rail > b,
+.chapter-rail > small {
+  color: #ffffff;
+}
+
+.chapter-rail > i {
+  background: rgba(255, 255, 255, 0.38);
 }
 
 .chapter-content {
   min-width: 0;
-  padding: var(--section-space) var(--page-pad);
+  padding-block: var(--section-space);
+  padding-inline: max(var(--page-pad), calc((100vw - var(--content-max)) / 2));
 }
 
 .chapter-content > * {
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
 }
 
 .chapter-header,
@@ -512,9 +524,47 @@ h4 {
 }
 
 .philosophy-lab {
+  margin-inline: 0;
   margin-top: var(--block-space);
-  padding: 42px;
+  padding: clamp(42px, 5vw, 60px);
   border-radius: var(--radius);
+}
+
+.lab-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+  align-items: start;
+  gap: 18px 64px;
+}
+
+.lab-intro .kicker {
+  grid-column: 1 / -1;
+}
+
+.lab-intro h3 {
+  grid-column: 1;
+  margin-top: 0;
+  font-size: clamp(42px, 4.4vw, 60px);
+  line-height: 1.24;
+}
+
+.lab-copy {
+  grid-column: 2;
+  grid-row: 2;
+  padding-left: 32px;
+  border-left: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.lab-copy .lab-thesis {
+  color: #ffffff;
+  font-family: var(--serif);
+  font-size: clamp(20px, 1.8vw, 24px);
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.lab-copy p + p {
+  margin-top: 18px;
 }
 
 .philosophy-lab h3,
@@ -533,6 +583,17 @@ h4 {
   min-width: 0;
   min-height: 124px;
   padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+}
+
+.emanation-steps {
+  gap: 12px;
+  border: 0;
+}
+
+.emanation-steps button + button {
+  border-left: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 .emanation-steps button[aria-selected="true"] {
@@ -543,6 +604,37 @@ h4 {
 .step-explanation {
   min-height: 0;
   padding: 28px 30px;
+}
+
+.philosophy-lab .step-explanation {
+  color: var(--ink);
+  background: #ffffff;
+}
+
+.philosophy-lab .step-explanation p {
+  color: var(--muted);
+}
+
+.two-schools {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.two-schools article,
+.two-schools article:nth-child(2) {
+  width: auto;
+  min-width: 0;
+  margin-left: 0;
+  padding: 30px 32px;
+}
+
+.philosophy-lab .two-schools article:first-child h4 {
+  color: var(--ink);
+}
+
+.philosophy-lab .two-schools article:first-child p {
+  color: var(--muted);
 }
 
 .comparison-atlas {
@@ -566,13 +658,17 @@ h4 {
 
 .comparison-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0;
+  gap: 24px;
+  background: transparent;
+  border: 0;
 }
 
 .comparison-grid article {
   min-width: 0;
   min-height: 260px;
   padding: 28px;
+  border: 1px solid var(--lake-200);
+  border-radius: 12px;
 }
 
 .comparison-atlas > aside {
@@ -596,12 +692,12 @@ h4 {
 .teacher-proof {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0;
+  gap: 24px;
   margin: 0 0 var(--block-space);
   padding: 0;
-  overflow: hidden;
-  background: #ffffff;
-  border: 1px solid var(--lake-200);
+  overflow: visible;
+  background: transparent;
+  border: 0;
   border-radius: var(--radius);
 }
 
@@ -611,12 +707,49 @@ h4 {
   min-height: 260px;
   padding: 30px 32px;
   background: #ffffff;
-  border: 0;
-  border-right: 1px solid var(--lake-200);
+  border: 1px solid var(--lake-200);
+  border-radius: 12px;
 }
 
 .teacher-proof article:last-child {
-  border-right: 0;
+  border-right: 1px solid var(--lake-200);
+}
+
+.teacher-chapter {
+  color: var(--ink);
+  background: var(--lake-050);
+}
+
+.teacher-hero h2,
+.teacher-principles h3 {
+  color: var(--ink);
+}
+
+.teacher-hero .kicker,
+.menstrual-story .kicker,
+.gender-reading .kicker {
+  color: var(--lake-700);
+}
+
+.teacher-hero > p:last-child,
+.teacher-principles p,
+.letter-figure figcaption {
+  color: var(--muted);
+}
+
+.teacher-principles {
+  background: transparent;
+  border-color: var(--lake-200);
+}
+
+.teacher-principles article {
+  color: var(--ink);
+  background: #ffffff;
+  border-color: var(--lake-200);
+}
+
+.teacher-principles b {
+  color: var(--lake-700);
 }
 
 .teacher-proof span,
@@ -653,7 +786,19 @@ h4 {
 
 .letter-stage {
   padding: 24px 40px 36px;
+  color: #ffffff;
+  background: var(--lake-900);
+  border: 0;
   border-radius: var(--radius);
+}
+
+.letter-stage .kicker,
+.letter-stage footer {
+  color: var(--lake-200);
+}
+
+.letter-stage blockquote p {
+  color: #ffffff;
 }
 
 .letter-stage blockquote {
@@ -672,7 +817,7 @@ h4 {
 }
 
 .menstrual-story blockquote {
-  padding: 8px 0 8px 28px;
+  padding: 28px;
 }
 
 .menstrual-story aside {
@@ -769,6 +914,44 @@ h4 {
 .responsibility-grid,
 .memory-explorer {
   min-width: 0;
+}
+
+.faction-map article:nth-child(n) {
+  transform: none;
+}
+
+.rival-profiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.rival-profiles article,
+.rival-profiles article:nth-child(2) {
+  width: auto;
+  min-width: 0;
+  margin-left: 0;
+  padding: 30px 32px;
+}
+
+.death-chapter .death-header > p:last-child {
+  color: #dbeaf4;
+}
+
+.death-chapter .rival-profiles h3,
+.death-chapter .not-an-ending h3,
+.death-chapter .not-an-ending b {
+  color: var(--ink);
+}
+
+.death-chapter .rival-profiles p,
+.death-chapter .rival-profiles figcaption,
+.death-chapter .not-an-ending p {
+  color: var(--muted);
+}
+
+.death-chapter .not-an-ending .kicker {
+  color: var(--lake-700);
 }
 
 .memory-voices {
@@ -1008,8 +1191,16 @@ h4 {
   background: var(--lake-050);
 }
 
+.source-table .source-head th {
+  padding: 22px 20px;
+  color: #ffffff;
+  background: var(--lake-800);
+}
+
 .site-footer {
+  padding: 48px max(var(--page-pad), calc((100vw - var(--content-max)) / 2));
   background: var(--lake-950);
+  box-shadow: none;
 }
 
 @media (max-width: 1120px) {
@@ -1064,11 +1255,28 @@ h4 {
 
   .hero-grid,
   .split-header,
+  .lab-intro,
+  .two-schools,
   .instrument-feature,
   .teacher-grid,
   .gender-reading,
+  .rival-profiles,
   .watch-section {
     grid-template-columns: 1fr;
+  }
+
+  .lab-intro .kicker,
+  .lab-intro h3,
+  .lab-copy {
+    grid-column: 1;
+  }
+
+  .lab-copy {
+    grid-row: auto;
+    padding-top: 24px;
+    padding-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
+    border-left: 0;
   }
 
   .hero-grid {
