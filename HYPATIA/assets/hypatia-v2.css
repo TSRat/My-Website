@@ -79,7 +79,7 @@ h4 {
 }
 
 .kicker {
-  color: var(--lake-700);
+  color: var(--lake-800);
   font-size: 13px;
   line-height: 1.5;
 }
@@ -686,7 +686,7 @@ h4 {
 
 /* Teacher section */
 .teacher-hero {
-  max-width: 980px;
+  max-width: var(--content-max);
 }
 
 .teacher-proof {
@@ -728,7 +728,7 @@ h4 {
 .teacher-hero .kicker,
 .menstrual-story .kicker,
 .gender-reading .kicker {
-  color: var(--lake-700);
+  color: var(--lake-800);
 }
 
 .teacher-hero > p:last-child,
@@ -951,7 +951,14 @@ h4 {
 }
 
 .death-chapter .not-an-ending .kicker {
-  color: var(--lake-700);
+  color: var(--lake-800);
+}
+
+.two-schools article:first-child span,
+.comparison-grid .hypatian span,
+.faction-map article:not(.philosophy-side) span,
+.reading-list span {
+  color: var(--lake-800);
 }
 
 .memory-voices {
