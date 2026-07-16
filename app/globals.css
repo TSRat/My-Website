@@ -52,9 +52,11 @@ button, input { font: inherit; }
   min-height: 116px; display: flex; align-items: center; justify-content: space-between;
   border-bottom: 1px solid var(--burgundy); position: relative; z-index: 20;
 }
-.brand { display: flex; flex-direction: column; gap: 2px; color: var(--burgundy); }
-.brand span { font-family: var(--serif); font-size: 28px; letter-spacing: .06em; }
-.brand em { font-family: Georgia, serif; font-size: 14px; opacity: .75; }
+.brand { display: flex; align-items: center; gap: 18px; color: var(--burgundy); }
+.brand-logo { width: 168px; height: auto; object-fit: contain; }
+.brand-copy { display: flex; flex-direction: column; gap: 3px; }
+.brand-copy strong { font-family: var(--serif); font-size: 22px; font-weight: 500; letter-spacing: .08em; }
+.brand-copy em { font-family: Georgia, serif; font-size: 12px; opacity: .75; }
 .site-header nav { display: flex; align-self: stretch; gap: 44px; }
 .site-header nav a {
   display: grid; place-items: center; position: relative; font-family: var(--serif);
@@ -197,6 +199,7 @@ button, input { font: inherit; }
 .site-footer { background: var(--ink); color: var(--paper); padding-block: 50px; }
 .footer-grid { display: grid; grid-template-columns: 1fr auto auto; gap: 70px; align-items: end; }
 .footer-brand { margin: 0 0 10px; font-family: var(--serif); font-size: 22px; }
+.footer-logo { width: 160px; height: auto; margin-bottom: 18px; object-fit: contain; }
 .footer-grid > div > p:last-child { margin: 0; color: rgba(251,248,240,.55); font-size: 12px; }
 .footer-links { display: flex; gap: 26px; font-size: 12px; }
 .footer-links a:hover { color: #d9b8ad; }
@@ -259,7 +262,10 @@ button, input { font: inherit; }
 @media (max-width: 760px) {
   .page-frame { width: min(100% - 36px, 640px); }
   .site-header { min-height: 96px; align-items: flex-start; padding-block: 18px; flex-direction: column; gap: 18px; }
-  .brand span { font-size: 21px; }
+  .brand { width: 100%; gap: 14px; }
+  .brand-logo { width: 132px; }
+  .brand-copy strong { font-size: 18px; }
+  .brand-copy em { font-size: 10px; }
   .site-header nav { width: 100%; align-self: auto; gap: 0; justify-content: space-between; }
   .site-header nav a { font-size: 13px; }
   .site-header nav a::after { bottom: -8px; }

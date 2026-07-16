@@ -39,7 +39,7 @@ export const briefings: Briefing[] = [
     intro:
       "今天的五个故事都在追问一套看似中性的系统如何分配可见性：工厂壁画替谁想象幸福，建筑绘图怎样给理论装上表情，望远镜档案如何让一颗暗行星现身，气候模型怎样把暴雨从天灾改写为可归责的风险，以及政党用什么规则决定谁能进入可胜选的席位。图像、数据与程序不是事实之外的包装，而是制造公共判断的基础设施。",
     uniqueCount: 5,
-    topics: ["艺术人文", "社会科学（包括天文学）", "女性主义"],
+    topics: ["艺术人文", "社会科学", "女性主义"],
     stories: [
       {
         category: "艺术人文 × 女性主义 × 劳工史",
@@ -90,7 +90,7 @@ export const briefings: Briefing[] = [
         sourceDate: "2026-07-15（开幕日期）",
       },
       {
-        category: "社会科学（包括天文学） × 天文学",
+        category: "社会科学 × 天文学",
         image: "/story-images/beta-pictoris-d.jpg",
         imageAlt: "韦布望远镜、智利地面望远镜、年轻恒星碎屑盘与三颗行星组成的编辑插图",
         imageCredit: "编辑插图 · AI 生成，用于解释多台仪器与档案数据的联合发现，并非天体实拍影像",
@@ -114,7 +114,7 @@ export const briefings: Briefing[] = [
         sourceDate: "2026-07-15（期刊发布；预印本 2026-06-22）",
       },
       {
-        category: "社会科学（包括天文学） × 地理学",
+        category: "社会科学 × 地理学",
         image: "/story-images/west-africa-flood-attribution.jpg",
         imageAlt: "几内亚湾沿岸地图、降雨模型网格、雨量计与城市排水系统组成的编辑插图",
         imageCredit: "编辑插图 · AI 生成，用于阐释气候归因与城市排水，并非洪灾现场影像",
@@ -171,7 +171,7 @@ export const briefings: Briefing[] = [
     intro:
       "今天的五个故事从一件跨海而来的中世纪刺绣开始，经过一场把观众权力重新放上舞台的行为艺术、一种在星际云中出现的四碳糖、一次限制青少年社交媒体的现实试验，抵达正在被援助削减掏空的女性组织。它们共同提醒我们：文化遗产、科学发现、注意力与照护从来不是孤立对象，而是由运输、仪器、规则、资金和人的选择共同维系的基础设施。",
     uniqueCount: 5,
-    topics: ["艺术人文", "社会科学（包括天文学）", "女性主义"],
+    topics: ["艺术人文", "社会科学", "女性主义"],
     stories: [
       {
         category: "艺术人文 × 历史",
@@ -220,7 +220,7 @@ export const briefings: Briefing[] = [
         sourceDate: "2026-07-18（首场活动日期）",
       },
       {
-        category: "社会科学（包括天文学） × 天文学",
+        category: "社会科学 × 天文学",
         image: "/story-images/interstellar-erythrulose.jpg",
         imageAlt: "两座射电望远镜朝向银河中心分子云，四个发光节点组成分子结构的编辑插图",
         imageCredit: "编辑插图 · AI 生成，用于解释星际分子探测，并非望远镜实拍影像",
@@ -298,7 +298,7 @@ export const briefings: Briefing[] = [
     intro:
       "今天的五个故事看似分散：一位古巴裔艺术家的大型回顾展、一处把廉价工作室带回城市的艺术基地、一项扩展中的脑刺激治疗、一场谈论更年期的朋克节，以及一组出现在国家广场上的增强现实女性。它们共同追问：当人的身体、声音与历史需要被保存时，谁提供空间，谁定义证据，谁又拥有叙述权？",
     uniqueCount: 5,
-    topics: ["艺术人文", "社会科学（包括天文学）", "女性主义"],
+    topics: ["艺术人文", "社会科学", "女性主义"],
     stories: [
       {
         category: "艺术人文 × 女性主义",

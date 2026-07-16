@@ -1,4 +1,4 @@
-import { copyFile, cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { access, copyFile, cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -54,8 +54,8 @@ const scopes = [
     text: "艺术、设计、电影、音乐、文学、建筑、戏剧、历史、哲学、宗教与文化史。",
   },
   {
-    name: "社会科学（包括天文学）",
-    text: "心理学、社会学、人类学、语言学、传播学等；也包括天文学和地理学，并关注科学发现背后的制度、技术基础设施和社会影响。",
+    name: "社会科学",
+    text: "心理学、社会学、人类学、语言学、传播学、天文学与地理学等，并关注科学发现背后的制度、技术基础设施和社会影响。",
   },
   {
     name: "女性主义",
@@ -120,7 +120,7 @@ function hubPage() {
           <div class="card-copy">
             <p>DAILY THOUGHT BRIEFING</p>
             <h3>IVORY ARCHIVE</h3>
-            <p>中文思想简报档案馆：艺术人文、社会科学（包括天文学）与女性主义。</p>
+            <p>中文思想简报档案馆：艺术人文、社会科学与女性主义。</p>
             <dl><div><dt>最新一期</dt><dd>${escapeHtml(latest.displayDate)}</dd></div><div><dt>收录</dt><dd>${briefings.length} 期 · ${briefings.reduce((count, issue) => count + issue.stories.length, 0)} 则</dd></div></dl>
             <strong>进入网站 <span>→</span></strong>
           </div>
@@ -157,11 +157,11 @@ function shell({ title, description, prefix, body }) {
 <body>
   <a class="skip-link" href="#content">跳到正文</a>
   <header class="site-header frame">
-    <a class="brand" href="${prefix}index.html"><strong>思想简报档案馆</strong><span>Ivory Archive</span></a>
+    <a class="brand" href="${prefix}index.html"><img class="brand-logo" src="${prefix}tsrat-logo.png" alt="TS鼠 Logo"><span class="brand-copy"><strong>思想简报档案馆</strong><em>Ivory Archive</em></span></a>
     <nav aria-label="主要导航"><a href="${prefix}index.html#today">今日五则</a><a href="${prefix}index.html#archive">日刊档案</a><a href="${prefix}index.html#topics">主题范围</a></nav>
   </header>
   <main id="content">${body}</main>
-  <footer><div class="frame footer-inner"><p>思想简报档案馆 · Ivory Archive</p><p>GitHub Pages 公开静态镜像</p></div></footer>
+  <footer><div class="frame footer-inner"><div class="footer-identity"><img class="footer-logo" src="${prefix}tsrat-logo.png" alt="TS鼠 Logo"><p>思想简报档案馆 · Ivory Archive</p></div><p>GitHub Pages 公开静态镜像</p></div></footer>
   <script src="${prefix}site.js" defer></script>
 </body>
 </html>`;
@@ -184,7 +184,7 @@ function homePage() {
   const body = `
     <section class="hero frame">
       <div class="hero-meta"><span>ISSUE ${escapeHtml(latest.issueNo)}</span><strong>${escapeHtml(latest.displayDate)}</strong><small>IVORY ARCHIVE</small></div>
-      <div class="hero-copy"><p class="eyebrow">每日思想简报 · Daily Thought Briefing</p><h1>把今天的文化新闻，变成明天的思考素材</h1><p>每天 5 个值得停留的故事，沿着艺术人文、社会科学（包括天文学）与女性主义三条线索展开。</p><a class="button" href="briefings/${latest.date}/index.html">阅读今日简报 →</a><span class="unique">✓ ${latest.uniqueCount}/${latest.stories.length} 与历史档案无实质重复</span></div>
+      <div class="hero-copy"><p class="eyebrow">每日思想简报 · Daily Thought Briefing</p><h1>把今天的文化新闻，变成明天的思考素材</h1><p>每天 5 个值得停留的故事，沿着艺术人文、社会科学与女性主义三条线索展开。</p><a class="button" href="briefings/${latest.date}/index.html">阅读今日简报 →</a><span class="unique">✓ ${latest.uniqueCount}/${latest.stories.length} 与历史档案无实质重复</span></div>
       <div class="hero-art"><img src="ivory-botanical-archive.png" alt="森林绿色植物标本风档案插图"><span>${escapeHtml(latest.displayDate)}<br>No.${escapeHtml(latest.issueNo)}</span></div>
     </section>
     <section class="section frame" id="today"><header class="section-title"><div><p class="eyebrow">Today's Index</p><h2>今日五则</h2></div><p>${escapeHtml(latest.theme)}</p></header>
@@ -234,6 +234,7 @@ await writeFile(join(output, "site.js"), client);
 await writeFile(join(output, "404.html"), shell({ title: "页面未找到", description: "页面未找到", prefix: "./", body: '<section class="not-found frame"><p class="eyebrow">404</p><h1>这张档案卡还不存在</h1><a class="button" href="./index.html">返回首页</a></section>' }));
 await copyFile(join(root, "public/favicon.svg"), join(output, "favicon.svg"));
 await copyFile(join(root, "public/ivory-botanical-archive.png"), join(output, "ivory-botanical-archive.png"));
+await copyFile(join(root, "public/tsrat-logo.png"), join(output, "tsrat-logo.png"));
 
 for (const briefing of briefings) {
   const issueDir = join(output, "briefings", briefing.date);
@@ -248,7 +249,13 @@ for (const briefing of briefings) {
   }
 }
 
-await rm(join(pagesRoot, "HYPATIA"), { recursive: true, force: true });
-await cp(join(root, "HYPATIA"), join(pagesRoot, "HYPATIA"), { recursive: true });
+for (const site of staticSites) {
+  const target = join(pagesRoot, site.slug);
+  try {
+    await access(target);
+  } catch {
+    await cp(join(root, site.slug), target, { recursive: true });
+  }
+}
 
-console.log(`Generated ${siteSlug}, copied HYPATIA, and built the multi-site hub.`);
+console.log(`Generated ${siteSlug}, preserved existing site directories, and built the multi-site hub.`);

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     default: "每日思想简报 · 思想简报档案馆",
     template: "%s · 每日思想简报",
   },
-  description: "每天五个值得停留的故事：艺术人文、社会科学（包括天文学）与女性主义。",
+  description: "每天五个值得停留的故事：艺术人文、社会科学与女性主义。",
   other: { "codex-preview": "development" },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { Briefing } from "./briefings";
 
-const filters = ["全部", "艺术人文", "社会科学（包括天文学）", "女性主义"];
+const filters = ["全部", "艺术人文", "社会科学", "女性主义"];
 
 export function ArchiveExplorer({ briefings }: { briefings: Briefing[] }) {
   const [activeFilter, setActiveFilter] = useState("全部");

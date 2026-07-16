@@ -38,7 +38,7 @@ export default function Home() {
             <h1 id="hero-title">把今天的文化新闻，变成明天的思考素材</h1>
             <span className="title-stroke" />
             <p className="hero-deck">
-              每天 5 个值得停留的故事，沿着艺术人文、社会科学（包括天文学）与女性主义三条线索展开。
+              每天 5 个值得停留的故事，沿着艺术人文、社会科学与女性主义三条线索展开。
             </p>
             <div className="hero-actions">
               <Link className="button button-primary" href={`/briefings/${latest.date}`}>
@@ -139,8 +139,8 @@ export default function Home() {
             </article>
             <article>
               <span>02</span>
-              <h3>社会科学（包括天文学）</h3>
-              <p>心理学、社会学、人类学、语言学、传播学等；也包括天文学和地理学，并关注科学发现背后的制度、技术基础设施和社会影响。</p>
+              <h3>社会科学</h3>
+              <p>心理学、社会学、人类学、语言学、传播学、天文学与地理学等，并关注科学发现背后的制度、技术基础设施和社会影响。</p>
               <a href="#archive">本期 {latestCounts.socialScience} 则 →</a>
             </article>
             <article>
