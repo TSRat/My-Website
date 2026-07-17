@@ -32,6 +32,138 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    date: "2026-07-17",
+    displayDate: "2026.07.17",
+    issueNo: "04",
+    theme: "看见一件事，需要怎样的银幕、档案、制度与投票箱？",
+    intro:
+      "今天的五个故事不只关心新作品或新政策，也追问它们靠什么基础设施进入公共视野：古希腊史诗要经过稀缺的 70 毫米银幕，女性艺术家的六十年实践要穿过媒介与地域偏见，宇宙的变化要靠十年连续成像，学术传统要靠分布在各地的岗位与课程，而身体自主权则要进入一张州级选票。被看见从来不是自然发生的。",
+    uniqueCount: 5,
+    topics: ["艺术人文", "社会科学", "女性主义"],
+    stories: [
+      {
+        category: "艺术人文 × 电影与文学",
+        image: "/story-images/odyssey-imax-infrastructure.jpg",
+        imageAlt: "古代航船沿胶片驶向巨幕，少量影院如灯塔分布在地图上的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释史诗改编与放映基础设施，并非电影剧照或新闻现场影像",
+        title: "《奥德赛》上映：一部全民神话，为何只有少数银幕能完整放映？",
+        summary:
+          "诺兰把荷马史诗拍成首部全片使用 IMAX 摄影机的叙事长片；但其首选的 70 毫米版本在美国只进入 25 家影院，技术雄心也制造了新的观看地理。",
+        happened:
+          "Christopher Nolan 执导、Matt Damon 饰演奥德修斯的《The Odyssey》于 7 月 17 日上映。影片被 IMAX 称为首部全片使用 IMAX 摄影机拍摄的叙事长片，Nolan 首选 70 毫米 IMAX 放映；Axios 核验，美国目前只有 25 家运营中的影院具备这一放映条件。其他观众仍可在数字 IMAX、Dolby Cinema、普通 70 毫米、35 毫米及院线自有巨幕观看，但画幅、胶片质感和银幕比例并不相同。",
+        importance:
+          "古代口传史诗被包装成全球同步的商业事件，看似把经典交给大众；真正决定观众看到哪个版本的，却是几十年前形成的放映网络、设备维护和地域分布。影片的航海叙事于是多了一层现实反讽：为了抵达导演所谓的“完整版本”，观众也可能需要跨城旅行。与前期贝叶挂毯的文物运输不同，这里的问题不是谁保管原物，而是谁拥有解释影像的硬件。",
+        creatorAngle:
+          "可以制作一张“同一部电影的多种身体”：从 65 毫米摄影底片、70 毫米放映拷贝、1.43:1 银幕到数字巨幕，逐层说明每次转换保留和丢失了什么；再把 25 家美国影院画成一张稀疏航海图，讨论文化平权是否也包括放映基础设施。",
+        facts: [
+          "影片于 2026 年 7 月 17 日公映，由 Universal Pictures 发行，Matt Damon 饰演奥德修斯",
+          "IMAX 称其为首部全片使用 IMAX 摄影机拍摄的叙事长片",
+          "美国仅有 25 家运营中的影院可放映 70 毫米 IMAX 版本，其中 8 家位于加利福尼亚州",
+          "影院可提供数字 IMAX、Dolby Cinema、普通 70 毫米、35 毫米与院线自有巨幕等替代格式",
+        ],
+        sourceName: "Axios（技术信息由 IMAX 交叉核验）",
+        sourceUrl: "https://www.axios.com/2026/07/17/odyssey-imax-christopher-nolan",
+        sourceDate: "2026-07-17",
+      },
+      {
+        category: "艺术人文 × 女性主义 × 艺术史",
+        image: "/story-images/gladys-nilsson-retrospective.jpg",
+        imageAlt: "水彩纸、刺绣绷架与跳舞的抽象女性形象从工作室延伸到美术馆的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释水彩、母职与媒介等级，并非 Gladys Nilsson 原作复制",
+        title: "Gladys Nilsson 的第一次回顾展：水彩为何被误读成“女性媒介”？",
+        summary:
+          "86 岁前夕，Nilsson 迎来首场生涯回顾展；约 115 件作品把母职中的材料选择、芝加哥地域标签与水彩的媒介等级放到同一条六十年时间线上。",
+        happened:
+          "Crocker Art Museum 将于 7 月 19 日开幕《Gleefully Askew: A Gladys Nilsson Retrospective》，展至 11 月 29 日。这是 Nilsson 首场回顾展，汇集约 115 件水彩、绘画、素描与版画，覆盖六十余年。她 1962 年毕业于芝加哥艺术学院，后来成为 Hairy Who 成员；怀孕期间为避免松节油毒性，她把水彩作为主要媒介，却被批评界进一步归类为团体中最“女性化”的成员。",
+        importance:
+          "Nilsson 的故事不是泛泛的“被遗忘女艺术家再发现”。它精确揭示艺术等级如何由材料、照护条件和地理中心共同生产：水彩因便于在育儿环境中使用而成为策略，却又被当成不够宏大；在 Sacramento 的长期工作，则常被“芝加哥艺术家”标签遮蔽。回顾展把这些限制重新读作形式实验的发动机，也与此前 Mendieta 的机构回顾、Yoko Ono 的行为艺术重演形成不同判断。",
+        creatorAngle:
+          "可从一瓶被避开的松节油开始，追踪怀孕、工作室安全、水彩、刺绣绷架和纸上大尺幅如何组成一套“照护条件下的形式发明”。再比较艺术史为何更容易记住团体名称，而忽略成员在迁居后形成的独立路径。",
+        facts: [
+          "展期为 2026 年 7 月 19 日至 11 月 29 日，之后将于 2027 年巡展至 Madison Museum of Contemporary Art",
+          "展览汇集约 115 件作品，覆盖 Nilsson 六十余年的创作，是她首场生涯回顾展",
+          "Nilsson 1940 年出生、1962 年毕业于 School of the Art Institute of Chicago，展览前夕年满 86 岁",
+          "Crocker 收藏她 30 件作品，并在本展首次展出回应 1872 年馆藏画作的新作《Loded》(2025)",
+        ],
+        sourceName: "Crocker Art Museum",
+        sourceUrl: "https://www.crockerart.org/press/gleefully-askew-a-gladys-nilsson-retrospective",
+        sourceDate: "2026-02-18（新闻稿；展览 2026-07-19 开幕）",
+      },
+      {
+        category: "社会科学 × 天文学 × 科研基础设施",
+        image: "/story-images/rubin-lsst-decade.jpg",
+        imageAlt: "智利山顶望远镜连续扫描夜空，图像数据流向分布式计算节点的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释时间域巡天与数据基础设施，并非天文实拍影像",
+        title: "Rubin 天文台开始给宇宙拍十年长片：发现将从“看得深”变成“看见变化”",
+        summary:
+          "位于智利的 Rubin 天文台启动十年 LSST 巡天：每三至四夜覆盖可见南天，持续生成变化警报；真正的望远镜还包括跨机构计算与数据分发系统。",
+        happened:
+          "Reuters 7 月 15 日报道，NSF–DOE Vera C. Rubin Observatory 开始执行为期十年的 Legacy Survey of Space and Time。位于 Cerro Pachón 的 8.4 米望远镜搭载 32 亿像素相机，计划每晚拍摄约 1,000 幅图像，并在三至四夜内覆盖整个可见南天。它由 NSF NOIRLab 与美国能源部 SLAC 国家加速器实验室联合运营，目标不是单次拍出最深图像，而是把超新星、近地小行星、变星和遥远星系的变化连接成时间序列。",
+        importance:
+          "这与前期 β Pictoris d 的“多仪器重查档案”不同：Rubin 把建立档案本身变成十年公共任务。发现速度将取决于相机之外的实时管线、警报代理、开放规则与后续望远镜能否承接海量瞬变。天文学因此也是制度研究：谁资助长期观测，谁能及时获得数据，哪些地区承担设备与能源成本，都会塑造最终被命名的宇宙。",
+        creatorAngle:
+          "可以把 Rubin 画成三层机器：山顶的光学设备、地下与跨洋的数据管线、全球研究者和后续望远镜组成的响应网络。用“一颗突然变亮的星在 60 秒内如何变成公共警报”为叙事，解释现代发现为什么常由基础设施集体署名。",
+        facts: [
+          "主镜口径 8.4 米，LSST Camera 达 32 亿像素，重量约 2,800 千克",
+          "计划每晚获取约 1,000 幅南天图像，每三至四夜覆盖一次整个可见南天，持续 10 年",
+          "首批约 10 小时测试观测已发现 2,104 颗此前未知小行星，其中 7 颗为无威胁的近地小行星",
+          "巡天预计记录约 200 亿个星系；首批展示的 1,000 万个星系只约占 0.05%",
+        ],
+        sourceName: "Reuters；NSF–DOE Vera C. Rubin Observatory",
+        sourceUrl: "https://www.reuters.com/science/chiles-rubin-observatory-begins-decade-long-mission-film-universe-2026-07-15/",
+        sourceDate: "2026-07-15",
+      },
+      {
+        category: "社会科学 × 教育与知识制度",
+        image: "/story-images/uk-shape-cold-spots.jpg",
+        imageAlt: "英国地图由校园档案拼成，空椅与断裂的学术阶梯向地域边缘扩散的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释学术岗位流失与地域冷点，并非校园新闻现场影像",
+        title: "近四千个岗位消失之后：英国人文社科学科正在形成“知识冷点”",
+        summary:
+          "British Academy 的新地图显示，早期 SHAPE 学者一年减少 6%，岗位与课程也向少数机构集中；大学削减预算正在改变谁能在家乡附近学习语言、经典与社会工作。",
+        happened:
+          "British Academy 7 月 15 日发布 Mapping SHAPE Academic Staff 数据与地域分析，追踪 2012/13 至 2024/25 的英国高校人员变化。学院发现，2024/25 年早期职业阶段的 SHAPE 学者同比减少 6%，而高级和教授层级并未同步下降；英格兰东北部与东米德兰兹的早期人员一年降幅接近 20%。Guardian 对官方数据的补充分析显示，截至 2024 年 12 月的一年内，社会科学、人文与艺术合计减少近 4,000 个岗位。",
+        importance:
+          "裁员不是把每门课平均缩小一点，而会在地图上留下不可逆的空白。学生因生活成本更倾向就近入学时，某地没有神学、古典学或低门槛语言学位，就会把地域差异转化为阶层差异；早期岗位先消失，还会切断下一代教师和研究者的入口。这里的核心不是为所有旧系科免责，而是把“市场需求”拆成谁有能力迁居、哪些技能被工业政策承认、以及知识基础设施需要多长周期才能重建。",
+        creatorAngle:
+          "可制作一张“知识的铁路停运图”：把课程、早期岗位和地区入口视为站点，标出人员下降与学科集中如何让一些路线只剩高选择性大学可达。再追问：当一个地区最后一门语言或古典学课程关闭，损失能否用全国总招生数字衡量？",
+        facts: [
+          "2024/25 年早期 SHAPE 学术人员同比下降 6%，从 52,795 个全职等效岗位降至 49,410 个",
+          "英格兰东北部与东米德兰兹的早期学术人员一年降幅均接近 20%",
+          "截至 2024 年 12 月的一年内，社会科学减少约 3,000 岗、人文学科 820 岗、艺术 240 岗",
+          "降幅最大的学科包括社会工作 -9%、英语与古典学各 -8%、人类学 -7%、语言学 -6%",
+        ],
+        sourceName: "The British Academy（岗位总量补充：The Guardian）",
+        sourceUrl: "https://www.thebritishacademy.ac.uk/news/loss-of-academic-staff-threatens-strategically-vital-skills-for-uk/",
+        sourceDate: "2026-07-15",
+      },
+      {
+        category: "女性主义 × 健康与政治制度",
+        image: "/story-images/idaho-reproductive-ballot.jpg",
+        imageAlt: "匿名选民把选票投入投票箱，避孕、孕产照护、生育治疗与隐私路径环绕其外的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释生育自由公投，并非投票现场或真实人物影像",
+        title: "爱达荷把生育自由交给选票：一场公投如何重新定义“医疗决定”",
+        summary:
+          "州务卿确认《Reproductive Freedom and Privacy Act》进入 11 月 3 日选票；它把堕胎、避孕、生育治疗与隐私放入同一项成文法选择。",
+        happened:
+          "爱达荷州务卿确认《Reproductive Freedom and Privacy Act》达到法定要求，将出现在 2026 年 11 月 3 日州级大选选票上。倡议不是修改州宪法，而是建立一项州法律：在胎儿具有存活能力前保障堕胎权，存活能力后在保护孕妇健康时允许医疗干预，并覆盖避孕、生育治疗、隐私与医疗提供者责任保护。发起方提交超过 100,000 个签名，高于所需的 70,725 个。",
+        importance:
+          "这一倡议把通常被切割讨论的服务重新放回“生育自主”连续体：避孕、IVF、流产与复杂妊娠照护并不是彼此孤立的文化议题，而共享隐私、临床判断和提供者法律风险。它也显示，在严格禁令州，直接民主既可能成为立法僵局的出口，也会把高度专业的医疗边界压缩进一张赞成/反对选票。与前期政党性别配额不同，这里争夺的是身体与临床决定的法律归属。",
+        creatorAngle:
+          "可以把公投文本拆成一棵“医疗决定树”：不同孕期、健康风险、避孕与生育治疗分别进入哪条法律路径；旁边再画出签名门槛、18 个立法选区分布要求和最终投票，说明身体自主如何被转换成程序性数字。",
+        facts: [
+          "投票日为 2026 年 11 月 3 日；州务卿页面已将该倡议标记为 Qualified",
+          "发起方收集超过 100,000 个签名，法定总量门槛为 70,725 个",
+          "爱达荷要求全州注册选民总数 6% 的有效签名，并在至少 18 个立法选区分别达到 6%",
+          "官方修订后的短标题涵盖胎儿存活能力前的堕胎权、存活能力后保护健康、隐私与医疗提供者责任保护",
+        ],
+        sourceName: "Idaho Secretary of State（背景补充：The Guardian/AP）",
+        sourceUrl: "https://voteidaho.gov/initiatives-amendments/",
+        sourceDate: "2026-07-13（资格确认；页面核验 2026-07-17）",
+      },
+    ],
+  },
+  {
     date: "2026-07-16",
     displayDate: "2026.07.16",
     issueNo: "03",
