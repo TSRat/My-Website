@@ -67,7 +67,11 @@ export default function Home() {
                 unoptimized
                 priority
               />
-              <span className="archive-stamp">2026<br />07.14<br />No.01</span>
+              <span className="archive-stamp">
+                {latest.date.slice(0, 4)}<br />
+                {latest.date.slice(5, 7)}.{latest.date.slice(8, 10)}<br />
+                No.{latest.issueNo}
+              </span>
             </div>
           </div>
         </section>
@@ -95,6 +99,7 @@ export default function Home() {
                     fill
                     sizes="(max-width: 760px) 100vw, 45vw"
                     unoptimized
+                    loading="eager"
                   />
                 </div>
                 <div className="card-number">{String(index + 1).padStart(2, "0")}</div>

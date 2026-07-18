@@ -68,6 +68,7 @@ export default async function BriefingPage({ params }: { params: Promise<{ date:
                   fill
                   sizes="(max-width: 760px) 100vw, 1060px"
                   unoptimized
+                  loading="eager"
                 />
                 <figcaption>{story.imageCredit}</figcaption>
               </figure>

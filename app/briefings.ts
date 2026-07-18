@@ -32,6 +32,138 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    date: "2026-07-18",
+    displayDate: "2026.07.18",
+    issueNo: "05",
+    theme: "切口、面具与阈值：规则如何进入身体与公共生活？",
+    intro:
+      "今天的五个故事都在观察一种规则如何获得力量：拼贴艺术把消费图像切开，节庆面具用传统容纳变化，语言学习的阈值解释群体规范，生成式 AI 把一地的言论限制带到另一地，而一项生育研究则试图在免疫系统造成的限制中重新寻找可能性。规则并非只写在法律里，也藏在图像、习惯、模型和身体机制之中。",
+    uniqueCount: 5,
+    topics: ["艺术人文", "社会科学", "女性主义"],
+    stories: [
+      {
+        category: "艺术人文 × 女性主义 × 设计与音乐史",
+        image: "/story-images/linder-punk-collage.jpg",
+        imageAlt: "杂志碎片、花朵、家用器具与朋克海报被切开重组的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释 Linder 的拼贴方法与朋克语境，并非艺术家原作复制",
+        title: "Linder 把朋克的“切口”带回 Blackpool：拼贴为什么仍是一种夺回图像的技术？",
+        summary:
+          "横跨五十年的巡回回顾展今天抵达 Blackpool：从 1970 年代曼彻斯特朋克场景到新作，Linder 用剪切、错置与表演拆解身体如何被消费图像塑造。",
+        happened:
+          "Hayward Gallery Touring 的《Linder: Danger Came Smiling》于 7 月 18 日在 Blackpool 的 Grundy Art Gallery 开幕，展至 10 月 3 日。展览覆盖 Linder 五十年的蒙太奇、摄影、行为与雕塑实践，从她身处 1970 年代曼彻斯特朋克场景时制作的早期拼贴，一直延伸到首次公开的新作。她常使用医用手术刀切割 glamour photography、食品、时尚与家居图像，把消费文化对身体的编码变成可见的接缝。",
+        importance:
+          "这不是又一次把女性艺术家写成“被重新发现”的回顾展。Linder 的关键在于：她没有逃离大众图像，而是用大众图像自身的材料制造干扰。纸质杂志正在消失、生成图像正在增加时，“切开”仍提醒我们，图像不是透明事实，而是可以识别来源、暴露权力并重新组合的设计对象。它与此前对深度伪造的技术批判不同：这里关注的是观众如何通过手工接缝恢复对图像的主动阅读。",
+        creatorAngle:
+          "可从一把医用手术刀切入，做一条“拼贴的政治技术史”：将 1970 年代杂志剪贴、朋克唱片封套、数字蒙太奇与生成式图像并列，比较每种媒介如何留下或抹平接缝。不要复制具体作品，而应把“看见切口”作为视觉叙事原则。",
+        facts: [
+          "Blackpool 展期为 2026 年 7 月 18 日至 10 月 3 日",
+          "回顾展覆盖 Linder 约 50 年创作，从 1970 年代曼彻斯特朋克场景延伸至首次公开的新作",
+          "展览媒介包括蒙太奇、摄影、行为艺术与雕塑",
+          "巡展由 Hayward Gallery Touring 与 Inverleith House、Glynn Vivian Art Gallery、Grundy Art Gallery 合作",
+        ],
+        sourceName: "Hayward Gallery Touring · Southbank Centre",
+        sourceUrl: "https://www.southbankcentre.co.uk/whats-on/linder-danger-came-smiling-on-tour/",
+        sourceDate: "2026-07-18（Blackpool 开幕日期）",
+      },
+      {
+        category: "艺术人文 × 宗教与文化史 × 人类学",
+        image: "/story-images/mexican-masks-danza.jpg",
+        imageAlt: "原创的魔鬼与老人面具、舞蹈服饰和节庆节奏组成的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释 Michoacán 面具与 danza 传统，并非展品复制或现场摄影",
+        title: "魔鬼、圣徒与流行人物同场起舞：墨西哥面具不是被现代性冻结的遗产",
+        summary:
+          "Las Cruces Museum of Art 新展以 50 件历史和当代面具、5 套完整舞蹈服饰说明：Michoacán 的 danza 传统一直通过新材料、幽默与讽刺回应现实。",
+        happened:
+          "《Dancing with Life: Mexican Masks》于 7 月 17 日在新墨西哥州 Las Cruces Museum of Art 开幕，展至 10 月 17 日。展览从 Northwest Museum of Arts and Culture 的收藏中选出 Michoacán 的历史与当代面具及完整 danza 服饰：形象既有 diablos、圣徒与慈祥老人，也包括媒体名人、政治人物、罪人和“假偶像”。策展人 Pavel Shlossberg 曾在 Tócuaro 与面具艺术家共同生活和学习，并以此反思博物馆如何描述墨西哥原住民面具实践。",
+        importance:
+          "民俗展览容易把传统放进“即将消失”的玻璃柜，但这些面具恰恰证明传统的生命来自变化。宗教节庆、政治讽刺、流行文化与材料替换并非污染了某个纯粹原型，而是 danza 持续工作的方式。真正需要追问的是：博物馆如何在保存物件的同时，承认制作它们的社群仍在改变其意义。",
+        creatorAngle:
+          "可制作一张“面具的社会角色表”，不按年代而按功能排列：敬畏、嘲讽、纪念、反转权威与制造共同体。再用同一角色在不同时代换上不同材料和面孔，展示传统不是固定造型，而是一套继续回应现实的语法。",
+        facts: [
+          "展期为 2026 年 7 月 17 日至 10 月 17 日，8 月 7 日举行开幕招待会",
+          "展览包含 50 件历史及当代面具和 5 套完整 danza 服饰",
+          "展品来自 Northwest Museum of Arts and Culture，展览由 International Arts & Artists 组织巡展",
+          "面具形象涵盖魔鬼、圣徒、老人、媒体与政治名人，并通过幽默和讽刺回应日常社会处境",
+        ],
+        sourceName: "City of Las Cruces · Museum of Art",
+        sourceUrl: "https://lascruces.gov/dancing-with-life-mexican-masks-opens-at-the-museum-of-art/",
+        sourceDate: "2026-07-06（新闻稿；展览 2026-07-17 开幕）",
+      },
+      {
+        category: "社会科学 × 语言学 × 社会心理学",
+        image: "/story-images/social-norm-threshold.jpg",
+        imageAlt: "分散符号经过社会网络传播，在跨过阈值后形成共享模式的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释社会规范的阈值模型，并非实验数据图",
+        title: "社会规范并非慢慢平均出来：人们先试探，然后突然把一种模式当成规则",
+        summary:
+          "PNAS 研究把儿童学习语法的 Tolerance Principle 用于成人协调实验：人们既不只是模仿，也不持续计算最优解，而是在证据越过阈值后稳定选择。",
+        happened:
+          "CUNY Graduate Center、University of Pennsylvania 与 Stanford 的研究者重新分析社会网络中的“命名游戏”，并加入预注册的双人实验：参与者要为陌生面孔独立选择名称，匹配成功即可获得小额奖励。结果显示，参与者早期会概率性尝试多个选项；当累积经验达到 Tolerance Principle 所描述的阈值，选择会从探索突然转为稳定。该模型原本用于解释儿童如何从大量规则形式和少量例外中学会语法。",
+        importance:
+          "这给“社会规范如何形成”提供了比从众或理性优化更具体的机制：在阈值之前，异议与新选项仍能进入；越过阈值后，零星反例可能只被当作例外。它有助于解释工作习惯、组织文化和公共行为为何有时长期不动、又在临界点后迅速翻转。但实验简化了身份、地位、惩罚与权力，不能把一个参数直接当成现实社会的万能定律。",
+        creatorAngle:
+          "可以用“从 walked 到办公室潜规则”做双线叙事：一边展示儿童如何接受 -ed 规则并容忍 went，另一边展示群体如何从多个名字收敛到一个约定。最后加入权力变量，追问谁有资格提供足够多的‘例子’来推动别人越过阈值。",
+        facts: [
+          "论文 2026 年 4 月 22 日发表于 PNAS，DOI 为 10.1073/pnas.2508061123",
+          "研究连接 CUNY Graduate Center、University of Pennsylvania 与 Stanford University 三所机构",
+          "实验要求参与者在社会网络中独立为陌生面孔命名，匹配可获得小额奖励",
+          "Tolerance Principle 模型优于单纯模仿、持续优化与包括 Bayesian inference 在内的比较模型",
+        ],
+        sourceName: "PNAS；CUNY Graduate Center",
+        sourceUrl: "https://www.pnas.org/doi/10.1073/pnas.2508061123",
+        sourceDate: "2026-04-22（论文；CUNY 解读 2026-04-28）",
+      },
+      {
+        category: "社会科学 × 传播学 × 科技与社会",
+        image: "/story-images/ai-speech-borders.jpg",
+        imageAlt: "同一政治提问穿过不同边界后，被部分人工智能对话框阻挡的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释模型拒答与跨境言论环境，并非真实产品界面或测试截图",
+        title: "用户人在澳大利亚，AI 却替别国执行禁忌：言论限制如何被模型跨境复制",
+        summary:
+          "Oversight Board 测试 10 个商业大模型发现：生成政治批评材料时，涉及限制性言论环境的拒答率为 34%，宽松环境为 14%。",
+        happened:
+          "Oversight Board 7 月 16 日发布研究，通过位于澳大利亚的 IP 地址、主要在美国的商业接口，测试 10 个商业大模型对 10 个司法辖区政治批评请求的回应。模型面对 Cambodia、China、Saudi Arabia、Thailand、Turkey 等限制性环境时，生成批评传单或诗歌的平均拒答率为 34%；面对 Chile、Japan、Taiwan、UK、US 等较宽松环境时为 14%。有些拒答援引当地法律、安全或并不存在的一般政策。",
+        importance:
+          "模型不必受到某国政府的实时指令，也可能从训练材料、产品政策和风险规避中学习该国的禁忌，再把它输出给身处另一地的用户。这使内容治理从平台删帖提前到生成阶段，而且用户常看不到拒答规则来自哪里。与历史基线中的算法性厌女和深度伪造不同，本项关注的是政治表达在司法辖区之间的非透明迁移，以及多语言、多地区审计为何必须成为模型评估的一部分。",
+        creatorAngle:
+          "可用“同一个请求旅行十次”的形式，把用户位置、接口基础设施、谈论对象所在国和模型拒答理由分成四层。不要只排行哪个模型更自由，而要展示法律、训练环境与产品政策如何在一次看似私人的对话里叠加。",
+        facts: [
+          "研究测试 10 个商业大模型和 10 个司法辖区，查询来自澳大利亚 IP，接口基础设施主要位于美国",
+          "政治批评材料的平均拒答率：限制性环境 34%，宽松环境 14%",
+          "意见类请求在两组环境中的拒答率均为 41%，涉及暴力的请求则分别为 94% 与 92%",
+          "部分模型差异很小，但 Claude Sonnet 4 在宽松环境拒答 16%、限制性环境拒答 59%",
+        ],
+        sourceName: "Oversight Board",
+        sourceUrl: "https://www.oversightboard.com/news/are-llms-stifling-political-speech-an-assessment-of-how-ai-models-protect-free-expression/",
+        sourceDate: "2026-07-16",
+      },
+      {
+        category: "女性主义 × 健康 × 生育与照护",
+        image: "/story-images/rituximab-fertility-pilot.jpg",
+        imageAlt: "免疫细胞、卵巢滤泡与谨慎延伸的临床研究路径组成的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释一项早期生育研究，并非患者、药品包装或治疗现场影像",
+        title: "10 人试验里诞生了 3 个婴儿：旧药带来的希望为什么仍必须写得很小心？",
+        summary:
+          "针对自身免疫性早发性卵巢功能不全的小型先导研究中，rituximab 治疗后 10 人有 6 人重新形成可取卵滤泡，3 人最终分娩；证据仍远不足以成为常规疗法。",
+        happened:
+          "NEJM Evidence 报道的一项先导研究招募 10 名自身免疫性早发性卵巢功能不全患者。她们在 rituximab 治疗前接受卵巢刺激均无反应；治疗四至六个月后，6 人形成可取卵滤泡，5 人获得可冷冻或受精的成熟卵子。3 人随后接受胚胎移植，并均分娩健康婴儿。Rituximab 1997 年首先获批治疗血液癌症，也用于部分自身免疫疾病。",
+        importance:
+          "生育研究很容易把少数成功病例写成“恢复生育力”的奇迹，但这里最重要的信息恰恰是分母：样本只有 10 人、对象限定为自身免疫机制、需要激素刺激与辅助生殖，且尚需更大试验确认安全性。它同时提示，女性健康并非总是需要从零发明药物；重新理解现有免疫疗法也可能打开路径，但希望必须与风险、费用、适用人群和长期随访一起叙述。",
+        creatorAngle:
+          "可用一张“从 10 到 6、5、3”的研究漏斗讲完整证据链，并在每一步标出条件：免疫分型、药物治疗、卵巢刺激、取卵、胚胎移植和一年等待期。这样既不抹杀参与者获得的真实结果，也不会把先导试验包装成普遍承诺。",
+        facts: [
+          "研究样本为 10 名自身免疫性早发性卵巢功能不全患者；该病指卵巢在 40 岁前停止正常功能",
+          "治疗前 10 人对卵巢刺激均无反应；治疗后 6 人形成滤泡，5 人获得可冷冻或受精的成熟卵子",
+          "3 人接受胚胎移植并均分娩健康婴儿；移植为安全起见安排在治疗至少一年后",
+          "研究报告 1 起严重不良事件，研究者认为与激素刺激而非免疫治疗有关；更大规模试验正在进行",
+        ],
+        sourceName: "NEJM Evidence（Reuters Health Rounds 核验）",
+        sourceUrl: "https://www.reuters.com/business/healthcare-pharmaceuticals/old-cancer-drug-may-help-restore-fertility-certain-women-2026-07-01/",
+        sourceDate: "2026-07-01",
+      },
+    ],
+  },
+  {
     date: "2026-07-17",
     displayDate: "2026.07.17",
     issueNo: "04",
