@@ -32,6 +32,138 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    date: "2026-07-19",
+    displayDate: "2026.07.19",
+    issueNo: "06",
+    theme: "脱离背景之后：物件、注意力与制度如何被重新组织？",
+    intro:
+      "今天的五个故事都在处理‘重新组织’：罗马器物离开原始用途后成为艺术，女性抽象表现主义者被重新放回运动中心，一款游戏把焦虑治疗拆成注意力训练，印度的公共航天基础设施开始承载私人轨道发射，而产后医疗保障则从短暂窗口延伸为一年。改变名称远远不够，真正的变化发生在背景、流程和制度连接被重新搭建之时。",
+    uniqueCount: 5,
+    topics: ["艺术人文", "社会科学", "女性主义"],
+    stories: [
+      {
+        category: "艺术人文 × 历史 × 博物馆研究",
+        image: "/story-images/roman-art-context.jpg",
+        imageAlt: "罗马头盔、壁画碎片与器皿从生活空间进入现代展台的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释器物脱离原始语境后的博物馆化，并非卢浮宫展品复制",
+        title: "一顶头盔什么时候变成了‘艺术’？罗马器物离开用途后的第二次生命",
+        summary:
+          "尼姆罗马博物馆与卢浮宫合作的展览拒绝只谈形式之美：头盔、壁画、器皿和建筑构件首先属于战斗、家居、仪式与权力，然后才被现代展台重新命名为独立艺术品。",
+        happened:
+          "《L’art romain du Louvre. Un monde d’images》正在法国尼姆 Musée de la Romanité 展出。策展路径将庞贝角斗士头盔等仍能显出用途的器物，与从完整装饰体系中切下、后来被独立装框的壁画碎片并置，追问现代收藏和审美分类如何改变我们观看罗马视觉文化的方式。展览是卢浮宫希腊、伊特鲁里亚与罗马古物部门整修期间的馆际合作项目。",
+        importance:
+          "博物馆并非只是保存过去，也会通过切割、装框、命名和排序生产一种新的过去。当实用器物只剩下‘杰作’身份，劳动、宗教、阶层和空间关系会被审美遮住。与此前贝叶挂毯的跨国借展不同，这里关注的不是所有权，而是展示技术如何改变物件的本体论身份。",
+        creatorAngle:
+          "可做一组‘展台前／展台后’双联画：左侧还原器物在战斗、宴饮、住宅和祭祀中的关系，右侧标出支架、标签、聚光灯与白墙如何把它转译成艺术。让展陈装置本身成为叙事角色。",
+        facts: [
+          "展期为 2026 年 6 月 11 日至 2027 年 1 月 10 日",
+          "展览由 Musée de la Romanité 与 Musée du Louvre 合作举办",
+          "策展明确反对近现代收藏传统遗留的纯审美化路径，强调器物的功能、使用和意义",
+          "展览以庞贝角斗士头盔和脱离整体装饰的壁画碎片等例子比较‘用途’与‘艺术品’身份",
+        ],
+        sourceName: "Musée de la Romanité；Musée du Louvre（当日评论补充：Le Monde）",
+        sourceUrl: "https://museedelaromanite.fr/en/temporary-exhibition",
+        sourceDate: "2026-06-11（展览开幕；页面核验 2026-07-19）",
+      },
+      {
+        category: "艺术人文 × 女性主义 × 艺术史",
+        image: "/story-images/women-abstract-expressionism.jpg",
+        imageAlt: "多名匿名女性共同在巨幅画布上工作、强调尺度与身体动作的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释女性抽象表现主义者的集体创作史，并非任何艺术家原作复制",
+        title: "抽象表现主义不是几位男性的酒吧传奇：三十多位女性把尺度夺了回来",
+        summary:
+          "Speed Art Museum 的群展把 Helen Frankenthaler、Joan Mitchell、Lee Krasner 等三十多位艺术家放回美国战后先锋运动中心，并坚持让观众以原作的完整尺度理解其身体性。",
+        happened:
+          "《Abstract Expressionists: The Women》正在 Louisville 的 Speed Art Museum 展出，7 月 19 日继续安排专题导览与现场讨论。展览覆盖二战后至 1970 年代，呈现 Helen Frankenthaler、Joan Mitchell、Vivian Springford、Grace Hartigan、Lee Krasner、Pat Passlof 等三十多位艺术家，是 Kentucky 首个专门讨论抽象表现主义的展览。",
+        importance:
+          "这不是把几位女性补进既有英雄名单，而是改变运动的基本叙述单位：从 Pollock 或 de Kooning 的个人神话，转向跨画室、画廊、教学与友谊网络的集体形成。与昨日 Gladys Nilsson 的媒介和母职偏见不同，本项追问的是一整场艺术运动为何被压缩成少数男性姓名，以及巨幅原作的尺度如何反驳‘女性创作较小、较私人’的预设。",
+        creatorAngle:
+          "可把传统艺术史时间线改成一张‘同时发生图’：同一年横向排列不同城市、画室、展览与教学关系，再把画布实际尺寸换算成人体比例，显示被叙事删掉的不只是姓名，也是创作的物理强度。",
+        facts: [
+          "展期为 2026 年 5 月 16 日至 8 月 30 日，7 月 19 日有两场专题导览和一场 Chat Spot",
+          "展览汇集超过 30 位女性抽象表现主义者",
+          "时间范围从二战后延伸至 1970 年代",
+          "参展艺术家包括 Helen Frankenthaler、Joan Mitchell、Vivian Springford、Grace Hartigan 与 Lee Krasner",
+        ],
+        sourceName: "Speed Art Museum",
+        sourceUrl: "https://www.speedmuseum.org/exhibitions/abstract-expressionists-the-women/",
+        sourceDate: "2026-01-15（展览公告；活动页面核验 2026-07-19）",
+      },
+      {
+        category: "社会科学 × 心理学 × 游戏与临床研究",
+        image: "/story-images/eco-rescue-anxiety-trial.jpg",
+        imageAlt: "青少年在家操作生态修复游戏，注意目标、干扰和情绪路径环绕屏幕的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释 Eco-Rescue 临床试验设计，并非真实参与者、游戏界面或疗效证明",
+        title: "把焦虑训练做成生态修复游戏：有趣不等于有效，所以要设置三条对照路径",
+        summary:
+          "FIU 正在测试 Eco-Rescue 能否帮助 11 至 15 岁青少年练习注意力转换。研究尚无疗效结果；它最值得关注的恰恰是如何区分游戏的新鲜感、一般娱乐和针对性训练。",
+        happened:
+          "Florida International University 的 Center for Children and Families 成为美国首个开展 Eco-Rescue 临床试验的站点。玩家扮演修复受损环境的飞行员，同时追踪移动目标、应对突发变化并管理多项任务。研究将参与者随机分入 Eco-Rescue、非注意力训练游戏和不玩游戏三组，六周后比较注意控制、情绪调节与焦虑症状。",
+        importance:
+          "数字心理干预最容易出现的叙事错误，是把‘青少年愿意玩’直接等同于‘具有临床效果’。三组设计试图把针对性机制与屏幕时间、期待效应和参与感分开。它也提醒我们，可及性不只意味着把治疗装进手机；家庭设备、持续时间、隐私、退出率和真正需要传统治疗的人如何转介，同样决定技术是否公平。",
+        creatorAngle:
+          "可画一张‘同一名玩家的三条时间线’，分别标出针对性训练、普通游戏与无游戏条件；把研究尚未回答的问题留在终点，而不是先制作成功故事。重点解释为什么对照组比炫目的游戏画面更重要。",
+        facts: [
+          "FIU 计划招募 50 名参与者，全部研究站点预计共 150 名",
+          "参与者年龄为 11 至 15 岁，并被分入 3 个研究组",
+          "试验持续 6 周；Eco-Rescue 组每天约 30 分钟、每周 4 天，总计约 12 小时",
+          "项目与 University of Geneva 合作，并有 University of Haifa 和 Yale University 参与；目前仍在招募，尚未报告疗效",
+        ],
+        sourceName: "Florida International University · Center for Children and Families",
+        sourceUrl: "https://news.fiu.edu/2026/fiu-researchers-test-video-game-as-anxiety-treatment-for-teens",
+        sourceDate: "2026-07-17",
+      },
+      {
+        category: "社会科学 × 天文学 × 科研制度与基础设施",
+        image: "/story-images/vikram-private-orbit.jpg",
+        imageAlt: "私人小型火箭从公共海岸发射场升空，下方展开科研、监管和供应链结构的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释私人轨道发射背后的公共基础设施，并非 Vikram-1 实拍或精确复原",
+        title: "印度第一枚私人轨道火箭升空：‘私人’成功其实站在一整套公共系统之上",
+        summary:
+          "Skyroot 的 Vikram-1 将载荷送入 450 公里轨道，使印度成为第三个拥有私人轨道发射能力的国家；但发射场、人才、监管和早期技术积累仍来自国家航天体系。",
+        happened:
+          "7 月 18 日，Vikram-1 从 ISRO 的 Satish Dhawan Space Centre 发射，在约 15 分钟后把客户载荷和在轨实验送入 450 公里轨道。此次 Mission Aagaman 主要验证推进、航电、遥测、制导、导航与控制系统；Skyroot 表示仍需更多测试飞行，之后才会进入常规商业任务。",
+        importance:
+          "‘私人航天’并不意味着国家退场，而是国家角色从唯一运营者转向基础设施提供者、监管者、采购者和人才训练场。两位创始人都曾在 ISRO 工作，火箭也从国家发射中心起飞。与此前 Rubin 天文台的数据公共性不同，这里要追问公共能力如何被转换为商业市场，以及风险和收益由谁承担。",
+        creatorAngle:
+          "可把火箭剖成五层：企业硬件、ISRO 发射场、公共科研人才、2020 年后的监管开放和全球小卫星客户。让‘私人’一词在每一层被重新限定，避免只写成创业英雄史。",
+        facts: [
+          "Vikram-1 于 2026 年 7 月 18 日 06:35 GMT 发射，约 15 分钟后进入 450 公里轨道",
+          "火箭高约 22 米，设计近地轨道载荷能力最高 350 千克",
+          "运载器采用 3 级固体燃料和带 3D 打印发动机的液体轨道调整模块",
+          "印度 2020 年向私人投资开放航天部门，并计划把航天经济从约 80 亿美元提高到 2033 年的 440 亿美元",
+        ],
+        sourceName: "Reuters（任务信息由 Skyroot Aerospace 交叉核验）",
+        sourceUrl: "https://www.reuters.com/science/indias-skyroot-launches-vikram-1-first-private-orbital-rocket-mission-2026-07-18/",
+        sourceDate: "2026-07-18",
+      },
+      {
+        category: "女性主义 × 健康 × 照护政策",
+        image: "/story-images/postpartum-medicaid-map.jpg",
+        imageAlt: "美国纸质地图环绕母婴形成一座延伸十二个月的照护桥梁的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释产后 Medicaid 覆盖扩展，并非真实患者或精确政策地图",
+        title: "产后医疗不应在第 60 天坠落：美国几乎完成了一场安静的制度扩展",
+        summary:
+          "KFF 7 月 15 日更新显示，49 个州和华盛顿特区已把 Medicaid 产后覆盖延长至 12 个月，只剩一个州没有采取扩展行动。",
+        happened:
+          "美国 2021 年《American Rescue Plan Act》允许各州通过州计划修正，把原本通常只有 60 天的 Medicaid 产后资格延长到 12 个月；该选项 2022 年 4 月 1 日生效，并在 2023 年综合拨款法中永久化。KFF 最新追踪显示，截至 2026 年 7 月 15 日，49 州和 Washington, D.C. 已实施一年覆盖，Arkansas 成为唯一尚未扩展的州。",
+        importance:
+          "分娩后的身体恢复、抑郁筛查、慢性病管理和避孕需求不会在第 60 天结束。把覆盖延长到一年，是把照护从一次分娩账单重新理解为连续过程。但地图上的‘已实施’仍不能自动保证医生可得、交通、语言服务或实际参保连续性；下一步应从法律通过转向使用质量。",
+        creatorAngle:
+          "可以把产后一年画成十二格照护日历，把 60 天断崖放在第三格之前，再标出心理健康、心血管风险、哺乳支持和慢性病复诊可能出现的月份。最后对比‘法律覆盖’与‘真正看得到医生’两条曲线。",
+        facts: [
+          "截至 2026 年 7 月 15 日，49 个州和 Washington, D.C. 已实施 12 个月产后 Medicaid 扩展，1 个州尚无扩展行动",
+          "联邦扩展选项来自 2021 年 American Rescue Plan Act，并于 2022 年 4 月 1 日生效",
+          "Consolidated Appropriations Act 2023 把原本限期 5 年的州级选项永久化",
+          "Wisconsin 2026 年的扩展使 Arkansas 成为唯一尚未实行一年覆盖的州",
+        ],
+        sourceName: "KFF Medicaid Postpartum Coverage Extension Tracker（州级进展补充：Associated Press）",
+        sourceUrl: "https://www.kff.org/medicaid/medicaid-postpartum-coverage-extension-tracker/",
+        sourceDate: "2026-07-15",
+      },
+    ],
+  },
+  {
     date: "2026-07-18",
     displayDate: "2026.07.18",
     issueNo: "05",
