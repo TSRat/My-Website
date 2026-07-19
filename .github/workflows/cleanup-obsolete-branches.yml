@@ -25,6 +25,7 @@ jobs:
             "agent/add-hypatia-site"
             "agent/add-melromarc-sisters-site"
             "agent/document-and-validate-sites"
+            "agent/run-branch-cleanup"
             "enheduanna-first-author"
             "gh-pages"
           )
