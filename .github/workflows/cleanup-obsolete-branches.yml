@@ -1,6 +1,7 @@
 name: Cleanup obsolete branches
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
