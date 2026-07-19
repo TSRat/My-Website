@@ -30,6 +30,8 @@ jobs:
         run: npm ci
       - name: Build GitHub Pages artifact
         run: npm run build:pages
+      - name: Validate local Pages assets
+        run: npm run validate:pages
       - name: Validate Hypatia mirror
         run: |
           test -f docs/HYPATIA/index.html
@@ -37,6 +39,7 @@ jobs:
           test -f docs/HYPATIA/assets/hypatia-refresh.js
           test -f docs/HYPATIA/assets/approaching-hypatia.jpg
           test -f docs/HYPATIA/assets/agora-hypatia-death.jpg
+          test -f docs/HYPATIA/assets/agora-hypatia-teaching.jpg
           test -f docs/HYPATIA/assets/ionic-column.png
           test -f docs/HYPATIA/assets/corinthian-column.png
           grep -q "希帕蒂娅：" docs/HYPATIA/index.html

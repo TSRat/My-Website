@@ -1,0 +1,145 @@
+# Repository handoff
+
+- Last updated: 2026-07-19
+- Project: `TSRat/My-Website`
+- Current branch: `agent/document-and-validate-sites`
+- Latest commit at audit start: `edcc2b7` — `Publish IVORY ARCHIVE issue 06 with editorial illustrations`
+
+## Current goal
+
+建立一套无需依赖历史聊天记录的多 Agent 接管文档，让新 Agent 能从仓库、Git 历史和项目文档确认：
+
+- 仓库与四个站点的用途
+- 真实源码、镜像和历史快照的区别
+- 不可擅自改变的内容、设计与部署约束
+- 本地运行、构建和验证方式
+- 当前状态、已知缺口和下一步
+
+## Current state
+
+- 仓库公开，默认 branch 为 `main`。
+- 审计开始时本地 `main` 与 `origin/main` 对齐，working tree clean。
+- GitHub Pages 通过 Actions artifact 部署，不使用 Deploy from a branch。
+- 公开总入口下有 4 个站点：IVORY ARCHIVE、Enheduanna、Hypatia、Melromarc Sisters。
+- 根目录原先只有 `README.md`；本次任务建立全局与项目级接管文档。
+- 接管文档已建立；后续修复只新增一个缺失的 Hypatia 图片、通用 Pages 资源验证脚本和对应 workflow 检查，不改 URL、路由、Vite base 或部署架构。
+
+## Completed
+
+- 审计目录结构、现有 README、`package.json`、lockfile、Vite/TypeScript 配置和脚本。
+- 检查 `git status`、当前 branch、最近 20 个 commits、remote branches 与初始 diff。
+- 确认 `.github/workflows/publish-static-mirror.yml` 的 GitHub Pages Actions artifact 流程。
+- 确认四个站点的公开目录、入口文件和当前 Pages 构建来源。
+- 识别源码、发布镜像和历史静态快照之间的不对称关系。
+- 创建根 `AGENTS.md`、`TECH.md`、`HANDOFF.md` 并扩展 `README.md`。
+- 为四个站点创建项目级 `CONTENT.md`、`DESIGN.md`、`TECH.md` 和 `HANDOFF.md`。
+- 追溯 `agora-hypatia-teaching.jpg` 缺图：引用由 `eb7fae6` 引入，当前 5 个 remote branches 均没有该文件。
+- 新增明确标注为现代 AI 视觉隐喻的替代图，并修正原先错误的“电影剧照”说明。
+- 新增 `npm run validate:pages`，验证所有生成 HTML/CSS 的本地资源引用，并接入 Pages workflow。
+- 审计全部 remote branches，确认仓库内没有 Hypatia 或 Melromarc 的完整上游源码，也没有 Enheduanna 的原始构建脚手架。
+
+## In progress
+
+- 文档、缺图修复和验证增强位于当前 PR branch；没有内容章节或 UI 重构处于半完成状态。
+
+## Known issues
+
+1. `IVORY-ARCHIVE/` 是旧静态快照，当前只到第 02 期；当前 Pages IVORY 由 `app/briefings.ts` 生成，已到第 06 期。
+2. `static-sites/enheduanna/` 有可读 TSX/CSS，`ENHEDUANNA/` 是 workflow 直接复制的发布镜像，但没有自动重建或同步 npm script。
+3. `HYPATIA/` 可以直接部署；全部现有 remote branches 均没有完整上游应用源码。目录内还有入口未引用的历史 bundle/样式，不能擅自删除。
+4. `MELROMARC-SISTERS/` 主要是 Vinext/React 编译 artifact；全部现有 remote branches 均没有完整未编译源码。
+5. 远程仍有 `agent/add-hypatia-site`、`agent/add-melromarc-sisters-site`、`enheduanna-first-author` 和 `gh-pages` branch。当前任务未删除；workflow 只监听 `main`。
+6. PR branch push 不触发 Pages deployment；合并到 `main` 后才会由现有 Actions workflow 发布。
+
+## Important decisions
+
+- 适应现有目录，不移动或重命名站点。
+- IVORY 项目文档放在真实动态源码目录 `app/`，而不是旧 `IVORY-ARCHIVE/` 快照。
+- Enheduanna 项目文档放在 `static-sites/enheduanna/`，并在全局文档明确指出当前部署复制 `ENHEDUANNA/`。
+- Hypatia 与 Melromarc 文档放在各自可部署目录，因为仓库中没有更可信的完整上游源码目录。
+- 为每个站点增加短的 `TECH.md`，避免 Agent 在源码/镜像关系上做出错误假设。
+- 无法从仓库确认的设计历史、上游源码和重建命令统一标记为待确认，不用聊天记忆补写。
+- 缺失的 Hypatia 教学图使用现代 AI 辅助插画补齐，caption 明确说明它不是历史现场，也不是《城市广场》剧照。
+
+## Do not change without confirmation
+
+- 四个站点的公开 URL 和目录名大小写
+- GitHub Actions Pages artifact 架构
+- `main` 的 push trigger 与 workflow permissions
+- Vite `base`
+- `scripts/build-github-pages.mjs` 的 slug、redirect 和复制逻辑
+- `gh-pages` 或其他 remote branch 的存在状态
+- 历史站点的核心叙事、史料限定语和来源边界
+- Melromarc 的女性主义批评立场与两个故事基础
+- 整体 UI、字体、色彩和图片体系
+- 任何看似旧但尚未确认可删除的静态 bundle 或图片
+
+## Relevant files
+
+| 文件或目录 | 作用 |
+| --- | --- |
+| `README.md` | 项目列表、入口、运行方式与文档导航 |
+| `AGENTS.md` | 所有 Agent 的工作规则 |
+| `TECH.md` | 全局构建、部署、资产和路径约束 |
+| `.github/workflows/publish-static-mirror.yml` | GitHub Pages workflow |
+| `scripts/build-github-pages.mjs` | 生成 Pages 总入口和 IVORY，复制三个静态站点 |
+| `scripts/validate-pages-assets.mjs` | 检查生成页面的本地 HTML/CSS 资源引用 |
+| `app/briefings.ts` | IVORY 当前全部期刊数据 |
+| `static-sites/enheduanna/` | Enheduanna 可读源码与项目文档 |
+| `ENHEDUANNA/` | Enheduanna 当前 Pages 输入镜像 |
+| `HYPATIA/` | Hypatia 当前 Pages 输入与项目文档 |
+| `HYPATIA/assets/agora-hypatia-teaching.jpg` | 修复缺图的现代 AI 视觉隐喻 |
+| `MELROMARC-SISTERS/` | Melromarc 当前 Pages 输入与项目文档 |
+
+## How to run
+
+```bash
+npm ci
+npm run dev
+```
+
+生成 Pages artifact：
+
+```bash
+npm run build:pages
+npm run validate:pages
+```
+
+本地查看 artifact：
+
+```bash
+python3 -m http.server 8000 --directory docs
+```
+
+## Verification status
+
+- Change scope: 20 个 Markdown 文档、1 张 Hypatia 图片、1 个验证脚本，以及必要的 HTML、`package.json` 和 workflow 小改动
+- Diff check: Passed — `git diff --check` 与全部新增文本文件检查无错误
+- GitHub Pages build: Passed — `npm run build:pages`
+- Pages asset validation: Passed — 27 个 HTML/CSS 文件中的 209 个本地引用；负向测试能准确捕获被临时移走的 Hypatia 图片
+- Application build: Passed — `npm run build`
+- Tests: Passed — `npm test`，1/1
+- Typecheck: No dedicated npm script
+- Lint: Passed — 0 errors；24 个既有 warning（16 个来自旧 Hypatia bundle，8 个来自 Enheduanna 的 `<img>`）
+- Workflow-equivalent checks: Passed — Hypatia 文件、版本标记和标题检查全部通过
+- Artifact checks: 三个复制站点与源目录 byte-identical；总入口和四站点 smoke checks 通过
+- Browser check: 环境有 Playwright 库但没有 Chromium executable，无法运行；已直接检查 1600×1067 成品图，并通过 artifact 资源与尺寸验证
+- Deployment: Not run；PR branch push 不触发只监听 `main` 的 Pages workflow
+
+## Next recommended tasks
+
+1. Review and merge the current draft PR after checking the generated Hypatia image in context.
+2. Confirm whether the complete upstream source for Hypatia and Melromarc Sisters exists outside this repository.
+3. 提供 Enheduanna 原始项目脚手架或明确授权重建后，再增加从 `static-sites/enheduanna/` 到 `ENHEDUANNA/` 的可重复构建。
+4. Decide whether old root static snapshots and `IVORY-ARCHIVE/` should remain as rollback material or be explicitly archived; do not delete before that decision.
+5. If branch cleanup is desired, audit merge status and obtain separate explicit authorization before deleting any remote branch.
+
+## Git state
+
+- Branch: `agent/document-and-validate-sites`
+- Latest base commit: `edcc2b7`
+- Working tree clean at audit start: Yes
+- Working tree clean at handoff: Yes
+- Uncommitted changes: None
+- Commit/push performed: Yes, on the current PR branch
+- Merge performed: No
