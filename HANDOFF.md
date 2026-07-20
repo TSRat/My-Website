@@ -142,4 +142,28 @@ python3 -m http.server 8000 --directory docs
 - Working tree clean at handoff: Yes
 - Uncommitted changes: None
 - Commit/push performed: Yes, on the current PR branch
-- Merge performed: No
+- Merge performed: Yes
+
+---
+
+## 2026-07-20: Deploy The Living Atlas Hub
+
+### Current Target
+将“TSRat - The Living Atlas”作为总网页面部署到 GitHub Pages，且保留未来 Figma 编辑可能性。
+
+### Completed
+- 审计了仓库配置和多网站生成脚本。
+- 在 `THE-LIVING-ATLAS/` 目录下静态还原了 PDF 设计稿的 12列网格、三级字体排印、象牙白底色及钴蓝色强调的 UI。
+- 添加了独立网站所需的 `CONTENT.md`，`DESIGN.md`，`HANDOFF.md` 规范文件。
+- 更新了 `scripts/build-github-pages.mjs`，将 `THE-LIVING-ATLAS` 注册进入 `staticSites`，并更新了 `hubPage` (根目录 `index.html`)，增加了指向新主站的链接。
+- 根目录 `README.md` 中已更新当前项目列表。
+- 运行了完整的 `build:pages` 与 `validate:pages` 资源引用校验，一切通过。
+
+### Unfinished / Issues
+- GNU `timeout` 命令缺失，导致 `build-verified.sh` (含 `npm test`) 无法在当前环境运行。
+- `THE-LIVING-ATLAS` 目前虽然作为“总网站”形态存在，但它是通过跳转进入子目录的方式展示，这遵循了仓库不破坏已有根目录分发逻辑的规则。
+
+### Next Actions
+- 验证线上新主站的响应式布局及具体文案链接。
+- 为 Mobile View 补充汉堡菜单的交互逻辑。
+

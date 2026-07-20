@@ -17,6 +17,7 @@
 
 | 项目 | 用途 | 主要维护位置 | GitHub Pages URL |
 | --- | --- | --- | --- |
+| The Living Atlas | 总入口主站，一个人的开放档案馆 | `THE-LIVING-ATLAS/` | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) |
 | IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `app/briefings.ts`、`app/`、`public/`、`scripts/build-github-pages.mjs` | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) |
 | Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；当前 Pages 输入镜像在 `ENHEDUANNA/` | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) |
 | Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `HYPATIA/` | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) |

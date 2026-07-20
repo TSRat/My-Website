@@ -33,6 +33,16 @@ const staticSites = [
     description: "Malty 与 Melty 的多重故事档案：两个名字，生长出许多命运。",
     metadata: [["故事线", "13 条"], ["整理方式", "5 个改变时点"]],
   },
+
+  {
+    slug: "THE-LIVING-ATLAS",
+    className: "living-atlas",
+    artLabel: "ATLAS",
+    eyebrow: "TSRAT · MAIN HUB",
+    title: "The Living Atlas 开放档案馆",
+    description: "在算法与人性之间建立桥梁：历史、女性主义、心理学、设计、技术与文学的公共档案馆主站。",
+    metadata: [["类型", "主页 (Hub)"], ["架构", "Editorial Digital Archive"]],
+  },
 ];
 const output = join(pagesRoot, siteSlug);
 const source = await readFile(join(root, "app/briefings.ts"), "utf8");
@@ -111,7 +121,8 @@ function hubPage() {
       <p class="kicker">TSRat · PUBLIC WEB ARCHIVE</p>
       <h1>网站档案馆</h1>
       <p>这里集中存放独立创作、阅读项目与持续更新的公开网站。每个项目拥有自己的目录和永久链接。</p>
-    </header>
+    
+      <a class="button" href="THE-LIVING-ATLAS/" style="margin-top: 1.5rem; display: inline-block; background: #0047AB; color: white; padding: 0.8rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">👉 进入全新主站：The Living Atlas 开放档案馆</a></header>
     <section aria-labelledby="sites-title">
       <div class="section-heading"><span>01</span><h2 id="sites-title">公开网站</h2></div>
       <div class="site-grid">
