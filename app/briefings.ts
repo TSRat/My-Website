@@ -32,6 +32,138 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    date: "2026-07-20",
+    displayDate: "2026.07.20",
+    issueNo: "07",
+    theme: "谁被看见，谁被分类：图像、参与和制度测量的边界",
+    intro:
+      "今天的五个故事都在追问分类如何改变现实：儿童绘本把移民记忆交给下一代，大学策展把家重新解释为劳动与过渡空间，社会调查发现公共参与并非简单的积极或冷漠，网球资格被压缩为一次基因筛查，而全球乳腺癌生存地图又不得不用有限登记数据估计大量空白。分类可以让经验变得可见，也可能把无法整齐归类的人和情境留在边缘。",
+    uniqueCount: 5,
+    topics: ["艺术人文", "社会科学", "女性主义"],
+    stories: [
+      {
+        category: "艺术人文 × 设计 × 儿童文学与移民史",
+        image: "/story-images/ed-young-bright-worlds.jpg",
+        imageAlt: "纸张、墨迹、上海街屋、迁徙飞鸟和打开的绘本围绕一位抽象创作者剪影的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释 Ed Young 的移民记忆与绘本创作，并非艺术家原作、书封或人物肖像复制",
+        title: "一本绘本可以装下多少次迁徙？Ed Young 用六十年把私人记忆变成儿童的视觉语言",
+        summary:
+          "Museum of Chinese in America 的首场美国回顾展以原稿、拼贴和出版物串联 Ed Young 的上海童年、赴港避乱、移居美国、收养女儿与太极实践，显示儿童书并不是缩小的成人艺术，而是记忆跨代传递的基础设施。",
+        happened:
+          "《Ed Young’s Bright Worlds: Gesture and Feeling in 60 Years of Picture Books for Children》正在纽约 Museum of Chinese in America 展出。展览从《The House Baba Built》《Voices of the Heart》《My Mei Mei》和身后出版的《Bright World》等作品出发，呈现 Young 如何使用粉彩、剪纸、钢笔、墨和拼贴，把日本占领时期的上海童年、移民生活、家庭经验和身体练习转译为图像叙事。",
+        importance:
+          "绘本常被放在文学和美术的边缘，但它可能是一个人最早接触战争、迁徙、家庭差异与异文化的媒介。Young 的案例也打破了把移民艺术只理解为身份声明的习惯：个人经历进入书页后，会通过材料、翻页节奏和亲子共读变成可反复使用的家庭记忆。它与此前讨论艺术史经典补名不同，关注的是儿童视觉文化如何建立跨代共同语言。",
+        creatorAngle:
+          "可选取同一段记忆，分别用文字段落、单幅画和三次翻页来表达，比较每种形式能保留什么。再把纸张、墨迹、剪切边缘和身体动作作为叙事证据，而不是只复述艺术家的生平。",
+        facts: [
+          "展期为 2026 年 5 月 14 日至 9 月 13 日，是 Ed Young 在美国的首场回顾展",
+          "Young 的儿童书创作生涯超过 60 年，参与创作的书籍超过 100 本",
+          "展览包括《The House Baba Built》(2011)、《Voices of the Heart》(1997)、《My Mei Mei》(2006) 与《Bright World》(2024) 的原作",
+          "他曾带着借来的 20 美元到纽约谋生；1962 年出版的《The Mean Mouse and Other Mean Stories》开启其绘本职业生涯",
+        ],
+        sourceName: "Museum of Chinese in America",
+        sourceUrl: "https://www.mocanyc.org/event/ed-youngs-bright-worlds/",
+        sourceDate: "2026-05-14（展览开幕；页面核验 2026-07-20）",
+      },
+      {
+        category: "艺术人文 × 女性主义 × 家庭空间与策展",
+        image: "/story-images/domestic-liminal-home.jpg",
+        imageAlt: "餐桌、椅子、衣物、半开的门和家庭照片在彼此错位的房间之间漂浮的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释家庭空间的亲密、劳动与过渡状态，并非 Paul R. Jones Collection 藏品复制",
+        title: "家不是稳定背景：一堂艺术史课把餐桌、门缝与日常劳动变成策展问题",
+        summary:
+          "University of Alabama 的研究生策展项目从 Paul R. Jones Collection 选出二十世纪作品，讨论家如何同时容纳亲密、劳动、安全、压迫、记忆和离开；策展过程本身也成为学生学习如何生产解释的现场。",
+        happened:
+          "《The Domestic Liminal: The In-Betweenness of the Home》正在 Tuscaloosa 的 Paul R. Jones Museum 展出，7 月 20 日继续向公众免费开放。展览由 Lucy Curzon 博士的 Art History 580 二十世纪艺术研讨课策划，学生从馆藏中选择作品，以日常生活为线索重新组织二十世纪艺术与文化。",
+        importance:
+          "‘家’经常被当作自然、私人而且没有政治性的空间，但照护、家务、代际关系、阶级和性别分工都在其中发生。把学生策展纳入讨论，还能揭示博物馆叙事并非天然存在：选哪件作品、让哪些物件相邻、怎样书写标签，都会决定观众把日常看成琐碎还是结构。",
+        creatorAngle:
+          "以一张餐桌为中心画出不同时间层：做饭、照护、争吵、远程工作、空置与离家。随后用展签的口吻分别把它写成家具、劳动工具、情感遗址和权力空间，展示命名如何改变观看。",
+        facts: [
+          "展期为 2026 年 5 月 1 日至 8 月 21 日，7 月 20 日列为开放日期之一",
+          "展览地点为 University of Alabama 的 Paul R. Jones Museum，公众可免费参观",
+          "项目由 Art History 580: Twentieth Century seminar 的学生在 Lucy Curzon 博士指导下完成",
+          "展品选自 Paul R. Jones Collection，策展主题聚焦二十世纪艺术与文化中的日常生活",
+        ],
+        sourceName: "University of Alabama · Paul R. Jones Museum",
+        sourceUrl: "https://calendar.ua.edu/event/the-domestic-liminal-exhibition",
+        sourceDate: "2026-05-01（展览开幕；2026-07-20 当日开放）",
+      },
+      {
+        category: "社会科学 × 传播学 × 公民参与",
+        image: "/story-images/civic-engagement-clusters.jpg",
+        imageAlt: "一座纸上城市被分成动员者、社区连接者、新闻旁观者和低参与者四种网络形态的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释 Pew 的四类公共参与模式，并非研究原始图表或精确比例地图",
+        title: "看新闻不等于参与公共生活：美国人不是从积极到冷漠排成一条直线",
+        summary:
+          "Pew-Knight Initiative 用 19 项行为指标将美国成年人归为动员者、连接者、旁观者与局外人四组，说明投票、志愿服务、宗教活动、新闻关注和公开表达并不会总是同步出现。",
+        happened:
+          "Pew Research Center 7 月 16 日发布公共参与研究。研究者用聚类分析处理一项 5,393 人、多模式调查中的 19 项政治、公民、宗教和新闻行为，再以另一项 5,195 人调查比较四组人的知识与态度。结果中，动员者占 9%，连接者占 28%，旁观者与局外人各占 31%。",
+        importance:
+          "把人简单分为‘关心政治’与‘不关心政治’，会漏掉大量实际差异：有人深度参与社区却避开党派政治，有人密切关注新闻但只在私人聊天中回应，也有人整体参与较少却仍然投票或参加宗教活动。分类能帮助传播者找到不同入口，但聚类不是人格诊断，而且调查期涵盖 2024 年大选，其模式未必在非选举年份保持不变。",
+        creatorAngle:
+          "把四种类型写成四条‘同一天’的时间线：同一则新闻如何分别变成联系议员、社区捐助、私聊转发或完全绕过。随后标出调查没有测到的照护劳动、非正式互助和无法投票者，提醒读者模型的边界。",
+        facts: [
+          "主要调查于 2025 年 7 月 9 日至 12 月 5 日进行，共有 5,393 名美国成年人参与",
+          "研究使用政治行动、公民参与、宗教出席和新闻关注等 19 项指标进行聚类",
+          "四类占比分别为动员者 9%、连接者 28%、旁观者 31% 和局外人 31%",
+          "即使在低参与的局外人中，41% 表示曾在 2024 年投票，24% 至少每月参加一次宗教活动",
+        ],
+        sourceName: "Pew Research Center · Pew-Knight Initiative",
+        sourceUrl: "https://www.pewresearch.org/journalism/2026/07/16/how-americans-are-engaged-with-news-politics-religion-and-civic-life/",
+        sourceDate: "2026-07-16",
+      },
+      {
+        category: "女性主义 × 性别 × 体育制度与数据隐私",
+        image: "/story-images/wta-sry-eligibility.jpg",
+        imageAlt: "空网球场被透明 DNA 链分隔，旁边出现棉签、隐私信封、准入闸门和分叉路径的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于呈现体育资格筛查的制度张力，并非运动员、检测过程或基因结果的真实图像",
+        title: "一根棉签守住女子网球的门：WTA 把资格判断交给一次 SRY 基因筛查",
+        summary:
+          "WTA 宣布以一次性 SRY 基因检测确认女子巡回赛资格，新规 7 月 21 日生效。争论因此从睾酮规则转向基因标记，同时把隐私、例外身体与制度申诉推到中心。",
+        happened:
+          "WTA 更新女子巡回赛参赛政策，要求球员通过一次性 SRY 基因筛查；样本可由面颊拭子或血液取得。此前政策允许跨性别女性在声明女性身份并保持较低睾酮水平两年后参赛。WTA 表示筛查将在 2026 年开始，并承诺设置保密和球员沟通机制。",
+        importance:
+          "规则试图用一个可操作的统一门槛结束各项目长期分裂的资格制度，但可操作性并不等于没有代价。基因信息一旦成为职业准入凭证，检测保管、异常结果、复核与申诉就不再只是医学细节，而是劳动权和数据治理问题。报道同时指出，目前职业网坛各级别没有已知的跨性别女性球员，因此政策的象征范围远大于当前直接影响人数。",
+        creatorAngle:
+          "不要只制作支持／反对二选一辩论；可以画出一张完整资格流程：谁采样、谁读取、谁保存、异常结果由谁解释、运动员如何申诉。把制度最容易被一句‘检测即可’省略的环节全部放回来。",
+        facts: [
+          "新政策要求一次性 SRY 基因筛查，可使用面颊拭子或血液样本",
+          "资格流程于 2026 年 7 月 21 日生效，WTA 表示筛查将在 2026 年内启动",
+          "旧政策要求跨性别女性声明性别身份，并在参赛前保持较低睾酮水平两年",
+          "Reuters 报道称，目前职业网球任何级别都没有已知的跨性别女性现役球员",
+        ],
+        sourceName: "Reuters（政策说明引述 WTA）",
+        sourceUrl: "https://www.reuters.com/sports/tennis/womens-tour-mandates-gene-test-eligibility-2026-07-20/",
+        sourceDate: "2026-07-20",
+      },
+      {
+        category: "女性主义 × 健康 × 全球医疗与数据基础设施",
+        image: "/story-images/global-breast-survival.jpg",
+        imageAlt: "由五年时间线组成的世界地图连接筛查、药物、放疗和癌症登记系统，并在部分地区留下数据空白的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释全球乳腺癌生存差距与数据缺口，并非精确地图、患者影像或临床结果",
+        title: "同一种癌症，五年生存率相差一倍以上：地图测量的是医疗系统，不是个人意志",
+        summary:
+          "WHO 首次为全部 194 个成员国估计乳腺癌五年净生存率：全球中位数为 77.8%，非洲区域为 39.1%，美洲区域为 88.5%；差距同时暴露了诊断、治疗和癌症登记能力的不平等。",
+        happened:
+          "WHO 发布 2017 至 2021 年确诊女性的全球乳腺癌五年生存估计，并在 Nature Medicine 发表模型结果。模型将 67 个拥有观测登记数据的成员国，与分期、药物可及性、放疗、乳腺摄影能力和成人死亡率等变量结合，为其余国家建立基线。",
+        importance:
+          "生存率常被讲成个人抗争故事，但国家间差异更多反映早期发现、及时确诊、复合治疗与连续照护能否连接起来。与此同时，估计值的完整世界地图可能制造一种数据已经齐全的错觉：194 个国家中只有 67 个拥有观测生存数据，36 个脆弱或受冲突影响的国家中更只有两个。数据基础设施本身就是医疗能力的一部分。",
+        creatorAngle:
+          "制作两张叠图：第一张呈现五年生存率，第二张只显示哪些地方真正有癌症登记观测。让颜色最确定的区域与信息最稀薄的区域分开，避免把模型估计画成同等坚实的事实。",
+        facts: [
+          "WHO 为全部 194 个成员国提供 2017 至 2021 年确诊患者的五年生存估计，全球中位数为 77.8%",
+          "区域中位数从非洲区域的 39.1% 到美洲区域的 88.5%；欧洲区域为 84.0%",
+          "低收入国家中位数为 41.9%，高收入国家为 87.3%",
+          "模型只有 67 个成员国的癌症登记观测数据；36 个脆弱和冲突国家中只有 2 个拥有观测数据",
+        ],
+        sourceName: "World Health Organization；Nature Medicine",
+        sourceUrl: "https://www.who.int/news/item/08-07-2026-first-global-breast-cancer-survival-estimates-show-wide-regional-and-income-disparities",
+        sourceDate: "2026-07-08（页面核验 2026-07-20）",
+      },
+    ],
+  },
+  {
     date: "2026-07-19",
     displayDate: "2026.07.19",
     issueNo: "06",
