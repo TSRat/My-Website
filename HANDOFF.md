@@ -167,3 +167,45 @@ python3 -m http.server 8000 --directory docs
 - 验证线上新主站的响应式布局及具体文案链接。
 - 为 Mobile View 补充汉堡菜单的交互逻辑。
 
+
+## 2026-07-21: Add HILDEGARD (Daughters of Time 002)
+
+### Current Target
+按 TSRat 稿件《谦卑的反叛者：宾根的希尔德加德》建立"时间的女儿 002"人物专题，与 Hypatia、Enheduanna 并列，走仓库现有 GitHub Actions Pages 部署链路，同时保留未来在 Figma 中继续编辑视觉的可能性。
+
+### Completed
+- 新建 `HILDEGARD/`：`index.html` + `assets/hildegard-site.css` + `assets/hildegard-tokens.css` + `assets/hildegard-refresh.js` + 五个独立 SVG（`glyph-viriditas / cosmic-wheel / branch / root / star`）。
+- 内容严格按稿件"引子 + 八章 + 身后"结构；史实、学界解读、叙事框架、视觉隐喻分层呈现；性别观 vs 阶级观张力通过 Editorial note 保留。
+- 视觉系统命名为 **Viriditas Codex**：Parchment × Viriditas Deep × Cosmic Blue × Gold Leaf 四色主轴，六种屏模板（Portal / Manuscript / Vision / Botanical / Archive / Interlude），动效遵循 Breathing + Growing + Revealing 且严格支持 `prefers-reduced-motion`。
+- Figma 可编辑性：所有设计变量集中在 `assets/hildegard-tokens.css`；SVG 全部独立文件；`HILDEGARD/design/figma-handoff.md` 列出 Variables、Text Styles、Grid、SVG 清单、组件命名，与代码一一对应。
+- 在 `scripts/build-github-pages.mjs` 的 `staticSites` 中注册 `HILDEGARD`（DAUGHTERS OF TIME · 002 · className `hildegard` · artLabel `002`）。
+- `THE-LIVING-ATLAS/index.html` 的 07 Sites 增加 Hildegard 行（编号 `002` · Daughters of Time · ACTIVE）。
+- 根 `README.md` 项目表、仓库树、Pages 部署描述、文档导航链接均补上 Hildegard。
+- 项目内文档 `CONTENT.md / DESIGN.md / TECH.md / HANDOFF.md` 均按当前实际内容编写，不使用空模板。
+
+### Verification status
+- `git diff --check`: Passed
+- `npm ci`: Passed
+- `npm run build:pages`: Passed — `docs/HILDEGARD/` 生成，Hub 更新
+- `npm run validate:pages`: Passed — Hildegard 全部本地资源引用可解析
+- `npm run lint`: Not run locally (会在 CI 中随 workflow 触发)
+- `npm test`: Not run locally — 本机缺 GNU `timeout`（同"The Living Atlas"记录中所述限制）；CI 将执行
+- Browser check: 本地在 `python3 -m http.server 8000 --directory docs` 下以 375 / 820 / 1440 px 抽查桌面、平板与移动端布局
+
+### Unfinished / Issues
+- `TODO: needs confirmation` — 视频《谦卑的反叛者》正式发布链接（Hildegard 页脚 Sources）。
+- `TODO: needs confirmation` — 是否引入 Rupertsberg Scivias 公版抄本扫描。
+- `TODO: needs confirmation` — Kristin Hayter / Hildegard von Blingin' 官方链接是否作为外链嵌入。
+- Workflow 目前只对 Hypatia 有额外 smoke check；Hildegard 未设置强制文件级 grep check（如需增加，请同步 `.github/workflows/publish-static-mirror.yml` 与 `HILDEGARD/TECH.md`）。
+
+### Do not change without confirmation
+- 稿件叙事骨架与"性别观 vs 阶级观"张力段落（观点改变类）。
+- `HILDEGARD/` 目录名与 slug 大小写。
+- Living Atlas 中 `002 · HILDEGARD` 的编号与位置。
+- Viriditas Codex 主色轴与面积原则。
+- 现有 `staticSites` 中其它站点的 slug、metadata、顺序。
+
+### Next Actions
+- 由创作者填入视频与外链后清除页脚 TODO。
+- 若要在 Figma 中同步视觉源，按 `HILDEGARD/design/figma-handoff.md` 建立 Variables 与 SVG 组件。
+- 若未来切换独立域名（例如 `hildegard.tsrat.com`），只需修改 `HILDEGARD/index.html` 中的 `canonical` 与 `og:url`；相对路径已保证整目录可迁移。
