@@ -172,11 +172,13 @@ main section {
 
 /* 01 Hero */
 .hero-content {
-  grid-column: 1 / 8;
+  grid-column: 1 / 7;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-sidebar {
-  grid-column: 8 / 13;
+  grid-column: 7 / 13;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -386,4 +388,16 @@ main section {
   .nav-links, .nav-right {
     display: none; /* In real implementation, add a hamburger menu */
   }
+}
+
+.hero-stamp {
+  margin-top: auto;
+  margin-bottom: 2rem;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
