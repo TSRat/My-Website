@@ -209,3 +209,29 @@ python3 -m http.server 8000 --directory docs
 - 由创作者填入视频与外链后清除页脚 TODO。
 - 若要在 Figma 中同步视觉源，按 `HILDEGARD/design/figma-handoff.md` 建立 Variables 与 SVG 组件。
 - 若未来切换独立域名（例如 `hildegard.tsrat.com`），只需修改 `HILDEGARD/index.html` 中的 `canonical` 与 `og:url`；相对路径已保证整目录可迁移。
+
+## 2026-07-21: HILDEGARD 布局修复 + 视频 + 史料 pass
+
+### Current Target
+回应用户在首次部署后的反馈：章节 03 修炼 出现塌陷排版；文字过密图像不足；视频没有在页面内的呈现；缺少像 HYPATIA / ENHEDUANNA 那样完整的"史料与延伸阅读"清单。
+
+### Completed
+- 修复 `HILDEGARD/assets/hildegard-site.css` 中的栅格塌陷：把 12 列布局规则从只覆盖 `.chapter--manuscript` 扩展到 `.chapter--vision` 和 `.chapter--botanical`，让 Vision / Botanical 章节的正文（原本 fall back 到 `grid-column: auto` = 1 列）恢复到 `grid-column: 2 / span 8` + 旁注 `10 / span 3`。
+- 新增视觉锚点：每章右上加 96 × 96 的 `.chapter-glyph` SVG；三种屏（Manuscript / Vision / Botanical）各自的 opacity 与颜色遵循原色板。
+- 引入 `.pull-quote` 拉引金句；只用金色发丝线上下夹持，不做圆角卡片。
+- 全面压缩正文密度：删除重复陈述，把叙事扩写转成拉引句；每章保留论点 + 关键人名/时间。
+- 新增 `<section id="watch">` 内嵌 Bilibili iframe（`BV1VE4gzNEYJ`），带外链按钮。
+- 新增 `<section id="sources">`：`.source-table` 分层（材料 / 距离 / 最适合回答 / 主要限制）+ `.reading-list` 外链（Barbara Newman / Sabina Flanagan / Mark Atherton / Benedict XVI 2012 册封文 / CANTUS / Sequentia / Lingua Ignota 综述 / TS鼠 B 站视频）+ `.image-credits` 折叠说明。
+- 站点头部 nav 增加 `观看` / `来源` 两个锚点，页脚去掉旧的 Sources 列表，只保留 Series 导航 + About 快速跳转。
+- 装饰图形仍全部为本站 SVG，没有 AI 生成的希尔德加德肖像；`image-credits` 中明确声明"AI 图片不能冒充史料"。
+
+### Verification status
+- `find docs -mindepth 1 -maxdepth 1 -exec rm -rf {} +` + `npm run build:pages`: Passed — 五个静态站点目录全部重新复制，Hub 更新。
+- `npm run validate:pages`: Passed — 268 local references across 35 HTML/CSS files.
+- Browser check（本地 `python3 -m http.server 8000 --directory docs`）：桌面、平板与移动端 03 修炼章正文与旁注分栏正常。
+
+### Unfinished / Issues
+- 仍待创作者确认：是否引入 Rupertsberg Scivias 公版扫描；是否补 Kristin Hayter / Hildegard von Blingin' 官方链接。
+
+### Next Actions
+- 部署后再次核对 `#watch` iframe 在 HTTPS 下是否被 Bilibili X-Frame-Options 允许；如被拒，可考虑用哔哩哔哩官方 player 或改为图片 + 外链的降级方案。

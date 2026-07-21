@@ -78,8 +78,25 @@
 - 图像若从 AI 或后世作品引入，必须在 caption 中注明"现代视觉隐喻"或授权来源。
 - 音频（如 Sequentia、Hildegard von Blingin' 改编）不在未取得授权前直接嵌入，只可外链。
 
-## TODO / Needs confirmation
+## 2026-07-21 修订
 
-- ✅ 视频版本已发布：<https://www.bilibili.com/video/BV1VE4gzNEYJ>（页脚 Sources 中作为外链）。
-- `TODO: needs confirmation` — 是否引入公版抄本图像（例如 Rupertsberg Scivias 手稿的公版扫描），以及授权来源。
-- `TODO: needs confirmation` — 是否补充 Kristin Hayter / Hildegard von Blingin' 的官方链接（当前只作文字提及）。
+回应用户反馈（首个部署版本的观感问题）：
+
+- 减少每章正文段落数，删除重复陈述；把叙事扩写压缩为"论点 + 拉引句 + 名词/时间"。
+- 每章加入 `.pull-quote` 拉引金句；不使用引号图片，只用金色发丝线上下夹持。
+- 每章右上角有一个 96 × 96 的装饰性 SVG（`.chapter-glyph`），从五种既有 glyph 中挑选与章节主题匹配的一枚。
+- 新增 `#watch` 章节：内嵌 Bilibili iframe（`BV1VE4gzNEYJ`），配备哔哩哔哩外链按钮。
+- 新增 `#sources` 章节，与 HYPATIA 保持结构对齐：
+  - `.source-table` 分层：材料 · 距离 · 最适合回答 · 主要限制。
+  - `.reading-list` 外链：Barbara Newman / Sabina Flanagan / Mark Atherton / Benedict XVI 2012 册封文 / CANTUS / Sequentia / Lingua Ignota Wikipedia / TS鼠 B 站视频。
+  - `.image-credits` 折叠说明：所有装饰图形均为本站 SVG，不使用 AI 生成的希尔德加德肖像。
+
+## 视频与外链
+
+- 视频版本：<https://www.bilibili.com/video/BV1VE4gzNEYJ>
+- 页面锚点：`#watch`（页内 iframe）、`#sources`（史料表 + 外链清单 + 图形来源）。
+
+## 仍在等待创作者确认
+
+- 是否引入公版抄本图像（例如 Rupertsberg Scivias 手稿的公版扫描），以及授权来源。
+- 是否补充 Kristin Hayter / Hildegard von Blingin' 的官方链接（当前只作文字提及）。
