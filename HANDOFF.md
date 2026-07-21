@@ -193,7 +193,7 @@ python3 -m http.server 8000 --directory docs
 - Browser check: 本地在 `python3 -m http.server 8000 --directory docs` 下以 375 / 820 / 1440 px 抽查桌面、平板与移动端布局
 
 ### Unfinished / Issues
-- `TODO: needs confirmation` — 视频《谦卑的反叛者》正式发布链接（Hildegard 页脚 Sources）。
+- ✅ 视频版本已发布：<https://www.bilibili.com/video/BV1VE4gzNEYJ>；Hildegard 页脚 Sources 已附外链。
 - `TODO: needs confirmation` — 是否引入 Rupertsberg Scivias 公版抄本扫描。
 - `TODO: needs confirmation` — Kristin Hayter / Hildegard von Blingin' 官方链接是否作为外链嵌入。
 - Workflow 目前只对 Hypatia 有额外 smoke check；Hildegard 未设置强制文件级 grep check（如需增加，请同步 `.github/workflows/publish-static-mirror.yml` 与 `HILDEGARD/TECH.md`）。
