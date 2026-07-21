@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Constellation of invented glyphs orbiting a locked keyhole — visual metaphor for Lingua Ignota as a private sacred code.">
+  <rect width="800" height="500" fill="#0B1524"/>
+  <g fill="none" stroke="#D9B366" stroke-width="1.1">
+    <!-- Concentric orbits -->
+    <circle cx="400" cy="250" r="200"/>
+    <circle cx="400" cy="250" r="150" stroke-dasharray="2 4"/>
+    <circle cx="400" cy="250" r="100"/>
+    <circle cx="400" cy="250" r="60" stroke-dasharray="1 3"/>
+
+    <!-- Keyhole center -->
+    <circle cx="400" cy="250" r="22"/>
+    <rect x="392" y="270" width="16" height="26"/>
+    <line x1="400" y1="252" x2="400" y2="278"/>
+
+    <!-- Orbiting glyphs (invented letter shapes) -->
+    <g font-family="'Cormorant Garamond',serif" font-size="26" fill="#D9B366" stroke="none">
+      <text x="400" y="55" text-anchor="middle">Ⰰ</text>
+      <text x="620" y="140" text-anchor="middle">Ⰲ</text>
+      <text x="680" y="290" text-anchor="middle">Ⰴ</text>
+      <text x="600" y="430" text-anchor="middle">Ⰶ</text>
+      <text x="380" y="470" text-anchor="middle">Ⰸ</text>
+      <text x="170" y="420" text-anchor="middle">Ⰺ</text>
+      <text x="120" y="270" text-anchor="middle">Ⰼ</text>
+      <text x="170" y="130" text-anchor="middle">Ⰾ</text>
+    </g>
+    <g font-family="'Fira Code',monospace" font-size="10" fill="#B9B29A" letter-spacing="0.16em" stroke="none">
+      <text x="400" y="72" text-anchor="middle">AIGONZ</text>
+      <text x="620" y="155" text-anchor="middle">PEUEARREZ</text>
+      <text x="680" y="305" text-anchor="middle">LOIFOL</text>
+      <text x="600" y="445" text-anchor="middle">CORIZ</text>
+      <text x="380" y="485" text-anchor="middle">ORNALZ</text>
+      <text x="170" y="435" text-anchor="middle">VANIX</text>
+      <text x="120" y="285" text-anchor="middle">RIZIZ</text>
+      <text x="170" y="145" text-anchor="middle">…</text>
+    </g>
+
+    <!-- Small stars in the field -->
+    <g fill="#D9B366" stroke="none" opacity="0.65">
+      <circle cx="90" cy="60" r="1.5"/>
+      <circle cx="730" cy="80" r="1.5"/>
+      <circle cx="50" cy="250" r="1.5"/>
+      <circle cx="760" cy="200" r="1.5"/>
+      <circle cx="700" cy="470" r="1.5"/>
+      <circle cx="70" cy="470" r="1.5"/>
+    </g>
+  </g>
+</svg>

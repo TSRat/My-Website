@@ -235,3 +235,33 @@ python3 -m http.server 8000 --directory docs
 
 ### Next Actions
 - 部署后再次核对 `#watch` iframe 在 HTTPS 下是否被 Bilibili X-Frame-Options 允许；如被拒，可考虑用哔哩哔哩官方 player 或改为图片 + 外链的降级方案。
+
+## 2026-07-21 (v3): HILDEGARD 图像 + 章节拆分 + 深色对比修复
+
+### Current Target
+回应用户反馈：
+1. "没有看到一张图片" — 除了 96px 装饰 glyph，缺乏大幅视觉承载。
+2. "深色背景的那几页，数字和一些文字看不清楚" — 03/04/06（Vision 深蓝）章的 `.chapter-numeral` 只有 0.18 opacity + `--color-primary`（深绿），在深蓝背景上几乎不可见。
+3. "一章可以拆成几页，比如权威那章可以拆成和修女们的关系，搬离修道院，与政治人物互动，性别与阶级态度等"。
+
+### Completed
+- 新增 8 张原创章节大图 SVG（`HILDEGARD/assets/images/plate-*.svg`），每一章 opener 一张，`aspect-ratio: 8/5`，caption 明确"视觉隐喻，非史料"。
+- 新增 CSS：`.chapter-plate`（章节大图 + figcaption 三色板适配）；`.subchapter`（章节内嵌小节 + `.subchapter-index` 徽章 + `.subchapter-title` 双语标题）。
+- 修复深色对比：`.chapter--vision .chapter-numeral` 从 `dark-primary`（visio-glow blue）改为 `accent-soft`（gold-soft）+ opacity 0.55；`.chapter--botanical .chapter-numeral` 改为 gold-soft 0.7 + opacity 1；`.chapter-meta` 在深色屏用 accent-soft 而不是 dark-muted。
+- 章节拆分：
+  - 03 修炼 → A 先知路径 / B 学识路径
+  - 04 音乐 → A 与格里高利圣咏的对照 / B 天启交响曲与美德典律
+  - 05 权威 → A 与修女的关系 / B 把弱势当武器 / C 搬离修道院·独立王国 / D 通信欧洲的权力中心 / E 性别与阶级的两面（Editor's Note）
+  - 06 语言 → A 字母与词汇 / B 三种解读与纽曼的假说
+  - 07 斗争 → A 四次巡回布道 / B 禁令·慈悲高于教条
+  - 08 身后 → A 沉默的八百年 / B 二次生命
+- CSS 版本参数升级：`hildegard-site.css?v=viriditas-v3`；JS 同步 `hildegard-refresh.js?v=viriditas-v3`。
+- `image-credits` 更新：新增全部 plate 的来源声明（本站原创 SVG，视觉隐喻）。
+
+### Verification
+- `npm run build:pages`：Passed。
+- `npm run validate:pages`：Passed — 276 local references across 35 HTML/CSS files（新增 8 张 plate SVG 引用）。
+
+### Do not change without confirmation
+- 8 张 plate SVG 使用几何 + 剪影，绝不出现拟真面孔，符合 AGENTS.md "AI 图片不能冒充史料" 原则。
+- 05 权威章的 5 个小节顺序（A→B→C→D→E）已与用户明确列出的四项匹配，并在结尾保留原 Editorial note。
