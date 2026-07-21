@@ -80,6 +80,6 @@
 
 ## TODO / Needs confirmation
 
-- `TODO: needs confirmation` — 视频《谦卑的反叛者：宾根的希尔德加德》正式发布链接（页脚 Sources）。
+- ✅ 视频版本已发布：<https://www.bilibili.com/video/BV1VE4gzNEYJ>（页脚 Sources 中作为外链）。
 - `TODO: needs confirmation` — 是否引入公版抄本图像（例如 Rupertsberg Scivias 手稿的公版扫描），以及授权来源。
 - `TODO: needs confirmation` — 是否补充 Kristin Hayter / Hildegard von Blingin' 的官方链接（当前只作文字提及）。

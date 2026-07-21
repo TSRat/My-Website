@@ -41,7 +41,7 @@
 
 ## Known issues / TODO
 
-- `TODO: needs confirmation`：视频《谦卑的反叛者》正式发布链接（页脚 Sources）。
+- ✅ 视频版本已发布：<https://www.bilibili.com/video/BV1VE4gzNEYJ>；页脚 Sources 现在直接外链。
 - `TODO: needs confirmation`：是否引入公版抄本图像（如 Rupertsberg Scivias 手稿扫描）。
 - `TODO: needs confirmation`：Kristin Hayter / Hildegard von Blingin' 官方链接是否作为外链嵌入。
 - 目前 workflow 未为 Hildegard 增加 smoke check；后续如要加，请同步 `.github/workflows/publish-static-mirror.yml` 与 `TECH.md`。
