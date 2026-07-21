@@ -20,6 +20,7 @@
 | The Living Atlas | 总入口主站，一个人的开放档案馆 | `THE-LIVING-ATLAS/` | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) |
 | IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `app/briefings.ts`、`app/`、`public/`、`scripts/build-github-pages.mjs` | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) |
 | Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；当前 Pages 输入镜像在 `ENHEDUANNA/` | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) |
+| Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `HILDEGARD/` | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) |
 | Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `HYPATIA/` | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) |
 | Melromarc Sisters | Malty 与 Melty 的非官方多重故事档案 | `MELROMARC-SISTERS/` | [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/) |
 
@@ -47,6 +48,7 @@ My-Website/
 ├── static-sites/enheduanna/     # Enheduanna 可读源码
 ├── ENHEDUANNA/                  # Enheduanna 当前发布镜像
 ├── HYPATIA/                     # Hypatia 当前发布目录
+├── HILDEGARD/                   # Hildegard 当前发布目录（Viriditas Codex）
 ├── MELROMARC-SISTERS/           # Melromarc 当前发布目录
 ├── IVORY-ARCHIVE/               # IVORY 的旧静态快照，不是当前 Pages 来源
 └── tests/                       # 当前应用构建后的 Node 测试
@@ -121,7 +123,7 @@ npm run lint
 1. 推送到 `main`，或手动触发 workflow。
 2. `.github/workflows/publish-static-mirror.yml` 安装 Node 22 依赖。
 3. workflow 运行 `npm run build:pages`。
-4. `scripts/build-github-pages.mjs` 生成总入口与 IVORY ARCHIVE，并复制 `ENHEDUANNA/`、`HYPATIA/`、`MELROMARC-SISTERS/`。
+4. `scripts/build-github-pages.mjs` 生成总入口与 IVORY ARCHIVE，并复制 `ENHEDUANNA/`、`HYPATIA/`、`HILDEGARD/`、`MELROMARC-SISTERS/`、`THE-LIVING-ATLAS/`。
 5. `npm run validate:pages` 检查生成页面的本地资源引用，workflow 再执行 Hypatia 关键文件 smoke checks。
 6. workflow 上传 `docs/`，再由 `actions/deploy-pages@v4` 发布。
 
@@ -148,6 +150,7 @@ npm run lint
 - IVORY ARCHIVE：[`app/`](./app/)
 - Enheduanna：[`static-sites/enheduanna/`](./static-sites/enheduanna/)
 - Hypatia：[`HYPATIA/`](./HYPATIA/)
+- Hildegard：[`HILDEGARD/`](./HILDEGARD/)
 - Melromarc Sisters：[`MELROMARC-SISTERS/`](./MELROMARC-SISTERS/)
 
 ## 工作原则

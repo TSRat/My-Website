@@ -16,6 +16,15 @@ const staticSites = [
     metadata: [["时代", "约公元前23世纪"], ["地点", "美索不达米亚 · 乌尔"]],
   },
   {
+    slug: "HILDEGARD",
+    className: "hildegard",
+    artLabel: "002",
+    eyebrow: "DAUGHTERS OF TIME · 002",
+    title: "谦卑的反叛者：宾根的希尔德加德",
+    description: "从 1163 年那封警告皇帝的信出发，重新走近 12 世纪莱茵兰的女院长、先知、学者、音乐家与语言发明者。",
+    metadata: [["时代", "1098 — 1179"], ["地点", "莱茵兰 · 鲁珀茨贝格"]],
+  },
+  {
     slug: "HYPATIA",
     className: "hypatia",
     cover: "assets/hypatia-cover.png",
