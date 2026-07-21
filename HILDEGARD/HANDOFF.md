@@ -3,11 +3,33 @@
 - Last updated: 2026-07-21
 - Project: 谦卑的反叛者：宾根的希尔德加德
 - Current branch (creation): `agent/add-hildegard-site`
+- Follow-up branch (this pass): `agent/fix-static-site-copy`
 - Base commit at start: `8670663` — `feat: i18n and swap titles`
 
 ## Current goal
 
 以 TSRat 稿件《谦卑的反叛者：宾根的希尔德加德》为叙事骨架，落地"时间的女儿 002"人物专题；视觉采用自定义的 Viriditas Codex 系统（Living Manuscript × Cosmological Geometry × Viriditas × Contemporary Editorial UI）；保留未来在 Figma 中继续编辑与迁移域名的可能性。
+
+## 2026-07-21 修复 pass
+
+反馈问题（用户在初版部署后指出）：
+
+1. 章节 03/06 出现"每列只有一个汉字宽"的塌陷排版。
+2. 文字过密、图像/视觉锚点过少。
+3. 视频缺乏在页面内的呈现，只有文末外链。
+4. 缺少像 HYPATIA / ENHEDUANNA 那样的完整"史料与延伸阅读"清单。
+
+本次修复：
+
+- 根本原因：`hildegard-site.css` 中 12 列栅格规则原本只作用于 `.chapter--manuscript`，导致 `.chapter--vision` 与 `.chapter--botanical` 的正文与旁注 fall back 到 `grid-column: auto`（=1 列）。已把 grid-column 规则扩展到三种章节屏。
+- 每章右上加入一个 96 × 96 的装饰性 SVG "章节锚点"（`.chapter-glyph`）；桌面端 opacity 0.32，避免与正文视觉冲突；移动端自动缩小。
+- 章节正文引入 `.pull-quote` 拉引金句；三种屏（Manuscript / Vision / Botanical）各自继承自己的色板。
+- 每一章的正文段落被压缩：删除重复陈述，保留论点与关键人名/时间；把一些原本冗长的"叙事扩写"转成拉引句。
+- 新增 `<section id="watch">` 内嵌 Bilibili iframe（BV1VE4gzNEYJ）+ 主标题 + 简介 + 外链按钮。
+- 新增 `<section id="sources">`：史料分层 `<table class="source-table">` + `.reading-list` 外链 + `.image-credits` 折叠区。
+- 站点头部 nav 增加 `观看` / `来源` 两个锚点。
+- 页脚去掉旧的 Sources 列表，只保留 Series 导航 + About 快速跳转。
+- 装饰图形仍全部为本站 SVG，没有 AI 生成的希尔德加德肖像；`image-credits` 中明确说明"AI 图片不能冒充史料"。
 
 ## Current state
 
@@ -20,6 +42,7 @@
 - Living Atlas：`THE-LIVING-ATLAS/index.html` 的 `07 Sites` 增加 Hildegard 行，编号 `002 · Daughters of Time · ACTIVE`。
 - 根 `README.md` 与 `HANDOFF.md`：项目表增加 Hildegard 条目。
 - 文档：`CONTENT.md / DESIGN.md / TECH.md / HANDOFF.md / design/figma-handoff.md`。
+- 新增：`#watch` 与 `#sources` 章节，位于主 `<main>` 内、页脚之前。
 
 ## Completed
 
@@ -28,6 +51,7 @@
 - 内部链接全部使用相对路径（`./assets/...`、`../HYPATIA/`），为未来换域名或去 `/My-Website/` 前缀留出低成本迁移路径。
 - 无障碍：skip-link、focus-visible、`aria-hidden` 装饰、`prefers-reduced-motion` 降级。
 - Figma handoff 文档：颜色、字号阶梯、栅格、SVG 清单、六种屏模板的 Figma 页面命名建议。
+- 2026-07-21 追加：修复三屏栅格塌陷；把叙事密度和视觉锚点重新平衡；视频内嵌；史料结构化。
 
 ## Verification status
 
