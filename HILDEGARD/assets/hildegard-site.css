@@ -154,7 +154,7 @@ a:focus-visible {
   font-size: clamp(4rem, 8vw, 7rem);
   line-height: 1;
   color: var(--color-primary);
-  opacity: 0.18;
+  opacity: 0.22;
   letter-spacing: -0.03em;
 }
 
@@ -409,12 +409,13 @@ a:focus-visible {
 
 .chapter--vision .chapter-meta,
 .chapter--interlude-dark .chapter-meta {
-  color: var(--color-dark-muted);
+  color: var(--color-accent-soft);
 }
 
 .chapter--vision .chapter-numeral,
 .chapter--interlude-dark .chapter-numeral {
-  color: var(--color-dark-primary);
+  color: var(--color-accent-soft);
+  opacity: 0.55;
 }
 
 .chapter--vision a,
@@ -445,11 +446,12 @@ a:focus-visible {
 }
 
 .chapter--botanical .chapter-meta {
-  color: rgba(241, 234, 213, 0.6);
+  color: rgba(241, 234, 213, 0.85);
 }
 
 .chapter--botanical .chapter-numeral {
-  color: rgba(167, 183, 122, 0.75);
+  color: rgba(217, 179, 102, 0.7);
+  opacity: 1;
 }
 
 .chapter--botanical a {
@@ -811,6 +813,163 @@ a:focus-visible {
 }
 
 /* ---------- Pull-quote (in-chapter) ---------- */
+
+/* Chapter plate (hero SVG per chapter) */
+.chapter-plate {
+  margin: 0 0 var(--space-6);
+  border: var(--border-hair) solid rgba(24, 56, 43, 0.35);
+  background: var(--color-page-alt);
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.chapter-plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  object-fit: cover;
+  background: var(--color-page-alt);
+}
+
+.chapter-plate figcaption {
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--type-mono);
+  font-size: var(--size-meta);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  border-top: var(--border-hair) solid rgba(24, 56, 43, 0.2);
+  background: rgba(255, 253, 244, 0.5);
+}
+
+.chapter-plate figcaption em {
+  font-family: var(--type-serif);
+  text-transform: none;
+  letter-spacing: normal;
+  font-style: normal;
+  color: var(--color-ink-soft);
+  margin-left: var(--space-2);
+}
+
+.chapter--vision .chapter-plate,
+.chapter--interlude-dark .chapter-plate {
+  border-color: rgba(217, 179, 102, 0.4);
+  background: transparent;
+}
+
+.chapter--vision .chapter-plate figcaption,
+.chapter--interlude-dark .chapter-plate figcaption {
+  color: var(--color-dark-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border-top-color: rgba(217, 179, 102, 0.35);
+}
+
+.chapter--vision .chapter-plate figcaption em,
+.chapter--interlude-dark .chapter-plate figcaption em {
+  color: var(--color-dark-ink);
+}
+
+.chapter--botanical .chapter-plate {
+  border-color: rgba(167, 183, 122, 0.4);
+  background: transparent;
+}
+
+.chapter--botanical .chapter-plate figcaption {
+  color: rgba(241, 234, 213, 0.75);
+  background: rgba(0, 0, 0, 0.15);
+  border-top-color: rgba(167, 183, 122, 0.35);
+}
+
+.chapter--botanical .chapter-plate figcaption em {
+  color: #F1EAD5;
+}
+
+/* Subchapter (nested subsection within a chapter body) */
+.subchapter {
+  margin: var(--space-7) 0 0;
+  padding-top: var(--space-5);
+  border-top: var(--border-hair) solid rgba(24, 56, 43, 0.25);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.subchapter-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-2);
+}
+
+.subchapter-index {
+  font-family: var(--type-mono);
+  font-size: var(--size-meta);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  padding: 2px 8px;
+  border: var(--border-hair) solid var(--color-accent);
+  background: rgba(180, 138, 60, 0.08);
+}
+
+.subchapter-title {
+  font-family: var(--type-display);
+  font-weight: 500;
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  line-height: var(--leading-tight);
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.subchapter-title .cn {
+  font-family: var(--type-serif);
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-left: var(--space-3);
+  font-size: 0.85em;
+}
+
+.chapter--vision .subchapter,
+.chapter--interlude-dark .subchapter {
+  border-top-color: rgba(217, 179, 102, 0.35);
+}
+
+.chapter--vision .subchapter-title,
+.chapter--interlude-dark .subchapter-title {
+  color: var(--color-dark-ink);
+}
+
+.chapter--vision .subchapter-title .cn,
+.chapter--interlude-dark .subchapter-title .cn {
+  color: var(--color-accent-soft);
+}
+
+.chapter--vision .subchapter-index,
+.chapter--interlude-dark .subchapter-index {
+  color: var(--color-accent-soft);
+  border-color: var(--color-accent-soft);
+  background: rgba(217, 179, 102, 0.08);
+}
+
+.chapter--botanical .subchapter {
+  border-top-color: rgba(167, 183, 122, 0.35);
+}
+
+.chapter--botanical .subchapter-title {
+  color: #F1EAD5;
+}
+
+.chapter--botanical .subchapter-title .cn {
+  color: var(--color-highlight);
+}
+
+.chapter--botanical .subchapter-index {
+  color: var(--color-highlight);
+  border-color: var(--color-highlight);
+  background: rgba(167, 183, 122, 0.12);
+}
 
 .pull-quote {
   position: relative;
