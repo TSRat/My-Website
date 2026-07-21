@@ -172,11 +172,11 @@ main section {
 
 /* 01 Hero */
 .hero-content {
-  grid-column: 1 / 9;
+  grid-column: 1 / 8;
 }
 
 .hero-sidebar {
-  grid-column: 10 / 13;
+  grid-column: 8 / 13;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -253,6 +253,10 @@ main section {
 
 .world-box {
   grid-column: span 4;
+}
+
+.world-box-large {
+  grid-column: span 6;
 }
 
 .world-box h3 {
