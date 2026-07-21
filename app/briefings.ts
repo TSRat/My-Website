@@ -32,6 +32,138 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    date: "2026-07-21",
+    displayDate: "2026.07.21",
+    issueNo: "08",
+    theme: "证据在哪里结束，解释从哪里开始？",
+    intro:
+      "今天的五个故事都在追问证据与解释之间的接缝：博物馆为古罗马遗骨补上面孔和人生，建筑师把捐赠、藏品与旧馆编织成新翼，新闻进入平台后失去直接入口，社会学家发现一个看似普通的种族变量会改变不平等结论，而女性长期被当作‘正常’的月经过多，终于被重新视为诊断线索。好的解释不会掩盖接缝，而会清楚标明哪些是观察、哪些是推断、哪些仍待验证。",
+    uniqueCount: 5,
+    topics: ["艺术人文", "社会科学", "女性主义"],
+    stories: [
+      {
+        category: "艺术人文 × 历史 × 人类学与博物馆叙事",
+        image: "/story-images/aquincum-reconstructed-lives.jpg",
+        imageAlt: "古罗马颅骨、分层证据卡片与逐渐成形但不具真实人物特征的面孔相互叠合的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释考古证据、面部复原与虚构传记之间的边界，并非遗骨、展品或真实人物肖像",
+        title: "给古罗马遗骨一张脸之后：博物馆必须告诉我们，证据在哪里结束",
+        summary:
+          "布达佩斯 Aquincum Museum 用 DNA、颅骨形态和考古背景复原 16 名古罗马居民，同时为他们创造名字与人生。展览最有价值的不是‘看起来像真人’，而是暴露科学推断与叙事想象如何在同一张脸上相遇。",
+        happened:
+          "《Once We Were Like You》正在 Aquincum Museum 展出。研究团队依据遗骨、DNA 和墓葬背景推断年龄、来源、伤病以及眼睛、头发和肤色等特征，并制作 16 个面部复原，其中 6 个是等身硅胶模型。策展团队也为人物命名、安排职业与个人经历，并明确承认这些传记是在历史基础上进行的叙事创作。",
+        importance:
+          "复原技术能让普通劳动者从帝王与战争构成的罗马史中重新出现，但逼真的面孔会提高观众对整个故事的信任，包括没有直接证据的部分。与此前‘罗马器物进入展台后如何变成艺术’不同，这里关注的是科学视觉化如何把概率推断转化为看似确定的人格，以及博物馆应怎样持续标记证据等级。",
+        creatorAngle:
+          "为一个复原人物制作三层透明肖像：骨骼能够支持的事实、DNA 与统计模型给出的概率、策展人为建立共情而补写的传记。让每一层都能单独关闭，观众会看到‘像一个人’与‘知道这个人’之间仍有多远。",
+        facts: [
+          "展览包含 16 个面部复原，其中 6 个为等身硅胶模型，展至 2026 年 10 月 31 日",
+          "研究者结合 DNA、考古学与人类学信息推断肤色、发色、眼色、雀斑、年龄、伤病和来源",
+          "遗骨显示多数人有炎症、营养不足或长期劳动痕迹，策展人据此判断他们多属较低社会阶层",
+          "人物被推定来自意大利、不列颠、叙利亚、萨尔马提亚与凯尔特等不同背景，但具体姓名、职业和生平由策展团队创造",
+        ],
+        sourceName: "Associated Press；Aquincum Museum",
+        sourceUrl: "https://apnews.com/article/hungary-ancient-rome-museum-facial-reconstrucion-73d5ed287c5de882f9ca1e12cb345f89",
+        sourceDate: "2026-07-15（页面核验 2026-07-21）",
+      },
+      {
+        category: "艺术人文 × 建筑 × 博物馆制度",
+        image: "/story-images/clark-tavitian-wing.jpg",
+        imageAlt: "象牙色与酒红色纸张构成的新博物馆翼楼穿过两座不同时代的旧建筑并连向山林的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释 Clark 新翼在旧馆、藏品与景观之间的连接，并非建筑效果图或建成照片",
+        title: "一座新翼如何假装自己一直在那里？Clark 把捐赠、旧馆与山林缝成一条参观路线",
+        summary:
+          "Selldorf Architects 公布 Clark Art Institute 的 Aso O. Tavitian Wing：12 间展厅把三百余件欧洲艺术收藏安置在两座不同时代的建筑之间。所谓‘无缝’，其实是材料、资金、动线与机构记忆的精密协商。",
+        happened:
+          "Clark Art Institute 宣布建设专门陈列 Aso O. Tavitian Collection 的新翼，建筑由 Selldorf Architects 设计，景观由 Reed Hilderbrand 负责，计划 2028 年开放。新建筑连接 1955 年的主馆与 1973 年的 Manton Research Center，以石材、白橡木、青铜窗框和连续景观组织 12 间尺度不同的展厅。",
+        importance:
+          "博物馆扩建常被描述为纯粹的空间改善，但一座新翼同时固定了捐赠者的名字、收藏的地位、参观顺序和未来维护成本。与此前 Madelon Vriesendorp 讨论建筑图像和女性作者不同，本项关注真实制度如何通过材料与路径把一笔捐赠变成长期公共叙事；越是看起来无缝，越值得追问哪些谈判被藏进了墙体。",
+        creatorAngle:
+          "把平面图画成一份‘机构剖面’：每个展厅同时标出作品年代、捐赠关系、旧建筑接口、景观视线与维护材料。让观众看到一条优雅动线背后，至少有五种不同时间尺度在协同。",
+        facts: [
+          "新翼面积约 15,000 平方英尺，设置 12 间展厅，计划于 2028 年开放",
+          "Aso O. Tavitian Collection 包含 300 余件作品，范围从文艺复兴延伸至十八世纪法国艺术",
+          "Tavitian 的遗赠与捐赠合计价值约 4,500 万美元，用于收藏、建筑和相关项目",
+          "建筑将连接 1955 年主馆与 1973 年 Manton Research Center，景观设计由 Reed Hilderbrand 承担",
+        ],
+        sourceName: "Selldorf Architects；Clark Art Institute",
+        sourceUrl: "https://www.selldorf.com/news/clark-art-institute-reveals-design-for-new-aso-o-tavitian-wing",
+        sourceDate: "2026-07-20",
+      },
+      {
+        category: "社会科学 × 传播学 × 新闻基础设施",
+        image: "/story-images/platformized-news.jpg",
+        imageAlt: "同一则新闻从报纸页面分流到短视频、社交网络和聊天机器人，来源标识沿途逐渐变小的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释新闻消费的平台化与来源可见度，并非 Reuters Institute 原始图表",
+        title: "新闻第一次更常从平台抵达，而不是从新闻网站抵达",
+        summary:
+          "Reuters Institute 的 48 个市场调查显示，社交媒体与视频网络以 54% 的使用率首次超过新闻机构网站和应用。变化不是某个平台突然获胜，而是新闻入口、信任和付费关系被第三方逐步重写。",
+        happened:
+          "《Digital News Report 2026》记录全球新闻消费继续从电视、新闻网站和应用转向社交媒体、视频网络与 AI 聊天机器人。社交与视频网络成为 54% 受访者使用的新闻来源，新闻机构自有网站和应用为 51%，电视为 52%；另有 10% 的人每周用独立 AI 聊天机器人获取新闻。",
+        importance:
+          "这不是‘年轻人不读新闻’的简单故事，而是新闻仍被阅读，却越来越在新闻机构无法完整控制的界面里出现。平台决定标题长度、视频节奏、来源显示和点击出口，也分走受众数据与订阅机会。与昨日 Pew 的公民参与类型不同，本项关注的是分发基础设施本身如何改变信任：整体新闻信任降至 37%，社交新闻和聊天机器人答案的信任度更低。",
+        creatorAngle:
+          "选择同一则报道，让它依次穿过新闻网站、短视频、信息流摘要和聊天机器人回答。逐站记录标题、署名、原始链接、上下文、广告和纠错入口还剩多少，把‘平台化’做成一张可见的损耗表。",
+        facts: [
+          "调查覆盖 48 个市场；54% 的受访者使用社交媒体或视频网络获取新闻，首次超过新闻机构网站和应用的 51%",
+          "30% 将社交或视频网络视为主要新闻来源，高于五年前的 22%；12% 只通过这些平台接触新闻，比 2020 年的 6% 翻倍",
+          "每周使用 AI 聊天机器人获取新闻者由 7% 升至 10%，35 岁以下人群为 16%",
+          "整体新闻信任度降至 37%，为 2015 年开始追踪以来最低；社交媒体新闻信任度为 22%，聊天机器人新闻答案为 20%",
+        ],
+        sourceName: "Reuters Institute for the Study of Journalism · Digital News Report 2026",
+        sourceUrl: "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2026/dnr-executive-summary",
+        sourceDate: "2026-06-16（页面核验 2026-07-21）",
+      },
+      {
+        category: "社会科学 × 社会学 × 测量与不平等",
+        image: "/story-images/race-measurement-inequality.jpg",
+        imageAlt: "同一组人物经过不同分类表格后投射出不同工资、健康与教育统计结果的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释种族变量选择如何改变统计结论，并非论文原始图表或真实调查对象",
+        title: "同一群人，换一个种族变量，不平等结论也会改变",
+        summary:
+          "Sociological Science 的开放研究比较美国纵向调查中的多种种族测量，发现常用的筛选变量在五类结果中从未获得最佳模型拟合。种族不是数据库里天然存在的一栏，而是研究者必须解释的操作选择。",
+        happened:
+          "Stanford 社会学者 Emma Williams-Baron 与 Aliya Saperstein 使用 1979 National Longitudinal Survey of Youth，比较自我认同、他人分类和筛选问卷等不同种族变量，并将其带入工资、薪金、失业、抑郁与学校纪律五类不平等分析。表现最好的变量会随性别、结果与拟合指标改变，没有一个通用金标准。",
+        importance:
+          "量化研究常把种族当作无需解释的控制变量，但分类方式会改变估计值、显著性乃至政策故事。研究并不是要求抛弃种族数据，而是要求公开变量如何生成、为何选择以及替代选择会不会得到不同结论。它也与本期古罗马面部复原形成呼应：分类工具不是现实的透明窗口，本身参与了现实的构造。",
+        creatorAngle:
+          "用一个可切换的统计面板呈现同一研究问题：只改变种族变量，保留样本与结果不变，观察系数和排序怎样移动。每次切换都显示变量来自自我认同、调查员判断还是早期筛选，避免把分类来源藏在脚注。",
+        facts: [
+          "论文于 2026 年 7 月 9 日发表，DOI 为 10.15195/v13.a32，全文采用 CC BY 4.0 许可",
+          "研究使用 1979 National Longitudinal Survey of Youth，并比较多种自我认同与外部分类的种族测量",
+          "分析覆盖工资、薪金、失业、抑郁和学校纪律 5 类不平等结果",
+          "既有研究广泛采用的 screener race 变量，在跨结果的模型拟合比较中从未成为经验上的最佳选择；最佳变量随性别、结果和拟合指标变化",
+        ],
+        sourceName: "Sociological Science",
+        sourceUrl: "https://sociologicalscience.com/articles-v13-32-825/",
+        sourceDate: "2026-07-09",
+      },
+      {
+        category: "女性主义 × 健康 × 诊断偏差与照护",
+        image: "/story-images/women-bleeding-diagnosis.jpg",
+        imageAlt: "一条十四年长的红色诊断时间线从月经日历穿过缺铁、转诊和血液检查，最终抵达诊断的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释女性出血性疾病的长期诊断延迟，并非患者、血样或临床结果图像",
+        title: "把‘月经过多’当作症状，而不是命运：女性出血性疾病为何晚诊十四年",
+        summary:
+          "The Lancet Haematology 委员会指出，女性与女孩的出血性疾病平均需 14 至 16 年才获诊断，男性约两年；多达三分之一女性经历的月经过多，往往是最早却最容易被正常化的信号。",
+        happened:
+          "由 Cleveland Clinic 血液学家 Bethany Samuelson Bannow 领导的全球委员会发布女性血液健康路线图，涵盖出血、血栓、贫血、妊娠和产后并发症。报告要求把月经史与缺铁筛查纳入常规照护，建立更清晰的转诊和产后出血流程，并把女性纳入临床试验与指南设计。",
+        importance:
+          "‘很多女性都这样’常被当作无需检查的理由，但高发并不等于正常。月经过多被文化性地视为私人麻烦，会把潜在遗传性出血障碍变成长达十余年的缺铁、误诊和生活限制。与此前乳腺癌全球生存率的系统差距不同，本项聚焦症状进入医疗体系的第一道翻译：谁的疼痛和出血被记作临床数据，谁被要求适应。",
+        creatorAngle:
+          "把诊断过程画成 14 年时间线：首次月经、反复缺铁、请假、急诊、妊娠或手术出血、转诊与最终检测。每个节点同时标记患者说了什么、病历记下什么、系统漏掉什么，再与委员会提出的 24 个月目标对照。",
+        facts: [
+          "委员会估计女性与女孩的出血性疾病平均诊断等待为 14 至 16 年，男性约为 2 年",
+          "月经过多影响多达三分之一女性，并可能是遗传性出血障碍最早出现的信号",
+          "委员会目标是在 2035 年前把女性与女孩从症状出现到诊断的平均时间缩短至 24 个月以内",
+          "建议包括普遍筛查月经过多与缺铁、标准化产后出血流程，以及为妊娠和产后阶段提供更个体化的血栓照护",
+        ],
+        sourceName: "Cleveland Clinic；The Lancet Haematology Commission",
+        sourceUrl: "https://newsroom.clevelandclinic.org/2026/07/13/new-global-report-outlines-strategies-to-improve-hematologic-care-for-women",
+        sourceDate: "2026-07-13",
+      },
+    ],
+  },
+  {
     date: "2026-07-20",
     displayDate: "2026.07.20",
     issueNo: "07",
