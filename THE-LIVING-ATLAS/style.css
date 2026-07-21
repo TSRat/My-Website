@@ -182,7 +182,6 @@ main section {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 2rem;
 }
 
 .hero-subtitle {
@@ -258,7 +257,7 @@ main section {
 }
 
 .world-box-large {
-  grid-column: span 6;
+  grid-column: span 3;
 }
 
 .world-box h3 {
@@ -392,7 +391,7 @@ main section {
 
 .hero-stamp {
   margin-top: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .image-wrapper img {
