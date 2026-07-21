@@ -172,13 +172,13 @@ main section {
 
 /* 01 Hero */
 .hero-content {
-  grid-column: 1 / 8;
+  grid-column: 1 / 9;
   display: flex;
   flex-direction: column;
 }
 
 .hero-sidebar {
-  grid-column: 8 / 13;
+  grid-column: 9 / 13;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -392,6 +392,11 @@ main section {
 .hero-stamp {
   margin-top: auto;
   margin-bottom: 0;
+}
+
+.hero-stamp p {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
 }
 
 .image-wrapper img {
