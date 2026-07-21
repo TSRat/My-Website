@@ -83,3 +83,19 @@
 1. 由创作者填入视频与外链后，去掉 Sources 中的 `TODO: needs confirmation`。
 2. 若准备做 Figma 一致性稿：按 `design/figma-handoff.md` 在 Figma 中建立同名 Variables 与 SVG 组件。
 3. 未来若要独立域名（如 `hildegard.tsrat.com`），只需把 `HILDEGARD/` 整目录托管到新平台并调整两处 canonical / og:url；相对路径无需修改。
+
+## 2026-07-21 (v3) 图像 + 拆分 + 深色对比
+
+- 新增 8 张 `plate-*.svg`（每章一张 800×500 hero 图，纯几何 + 剪影，绝不使用拟真面孔）：
+  - `plate-narrow-gate` 01 窄门
+  - `plate-inheritance` 02 传承
+  - `plate-two-pillars` 03 修炼
+  - `plate-symphonia` 04 音乐
+  - `plate-authority` 05 权威
+  - `plate-lingua-ignota` 06 语言
+  - `plate-struggle` 07 斗争
+  - `plate-afterlife` 08 身后
+- `.chapter-plate` / `.chapter-plate figcaption` / `.subchapter` / `.subchapter-index` / `.subchapter-title` 全部纳入 Viriditas Codex CSS 系统，三种屏（Manuscript / Vision / Botanical）各自的色板都做了适配。
+- 深色屏 numeral / meta 对比修复：`.chapter--vision .chapter-numeral` 现在使用 `--color-accent-soft`（gold-soft）+ opacity 0.55；`.chapter--botanical .chapter-numeral` 使用 gold-soft 0.7 + opacity 1；`.chapter-meta` 在深色屏由 muted 变为 accent-soft。
+- 05 权威章按用户要求拆成 A/B/C/D/E 五个小节，标题为"与修女的关系 · 把弱势当武器 · 搬离修道院·独立王国 · 通信欧洲的权力中心 · 性别与阶级的两面"。
+- 静态资源版本号：`hildegard-site.css?v=viriditas-v3`、`hildegard-refresh.js?v=viriditas-v3`。
