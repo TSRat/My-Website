@@ -228,7 +228,7 @@
               <p class="metadata">Daughters of Time · 002</p>
               <h4>HILDEGARD</h4>
             </div>
-            <span class="metadata status-active">ACTIVE</span>
+            <img src="assets/Hildegard.png" alt="Hildegard" style="width: 80px; height: 50px; object-fit: cover; justify-self: end; border: 1px solid var(--c-line);">
           </a>
           <a href="../IVORY-ARCHIVE/" class="site-row">
             <span class="metadata">004</span>
@@ -236,7 +236,7 @@
               <p class="metadata">Knowledge Archive</p>
               <h4>IVORY ARCHIVE</h4>
             </div>
-            <span class="metadata status-active">ACTIVE</span>
+            <img src="assets/archive_hero.jpg" alt="Archive" style="width: 80px; height: 50px; object-fit: cover; justify-self: end; border: 1px solid var(--c-line);">
           </a>
           <a href="../HYPATIA/" class="site-row">
             <span class="metadata">003</span>
@@ -244,7 +244,7 @@
               <p class="metadata">Daughters of Time</p>
               <h4>HYPATIA</h4>
             </div>
-            <span class="metadata status-active">ACTIVE</span>
+            <img src="assets/hypatia-sketch.jpg" alt="Hypatia" style="width: 80px; height: 50px; object-fit: cover; justify-self: end; border: 1px solid var(--c-line); mix-blend-mode: multiply; filter: grayscale(1) contrast(1.5);">
           </a>
           <a href="../ENHEDUANNA/" class="site-row">
             <span class="metadata">002</span>
@@ -354,13 +354,7 @@
         slides.forEach((s, i) => {
           if (i === index) {
             s.style.display = 'block';
-            s.style.animation = 'fadeIn 0.5s ease-in-out forwards';
-            // IMPORTANT: Clear animation after it finishes so it doesn't create a persistent 
-            // stacking context which breaks mix-blend-mode for images inside.
-            s.addEventListener('animationend', function handler() {
-              s.style.animation = 'none';
-              s.removeEventListener('animationend', handler);
-            });
+            s.style.animation = 'none';
           } else {
             s.style.display = 'none';
             s.style.animation = 'none';
