@@ -86,32 +86,77 @@
     </section>
 
     <!-- 03 Featured World -->
-    <section class="featured-world">
-      <div class="grid-container">
-        <div class="section-label">
-          <p class="metadata">DAUGHTERS OF TIME / 001</p>
+        <section class="featured-world">
+      <div id="slide-1" class="carousel-slide" style="display: block;">
+        <div class="grid-container">
+          <div class="section-label">
+            <p class="metadata">DAUGHTERS OF TIME / 001</p>
+          </div>
+          <div class="featured-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div>
+              <h2 class="editorial-title">HYPATIA</h2>
+              <div class="featured-prose">
+                <p class="serif-text">She did not die to become a symbol.</p>
+                <p class="metadata">Alexandria<br>c. 355–415 AD</p>
+                <br>
+                <a href="../HYPATIA/" class="action-link">ENTER THE STORY →</a>
+              </div>
+            </div>
+            <div>
+              <img src="assets/hypatia-sketch.jpg" alt="Hypatia" style="width: 100%; object-fit: contain; aspect-ratio: 1/1; mix-blend-mode: multiply; filter: contrast(1.1);">
+            </div>
+          </div>
         </div>
-        <div class="featured-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-          <div>
+      </div>
 
-          <h2 class="editorial-title">HYPATIA</h2>
-          <div class="featured-prose">
-            <p class="serif-text">
-              She did not die<br>
-              to become a symbol.
-            </p>
-            <p class="metadata">
-              Alexandria<br>
-              c. 355–415 CE
-            </p>
-            <br>
-            <a href="../HYPATIA/" class="action-link">ENTER THE STORY →</a>
+      <div id="slide-2" class="carousel-slide" style="display: none;">
+        <div class="grid-container">
+          <div class="section-label">
+            <p class="metadata">DAUGHTERS OF TIME / 002</p>
           </div>
-        
+          <div class="featured-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div>
+              <h2 class="editorial-title">ENHEDUANNA</h2>
+              <div class="featured-prose">
+                <p class="serif-text">The first named author in human history, High Priestess of the Moon.</p>
+                <p class="metadata">Ur, Mesopotamia<br>c. 2285–2250 BC</p>
+                <br>
+                <a href="../ENHEDUANNA/" class="action-link">ENTER THE STORY →</a>
+              </div>
+            </div>
+            <div>
+              <img src="assets/Enheduanna.jpg" alt="Enheduanna" style="width: 100%; object-fit: contain; aspect-ratio: 1/1; mix-blend-mode: multiply; filter: contrast(1.1);">
+            </div>
           </div>
-          <div>
-            <img src="assets/hypatia-sketch.jpg" alt="Hypatia" style="width: 100%; object-fit: contain; aspect-ratio: 1/1; mix-blend-mode: multiply; filter: contrast(1.1);">
+        </div>
+      </div>
+
+      <div id="slide-3" class="carousel-slide" style="display: none;">
+        <div class="grid-container">
+          <div class="section-label">
+            <p class="metadata">DAUGHTERS OF TIME / 003</p>
           </div>
+          <div class="featured-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div>
+              <h2 class="editorial-title">HILDEGARD</h2>
+              <div class="featured-prose">
+                <p class="serif-text">The Sibyl of the Rhine, a medieval polymath.</p>
+                <p class="metadata">Rhineland, Holy Roman Empire<br>1098–1179</p>
+                <br>
+                <a href="../HILDEGARD/" class="action-link">ENTER THE STORY →</a>
+              </div>
+            </div>
+            <div>
+              <img src="assets/Hildegard.webp" alt="Hildegard" style="width: 100%; object-fit: contain; aspect-ratio: 1/1; mix-blend-mode: multiply; filter: contrast(1.1);">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-container" style="margin-top: 1rem;">
+        <div style="grid-column: 5 / 13; display: flex; gap: 2rem;">
+          <button class="carousel-prev action-link" style="background:none; border:none; border-bottom: 1px solid; cursor: pointer; font-size: var(--text-meta);">← PREV</button>
+          <button class="carousel-next action-link" style="background:none; border:none; border-bottom: 1px solid; cursor: pointer; font-size: var(--text-meta);">NEXT →</button>
         </div>
       </div>
     </section>
@@ -295,5 +340,44 @@
     </div>
   </footer>
 
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const slides = document.querySelectorAll('.carousel-slide');
+      if (slides.length === 0) return;
+      const prevBtn = document.querySelector('.carousel-prev');
+      const nextBtn = document.querySelector('.carousel-next');
+      let current = 0;
+
+      function showSlide(index) {
+        slides.forEach((s, i) => {
+          if (i === index) {
+            s.style.display = 'block';
+            s.style.animation = 'fadeIn 0.5s ease-in-out forwards';
+          } else {
+            s.style.display = 'none';
+            s.style.animation = 'none';
+          }
+        });
+      }
+
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+          current = (current === 0) ? slides.length - 1 : current - 1;
+          showSlide(current);
+        });
+        nextBtn.addEventListener('click', () => {
+          current = (current === slides.length - 1) ? 0 : current + 1;
+          showSlide(current);
+        });
+      }
+    });
+  </script>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </body>
 </html>
