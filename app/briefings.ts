@@ -32,6 +32,138 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    date: "2026-07-22",
+    displayDate: "2026.07.22",
+    issueNo: "09",
+    theme: "不是把事实装进框，而是看清框怎样工作",
+    intro:
+      "今天的五个故事都把注意力从结论移向生成结论的框架：一本哲学新书把上帝视为诗性想象的产物，一场州庆展览用二十八位艺术家争论地方身份，一项儿童研究把日常不可预测性加入创伤筛查，水库模型把遗址风险纳入未来调度，而一部在写的文学研究追问小说如何把男性越界写成天性。框架能让问题被看见，也会决定哪些证据进入、哪些经验被留在外面。",
+    uniqueCount: 5,
+    topics: ["艺术人文", "社会科学", "女性主义"],
+    stories: [
+      {
+        category: "艺术人文 × 哲学 × 宗教与文学",
+        image: "/story-images/radical-god-theopoetics.jpg",
+        imageAlt: "一本打开的书释放出纸片、星群与不确定光环，象征神的概念由诗性想象生成的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释神学、现象学与诗性想象的关系，并非宗教圣像、书封或作者肖像",
+        title: "如果‘神’不是诗歌描述的对象，而是诗歌创造的结果？",
+        summary:
+          "John D. Caputo 七月新书《A Radical God》把 theopoetics 推到更激进的位置：诗性语言不是替一个既有的神换上修辞外衣，而是在想象中构成‘神’这个观念。",
+        happened:
+          "Columbia University Press 于 2026 年 7 月出版《A Radical God: Theopoetics, Phenomenology, and the Future of Religion》。Caputo 先暂停有神论与无神论的裁决，再用现象学讨论宗教语言如何在诗、祈祷和实践中生成意义；全书从 theopoetics 进入 theopraxis，最后追问一种不依附教义正统的宗教未来。",
+        importance:
+          "公共讨论常把宗教压缩成‘相信某个超自然存在’或‘拒绝这种相信’。Caputo 的框架把问题改写为：共同体用哪些隐喻、叙事与实践组织苦难、希望和责任。它不证明神存在，也没有自动解决宗教制度的权力问题，却为研究宗教、文学与政治想象如何相互塑造提供了第三条路径。",
+        creatorAngle:
+          "选择同一句祈祷或神学命题，制作三栏文本：把神当作既有对象的陈述、暂停真假判断后的现象描述、以及把神视为诗性生成的版本。比较每一栏允许人们做什么，而不仅是它声称什么。",
+        facts: [
+          "该书由 Columbia University Press 于 2026 年 7 月出版，共 336 页",
+          "全书分 4 部、13 章，路径从 theopoetics、onto-theology 延伸至 theopraxis 与宗教未来",
+          "平装定价 35 美元，精装定价 140 美元，并同时提供 PDF 与 EPUB 电子版",
+          "作者 John D. Caputo 是 Syracuse University 宗教与人文学荣休教授、Villanova University 哲学荣休教授",
+        ],
+        sourceName: "Columbia University Press",
+        sourceUrl: "https://cup.columbia.edu/book/a-radical-god/9780231566063/",
+        sourceDate: "2026-07（页面核验 2026-07-22）",
+      },
+      {
+        category: "艺术人文 × 艺术 × 地理与地方身份",
+        image: "/story-images/colorado-currents.jpg",
+        imageAlt: "科罗拉多地形线、家庭档案、河流与工作室纸片交叠成一幅开放地图的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释地方身份、环境与当代艺术的关系，并非参展作品、展览现场或官方海报",
+        title: "州庆展览不只是在庆祝：28 位艺术家把‘科罗拉多’拆成彼此冲突的地图",
+        summary:
+          "MCA Denver 将在科罗拉多建州 150 周年之际推出《Colorado Currents》。展览没有把地方身份当成现成风景，而是让 28 位相关艺术家从历史、家庭遗产和水资源压力重新定义它。",
+        happened:
+          "《Colorado Currents》将于 7 月 24 日开幕、展至 11 月 1 日。首席策展人 Miranda Lash 历时近两年走访工作室，尤其寻找此前没有在 MCA Denver 展出的创作者；展览以科罗拉多历史、地方与家庭遗产、自然三条线组织近期作品，并把干旱、山火与用水放进州身份叙事。",
+        importance:
+          "周年展很容易把复杂地域压缩成山景、开拓神话和统一的庆典口号。这一策展方法至少承认‘地方’由迁徙、原住民历史、家庭记忆、城市发展与资源分配共同形成。28 位艺术家仍不可能代表全州，但展览把代表性的缺口变成可以公开争论的问题。",
+        creatorAngle:
+          "制作一张没有行政边界的州地图：用作品主题标出水、火、家庭迁徙、产业与被省略的历史，再在图外列出没有进入展览的地区和社群。让‘28’既是规模，也是一条清晰的代表性边界。",
+        facts: [
+          "展览汇集 28 位与科罗拉多有关的艺术家，展期为 2026 年 7 月 24 日至 11 月 1 日",
+          "项目为科罗拉多建州 150 周年而策划，前期工作持续近 2 年",
+          "展览按科罗拉多历史、地方与家庭遗产、自然 3 条主题线组织",
+          "自然主题明确涉及水资源使用、干旱与山火，策展人也优先寻找此前未在 MCA Denver 展出的艺术家",
+        ],
+        sourceName: "Museum of Contemporary Art Denver；Axios Denver",
+        sourceUrl: "https://mcadenver.org/exhibitions/colorado-currents",
+        sourceDate: "展览信息核验 2026-07-22；报道 2026-07-15",
+      },
+      {
+        category: "社会科学 × 心理学 × 儿童与家庭",
+        image: "/story-images/childhood-unpredictability.jpg",
+        imageAlt: "日程方格在一张家庭餐桌周围忽然错位，而灯、餐盘和时钟保持稳定的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释日常可预测性与儿童心理健康筛查，并非儿童、家庭或临床研究对象照片",
+        title: "没有发生重大创伤，也可能不知道明天会怎样",
+        summary:
+          "一项近三万名儿童的真实世界研究发现，在传统 ACE 创伤筛查之外加入 5 个‘日常不可预测性’问题，能更准确识别多类心理与行为风险；结果是关联证据，不是对父母的因果判决。",
+        happened:
+          "Chapman University、UC Irvine 与 Rady Children's Health 团队分析儿科初级照护数据，将照护者更换、作息变动和难以预期的日常安排，与传统 Adverse Childhood Experiences 筛查并列。两种量表捕捉到不同经验，合用时对抑郁、焦虑、睡眠、行为与躯体症状的识别优于只用 ACE。",
+        importance:
+          "创伤模型擅长询问‘发生了什么坏事’，却可能漏掉长期的不确定感。新量表为儿科筛查增加了一个维度，但也有风险：贫困、轮班工作、住房不稳和照护资源不足可能被错误地归咎于单个家庭。筛查只有连接到物质支持与可获得的服务，才不会变成新的标签。",
+        creatorAngle:
+          "把同一个孩子的一周画成两层时间表：上层记录重大事件，下层记录谁来照护、何时吃饭、在哪里睡觉等可预测性。再叠加住房、工时和交通条件，避免把结构性不稳定改写成父母性格。",
+        facts: [
+          "研究分析近 30,000 名在 Rady Children's Hospital Orange County 接受照护的儿童数据",
+          "不可预测性使用 5 个问题测量，并与传统 ACE 筛查并列而非取代后者",
+          "研究考察抑郁、焦虑、睡眠障碍、行为问题和躯体症状 5 类结果",
+          "项目得到 California Initiative to Advance Precision Medicine 290 万美元资助；研究者强调这是风险识别工具，不能仅凭关联断定家庭日程导致疾病",
+        ],
+        sourceName: "Chapman University；Nature Mental Health",
+        sourceUrl: "https://news.chapman.edu/2026/07/21/chapman-researcher-identifies-overlooked-childhood-risk-factor-for-mental-health/",
+        sourceDate: "2026-07-21",
+      },
+      {
+        category: "社会科学 × 地理学 × 水资源与文化遗产",
+        image: "/story-images/reservoir-heritage-risk.jpg",
+        imageAlt: "水库水位线在地图上反复升降，露出化石足迹、遗址网格与五级风险色带的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释水位调度与文化、古生物资源保存风险，并非 USGS 原始地图或具体遗址定位",
+        title: "水库每升降一次，湖岸上的历史也被重新计算一次",
+        summary:
+          "USGS 发布 Lake Powell 与 Lake Mead 的文化和古生物资源保存风险模型，把 2026—2060 年水位方案、岸线侵蚀与潜在遗址分布纳入同一空间分析。",
+        happened:
+          "这份 7 月更新的数据集服务于美国两座水库的 Post-2026 运营环境影响评估。研究者分别估计化石、足迹、洞穴等古生物资源和考古遗址、历史土地使用、器物等文化资源可能位于何处，再把地形与水位变化造成的风化和侵蚀叠加，形成 1 至 5 级风险。",
+        importance:
+          "大坝调度通常以供水、水电和生态指标讨论，遗址保存容易变成附录。模型让这类损失进入方案比较，却不能把未知遗址变成精确坐标，也不能替代原住民社群与现场调查。地图最有价值之处，是让未来运营承认水位变化同时是一种文化治理。",
+        creatorAngle:
+          "把同一段湖岸画成八种运营方案下的月度翻页动画，分别显示供水、发电、生态与遗址风险。对未实地确认的位置使用模糊纹理，避免把概率模型误呈现为藏宝图。",
+        facts: [
+          "模型覆盖 Lake Powell 与 Lake Mead，并投射 2026 年 12 月至 2060 年 12 月的水位波动",
+          "文化与古生物资源分别建模，保存风险从 1 级到 5 级排序，5 级代表最高变化潜势",
+          "研究将风险与 8 种拟议大坝运营替代方案按月度时间步进行比较",
+          "数据集 DOI 为 10.5066/P13UBJSP，2026 年 7 月发布第 2 版，并以 CC0 1.0 开放",
+        ],
+        sourceName: "U.S. Geological Survey",
+        sourceUrl: "https://www.usgs.gov/data/modeled-preservation-risk-paleontological-and-cultural-resources-within-lake-powell-and-lake",
+        sourceDate: "2026-07-02（第 2 版，页面核验 2026-07-22）",
+      },
+      {
+        category: "女性主义 × 文学 × 性别与婚姻史",
+        image: "/story-images/divorcing-the-rake.jpg",
+        imageAlt: "十八世纪小说书页中的婚姻契约被剪开，男性放纵与女性后果落在不对称天平上的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释家庭小说、性道德与婚姻制度，并非历史手稿、书封或研究者肖像",
+        title: "小说里的‘浪子’如何把男性越界写成了天性？",
+        summary:
+          "Rachel Gevlin 获 AAUW 一年期研究资助，将撰写《Divorcing the Rake》，研究十八世纪末英国家庭小说怎样处理通奸、重婚和离婚，并自然化男女欲望的双重标准。",
+        happened:
+          "Gevlin 的在研书稿将分析 Jane Austen 等作者笔下男性婚前与婚外性行为，以及婚姻破裂情节如何获得同情性解释。项目刚获得 5 万美元 American Postdoctoral Research Leave Fellowship；它提出了明确论点，但书尚未完成，因此不能把未来文本分析当成已经证实的普遍结论。",
+        importance:
+          "家庭小说不仅反映性道德，也通过人物魅力、叙事视角和结局分配训练读者判断谁的越界可被原谅。研究把‘男性欲望更自然’从生物常识还原为一种被反复讲述的文化脚本，同时提醒我们：出版和资助制度决定哪些尚未成书的问题获得研究时间。",
+        creatorAngle:
+          "选择三种婚姻破裂情节，逐段标记叙述者替男性提供的理由、女性承担的后果和结局给予的惩罚。再把性别互换，只改代词和法律处境，观察同情机制在哪里失效。",
+        facts: [
+          "项目暂名《Divorcing the Rake: Male Sexual Conduct in Domestic Fiction》，聚焦十八世纪末英国家庭小说",
+          "研究对象包括 Jane Austen 等英国作者笔下的通奸、重婚、离婚以及男性婚前和婚外性行为",
+          "Gevlin 获得为期 1 年、金额 50,000 美元的 AAUW American Postdoctoral Research Leave Fellowship",
+          "AAUW 成立于 1881 年，迄今用于扩大女性高等教育机会与公平的资助超过 1.5 亿美元",
+        ],
+        sourceName: "Virginia Commonwealth University；American Association of University Women",
+        sourceUrl: "https://news.vcu.edu/article/rachel-gevlin-earns-aauw-fellowship-to-support-book-on-sexual-mores-in-domestic-fiction",
+        sourceDate: "2026-07-21",
+      },
+    ],
+  },
+  {
     date: "2026-07-21",
     displayDate: "2026.07.21",
     issueNo: "08",
