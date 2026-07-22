@@ -348,12 +348,19 @@
       const prevBtn = document.querySelector('.carousel-prev');
       const nextBtn = document.querySelector('.carousel-next');
       let current = 0;
+      let autoPlayInterval;
 
       function showSlide(index) {
         slides.forEach((s, i) => {
           if (i === index) {
             s.style.display = 'block';
             s.style.animation = 'fadeIn 0.5s ease-in-out forwards';
+            // IMPORTANT: Clear animation after it finishes so it doesn't create a persistent 
+            // stacking context which breaks mix-blend-mode for images inside.
+            s.addEventListener('animationend', function handler() {
+              s.style.animation = 'none';
+              s.removeEventListener('animationend', handler);
+            });
           } else {
             s.style.display = 'none';
             s.style.animation = 'none';
@@ -361,16 +368,29 @@
         });
       }
 
+      function resetTimer() {
+        clearInterval(autoPlayInterval);
+        autoPlayInterval = setInterval(() => {
+          current = (current === slides.length - 1) ? 0 : current + 1;
+          showSlide(current);
+        }, 10000);
+      }
+
       if (prevBtn && nextBtn) {
         prevBtn.addEventListener('click', () => {
           current = (current === 0) ? slides.length - 1 : current - 1;
           showSlide(current);
+          resetTimer();
         });
         nextBtn.addEventListener('click', () => {
           current = (current === slides.length - 1) ? 0 : current + 1;
           showSlide(current);
+          resetTimer();
         });
       }
+
+      // Start the autoplay timer
+      resetTimer();
     });
   </script>
   <style>
