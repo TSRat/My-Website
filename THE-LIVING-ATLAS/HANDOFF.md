@@ -292,3 +292,43 @@
 - Chinese Preview: <https://raw.githack.com/TSRat/My-Website/codex/living-atlas-template-data/THE-LIVING-ATLAS/zh.html>
 - Draft PR: <https://github.com/TSRat/My-Website/pull/14>
 - Merge: not authorized and not performed.
+
+## 2026-07-24: Restore Worlds ambiguity
+
+### 当前目标
+
+撤回把 Worlds 解释成作品类型目录的显式分类，恢复创作者原本有意保留的含混性，并删除 Knowledge 与 The Index 的说明段落。
+
+### 已完成
+
+- Worlds 恢复旧版可见标题：`Knowledge / Story / Media / Interaction`；中文为“知识 / 故事 / 媒体 / 交互”。
+- 删除四张 World 卡片的全部说明文字及对应渲染 / 样式。
+- 删除英文和中文 Knowledge、The Index 各自的说明段落。
+- 保留四张图片、编号、顺序、网格、响应式、Index 自动生成和 Search 行为。
+- 增加回归测试，锁定四个开放标题、无 `description` 字段及无两段说明文字。
+- `CONTENT.md`、`DESIGN.md` 与跨站内容系统明确：Worlds 不是作品集分类，不得再添加一一对应关系或穷尽式解释。
+- Figma `TSRat Content System · v1` 的 Worlds 定义已改为开放入口，组件和布局未改变。
+
+### 重要决定
+
+- “含混”是创作者明确的内容与设计意图，不是待修复的信息架构缺口。
+- 内部稳定 ID 只服务渲染和链接；不能据此向读者解释每个 World “对应”哪一类作品。
+- Knowledge 与 Index 可以保持结构化功能，但不需要在页面上自我解释。
+
+### 验证
+
+- Targeted tests: Passed — 8 / 8。
+- Pages build / asset validation: Passed — 337 references across 41 HTML/CSS files。
+- Browser: English / Chinese，desktop / mobile，Worlds / Knowledge / Index 均通过。
+- Responsive: desktop `1425 ≤ 1440`；English mobile `388 ≤ 390`；Chinese mobile `375 ≤ 390`。
+- Console: 0 errors。
+- Visual gate: Passed；比较证据在 `web/evidence/living-atlas-ambiguity-correction/visual-regression.md`。
+- 完整 checks: Passed — `npm run build`；`npm test` 9 / 9；`npm run lint` 0 errors、24 个既有 warnings。
+- 远程 Preview QA 在 push 后执行。
+
+### Git 状态
+
+- Branch: `codex/living-atlas-template-data`
+- Draft PR: <https://github.com/TSRat/My-Website/pull/14>
+- Commit / push / exact Preview: pending at this handoff update.
+- Merge: not authorized and not performed.

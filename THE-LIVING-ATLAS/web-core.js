@@ -64,14 +64,7 @@ export const renderWorlds = (registry, locale, container) => {
     imageWrapper.append(image);
 
     const heading = appendLocalizedText(document.createElement("h3"), world.title, locale);
-    const description = appendLocalizedText(
-      document.createElement("p"),
-      world.description,
-      locale,
-    );
-    description.className = "world-description";
-
-    article.append(imageWrapper, createMetadata(world.number), heading, description);
+    article.append(imageWrapper, createMetadata(world.number), heading);
     container.append(article);
   });
 };

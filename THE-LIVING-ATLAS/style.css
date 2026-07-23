@@ -462,13 +462,6 @@ main section {
   aspect-ratio: 1 / 1;
 }
 
-.world-description {
-  margin-top: 1rem;
-  color: var(--c-stone);
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
 /* 05 Knowledge */
 .section-intro {
   max-width: 46rem;

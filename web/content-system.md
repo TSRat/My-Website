@@ -33,13 +33,13 @@ Keep site-specific:
 
 | Surface | Meaning | Inclusion rule |
 | --- | --- | --- |
-| Worlds | Four top-level practices: knowledge base, fiction, media creation, and interactive projects | Stable conceptual areas; they do not need a destination before they appear |
+| Worlds | Four deliberately open-ended portals: Knowledge, Story, Media, and Interaction | Preserve their ambiguity; do not add explanatory copy, one-to-one mappings, or present them as portfolio categories |
 | Knowledge | The internal classification of the knowledge base | Show categories before counts; show counts only when backed by a real collection |
 | Sites | Published independent websites | `status: "published"` and a valid URL are both required |
 | Now | Current areas of focus | Rendered from registry focus records |
 | Latest | Recent meaningful releases or changes | Sorted from dated update records |
 | Data | Visible measurement commitment and provider status | Always has an entry; never displays invented values |
-| Index | All currently navigable content | Excludes drafts, placeholders, and links without destinations |
+| Index | Generated navigable index | Excludes drafts, placeholders, and links without destinations; the visible section does not need explanatory copy |
 
 `Archive` is no longer a primary navigation destination. The old `#archive` hash remains as a compatibility anchor pointing to the Index section.
 

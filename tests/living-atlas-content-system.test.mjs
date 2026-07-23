@@ -34,6 +34,21 @@ test("Living Atlas registry exposes only valid published sites", () => {
   });
 });
 
+test("Living Atlas Worlds preserve the creator's open-ended labels", () => {
+  assert.deepEqual(
+    livingAtlasContent.worlds.map(({ title }) => title),
+    [
+      { en: "Knowledge", zh: "知识" },
+      { en: "Story", zh: "故事" },
+      { en: "Media", zh: "媒体" },
+      { en: "Interaction", zh: "交互" },
+    ],
+  );
+  livingAtlasContent.worlds.forEach((world) => {
+    assert.equal("description" in world, false);
+  });
+});
+
 test("Living Atlas updates are rendered newest first", () => {
   const dates = getSortedUpdates(livingAtlasContent).map((update) => update.date);
   assert.deepEqual(dates, [...dates].sort().reverse());
@@ -72,7 +87,13 @@ test("Living Atlas language pages use the shared data hooks without fake links",
     assert.match(page, /<section class="data-section" id="data"/);
     assert.match(page, /href="#data"/);
     assert.match(page, /<script type="module" src="atlas\.js/);
+    assert.doesNotMatch(page, /class="world-description"/);
   }
+
+  assert.doesNotMatch(english, /A closer map inside the Knowledge world/);
+  assert.doesNotMatch(english, /Only published and currently navigable content appears here/);
+  assert.doesNotMatch(chinese, /Knowledge 内部的细分地图/);
+  assert.doesNotMatch(chinese, /这里只收录已经发布且可以抵达的内容/);
 });
 
 test("Living Atlas analytics is provider-neutral and excludes raw search text", () => {

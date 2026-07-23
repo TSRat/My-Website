@@ -8,12 +8,12 @@
 - **01 Hero (世界观宣言)**: "NO SINGLE DISCIPLINE IS ENOUGH." 及四大类目标签（History, Feminism, Psychology, Design, Technology, Literature）。
 - **02 Now (当前焦点)**: 记录 TSRat 当前的写作、构建、工作和研究焦点。
 - **03 Featured World (重点特写)**: 提取一个正在深入探讨的专题，当前为 "004 / DAUGHTERS OF TIME" 中的 Hypatia。
-- **04 Worlds (四类长期实践)**: Knowledge 对应知识库；Fiction 对应虚构小说；Media 对应自媒体创作；Interaction 对应网站等交互项目。Worlds 是稳定的概念入口，不需要为了“可点击”而制造空链接。
+- **04 Worlds (开放入口)**: 固定显示 Knowledge / Story / Media / Interaction（中文为知识 / 故事 / 媒体 / 交互）。这些词是创作者有意保留含混性的概念入口，不是作品类型目录；不得增加解释句、对应关系或穷尽式分类。
 - **05 Knowledge Atlas (知识库细分)**: 只细分 Knowledge 世界。底层收藏尚未整理完成时显示 `Mapping / 整理中`，不得使用没有来源的数量。
 - **07 Sites (已发布网站)**: 只收录 `status: published` 且有真实 URL 的独立网站；数量由注册表自动计算。
 - **08 Latest (最近更新)**: 从带日期的更新记录自动排序和渲染。
 - **09 Data / Signals (数据入口)**: 保留可见的数据与测量入口；provider 未连接时显示诚实空状态，不展示假数字或假图表。
-- **10 The Index (总索引)**: 汇总所有当前可抵达的内容。计划中、草稿或无 URL 的项目不进入索引。
+- **10 The Index (总索引)**: 汇总当前可抵达的内容；页面只保留标题与索引本身，不附加解释句。
 
 ## 数据要求 (Data Requirements)
 当前页面继续采用静态 HTML + ES Modules，不迁移框架：

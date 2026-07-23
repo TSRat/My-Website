@@ -444,7 +444,7 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 ### Completed
 
 - 建立 `THE-LIVING-ATLAS/content-registry.js` 与 `THE-LIVING-ATLAS/web-core.js`。
-- Worlds 明确为知识库、虚构小说、自媒体创作、交互项目；Knowledge 只负责知识库细分。
+- 该批次曾把 Worlds 显式解释为知识库、虚构小说、自媒体创作和交互项目；创作者已在后续纠偏中否决此对应关系，最新规则是保留 Knowledge / Story / Media / Interaction 的含混性。
 - Sites 只渲染已发布且有真实 URL 的五个网站。
 - Now、Latest、Index 与 Search 使用同一双语 registry。
 - 移除全部 `href="#"`；planned / mapping / published / archived 状态形成跨站契约。
@@ -594,3 +594,30 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 - Draft PR: <https://github.com/TSRat/My-Website/pull/14>
 - Remote Preview QA: Passed — 英中 Data、16 个 Index links、移动 Search → Data、无横向溢出、0 console errors。
 - Merge: not authorized and not performed.
+
+## 2026-07-24: Creator correction — Worlds remain ambiguous
+
+### Current target
+
+纠正 Living Atlas 内容系统中过度明确的作品集式分类，恢复创作者原版 Worlds，并删除 Knowledge / Index 的解释句。
+
+### Completed
+
+- 可见 Worlds 回滚为 Knowledge / Story / Media / Interaction（知识 / 故事 / 媒体 / 交互），只有图像、编号和标题。
+- 删除 World 描述、Knowledge 说明和 Index 说明。
+- 项目内容与设计文档把“有意含混”记录为受保护的创作者决定。
+- 跨站内容契约不再把 Worlds 解释为知识库、虚构小说、自媒体和交互项目的一一对应表。
+- Figma Content System 的 Worlds 定义同步修正。
+- 测试与视觉证据加入当前 PR #14。
+
+### Important decision
+
+共享系统可以维护稳定 ID、发布状态、搜索和自动索引，但不能把创作者的开放概念强行改写为作品集 taxonomy。以后迁移其他网站时也必须区分“系统内部结构”和“对读者公开的解释”。
+
+### Validation and delivery
+
+- Targeted tests: 8 / 8 passed。
+- Pages build and 337-reference validation passed。
+- Fixed-viewport browser QA and human side-by-side review passed。
+- Full checks passed: `npm run build`；`npm test` 9 / 9；`npm run lint` 0 errors、24 个既有 warnings。
+- Commit、push、exact Preview 与 PR branch 更新在本次交接记录后执行。
