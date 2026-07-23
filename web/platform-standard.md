@@ -94,14 +94,15 @@ Mandatory:
 - Work on a dedicated branch; never commit directly to `main`.
 - Run repository-required build, test, lint, asset, browser, and diff checks.
 - Use a reviewable Pull Request and do not merge automatically.
-- Verify a live preview in a real browser when deployment infrastructure provides one.
+- Commit and push verified website work by default, then create or update its Pull Request unless the creator explicitly requests local-only work.
+- Provide a directly viewable, browser-verified Preview URL for every website-facing change. The Preview must render the exact review branch / commit and remain reachable before merge.
 
 Repository-specific constraints:
 
 - GitHub Pages remains an Actions artifact deployment.
 - `docs/` is ignored build output and is never hand-maintained.
 - Portfolio documentation lives under `web/`.
-- PR branches do not currently receive a GitHub Pages deployment. Record this limitation instead of treating a local build as a live preview.
+- PR branches do not currently receive a GitHub Pages deployment. Use a separate approved preview provider or a verified immutable commit preview; never treat a local build, PR source page, or artifact download as the Preview URL.
 
 Optional:
 
@@ -151,6 +152,8 @@ Optional:
 - Tier C should add metric definitions, denominators, retention windows, privacy review, and dashboard ownership.
 
 ## Shared foundations
+
+The concrete content and interaction reference is documented in [`content-system.md`](./content-system.md). Its stable IDs, publication states, bilingual field shape, link rules, and provider interfaces are shared platform contracts; its Living Atlas palette and composition are not.
 
 Mandatory:
 
@@ -224,6 +227,7 @@ Detailed portfolio state belongs in:
 
 - `web/portfolio-audit.md`
 - `web/platform-standard.md`
+- `web/content-system.md`
 
 Do not create a second registry. Update the authoritative table when a site is created, migrated, renamed, deployed, archived, or changes lifecycle status.
 

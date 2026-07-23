@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build New Site to PR"
+  short_description: "Build an approved website concept through preview and PR"
+  default_prompt: "Use $build-new-site-to-pr to turn the approved design direction into a verified preview and pull request."

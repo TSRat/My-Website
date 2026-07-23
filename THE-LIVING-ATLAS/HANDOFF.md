@@ -74,3 +74,97 @@
 - Base commit: `3a91388`
 - GitHub CLI: `gh 2.96.0`, authenticated as `TSRat`.
 - Commit / push / PR: pending at this handoff update.
+
+## 2026-07-24: Content registry and Web Core v1
+
+### 当前目标
+
+把创作者确认的信息架构落实为可维护系统：Worlds 对应知识库、虚构小说、自媒体创作和交互项目；Knowledge 只负责知识库细分；Sites 只显示已发布网站；Now、Latest 与 Index 从同一数据源生成。
+
+### 已完成
+
+- 英文入口的 `lang` 从 `zh-CN` 修正为 `en`。
+- 主导航用 `Index` 取代含义不清的 `Archive`，并保留 `#archive` 兼容锚点。
+- 小红书、公众号和原 Index 中的 `href="#"` 已全部移除；未知目标改为不可点击的 planned 状态。
+- 新增 `content-registry.js`，统一维护双语 Worlds、Knowledge、Now、Sites、Latest 数据。
+- 新增 `web-core.js`，负责本地化、发布状态过滤、日期排序、DOM 渲染、Index、Search 和移动目录状态。
+- Sites 自动过滤 `status: published` 且有真实 URL 的记录，当前显示 `005`。
+- Knowledge 不再显示未确认的 128 / 74 / 42，改为 `Mapping / 整理中`。
+- Now 自动使用 focus 记录的最新日期生成月份；Latest 自动按 ISO 日期倒序。
+- Index 只收录当前真实可达的章节、World、Knowledge 分类和已发布网站。
+- 移动目录展开时给正文让出空间；浏览器测得 `panelBottom 419.98 < titleTop 568.58`，不再覆盖标题。
+- 新增内容系统测试，并让 `npm test` 运行所有 `tests/*.test.mjs`。
+- 组合级参考文档：`web/content-system.md`。
+- Figma 新增可编辑画面 `TSRat Content System · v1`（node `18:2`）和组件集 `Shared / Content Status`（node `18:47`）。
+
+### 重要决定
+
+- 不迁移 React、Astro 或 CMS；当前静态 ES Modules 足以支持 Tier B。
+- “自动生成”指从一个明确注册表渲染、过滤和排序，不从 GitHub API 猜测内容。
+- 不显示无数据依据的统计数字。
+- 共享内容语义、状态、测试和交互契约，不共享各站点的视觉身份。
+- `web-core.js` 当前随 Living Atlas 发布。把它提升为仓库级共享 runtime 需要仓库所有者单独授权修改受保护的 Pages build map。
+
+### 验证
+
+- `node --check`（registry、Web Core、adapter）：Passed。
+- `npm run build:pages`: Passed。
+- `npm run validate:pages`: Passed — 337 local references across 41 HTML/CSS files。
+- `node --test tests/living-atlas-content-system.test.mjs`: Passed — 4/4。
+- `npm run lint`: Passed — 0 errors；24 个既有 warnings。
+- `npm run build`: Passed。
+- `npm test`: Passed — 5/5。
+- Browser QA: 英文 / 中文、桌面 / 移动、5 个 published sites、15 个 Index links、0 个 fake links、Search `Hypatia` 1 result、mobile menu、carousel、console health 均通过。
+- Figma render QA: Passed — 信息架构、registry contract、四种 content states 与三档采用路径均可见。
+
+### 已知问题与下一步
+
+- 小红书和公众号的真实 URL 仍待创作者提供。
+- Knowledge 文章级记录、真实数量和分类目标页尚未建立。
+- 当前没有 analytics provider；按创作者要求继续保持 no-op。
+- Preview / PR 尚未创建。
+
+### Git 状态
+
+- Branch: `codex/living-atlas-content-system`
+- Base commit: `999e302`
+- Existing user-owned root `HANDOFF.md` changes and untracked `.agents/skills/build-new-site-to-pr/` remain preserved.
+- Commit / push / PR: not performed.
+
+## 2026-07-24: Hypatia responsive transparency fix
+
+### 当前目标
+
+修复 Living Atlas Featured World 中 Hypatia 人物图在移动端和平板端可能出现不透明浅色矩形的问题，同时保持桌面端既有构图和纸本融合效果。
+
+### 根因与实现
+
+- 旧的 `assets/hypatia-sketch.jpg` 实际是没有 Alpha 通道的 WebP；页面只靠 `mix-blend-mode: multiply` 产生“看起来透明”的效果，设备合成差异会让移动端和平板端重新显示原图底色。
+- 新增 `assets/hypatia-sketch-transparent.webp`。它由现有 Hypatia 素描作为编辑目标，经内置图像编辑生成纯色键控中间图，再由本地 chroma-key 工具提取为 RGBA PNG，最后转为保留 Alpha 的高质量 WebP。
+- 英文 `index.html` 与中文 `zh.html` 均改为引用真实透明 WebP；保留原有尺寸、`object-fit`、`multiply` 和黑白对比滤镜，所以桌面端视觉语言不变。
+
+### 验证
+
+- Alpha: Passed — WebP 为 `1094 × 1437` 且带 Alpha；原始提取结果中 818,683 / 1,572,078 像素完全透明，6,005 像素部分透明。
+- Asset weight: `298 KB`，较 2.0 MB 的无损中间 PNG 减少约 85%，更适合移动端加载。
+- Browser: Passed — 英文 `1440 × 900`、`1024 × 768`、`390 × 844`；中文 `390 × 844` 分区截图均显示人物背景与 Ivory 页面连续，无浅色矩形。
+- Responsive: Passed — tablet `scrollWidth 1009 ≤ innerWidth 1024`；mobile content `scrollWidth 375 ≤ innerWidth 390`。
+- Console: Passed — 中文移动端 0 errors / warnings。
+- Pages build and asset validation: Passed after asset replacement.
+- Application build: Passed — standard bounded Vinext build and artifact validation.
+- Tests: Passed — `npm test`, 6 / 6；新增回归检查同时验证中英文引用透明 WebP，并确认文件包含 WebP `ALPH` chunk。
+- Lint: Passed with 0 errors and 24 existing warnings outside this change.
+
+### 修改文件
+
+- `THE-LIVING-ATLAS/assets/hypatia-sketch-transparent.webp`
+- `THE-LIVING-ATLAS/index.html`
+- `THE-LIVING-ATLAS/zh.html`
+- `THE-LIVING-ATLAS/DESIGN.md`
+- `THE-LIVING-ATLAS/TECH.md`
+- `THE-LIVING-ATLAS/HANDOFF.md`
+
+### 尚未完成
+
+- 旧的 `assets/hypatia-sketch.jpg` 继续保留为原始 / 回滚材料，未删除。
+- 尚未 commit、push、创建 Preview 或 PR。

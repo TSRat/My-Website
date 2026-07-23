@@ -1,0 +1,198 @@
+export const livingAtlasContent = {
+  schemaVersion: 1,
+  locales: ["en", "zh"],
+  worlds: [
+    {
+      id: "knowledge",
+      number: "01",
+      title: { en: "Knowledge", zh: "知识库" },
+      description: {
+        en: "Notes, research, references, and structured learning.",
+        zh: "笔记、研究、参考资料与结构化学习。",
+      },
+      href: "#knowledge",
+      image: "assets/knowledge.jpeg",
+      imageAlt: { en: "Knowledge archive", zh: "知识库" },
+    },
+    {
+      id: "fiction",
+      number: "02",
+      title: { en: "Fiction", zh: "虚构小说" },
+      description: {
+        en: "Fictional worlds, characters, and branching narratives.",
+        zh: "虚构世界、人物与分支叙事。",
+      },
+      href: "#world-fiction",
+      image: "assets/fiction.webp",
+      imageAlt: { en: "Fictional stories", zh: "虚构小说" },
+    },
+    {
+      id: "media",
+      number: "03",
+      title: { en: "Media", zh: "自媒体创作" },
+      description: {
+        en: "Video, essays, public communication, and platform work.",
+        zh: "视频、文章、公共表达与平台创作。",
+      },
+      href: "#world-media",
+      image: "assets/media.jpg",
+      imageAlt: { en: "Media projects", zh: "自媒体创作" },
+    },
+    {
+      id: "interaction",
+      number: "04",
+      title: { en: "Interaction", zh: "交互项目" },
+      description: {
+        en: "Websites, interfaces, experiments, and digital tools.",
+        zh: "网站、界面、实验与数字工具。",
+      },
+      href: "#sites",
+      image: "assets/interact.jpg",
+      imageAlt: { en: "Interactive projects", zh: "交互项目" },
+    },
+  ],
+  knowledge: [
+    {
+      id: "humanities-arts",
+      title: { en: "Humanities & Arts", zh: "人文与艺术" },
+      status: "mapping",
+    },
+    {
+      id: "social-sciences",
+      title: { en: "Social Sciences", zh: "社会科学" },
+      status: "mapping",
+    },
+    {
+      id: "science-technology",
+      title: { en: "Natural Sciences & Technology", zh: "自然科学与技术" },
+      status: "mapping",
+    },
+  ],
+  focus: [
+    {
+      id: "writing-hypatia",
+      kind: { en: "Writing", zh: "写作中" },
+      title: { en: "Hypatia", zh: "希帕蒂娅" },
+      href: "../HYPATIA/",
+      updatedAt: "2026-07-23",
+    },
+    {
+      id: "building-ivory",
+      kind: { en: "Building", zh: "建设中" },
+      title: { en: "IVORY ARCHIVE", zh: "知识档案馆" },
+      href: "../IVORY-ARCHIVE/",
+      updatedAt: "2026-07-23",
+    },
+    {
+      id: "working-ai-documentation",
+      kind: { en: "Working on", zh: "进行中" },
+      title: { en: "AI Documentation", zh: "AI 技术文档" },
+      href: null,
+      updatedAt: "2026-07-23",
+    },
+  ],
+  sites: [
+    {
+      id: "hildegard",
+      number: "005",
+      status: "published",
+      title: { en: "HILDEGARD", zh: "希尔德加德" },
+      series: { en: "Daughters of Time · 002", zh: "时间的女儿 · 002" },
+      href: "../HILDEGARD/",
+      thumbnail: "assets/thumb-hildegard.jpg",
+      thumbnailAlt: {
+        en: "Hildegard website preview",
+        zh: "希尔德加德网站预览",
+      },
+      updatedAt: "2026-07-21",
+    },
+    {
+      id: "ivory-archive",
+      number: "004",
+      status: "published",
+      title: { en: "IVORY ARCHIVE", zh: "知识档案馆" },
+      series: { en: "Knowledge archive", zh: "知识档案" },
+      href: "../IVORY-ARCHIVE/",
+      thumbnail: "assets/thumb-ivory.jpg",
+      thumbnailAlt: {
+        en: "IVORY ARCHIVE website preview",
+        zh: "知识档案馆网站预览",
+      },
+      updatedAt: "2026-07-23",
+    },
+    {
+      id: "hypatia",
+      number: "003",
+      status: "published",
+      title: { en: "HYPATIA", zh: "希帕蒂娅" },
+      series: { en: "Daughters of Time · 001", zh: "时间的女儿 · 001" },
+      href: "../HYPATIA/",
+      thumbnail: "assets/thumb-hypatia.jpg",
+      thumbnailAlt: {
+        en: "Hypatia website preview",
+        zh: "希帕蒂娅网站预览",
+      },
+      updatedAt: "2026-07-20",
+    },
+    {
+      id: "enheduanna",
+      number: "002",
+      status: "published",
+      title: { en: "ENHEDUANNA", zh: "恩赫杜安娜" },
+      series: { en: "Daughters of Time · 004", zh: "时间的女儿 · 004" },
+      href: "../ENHEDUANNA/",
+      thumbnail: "assets/thumb-enheduanna.jpg",
+      thumbnailAlt: {
+        en: "Enheduanna website preview",
+        zh: "恩赫杜安娜网站预览",
+      },
+      updatedAt: "2026-07-15",
+    },
+    {
+      id: "melromarc-sisters",
+      number: "001",
+      status: "published",
+      title: { en: "MELROMARC SISTERS", zh: "梅尔罗马克姐妹" },
+      series: {
+        en: "Fan-created story archive",
+        zh: "同人故事档案",
+      },
+      href: "../MELROMARC-SISTERS/",
+      thumbnail: "assets/thumb-melromarc.jpg",
+      thumbnailAlt: {
+        en: "Melromarc Sisters website preview",
+        zh: "梅尔罗马克姐妹网站预览",
+      },
+      updatedAt: "2026-07-20",
+    },
+  ],
+  updates: [
+    {
+      id: "ivory-issue-10",
+      date: "2026-07-23",
+      title: {
+        en: "IVORY ARCHIVE published issue 10",
+        zh: "知识档案馆发布第 10 期",
+      },
+      href: "../IVORY-ARCHIVE/",
+    },
+    {
+      id: "living-atlas-accessibility",
+      date: "2026-07-23",
+      title: {
+        en: "Living Atlas navigation and search updated",
+        zh: "Living Atlas 导航与搜索更新",
+      },
+      href: "#about",
+    },
+    {
+      id: "hildegard-v3",
+      date: "2026-07-21",
+      title: {
+        en: "Hildegard chapters and visual plates updated",
+        zh: "希尔德加德章节与视觉图版更新",
+      },
+      href: "../HILDEGARD/",
+    },
+  ],
+};

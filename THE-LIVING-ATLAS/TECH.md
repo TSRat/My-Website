@@ -12,9 +12,13 @@ Primary files:
 - `index.html`: default archive page
 - `zh.html`: Chinese variant
 - `style.css`: shared design tokens, layout, and responsive rules
-- `atlas.js`: shared carousel, navigation, and search behavior
-- `assets/`: local site imagery
+- `content-registry.js`: bilingual Worlds, Knowledge, focus, published-site, and update records
+- `web-core.js`: reusable localization, filtering, sorting, rendering, index, search, and mobile-menu primitives
+- `atlas.js`: Living Atlas adapter plus carousel behavior
+- `assets/`: local site imagery, including the alpha-backed `hypatia-sketch-transparent.webp`
 - `tsrat-logo.png`: local navigation logo
+
+Figma content-system frame: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=18-2>
 
 `scripts/build-github-pages.mjs` performs:
 
@@ -27,9 +31,9 @@ There is no separate framework build for this site. Do not change its directory 
 ## Rendering and state
 
 - Static HTML and CSS provide the complete document.
-- Vanilla JavaScript provides the featured-story carousel, mobile navigation details, and in-page search dialog.
-- Content is currently hard-coded in the two HTML documents.
-- Both language variants share `style.css` and `atlas.js`; behavior changes must be verified in both.
+- Vanilla JavaScript provides the featured-story carousel, registry rendering, mobile navigation, and in-page search dialog.
+- Worlds, Knowledge, Now, Sites, Latest, and Index use the shared bilingual content registry.
+- Both language variants share `content-registry.js`, `web-core.js`, `style.css`, and `atlas.js`; behavior changes must be verified in both.
 
 ## Visual contract
 
@@ -68,10 +72,12 @@ Browser QA must cover:
 
 ## Known limitations
 
-- Site and index content are duplicated across two HTML files rather than generated from structured data.
-- Some social links remain placeholders and need creator confirmation.
+- Small Red Book and WeChat links are represented as non-clickable planned states until the creator provides URLs.
+- The knowledge taxonomy is intentionally marked as mapping in progress; article-level records and real counts do not exist yet.
+- The shared runtime currently lives inside `THE-LIVING-ATLAS/`. Publishing a repository-level `shared/web-core/` requires a separately authorized Pages build-map change.
 - Full-page screenshots are not accepted from the current browser backend because sticky/reveal composition can repeat or omit regions. Use matching section or anchor captures.
+- The Featured World Hypatia portrait must keep a real alpha channel. Do not replace `hypatia-sketch-transparent.webp` with the legacy opaque `hypatia-sketch.jpg` and rely on browser blend-mode compositing alone.
 
 ## Safe next improvement
 
-Move repeated navigation, site records, and search metadata into a small explicit data source only after the current visual and interaction batch passes regression review. A framework migration is not required for that work.
+Add real article-level records to the same registry contract, or replace its provider with Markdown/CMS data. Do not migrate frameworks until a real Tier C requirement appears.
