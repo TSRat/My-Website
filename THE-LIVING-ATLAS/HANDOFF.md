@@ -330,5 +330,9 @@
 
 - Branch: `codex/living-atlas-template-data`
 - Draft PR: <https://github.com/TSRat/My-Website/pull/14>
-- Commit / push / exact Preview: pending at this handoff update.
+- Correction commit: `2b7fa13` — `restore living atlas worlds ambiguity`.
+- Push: completed to `origin/codex/living-atlas-template-data`.
+- Exact Preview QA: Passed for English desktop and Chinese mobile; no broken images or horizontal overflow.
+- Exact English Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/index.html#worlds>
+- Exact Chinese Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/zh.html#worlds>
 - Merge: not authorized and not performed.

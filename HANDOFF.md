@@ -620,4 +620,7 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 - Pages build and 337-reference validation passed。
 - Fixed-viewport browser QA and human side-by-side review passed。
 - Full checks passed: `npm run build`；`npm test` 9 / 9；`npm run lint` 0 errors、24 个既有 warnings。
-- Commit、push、exact Preview 与 PR branch 更新在本次交接记录后执行。
+- Delivery: commit `2b7fa13` (`restore living atlas worlds ambiguity`) 已 push 到现有 PR #14 branch。
+- Exact Preview QA: Passed — 英中标题正确、World 卡片内 0 个说明段落、Knowledge / Index 说明不存在、图片无损坏、desktop `1425 ≤ 1440`、Chinese mobile `375 ≤ 390`。
+- Exact English Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/index.html#worlds>
+- Exact Chinese Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/zh.html#worlds>
