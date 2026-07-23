@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TSRat · The Living Atlas</title>
   <meta name="description" content="一个人的开放档案馆：在算法与人性之间建立桥梁。">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=normalize-20260723-2">
   <!-- Fonts: Inter (Sans), Noto Serif SC (Serif), Fira Code (Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,15 +13,17 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+
   <!-- Navigation -->
-  <nav class="global-nav">
+  <nav class="global-nav" aria-label="主要导航">
     <div class="nav-left">
       <span class="logo-mark"><img src="tsrat-logo.png" alt="TSRat Logo" onerror="this.style.display='none'"></span>
       <ul class="nav-links">
         <li><a href="#worlds">创作宇宙</a></li>
         <li><a href="#archive">全站档案</a></li>
         <li><a href="#knowledge">知识图谱</a></li>
-        <li><a href="#works">代表作品</a></li>
+        <li><a href="#sites">代表作品</a></li>
         <li><a href="#now">最近状态</a></li>
       </ul>
     </div>
@@ -31,11 +33,37 @@
       <a href="#" target="_blank" class="social-link">公众号</a>
       <a href="https://github.com/TSRat" target="_blank" class="social-link">GitHub</a>
       <a href="index.html" class="social-link" style="margin-left: 1rem; color: var(--c-cobalt);">EN / 中</a>
-      <button class="search-btn">搜索 ⌘K</button>
+      <button class="search-btn" type="button" data-search-open aria-haspopup="dialog">搜索 ⌘K</button>
     </div>
+    <details class="mobile-menu">
+      <summary>目录</summary>
+      <div class="mobile-menu-panel">
+        <a href="#worlds">创作宇宙</a>
+        <a href="#archive">全站档案</a>
+        <a href="#knowledge">知识图谱</a>
+        <a href="#sites">代表作品</a>
+        <a href="#now">最近状态</a>
+        <a href="index.html">EN / 中</a>
+        <button type="button" data-search-open aria-haspopup="dialog">搜索</button>
+      </div>
+    </details>
   </nav>
 
-  <main>
+  <dialog class="search-dialog" data-search-dialog data-search-locale="zh" aria-labelledby="search-title">
+    <div class="search-panel">
+      <form method="dialog" class="search-close-row">
+        <button type="submit" class="search-close" aria-label="关闭搜索">关闭 ×</button>
+      </form>
+      <p class="metadata">THE LIVING ATLAS / INDEX</p>
+      <h2 id="search-title">搜索档案</h2>
+      <label for="archive-search">章节与已发布网站</label>
+      <input id="archive-search" type="search" data-search-input autocomplete="off" placeholder="试试“希帕蒂娅”或“知识”">
+      <p class="search-status" data-search-status aria-live="polite"></p>
+      <ul class="search-results" data-search-results></ul>
+    </div>
+  </dialog>
+
+  <main id="main-content" tabindex="-1">
     <!-- 01 Hero -->
     <section class="hero-section">
       <div class="grid-container">
@@ -338,57 +366,6 @@
   </footer>
 
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const slides = document.querySelectorAll('.carousel-slide');
-      if (slides.length === 0) return;
-      const prevBtn = document.querySelector('.carousel-prev');
-      const nextBtn = document.querySelector('.carousel-next');
-      let current = 0;
-      let autoPlayInterval;
-
-      function showSlide(index) {
-        slides.forEach((s, i) => {
-          if (i === index) {
-            s.style.display = 'block';
-            s.style.animation = 'none';
-          } else {
-            s.style.display = 'none';
-            s.style.animation = 'none';
-          }
-        });
-      }
-
-      function resetTimer() {
-        clearInterval(autoPlayInterval);
-        autoPlayInterval = setInterval(() => {
-          current = (current === slides.length - 1) ? 0 : current + 1;
-          showSlide(current);
-        }, 10000);
-      }
-
-      if (prevBtn && nextBtn) {
-        prevBtn.addEventListener('click', () => {
-          current = (current === 0) ? slides.length - 1 : current - 1;
-          showSlide(current);
-          resetTimer();
-        });
-        nextBtn.addEventListener('click', () => {
-          current = (current === slides.length - 1) ? 0 : current + 1;
-          showSlide(current);
-          resetTimer();
-        });
-      }
-
-      // Start the autoplay timer
-      resetTimer();
-    });
-  </script>
-  <style>
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(5px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <script src="atlas.js?v=normalize-20260723-2"></script>
 </body>
 </html>

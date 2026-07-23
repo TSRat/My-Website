@@ -1,0 +1,4 @@
+interface:
+  display_name: "Normalize Web Portfolio"
+  short_description: "Standardize a portfolio with visual regression safeguards"
+  default_prompt: "Use $normalize-web-portfolio to modernize the website portfolio while enforcing visual preservation baselines and regression review."

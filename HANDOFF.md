@@ -265,3 +265,83 @@ python3 -m http.server 8000 --directory docs
 ### Do not change without confirmation
 - 8 张 plate SVG 使用几何 + 剪影，绝不出现拟真面孔，符合 AGENTS.md "AI 图片不能冒充史料" 原则。
 - 05 权威章的 5 个小节顺序（A→B→C→D→E）已与用户明确列出的四项匹配，并在结尾保留原 Editorial note。
+
+## 2026-07-23: Normalize the six-site web portfolio
+
+### Current target
+
+对 `README.md` 权威项目表中的六个公开网站建立统一的产品、设计系统、工程、QA、Preview 和分析标准，同时保留每个站点的独立身份。本批次只实现经基线证明安全的 Living Atlas 响应式与可访问性修正。
+
+### Completed
+
+- 审计并在真实浏览器中渲染全部六个网站。
+- 为每站采集 1440×900、1024×768、390×844 三个固定视口，共 18 张有效基线。
+- 建立 `web/portfolio-audit.md`，记录六站当前产品、视觉、架构、交互、部署、可访问性、响应式、分析、分级、目标和风险。
+- 建立 `web/platform-standard.md`，记录六阶段标准、Tier A/B/C 深度、共享基础、视觉保护、QA 和 provider-neutral analytics events。
+- 更新 `README.md` 权威项目表，加入 PRESERVE / REFACTOR / REBUILD 与迁移状态；没有建立竞争性 registry。
+- Figma 现有文件已补齐：
+  - 3 个页面；
+  - 7 个变量集合、67 个变量；
+  - 7 个共享组件；
+  - 12 个代表性桌面 / 移动画面；
+  - 18 张真实浏览器基线；
+  - Living Atlas 前后对比、移动目录和搜索状态。
+- 分级结果：2 PRESERVE（IVORY、Hildegard）；3 REFACTOR（Living Atlas、Enheduanna、Hypatia）；1 REBUILD（Melromarc）。
+- Living Atlas 完成首批修正：移动溢出、移动目录、搜索、跳转主内容、焦点、减弱动效、导航错误链接和中英文行为。
+
+### Important decisions
+
+- `docs/` 继续作为忽略的 Pages 构建输出；组合级源文档放在 `web/`。
+- Figma URL: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
+- 共享基础设施和语义，不统一各站点的色彩、字体、图像、叙事节奏和项目交互。
+- Enheduanna 不直接修补 hashed mirror bundle；先恢复或明确授权重建 source-to-mirror 流程。
+- Melromarc 不直接重写编译 artifact；完整上游源码或明确 rebuild 授权仍是实施门槛。
+- PR branch 不触发当前 Pages workflow，因此本地 Pages 只能作为浏览器验证，不冒充 live preview。
+- 当前浏览器 full-page screenshot 会错误组合 sticky/reveal 区域；固定视口与分区/anchor captures 作为可用证据。
+
+### Known issues and remaining queue
+
+1. Enheduanna 在 1024px 有约 20px 横向溢出，但缺少可重复 source-to-mirror build，实施阻塞。
+2. Melromarc 完整上游源码缺失；本地日志还显示重复 root-relative asset 404，虽然相对资源正常加载。
+3. IVORY 需要增加 dynamic / Pages renderer parity tests。
+4. Hildegard 与 Hypatia 需要建立分区级视觉回归覆盖；不要依赖当前 full-page 合成。
+5. Living Atlas 的 The Index 和多个社交链接仍是占位目标。
+6. 当前 PR branch 尚未建立 Pages preview；GitHub CLI 已安装并登录，等待本批变更提交、推送并建立 Draft PR。
+
+### Modified files
+
+- `.agents/skills/normalize-web-portfolio/SKILL.md`
+- `README.md`
+- `HANDOFF.md`
+- `web/portfolio-audit.md`
+- `web/platform-standard.md`
+- `THE-LIVING-ATLAS/index.html`
+- `THE-LIVING-ATLAS/zh.html`
+- `THE-LIVING-ATLAS/style.css`
+- `THE-LIVING-ATLAS/atlas.js`
+- `THE-LIVING-ATLAS/TECH.md`
+- `THE-LIVING-ATLAS/HANDOFF.md`
+- `scripts/build-verified.sh`
+- `TECH.md`
+
+The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the `AGENTS.md` website platform rules are included because this workflow depends on them.
+
+### Verification
+
+- `npm ci`: Passed — 508 packages installed.
+- `node --check THE-LIVING-ATLAS/atlas.js`: Passed.
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed — 347 local references across 39 HTML/CSS files.
+- `npm run lint`: Passed — 0 errors, 24 existing warnings.
+- `npm run build`: Passed after making the wrapper recognize Homebrew GNU `gtimeout` on macOS.
+- `bash scripts/sites-env.sh -- bash scripts/validate-artifact.sh`: Passed as part of `npm run build`.
+- `npm test`: Passed — build plus rendered HTML test 1/1.
+- Browser QA: Passed for the Living Atlas corrective scope at desktop, tablet, mobile, menu, search, keyboard shortcut, Chinese variant, carousel, and horizontal containment.
+- Figma render QA: Passed for foundations/components, theme screens, baseline matrix, and Living Atlas corrective review board.
+
+### Git state
+
+- Branch: `codex/normalize-web-portfolio`
+- Base / latest commit: `3a91388`
+- GitHub CLI: `gh 2.96.0`, authenticated to `github.com` as `TSRat`.
+- Commit / push / Draft PR: pending at this handoff update.

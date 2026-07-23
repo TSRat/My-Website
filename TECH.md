@@ -174,6 +174,7 @@ Do not replace the existing GitHub Actions deployment architecture with
 `npm run build` 与 GitHub Pages 无关，它通过 `scripts/build-verified.sh` 调用 `vinext build`：
 
 - 输出 `dist/server/index.js`。
+- 构建超时保护在 Linux 使用 GNU `timeout`，在安装 Homebrew `coreutils` 的 macOS 使用 `gtimeout`。
 - `build/sites-vite-plugin.ts` 把 `.openai/hosting.json` 和 `drizzle/` 打包到 `dist/.openai/`。
 - `scripts/validate-artifact.sh` 验证 Worker 默认导出具有 `fetch` 方法，并验证 manifest 可解析。
 - `.openai/hosting.json` 当前只记录 `d1: null` 与 `r2: null`。
