@@ -180,7 +180,9 @@ Do not replace the existing GitHub Actions deployment architecture with
 - 不使用 `git reset --hard`、`git checkout -- <file>` 或其他破坏性恢复命令。
 - 不 force push。
 - 不删除 branch、tag 或历史。
-- 未经授权不 commit、push、merge 或创建 PR。
+- 网站或界面任务完成且通过验证后，默认在当前专用 branch 中显式暂存本次相关文件、commit、push，并创建或更新 Pull Request；除非用户明确要求只保留本地修改，或发布所需权限 / 凭据不可用。
+- 默认发布授权不允许把来源不明或与任务无关的工作区修改一起提交；混合工作区仍必须先确认每个文件的归属。
+- commit、push 和创建 / 更新 PR 不再需要逐次请求授权；merge 始终需要用户单独明确授权。
 - 提交前应让一次 commit 表达一个可解释的目的；生成物和源码是否同时提交，以现有项目流程和任务要求为准。
 
 ## 完成报告
@@ -292,9 +294,17 @@ Preserve existing public URLs whenever possible.
 
 ## Preview requirement
 
-New websites and substantial redesigns must have a verified live preview before final handoff.
+Every website-facing change must have a verified live preview before final handoff, including small responsive, content, asset, and interaction fixes.
 
 A successful build is not equivalent to a working website.
+
+The preview must:
+- be reachable without merging the Pull Request;
+- render the exact branch commit intended for review;
+- be a directly viewable website URL, not only a PR, source-code, artifact-download, or localhost URL;
+- remain separate from the production `main` deployment.
+
+Use the repository's PR-preview infrastructure first. If none exists, use an approved preview provider or an immutable commit preview that serves the site's assets and module MIME types correctly.
 
 Open the preview in a real browser and verify:
 - primary routes
@@ -302,6 +312,8 @@ Open the preview in a real browser and verify:
 - responsive behavior
 - major interactions
 - console health
+
+If no working unmerged preview can be produced, report the preview stage as blocked and do not claim the website task is complete.
 
 ## Completion
 

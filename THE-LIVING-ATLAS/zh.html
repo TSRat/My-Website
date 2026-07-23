@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TSRat · The Living Atlas</title>
   <meta name="description" content="一个人的开放档案馆：在算法与人性之间建立桥梁。">
-  <link rel="stylesheet" href="style.css?v=normalize-20260723-2">
+  <link rel="stylesheet" href="style.css?v=content-system-20260724-1">
   <!-- Fonts: Inter (Sans), Noto Serif SC (Serif), Fira Code (Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,16 +21,16 @@
       <span class="logo-mark"><img src="tsrat-logo.png" alt="TSRat Logo" onerror="this.style.display='none'"></span>
       <ul class="nav-links">
         <li><a href="#worlds">创作宇宙</a></li>
-        <li><a href="#archive">全站档案</a></li>
-        <li><a href="#knowledge">知识图谱</a></li>
-        <li><a href="#sites">代表作品</a></li>
+        <li><a href="#index">总索引</a></li>
+        <li><a href="#knowledge">知识库</a></li>
+        <li><a href="#sites">已发布网站</a></li>
         <li><a href="#now">最近状态</a></li>
       </ul>
     </div>
     <div class="nav-right">
       <a href="https://space.bilibili.com" target="_blank" class="social-link">B站</a>
-      <a href="#" target="_blank" class="social-link">小红书</a>
-      <a href="#" target="_blank" class="social-link">公众号</a>
+      <span class="social-link social-link--planned" aria-disabled="true" title="链接待完善">小红书</span>
+      <span class="social-link social-link--planned" aria-disabled="true" title="链接待完善">公众号</span>
       <a href="https://github.com/TSRat" target="_blank" class="social-link">GitHub</a>
       <a href="index.html" class="social-link" style="margin-left: 1rem; color: var(--c-cobalt);">EN / 中</a>
       <button class="search-btn" type="button" data-search-open aria-haspopup="dialog">搜索 ⌘K</button>
@@ -39,11 +39,12 @@
       <summary>目录</summary>
       <div class="mobile-menu-panel">
         <a href="#worlds">创作宇宙</a>
-        <a href="#archive">全站档案</a>
-        <a href="#knowledge">知识图谱</a>
-        <a href="#sites">代表作品</a>
+        <a href="#index">总索引</a>
+        <a href="#knowledge">知识库</a>
+        <a href="#sites">已发布网站</a>
         <a href="#now">最近状态</a>
         <a href="index.html">EN / 中</a>
+        <span class="mobile-menu-status" aria-disabled="true">小红书 / 公众号 · 待完善</span>
         <button type="button" data-search-open aria-haspopup="dialog">搜索</button>
       </div>
     </details>
@@ -56,7 +57,7 @@
       </form>
       <p class="metadata">THE LIVING ATLAS / INDEX</p>
       <h2 id="search-title">搜索档案</h2>
-      <label for="archive-search">章节与已发布网站</label>
+      <label for="archive-search">章节、创作宇宙、知识库与已发布网站</label>
       <input id="archive-search" type="search" data-search-input autocomplete="off" placeholder="试试“希帕蒂娅”或“知识”">
       <p class="search-status" data-search-status aria-live="polite"></p>
       <ul class="search-results" data-search-results></ul>
@@ -65,7 +66,7 @@
 
   <main id="main-content" tabindex="-1">
     <!-- 01 Hero -->
-    <section class="hero-section">
+    <section class="hero-section" id="about">
       <div class="grid-container">
         <div class="hero-content">
           <p class="metadata">TSRat</p>
@@ -91,22 +92,9 @@
     <section class="now-section" id="now">
       <div class="grid-container">
         <div class="section-label">
-          <p class="metadata">最近状态 ｜ 2026年7月</p>
+          <p class="metadata" data-now-label>最近状态</p>
         </div>
-        <div class="now-content">
-          <div class="now-item">
-            <span class="metadata">写作中</span>
-            <p>希帕蒂娅</p>
-          </div>
-          <div class="now-item">
-            <span class="metadata">建设中</span>
-            <p>知识档案馆</p>
-          </div>
-          <div class="now-item">
-            <span class="metadata">进行中</span>
-            <p>AI 技术文档</p>
-          </div>
-        </div>
+        <div class="now-content" data-now-list></div>
       </div>
     </section>
 
@@ -128,7 +116,7 @@
               </div>
             </div>
             <div>
-              <img src="assets/hypatia-sketch.jpg" alt="Hypatia" style="width: 100%; object-fit: contain; aspect-ratio: 1/1; mix-blend-mode: multiply; filter: grayscale(1) contrast(1.5) brightness(1.1);">
+              <img class="hypatia-portrait" src="assets/hypatia-sketch-transparent.webp" alt="Hypatia" style="width: 100%; object-fit: contain; aspect-ratio: 1/1;">
             </div>
           </div>
         </div>
@@ -193,34 +181,7 @@
         <div class="section-label" style="grid-column: 1 / 13; margin-bottom: 1rem;">
           <p class="metadata">创作宇宙 ｜ WORLDS</p>
         </div>
-        <div class="bento-box world-box-large">
-          <div class="image-wrapper" style="flex: 1; aspect-ratio: 1/1; width: 100%; height: auto; background: rgba(22,22,22,0.03); margin-bottom: 1.5rem; border-radius: 4px; overflow: hidden;">
-            <img src="assets/knowledge.jpeg" alt="Knowledge">
-          </div>
-          <span class="metadata">01</span>
-          <h3>知识</h3>
-        </div>
-        <div class="bento-box world-box-large">
-          <div class="image-wrapper" style="flex: 1; aspect-ratio: 1/1; width: 100%; height: auto; background: rgba(22,22,22,0.03); margin-bottom: 1.5rem; border-radius: 4px; overflow: hidden;">
-            <img src="assets/fiction.webp" alt="Story">
-          </div>
-          <span class="metadata">02</span>
-          <h3>故事</h3>
-        </div>
-        <div class="bento-box world-box-large">
-          <div class="image-wrapper" style="flex: 1; aspect-ratio: 1/1; width: 100%; height: auto; background: rgba(22,22,22,0.03); margin-bottom: 1.5rem; border-radius: 4px; overflow: hidden;">
-            <img src="assets/media.jpg" alt="Media">
-          </div>
-          <span class="metadata">03</span>
-          <h3>媒体</h3>
-        </div>
-        <div class="bento-box world-box-large">
-          <div class="image-wrapper" style="flex: 1; aspect-ratio: 1/1; width: 100%; height: auto; background: rgba(22,22,22,0.03); margin-bottom: 1.5rem; border-radius: 4px; overflow: hidden;">
-            <img src="assets/interact.jpg" alt="Interact">
-          </div>
-          <span class="metadata">04</span>
-          <h3>交互</h3>
-        </div>
+        <div class="worlds-list" data-worlds-list></div>
       </div>
     </section>
 
@@ -231,11 +192,8 @@
           <p class="metadata">探索知识库</p>
         </div>
         <div class="knowledge-content">
-          <ul class="knowledge-list">
-            <li><span>人文与艺术</span> <span class="count metadata">128</span></li>
-            <li><span>社会科学</span> <span class="count metadata">74</span></li>
-            <li><span>自然科学与技术</span> <span class="count metadata">42</span></li>
-          </ul>
+          <p class="section-intro">Knowledge 内部的细分地图。只有底层收藏整理完成后，才显示真实数量。</p>
+          <ul class="knowledge-list" data-knowledge-list></ul>
         </div>
       </div>
     </section>
@@ -244,50 +202,9 @@
     <section class="sites-section" id="sites">
       <div class="grid-container">
         <div class="section-label">
-          <p class="metadata">独立网站 ｜ 012</p>
+          <p class="metadata" data-sites-label>已发布网站</p>
         </div>
-        <div class="sites-content">
-          <a href="../HILDEGARD/" class="site-row">
-            <span class="metadata">005</span>
-            <div>
-              <p class="metadata">DAUGHTERS OF TIME</p>
-              <h4>希尔德加德</h4>
-            </div>
-            <img src="assets/thumb-hildegard.jpg" alt="Thumbnail" style="width: 80px; height: 50px; object-fit: cover; justify-self: end; border: 1px solid var(--c-line);">
-          </a>
-          <a href="../IVORY-ARCHIVE/" class="site-row">
-            <span class="metadata">004</span>
-            <div>
-              <p class="metadata">Knowledge Archive</p>
-              <h4>知识档案馆</h4>
-            </div>
-            <img src="assets/thumb-ivory.jpg" alt="Thumbnail" style="width: 80px; height: 50px; object-fit: cover; justify-self: end; border: 1px solid var(--c-line);">
-          </a>
-          <a href="../HYPATIA/" class="site-row">
-            <span class="metadata">003</span>
-            <div>
-              <p class="metadata">Daughters of Time</p>
-              <h4>希帕蒂娅</h4>
-            </div>
-            <img src="assets/thumb-hypatia.jpg" alt="Thumbnail" style="width: 80px; height: 50px; object-fit: cover; justify-self: end; border: 1px solid var(--c-line);">
-          </a>
-          <a href="../ENHEDUANNA/" class="site-row">
-            <span class="metadata">002</span>
-            <div>
-              <p class="metadata">Daughters of Time</p>
-              <h4>恩赫杜安娜</h4>
-            </div>
-            <img src="assets/thumb-enheduanna.jpg" alt="Thumbnail" style="width: 80px; height: 50px; object-fit: cover; justify-self: end; border: 1px solid var(--c-line);">
-          </a>
-          <a href="../MELROMARC-SISTERS/" class="site-row">
-            <span class="metadata">001</span>
-            <div>
-              <p class="metadata">Fan-Created Story Archive</p>
-              <h4>梅尔罗马克姐妹</h4>
-            </div>
-            <img src="assets/thumb-melromarc.jpg" alt="Thumbnail" style="width: 80px; height: 50px; object-fit: cover; justify-self: end; border: 1px solid var(--c-line);">
-          </a>
-        </div>
+        <div class="sites-content" data-sites-list></div>
       </div>
     </section>
 
@@ -297,56 +214,20 @@
         <div class="section-label">
           <p class="metadata">最新动态</p>
         </div>
-        <div class="latest-content">
-          <div class="latest-item">
-            <span class="metadata">2026.07.20</span>
-            <p class="mono-text">希帕蒂娅主页更新</p>
-          </div>
-          <div class="latest-item">
-            <span class="metadata">2026.07.18</span>
-            <p class="mono-text">新笔记：女性主义与术语</p>
-          </div>
-        </div>
+        <div class="latest-content" data-latest-list></div>
       </div>
     </section>
 
     <!-- 09 The Index -->
-    <section class="index-section" id="archive">
+    <section class="index-section" id="index">
+      <span id="archive" class="legacy-anchor" aria-hidden="true"></span>
       <div class="grid-container">
         <div class="section-label">
-          <p class="metadata">总索引</p>
+          <p class="metadata">所有内容 ｜ 总索引</p>
         </div>
-        <div class="index-content">
-          <div class="index-letter">
-            <span class="metadata">A</span>
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Archive</a></li>
-              <li><a href="#">Art</a></li>
-            </ul>
-          </div>
-          <div class="index-letter">
-            <span class="metadata">D</span>
-            <ul>
-              <li><a href="#">Design</a></li>
-              <li><a href="#">Daughters of Time</a></li>
-            </ul>
-          </div>
-          <div class="index-letter">
-            <span class="metadata">F</span>
-            <ul>
-              <li><a href="#">Feminism</a></li>
-              <li><a href="#">Film</a></li>
-              <li><a href="#">Fiction</a></li>
-            </ul>
-          </div>
-          <div class="index-letter">
-            <span class="metadata">H</span>
-            <ul>
-              <li><a href="#">History</a></li>
-            </ul>
-          </div>
-          <a href="#" class="action-link" style="margin-top: 2rem; display: inline-block;">查看完整索引 →</a>
+        <div class="index-shell">
+          <p class="section-intro">这里只收录已经发布且可以抵达的内容。没有真实目标的计划内容暂不进入索引。</p>
+          <div class="index-content" data-index-list></div>
         </div>
       </div>
     </section>
@@ -366,6 +247,6 @@
   </footer>
 
 
-  <script src="atlas.js?v=normalize-20260723-2"></script>
+  <script type="module" src="atlas.js?v=content-system-20260724-1"></script>
 </body>
 </html>

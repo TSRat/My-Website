@@ -1,4 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
+import { livingAtlasContent } from "./content-registry.js";
+import {
+  createSearchEntries,
+  getLocale,
+  initMobileMenu,
+  initSearch,
+  renderFocus,
+  renderIndex,
+  renderKnowledge,
+  renderLatest,
+  renderSites,
+  renderWorlds,
+} from "./web-core.js";
+
+const initCarousel = () => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const slides = Array.from(document.querySelectorAll(".carousel-slide"));
   const previousButton = document.querySelector(".carousel-prev");
@@ -45,89 +59,45 @@ document.addEventListener("DOMContentLoaded", () => {
     reduceMotion.addEventListener("change", startAutoplay);
     startAutoplay();
   }
+};
 
-  const menu = document.querySelector(".mobile-menu");
-  menu?.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      menu.removeAttribute("open");
-    });
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  const locale = getLocale();
 
-  const dialog = document.querySelector("[data-search-dialog]");
-  const input = dialog?.querySelector("[data-search-input]");
-  const results = dialog?.querySelector("[data-search-results]");
-  const status = dialog?.querySelector("[data-search-status]");
-  const openButtons = document.querySelectorAll("[data-search-open]");
+  renderFocus(
+    livingAtlasContent,
+    locale,
+    document.querySelector("[data-now-list]"),
+    document.querySelector("[data-now-label]"),
+  );
+  renderWorlds(
+    livingAtlasContent,
+    locale,
+    document.querySelector("[data-worlds-list]"),
+  );
+  renderKnowledge(
+    livingAtlasContent,
+    locale,
+    document.querySelector("[data-knowledge-list]"),
+  );
+  renderSites(
+    livingAtlasContent,
+    locale,
+    document.querySelector("[data-sites-list]"),
+    document.querySelector("[data-sites-label]"),
+  );
+  renderLatest(
+    livingAtlasContent,
+    locale,
+    document.querySelector("[data-latest-list]"),
+  );
+  renderIndex(
+    livingAtlasContent,
+    locale,
+    document.querySelector("[data-index-list]"),
+  );
 
-  if (!(dialog instanceof HTMLDialogElement) ||
-      !(input instanceof HTMLInputElement) ||
-      !(results instanceof HTMLUListElement) ||
-      !(status instanceof HTMLElement)) {
-    return;
-  }
-
-  const entries = [];
-  const seenLinks = new Set();
-
-  document.querySelectorAll("main section[id]").forEach((section) => {
-    const heading = section.querySelector("h2, h3, .section-label .metadata");
-    const title = heading?.textContent?.trim();
-    const href = `#${section.id}`;
-
-    if (title && !seenLinks.has(href)) {
-      seenLinks.add(href);
-      entries.push({ title, href });
-    }
-  });
-
-  document.querySelectorAll(".site-row").forEach((link) => {
-    const title = link.querySelector("h4")?.textContent?.trim();
-    const href = link.getAttribute("href");
-
-    if (title && href && !seenLinks.has(href)) {
-      seenLinks.add(href);
-      entries.push({ title, href });
-    }
-  });
-
-  const renderResults = () => {
-    const query = input.value.trim().toLocaleLowerCase();
-    const matches = entries.filter((entry) =>
-      entry.title.toLocaleLowerCase().includes(query)
-    );
-
-    results.replaceChildren();
-    matches.forEach((entry) => {
-      const item = document.createElement("li");
-      const link = document.createElement("a");
-      link.href = entry.href;
-      link.textContent = entry.title;
-      link.addEventListener("click", () => dialog.close());
-      item.append(link);
-      results.append(item);
-    });
-
-    status.textContent = dialog.dataset.searchLocale === "zh"
-      ? `${matches.length} 个结果`
-      : `${matches.length} result${matches.length === 1 ? "" : "s"}`;
-  };
-
-  const openSearch = () => {
-    if (!dialog.open) dialog.showModal();
-    input.value = "";
-    renderResults();
-    window.requestAnimationFrame(() => input.focus());
-  };
-
-  openButtons.forEach((button) => {
-    button.addEventListener("click", openSearch);
-  });
-
-  input.addEventListener("input", renderResults);
-  document.addEventListener("keydown", (event) => {
-    if ((event.metaKey || event.ctrlKey) && event.key.toLocaleLowerCase() === "k") {
-      event.preventDefault();
-      openSearch();
-    }
-  });
+  initCarousel();
+  initMobileMenu();
+  initSearch(createSearchEntries(livingAtlasContent, locale));
 });

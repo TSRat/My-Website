@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TSRat · The Living Atlas</title>
-  <meta name="description" content="一个人的开放档案馆：在算法与人性之间建立桥梁。">
-  <link rel="stylesheet" href="style.css?v=normalize-20260723-2">
+  <meta name="description" content="A living index of TSRat's knowledge, fiction, media, and interactive projects.">
+  <link rel="stylesheet" href="style.css?v=content-system-20260724-1">
   <!-- Fonts: Inter (Sans), Noto Serif SC (Serif), Fira Code (Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,16 +21,16 @@
       <span class="logo-mark"><img src="tsrat-logo.png" alt="TSRat Logo" onerror="this.style.display='none'"></span>
       <ul class="nav-links">
         <li><a href="#worlds">Worlds</a></li>
-        <li><a href="#archive">Archive</a></li>
+        <li><a href="#index">Index</a></li>
         <li><a href="#knowledge">Knowledge</a></li>
-        <li><a href="#sites">Works</a></li>
+        <li><a href="#sites">Sites</a></li>
         <li><a href="#now">Now</a></li>
       </ul>
     </div>
     <div class="nav-right">
       <a href="https://space.bilibili.com" target="_blank" class="social-link">B站</a>
-      <a href="#" target="_blank" class="social-link">小红书</a>
-      <a href="#" target="_blank" class="social-link">公众号</a>
+      <span class="social-link social-link--planned" aria-disabled="true" title="Link planned">小红书</span>
+      <span class="social-link social-link--planned" aria-disabled="true" title="Link planned">公众号</span>
       <a href="https://github.com/TSRat" target="_blank" class="social-link">GitHub</a>
       <a href="zh.html" class="social-link" style="margin-left: 1rem; color: var(--c-cobalt);">中 / EN</a>
       <button class="search-btn" type="button" data-search-open aria-haspopup="dialog">Search ⌘K</button>
@@ -39,11 +39,12 @@
       <summary>Menu</summary>
       <div class="mobile-menu-panel">
         <a href="#worlds">Worlds</a>
-        <a href="#archive">Archive</a>
+        <a href="#index">Index</a>
         <a href="#knowledge">Knowledge</a>
-        <a href="#sites">Works</a>
+        <a href="#sites">Sites</a>
         <a href="#now">Now</a>
         <a href="zh.html">中 / EN</a>
+        <span class="mobile-menu-status" aria-disabled="true">小红书 / 公众号 · Planned</span>
         <button type="button" data-search-open aria-haspopup="dialog">Search</button>
       </div>
     </details>
@@ -56,7 +57,7 @@
       </form>
       <p class="metadata">THE LIVING ATLAS / INDEX</p>
       <h2 id="search-title">Search the archive</h2>
-      <label for="archive-search">Sections and published sites</label>
+      <label for="archive-search">Sections, worlds, knowledge, and published sites</label>
       <input id="archive-search" type="search" data-search-input autocomplete="off" placeholder="Try “Hypatia” or “Knowledge”">
       <p class="search-status" data-search-status aria-live="polite"></p>
       <ul class="search-results" data-search-results></ul>
@@ -65,7 +66,7 @@
 
   <main id="main-content" tabindex="-1">
     <!-- 01 Hero -->
-    <section class="hero-section">
+    <section class="hero-section" id="about">
       <div class="grid-container">
         <div class="hero-content">
           <p class="metadata">TSRat</p>
@@ -94,22 +95,9 @@
     <section class="now-section" id="now">
       <div class="grid-container">
         <div class="section-label">
-          <p class="metadata">NOW / JUL 2026</p>
+          <p class="metadata" data-now-label>NOW</p>
         </div>
-        <div class="now-content">
-          <div class="now-item">
-            <span class="metadata">WRITING</span>
-            <p>Hypatia</p>
-          </div>
-          <div class="now-item">
-            <span class="metadata">BUILDING</span>
-            <p>IVORY ARCHIVE</p>
-          </div>
-          <div class="now-item">
-            <span class="metadata">WORKING ON</span>
-            <p>AI Documentation</p>
-          </div>
-        </div>
+        <div class="now-content" data-now-list></div>
       </div>
     </section>
 
@@ -131,7 +119,7 @@
               </div>
             </div>
             <div>
-              <img src="assets/hypatia-sketch.jpg" alt="Hypatia" style="width: 100%; object-fit: contain; aspect-ratio: 1/1; mix-blend-mode: multiply; filter: grayscale(1) contrast(1.5) brightness(1.1);">
+              <img class="hypatia-portrait" src="assets/hypatia-sketch-transparent.webp" alt="Hypatia" style="width: 100%; object-fit: contain; aspect-ratio: 1/1;">
             </div>
           </div>
         </div>
@@ -196,34 +184,7 @@
         <div class="section-label" style="grid-column: 1 / 13; margin-bottom: 1rem;">
           <p class="metadata">WORLDS</p>
         </div>
-        <div class="bento-box world-box-large">
-          <div class="image-wrapper" style="flex: 1; aspect-ratio: 1/1; width: 100%; height: auto; background: rgba(22,22,22,0.03); margin-bottom: 1.5rem; border-radius: 4px; overflow: hidden;">
-            <img src="assets/knowledge.jpeg" alt="Knowledge">
-          </div>
-          <span class="metadata">01</span>
-          <h3>Knowledge</h3>
-        </div>
-        <div class="bento-box world-box-large">
-          <div class="image-wrapper" style="flex: 1; aspect-ratio: 1/1; width: 100%; height: auto; background: rgba(22,22,22,0.03); margin-bottom: 1.5rem; border-radius: 4px; overflow: hidden;">
-            <img src="assets/fiction.webp" alt="Story">
-          </div>
-          <span class="metadata">02</span>
-          <h3>Story</h3>
-        </div>
-        <div class="bento-box world-box-large">
-          <div class="image-wrapper" style="flex: 1; aspect-ratio: 1/1; width: 100%; height: auto; background: rgba(22,22,22,0.03); margin-bottom: 1.5rem; border-radius: 4px; overflow: hidden;">
-            <img src="assets/media.jpg" alt="Media">
-          </div>
-          <span class="metadata">03</span>
-          <h3>Media</h3>
-        </div>
-        <div class="bento-box world-box-large">
-          <div class="image-wrapper" style="flex: 1; aspect-ratio: 1/1; width: 100%; height: auto; background: rgba(22,22,22,0.03); margin-bottom: 1.5rem; border-radius: 4px; overflow: hidden;">
-            <img src="assets/interact.jpg" alt="Interact">
-          </div>
-          <span class="metadata">04</span>
-          <h3>Interaction</h3>
-        </div>
+        <div class="worlds-list" data-worlds-list></div>
       </div>
     </section>
 
@@ -234,11 +195,8 @@
           <p class="metadata">EXPLORE KNOWLEDGE</p>
         </div>
         <div class="knowledge-content">
-          <ul class="knowledge-list">
-            <li><span>Humanities & Arts</span> <span class="count metadata">128</span></li>
-            <li><span>Social Sciences</span> <span class="count metadata">74</span></li>
-            <li><span>Natural Sciences & Tech</span> <span class="count metadata">42</span></li>
-          </ul>
+          <p class="section-intro">A closer map inside the Knowledge world. Counts will appear only when the underlying collection is ready.</p>
+          <ul class="knowledge-list" data-knowledge-list></ul>
         </div>
       </div>
     </section>
@@ -247,50 +205,9 @@
     <section class="sites-section" id="sites">
       <div class="grid-container">
         <div class="section-label">
-          <p class="metadata">SITES / 012</p>
+          <p class="metadata" data-sites-label>PUBLISHED SITES</p>
         </div>
-        <div class="sites-content">
-          <a href="../HILDEGARD/" class="site-row">
-            <span class="metadata">005</span>
-            <div>
-              <p class="metadata">Daughters of Time · 002</p>
-              <h4>HILDEGARD</h4>
-            </div>
-            <img src="assets/thumb-hildegard.jpg" alt="Thumbnail" style="width: 80px; height: 50px; object-fit: cover; justify-self: end; border: 1px solid var(--c-line);">
-          </a>
-          <a href="../IVORY-ARCHIVE/" class="site-row">
-            <span class="metadata">004</span>
-            <div>
-              <p class="metadata">Knowledge Archive</p>
-              <h4>IVORY ARCHIVE</h4>
-            </div>
-            <img src="assets/thumb-ivory.jpg" alt="Thumbnail" style="width: 80px; height: 50px; object-fit: cover; justify-self: end; border: 1px solid var(--c-line);">
-          </a>
-          <a href="../HYPATIA/" class="site-row">
-            <span class="metadata">003</span>
-            <div>
-              <p class="metadata">Daughters of Time</p>
-              <h4>HYPATIA</h4>
-            </div>
-            <img src="assets/thumb-hypatia.jpg" alt="Thumbnail" style="width: 80px; height: 50px; object-fit: cover; justify-self: end; border: 1px solid var(--c-line);">
-          </a>
-          <a href="../ENHEDUANNA/" class="site-row">
-            <span class="metadata">002</span>
-            <div>
-              <p class="metadata">Daughters of Time</p>
-              <h4>ENHEDUANNA</h4>
-            </div>
-            <img src="assets/thumb-enheduanna.jpg" alt="Thumbnail" style="width: 80px; height: 50px; object-fit: cover; justify-self: end; border: 1px solid var(--c-line);">
-          </a>
-          <a href="../MELROMARC-SISTERS/" class="site-row">
-            <span class="metadata">001</span>
-            <div>
-              <p class="metadata">Fan-Created Story Archive</p>
-              <h4>MELROMARC SISTERS</h4>
-            </div>
-            <img src="assets/thumb-melromarc.jpg" alt="Thumbnail" style="width: 80px; height: 50px; object-fit: cover; justify-self: end; border: 1px solid var(--c-line);">
-          </a>
-        </div>
+        <div class="sites-content" data-sites-list></div>
       </div>
     </section>
 
@@ -300,56 +217,20 @@
         <div class="section-label">
           <p class="metadata">LATEST</p>
         </div>
-        <div class="latest-content">
-          <div class="latest-item">
-            <span class="metadata">2026.07.20</span>
-            <p class="mono-text">Hypatia website updated</p>
-          </div>
-          <div class="latest-item">
-            <span class="metadata">2026.07.18</span>
-            <p class="mono-text">New note: Feminism and terminology</p>
-          </div>
-        </div>
+        <div class="latest-content" data-latest-list></div>
       </div>
     </section>
 
     <!-- 09 The Index -->
-    <section class="index-section" id="archive">
+    <section class="index-section" id="index">
+      <span id="archive" class="legacy-anchor" aria-hidden="true"></span>
       <div class="grid-container">
         <div class="section-label">
-          <p class="metadata">THE INDEX</p>
+          <p class="metadata">ALL CONTENT / THE INDEX</p>
         </div>
-        <div class="index-content">
-          <div class="index-letter">
-            <span class="metadata">A</span>
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Archive</a></li>
-              <li><a href="#">Art</a></li>
-            </ul>
-          </div>
-          <div class="index-letter">
-            <span class="metadata">D</span>
-            <ul>
-              <li><a href="#">Design</a></li>
-              <li><a href="#">Daughters of Time</a></li>
-            </ul>
-          </div>
-          <div class="index-letter">
-            <span class="metadata">F</span>
-            <ul>
-              <li><a href="#">Feminism</a></li>
-              <li><a href="#">Film</a></li>
-              <li><a href="#">Fiction</a></li>
-            </ul>
-          </div>
-          <div class="index-letter">
-            <span class="metadata">H</span>
-            <ul>
-              <li><a href="#">History</a></li>
-            </ul>
-          </div>
-          <a href="#" class="action-link" style="margin-top: 2rem; display: inline-block;">View full index →</a>
+        <div class="index-shell">
+          <p class="section-intro">Only published and currently navigable content appears here. Planned material stays out of the index until it has a real destination.</p>
+          <div class="index-content" data-index-list></div>
         </div>
       </div>
     </section>
@@ -369,6 +250,6 @@
   </footer>
 
 
-  <script src="atlas.js?v=normalize-20260723-2"></script>
+  <script type="module" src="atlas.js?v=content-system-20260724-1"></script>
 </body>
 </html>

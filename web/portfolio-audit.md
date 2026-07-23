@@ -13,7 +13,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 
 | Site | Classification | Interaction tier | Migration status | Primary blocker |
 | --- | --- | --- | --- | --- |
-| The Living Atlas | REFACTOR | B — Interactive | First corrective batch implemented and browser-verified; Draft PR blocked | GitHub CLI is not installed; broader data refactor remains |
+| The Living Atlas | REFACTOR | B — Interactive | Content registry and Web Core v1 in Draft PR #13; unmerged Preview verified | Shared runtime publication needs explicit Pages build-map authorization |
 | IVORY ARCHIVE | PRESERVE | B — Interactive | Audited; no implementation migration started | Dynamic and Pages renderers need explicit parity tests |
 | Enheduanna | REFACTOR | A — Editorial | Audited; implementation blocked | No reproducible source-to-mirror build; tablet overflow exists in the deployed mirror |
 | Hildegard | PRESERVE | A — Editorial | Audited; no implementation migration started | Long-page visual comparison must use deterministic sections |
@@ -37,30 +37,30 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## The Living Atlas
 
 - **Site / slug / live URL:** The Living Atlas; `THE-LIVING-ATLAS`; <https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/>
-- **Source path:** `THE-LIVING-ATLAS/`; `index.html`, `zh.html`, `style.css`, local image assets.
+- **Source path:** `THE-LIVING-ATLAS/`; language HTML shells, `content-registry.js`, `web-core.js`, `atlas.js`, `style.css`, and local image assets.
 - **Status:** Public hub site and portfolio entry point.
 - **Product purpose:** Present TSRat as a living interdisciplinary archive and route readers into knowledge, editorial, media, and story projects.
 - **Primary audience and goal:** Readers discovering TSRat’s work; understand the archive’s worldview and enter a specific site or topic.
-- **Major routes and navigation:** One static page plus Chinese variant; anchor navigation for Worlds, Archive, Knowledge, Works, and Now; site-directory links.
+- **Major routes and navigation:** One static page plus Chinese variant; anchor navigation for Worlds, Index, Knowledge, published Sites, and Now.
 - **Current visual direction:** Editorial atlas combining archive numbering, Swiss grid discipline, large serif statements, ivory paper, and cobalt navigation accents.
 - **Typography / color / layout:** Noto Serif SC display, Inter UI, Fira Code metadata; `#F2EFE7` surface, `#161616` ink, `#7A756E` stone, `#0047AB` cobalt; desktop 12-column grid.
-- **Framework / language / rendering:** Static HTML, CSS, and vanilla JavaScript; client-rendered carousel behavior only.
-- **Content/data model:** Hard-coded HTML sections and site rows.
-- **State/interactivity:** Auto-rotating featured carousel with previous/next controls. Desktop search control is inert in the baseline. Mobile navigation is hidden without a replacement.
+- **Framework / language / rendering:** Static HTML, CSS, and small ES modules; registry-driven section rendering plus carousel, search, and disclosure behavior.
+- **Content/data model:** One bilingual registry drives Worlds, Knowledge, Now, published Sites, Latest, Index, and search metadata. Stable IDs, publication states, and real-link rules follow `web/content-system.md`.
+- **State/interactivity:** Auto-rotating featured carousel with previous/next controls, accessible search dialog, keyboard shortcut, and mobile disclosure menu.
 - **Build system / deployment:** Copied unchanged by `scripts/build-github-pages.mjs` into the GitHub Pages artifact.
 - **Analytics:** No provider detected. Use the provider-neutral events in `platform-standard.md`; do not add a provider without approval.
-- **Tests / CI:** Pages asset validation only; no site-specific interaction tests.
-- **Accessibility state:** `lang`, one `h1`, semantic `main` and `nav`, and image alternatives are present. A skip link, functioning search, mobile navigation, dialog focus behavior, and keyboard checks are required.
-- **Responsive state:** Desktop and tablet first folds are coherent. At 390px the baseline has approximately 63px of horizontal overflow and a clipped monumental title.
+- **Tests / CI:** Pages asset validation plus Living Atlas registry/link/language/index tests. Browser interaction checks remain required.
+- **Accessibility state:** Correct language declarations, skip link, one `h1`, semantic `main` and `nav`, visible focus, native dialog search, mobile disclosure navigation, and descriptive image alternatives are present.
+- **Responsive state:** Desktop and tablet first folds remain coherent. The mobile title is contained; the open menu uses an opaque layer and pushes the hero down instead of mixing with it.
 - **Existing Figma:** Shared foundations, Living Atlas theme variables, components, representative desktop/mobile screens, and 3-viewport baselines are in the portfolio Figma file.
 - **Classification:** **REFACTOR** — the information architecture and identity are useful, but responsive behavior, navigation, search, and content maintainability require normalization.
 - **Target architecture:** Retain a lightweight static site. Introduce accessible shared primitives and an explicit data layer before considering a framework migration.
 - **Shared-core adoption:** Focus treatment, skip navigation, content widths, breakpoints, motion preference, search/dialog behavior, and QA conventions.
 - **Site-specific theme:** Preserve the ivory editorial atlas, monumental serif typography, cobalt system, asymmetric grid, imagery, and metadata voice.
-- **Migration status:** First corrective batch implemented and browser-verified; broader content/data refactor remains queued.
+- **Migration status:** First corrective batch merged. Content/data refactor and site-local Web Core v1 are implemented in Draft PR #13 with a verified unmerged Preview.
 - **Figma URL:** <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
-- **Preview / PR URL:** Local Pages preview verified. Current infrastructure has no branch Pages preview; Draft PR is blocked because GitHub CLI is not installed.
-- **Remaining risks:** External social placeholders, hard-coded content, and search indexing scope need creator or implementation decisions.
+- **Preview / PR URL:** [Unmerged Preview](https://raw.githack.com/TSRat/My-Website/codex/living-atlas-content-system/THE-LIVING-ATLAS/index.html); [Draft PR #13](https://github.com/TSRat/My-Website/pull/13).
+- **Remaining risks:** Small Red Book and WeChat URLs remain unknown and are non-clickable planned states. Article-level Knowledge data does not yet exist. Moving Web Core to a repository-level runtime requires a protected build-map change.
 
 ## IVORY ARCHIVE
 

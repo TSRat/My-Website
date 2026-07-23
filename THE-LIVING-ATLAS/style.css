@@ -143,11 +143,14 @@ summary:focus-visible {
 
 /* Global Nav */
 .global-nav {
+  position: relative;
+  z-index: 50;
   padding: 2rem var(--container-margin);
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(167, 162, 154, 0.3);
+  background: var(--c-ivory);
 }
 
 .nav-left, .nav-right {
@@ -183,6 +186,13 @@ summary:focus-visible {
   color: var(--c-stone);
 }
 
+.social-link--planned {
+  cursor: not-allowed;
+  opacity: 0.58;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
 .search-btn {
   background: none;
   border: 1px solid var(--c-stone);
@@ -214,7 +224,7 @@ summary:focus-visible {
 
 .mobile-menu-panel {
   position: absolute;
-  z-index: 30;
+  z-index: 60;
   top: calc(100% + 0.75rem);
   right: 0;
   width: min(18rem, calc(100vw - 2rem));
@@ -225,7 +235,8 @@ summary:focus-visible {
 }
 
 .mobile-menu-panel a,
-.mobile-menu-panel button {
+.mobile-menu-panel button,
+.mobile-menu-status {
   min-height: 2.75rem;
   padding: 0.7rem 0.9rem;
   border: 0;
@@ -234,6 +245,11 @@ summary:focus-visible {
   color: var(--c-ink);
   text-align: left;
   cursor: pointer;
+}
+
+.mobile-menu-status {
+  color: var(--c-stone);
+  cursor: not-allowed;
 }
 
 .mobile-menu-panel > :last-child {
@@ -361,7 +377,7 @@ main section {
   grid-column: 1 / 4;
 }
 
-.now-content, .featured-content, .knowledge-content, .sites-content, .latest-content, .index-content {
+.now-content, .featured-content, .knowledge-content, .sites-content, .latest-content, .index-shell {
   grid-column: 5 / 13;
 }
 
@@ -388,8 +404,21 @@ main section {
   margin-top: 2rem;
 }
 
+.hypatia-portrait {
+  mix-blend-mode: multiply;
+  filter: grayscale(1) contrast(1.32) brightness(1.06);
+  opacity: 0.96;
+}
+
 /* 04 Worlds Bento */
 .worlds-section .grid-container {
+  gap: 1rem;
+}
+
+.worlds-list {
+  grid-column: 1 / 13;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -401,7 +430,6 @@ main section {
   justify-content: space-between;
   min-height: 200px;
   transition: background-color 0.3s ease;
-  cursor: pointer;
 }
 
 .bento-box:hover {
@@ -416,14 +444,40 @@ main section {
   grid-column: span 3;
 }
 
-.world-box h3 {
+.bento-box h3 {
   font-family: var(--font-serif);
   font-size: var(--text-h3);
   font-weight: normal;
   margin-top: 1rem;
 }
 
+.image-wrapper {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border-radius: 4px;
+  background: rgba(22, 22, 22, 0.03);
+  aspect-ratio: 1 / 1;
+}
+
+.world-description {
+  margin-top: 1rem;
+  color: var(--c-stone);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 /* 05 Knowledge */
+.section-intro {
+  max-width: 46rem;
+  margin-bottom: 2.5rem;
+  color: var(--c-stone);
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+}
+
 .knowledge-list {
   list-style: none;
   display: grid;
@@ -441,6 +495,14 @@ main section {
 }
 
 .knowledge-list .count {
+  color: var(--c-stone);
+}
+
+.content-state {
+  white-space: nowrap;
+}
+
+.content-state--planned {
   color: var(--c-stone);
 }
 
@@ -462,6 +524,14 @@ main section {
   font-family: var(--font-serif);
   font-size: var(--text-h3);
   font-weight: normal;
+}
+
+.site-thumbnail {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  justify-self: end;
+  border: 1px solid rgba(167, 162, 154, 0.45);
 }
 
 .status-active {
@@ -486,6 +556,15 @@ main section {
 }
 
 /* 09 Index */
+.index-section {
+  position: relative;
+}
+
+.legacy-anchor {
+  position: absolute;
+  top: 0;
+}
+
 .index-content {
   column-count: 3;
   column-gap: 4rem;
@@ -541,7 +620,16 @@ main section {
     padding-bottom: 1.25rem;
   }
 
+  .global-nav.has-open-menu {
+    margin-bottom: 22.75rem;
+  }
+
   .hero-content, .hero-sidebar, .section-label, .now-content, .featured-content, .knowledge-content, .sites-content, .latest-content, .index-content {
+    grid-column: 1 / 13;
+    min-width: 0;
+  }
+
+  .index-shell {
     grid-column: 1 / 13;
     min-width: 0;
   }

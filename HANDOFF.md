@@ -236,6 +236,64 @@ python3 -m http.server 8000 --directory docs
 ### Next Actions
 - 部署后再次核对 `#watch` iframe 在 HTTPS 下是否被 Bilibili X-Frame-Options 允许；如被拒，可考虑用哔哩哔哩官方 player 或改为图片 + 外链的降级方案。
 
+## 2026-07-23: Add repository-level website workflow skills
+
+### Current target
+
+为仓库加入两个可复用的网站工作流，并把共同的平台、设计、Git 与 Preview 规则追加到仓库级 Agent 约束中。
+
+### Completed
+
+- 在 `AGENTS.md` 末尾追加 `Website platform rules`，保留原有规则不变。
+- 新增 `.agents/skills/normalize-web-portfolio/SKILL.md`，用于审计、记录并分批标准化现有网站组合。
+- 新增 `.agents/skills/build-new-site-to-pr/SKILL.md`，用于将已确定的设计方向推进到 Figma、实现、浏览器 QA、Preview 与 PR。
+- 为两个技能生成 `agents/openai.yaml`，提供 Codex 界面名称、简述和默认调用提示。
+
+### Important decisions
+
+- 只统一工作流、基础设施、设计系统逻辑、QA 与交付标准，不强迫各站点使用相同视觉风格或框架。
+- `Figma` 是重大迁移和新网站工作流的强制门槛；若不可用，技能必须明确报告阻塞状态。
+- 两个技能均禁止直接修改或自动合并 `main`。
+
+### Verification status
+
+- Skill structure validation: Passed — 两个技能均通过 `quick_validate.py`。
+- Repository diff checks: Passed — `git diff --check` 无错误；原文代码块比对通过，`build-new-site-to-pr` 仅为修复 YAML 语法给 `description` 增加引号。
+- Pages build and validation: Passed — `npm run build:pages` 成功；`npm run validate:pages` 验证 39 个 HTML/CSS 文件中的 343 个本地引用。
+
+### Git state
+
+- Branch: `main`
+- Base commit: `3a91388`
+- Commit/push/PR: 未执行；用户只要求在本机加入文件。
+
+## 2026-07-23: Add the Visual Preservation Gate
+
+### Current target
+
+加强现有网站迁移的视觉保护，避免工程重构、设计系统迁移或 Figma 重建在未授权情况下改变站点样式。
+
+### Completed
+
+- 在 `.agents/skills/normalize-web-portfolio/SKILL.md` 中加入强制 `Visual Preservation Gate`。
+- 要求迁移前建立同路由、同状态、同视口的视觉基准，并记录字体、颜色、栅格、间距、图像裁切、响应式与动效契约。
+- 要求迁移后执行自动截图或感知比较（可用时）和人工并排/叠加复核。
+- 为 `PRESERVE`、`REFACTOR`、`REBUILD` 设置不同严格程度，并禁止只凭构建、测试、HTTP 200 或 Figma 对比声称视觉保真。
+- 要求 PR 提供基准、迁移后截图、差异报告、测试条件、已批准变化与剩余风险。
+- 在根 `AGENTS.md` 同步仓库级视觉保真规则。
+
+### Verification status
+
+- Skill structure validation: Passed — 更新后的 `normalize-web-portfolio` 通过 `quick_validate.py`。
+- Repository diff checks: Passed — `git diff --check` 无错误。
+- Pages build and validation: Passed — `npm run build:pages` 成功；`npm run validate:pages` 验证 39 个 HTML/CSS 文件中的 343 个本地引用。
+
+### Git state
+
+- Branch: `codex/normalize-web-portfolio`
+- Base commit: `3a91388`
+- Commit/push/PR: 未执行。
+
 ## 2026-07-21 (v3): HILDEGARD 图像 + 章节拆分 + 深色对比修复
 
 ### Current Target
@@ -345,3 +403,143 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 - Base / latest commit: `3a91388`
 - GitHub CLI: `gh 2.96.0`, authenticated to `github.com` as `TSRat`.
 - Commit / push / Draft PR: pending at this handoff update.
+
+## 2026-07-24: Clarify plugin priority in build-new-site-to-pr
+
+### Current target
+
+让新网站工作流清楚区分强制、强烈推荐和推荐能力，并让插件使用情况在交接中可见。
+
+### Completed
+
+- 只修改 `.agents/skills/build-new-site-to-pr/SKILL.md`；`normalize-web-portfolio` 保持不变。
+- 保留 Figma、真实浏览器 QA、GitHub/PR 和可验证 live preview 的强制门槛。
+- 将 Product Design、Creative Production、Data Analytics 和 Visualize 设为强烈推荐：默认在对应阶段使用，但在确实没有实质价值时可以跳过，且必须记录理由。
+- 将其他相关插件、App、Connector 和能力设为推荐使用；禁止为了凑插件数量调用无关能力。
+- 新增 capability usage record，并把使用结果、产物、跳过理由和阻塞项加入完成门槛与最终交接格式。
+
+### Personal homepage context
+
+本次没有修改或重新部署个人主页代码。此前 The Living Atlas 首批改造已经完成移动溢出、移动目录、英中搜索、跳到主要内容、键盘焦点、减弱动效、导航目标和共享轮播脚本，并已通过 PR #12 合并部署。六阶段仍不是全部完成：Product/UX、视觉基线、Figma、交互 QA 和生产部署已覆盖当前修正批次；Creative Production 未执行，Data Analytics 只有 provider-neutral 规范，后续应按新的 capability record 透明记录。
+
+### Verification to run
+
+- Skill structure validation
+- YAML parse and interface metadata check
+- `git diff --check`
+- Repository Pages build and asset validation, as required for documentation/skill-only changes
+
+### Git state
+
+- Branch: `codex/normalize-web-portfolio`
+- Existing unrelated working-tree changes were preserved.
+- Commit / push / PR: not performed for this local skill update.
+
+## 2026-07-24: Living Atlas content system v1
+
+### Current target
+
+完成 Living Atlas 信息架构、内容状态、自动列表和共享实现契约，使它成为其余五站及未来网站的第一份参考实现。
+
+### Completed
+
+- 建立 `THE-LIVING-ATLAS/content-registry.js` 与 `THE-LIVING-ATLAS/web-core.js`。
+- Worlds 明确为知识库、虚构小说、自媒体创作、交互项目；Knowledge 只负责知识库细分。
+- Sites 只渲染已发布且有真实 URL 的五个网站。
+- Now、Latest、Index 与 Search 使用同一双语 registry。
+- 移除全部 `href="#"`；planned / mapping / published / archived 状态形成跨站契约。
+- 修复英文 `lang` 与移动目录覆盖标题。
+- 新增 `web/content-system.md`、Living Atlas 专项测试和 Figma Content System v1。
+- README 权威项目表、组合审计、平台标准和站点文档已同步。
+
+### Important decisions
+
+- 不改变 Pages workflow、slug、URL 或生成目录。
+- 不迁移框架；先保留静态 ES Modules。
+- 不添加 analytics provider。
+- 当前 Web Core 随 Living Atlas 发布；仓库级 `shared/web-core/` 仍需要单独授权 build-map 变更。
+
+### Modified files
+
+- `THE-LIVING-ATLAS/index.html`
+- `THE-LIVING-ATLAS/zh.html`
+- `THE-LIVING-ATLAS/style.css`
+- `THE-LIVING-ATLAS/atlas.js`
+- `THE-LIVING-ATLAS/content-registry.js`
+- `THE-LIVING-ATLAS/web-core.js`
+- `THE-LIVING-ATLAS/CONTENT.md`
+- `THE-LIVING-ATLAS/DESIGN.md`
+- `THE-LIVING-ATLAS/TECH.md`
+- `THE-LIVING-ATLAS/HANDOFF.md`
+- `tests/living-atlas-content-system.test.mjs`
+- `package.json`
+- `README.md`
+- `web/content-system.md`
+- `web/platform-standard.md`
+- `web/portfolio-audit.md`
+- `HANDOFF.md`
+
+### Verification
+
+- `git diff --check`: Passed before handoff append; rerun required at final.
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed — 337 local references across 41 HTML/CSS files.
+- `npm run lint`: Passed — 0 errors, 24 existing warnings.
+- `npm run build`: Passed.
+- `npm test`: Passed — 5/5.
+- Browser QA: Passed for English / Chinese rendering, desktop / mobile containment, published filtering, Index, Search, mobile menu, carousel, and console health.
+- Figma: `TSRat Content System · v1`, node `18:2`; `Shared / Content Status`, node `18:47`; render QA passed.
+
+### Remaining
+
+- Actual Small Red Book / WeChat links need creator input.
+- Article-level Knowledge data and real counts are not ready.
+- Repository-level shared runtime publication needs explicit authorization to modify `scripts/build-github-pages.mjs`.
+- No commit, push, Preview, or PR has been performed.
+
+### Git state
+
+- Branch: `codex/living-atlas-content-system`
+- Base commit: `999e302`
+- Existing unrelated `HANDOFF.md` skill-priority changes and `.agents/skills/build-new-site-to-pr/` remain preserved.
+
+## 2026-07-24: Default branch delivery and unmerged Preview rule
+
+### Current target
+
+让每次网站可视改动在不直接修改或自动合并 `main` 的前提下，默认完成专用 branch、commit、push、Pull Request 和可直接浏览的未合并 Preview。
+
+### Completed
+
+- `AGENTS.md` 不再要求每次 commit、push、创建 / 更新 PR 都单独等待授权；网站任务验证通过后默认执行这些交付动作。
+- `merge` 仍需要创作者单独明确授权；继续禁止直接提交 `main`、force push 和自动合并。
+- 每次网站可视改动都必须提供无需 merge 即可打开的网页 Preview URL；PR 代码页、localhost 和 artifact 下载不能替代 Preview。
+- Preview 必须对应实际审查 branch / commit，并通过真实浏览器检查主要路由、资源、响应式、交互与控制台。
+- `normalize-web-portfolio` 的 Preview 从“有条件时提供”改为每个网站批次的强制门槛。
+- `build-new-site-to-pr` 继续保留强制 Preview / PR，并把文档输出从硬编码的 `docs/web/sites/` 改为仓库感知的 `<site-doc-root>`；本仓库使用 `web/sites/`。
+- `web/platform-standard.md` 同步默认交付与 Preview 规则。
+
+### Safety boundary
+
+- 默认交付授权不允许把来源不明或无关文件一起提交。
+- 不改变 GitHub Pages 的 `main` Actions artifact 架构。
+- 不自动 merge 当前或未来的 Pull Request。
+
+### Current delivery
+
+- Branch: `codex/living-atlas-content-system`
+- Commit: `d85c78c` — `build living atlas content system and review workflow`.
+- Push: completed to `origin/codex/living-atlas-content-system`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/13>.
+- Unmerged Preview: <https://raw.githack.com/TSRat/My-Website/codex/living-atlas-content-system/THE-LIVING-ATLAS/index.html>.
+- Merge: not performed.
+
+### Validation
+
+- `build-new-site-to-pr` and `normalize-web-portfolio`: `quick_validate.py` passed.
+- `git diff --check`: Passed.
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed — 337 local references across 41 HTML/CSS files.
+- `npm run build`: Passed.
+- `npm test`: Passed — 6 / 6.
+- `npm run lint`: Passed — 0 errors; 24 existing warnings outside this batch.

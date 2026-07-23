@@ -653,7 +653,7 @@ For each batch:
 2. implement migration;
 3. run tests;
 4. render and inspect;
-5. deploy a preview when possible;
+5. deploy a live preview of the exact review commit;
 6. create a Draft PR;
 7. include before/after summary;
 8. include the Visual Preservation Gate report and comparison artifacts;
@@ -683,7 +683,7 @@ This skill is not complete until:
 8. Important flows were tested in a real browser.
 9. No production branch was modified directly.
 10. Reviewable PRs exist for implemented migration batches.
-11. Preview URLs are included wherever deployment infrastructure allows them.
+11. Every website-facing batch has a verified Preview URL that is reachable before merge.
 12. The website project table is updated to reflect new implementation, Figma, preview, and status information.
 13. Every migrated existing site passes the Visual Preservation Gate or has an explicit named blocker and is not reported complete.
 
