@@ -32,6 +32,138 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    date: "2026-07-23",
+    displayDate: "2026.07.23",
+    issueNo: "10",
+    theme: "谁在定义探索，谁在建造证据？",
+    intro:
+      "今天的五个故事都把宏大的知识叙事拆回它的建造过程：Tejano 历史扩写美国起源，国家地理新馆把探索转化为沉浸式体验，银河系的姿态由一次古老并合重新解释，患者来源的迷你脑揭示药物反应差异，而女性健康组织试图把长期缺口变成一套可拨款、可监管、可追踪的公共基础设施。",
+    uniqueCount: 5,
+    topics: ["艺术人文", "社会科学", "女性主义"],
+    stories: [
+      {
+        category: "艺术人文 × 历史 × 音乐与文化身份",
+        image: "/story-images/tejano-legacy.jpg",
+        imageAlt: "马鞍、织物、乐谱、拱门与地图纸片跨越四百年叠合的 Tejano 历史编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释 Tejano 历史、物质文化与音乐传统，并非展品复制、历史地图或官方海报",
+        title: "在美国建国之前，Tejano 的美国故事已经开始",
+        summary:
+          "Briscoe Western Art Museum 用一场双语展览追溯近四百年 Tejano 历史，把牧场、信仰、军旅、音乐与当代艺术放回“美国起源”的中心，而不是边缘附录。",
+        happened:
+          "《Tejano Legacy: Another American Origin Story》于 7 月 23 日举行开幕活动、7 月 24 日向公众开放。展览从十六世纪延伸到今天，汇集美国与墨西哥的馆藏、私人收藏和当代委托作品；若干被墨西哥认定为文化与历史遗产的借展品首次在美国展出。",
+        importance:
+          "“美国西部”常被讲成英裔移民向空白土地推进的故事。马术、牧场、宗教、语言和音乐的物证显示，Tejano 社群并非后来加入，而是早已参与建造这些制度与文化。双语展签也不是翻译上的附加服务，而是在决定谁能以自己的语言成为历史主体。",
+        creatorAngle:
+          "选取马鞍、圣像、军刀、唱片和当代作品各一件，不按年代而按它们跨越边界的路线排列：谁制作、谁使用、何时被国家或博物馆重新命名，以及它怎样从生活工具变成“美国遗产”。",
+        facts: [
+          "展览覆盖近 400 年历史，从 16 世纪延伸至当代，并以英语和西班牙语双语呈现",
+          "展览包含 100 余件艺术品、器物与沉浸式叙事，是 Briscoe 创馆以来规模最宏大的展览",
+          "借展机构包括墨西哥国家人类学与历史研究所、国立历史博物馆、美国国会图书馆和 San Antonio Museum of Art 等",
+          "展览主题明确包括艺术、牧场传统、军旅、音乐、信仰与社群；部分墨西哥借展品为首次在美国展出",
+        ],
+        sourceName: "Briscoe Western Art Museum",
+        sourceUrl: "https://briscoemuseum.org/tejanolegacy/",
+        sourceDate: "展览信息发布 2026-07-08；开幕活动 2026-07-23",
+      },
+      {
+        category: "艺术人文 × 博物馆 × 媒介与制度",
+        image: "/story-images/museum-of-exploration.jpg",
+        imageAlt: "沉浸式展厅、投影地球、展柜与票务门槛被拼贴成一台探索机器的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于讨论沉浸式博物馆、赞助与探索叙事，并非 National Geographic 场馆照片、品牌图像或展陈复制",
+        title: "当“探索”变成十万平方英尺的沉浸式产品",
+        summary:
+          "华盛顿新开的 National Geographic Museum of Exploration 用投影、互动媒体和探险档案把“探索者”塑造成公众身份；与此同时，票价、赞助和机构自述也在决定谁能进入、谁被看见。",
+        happened:
+          "新馆于 6 月 26 日开放，本周进入首轮集中评论。它在 National Geographic Society 总部提供 100,000 平方英尺互动空间，以 Photo Ark、探险装备、环境影像和沉浸式装置组织参观；馆方把门票收入直接描述为对全球 Explorer 项目的支持。",
+        importance:
+          "沉浸技术能把遥远环境变得可感，却也容易把殖民测绘、媒体所有权和赞助关系藏在“身临其境”的效果之后。真正值得观察的不是互动是否炫目，而是展览如何区分发现、记录、占有与保护，以及谁有资格被称为探索者。",
+        creatorAngle:
+          "把一次参观拆成四条并行路线：观众看到的壮观影像、物件原来的采集路线、项目的资金来源，以及被拍摄社群的署名与反馈入口。比较每一层在沉浸界面里占了多少空间。",
+        facts: [
+          "National Geographic Museum of Exploration 于 2026 年 6 月 26 日在华盛顿特区开放",
+          "新馆提供 100,000 平方英尺的互动空间与媒体体验",
+          "主要内容包括 Photo Ark、Explorer 装备、Geoverse 与海洋主题沉浸式体验",
+          "馆方为 SNAP 与 WIC 家庭提供每张 3 美元的 Museums for All 门票，并说明一般门票收入用于支持 Explorer 项目",
+        ],
+        sourceName: "National Geographic Society；Financial Times",
+        sourceUrl: "https://moe.nationalgeographic.org/en",
+        sourceDate: "开馆新闻稿 2026-03-26；评论 2026-07-23",
+      },
+      {
+        category: "社会科学 × 天文学 × 模型与观测基础设施",
+        image: "/story-images/milky-way-disc-flip.jpg",
+        imageAlt: "倾斜的银河盘与香肠状恒星流、轨道线和模拟网格相交的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释银河并合与盘面翻转模型，并非 Gaia 观测图、真实天文照片或论文模拟截图",
+        title: "银河系的“上方”可能是一次撞击留下的",
+        summary:
+          "Durham University 团队用 Gaia 观测约束超级计算机模拟，提出约一百亿年前的 Gaia Sausage 正面并合曾让银河盘翻转超过九十度，并解释恒星晕为何转得异常缓慢。",
+        happened:
+          "研究者原本在追查银河盘恒星约每秒 220 公里、恒星晕仅约每秒 25 公里的旋转差异。模拟显示，质量接近 Gaia Sausage 的矮星系若正面撞入早期银河系，会在数亿年内重定向整个盘面，并留下缓慢旋转、偏心轨道明显的恒星晕。",
+        importance:
+          "天文学没有在银河系外架设摄像机回看历史，而是把恒星运动、化学组成和数值模拟拼成可检验的过去。这个结论因此不是一张“碰撞照片”，而是观测任务、超级计算机和模型选择共同生产的解释；新数据仍可能改变翻转幅度与时间线。",
+        creatorAngle:
+          "制作一张“证据到叙事”的分层动画：先只显示 Gaia 测得的速度与轨道，再加入并合模拟，最后才出现翻转的银河盘；让观众清楚看到哪些是测量、哪些是模型推断。",
+        facts: [
+          "相关并合约发生在 100 亿年前，研究团队提出银河盘可能翻转超过 90 度",
+          "银河盘恒星绕中心运行约为每秒 220 公里，恒星晕平均旋转约为每秒 25 公里",
+          "模拟显示盘面重定向并非瞬间发生，而至少持续数亿年",
+          "Gaia Sausage 的恒星、气体与暗物质总量曾超过太阳质量的 100 亿倍；研究结果在 2026 年英国皇家天文学会全国会议上报告",
+        ],
+        sourceName: "Durham University／Royal Astronomical Society；The Guardian",
+        sourceUrl: "https://www.theguardian.com/science/2026/jul/21/milky-way-disc-flip-collision-dwarf-galaxy-astronomers",
+        sourceDate: "2026-07-21",
+      },
+      {
+        category: "社会科学 × 心理与健康 × 科研方法",
+        image: "/story-images/alzheimers-organoids.jpg",
+        imageAlt: "培养皿里的微型神经组织、分叉神经元与不同药物反应路径的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释患者来源脑类器官与药物反应差异，并非显微照片、患者组织或临床结果",
+        title: "同一种药，在不同“迷你脑”里走向不同结局",
+        summary:
+          "Johns Hopkins 团队用患者血细胞培养数百个后脑类器官，发现阿尔茨海默病相关组织对常用抗抑郁药的分子反应并不一致；这是个体化研究工具的早期证据，不是已经可用的治疗预测。",
+        happened:
+          "研究者把阿尔茨海默病患者与健康参与者的血细胞重编程为诱导多能干细胞，再培养为豌豆大小、能产生血清素神经元的后脑类器官。团队比较 escitalopram 治疗前后的蛋白质和细胞外囊泡，观察到疾病相关蛋白与药物反应的异质性。",
+        importance:
+          "精神和行为症状几乎影响所有阿尔茨海默病患者，但药物反应差异很大。类器官让研究者在不直接试错于患者的情况下比较亚群，却仍缺少真实脑中的免疫、血管和长期环境。最危险的误读，是把一个实验室模型提前包装成“替你选药”的临床服务。",
+        creatorAngle:
+          "画出从血样、重编程、类器官、药物处理到囊泡分析的完整链条，并在每一步标出模型失去的现实条件。用多条不同颜色的反应路径替代单一“有效／无效”结论。",
+        facts: [
+          "研究使用患者来源细胞培养数百个豌豆大小的后脑类器官，作者称其可能是阿尔茨海默病领域规模最大的类器官研究之一",
+          "类器官含有产生血清素的神经元，研究药物为常用 SSRI escitalopram oxalate",
+          "阿尔茨海默病类器官中的 RAB3A、NSF 与 ATCAY 等神经信号相关蛋白水平较低",
+          "研究发表于《Alzheimer's & Dementia》，DOI 为 10.1002/alz.71273；团队明确称液体活检与临床预测仍属未来目标",
+        ],
+        sourceName: "Johns Hopkins Medicine；Alzheimer's & Dementia",
+        sourceUrl: "https://www.sciencedaily.com/releases/2026/07/260721000844.htm",
+        sourceDate: "2026-07-22",
+      },
+      {
+        category: "女性主义 × 健康 × 研究与照护制度",
+        image: "/story-images/womens-health-infrastructure.jpg",
+        imageAlt: "研究、监管、数据、人才与公众知识五个支柱由照护路径连接的女性健康制度编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释女性健康研究与照护基础设施，并非患者、医护人员、政府文件或组织标志",
+        title: "女性健康缺口需要的不只是更多试验，而是一整套基础设施",
+        summary:
+          "三家美国女性健康组织联合三十余个伙伴，要求国会十年投入 200 亿美元，把研究、监管、数据、人才与公众教育连接成一项国家策略。",
+        happened:
+          "ACOG、Society for Women's Health Research 与 Women First Research Coalition 发布《National Strategy to Close the Women's Health Gap》。框架提出五项投资重点：研究创新、跨机构监管协调、数据与证据基础设施、临床和研究人才，以及公众健康素养。",
+        importance:
+          "1993 年法律要求 NIH 资助的临床研究纳入女性，解决了“谁被招募”的一部分，却没有自动修复研究主题、数据共享、成果转化与实际照护。新框架的价值在于把缺口写成制度链条；局限则是它目前仍是一份倡议，200 亿美元尚未成为拨款，也缺少逐项绩效指标。",
+        creatorAngle:
+          "把“女性健康”画成五节点公共工程：每个节点列出负责机构、资金流、可检验产出与失败方式。另设一栏区分倡议金额、已授权资金和已实际支出，避免把政策主张当成预算事实。",
+        facts: [
+          "框架呼吁国会在 10 年内投资 200 亿美元",
+          "策略由 ACOG、SWHR 与 Women First Research Coalition 发起，并获 30 余家专业、患者和研究组织支持",
+          "五个重点是研究创新、监管现代化、数据基础设施、临床与研究人才、公众教育",
+          "1993 年 NIH Revitalization Act 已要求 NIH 资助的临床研究纳入女性；新策略认为仍需补足研究到照护的实施链条",
+        ],
+        sourceName: "Society for Women's Health Research；Endocrine Society",
+        sourceUrl: "https://www.endocrine.org/news-and-advocacy/news-room/2026/leading-womens-health-organizations-launch-national-strategy-to-close-the-womens-health-gap",
+        sourceDate: "2026-07-15；伙伴更新 2026-07-21",
+      },
+    ],
+  },
+  {
     date: "2026-07-22",
     displayDate: "2026.07.22",
     issueNo: "09",
