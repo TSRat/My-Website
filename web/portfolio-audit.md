@@ -3,6 +3,7 @@
 - Audit date: 2026-07-23
 - Branch: `codex/normalize-web-portfolio`
 - Base commit: `3a91388`
+- Last implementation update: 2026-07-24 on `codex/living-atlas-template-data`
 - Authoritative registry: [`README.md`](../README.md#当前项目)
 - Platform standard: [`web/platform-standard.md`](./platform-standard.md)
 - Figma: [TSRat Web Design System · Portfolio Normalization](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt)
@@ -13,7 +14,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 
 | Site | Classification | Interaction tier | Migration status | Primary blocker |
 | --- | --- | --- | --- | --- |
-| The Living Atlas | REFACTOR | B — Interactive | Content registry and Web Core v1 merged in PR #13; Data / starter batch in progress | Shared runtime publication needs explicit Pages build-map authorization |
+| The Living Atlas | REFACTOR | B — Interactive | Content system merged in PR #13; Data / starter implemented in Draft PR #14 | Shared runtime publication needs explicit Pages build-map authorization |
 | IVORY ARCHIVE | PRESERVE | B — Interactive | Audited; no implementation migration started | Dynamic and Pages renderers need explicit parity tests |
 | Enheduanna | REFACTOR | A — Editorial | Audited; implementation blocked | No reproducible source-to-mirror build; tablet overflow exists in the deployed mirror |
 | Hildegard | PRESERVE | A — Editorial | Audited; no implementation migration started | Long-page visual comparison must use deterministic sections |
@@ -72,9 +73,9 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Target architecture:** Retain a lightweight static site. Introduce accessible shared primitives and an explicit data layer before considering a framework migration.
 - **Shared-core adoption:** Focus treatment, skip navigation, content widths, breakpoints, motion preference, search/dialog behavior, and QA conventions.
 - **Site-specific theme:** Preserve the ivory editorial atlas, monumental serif typography, cobalt system, asymmetric grid, imagery, and metadata voice.
-- **Migration status:** Corrective and content-system batches merged through PR #13. The Data / reusable starter batch is implemented on `codex/living-atlas-template-data`.
+- **Migration status:** Corrective and content-system batches merged through PR #13. The Data / reusable starter batch is implemented and reviewable in Draft PR #14.
 - **Figma URL:** [Portfolio design system](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt); [TSRat Data & Analytics · v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=19-2).
-- **Preview / PR URL:** PR #13 is merged; the Data / starter batch Preview and PR are pending final verification.
+- **Preview / PR URL:** [Unmerged English Preview](https://raw.githack.com/TSRat/My-Website/codex/living-atlas-template-data/THE-LIVING-ATLAS/index.html); [Chinese Preview](https://raw.githack.com/TSRat/My-Website/codex/living-atlas-template-data/THE-LIVING-ATLAS/zh.html); [Draft PR #14](https://github.com/TSRat/My-Website/pull/14). Remote browser QA passed.
 - **Remaining risks:** Small Red Book and WeChat URLs remain unknown and are non-clickable planned states. Article-level Knowledge data does not yet exist. Moving Web Core to a repository-level runtime requires a protected build-map change.
 
 ## IVORY ARCHIVE
@@ -219,8 +220,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 
 ## Migration queue
 
-1. Install/authenticate GitHub CLI, publish the Living Atlas corrective batch as a Draft PR, and preserve the Figma comparison evidence in the PR.
-2. Add IVORY dynamic/static parity checks without changing its rendered design.
-3. Recover or explicitly reconstruct Enheduanna’s source-to-mirror build before fixing the deployed tablet overflow.
-4. Add section-based visual regression coverage for Hildegard and Hypatia.
-5. Recover Melromarc upstream source or obtain explicit approval for a rebuild before implementation.
+Living Atlas is now the reviewable reference implementation in Draft PR #14.
+The authoritative remaining order is the four-batch table near the top of this
+file: IVORY ARCHIVE; Hypatia + Hildegard; Enheduanna after build recovery;
+Melromarc after source recovery or explicit rebuild approval.

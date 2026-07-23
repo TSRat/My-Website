@@ -587,5 +587,10 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 
 - Branch: `codex/living-atlas-template-data`
 - Base: `origin/main` merge commit `16e9706`
-- Commit / push / Draft PR / Preview: pending at this handoff update.
+- Implementation commit: `0c7c33b` — `add living atlas data entry and migration starter`
+- Push: completed to `origin/codex/living-atlas-template-data`.
+- Unmerged Preview: <https://raw.githack.com/TSRat/My-Website/codex/living-atlas-template-data/THE-LIVING-ATLAS/index.html>
+- Chinese Preview: <https://raw.githack.com/TSRat/My-Website/codex/living-atlas-template-data/THE-LIVING-ATLAS/zh.html>
+- Draft PR: <https://github.com/TSRat/My-Website/pull/14>
+- Remote Preview QA: Passed — 英中 Data、16 个 Index links、移动 Search → Data、无横向溢出、0 console errors。
 - Merge: not authorized and not performed.
