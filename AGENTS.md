@@ -198,3 +198,120 @@ Do not replace the existing GitHub Actions deployment architecture with
 ```
 
 不得只说“完成”而省略验证状态和未解决风险。
+
+# Website platform rules
+
+## Source of truth
+
+The authoritative website project table is the registry for all public website projects.
+
+Every website workflow must:
+- read it before making portfolio-level changes;
+- update it when a site is created, migrated, renamed, deployed, or archived;
+- never create a competing registry without explicit instruction.
+
+## Six-stage website standard
+
+All substantial website creation or modernization follows:
+
+1. Product / UX
+2. Visual exploration / creative production
+3. Figma design system
+4. Interactive prototype + design QA
+5. Production engineering + GitHub + preview deployment
+6. Data / analytics
+
+The depth of each stage should match the complexity of the site.
+
+A simple editorial site must not be over-engineered.
+A complex dynamic product must not be reduced to a static mockup.
+
+## Design philosophy
+
+Unify infrastructure, not identity.
+
+Sites may share:
+- semantic foundations
+- accessibility standards
+- spacing logic
+- engineering primitives
+- common components
+- QA standards
+- deployment conventions
+
+Sites should preserve distinct:
+- art direction
+- palette
+- imagery
+- narrative voice
+- historical or cultural motifs
+- project-specific interactions
+
+Never make all sites visually identical merely for consistency.
+
+## Figma
+
+For substantial new sites and major redesigns, Figma is the design source of truth.
+
+Reuse existing shared libraries before creating new primitives.
+
+A screenshot alone is not a completed Figma design.
+
+## Visual preservation gate
+
+For migration or engineering refactors of existing sites, the current rendered site is the visual baseline.
+
+Before changing implementation:
+- capture representative routes and interactive states;
+- capture matching desktop, tablet, and mobile screenshots;
+- record typography, color, spacing, grid, imagery, crops, responsive behavior, and motion that must remain stable.
+
+After migration:
+- render the exact review branch under the same browser, viewport, device pixel ratio, fonts, content, and state;
+- run screenshot or perceptual comparison when available;
+- always perform human side-by-side or overlay review;
+- document every visible difference and fix any difference that was not explicitly approved.
+
+Build, lint, tests, HTTP 200, or comparison only against a reconstructed Figma file do not prove visual preservation.
+
+For `PRESERVE` sites, any unapproved visible difference fails the gate. For `REFACTOR` sites, only documented bug, accessibility, or responsive corrections may change appearance without separate redesign approval. For `REBUILD` sites, preserve recognizable visual identity and require explicit human approval when pixel matching is infeasible.
+
+If a valid pre-migration baseline or browser comparison cannot be produced, report visual verification as blocked and do not claim the migration is complete.
+
+## Git safety
+
+Never commit directly to `main`.
+
+Use dedicated branches and Pull Requests.
+
+Do not merge automatically.
+
+Do not delete remote branches or production assets unless explicitly authorized.
+
+Preserve existing public URLs whenever possible.
+
+## Preview requirement
+
+New websites and substantial redesigns must have a verified live preview before final handoff.
+
+A successful build is not equivalent to a working website.
+
+Open the preview in a real browser and verify:
+- primary routes
+- assets
+- responsive behavior
+- major interactions
+- console health
+
+## Completion
+
+A new-site task is not done until the handoff includes:
+
+- Figma URL
+- verified Preview URL
+- Pull Request URL
+
+A portfolio migration is not done until:
+- every project-table site has a documented current state;
+- target migration status is recorded;
+- implemented changes are reviewable through PRs.

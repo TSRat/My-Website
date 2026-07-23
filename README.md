@@ -15,14 +15,16 @@
 
 ## 当前项目
 
-| 项目 | 用途 | 主要维护位置 | GitHub Pages URL |
-| --- | --- | --- | --- |
-| The Living Atlas | 总入口主站，一个人的开放档案馆 | `THE-LIVING-ATLAS/` | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) |
-| IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `app/briefings.ts`、`app/`、`public/`、`scripts/build-github-pages.mjs` | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) |
-| Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；当前 Pages 输入镜像在 `ENHEDUANNA/` | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) |
-| Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `HILDEGARD/` | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) |
-| Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `HYPATIA/` | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) |
-| Melromarc Sisters | Malty 与 Melty 的非官方多重故事档案 | `MELROMARC-SISTERS/` | [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/) |
+| 项目 | 用途 | 主要维护位置 | GitHub Pages URL | 审核分级 | 迁移 / 审查状态 |
+| --- | --- | --- | --- | --- | --- |
+| The Living Atlas | 总入口主站，一个人的开放档案馆 | `THE-LIVING-ATLAS/` | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) | REFACTOR | 首批响应式 / 可访问性修复已完成本地验证；Draft PR 准备中 |
+| IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `app/briefings.ts`、`app/`、`public/`、`scripts/build-github-pages.mjs` | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) | PRESERVE | 已审计；暂未开始实现迁移 |
+| Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；当前 Pages 输入镜像在 `ENHEDUANNA/` | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) | REFACTOR | 已审计；缺少可重复源码 → 镜像构建，实施阻塞 |
+| Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `HILDEGARD/` | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 已审计；暂未开始实现迁移 |
+| Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `HYPATIA/` | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) | REFACTOR | 已审计；等待独立的静态资产 / 响应式批次 |
+| Melromarc Sisters | Malty 与 Melty 的非官方多重故事档案 | `MELROMARC-SISTERS/` | [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/) | REBUILD | 已审计；完整上游源码与可重复构建未确认 |
+
+组合级详细审计见 [`web/portfolio-audit.md`](./web/portfolio-audit.md)，六阶段平台标准见 [`web/platform-standard.md`](./web/platform-standard.md)。共享 Figma 设计源为 [TSRat Web Design System · Portfolio Normalization](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt)。
 
 ### 真实来源与静态快照
 
@@ -41,6 +43,7 @@ My-Website/
 ├── AGENTS.md
 ├── TECH.md
 ├── HANDOFF.md
+├── web/                         # 组合级网站审计与平台标准（受版本控制的源文档）
 ├── .github/workflows/publish-static-mirror.yml
 ├── app/                         # IVORY ARCHIVE 的动态应用与内容数据
 ├── public/                      # IVORY ARCHIVE 的图片和公共资源
@@ -137,6 +140,8 @@ npm run lint
 - [AGENTS.md](./AGENTS.md)：所有 AI Coding Agent 的工作规则
 - [TECH.md](./TECH.md)：全局技术架构、资产路径与部署约束
 - [HANDOFF.md](./HANDOFF.md)：仓库当前状态、风险与下一步
+- [web/portfolio-audit.md](./web/portfolio-audit.md)：六个公开网站的详细现状、分级、Figma、迁移状态与风险
+- [web/platform-standard.md](./web/platform-standard.md)：共享六阶段标准、分层要求、视觉保护、QA 与分析事件规范
 
 项目内：
 
