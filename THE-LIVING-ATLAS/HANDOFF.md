@@ -215,3 +215,124 @@
 - `npm test`: Passed — 6 / 6.
 - `npm run lint`: Passed with 0 errors and 24 existing warnings outside this change.
 - Pending at handoff update time: commit, push, PR readiness, and the creator's explicitly authorized merge.
+
+## 2026-07-24: Reusable migration starter and Data entry
+
+### 当前目标
+
+在不改变 Living Atlas 编辑档案视觉身份的前提下，把首批实现整理为后续网站可按能力采用的 starter，并加入真实可达但不虚构内容或指标的 Data 入口。
+
+### 已完成
+
+- 新增 `analytics.js`：provider-neutral、默认 no-op，不发网络请求、不写 cookie / storage、不采集身份。
+- Data 已进入英文 / 中文桌面导航、移动目录、自动 Index 和 Search。
+- 新增可见 Data empty state，明确显示 `Provider: none`、`Storage: none`、`Identity: not collected` 与 planned 状态。
+- Search、已发布站点和 Data 入口连接到受白名单限制的事件契约；原始搜索文本会被丢弃。
+- `web/templates/site-starter/` 提供 manifest、registry、Data 入口、analytics adapter 和迁移清单示例；它们是复制后适配的源码，不是强迫所有站点共享视觉的 runtime。
+- `web/analytics-standard.md` 定义 provider 启用门槛、候选指标和隐私边界。
+- Figma 增加可编辑 `TSRat Data & Analytics · v1` 画面，记录事件契约、隐私边界和 Living Atlas Data empty state。
+
+### 视觉与交互验证
+
+- Baseline: deployed `main` commit `16e9706`。
+- Desktop `1440 × 900`、tablet `1024 × 768`、mobile `390 × 844` 均检查。
+- Home、Index、mobile menu、Search 使用 baseline / review 组合图进行人工并排审查。
+- 只发现并批准了 Data 导航项、Index `D` 组、移动目录行、Search 结果和新 Data 区域；没有发现其他非预期视觉差异。
+- 英中 Data、移动目录、Search → Data、响应式无横向溢出和控制台健康均通过。
+- 证据与结论：`web/evidence/living-atlas-template-data/visual-regression.md`。
+
+### 重要决定
+
+- Data 是信息架构入口，不等于当前已经部署 analytics provider。
+- 内容和真实数据未成熟时不编造 dashboard、目标值、基准或增长结论。
+- 后续站点复用语义、隐私、事件、可访问性、QA 和交接模板；各站继续保留自己的视觉身份、内容模型和框架。
+- 推荐迁移顺序：IVORY ARCHIVE；Hypatia / Hildegard；确认 Enheduanna 构建链后；确认 Melromarc 上游源码或重建授权后。
+
+### 修改文件
+
+- `THE-LIVING-ATLAS/analytics.js`
+- `THE-LIVING-ATLAS/atlas.js`
+- `THE-LIVING-ATLAS/web-core.js`
+- `THE-LIVING-ATLAS/index.html`
+- `THE-LIVING-ATLAS/zh.html`
+- `THE-LIVING-ATLAS/style.css`
+- `THE-LIVING-ATLAS/CONTENT.md`
+- `THE-LIVING-ATLAS/DESIGN.md`
+- `THE-LIVING-ATLAS/TECH.md`
+- `THE-LIVING-ATLAS/HANDOFF.md`
+- `tests/living-atlas-content-system.test.mjs`
+- `web/templates/site-starter/`
+- `web/analytics-standard.md`
+- `web/content-system.md`
+- `web/platform-standard.md`
+- `web/portfolio-audit.md`
+- `web/evidence/living-atlas-template-data/`
+- `README.md`
+- `TECH.md`
+- `HANDOFF.md`
+
+### 验证
+
+- `node --check`: Passed（Living Atlas 和 starter JavaScript）。
+- `node --test tests/living-atlas-content-system.test.mjs`: Passed — 7 / 7。
+- `npm run build:pages`: Passed。
+- `npm run validate:pages`: Passed — 337 references across 41 HTML/CSS files。
+- `npm run build`: Passed。
+- `npm test`: Passed — 8 / 8。
+- `npm run lint`: Passed — 0 errors；24 个既有 warnings 位于本批之外。
+- Remote Preview QA: Passed — 英中 Data 状态、16 个 Index links、移动 Search → Data、无横向溢出与控制台 0 errors。
+
+### Git 状态
+
+- Branch: `codex/living-atlas-template-data`
+- Base: `origin/main` at merge commit `16e9706`
+- Implementation commit: `0c7c33b` — `add living atlas data entry and migration starter`
+- Push: completed to `origin/codex/living-atlas-template-data`.
+- Unmerged Preview: <https://raw.githack.com/TSRat/My-Website/codex/living-atlas-template-data/THE-LIVING-ATLAS/index.html>
+- Chinese Preview: <https://raw.githack.com/TSRat/My-Website/codex/living-atlas-template-data/THE-LIVING-ATLAS/zh.html>
+- Draft PR: <https://github.com/TSRat/My-Website/pull/14>
+- Merge: creator authorized PR #14 on 2026-07-24; this batch is intended to land through that PR after the validation-policy configuration commit.
+
+## 2026-07-24: Restore Worlds ambiguity
+
+### 当前目标
+
+撤回把 Worlds 解释成作品类型目录的显式分类，恢复创作者原本有意保留的含混性，并删除 Knowledge 与 The Index 的说明段落。
+
+### 已完成
+
+- Worlds 恢复旧版可见标题：`Knowledge / Story / Media / Interaction`；中文为“知识 / 故事 / 媒体 / 交互”。
+- 删除四张 World 卡片的全部说明文字及对应渲染 / 样式。
+- 删除英文和中文 Knowledge、The Index 各自的说明段落。
+- 保留四张图片、编号、顺序、网格、响应式、Index 自动生成和 Search 行为。
+- 增加回归测试，锁定四个开放标题、无 `description` 字段及无两段说明文字。
+- `CONTENT.md`、`DESIGN.md` 与跨站内容系统明确：Worlds 不是作品集分类，不得再添加一一对应关系或穷尽式解释。
+- Figma `TSRat Content System · v1` 的 Worlds 定义已改为开放入口，组件和布局未改变。
+
+### 重要决定
+
+- “含混”是创作者明确的内容与设计意图，不是待修复的信息架构缺口。
+- 内部稳定 ID 只服务渲染和链接；不能据此向读者解释每个 World “对应”哪一类作品。
+- Knowledge 与 Index 可以保持结构化功能，但不需要在页面上自我解释。
+
+### 验证
+
+- Targeted tests: Passed — 8 / 8。
+- Pages build / asset validation: Passed — 337 references across 41 HTML/CSS files。
+- Browser: English / Chinese，desktop / mobile，Worlds / Knowledge / Index 均通过。
+- Responsive: desktop `1425 ≤ 1440`；English mobile `388 ≤ 390`；Chinese mobile `375 ≤ 390`。
+- Console: 0 errors。
+- Visual gate: Passed；比较证据在 `web/evidence/living-atlas-ambiguity-correction/visual-regression.md`。
+- 完整 checks: Passed — `npm run build`；`npm test` 9 / 9；`npm run lint` 0 errors、24 个既有 warnings。
+- 远程 Preview QA 在 push 后执行。
+
+### Git 状态
+
+- Branch: `codex/living-atlas-template-data`
+- Draft PR: <https://github.com/TSRat/My-Website/pull/14>
+- Correction commit: `2b7fa13` — `restore living atlas worlds ambiguity`.
+- Push: completed to `origin/codex/living-atlas-template-data`.
+- Exact Preview QA: Passed for English desktop and Chinese mobile; no broken images or horizontal overflow.
+- Exact English Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/index.html#worlds>
+- Exact Chinese Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/zh.html#worlds>
+- Merge: creator authorized PR #14 on 2026-07-24; perform after the validation-policy configuration commit is pushed.

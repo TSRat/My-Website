@@ -1,4 +1,5 @@
 import { livingAtlasContent } from "./content-registry.js";
+import { analytics } from "./analytics.js";
 import {
   createSearchEntries,
   getLocale,
@@ -11,6 +12,37 @@ import {
   renderSites,
   renderWorlds,
 } from "./web-core.js";
+
+const getInteractionSource = (link) => {
+  if (link.closest(".mobile-menu")) return "mobile_menu";
+  if (link.closest(".global-nav")) return "primary_navigation";
+  if (link.closest(".index-section")) return "index";
+  if (link.closest(".search-dialog")) return "search";
+  return "content";
+};
+
+const initAnalyticsHooks = () => {
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest?.("a");
+    if (!link) return;
+
+    if (link.matches("[data-content-id]")) {
+      analytics.track("published_site_opened", {
+        contentId: link.dataset.contentId,
+        interactionSource: getInteractionSource(link),
+        properties: { content_type: "site" },
+      });
+    }
+
+    if (link.getAttribute("href") === "#data") {
+      analytics.track("data_section_opened", {
+        contentId: "data",
+        interactionSource: getInteractionSource(link),
+        properties: { content_type: "section" },
+      });
+    }
+  });
+};
 
 const initCarousel = () => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -99,5 +131,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initCarousel();
   initMobileMenu();
-  initSearch(createSearchEntries(livingAtlasContent, locale));
+  initSearch(createSearchEntries(livingAtlasContent, locale), document, {
+    onSearch: ({ queryLength, resultCount }) => {
+      analytics.track("search_performed", {
+        contentId: "index",
+        interactionSource: "search",
+        properties: {
+          query_length: queryLength,
+          result_count: resultCount,
+        },
+      });
+    },
+    onResultOpen: (entry) => {
+      analytics.track("search_result_opened", {
+        contentId: entry.id ?? entry.href,
+        interactionSource: "search",
+        properties: { content_type: entry.type },
+      });
+    },
+  });
+  initAnalyticsHooks();
 });

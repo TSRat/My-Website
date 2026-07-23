@@ -75,7 +75,7 @@ Current shared Figma structure:
 Mandatory:
 
 - Core navigation, links, calls to action, search, filters, dialogs, and stateful controls must work.
-- Keyboard access, focus visibility, focus return, and reduced-motion behavior must be verified when applicable.
+- Codex smoke-checks the changed primary behavior. Antigravity verifies full keyboard access, focus visibility / return, reduced motion, and secondary states when applicable.
 - Compare implementation and accepted visual target at identical viewports and states.
 
 Optional:
@@ -92,10 +92,10 @@ Mandatory:
 - Distinguish source, generated output, deploy mirror, and historical snapshot.
 - Use semantic HTML, accessible controls, explicit content/data boundaries, and reproducible builds.
 - Work on a dedicated branch; never commit directly to `main`.
-- Run repository-required build, test, lint, asset, browser, and diff checks.
+- Run the smallest relevant build, targeted test or lint, asset, and diff checks required to prevent an obviously broken submission.
 - Use a reviewable Pull Request and do not merge automatically.
 - Commit and push verified website work by default, then create or update its Pull Request unless the creator explicitly requests local-only work.
-- Provide a directly viewable, browser-verified Preview URL for every website-facing change. The Preview must render the exact review branch / commit and remain reachable before merge.
+- Provide a directly viewable Preview URL for every website-facing change. Codex performs a basic smoke check on the exact review branch / commit; Antigravity owns extended browser and visual QA.
 
 Repository-specific constraints:
 
@@ -116,6 +116,8 @@ Mandatory:
 - Record the current analytics provider, tracked events, privacy implications, and missing measurement.
 - Do not silently add an analytics provider, cookies, fingerprints, or cross-site tracking.
 - When no provider exists, maintain a provider-neutral event contract.
+- Keep a visible Data entry with an honest provider/availability state; an empty
+  state is preferable to invented metrics or a missing future extension point.
 
 Base event envelope:
 
@@ -151,6 +153,11 @@ Optional:
 - Tier B should include meaningful interaction events.
 - Tier C should add metric definitions, denominators, retention windows, privacy review, and dashboard ownership.
 
+Reference:
+
+- [`analytics-standard.md`](./analytics-standard.md)
+- [`templates/site-starter/`](./templates/site-starter/)
+
 ## Shared foundations
 
 The concrete content and interaction reference is documented in [`content-system.md`](./content-system.md). Its stable IDs, publication states, bilingual field shape, link rules, and provider interfaces are shared platform contracts; its Living Atlas palette and composition are not.
@@ -172,23 +179,21 @@ Shared foundations do not require identical component styling. A skip link, butt
 
 ## Visual preservation gate
 
-Before implementation:
+Codex minimum before submission:
 
-1. Render the current base revision or production site.
-2. Capture representative routes, anchors, and interactive states.
-3. Capture desktop `1440×900`, tablet `1024×768`, and mobile `390×844` unless the repository defines other viewports.
-4. Record browser, device pixel ratio, fonts, locale, content, theme, and state.
-5. Record typography, color, grid, spacing, imagery, crop, navigation, and responsive transformations.
+1. Inspect the current rendered baseline or a valid prior reference.
+2. Render the changed target route from the exact review commit or local artifact.
+3. Confirm the requested change, primary assets, and obvious layout containment.
+4. Check one related narrow viewport only when responsive behavior changed.
 
-After implementation:
+Antigravity extended QA:
 
-1. Render the exact review branch and commit under matching conditions.
-2. Capture the same states and viewports.
-3. Run pixel or perceptual comparison when available.
-4. Always perform human side-by-side or overlay review.
-5. Classify every difference and fix unapproved regressions.
+1. Capture representative routes, anchors, interactions, desktop, tablet, and mobile.
+2. Stabilize browser, device pixel ratio, fonts, locale, content, theme, and state.
+3. Run screenshot or perceptual comparison plus human side-by-side / overlay review.
+4. Classify differences and report regressions for correction.
 
-When long-page screenshot composition is unreliable, replace it with deterministic section or anchor captures that collectively cover the changed surface. Do not use a known-invalid long screenshot as evidence.
+When long-page screenshot composition is unreliable, Antigravity should use deterministic section or anchor captures. Do not use a known-invalid long screenshot as evidence.
 
 Strictness:
 
@@ -198,26 +203,24 @@ Strictness:
 
 ## Required verification
 
-Repository-wide minimum:
+Codex repository minimum:
 
 ```bash
 git diff --check
 git status --short
 git diff --stat
-npm run build:pages
-npm run validate:pages
 ```
 
-Run `npm run build`, `npm test`, and `npm run lint` when the implementation scope touches application code or shared engineering behavior. The repository has no independent `typecheck` script.
+Run `npm run build:pages` and `npm run validate:pages` for Pages, static-asset, or public-path changes. Run the smallest applicable build, targeted test, or lint when application code, shared runtime, or build behavior changes. Pure documentation, rules, or skill changes need only their own validation and Git diff checks. The repository has no independent `typecheck` script.
 
-Browser QA must cover:
+Codex browser smoke check covers:
 
-- Primary paths and anchors
-- Assets and console health
-- Desktop, tablet, and mobile reflow
-- Keyboard navigation and visible focus
-- Search, filters, carousel, menu, dialog, or other changed interactions
-- Lazy media and external embeds where relevant
+- the changed target page;
+- requested behavior or copy;
+- primary local assets;
+- obvious containment at the relevant viewport.
+
+Antigravity owns comprehensive routes, desktop / tablet / mobile, console and network health, keyboard and focus, changed interactions, lazy media / embeds, and screenshot regression. Its extended report is recommended before production confidence claims but is not a prerequisite for Codex commit, PR, or creator-authorized merge.
 
 ## Documentation and handoff
 
@@ -242,4 +245,4 @@ Every implementation handoff records:
 - Figma URL
 - Preview URL or named preview limitation
 - Pull Request URL or pending state
-- Visual comparison result and approved differences
+- Codex smoke-check result and Antigravity QA status / recommended scope

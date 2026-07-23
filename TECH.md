@@ -183,33 +183,20 @@ Do not replace the existing GitHub Actions deployment architecture with
 
 ## Verification
 
-建议按改动范围运行：
-
-```bash
-npm ci
-npm run build:pages
-npm run validate:pages
-npm run build
-npm test
-npm run lint
-```
-
-额外检查：
+Codex 提交前按改动范围运行最小必要检查：
 
 ```bash
 git diff --check
 git status --short --branch
+git diff --stat
 ```
 
-若是 Pages 或视觉修改，还应从 `docs/` 启动静态服务器，检查：
+- Pages、静态资源或公开路径变化：`npm run build:pages`、`npm run validate:pages`。
+- 应用代码、共享运行时或构建配置变化：选择最小相关的 build、targeted test 或 lint。
+- 纯文档、规则或 skill 变化：只需文档 / skill 自身校验与 Git diff 检查。
+- 网站可见变化：打开一个代表性目标页，确认页面加载、请求的变化和主要资源；响应式变化再检查一个相关窄视口。
 
-- `/`
-- `/IVORY-ARCHIVE/`
-- `/ENHEDUANNA/`
-- `/HYPATIA/`
-- `/MELROMARC-SISTERS/`
-- 至少一个移动端宽度
-- 浏览器控制台和网络面板中的 404
+完整的多站点、多路由、desktop / tablet / mobile、控制台 / 网络、交互、键盘可访问性和截图回归检查交给 Antigravity。Antigravity 报告缺失不阻止 Codex commit、PR 或创作者明确授权的 merge；交接中必须标记其状态，且不能把基本 smoke check 写成完整视觉验证。
 
 ## Known technical gaps
 
@@ -220,3 +207,11 @@ git status --short --branch
 - 根目录存在若干静态快照文件，当前 Pages build 不读取它们；删除策略尚未由创作者确认。
 
 以上缺口应通过补充可重复构建流程解决，而不是通过移动目录或改变公开 URL 解决。
+
+## Reusable website migration starter
+
+`web/templates/site-starter/` is version-controlled source documentation and
+example code. It is not copied into `docs/` and is not a deployed shared
+runtime. Each site adopts the needed contracts inside its real maintained
+source directory so public URLs and the protected Pages build map remain
+unchanged.

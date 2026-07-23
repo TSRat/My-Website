@@ -1,4 +1,4 @@
 interface:
   display_name: "Normalize Web Portfolio"
-  short_description: "Standardize a portfolio with visual regression safeguards"
-  default_prompt: "Use $normalize-web-portfolio to modernize the website portfolio while enforcing visual preservation baselines and regression review."
+  short_description: "Standardize sites with scoped QA and Antigravity handoff"
+  default_prompt: "Use $normalize-web-portfolio to modernize the website portfolio, run basic submission checks, and hand comprehensive browser and visual regression QA to Antigravity."

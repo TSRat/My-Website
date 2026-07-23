@@ -17,7 +17,7 @@
 
 | 项目 | 用途 | 主要维护位置 | GitHub Pages URL | 审核分级 | 迁移 / 审查状态 |
 | --- | --- | --- | --- | --- | --- |
-| The Living Atlas | 总入口主站，一个人的开放档案馆 | `THE-LIVING-ATLAS/` | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) | REFACTOR | 内容注册表与 Web Core v1 已进入 [Draft PR #13](https://github.com/TSRat/My-Website/pull/13)；未合并 Preview 可审查 |
+| The Living Atlas | 总入口主站，一个人的开放档案馆 | `THE-LIVING-ATLAS/` | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) | REFACTOR | 内容系统通过 [PR #13](https://github.com/TSRat/My-Website/pull/13) 合并；Data / starter 与 Worlds 含混性修正通过 [PR #14](https://github.com/TSRat/My-Website/pull/14) 合并 |
 | IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `app/briefings.ts`、`app/`、`public/`、`scripts/build-github-pages.mjs` | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) | PRESERVE | 已审计；暂未开始实现迁移 |
 | Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；当前 Pages 输入镜像在 `ENHEDUANNA/` | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) | REFACTOR | 已审计；缺少可重复源码 → 镜像构建，实施阻塞 |
 | Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `HILDEGARD/` | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 已审计；暂未开始实现迁移 |
@@ -143,6 +143,8 @@ npm run lint
 - [web/portfolio-audit.md](./web/portfolio-audit.md)：六个公开网站的详细现状、分级、Figma、迁移状态与风险
 - [web/platform-standard.md](./web/platform-standard.md)：共享六阶段标准、分层要求、视觉保护、QA 与分析事件规范
 - [web/content-system.md](./web/content-system.md)：跨站内容注册表、发布状态、共享 Web Core 与采用路径
+- [web/analytics-standard.md](./web/analytics-standard.md)：Data 入口、provider-neutral 事件、隐私边界与未来指标定义
+- [web/templates/site-starter/](./web/templates/site-starter/)：后续网站按能力复制的迁移 starter，不包含统一视觉主题
 
 项目内：
 

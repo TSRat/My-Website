@@ -26,7 +26,7 @@ USER DIRECTION
 → FIGMA
 → WORKING IMPLEMENTATION
 → DESIGN QA
-→ BROWSER QA
+→ BASIC BROWSER SMOKE
 → LIVE PREVIEW URL
 → PR
 
@@ -120,11 +120,13 @@ Use installed capabilities automatically according to these three levels.
 ## Mandatory
 
 - Figma for the editable design system and accepted design source of truth
-- Browser, with Computer Use as the fallback when required UI work is not covered, for real interaction and visual QA
+- Browser, with Computer Use as the fallback when required UI work is not covered, for a basic rendered-page and primary-flow smoke check
 - GitHub for the feature branch, commit, push, and Pull Request workflow
 - A preview deployment provider or existing repository preview mechanism for the verified live preview
 
 Mandatory capabilities are completion gates. Do not silently replace them with prose, screenshots, local-only output, or an unverified deployment.
+
+Comprehensive browser, device-matrix, interaction, accessibility, console/network, and visual-regression QA belongs to Antigravity. Its report is not a prerequisite for Codex commit, PR, or a creator-authorized merge; record it as pending or passed.
 
 Figma is mandatory.
 
@@ -412,9 +414,7 @@ Implement visible states as relevant:
 
 Run the prototype locally.
 
-Open it in a real browser.
-
-Test the primary user journey from start to finish.
+Open it in a real browser and smoke-test the primary page or flow.
 
 Perform design QA:
 
@@ -440,9 +440,7 @@ Do not declare the prototype ready based only on:
 - localhost returning HTTP 200
 - no TypeScript errors
 
-Visual inspection and interaction testing are required.
-
-OpenAI's recommended Codex QA pattern is to exercise real product flows in a browser / Computer Use and record actual failures, rather than treating build success as product QA.
+Codex must confirm that the target renders, the requested result is visible, primary assets load, and the primary flow has no obvious blocker. Antigravity owns exhaustive flows, device matrices, console/network inspection, keyboard/accessibility passes, and screenshot comparison.
 
 ---
 
@@ -508,16 +506,12 @@ Before PR:
 
 1. build the project;
 2. run it;
-3. inspect all major routes;
-4. test primary interactions;
-5. test desktop;
-6. test mobile;
-7. inspect console;
-8. check missing assets;
-9. check broken links;
-10. check keyboard accessibility for primary flows.
+3. open the primary changed route;
+4. confirm the requested result and primary interaction;
+5. confirm primary local assets load;
+6. check one relevant narrow viewport only when responsive behavior changed.
 
-Fix blocking and high-impact issues.
+Fix obvious blocking issues. Hand comprehensive route, desktop/tablet/mobile, console/network, broken-link, keyboard/accessibility, and interaction coverage to Antigravity.
 
 ## Git workflow
 
@@ -555,17 +549,16 @@ If production uses GitHub Pages:
 
 Deploy the exact branch / commit intended for the PR.
 
-Verify the deployed URL in a real browser.
+Open the deployed URL in a real browser for a basic smoke check.
 
 Do not rely only on deployment status.
 
 Check:
 - homepage loads
-- required routes load
-- assets load
-- interactions work
-- no obvious console errors
-- mobile viewport works
+- requested change is visible
+- primary assets load
+- primary interaction has no obvious blocker
+- one related mobile viewport when responsive behavior changed
 
 Only after verification is the preview accepted.
 
@@ -601,7 +594,8 @@ What the site is and what was built.
 - lint
 - typecheck
 - tests
-- browser QA
+- Codex browser smoke QA
+- Antigravity QA status / recommended scope
 - accessibility checks
 
 ## Preview
@@ -710,9 +704,9 @@ The workflow is complete only when all applicable items are true:
 - [ ] primary interaction flow works
 - [ ] build passes
 - [ ] applicable lint/typecheck/tests pass
-- [ ] browser QA completed
-- [ ] responsive behavior verified
-- [ ] accessibility basics checked
+- [ ] Codex browser smoke QA completed
+- [ ] changed responsive behavior smoke-checked when applicable
+- [ ] Antigravity extended QA status and scope recorded
 - [ ] analytics strategy documented
 - [ ] feature branch pushed
 - [ ] live preview deployed
@@ -764,8 +758,9 @@ Return:
 ## Validation
 - build
 - tests
-- browser QA
-- accessibility
+- Codex browser smoke QA
+- Antigravity QA status / scope
+- targeted accessibility checks performed by Codex, if any
 
 ## Analytics
 - measurement approach

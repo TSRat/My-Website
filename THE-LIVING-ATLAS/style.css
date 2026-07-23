@@ -377,7 +377,7 @@ main section {
   grid-column: 1 / 4;
 }
 
-.now-content, .featured-content, .knowledge-content, .sites-content, .latest-content, .index-shell {
+.now-content, .featured-content, .knowledge-content, .sites-content, .latest-content, .data-content, .index-shell {
   grid-column: 5 / 13;
 }
 
@@ -460,13 +460,6 @@ main section {
   border-radius: 4px;
   background: rgba(22, 22, 22, 0.03);
   aspect-ratio: 1 / 1;
-}
-
-.world-description {
-  margin-top: 1rem;
-  color: var(--c-stone);
-  font-size: 0.9rem;
-  line-height: 1.5;
 }
 
 /* 05 Knowledge */
@@ -556,6 +549,52 @@ main section {
 }
 
 /* 09 Index */
+.data-empty-state {
+  border-top: 1px solid var(--c-ink);
+  padding-top: 2rem;
+}
+
+.data-provider {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--c-cobalt);
+}
+
+.data-empty-state h2 {
+  max-width: 48rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
+  font-size: var(--text-h2);
+  font-weight: normal;
+  line-height: 1.08;
+}
+
+.data-boundaries {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid rgba(167, 162, 154, 0.45);
+}
+
+.data-boundaries div {
+  padding: 1.25rem 1.25rem 1.25rem 0;
+  border-right: 1px solid rgba(167, 162, 154, 0.45);
+}
+
+.data-boundaries div:not(:first-child) {
+  padding-left: 1.25rem;
+}
+
+.data-boundaries div:last-child {
+  border-right: 0;
+}
+
+.data-boundaries dd {
+  margin-top: 0.6rem;
+  font-family: var(--font-serif);
+  font-size: var(--text-h3);
+}
+
+/* 10 Index */
 .index-section {
   position: relative;
 }
@@ -624,7 +663,7 @@ main section {
     margin-bottom: 22.75rem;
   }
 
-  .hero-content, .hero-sidebar, .section-label, .now-content, .featured-content, .knowledge-content, .sites-content, .latest-content, .index-content {
+  .hero-content, .hero-sidebar, .section-label, .now-content, .featured-content, .knowledge-content, .sites-content, .latest-content, .data-content, .index-content {
     grid-column: 1 / 13;
     min-width: 0;
   }
@@ -657,6 +696,14 @@ main section {
   
   .world-box,
   .world-box-large { grid-column: span 12; }
+  .data-boundaries { grid-template-columns: 1fr; }
+  .data-boundaries div,
+  .data-boundaries div:not(:first-child) {
+    padding-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(167, 162, 154, 0.45);
+  }
+  .data-boundaries div:last-child { border-bottom: 0; }
   .index-content { column-count: 1; }
   
   .nav-links, .nav-right {

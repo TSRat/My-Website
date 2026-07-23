@@ -444,7 +444,7 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 ### Completed
 
 - 建立 `THE-LIVING-ATLAS/content-registry.js` 与 `THE-LIVING-ATLAS/web-core.js`。
-- Worlds 明确为知识库、虚构小说、自媒体创作、交互项目；Knowledge 只负责知识库细分。
+- 该批次曾把 Worlds 显式解释为知识库、虚构小说、自媒体创作和交互项目；创作者已在后续纠偏中否决此对应关系，最新规则是保留 Knowledge / Story / Media / Interaction 的含混性。
 - Sites 只渲染已发布且有真实 URL 的五个网站。
 - Now、Latest、Index 与 Search 使用同一双语 registry。
 - 移除全部 `href="#"`；planned / mapping / published / archived 状态形成跨站契约。
@@ -543,3 +543,112 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 - `npm run build`: Passed.
 - `npm test`: Passed — 6 / 6.
 - `npm run lint`: Passed — 0 errors; 24 existing warnings outside this batch.
+
+## 2026-07-24: Living Atlas migration starter and Data foundation
+
+### Current target
+
+把 Living Atlas 已完成的信息架构整理为后续五站和未来网站可复用的迁移起点，同时加入必要的 Data 入口，但不在内容和数据尚未成熟时虚构 dashboard 或指标。
+
+### Completed
+
+- 新增仓库源码模板 `web/templates/site-starter/`：site manifest、content registry、Data empty state、provider-neutral analytics adapter 和迁移清单。
+- 新增 `web/analytics-standard.md`，定义事件字段、provider 激活门槛、隐私边界和未来可计算指标。
+- Living Atlas 英中页面新增 Data 导航、Index、Search 和可见 empty state。
+- 默认 analytics adapter 保持 no-op；无网络、cookie、storage、identity 或原始搜索文本。
+- Figma 新增 `TSRat Data & Analytics · v1` 可编辑画面与 Living Atlas Data empty state。
+- 完成 baseline / review 固定视口组合审查，结果记录在 `web/evidence/living-atlas-template-data/visual-regression.md`。
+- 更新项目表、平台标准、内容系统和迁移队列，明确其余站点的采用顺序与阻塞条件。
+
+### Migration readiness
+
+1. **IVORY ARCHIVE**：先建立动态源码与 Pages 生成结果的 parity 检查，再采用 manifest / Data / events。
+2. **Hypatia + Hildegard**：使用 section-level visual gate，加入 manifest、Data 入口和站点特定事件，不改变视觉主题。
+3. **Enheduanna**：先确认 `static-sites/enheduanna/` 到 `ENHEDUANNA/` 的重建链，再实施。
+4. **Melromarc Sisters**：先找回上游源码，或由创作者明确授权重建。
+
+### Important decisions
+
+- 复用能力和契约，不复用统一皮肤。
+- starter 是复制后适配的源文件示例，不修改受保护的 Pages build map，也不创建第二份项目 registry。
+- Data 入口可以先存在，但必须诚实显示 provider 状态；没有来源、基准和 session 定义时不设 KPI 目标。
+- 当前 PR 不启用任何外部 analytics provider。
+
+### Validation
+
+- JavaScript syntax and targeted tests: Passed。
+- Pages build and asset validation: Passed。
+- Application build and complete tests: Passed。
+- Lint: Passed with 0 errors and 24 pre-existing warnings outside this batch。
+- Browser QA: Passed for English / Chinese, desktop / tablet / mobile, menu, Search → Data, horizontal containment, and console health。
+- Visual preservation: Passed for the additive scope; all visible changes are documented and intentional。
+
+### Git state
+
+- Branch: `codex/living-atlas-template-data`
+- Base: `origin/main` merge commit `16e9706`
+- Implementation commit: `0c7c33b` — `add living atlas data entry and migration starter`
+- Push: completed to `origin/codex/living-atlas-template-data`.
+- Unmerged Preview: <https://raw.githack.com/TSRat/My-Website/codex/living-atlas-template-data/THE-LIVING-ATLAS/index.html>
+- Chinese Preview: <https://raw.githack.com/TSRat/My-Website/codex/living-atlas-template-data/THE-LIVING-ATLAS/zh.html>
+- Draft PR: <https://github.com/TSRat/My-Website/pull/14>
+- Remote Preview QA: Passed — 英中 Data、16 个 Index links、移动 Search → Data、无横向溢出、0 console errors。
+- Merge: not authorized and not performed.
+
+## 2026-07-24: Creator correction — Worlds remain ambiguous
+
+### Current target
+
+纠正 Living Atlas 内容系统中过度明确的作品集式分类，恢复创作者原版 Worlds，并删除 Knowledge / Index 的解释句。
+
+### Completed
+
+- 可见 Worlds 回滚为 Knowledge / Story / Media / Interaction（知识 / 故事 / 媒体 / 交互），只有图像、编号和标题。
+- 删除 World 描述、Knowledge 说明和 Index 说明。
+- 项目内容与设计文档把“有意含混”记录为受保护的创作者决定。
+- 跨站内容契约不再把 Worlds 解释为知识库、虚构小说、自媒体和交互项目的一一对应表。
+- Figma Content System 的 Worlds 定义同步修正。
+- 测试与视觉证据加入当前 PR #14。
+
+### Important decision
+
+共享系统可以维护稳定 ID、发布状态、搜索和自动索引，但不能把创作者的开放概念强行改写为作品集 taxonomy。以后迁移其他网站时也必须区分“系统内部结构”和“对读者公开的解释”。
+
+### Validation and delivery
+
+- Targeted tests: 8 / 8 passed。
+- Pages build and 337-reference validation passed。
+- Fixed-viewport browser QA and human side-by-side review passed。
+- Full checks passed: `npm run build`；`npm test` 9 / 9；`npm run lint` 0 errors、24 个既有 warnings。
+- Delivery: commit `2b7fa13` (`restore living atlas worlds ambiguity`) 已 push 到现有 PR #14 branch。
+- Exact Preview QA: Passed — 英中标题正确、World 卡片内 0 个说明段落、Knowledge / Index 说明不存在、图片无损坏、desktop `1425 ≤ 1440`、Chinese mobile `375 ≤ 390`。
+- Exact English Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/index.html#worlds>
+- Exact Chinese Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/zh.html#worlds>
+
+## 2026-07-24: Antigravity QA handoff and PR #14 merge authorization
+
+### Current target
+
+简化未来 Codex 提交前验证，把全面浏览器与视觉回归交给 Antigravity，并按创作者明确授权合并 PR #14。
+
+### Configuration decision
+
+- Codex 只运行与改动直接相关的基本检查：Git diff、Pages / asset validation、最小相关 build / targeted test / lint，以及一个代表性目标页 smoke check。
+- 只有响应式改动才额外检查一个相关窄视口。
+- Antigravity 负责多路线、多设备 / 浏览器、控制台与网络、完整交互、键盘可访问性、截图 / 感知比较和人工 overlay。
+- Antigravity 深度报告缺失不阻止 commit、push、PR，或创作者明确授权后的 merge；但不得把基本 smoke 写成完整视觉验证。
+- 部署、权限、认证、支付、隐私、安全和数据迁移仍按风险运行专项检查。
+
+### Modified configuration
+
+- `AGENTS.md`
+- `.agents/skills/normalize-web-portfolio/SKILL.md`
+- `.agents/skills/build-new-site-to-pr/SKILL.md`
+- `web/platform-standard.md`
+- `TECH.md`
+
+### Delivery
+
+- Branch: `codex/living-atlas-template-data`
+- PR: <https://github.com/TSRat/My-Website/pull/14>
+- Merge: explicitly authorized by the creator; perform after configuration validation and push.
