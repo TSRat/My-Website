@@ -167,4 +167,14 @@
 ### 尚未完成
 
 - 旧的 `assets/hypatia-sketch.jpg` 继续保留为原始 / 回滚材料，未删除。
-- 尚未 commit、push、创建 Preview 或 PR。
+- 本修复完成时尚未 commit、push、创建 Preview 或 PR；后续交付状态见下一节。
+
+## 2026-07-24: Review delivery
+
+- Branch: `codex/living-atlas-content-system`
+- Commit: `d85c78c` — `build living atlas content system and review workflow`
+- Unmerged Preview: <https://raw.githack.com/TSRat/My-Website/codex/living-atlas-content-system/THE-LIVING-ATLAS/index.html>
+- Chinese Preview: <https://raw.githack.com/TSRat/My-Website/codex/living-atlas-content-system/THE-LIVING-ATLAS/zh.html>
+- Draft PR: <https://github.com/TSRat/My-Website/pull/13>
+- Remote Preview QA: Passed — 4 Worlds、5 published Sites、15 Index links、透明 Hypatia 资源与中英文模块均加载；控制台 0 errors / warnings。
+- Merge: not performed; creator review required.

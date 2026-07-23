@@ -528,7 +528,11 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 ### Current delivery
 
 - Branch: `codex/living-atlas-content-system`
-- Commit / push / Draft PR / unmerged Preview: to be completed in this delivery.
+- Commit: `d85c78c` — `build living atlas content system and review workflow`.
+- Push: completed to `origin/codex/living-atlas-content-system`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/13>.
+- Unmerged Preview: <https://raw.githack.com/TSRat/My-Website/codex/living-atlas-content-system/THE-LIVING-ATLAS/index.html>.
+- Merge: not performed.
 
 ### Validation
 

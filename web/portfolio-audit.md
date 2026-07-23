@@ -13,7 +13,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 
 | Site | Classification | Interaction tier | Migration status | Primary blocker |
 | --- | --- | --- | --- | --- |
-| The Living Atlas | REFACTOR | B — Interactive | Content registry and Web Core v1 implemented locally; Preview / PR pending | Shared runtime publication needs explicit Pages build-map authorization |
+| The Living Atlas | REFACTOR | B — Interactive | Content registry and Web Core v1 in Draft PR #13; unmerged Preview verified | Shared runtime publication needs explicit Pages build-map authorization |
 | IVORY ARCHIVE | PRESERVE | B — Interactive | Audited; no implementation migration started | Dynamic and Pages renderers need explicit parity tests |
 | Enheduanna | REFACTOR | A — Editorial | Audited; implementation blocked | No reproducible source-to-mirror build; tablet overflow exists in the deployed mirror |
 | Hildegard | PRESERVE | A — Editorial | Audited; no implementation migration started | Long-page visual comparison must use deterministic sections |
@@ -57,9 +57,9 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Target architecture:** Retain a lightweight static site. Introduce accessible shared primitives and an explicit data layer before considering a framework migration.
 - **Shared-core adoption:** Focus treatment, skip navigation, content widths, breakpoints, motion preference, search/dialog behavior, and QA conventions.
 - **Site-specific theme:** Preserve the ivory editorial atlas, monumental serif typography, cobalt system, asymmetric grid, imagery, and metadata voice.
-- **Migration status:** First corrective batch merged. Content/data refactor and site-local Web Core v1 are implemented locally; Figma sync, final verification, Preview, and PR remain.
+- **Migration status:** First corrective batch merged. Content/data refactor and site-local Web Core v1 are implemented in Draft PR #13 with a verified unmerged Preview.
 - **Figma URL:** <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
-- **Preview / PR URL:** Local Pages preview is being verified. Current infrastructure has no branch Pages preview; PR not yet created for this batch.
+- **Preview / PR URL:** [Unmerged Preview](https://raw.githack.com/TSRat/My-Website/codex/living-atlas-content-system/THE-LIVING-ATLAS/index.html); [Draft PR #13](https://github.com/TSRat/My-Website/pull/13).
 - **Remaining risks:** Small Red Book and WeChat URLs remain unknown and are non-clickable planned states. Article-level Knowledge data does not yet exist. Moving Web Core to a repository-level runtime requires a protected build-map change.
 
 ## IVORY ARCHIVE
