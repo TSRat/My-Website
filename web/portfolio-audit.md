@@ -14,7 +14,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 
 | Site | Classification | Interaction tier | Migration status | Primary blocker |
 | --- | --- | --- | --- | --- |
-| The Living Atlas | REFACTOR | B — Interactive | Content system merged in PR #13; Data / starter implemented in Draft PR #14 | Shared runtime publication needs explicit Pages build-map authorization |
+| The Living Atlas | REFACTOR | B — Interactive | Content system merged in PR #13; Data / starter and ambiguity correction merged in PR #14 | Shared runtime publication needs explicit Pages build-map authorization |
 | IVORY ARCHIVE | PRESERVE | B — Interactive | Audited; no implementation migration started | Dynamic and Pages renderers need explicit parity tests |
 | Enheduanna | REFACTOR | A — Editorial | Audited; implementation blocked | No reproducible source-to-mirror build; tablet overflow exists in the deployed mirror |
 | Hildegard | PRESERVE | A — Editorial | Audited; no implementation migration started | Long-page visual comparison must use deterministic sections |
@@ -30,8 +30,8 @@ copies only the contracts its tier needs and preserves its own visual system.
 
 | Order | Batch | Starter adoption | Gate before implementation |
 | --- | --- | --- | --- |
-| 1 | IVORY ARCHIVE | Manifest, provider-neutral events, Data entry, renderer parity and screenshot QA | Confirm dynamic/Pages parity fixtures |
-| 2 | Hypatia + Hildegard | Manifest, stable IDs, Data entry, source/citation events and editorial browser checks | Capture deterministic chapter sections at three viewports |
+| 1 | IVORY ARCHIVE | Manifest, provider-neutral events, Data entry, renderer parity and Antigravity screenshot QA | Confirm dynamic/Pages parity fixtures |
+| 2 | Hypatia + Hildegard | Manifest, stable IDs, Data entry, source/citation events and Antigravity editorial browser checks | Give Antigravity deterministic chapter sections and viewport scope |
 | 3 | Enheduanna | Tier A contract only after source and mirror can be reproduced | Restore or document a repeatable source-to-mirror build |
 | 4 | Melromarc Sisters | Tier B/Rebuild contract after upstream source is available | Confirm complete maintainable source and build |
 
@@ -48,15 +48,15 @@ The current local Pages artifact was rendered in the Codex in-app browser at:
 
 The Figma page `03 · Baselines & Handoff` contains all 18 accepted fixed-viewport captures. The page `02 · Site Themes & Screens` contains the six theme systems, 12 representative desktop/mobile references, and editable theme anatomy.
 
-Fixed-viewport captures are valid. Full-page capture is not accepted as evidence because the current browser backend repeats or omits sticky and reveal-driven regions while composing a long screenshot. Migration review must therefore use deterministic section or anchor captures under matching viewport, font, content, and interaction state.
+Fixed-viewport captures are valid. Full-page capture is not accepted as evidence because the current browser backend repeats or omits sticky and reveal-driven regions while composing a long screenshot. When extended migration review is requested, Antigravity should use deterministic section or anchor captures under matching viewport, font, content, and interaction state.
 
 ## The Living Atlas
 
 - **Site / slug / live URL:** The Living Atlas; `THE-LIVING-ATLAS`; <https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/>
 - **Source path:** `THE-LIVING-ATLAS/`; language HTML shells, `content-registry.js`, `web-core.js`, `atlas.js`, `style.css`, and local image assets.
-- **Status:** Public hub site and portfolio entry point.
-- **Product purpose:** Present TSRat as a living interdisciplinary archive and route readers into knowledge, editorial, media, and story projects.
-- **Primary audience and goal:** Readers discovering TSRat’s work; understand the archive’s worldview and enter a specific site or topic.
+- **Status:** Public archive hub.
+- **Product purpose:** Present TSRat as a living interdisciplinary archive and offer deliberately open-ended Worlds, published sites, knowledge, and index entry points.
+- **Primary audience and goal:** Readers encountering the archive; understand its atmosphere and enter a site or topic without reducing the homepage to a portfolio taxonomy.
 - **Major routes and navigation:** One static page plus Chinese variant; anchor navigation for Worlds, Index, Knowledge, published Sites, and Now.
 - **Current visual direction:** Editorial atlas combining archive numbering, Swiss grid discipline, large serif statements, ivory paper, and cobalt navigation accents.
 - **Typography / color / layout:** Noto Serif SC display, Inter UI, Fira Code metadata; `#F2EFE7` surface, `#161616` ink, `#7A756E` stone, `#0047AB` cobalt; desktop 12-column grid.
@@ -65,7 +65,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **State/interactivity:** Auto-rotating featured carousel with previous/next controls, accessible search dialog, keyboard shortcut, and mobile disclosure menu.
 - **Build system / deployment:** Copied unchanged by `scripts/build-github-pages.mjs` into the GitHub Pages artifact.
 - **Analytics:** No provider. A visible Data entry, no-op adapter, four-event contract and privacy gate are defined in `analytics-standard.md`; no data is stored or transmitted.
-- **Tests / CI:** Pages asset validation plus Living Atlas registry/link/language/index tests. Browser interaction checks remain required.
+- **Tests / CI:** Pages asset validation plus Living Atlas registry/link/language/index tests. Codex runs a scoped browser smoke check; Antigravity owns extended browser and visual QA.
 - **Accessibility state:** Correct language declarations, skip link, one `h1`, semantic `main` and `nav`, visible focus, native dialog search, mobile disclosure navigation, and descriptive image alternatives are present.
 - **Responsive state:** Desktop and tablet first folds remain coherent. The mobile title is contained; the open menu uses an opaque layer and pushes the hero down instead of mixing with it.
 - **Existing Figma:** Shared foundations, Living Atlas theme variables, components, representative desktop/mobile screens, and 3-viewport baselines are in the portfolio Figma file.
@@ -73,9 +73,9 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Target architecture:** Retain a lightweight static site. Introduce accessible shared primitives and an explicit data layer before considering a framework migration.
 - **Shared-core adoption:** Focus treatment, skip navigation, content widths, breakpoints, motion preference, search/dialog behavior, and QA conventions.
 - **Site-specific theme:** Preserve the ivory editorial atlas, monumental serif typography, cobalt system, asymmetric grid, imagery, and metadata voice.
-- **Migration status:** Corrective and content-system batches merged through PR #13. The Data / reusable starter batch is implemented and reviewable in Draft PR #14.
+- **Migration status:** Corrective and content-system batches merged through PR #13. The Data / reusable starter and Worlds ambiguity correction merged through PR #14.
 - **Figma URL:** [Portfolio design system](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt); [TSRat Data & Analytics · v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=19-2).
-- **Preview / PR URL:** [Unmerged English Preview](https://raw.githack.com/TSRat/My-Website/codex/living-atlas-template-data/THE-LIVING-ATLAS/index.html); [Chinese Preview](https://raw.githack.com/TSRat/My-Website/codex/living-atlas-template-data/THE-LIVING-ATLAS/zh.html); [Draft PR #14](https://github.com/TSRat/My-Website/pull/14). Remote browser QA passed.
+- **Preview / PR URL:** [English review snapshot](https://raw.githack.com/TSRat/My-Website/97b3678ee50f08e19ae6ec3cb27c10c86618a036/THE-LIVING-ATLAS/index.html); [Chinese review snapshot](https://raw.githack.com/TSRat/My-Website/97b3678ee50f08e19ae6ec3cb27c10c86618a036/THE-LIVING-ATLAS/zh.html); [PR #14](https://github.com/TSRat/My-Website/pull/14).
 - **Remaining risks:** Small Red Book and WeChat URLs remain unknown and are non-clickable planned states. Article-level Knowledge data does not yet exist. Moving Web Core to a repository-level runtime requires a protected build-map change.
 
 ## IVORY ARCHIVE
@@ -220,7 +220,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 
 ## Migration queue
 
-Living Atlas is now the reviewable reference implementation in Draft PR #14.
+Living Atlas is now the merged reference implementation through PR #14.
 The authoritative remaining order is the four-batch table near the top of this
 file: IVORY ARCHIVE; Hypatia + Hildegard; Enheduanna after build recovery;
 Melromarc after source recovery or explicit rebuild approval.

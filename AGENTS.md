@@ -140,22 +140,23 @@ Do not replace the existing GitHub Actions deployment architecture with
 
 ## 验证要求
 
-完成任务前至少执行：
+采用“Codex 基本检查 + Antigravity 扩展 QA”的分工。Codex 在提交前只需执行与改动直接相关、能够阻止明显坏提交的基本检查：
 
 1. `git diff --check`
 2. `git status --short`
 3. `git diff --stat` 和目标文件的实际 diff
-4. `npm run build:pages`
-5. `npm run validate:pages`
-6. 与改动范围相符的 `npm run build`、`npm test`、`npm run lint`
+4. Pages、静态资源或公开路径有变化时运行 `npm run build:pages` 和 `npm run validate:pages`
+5. 应用代码、共享运行时或构建配置有变化时，选择最小相关的 build、targeted test 或 lint；不要求为了无关范围运行全部命令
+6. 网站可见改动做一次基本浏览器 smoke check：打开目标页，确认页面可加载、请求的改动可见、关键本地资源无明显缺失；只有响应式改动才额外检查一个相关窄视口
 
 说明：
 
 - 仓库没有独立 `typecheck` script；不要声称已运行不存在的命令。
 - `npm test` 内部会再次运行 `npm run build`。
-- 纯文档修改仍应至少运行 `build:pages` 和 `validate:pages`，确认文档文件没有意外进入错误路径或破坏生成逻辑。
+- 纯文档、规则或 skill 修改无需运行应用 build、完整测试或浏览器检查；运行文档 / skill 自身校验和 Git diff 检查即可。
 - 如果命令因环境、网络或缺失上游源码无法运行，记录完整原因，不要把“未运行”写成“通过”。
-- 视觉或交互任务还必须通过本地浏览器实际检查目标页面；只看 build 成功不算视觉验证。
+- Antigravity 负责扩展浏览器与视觉 QA，包括全路线、多设备、多浏览器、控制台 / 网络深查、完整交互、键盘可访问性、截图 / 感知比较和人工 overlay。Codex 应在交接中写明已做的基本检查以及建议交给 Antigravity 的范围。
+- 缺少 Antigravity 报告本身不阻止 Codex commit、push、创建 / 更新 PR，或在创作者明确授权后 merge。高风险部署、权限、认证、支付、隐私、安全或数据迁移变更仍必须完成与风险相称的专项检查。
 
 ## 更新交接文档
 
@@ -261,24 +262,25 @@ A screenshot alone is not a completed Figma design.
 
 ## Visual preservation gate
 
-For migration or engineering refactors of existing sites, the current rendered site is the visual baseline.
+For migration or engineering refactors of existing sites, the current rendered site remains the visual baseline, but verification is split by owner.
 
-Before changing implementation:
-- capture representative routes and interactive states;
-- capture matching desktop, tablet, and mobile screenshots;
-- record typography, color, spacing, grid, imagery, crops, responsive behavior, and motion that must remain stable.
+Codex minimum before submission:
+- inspect the changed source and actual rendered target;
+- open one representative route on the exact review commit or local artifact;
+- confirm the requested change, primary assets, and obvious layout containment;
+- preserve a baseline reference when a migration could materially change appearance.
 
-After migration:
-- render the exact review branch under the same browser, viewport, device pixel ratio, fonts, content, and state;
-- run screenshot or perceptual comparison when available;
-- always perform human side-by-side or overlay review;
-- document every visible difference and fix any difference that was not explicitly approved.
+Antigravity follow-up:
+- capture representative routes, states, desktop, tablet, and mobile;
+- stabilize browser, viewport, device pixel ratio, fonts, content, and state;
+- run screenshot or perceptual comparison and human side-by-side / overlay review;
+- document and triage visible differences.
 
-Build, lint, tests, HTTP 200, or comparison only against a reconstructed Figma file do not prove visual preservation.
+Build, lint, tests, or HTTP 200 alone still do not prove visual preservation. Codex should report only the level actually checked: `basic smoke passed`, `Antigravity QA pending`, or `Antigravity QA passed`.
 
 For `PRESERVE` sites, any unapproved visible difference fails the gate. For `REFACTOR` sites, only documented bug, accessibility, or responsive corrections may change appearance without separate redesign approval. For `REBUILD` sites, preserve recognizable visual identity and require explicit human approval when pixel matching is infeasible.
 
-If a valid pre-migration baseline or browser comparison cannot be produced, report visual verification as blocked and do not claim the migration is complete.
+Absence of extended Antigravity comparison does not block commit, PR, or an explicitly authorized merge. Do not claim comprehensive visual preservation until that review exists.
 
 ## Git safety
 
@@ -306,14 +308,13 @@ The preview must:
 
 Use the repository's PR-preview infrastructure first. If none exists, use an approved preview provider or an immutable commit preview that serves the site's assets and module MIME types correctly.
 
-Open the preview in a real browser and verify:
-- primary routes
-- assets
-- responsive behavior
-- major interactions
-- console health
+Codex opens the preview for a basic smoke check:
+- target page loads;
+- requested change is visible;
+- primary local assets are present;
+- no obvious broken layout appears at the relevant viewport.
 
-If no working unmerged preview can be produced, report the preview stage as blocked and do not claim the website task is complete.
+Antigravity handles comprehensive route, responsive, interaction, console, network, accessibility, and visual-regression review. If no working unmerged preview can be produced, report the preview limitation, but do not hold an otherwise reviewable commit or PR solely for extended browser QA.
 
 ## Completion
 

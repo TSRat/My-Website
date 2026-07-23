@@ -1,6 +1,6 @@
 ---
 name: normalize-web-portfolio
-description: Audit, document, clean up, standardize, and modernize all existing websites listed in the repository's website project table. Use when the user asks to clean up, normalize, migrate, unify, audit, modernize, or systematically improve the existing website portfolio. Preserve each site's distinct visual identity while unifying product, design-system, engineering, QA, preview, and analytics standards. Enforce pre-migration baselines and post-migration visual regression review for existing sites.
+description: Audit, document, clean up, standardize, and modernize all existing websites listed in the repository's website project table. Use when the user asks to clean up, normalize, migrate, unify, audit, modernize, or systematically improve the existing website portfolio. Preserve each site's distinct visual identity while unifying product, design-system, engineering, QA, preview, and analytics standards. Use scoped Codex smoke checks and hand comprehensive browser and visual regression QA to Antigravity.
 ---
 
 # Normalize Web Portfolio
@@ -74,7 +74,8 @@ Preferred capabilities:
 - Product Design for UX, flows, audits, prototypes, and design QA
 - Creative Production for visual assets and visual-system refinement
 - Figma for design systems, variables, components, responsive screens, and design source of truth
-- Browser / Computer Use for live-site inspection and end-to-end QA
+- Browser / Computer Use for a basic rendered-page smoke check
+- Antigravity for comprehensive route, viewport, interaction, console/network, accessibility, and visual-regression QA
 - GitHub for branches, commits, PRs, issues, and repository history
 - Data Analytics when a site's purpose depends on quantitative dashboards, metrics, charts, or product analytics
 - Preview deployment provider for reviewable live URLs
@@ -135,7 +136,7 @@ For every website, inspect both:
 - source code
 - actual rendered website
 
-Use a real browser whenever a live or local rendered version is available.
+Use a real browser for one representative rendered-page smoke check when the task changes a website. Leave portfolio-wide or exhaustive browser inspection to Antigravity.
 
 Document the current product and UX model.
 
@@ -242,59 +243,28 @@ Do not redesign for novelty.
 
 # Visual Preservation Gate
 
-Apply this gate to every existing site before migration unless the user explicitly requests a redesign.
+The original rendered site remains the visual baseline. A reconstructed Figma file is not a substitute for it.
 
-The original rendered site is the visual baseline. A reconstructed Figma file is not a substitute for comparing against the original site.
+## Codex minimum before submission
 
-## Establish the baseline before modifying implementation
+1. Inspect the changed source and the current rendered baseline or a valid prior reference.
+2. Render one representative changed route from the exact review commit or local artifact.
+3. Confirm the requested change, primary assets, and obvious layout containment.
+4. Check one relevant narrow viewport only when responsive behavior changed.
+5. Run the smallest applicable build, asset validation, targeted test, or lint.
 
-For each site:
+Do not require full-page captures, all routes, all breakpoints, pixel diffs, or overlay review before commit / PR.
 
-1. Build and render the unmodified base revision, or use the current production URL when the local baseline cannot be reproduced.
-2. Select representative routes and states, including the homepage, major content types, navigation states, and important interactive states.
-3. Capture full-page and above-the-fold screenshots at fixed viewports. Use repository-defined viewports when available; otherwise use:
-   - desktop: 1440 × 900
-   - tablet: 1024 × 768
-   - mobile: 390 × 844
-4. Stabilize comparison conditions:
-   - browser and version
-   - device pixel ratio
-   - fonts and font loading
-   - locale
-   - content and data fixtures
-   - authentication state
-   - theme
-   - time-dependent or random content
-   - motion and transition state
-5. Record the visual contract:
-   - typefaces, weights, sizes, line heights, and wrapping behavior
-   - colors and surface relationships
-   - grid, content width, spacing, alignment, and page rhythm
-   - image selection, aspect ratio, crop, position, and caption treatment
-   - navigation, ordering, decoration, and responsive transformations
-   - animation character and reduced-motion behavior
-6. Store baselines in a repository-approved non-generated location or attach them as CI / PR artifacts. Do not place source baselines inside a generated or ignored deployment directory such as `docs/`.
+## Antigravity extended QA
 
-Do not start implementation migration without a usable baseline. If the original site is already broken, capture the failure and distinguish it from migration regressions.
+Hand Antigravity the preview URL, changed routes and states, baseline reference, and known risks. Antigravity owns:
 
-## Compare after migration
-
-Render the exact branch and commit intended for review under the same conditions as the baseline.
-
-For every recorded route, state, and viewport:
-
-1. Capture matching post-migration screenshots.
-2. Run automated pixel or perceptual comparison when tooling is available.
-3. Perform a human side-by-side or overlay review even when automated comparison passes.
-4. Classify every visible difference as:
-   - intentional and explicitly approved
-   - required accessibility or responsive correction
-   - rendering noise such as antialiasing
-   - dynamic-content difference
-   - unintended regression
-5. Fix unintended regressions before PR handoff.
-
-Do not use a numeric screenshot-diff threshold as the sole approval signal. A low changed-pixel count can still hide meaningful typography, alignment, crop, or interaction regressions.
+- desktop, tablet, and mobile matrices;
+- browser / device stabilization;
+- console and network inspection;
+- full interaction and keyboard / focus coverage;
+- matching screenshots, pixel or perceptual comparison, and human side-by-side / overlay review;
+- classification of visible differences and regression reporting.
 
 ## Apply classification-specific strictness
 
@@ -315,24 +285,15 @@ Do not use a numeric screenshot-diff threshold as the sole approval signal. A lo
 
 ## Gate failure behavior
 
-Do not pass the gate when:
+Do not pass even the basic smoke check when the target page does not load, required assets are missing, the requested change is absent, obvious layout breakage appears, or a material change lacks user approval.
 
-- no pre-migration baseline exists;
-- required routes or viewports were not compared;
-- fonts, assets, or content failed to load during comparison;
-- visible differences remain unexplained;
-- a material change lacks user approval;
-- only build, lint, tests, or HTTP status were checked;
-- only the reconstructed Figma target was compared and the original site was omitted.
-
-If screenshot or browser tooling is unavailable, continue safe non-visual work but report visual verification as blocked. Never claim visual preservation without evidence.
+Missing Antigravity output does not block commit, push, PR, or a creator-authorized merge. Report `Antigravity QA pending` and do not claim comprehensive visual preservation until it passes.
 
 Include in every migration PR:
 
-- baseline screenshot or artifact links
-- post-migration screenshot or artifact links
-- visual diff images or report
-- routes, states, viewports, browser, and device pixel ratio used
+- baseline reference when relevant
+- Codex smoke-check route and result
+- Antigravity QA status and recommended scope
 - approved intentional changes
 - unresolved visual risks
 
@@ -489,7 +450,7 @@ Preferred principles:
 - optimized images
 - reproducible builds
 - lint / typecheck / tests where appropriate
-- browser QA
+- basic browser smoke QA
 - CI-compatible scripts
 
 Framework guidance:
@@ -523,19 +484,14 @@ Adapt this to the existing repository rather than blindly forcing the exact fold
 
 Preserve public URLs unless the migration explicitly requires a redirect strategy.
 
-Verify:
-- build
-- lint
-- typecheck
-- tests
-- major routes
-- console errors
-- responsive states
-- keyboard interaction
-- image loading
-- link integrity
+Verify only what the change touches:
+- applicable build or asset validation
+- targeted lint or tests
+- one representative route
+- requested behavior and primary image loading
+- one related responsive state when layout changed
 
-Use real browser verification.
+Use a real browser for this smoke check. Assign major-route sweeps, console/network analysis, full responsive matrices, keyboard interaction, and link integrity crawling to Antigravity.
 
 ---
 
@@ -651,12 +607,12 @@ Before changing a site:
 For each batch:
 1. create a dedicated branch;
 2. implement migration;
-3. run tests;
-4. render and inspect;
+3. run the smallest relevant checks;
+4. perform the Codex browser smoke check;
 5. deploy a live preview of the exact review commit;
 6. create a Draft PR;
 7. include before/after summary;
-8. include the Visual Preservation Gate report and comparison artifacts;
+8. include the basic smoke result and Antigravity QA status / scope;
 9. include Figma links;
 10. include preview links;
 11. include unresolved issues.
@@ -680,12 +636,12 @@ This skill is not complete until:
 5. Shared versus site-specific design decisions are explicit.
 6. Migrated sites have Figma design-system coverage.
 7. Migrated code passes the applicable build/test checks.
-8. Important flows were tested in a real browser.
+8. One representative changed flow or page passed Codex browser smoke QA; extended coverage is assigned to Antigravity.
 9. No production branch was modified directly.
 10. Reviewable PRs exist for implemented migration batches.
 11. Every website-facing batch has a verified Preview URL that is reachable before merge.
 12. The website project table is updated to reflect new implementation, Figma, preview, and status information.
-13. Every migrated existing site passes the Visual Preservation Gate or has an explicit named blocker and is not reported complete.
+13. Every migrated existing site passes the Codex basic gate and records whether Antigravity QA is pending or passed.
 
 Final response must summarize:
 
@@ -697,6 +653,6 @@ Final response must summarize:
 - Figma deliverables
 - PR links
 - preview links
-- visual regression results and approved intentional differences
+- Codex smoke result, Antigravity QA status, and approved intentional differences
 - blocked items
 - remaining migration queue

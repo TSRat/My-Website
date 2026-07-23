@@ -624,3 +624,31 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 - Exact Preview QA: Passed — 英中标题正确、World 卡片内 0 个说明段落、Knowledge / Index 说明不存在、图片无损坏、desktop `1425 ≤ 1440`、Chinese mobile `375 ≤ 390`。
 - Exact English Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/index.html#worlds>
 - Exact Chinese Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/zh.html#worlds>
+
+## 2026-07-24: Antigravity QA handoff and PR #14 merge authorization
+
+### Current target
+
+简化未来 Codex 提交前验证，把全面浏览器与视觉回归交给 Antigravity，并按创作者明确授权合并 PR #14。
+
+### Configuration decision
+
+- Codex 只运行与改动直接相关的基本检查：Git diff、Pages / asset validation、最小相关 build / targeted test / lint，以及一个代表性目标页 smoke check。
+- 只有响应式改动才额外检查一个相关窄视口。
+- Antigravity 负责多路线、多设备 / 浏览器、控制台与网络、完整交互、键盘可访问性、截图 / 感知比较和人工 overlay。
+- Antigravity 深度报告缺失不阻止 commit、push、PR，或创作者明确授权后的 merge；但不得把基本 smoke 写成完整视觉验证。
+- 部署、权限、认证、支付、隐私、安全和数据迁移仍按风险运行专项检查。
+
+### Modified configuration
+
+- `AGENTS.md`
+- `.agents/skills/normalize-web-portfolio/SKILL.md`
+- `.agents/skills/build-new-site-to-pr/SKILL.md`
+- `web/platform-standard.md`
+- `TECH.md`
+
+### Delivery
+
+- Branch: `codex/living-atlas-template-data`
+- PR: <https://github.com/TSRat/My-Website/pull/14>
+- Merge: explicitly authorized by the creator; perform after configuration validation and push.

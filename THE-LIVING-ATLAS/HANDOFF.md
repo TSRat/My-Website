@@ -291,7 +291,7 @@
 - Unmerged Preview: <https://raw.githack.com/TSRat/My-Website/codex/living-atlas-template-data/THE-LIVING-ATLAS/index.html>
 - Chinese Preview: <https://raw.githack.com/TSRat/My-Website/codex/living-atlas-template-data/THE-LIVING-ATLAS/zh.html>
 - Draft PR: <https://github.com/TSRat/My-Website/pull/14>
-- Merge: not authorized and not performed.
+- Merge: creator authorized PR #14 on 2026-07-24; this batch is intended to land through that PR after the validation-policy configuration commit.
 
 ## 2026-07-24: Restore Worlds ambiguity
 
@@ -335,4 +335,4 @@
 - Exact Preview QA: Passed for English desktop and Chinese mobile; no broken images or horizontal overflow.
 - Exact English Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/index.html#worlds>
 - Exact Chinese Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/zh.html#worlds>
-- Merge: not authorized and not performed.
+- Merge: creator authorized PR #14 on 2026-07-24; perform after the validation-policy configuration commit is pushed.
