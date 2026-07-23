@@ -36,5 +36,5 @@
 ## 响应式人物图像
 
 - Featured World 的 Hypatia 肖像使用 `assets/hypatia-sketch-transparent.webp`，文件本身带 Alpha 通道；移动端和平板端不能只依赖 `mix-blend-mode` 模拟透明。
-- 继续保留 `multiply` 和原有黑白对比滤镜，用于让人物线稿与 Ivory 页面底色保持桌面端既有的纸本融合效果。
+- `hypatia-portrait` 类使用 `multiply` 把人物线稿融入 Ivory 底色，并以较温和的对比度与透明度避免剪贴感；资产 Alpha 蒙版还包含 1px 收边与 0.75px 羽化。
 - 透明版本是从现有 Hypatia 素描资产做背景提取的衍生文件，不改变人物身份、姿态、构图或史料定位。

@@ -15,7 +15,7 @@ Primary files:
 - `content-registry.js`: bilingual Worlds, Knowledge, focus, published-site, and update records
 - `web-core.js`: reusable localization, filtering, sorting, rendering, index, search, and mobile-menu primitives
 - `atlas.js`: Living Atlas adapter plus carousel behavior
-- `assets/`: local site imagery, including the alpha-backed `hypatia-sketch-transparent.webp`
+- `assets/`: local site imagery, including the feathered alpha-backed `hypatia-sketch-transparent.webp`
 - `tsrat-logo.png`: local navigation logo
 
 Figma content-system frame: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=18-2>
@@ -76,7 +76,7 @@ Browser QA must cover:
 - The knowledge taxonomy is intentionally marked as mapping in progress; article-level records and real counts do not exist yet.
 - The shared runtime currently lives inside `THE-LIVING-ATLAS/`. Publishing a repository-level `shared/web-core/` requires a separately authorized Pages build-map change.
 - Full-page screenshots are not accepted from the current browser backend because sticky/reveal composition can repeat or omit regions. Use matching section or anchor captures.
-- The Featured World Hypatia portrait must keep a real alpha channel. Do not replace `hypatia-sketch-transparent.webp` with the legacy opaque `hypatia-sketch.jpg` and rely on browser blend-mode compositing alone.
+- The Featured World Hypatia portrait must keep a real, softly feathered alpha channel. Keep the shared `.hypatia-portrait` multiply treatment; do not replace `hypatia-sketch-transparent.webp` with the legacy opaque `hypatia-sketch.jpg` and rely on browser blend-mode compositing alone.
 
 ## Safe next improvement
 

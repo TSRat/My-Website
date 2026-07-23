@@ -65,9 +65,13 @@ test("Living Atlas language pages use the shared data hooks without fake links",
 });
 
 test("Living Atlas Hypatia portrait uses a real alpha-backed asset", async () => {
-  const [english, chinese, portrait] = await Promise.all([
+  const [english, chinese, styles, portrait] = await Promise.all([
     readAtlasPage("index.html"),
     readAtlasPage("zh.html"),
+    readFile(
+      new URL("../THE-LIVING-ATLAS/style.css", import.meta.url),
+      "utf8",
+    ),
     readFile(
       new URL(
         "../THE-LIVING-ATLAS/assets/hypatia-sketch-transparent.webp",
@@ -77,9 +81,14 @@ test("Living Atlas Hypatia portrait uses a real alpha-backed asset", async () =>
   ]);
 
   for (const page of [english, chinese]) {
-    assert.match(page, /assets\/hypatia-sketch-transparent\.webp/);
+    assert.match(
+      page,
+      /class="hypatia-portrait" src="assets\/hypatia-sketch-transparent\.webp"/,
+    );
     assert.doesNotMatch(page, /assets\/hypatia-sketch\.jpg/);
   }
+
+  assert.match(styles, /\.hypatia-portrait\s*{[^}]*mix-blend-mode:\s*multiply/s);
 
   assert.equal(portrait.subarray(0, 4).toString("ascii"), "RIFF");
   assert.equal(portrait.subarray(8, 12).toString("ascii"), "WEBP");

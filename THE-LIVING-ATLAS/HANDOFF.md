@@ -178,3 +178,40 @@
 - Draft PR: <https://github.com/TSRat/My-Website/pull/13>
 - Remote Preview QA: Passed — 4 Worlds、5 published Sites、15 Index links、透明 Hypatia 资源与中英文模块均加载；控制台 0 errors / warnings。
 - Merge: not performed; creator review required.
+
+## 2026-07-24: Hypatia portrait edge refinement
+
+### 当前目标
+
+消除 Hypatia 透明人物图过硬的剪贴边缘，同时保留真实 Alpha、纸本线稿质感和 Featured World 的现有构图。
+
+### 实现与决定
+
+- 不重新生成或改画人物；沿用此前内置图像编辑得到的纯色键控中间图，仅重算透明蒙版。
+- Alpha 蒙版使用 1px 收边和 0.75px 羽化，将部分透明像素从 6,005 增至 20,094，降低发丝、肩颈和衣缘的锯齿与硬切感。
+- 两个语言页面改用共享 `.hypatia-portrait` 类。明确保留 `mix-blend-mode: multiply`，并将对比度从 `1.5` 降至 `1.32`、亮度从 `1.1` 降至 `1.06`、整体透明度设为 `0.96`，让线稿更自然地融入 Ivory 底色。
+- 继续使用同一资产 URL 和同一人物构图，避免新增内容漂移或响应式差异。
+
+### 修改文件
+
+- `THE-LIVING-ATLAS/assets/hypatia-sketch-transparent.webp`
+- `THE-LIVING-ATLAS/index.html`
+- `THE-LIVING-ATLAS/zh.html`
+- `THE-LIVING-ATLAS/style.css`
+- `THE-LIVING-ATLAS/DESIGN.md`
+- `THE-LIVING-ATLAS/TECH.md`
+- `THE-LIVING-ATLAS/HANDOFF.md`
+- `tests/living-atlas-content-system.test.mjs`
+
+### 验证与交付
+
+- Alpha: Passed — `1094 × 1437` WebP 保留 Alpha；20,094 个部分透明像素形成柔和边缘。
+- Browser: Passed — 英文 `1440 × 900`、`1024 × 768`、`390 × 844` 与中文 `390 × 844` 都显示 Ivory 底色连续、人物边缘自然、`multiply` 生效。
+- Responsive: Passed — tablet `scrollWidth 1009 ≤ innerWidth 1024`；mobile `scrollWidth 375 ≤ innerWidth 390`。
+- Console: Passed — 中英文手机端 0 errors / warnings。
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed — 337 references across 41 HTML/CSS files.
+- `npm run build`: Passed.
+- `npm test`: Passed — 6 / 6.
+- `npm run lint`: Passed with 0 errors and 24 existing warnings outside this change.
+- Pending at handoff update time: commit, push, PR readiness, and the creator's explicitly authorized merge.

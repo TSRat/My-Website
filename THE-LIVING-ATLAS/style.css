@@ -404,6 +404,12 @@ main section {
   margin-top: 2rem;
 }
 
+.hypatia-portrait {
+  mix-blend-mode: multiply;
+  filter: grayscale(1) contrast(1.32) brightness(1.06);
+  opacity: 0.96;
+}
+
 /* 04 Worlds Bento */
 .worlds-section .grid-container {
   gap: 1rem;
