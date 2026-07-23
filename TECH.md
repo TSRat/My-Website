@@ -220,3 +220,11 @@ git status --short --branch
 - 根目录存在若干静态快照文件，当前 Pages build 不读取它们；删除策略尚未由创作者确认。
 
 以上缺口应通过补充可重复构建流程解决，而不是通过移动目录或改变公开 URL 解决。
+
+## Reusable website migration starter
+
+`web/templates/site-starter/` is version-controlled source documentation and
+example code. It is not copied into `docs/` and is not a deployed shared
+runtime. Each site adopts the needed contracts inside its real maintained
+source directory so public URLs and the protected Pages build map remain
+unchanged.

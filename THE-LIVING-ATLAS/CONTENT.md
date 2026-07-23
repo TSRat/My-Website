@@ -12,14 +12,17 @@
 - **05 Knowledge Atlas (知识库细分)**: 只细分 Knowledge 世界。底层收藏尚未整理完成时显示 `Mapping / 整理中`，不得使用没有来源的数量。
 - **07 Sites (已发布网站)**: 只收录 `status: published` 且有真实 URL 的独立网站；数量由注册表自动计算。
 - **08 Latest (最近更新)**: 从带日期的更新记录自动排序和渲染。
-- **09 The Index (总索引)**: 汇总所有当前可抵达的内容。计划中、草稿或无 URL 的项目不进入索引。
+- **09 Data / Signals (数据入口)**: 保留可见的数据与测量入口；provider 未连接时显示诚实空状态，不展示假数字或假图表。
+- **10 The Index (总索引)**: 汇总所有当前可抵达的内容。计划中、草稿或无 URL 的项目不进入索引。
 
 ## 数据要求 (Data Requirements)
 当前页面继续采用静态 HTML + ES Modules，不迁移框架：
 
 - `content-registry.js` 是 Worlds、Knowledge、Now、Sites、Latest 和 Index 的唯一页面数据源。
 - `web-core.js` 负责双语字段、已发布过滤、日期排序、索引、搜索和移动目录。
+- `analytics.js` 提供 provider-neutral 事件信封；默认 no-op，不存储或发送数据。
 - `index.html` 与 `zh.html` 只保留共同的语义容器和各自的界面文案。
 - 未来可以把注册表替换为 Markdown + Frontmatter、CMS 或 API，但必须保持稳定 `id`、发布状态和链接规则。
 
-完整跨站契约见 `../web/content-system.md`。
+完整跨站契约见 `../web/content-system.md`、`../web/analytics-standard.md`
+和 `../web/templates/site-starter/`。

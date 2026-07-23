@@ -1,9 +1,10 @@
 # TSRat Website Content System
 
-- Version: 1
+- Version: 2
 - Reference implementation: `THE-LIVING-ATLAS/content-registry.js`, `THE-LIVING-ATLAS/web-core.js`
 - Figma: [TSRat Content System · v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=18-2)
 - Applies to: The Living Atlas now; the other five sites and future sites when they enter a scoped migration batch
+- Reusable starter: `web/templates/site-starter/`
 
 ## Purpose
 
@@ -37,6 +38,7 @@ Keep site-specific:
 | Sites | Published independent websites | `status: "published"` and a valid URL are both required |
 | Now | Current areas of focus | Rendered from registry focus records |
 | Latest | Recent meaningful releases or changes | Sorted from dated update records |
+| Data | Visible measurement commitment and provider status | Always has an entry; never displays invented values |
 | Index | All currently navigable content | Excludes drafts, placeholders, and links without destinations |
 
 `Archive` is no longer a primary navigation destination. The old `#archive` hash remains as a compatibility anchor pointing to the Index section.
@@ -115,7 +117,10 @@ SearchProvider   -> local index   | generated index | hosted search
 AnalyticsAdapter -> no-op default | privacy-approved provider
 ```
 
-Analytics remains a no-op until the creator chooses a provider and the content model is mature enough to measure meaningful behavior.
+Living Atlas now ships a provider-neutral no-op adapter and a visible Data empty
+state. No data is stored or transmitted until the creator approves and connects
+a provider. The full contract and candidate metric definitions live in
+[`analytics-standard.md`](./analytics-standard.md).
 
 ## Verification contract
 
@@ -136,3 +141,7 @@ Every adopting site should test:
 ## Current deployment boundary
 
 The reference implementation currently ships inside `THE-LIVING-ATLAS/`, so it can be verified without changing the protected Pages build map. Moving it to a repository-level `shared/web-core/` runtime requires a separately authorized addition to `scripts/build-github-pages.mjs`; that change must not alter existing slugs, URLs, or the GitHub Actions artifact architecture.
+
+The copyable migration starter lives under `web/templates/site-starter/`. It is
+source documentation and example code, not a deployed shared runtime, so each
+site can adopt the contracts without changing the protected build map.

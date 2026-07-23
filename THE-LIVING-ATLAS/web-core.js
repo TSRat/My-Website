@@ -185,21 +185,25 @@ export const renderLatest = (registry, locale, container) => {
 
 export const buildIndexEntries = (registry, locale) => {
   const sections = [
-    { title: { en: "About", zh: "关于" }, href: "#about", type: "section" },
-    { title: { en: "Now", zh: "最近状态" }, href: "#now", type: "section" },
-    { title: { en: "Latest", zh: "最新动态" }, href: "#latest", type: "section" },
+    { id: "about", title: { en: "About", zh: "关于" }, href: "#about", type: "section" },
+    { id: "data", title: { en: "Data", zh: "数据" }, href: "#data", type: "section" },
+    { id: "now", title: { en: "Now", zh: "最近状态" }, href: "#now", type: "section" },
+    { id: "latest", title: { en: "Latest", zh: "最新动态" }, href: "#latest", type: "section" },
   ];
   const worlds = registry.worlds.map((world) => ({
+    id: world.id,
     title: world.title,
     href: `#world-${world.id}`,
     type: "world",
   }));
   const knowledge = registry.knowledge.map((category) => ({
+    id: category.id,
     title: category.title,
     href: `#knowledge-${category.id}`,
     type: "knowledge",
   }));
   const sites = getPublishedSites(registry).map((site) => ({
+    id: site.id,
     title: site.title,
     href: site.href,
     type: "site",
@@ -234,6 +238,7 @@ export const renderIndex = (registry, locale, container) => {
       link.href = entry.href;
       link.textContent = entry.label;
       link.dataset.contentType = entry.type;
+      if (entry.type === "site") link.dataset.contentId = entry.id;
       item.append(link);
       list.append(item);
     });
@@ -276,7 +281,11 @@ export const initMobileMenu = (root = document) => {
   });
 };
 
-export const initSearch = (entries, root = document) => {
+export const initSearch = (
+  entries,
+  root = document,
+  { onSearch, onResultOpen } = {},
+) => {
   const dialog = root.querySelector("[data-search-dialog]");
   const input = dialog?.querySelector("[data-search-input]");
   const results = dialog?.querySelector("[data-search-results]");
@@ -290,11 +299,15 @@ export const initSearch = (entries, root = document) => {
     return;
   }
 
+  let currentMatches = [];
+  let lastReportedQuery = "";
+
   const renderResults = () => {
     const query = input.value.trim().toLocaleLowerCase();
     const matches = entries.filter((entry) =>
       entry.label.toLocaleLowerCase().includes(query)
     );
+    currentMatches = matches;
 
     results.replaceChildren();
     matches.forEach((entry) => {
@@ -302,7 +315,11 @@ export const initSearch = (entries, root = document) => {
       const link = document.createElement("a");
       link.href = entry.href;
       link.textContent = entry.label;
-      link.addEventListener("click", () => dialog.close());
+      link.addEventListener("click", () => {
+        reportSearch();
+        onResultOpen?.(entry);
+        dialog.close();
+      });
       item.append(link);
       results.append(item);
     });
@@ -312,15 +329,30 @@ export const initSearch = (entries, root = document) => {
       : `${matches.length} result${matches.length === 1 ? "" : "s"}`;
   };
 
+  const reportSearch = () => {
+    const query = input.value.trim();
+    if (!query || query === lastReportedQuery) return;
+    lastReportedQuery = query;
+    onSearch?.({
+      queryLength: query.length,
+      resultCount: currentMatches.length,
+    });
+  };
+
   const openSearch = () => {
     if (!dialog.open) dialog.showModal();
     input.value = "";
+    lastReportedQuery = "";
     renderResults();
     window.requestAnimationFrame(() => input.focus());
   };
 
   openButtons.forEach((button) => button.addEventListener("click", openSearch));
   input.addEventListener("input", renderResults);
+  input.addEventListener("change", reportSearch);
+  input.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") reportSearch();
+  });
   root.addEventListener("keydown", (event) => {
     if ((event.metaKey || event.ctrlKey) && event.key.toLocaleLowerCase() === "k") {
       event.preventDefault();

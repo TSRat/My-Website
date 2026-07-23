@@ -116,6 +116,8 @@ Mandatory:
 - Record the current analytics provider, tracked events, privacy implications, and missing measurement.
 - Do not silently add an analytics provider, cookies, fingerprints, or cross-site tracking.
 - When no provider exists, maintain a provider-neutral event contract.
+- Keep a visible Data entry with an honest provider/availability state; an empty
+  state is preferable to invented metrics or a missing future extension point.
 
 Base event envelope:
 
@@ -150,6 +152,11 @@ Optional:
 - Tier A may stop at the event specification.
 - Tier B should include meaningful interaction events.
 - Tier C should add metric definitions, denominators, retention windows, privacy review, and dashboard ownership.
+
+Reference:
+
+- [`analytics-standard.md`](./analytics-standard.md)
+- [`templates/site-starter/`](./templates/site-starter/)
 
 ## Shared foundations
 

@@ -13,7 +13,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 
 | Site | Classification | Interaction tier | Migration status | Primary blocker |
 | --- | --- | --- | --- | --- |
-| The Living Atlas | REFACTOR | B — Interactive | Content registry and Web Core v1 in Draft PR #13; unmerged Preview verified | Shared runtime publication needs explicit Pages build-map authorization |
+| The Living Atlas | REFACTOR | B — Interactive | Content registry and Web Core v1 merged in PR #13; Data / starter batch in progress | Shared runtime publication needs explicit Pages build-map authorization |
 | IVORY ARCHIVE | PRESERVE | B — Interactive | Audited; no implementation migration started | Dynamic and Pages renderers need explicit parity tests |
 | Enheduanna | REFACTOR | A — Editorial | Audited; implementation blocked | No reproducible source-to-mirror build; tablet overflow exists in the deployed mirror |
 | Hildegard | PRESERVE | A — Editorial | Audited; no implementation migration started | Long-page visual comparison must use deterministic sections |
@@ -21,6 +21,21 @@ This file is the detailed audit, not a second website registry. Project names, p
 | Melromarc Sisters | REBUILD | B — Interactive | Audited; rebuild blocked | Complete upstream source and reproducible build are not present |
 
 Counts: 6 audited; 2 PRESERVE; 3 REFACTOR; 1 REBUILD.
+
+## Remaining migration queue
+
+The reusable capability starter is `web/templates/site-starter/`. Each batch
+copies only the contracts its tier needs and preserves its own visual system.
+
+| Order | Batch | Starter adoption | Gate before implementation |
+| --- | --- | --- | --- |
+| 1 | IVORY ARCHIVE | Manifest, provider-neutral events, Data entry, renderer parity and screenshot QA | Confirm dynamic/Pages parity fixtures |
+| 2 | Hypatia + Hildegard | Manifest, stable IDs, Data entry, source/citation events and editorial browser checks | Capture deterministic chapter sections at three viewports |
+| 3 | Enheduanna | Tier A contract only after source and mirror can be reproduced | Restore or document a repeatable source-to-mirror build |
+| 4 | Melromarc Sisters | Tier B/Rebuild contract after upstream source is available | Confirm complete maintainable source and build |
+
+This ordering starts with maintainable sources. Enheduanna and Melromarc remain
+blocked by source/build provenance.
 
 ## Visual baseline and evidence
 
@@ -48,7 +63,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Content/data model:** One bilingual registry drives Worlds, Knowledge, Now, published Sites, Latest, Index, and search metadata. Stable IDs, publication states, and real-link rules follow `web/content-system.md`.
 - **State/interactivity:** Auto-rotating featured carousel with previous/next controls, accessible search dialog, keyboard shortcut, and mobile disclosure menu.
 - **Build system / deployment:** Copied unchanged by `scripts/build-github-pages.mjs` into the GitHub Pages artifact.
-- **Analytics:** No provider detected. Use the provider-neutral events in `platform-standard.md`; do not add a provider without approval.
+- **Analytics:** No provider. A visible Data entry, no-op adapter, four-event contract and privacy gate are defined in `analytics-standard.md`; no data is stored or transmitted.
 - **Tests / CI:** Pages asset validation plus Living Atlas registry/link/language/index tests. Browser interaction checks remain required.
 - **Accessibility state:** Correct language declarations, skip link, one `h1`, semantic `main` and `nav`, visible focus, native dialog search, mobile disclosure navigation, and descriptive image alternatives are present.
 - **Responsive state:** Desktop and tablet first folds remain coherent. The mobile title is contained; the open menu uses an opaque layer and pushes the hero down instead of mixing with it.
@@ -57,9 +72,9 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Target architecture:** Retain a lightweight static site. Introduce accessible shared primitives and an explicit data layer before considering a framework migration.
 - **Shared-core adoption:** Focus treatment, skip navigation, content widths, breakpoints, motion preference, search/dialog behavior, and QA conventions.
 - **Site-specific theme:** Preserve the ivory editorial atlas, monumental serif typography, cobalt system, asymmetric grid, imagery, and metadata voice.
-- **Migration status:** First corrective batch merged. Content/data refactor and site-local Web Core v1 are implemented in Draft PR #13 with a verified unmerged Preview.
-- **Figma URL:** <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
-- **Preview / PR URL:** [Unmerged Preview](https://raw.githack.com/TSRat/My-Website/codex/living-atlas-content-system/THE-LIVING-ATLAS/index.html); [Draft PR #13](https://github.com/TSRat/My-Website/pull/13).
+- **Migration status:** Corrective and content-system batches merged through PR #13. The Data / reusable starter batch is implemented on `codex/living-atlas-template-data`.
+- **Figma URL:** [Portfolio design system](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt); [TSRat Data & Analytics · v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=19-2).
+- **Preview / PR URL:** PR #13 is merged; the Data / starter batch Preview and PR are pending final verification.
 - **Remaining risks:** Small Red Book and WeChat URLs remain unknown and are non-clickable planned states. Article-level Knowledge data does not yet exist. Moving Web Core to a repository-level runtime requires a protected build-map change.
 
 ## IVORY ARCHIVE

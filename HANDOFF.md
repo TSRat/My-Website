@@ -543,3 +543,49 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 - `npm run build`: Passed.
 - `npm test`: Passed — 6 / 6.
 - `npm run lint`: Passed — 0 errors; 24 existing warnings outside this batch.
+
+## 2026-07-24: Living Atlas migration starter and Data foundation
+
+### Current target
+
+把 Living Atlas 已完成的信息架构整理为后续五站和未来网站可复用的迁移起点，同时加入必要的 Data 入口，但不在内容和数据尚未成熟时虚构 dashboard 或指标。
+
+### Completed
+
+- 新增仓库源码模板 `web/templates/site-starter/`：site manifest、content registry、Data empty state、provider-neutral analytics adapter 和迁移清单。
+- 新增 `web/analytics-standard.md`，定义事件字段、provider 激活门槛、隐私边界和未来可计算指标。
+- Living Atlas 英中页面新增 Data 导航、Index、Search 和可见 empty state。
+- 默认 analytics adapter 保持 no-op；无网络、cookie、storage、identity 或原始搜索文本。
+- Figma 新增 `TSRat Data & Analytics · v1` 可编辑画面与 Living Atlas Data empty state。
+- 完成 baseline / review 固定视口组合审查，结果记录在 `web/evidence/living-atlas-template-data/visual-regression.md`。
+- 更新项目表、平台标准、内容系统和迁移队列，明确其余站点的采用顺序与阻塞条件。
+
+### Migration readiness
+
+1. **IVORY ARCHIVE**：先建立动态源码与 Pages 生成结果的 parity 检查，再采用 manifest / Data / events。
+2. **Hypatia + Hildegard**：使用 section-level visual gate，加入 manifest、Data 入口和站点特定事件，不改变视觉主题。
+3. **Enheduanna**：先确认 `static-sites/enheduanna/` 到 `ENHEDUANNA/` 的重建链，再实施。
+4. **Melromarc Sisters**：先找回上游源码，或由创作者明确授权重建。
+
+### Important decisions
+
+- 复用能力和契约，不复用统一皮肤。
+- starter 是复制后适配的源文件示例，不修改受保护的 Pages build map，也不创建第二份项目 registry。
+- Data 入口可以先存在，但必须诚实显示 provider 状态；没有来源、基准和 session 定义时不设 KPI 目标。
+- 当前 PR 不启用任何外部 analytics provider。
+
+### Validation
+
+- JavaScript syntax and targeted tests: Passed。
+- Pages build and asset validation: Passed。
+- Application build and complete tests: Passed。
+- Lint: Passed with 0 errors and 24 pre-existing warnings outside this batch。
+- Browser QA: Passed for English / Chinese, desktop / tablet / mobile, menu, Search → Data, horizontal containment, and console health。
+- Visual preservation: Passed for the additive scope; all visible changes are documented and intentional。
+
+### Git state
+
+- Branch: `codex/living-atlas-template-data`
+- Base: `origin/main` merge commit `16e9706`
+- Commit / push / Draft PR / Preview: pending at this handoff update.
+- Merge: not authorized and not performed.
