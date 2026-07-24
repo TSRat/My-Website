@@ -32,6 +32,138 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    date: "2026-07-24",
+    displayDate: "2026.07.24",
+    issueNo: "11",
+    theme: "档案、模型与法律：谁把可能性变成制度？",
+    intro:
+      "今天的五个故事都在追踪一种“变成制度”的过程：Sondheim 的修改痕迹进入公共档案，Panton 的总体空间从纸模型走向工业生产，五亿词法规被重新扫描，健康饮食被推演成农业版图，而性别迫害终于从法律主张进入判决与逮捕令。真正值得看的，不只是新结论，而是证据如何被保存、计算、执行与质疑。",
+    uniqueCount: 5,
+    topics: ["艺术人文", "社会科学", "女性主义"],
+    stories: [
+      {
+        category: "艺术人文 × 戏剧与音乐 × 创作档案",
+        image: "/story-images/sondheim-creative-archive.jpg",
+        imageAlt: "乐谱草稿、铅笔修改、索引卡、舞台光线与档案盒叠合的 Sondheim 创作档案编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释音乐剧创作过程与公共档案，并非 Sondheim 手稿复制、肖像或 Library of Congress 展品照片",
+        title: "天才不是成品：Sondheim 的删除、改写与犹豫进入公共档案",
+        summary:
+          "Library of Congress 今天继续展出 Stephen Sondheim 创作档案。歌词、乐谱草稿、录音、笔记与剪贴簿让音乐剧不再只剩经典唱段，而成为可以逐页追踪的修改过程。",
+        happened:
+          "Library of Congress 在 2025 年取得 Sondheim Papers，并已向研究者开放。7 月 24 日，Performing Arts Reading Room 的小型陈列展示《Into the Woods》《Sunday in the Park with George》《Merrily We Roll Along》《Sweeney Todd》和《A Little Night Music》等作品的歌词与音乐材料。",
+        importance:
+          "成品舞台容易制造“灵感一次成形”的神话，档案却保存删除、替换、结构调整与合作痕迹。把私人工作纸变成公共研究资源，也会改变谁有资格解释一部作品：不再只有演出回忆和权威传记，还包括可以核对的创作证据。",
+        creatorAngle:
+          "选择一首虚构音乐剧歌曲，制作三层创作剖面：第一版的韵脚、被划掉的动机、最终舞台顺序。重点不是模仿 Sondheim，而是让观众看到“修改”怎样同时改变语言、旋律和戏剧情境。",
+        facts: [
+          "Library of Congress 于 2025 年取得 Sondheim Papers，并在 2026 年持续于 Performing Arts Reading Room 展示馆藏精选",
+          "Music Division 估计馆藏约含 11,000 件材料，包括手稿、歌词与音乐草稿、录音、笔记本和剪贴簿",
+          "自 2025 年 6 月宣布入藏至 2026 年 6 月，馆方已处理 700 余次研究者与工作人员调阅箱件的请求",
+          "本次小型陈列明确涵盖 5 部音乐剧：《Into the Woods》《Sunday in the Park with George》《Merrily We Roll Along》《Sweeney Todd》和《A Little Night Music》",
+        ],
+        sourceName: "Library of Congress",
+        sourceUrl: "https://www.loc.gov/item/event-419398/treasures-from-the-stephen-sondheim-collection/2026-07-24/",
+        sourceDate: "活动日期 2026-07-24；馆藏与研究指南资料更新至 2026-06",
+      },
+      {
+        category: "艺术人文 × 设计 × 材料与生活空间",
+        image: "/story-images/panton-total-environment.jpg",
+        imageAlt: "流动色带、纸模型、悬挂座椅轮廓与空间网格组成的总体环境设计编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释 Verner Panton 的空间、色彩与设计过程，并非具体家具复制、展览现场或历史照片",
+        title: "一把椅子不够：Panton 想重新编排整个身体与房间",
+        summary:
+          "Vitra Design Museum 在 Verner Panton 百年诞辰展中，把名椅放回光、织物、化学材料、企业委托与未实现建筑组成的总体环境，纠正“六十年代造型大师”的单一标签。",
+        happened:
+          "《Verner Panton: Form, Colour, Space》正在 Vitra Schaudepot 展出。展览从五十年代纸模型和原型，延伸到 1970 年 Visiona II 的可步入式 Fantasy Landscape 重构，并首次详细呈现大量未建成建筑方案及其设计过程。",
+        importance:
+          "Panton 的作品常被拆成可收藏的单件家具，但他的核心问题是空间怎样改变坐、躺、交往与感受。把 Bayer 等化工企业的委托重新放进叙事，还能看见“未来主义”如何依赖合成材料产业，而不只是设计师个人想象。",
+        creatorAngle:
+          "从同一张室内平面出发，依次只改变家具、光线、色阶、声学与身体姿势，观察“空间功能”在哪一步开始变化；再把材料供应者和生产技术标进图中，让总体艺术也显出其工业链条。",
+        facts: [
+          "展览为 Panton 1926 年出生百年而设，展期为 2026 年 5 月 23 日至 2027 年 5 月 9 日",
+          "展览包含 1970 年 Fantasy Landscape 的可步入式重构，版本标注为 1/8",
+          "Panton Chair 的基本构想始于 1950 年代中期，直到 1967 年才由 Vitra 推向系列生产",
+          "Vitra 的 Panton Archive 保存逾 40,000 份文件，其中约 20,000 份为图纸与绘图；展览首次详细呈现其多数未实现的建筑项目",
+        ],
+        sourceName: "Vitra Design Museum",
+        sourceUrl: "https://www.design-museum.de/en/exhibitions/detailpages/verner-panton-form-colour-space.html",
+        sourceDate: "展览开幕 2026-05-23；页面核验 2026-07-24",
+      },
+      {
+        category: "社会科学 × 政治制度 × AI 与行政能力",
+        image: "/story-images/policy-sludge-ai.jpg",
+        imageAlt: "堆叠法规文件穿过扫描网格并转化为透明公共仪表板的政策淤泥编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释法规扫描、行政负担与公共数据，并非政府文件、AI 产品界面或新闻摄影",
+        title: "五亿词法律之后，政府可能连自己要求的报告都读不完",
+        summary:
+          "Stanford RegLab 用 AI 扫描全美五亿词州法，寻找过时报告、委员会与费用。结果显示，行政负担不仅来自执行太慢，也来自法律长期累积而缺少退出机制。",
+        happened:
+          "研究团队建立覆盖美国 50 州法规的语料库，并与地方和州政府验证识别工具。研究已推动 San Francisco 精简超过三分之一报告要求，也被 New York 的 regulatory reset 使用；论文将发表于《Yale Journal on Regulation》。",
+        importance:
+          "“删繁就简”听起来天然正确，但一份报告可能是没人阅读的遗留物，也可能是公众监督污染、预算或歧视的唯一窗口。AI 可以发现重复与成本，却不能单独判断公共价值；关键是为保留、合并和废止建立透明的人类复核程序。",
+        creatorAngle:
+          "把十份假想政府报告放入一个决策台：显示法定目的、制作工时、提交率、阅读量、受影响群体和替代数据源。让观众尝试删减，再展示每次删除同时减少的负担与监督能力。",
+        facts: [
+          "研究语料包含约 5 亿词州法，覆盖美国全部 50 州",
+          "California 的报告要求从 2000 年到 2025 年增长约 400%，约 30% 的持续性报告可能从未完成",
+          "Maryland 估计阅读相关报告最长需要 14 周，而州议会会期只有 13 周；州机构将约 20% 报告列为可取消或合并",
+          "研究发现一份报告可消耗约 3,500 个员工工时、成本逾 87 万美元；San Francisco 已据试点精简超过三分之一报告要求",
+        ],
+        sourceName: "Stanford Regulation, Evaluation, and Governance Lab",
+        sourceUrl: "https://news.stanford.edu/stories/2026/07/how-ai-is-helping-states-cut-through-decades-of-red-tape",
+        sourceDate: "2026-07-23",
+      },
+      {
+        category: "社会科学 × 地理与食物系统 × 情景模型",
+        image: "/story-images/food-system-transition.jpg",
+        imageAlt: "牧场、豆类、果蔬、土地网格与区域经济箭头重新排列的全球食物系统编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释饮食转型、土地利用与农业经济情景，并非农场实景、统计图或研究结果截图",
+        title: "更健康的餐盘，会让哪些农场扩张、哪些地区失去收入？",
+        summary:
+          "十个模型团队推演全球转向健康饮食、减少浪费与提高生产效率的后果：土地利用排放可大幅下降，但畜牧业、作物生产和地区收入会发生极不均衡的重排。",
+        happened:
+          "发表于《Nature》的多模型分析模拟了接近 2025 EAT–Lancet 建议的食物系统转型。到 2050 年，全球农业用地可能比延续当前趋势少 6%，反刍动物数量比 2020 年少约四亿头；果蔬、坚果与豆类产值则明显增加。",
+        importance:
+          "“人人吃得更健康”不是一条只发生在营养标签上的路线，而会改变土地、贸易、劳动和地方财政。模型提示转型规模，也暴露一个重要假设：消费者被设定为无成本地改变偏好。真正的政策必须处理价格、文化、基础设施和受冲击生产者，而不能把模型情景当作自动到来的预测。",
+        creatorAngle:
+          "把同一套饮食目标画成三张并列地图：土地与碳、农业产值、家庭可负担性。用美国、印度和欧洲三条不同路径说明全球平均数怎样遮蔽相反的地区结果。",
+        facts: [
+          "研究由 LSHTM、Cornell University 与 10 个模型团队合作，论文 DOI 为 10.1038/s41586-026-10775-2",
+          "情景中 2050 年全球农业用地可比当前趋势少 6%，土地利用变化造成的农业净二氧化碳排放可比 2020 年低 85%",
+          "全球畜牧业产值可比 2020 年下降 42%（约 6,300 亿美元），反刍动物约减少 4 亿头",
+          "蔬菜、水果、坚果与豆类合计产值可增长 57%（约 8,900 亿美元）；但模型假定消费者可无成本转向健康饮食",
+        ],
+        sourceName: "Nature；London School of Hygiene & Tropical Medicine",
+        sourceUrl: "https://doi.org/10.1038/s41586-026-10775-2",
+        sourceDate: "研究发布 2026-07-23",
+      },
+      {
+        category: "女性主义 × 国际法 × 性别迫害与制度执行",
+        image: "/story-images/gender-justice-report-card.jpg",
+        imageAlt: "法院台阶、分散法律文件、交叉性网格与未闭合执行链组成的性别正义编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释国际刑法中的性别迫害、判决与执行缺口，并非法院照片、受害者影像或官方法律文件",
+        title: "性别迫害终于进入判决，但判决离正义还有一整条资金链",
+        summary:
+          "Women’s Initiatives for Gender Justice 在中断八年后重启 Gender Report Card，把监测范围从 ICC 扩展到国际法院、区域人权法院、联合国机制与危害人类罪条约谈判。",
+        happened:
+          "新版报告梳理 2025 年 1 月至 2026 年 5 月的进展：ICC 首次作出性别迫害定罪，Afghanistan 案逮捕令首次以性别迫害为主要指控；美洲人权法院也首次承认生殖暴力这一法律类别。",
+        importance:
+          "把性别暴力命名为独立罪行，会改变调查证据、受保护群体与责任链条；但法律承认并不等于执行。报告同时指出逮捕、赔偿、法律援助和特别法庭资金不足，提醒我们不要把“首例判决”写成已经完成的胜利。",
+        creatorAngle:
+          "制作一条从证词到赔偿的法律路径：记录、定性、起诉、逮捕、审判、判决、赔偿与执行。每一节点分别标出法律突破、负责机构、资金来源和可能断裂的位置。",
+        facts: [
+          "2026 版覆盖 2025 年 1 月至 2026 年 5 月，并把范围扩展到 ICC、ICJ、混合法庭、区域法院、联合国机制与条约谈判",
+          "旧版 Gender Report Card 于 2005 至 2014 年每年发布，另有 2018 年版；此次是在 8 年空档后重启",
+          "Ali Kushayb 案产生国际刑法史上首个性别迫害定罪；Afghanistan 逮捕令则首次把性别迫害作为 ICC 的主要指控",
+          "报告同时记录美洲人权法院首次承认生殖暴力，并警告 Central African Republic 特别刑事法院等机构的资金危机",
+        ],
+        sourceName: "Women’s Initiatives for Gender Justice",
+        sourceUrl: "https://4genderjustice.org/gender-report-card-july-2026/",
+        sourceDate: "2026-07-13；2026-07-24核验",
+      },
+    ],
+  },
+  {
     date: "2026-07-23",
     displayDate: "2026.07.23",
     issueNo: "10",
