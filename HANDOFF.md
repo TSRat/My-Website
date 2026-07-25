@@ -300,6 +300,50 @@ python3 -m http.server 8000 --directory docs
 
 - Skill structure validation: Passed — 两个技能均通过 `quick_validate.py`。
 
+## 2026-07-25: Enheduanna six-stage readiness
+
+### Current target
+
+Complete all safe migration stages while respecting the confirmed separation
+between readable source and the compiled Pages mirror.
+
+### Completed
+
+- Added a six-stage readiness handoff and proposed machine-readable contract
+  under `web/sites/enheduanna/`.
+- Reused the editable Figma migration frame at node `27:2`.
+- Added tests for the explicit Stage 5 blocker and byte equality of all
+  same-name source/mirror public assets.
+- Updated the registry and project documentation without changing content,
+  `page.tsx`, CSS, the compiled mirror, workflow, build map, or public URL.
+
+### Blocker and decision
+
+Stage 5 remains blocked. The repository has no confirmed package, Vite config,
+or command that rebuilds `ENHEDUANNA/` from
+`static-sites/enheduanna/`. Hand-editing hashed bundles or claiming a source
+change is deployed would be unsafe. The next authorized action must be either
+scaffold restoration or an explicitly approved reconstruction.
+
+### Verification
+
+- Pages build and validation passed: 355 local references across 43 HTML/CSS
+  files.
+- Full tests passed: 11/11.
+- Lint completed with 0 errors and 24 pre-existing warnings.
+- Readiness tests confirm the blocker and byte-identical public assets.
+- Browser baseline confirms 0 broken images, no mobile overflow at 390 CSS
+  pixels, and the documented 35-pixel overflow at 1024 CSS pixels.
+
+### Delivery
+
+- Branch: `codex/enheduanna-six-stage-readiness`.
+- Readiness commit: `a755cc3d84ab09a43e595e2723f2e9a8312fd0a5`.
+- Unchanged mirror baseline:
+  <https://raw.githack.com/TSRat/My-Website/a755cc3d84ab09a43e595e2723f2e9a8312fd0a5/ENHEDUANNA/index.html>
+- Draft PR: <https://github.com/TSRat/My-Website/pull/17>
+- The remote page was opened and verified, but it intentionally contains no
+  Stage 5 migration changes.
 ## 2026-07-25: Hypatia + Hildegard six-stage migration batch
 
 ### Current target
@@ -747,3 +791,36 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 - Branch: `codex/living-atlas-template-data`
 - PR: <https://github.com/TSRat/My-Website/pull/14>
 - Merge: explicitly authorized by the creator; perform after configuration validation and push.
+
+## 2026-07-25: Enheduanna maintainable source reconstruction
+
+### Current target
+
+在未能从 ChatGPT Work / Sites 导出原工程的情况下，按创作者明确授权，利用仓库内完整可读 TSX/CSS/资源和当前 Pages 镜像，恢复可维护源码工程与可重复 source-to-mirror 构建。
+
+### Completed
+
+- 找到 Enheduanna 的 ChatGPT Work / Sites 任务与站点输出；编辑界面没有暴露源码下载或导出。
+- 新增共享 `scripts/build-maintainable-site.mjs`，先构建到 `.site-build/`，检查入口后再更新既有大写 Pages 镜像。
+- 新增 `static-sites/enheduanna/vite.config.ts`、`npm run dev:enheduanna` 与 `npm run build:enheduanna`。
+- 从权威源码重建当前 `ENHEDUANNA/` 入口与哈希 JS/CSS；历史 bundle 不删除。
+- 实现 `13 · DATA / SIGNALS` provider-none 入口，不启用网络分析、Cookie、持久化身份或虚构指标。
+- 修复旧基线在 1024px 的 hero 横向溢出；不改变桌面艺术方向、内容章节或公开 URL。
+- 更新 README registry、全局/项目技术文档、组合审计、六阶段 handoff、manifest 与 targeted tests。
+
+### Validation
+
+- `npm run build:enheduanna`: Passed.
+- `node --test tests/enheduanna-readiness.test.mjs`: Passed — 3/3.
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed.
+- Playwright basic smoke: 1280 / 1024 / 390 CSS pixels, Data visible, 8/8 images loaded, no console errors, no horizontal overflow.
+- Antigravity extended QA: not run; section-level visual comparison, keyboard and multi-browser review remain delegated.
+
+### Delivery state
+
+- Branch: `codex/enheduanna-six-stage-readiness`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/17>.
+- Implementation commit: `28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb`.
+- Exact-commit Preview: <https://raw.githack.com/TSRat/My-Website/28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb/ENHEDUANNA/index.html>.
+- Merge: not authorized and not performed.

@@ -19,7 +19,7 @@
 | --- | --- | --- | --- | --- | --- |
 | The Living Atlas | 总入口主站，一个人的开放档案馆 | `THE-LIVING-ATLAS/` | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) | REFACTOR | 内容系统通过 [PR #13](https://github.com/TSRat/My-Website/pull/13) 合并；Data / starter 与 Worlds 含混性修正通过 [PR #14](https://github.com/TSRat/My-Website/pull/14) 合并 |
 | IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `app/briefings.ts`、`app/`、`public/`、`scripts/build-github-pages.mjs` | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) | PRESERVE | 六阶段迁移已通过 [PR #15](https://github.com/TSRat/My-Website/pull/15) 合并：双渲染 parity、manifest、Data 入口与 provider-neutral events |
-| Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；当前 Pages 输入镜像在 `ENHEDUANNA/` | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) | REFACTOR | 已审计；缺少可重复源码 → 镜像构建，实施阻塞 |
+| Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；`npm run build:enheduanna` 更新 `ENHEDUANNA/` Pages 镜像 | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) | REFACTOR | 六阶段可维护重建与 Data 入口已通过 [PR #17](https://github.com/TSRat/My-Website/pull/17) 合并 |
 | Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `HILDEGARD/` | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
 | Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `HYPATIA/` | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) | REFACTOR | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
 | Melromarc Sisters | Malty 与 Melty 的非官方多重故事档案 | `MELROMARC-SISTERS/` | [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/) | REBUILD | 已审计；完整上游源码与可重复构建未确认 |
@@ -29,7 +29,7 @@
 ### 真实来源与静态快照
 
 - `IVORY-ARCHIVE/` 是已提交的历史静态快照，最后一次目录级更新停在第 02 期。当前 GitHub Pages 版本由 `app/briefings.ts` 和 `public/` 在 Actions 中重新生成；不要把旧快照当作主要内容源。
-- `static-sites/enheduanna/` 保存可读的 TSX/CSS 源码，`ENHEDUANNA/` 保存当前被 Pages workflow 直接复制的构建镜像。仓库暂时没有把两者自动同步的 npm script。
+- `static-sites/enheduanna/` 保存可读的 React/TSX/CSS 源码和 Vite 配置；`npm run build:enheduanna` 先构建到被忽略的 `.site-build/`，再更新 `ENHEDUANNA/` Pages 镜像。未被新入口引用的旧哈希 bundle 保留为回滚材料。
 - `HYPATIA/` 是可直接发布的 HTML/CSS/JavaScript 与资源目录；仓库中没有可确认的另一份完整上游应用源码。
 - `MELROMARC-SISTERS/` 是 Vinext/React 生成的静态 HTML、带哈希的 JavaScript/CSS 和图片；完整未编译源码位置无法从当前仓库确认。
 
@@ -86,6 +86,13 @@ npm run dev
 ```
 
 `npm run dev` 运行根目录的 Vinext/Vite 应用，主要用于 IVORY ARCHIVE 的动态版本。它不等于重建所有三个独立静态站点。
+
+Enheduanna 独立开发与构建：
+
+```bash
+npm run dev:enheduanna
+npm run build:enheduanna
+```
 
 生成与 GitHub Actions 相同的 Pages artifact：
 
