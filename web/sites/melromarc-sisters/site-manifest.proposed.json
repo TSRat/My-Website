@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "melromarc-sisters",
+  "title": "Melromarc 姐妹故事",
+  "slug": "MELROMARC-SISTERS",
+  "status": "published",
+  "language": "zh-CN",
+  "contentModel": "fan-created branching story archive",
+  "migration": {
+    "state": "readiness",
+    "stage5": "blocked",
+    "blocker": "Complete editable upstream source and reproducible build are unavailable"
+  },
+  "renderers": [
+    {
+      "id": "pages-artifact",
+      "source": "MELROMARC-SISTERS/",
+      "runtime": "prerendered Vinext/React HTML and minified bundles"
+    }
+  ],
+  "activeArtifact": {
+    "index.html": "b768777b384543b736d4d0eb023afa946c3e56c0c4c184eeb3deb4f1599a0aee",
+    "assets/page-Wf3IdOaW.js": "3b8e9df32482c2dfa5cb7219ab575902fc7d28922a8de5c1eefef1e120a42762",
+    "assets/index-CpUB6AfA.css": "8a27f100cc595664e92cf5cb88010b90b2fc89fcc5b9fc7fdaa2909ff196682d",
+    "assets/index-moQLGS8S.js": "843ddcb0cd0e032c4c4eafbd5ffec77590d3ab0bb84cd9f80b146b44c8a14dbe"
+  },
+  "capabilities": {
+    "search": true,
+    "filter": true,
+    "randomStory": true,
+    "savedStories": true,
+    "storyReader": true,
+    "fateMap": true,
+    "gallery": true,
+    "dataEntry": false
+  },
+  "functionalStorage": {
+    "provider": "browser localStorage",
+    "key": "melromarc-saved-stories",
+    "purpose": "reader-selected saved story ids"
+  },
+  "proposedAnalytics": {
+    "provider": null,
+    "networkRequests": false,
+    "cookies": false,
+    "persistentStorage": false,
+    "identity": false,
+    "rawSearchText": false,
+    "rawStoryText": false,
+    "events": [
+      "page_viewed",
+      "search_performed",
+      "filter_applied",
+      "random_story_opened",
+      "story_opened",
+      "story_save_toggled",
+      "path_opened",
+      "gallery_source_opened",
+      "data_entry_opened"
+    ]
+  }
+}

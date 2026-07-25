@@ -19,7 +19,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 | Enheduanna | REFACTOR | A — Editorial | Audited; implementation blocked | No reproducible source-to-mirror build; tablet overflow exists in the deployed mirror |
 | Hildegard | PRESERVE | A — Editorial | Audited; no implementation migration started | Long-page visual comparison must use deterministic sections |
 | Hypatia | REFACTOR | A — Editorial | Audited; no implementation migration started | Historical unreferenced assets and responsive cleanup need a scoped batch |
-| Melromarc Sisters | REBUILD | B — Interactive | Audited; rebuild blocked | Complete upstream source and reproducible build are not present |
+| Melromarc Sisters | REBUILD | B — Interactive | Stages 1–4 and 6 documented; Stage 5 blocked | Complete upstream source and reproducible build are not present |
 
 Counts: 6 audited; 2 PRESERVE; 3 REFACTOR; 1 REBUILD.
 
@@ -33,7 +33,7 @@ copies only the contracts its tier needs and preserves its own visual system.
 | 1 | IVORY ARCHIVE | Manifest, provider-neutral events, Data entry, renderer parity and Antigravity screenshot QA | Confirm dynamic/Pages parity fixtures |
 | 2 | Hypatia + Hildegard | Manifest, stable IDs, Data entry, source/citation events and Antigravity editorial browser checks | Give Antigravity deterministic chapter sections and viewport scope |
 | 3 | Enheduanna | Tier A contract only after source and mirror can be reproduced | Restore or document a repeatable source-to-mirror build |
-| 4 | Melromarc Sisters | Tier B/Rebuild contract after upstream source is available | Confirm complete maintainable source and build |
+| 4 | Melromarc Sisters | Tier B/Rebuild readiness contract complete; runtime adoption remains blocked | Recover source or explicitly authorize a maintainable rebuild |
 
 This ordering starts with maintainable sources. Enheduanna and Melromarc remain
 blocked by source/build provenance.
@@ -204,8 +204,8 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Content/data model:** Compiled into the artifact; readable upstream content source is not present in the repository.
 - **State/interactivity:** Random-story dialog opens and closes correctly; body scroll locking is restored on close.
 - **Build system / deployment:** No confirmed reproducible upstream build. Pages copies the artifact unchanged.
-- **Analytics:** No provider detected. Candidate neutral events: `story_opened`, `random_story_opened`, `character_path_opened`.
-- **Tests / CI:** Pages asset validation only; no source tests or reproducible project build.
+- **Analytics:** No provider in the deployed artifact. A non-deployed provider-neutral proposal separates analytics privacy from the existing functional `melromarc-saved-stories` localStorage key and defines search-length, filter, random/story/path, save, gallery-source, and Data entry events.
+- **Tests / CI:** Pages asset validation plus readiness tests for blocker state, active-artifact hashes, all 13 story IDs, active bundle graph, and saved-story compatibility. No source tests or reproducible project build can exist until source recovery or rebuild authorization.
 - **Accessibility state:** Landmarks, one `h1`, button names, and image alternatives are present. Skip navigation, dialog focus trapping/return, and keyboard traversal need verification.
 - **Responsive state:** Accepted first folds at all three viewports show no horizontal overflow.
 - **Existing Figma:** Melromarc theme variables, editable theme anatomy, shared components, representative desktop/mobile screens, and 3-viewport baselines.
@@ -213,9 +213,9 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Target architecture:** Recover the original source or explicitly rebuild a maintainable React/static application that preserves the URL, recognizable art direction, content boundaries, and key dialog behavior.
 - **Shared-core adoption:** Accessible dialog, focus return, skip navigation, routing/state conventions, asset validation, analytics event contract, and screenshot QA.
 - **Site-specific theme:** Preserve the midnight archive, sister color polarity, character artwork, critical framing, and fan/canon distinctions.
-- **Migration status:** Audit complete; implementation blocked pending upstream source or explicit rebuild authorization.
-- **Figma URL:** <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
-- **Preview / PR URL:** Local artifact preview verified; migration preview and PR blocked.
+- **Migration status:** Stages 1–4 and 6 have an editable readiness package; Stage 5 remains explicitly blocked pending upstream source or authorized maintainable rebuild.
+- **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
+- **Preview / PR URL:** The review branch keeps the compiled artifact hash-identical; exact baseline preview and Draft PR are recorded after push.
 - **Remaining risks:** Root-relative duplicate asset requests produce 404s in local logs even though relative assets load; direct hashed-bundle edits would be unreproducible.
 
 ## Migration queue

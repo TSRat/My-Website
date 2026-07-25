@@ -258,6 +258,44 @@ python3 -m http.server 8000 --directory docs
 ### Verification status
 
 - Skill structure validation: Passed — 两个技能均通过 `quick_validate.py`。
+
+## 2026-07-25: Melromarc Sisters six-stage readiness
+
+### Current target
+
+Complete every safe migration stage while preserving the current artifact and
+refusing to treat minified output as editable upstream source.
+
+### Completed
+
+- Added a six-stage readiness handoff, proposed machine-readable contract, and
+  active-artifact hash baseline under `web/sites/melromarc-sisters/`.
+- Reused the editable Figma migration frame at node `27:2`.
+- Added tests for the blocker, active graph and hashes, all 13 story IDs, and
+  `melromarc-saved-stories` compatibility.
+- Updated the registry and project documentation without changing story
+  content, critical position, HTML, bundles, images, workflow, build map, or
+  public URL.
+
+### Blocker and decision
+
+Stage 5 remains blocked. The repository contains a deployable artifact but no
+complete source or reproducible build. Hand-editing prerendered HTML and
+minified bundles risks hydration mismatch and cannot become the reusable system
+the user requested. The next authorized action must be upstream recovery or an
+explicitly approved maintainable rebuild.
+
+### Verification
+
+- Pages build and validation passed: 355 local references across 43 HTML/CSS
+  files.
+- Full tests passed: 12/12.
+- Lint completed with 0 errors and 24 pre-existing warnings.
+- Browser baseline at 1280 and 390 CSS pixels found 13 story cards, 18 gallery
+  figures, 0 broken images, and no horizontal overflow.
+- Random story, reader open/close, and body-scroll restoration passed.
+- Saved-state reload remains assigned to Antigravity because the in-app browser
+  inspection context does not expose localStorage.
 - Repository diff checks: Passed — `git diff --check` 无错误；原文代码块比对通过，`build-new-site-to-pr` 仅为修复 YAML 语法给 `description` 增加引号。
 - Pages build and validation: Passed — `npm run build:pages` 成功；`npm run validate:pages` 验证 39 个 HTML/CSS 文件中的 343 个本地引用。
 

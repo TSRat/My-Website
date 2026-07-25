@@ -104,3 +104,15 @@ Malty 与 Melty 的颜色是结构性对照，不应合并成单一紫色渐变�
 - 是否明确拒绝过某种玻璃拟态、粉色浪漫或通用卡片风格。
 
 在确认前，保持暗色王室档案、红蓝双轴和编辑网格，不进行整体视觉重做。
+
+## 2026-07-25 · Six-stage readiness
+
+- The proposed Data appendix belongs after the image shelf and before the
+  footer; it remains part of the fan archive, not a performance dashboard.
+- Its editable Figma component uses a divided crimson/blue night field, gold
+  archive metadata, paper text, hard rules, and no generic rounded cards.
+- Desktop/mobile references are in
+  [Figma node 27:2](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).
+- This is a design target only. It must not be patched into prerendered HTML and
+  minified bundles until upstream source is recovered or a maintainable rebuild
+  is explicitly authorized.

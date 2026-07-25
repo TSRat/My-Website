@@ -22,7 +22,7 @@
 | Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；当前 Pages 输入镜像在 `ENHEDUANNA/` | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) | REFACTOR | 已审计；缺少可重复源码 → 镜像构建，实施阻塞 |
 | Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `HILDEGARD/` | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 已审计；暂未开始实现迁移 |
 | Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `HYPATIA/` | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) | REFACTOR | 已审计；等待独立的静态资产 / 响应式批次 |
-| Melromarc Sisters | Malty 与 Melty 的非官方多重故事档案 | `MELROMARC-SISTERS/` | [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/) | REBUILD | 已审计；完整上游源码与可重复构建未确认 |
+| Melromarc Sisters | Malty 与 Melty 的非官方多重故事档案 | `MELROMARC-SISTERS/` | [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/) | REBUILD | 六阶段 1–4 / 6 就绪包已完成；第 5 阶段仍因缺少完整上游源码与可重复构建而阻塞 |
 
 组合级详细审计见 [`web/portfolio-audit.md`](./web/portfolio-audit.md)，六阶段平台标准见 [`web/platform-standard.md`](./web/platform-standard.md)。共享 Figma 设计源为 [TSRat Web Design System · Portfolio Normalization](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt)。
 

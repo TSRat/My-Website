@@ -101,3 +101,26 @@ npm run build:pages
 - 没有项目专用 build 或 test script。
 - 静态 HTML 与 active bundle 双份内容可能在手工修改后失配。
 - 目录有旧 bundle，但没有正式清理或回滚说明。
+
+## 2026-07-25 · Stage 5 acceptance gate
+
+The migration target, proposed analytics contract, and current active-artifact
+hashes now live in `web/sites/melromarc-sisters/`. They are deliberately
+outside the compiled artifact, so a specification cannot be mistaken for
+deployed functionality.
+
+Stage 5 remains blocked until one of these paths is authorized:
+
+1. restore the complete upstream project and its exact build command; or
+2. rebuild a maintainable source project using the current artifact as the
+   accepted product, content, interaction, and visual baseline.
+
+The resulting project must make the 13 story records structured and editable,
+preserve five change categories and the two non-negotiable foundations, retain
+the `melromarc-saved-stories` compatibility contract, reproduce the reader and
+fate map, document base/asset output, and update the artifact only in a Draft
+PR.
+
+`tests/melromarc-readiness.test.mjs` currently protects the honest blocker,
+active bundle graph, recorded hashes, all story IDs, and functional storage
+key. It is not a replacement source test.

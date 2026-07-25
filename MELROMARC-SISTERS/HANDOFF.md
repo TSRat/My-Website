@@ -109,3 +109,54 @@ python3 -m http.server 8000 --directory docs
 - Working tree clean at audit start: Yes
 - Working tree clean at handoff: Yes
 - Uncommitted changes: None
+
+## 2026-07-25 · Six-stage migration readiness
+
+### Current target
+
+Prepare every safe stage of the shared workflow without hand-editing
+prerendered HTML and minified bundles or presenting build output as source.
+
+### Completed
+
+- Product / UX: preserved all 13 story branches, five first-change categories,
+  search/filter/random/save/reader/fate-map/gallery behavior, and critical
+  position.
+- Visual: specified a site-native crimson/blue royal-archive Data appendix.
+- Figma: added editable desktop/mobile and Data component references at
+  [node 27:2](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).
+- Prototype / QA: defined deterministic interaction states for Antigravity.
+- Data / analytics: added a non-deployed provider-neutral proposal that
+  distinguishes analytics from functional saved-story localStorage.
+- Added readiness tests for the explicit blocker, active artifact hashes,
+  bundle graph, 13 story IDs, and saved-story compatibility.
+
+### Blocked
+
+- Production implementation remains blocked because complete editable source
+  and a reproducible build are absent.
+- `MELROMARC-SISTERS/`, its active bundles, and its old bundles were not edited.
+- The current public page remains the immutable baseline, not a migrated
+  preview.
+
+### Next action
+
+Provide upstream source or explicitly authorize a maintainable rebuild. See
+`web/sites/melromarc-sisters/six-stage-handoff.md` for acceptance criteria.
+
+### Verification
+
+- `git diff --check`: Passed.
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed — 355 local references across 43 HTML/CSS
+  files.
+- `npm test`: Passed — 12/12, including all three readiness tests.
+- `npm run lint`: 0 errors; 24 pre-existing warnings. The compiled Melromarc
+  artifact remains intentionally excluded from lint.
+- In-app browser at 1280 and 390 CSS pixels: 13 story cards, 18 gallery
+  figures, 0 broken images, and no horizontal overflow.
+- Random story → reader open → close passed; body scroll locked and restored.
+- Saved-state reload was not exercised because the in-app browser inspection
+  context does not expose localStorage. Bundle/static compatibility assertions
+  passed; Antigravity retains the saved-state browser check.
+- Project rebuild: Not run because no source or command exists.
