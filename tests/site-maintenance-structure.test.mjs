@@ -44,6 +44,21 @@ test("all public websites use the shared maintenance package contract", async ()
 
   for (const project of projects.filter(({ build }) => build.mirror)) {
     const mirrorRoot = join(repositoryRoot, project.build.mirror);
+    assert.equal(
+      typeof project.hub.cover,
+      "string",
+      `${project.id} hub card is missing an image cover`,
+    );
+    const coverSource =
+      project.source.mode === "vite-static"
+        ? join(project.packageRoot, "public", project.hub.cover)
+        : join(project.packageRoot, project.hub.cover);
+    assert.equal(
+      await pathExists(coverSource),
+      true,
+      `${project.id} hub cover does not exist in its maintainable source`,
+    );
+
     for (const sourceOnlyName of [
       "site.config.json",
       "CONTENT.md",

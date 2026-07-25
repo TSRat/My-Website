@@ -90,6 +90,9 @@ test("Living Atlas language pages use the shared data hooks without fake links",
     assert.doesNotMatch(page, /class="world-description"/);
   }
 
+  assert.equal((english.match(/href="\.\.\/">Website Archive<\/a>/g) ?? []).length, 2);
+  assert.equal((chinese.match(/href="\.\.\/">网站总入口<\/a>/g) ?? []).length, 2);
+
   assert.doesNotMatch(english, /A closer map inside the Knowledge world/);
   assert.doesNotMatch(english, /Only published and currently navigable content appears here/);
   assert.doesNotMatch(chinese, /Knowledge 内部的细分地图/);

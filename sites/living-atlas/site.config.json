@@ -25,7 +25,7 @@
   "hub": {
     "order": 5,
     "className": "living-atlas",
-    "artLabel": "ATLAS",
+    "cover": "assets/hero-kandinsky.jpg",
     "eyebrow": "TSRAT · MAIN HUB",
     "title": "The Living Atlas 开放档案馆",
     "description": "在算法与人性之间建立桥梁：历史、女性主义、心理学、设计、技术与文学的公共档案馆主站。",

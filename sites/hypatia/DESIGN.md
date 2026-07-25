@@ -121,3 +121,10 @@ Git 历史明确显示当前方向经过以下变化：
   both without changing the existing chapter layouts.
 - Editable desktop/mobile references and the reusable site Data component are
   in [Figma node 27:2](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).
+
+## Website Archive cover
+
+`assets/hub-cover.jpg` is a web-optimized derivative of the creator-owned
+`Women Story / Hypatia` artwork (`new cover.png`). It is used only as the
+decorative image for this site's card in the parent Website Archive. Its
+portrait is modern visual framing, not a surviving historical portrait.

@@ -160,3 +160,12 @@ changing the deployment architecture.
 - Implementation commit: `a8d393eb582d45e2a2a4af533d32ff534fa84721`.
 - [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/a8d393eb582d45e2a2a4af533d32ff534fa84721/HYPATIA/index.html#data).
 - [Draft PR #16](https://github.com/TSRat/My-Website/pull/16); not merged.
+
+## 2026-07-25 · Website Archive cover
+
+- Added `assets/hub-cover.jpg`, a 1600px web derivative of the creator-owned
+  `Women Story / Hypatia / new cover.png` artwork.
+- The parent archive now uses this intended cover instead of the older site
+  asset; its modern portrait status remains explicit in `DESIGN.md`.
+- Pages build, asset validation, tests, lint, and desktop/mobile browser smoke
+  passed on `codex/hub-image-covers`; extended QA remains with Antigravity.

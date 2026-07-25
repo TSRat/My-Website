@@ -93,3 +93,12 @@ blue royal-archive identity.
    second branch from `main` if GitHub reports a shared-script/package conflict.
 4. Continue future content work only in `sites/melromarc-sisters/`, then
    run `npm run build:melromarc`.
+
+## 2026-07-25 · Website Archive cover
+
+- The parent archive now uses the existing
+  `public/images/gallery/08-walking-together.jpg` artwork, selected by the
+  creator as the sisters-holding-hands cover.
+- No story content, gallery ordering, source asset, or site UI was changed.
+- Pages build, asset validation, tests, lint, and desktop/mobile browser smoke
+  passed on `codex/hub-image-covers`; extended QA remains with Antigravity.

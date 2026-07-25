@@ -26,7 +26,7 @@
   "hub": {
     "order": 4,
     "className": "melromarc",
-    "artLabel": "M&M",
+    "cover": "images/gallery/08-walking-together.jpg",
     "eyebrow": "FAN-CREATED STORY ARCHIVE",
     "description": "Malty 与 Melty 的多重故事档案：两个名字，生长出许多命运。",
     "metadata": [["故事线", "13 条"], ["整理方式", "5 个改变时点"]]
