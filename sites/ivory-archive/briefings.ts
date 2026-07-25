@@ -32,6 +32,138 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    date: "2026-07-25",
+    displayDate: "2026.07.25",
+    issueNo: "12",
+    theme: "书页、舞台与照护网络：公共系统如何接住人的经验？",
+    intro:
+      "今天的五个故事都拒绝把文化或健康理解为孤立的个人体验。一本艺术家书需要诗人、画家与印刷者共同编排；一场夏季音乐计划保存亚文化的现场谱系；文化参与被转译成家庭调查；认知筛查必须接上交通与照护导航；女性的长期新冠症状则要求我们同时看见压力、母职与因果不确定性。",
+    uniqueCount: 5,
+    topics: ["艺术人文", "社会科学", "女性主义"],
+    stories: [
+      {
+        category: "艺术人文 × 艺术家书 × 诗歌与印刷",
+        image: "/story-images/miro-book-collaboration.jpg",
+        imageAlt: "木版形状、诗歌行列、折页与印刷套色相互咬合的艺术家书编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释 Miró、Éluard 与印刷者的协作过程，并非《À toute épreuve》书页复制、展品照片或艺术家作品",
+        title: "一本书不是文字加插图：Miró 用 233 块木版重新编排诗",
+        summary:
+          "旧金山 Legion of Honor 今天开启《Miró: Proof Against All》，把 Joan Miró 与 Paul Éluard 的艺术家书《À toute épreuve》拆回木版、试印、折页与装订的协作过程。",
+        happened:
+          "展览围绕 1958 年出版的《À toute épreuve》展开。Éluard 的诗与 Miró 的木版图形并不是两条平行轨道：图像穿过页边、改变留白和翻页节奏。馆方同时展示装订本与未装订本，让观众比较阅读顺序和单页印刷物的不同身份。",
+        importance:
+          "“配图”常暗示文字先完成、图像随后解释；这本书却把意义放在诗句、纸张、套色、木纹与翻页之间。它也提醒我们，现代主义杰作不是艺术家单独完成的神来之笔，而是诗人、画家、雕版与印刷劳动共同生产的物件。",
+        creatorAngle:
+          "选择一首四段短诗，为每段设计不同的纸张尺寸、留白和翻页动作；先不画具象插图，只用木版形状改变读者的停顿。最后把诗人、艺术家、雕版者和印刷者的决定分别标出来。",
+        facts: [
+          "《À toute épreuve》于 1958 年出版，是 Miró 与法国诗人 Paul Éluard 的合作",
+          "Miró 为全书雕制 233 块木版，最终形成 80 幅印刷图像",
+          "Fine Arts Museums of San Francisco 收藏该书的装订本与未装订本各一套，本展将两种状态并置",
+          "展期为 2026 年 7 月 25 日至 2027 年 7 月 25 日；Miró 一生参与创作约 250 本艺术家书",
+        ],
+        sourceName: "Fine Arts Museums of San Francisco／Apollo",
+        sourceUrl: "https://www.famsf.org/exhibitions/miro-proof-against-all",
+        sourceDate: "展览开幕 2026-07-25；Apollo 预展发布 2026-07-17",
+      },
+      {
+        category: "艺术人文 × 音乐 × 现场档案与策展",
+        image: "/story-images/warm-up-live-archive.jpg",
+        imageAlt: "扬声器、舞台线路、声波与档案票券形成多层音乐谱系的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释 MoMA PS1 Warm Up 的现场音乐谱系，并非演出现场、真实表演者、海报或 MoMA 标识",
+        title: "一场夏季派对也可以是一座活的音乐档案",
+        summary:
+          "MoMA PS1 的 Warm Up 2026 以六个周五晚间串联 dub、techno、gabber、house、hyperpop 与声音艺术；26 组表演者让小众音乐史通过现场合作而非流媒体标签被重新听见。",
+        happened:
+          "本季 Warm Up 于 7 月 24 日开始、持续至 8 月 28 日。节目既有 Wackies 厂牌相关演出，也有 SCRAAATCH 向声音艺术家 Yasunao Tone 致意、巴西制作人 Anderson do Paraíso 的美国首演，以及 Mabe Fratti 的三重奏。",
+        importance:
+          "音乐平台倾向把风格压缩成可推荐的标签，现场策展则能让厂牌、城市、代际与技术影响同时出现。博物馆因此不只是借音乐吸引观众，也在决定哪些地下谱系获得空间、制作条件和机构记忆。",
+        creatorAngle:
+          "不要按风格名称做歌单，而是画一张六晚关系图：每位表演者连接其城市、厂牌、合作对象、设备和前辈，再让观众沿一条影响链听下去。",
+        facts: [
+          "Warm Up 2026 于 7 月 24 日至 8 月 28 日举行，共安排 6 个周五晚间",
+          "本季节目包含 26 位艺术家与团体，横跨 dub、techno、gabber、house、hyperpop 和声音艺术",
+          "系列创办于 1998 年，至今持续把实验音乐与 MoMA PS1 的夏季建筑环境结合",
+          "节目实例包括 Wackies 相关演出、SCRAAATCH 向 Yasunao Tone 致意、Anderson do Paraíso 美国首演与 Mabe Fratti 三重奏",
+        ],
+        sourceName: "MoMA PS1",
+        sourceUrl: "https://press.moma.org/exhibition/warm-up-2026/",
+        sourceDate: "节目日期 2026-07-24 至 2026-08-28；页面核验 2026-07-25",
+      },
+      {
+        category: "社会科学 × 文化参与 × 调查与测量",
+        image: "/story-images/arts-participation-census.jpg",
+        imageAlt: "家庭调查网格连接电影院、舞台和展览空间的文化参与测量编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释家庭调查如何测量文化参与，并非 U.S. Census Bureau 官方信息图、调查界面或受访者照片",
+        title: "四周里，四千六百万人去了电影院：文化生活怎样进入人口统计？",
+        summary:
+          "U.S. Census Bureau 发布新一轮 Household Trends and Outlook Pulse Survey 数据，把电影、现场音乐与戏剧、艺术展览等参与方式纳入约 13.6 万户家庭的实验性调查。",
+        happened:
+          "调查于 2026 年 3 月 13 日至 30 日进行。官方信息图估计，在此前四周内，约 4,600 万成年人去电影院，约 5,000 万人现场观看音乐、舞蹈或戏剧，约 2,300 万人参观艺术展览。",
+        importance:
+          "把文化活动放进全国性家庭调查，能让交通、收入、时间和场馆分布成为公共政策问题，而不只是个人品味。但“过去四周是否到场”仍会遗漏家庭创作、线上观看、宗教仪式和非正式社区文化；测量边界会决定什么被算作文化生活。",
+        creatorAngle:
+          "制作两张并列的文化地图：第一张严格使用调查问项，只显示可计数的到场行为；第二张补入家中阅读、线上观看、社区庆典和照护者无法外出的文化实践，比较统计制度留下的空白。",
+        facts: [
+          "本轮调查于 2026 年 3 月 13 日至 30 日进行，样本约为 136,000 个美国家庭",
+          "官方估计此前四周约有 4,600 万成年人到电影院观看电影",
+          "约 5,000 万成年人现场参加音乐、舞蹈或戏剧活动，约 2,300 万人参观艺术展览",
+          "HTOPS 是实验性调查，约每两个月实施一次；同一项目还测量就业、食物、保险、心理健康、社会连接与家庭支出",
+        ],
+        sourceName: "U.S. Census Bureau",
+        sourceUrl: "https://www.census.gov/newsroom/press-releases/2026/htops-data-tables.html",
+        sourceDate: "2026-07-23",
+      },
+      {
+        category: "社会科学 × 老龄化 × 公共住房与照护基础设施",
+        image: "/story-images/public-housing-dementia-navigation.jpg",
+        imageAlt: "公寓楼、记忆筛查卡、交通路线与照护导航员连成支持网络的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释公共住房中的认知筛查与照护导航，并非真实居民、患者、筛查结果或 Rutgers 项目现场",
+        title: "筛查出记忆衰退之后，谁陪居民走完去医院的路？",
+        summary:
+          "Rutgers 在公共住房中开展认知筛查，并由社区脑健康导航员安排预约、车辆和回访。首半年 160 名受筛者中，约三分之二显示超出年龄预期的记忆下降。",
+        happened:
+          "项目把筛查带进居民所在社区；当结果提示风险时，来自护理与公共卫生领域的导航员不只给出转诊单，还协助预约、安排交通、陪伴返家，并用居民能理解的方式解释下一步。",
+        importance:
+          "认知障碍服务常假定患者能识别症状、预约专科、找到车辆并记住医嘱，这恰好排除了最孤立的人。筛查工具只有接上交通、信任与持续沟通，才可能成为照护；不过目前数据来自早期项目，不能直接推算所有公共住房居民的患病率。",
+        creatorAngle:
+          "把一张阳性筛查结果扩展成完整服务旅程：预约、交通、诊断、药物、回家解释和下一次随访。为每个节点标出最容易失联的位置，以及导航员实际补上的工作。",
+        facts: [
+          "项目运行前半年已为 160 名公共住房居民进行认知筛查",
+          "约三分之二受筛者表现出超过同龄正常范围的记忆下降，其中接近一半的表现与轻度、中度或重度失智相符",
+          "Rutgers 引述的背景资料指出，非裔美国人发生这类疾病的比例超过其他群体的两倍",
+          "项目获得 Hearst Foundations 10 万美元与 Eli Lilly 58.7 万美元支持，并计划向 Louisiana 和 Florida 扩展",
+        ],
+        sourceName: "Rutgers University",
+        sourceUrl: "https://www.newswise.com/articles/how-rutgers-is-helping-to-tackle-the-rising-crisis-of-public-housing-residents-facing-dementia-alone",
+        sourceDate: "2026-07-24",
+      },
+      {
+        category: "女性主义 × 健康 × 长期新冠与照护劳动",
+        image: "/story-images/women-long-covid-stress.jpg",
+        imageAlt: "女性身体轮廓、症状时间线、照护日程与社会支持节点交叠的长期新冠编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释长期新冠、压力与照护负担之间的关联，并非患者肖像、诊断图或因果关系证明",
+        title: "压力与长期新冠同时出现，不等于可以把病因推回给女性",
+        summary:
+          "一项针对 2,500 名美国幼儿母亲的研究发现，高压力与长期新冠诊断、自我判断及更多症状相关；研究同时强调，横截面调查无法确定压力究竟是原因、放大因素还是疾病结果。",
+        happened:
+          "研究者分析 2023 年 7 月的在线调查。近 10% 受访者认为自己患有尚未确诊的长期新冠，1.2% 报告正式诊断；高压力量表得分与更多长期症状相关，抚养超过两个孩子者报告的症状也更多。",
+        importance:
+          "女性的症状长期容易被解释成焦虑或压力。关联研究若被简化，会再次把诊断缺口变成个人心理问题；更可靠的读法是同时追踪感染、照护负担、医疗可及性和症状如何互相影响，并承认因果方向尚未确定。",
+        creatorAngle:
+          "画一张双向因果图，让感染后症状、睡眠、工作、育儿、压力、社会支持和就医分别可以互为原因与结果；用不同线型区分研究已观察到的关联与尚待验证的机制。",
+        facts: [
+          "研究样本为 2,500 名美国女性，全部是年幼儿童的母亲；在线调查于 2023 年 7 月完成",
+          "近 10% 受访者自我判断患有尚未确诊的长期新冠，1.2% 报告得到正式诊断",
+          "高压力与正式诊断、自我判断和更多症状均相关；抚养超过两个孩子者报告的症状更多",
+          "社会支持的关联较弱；研究为横截面设计，不能判断压力导致长期新冠、加重症状，还是症状本身提高压力",
+        ],
+        sourceName: "Stony Brook University／Health Psychology",
+        sourceUrl: "https://www.newswise.com/articles/study-reveals-stress-a-significant-factor-in-women-experiencing-long-covid",
+        sourceDate: "2026-07-24；论文 DOI 10.1037/hea0001626",
+      },
+    ],
+  },
+  {
     date: "2026-07-24",
     displayDate: "2026.07.24",
     issueNo: "11",
