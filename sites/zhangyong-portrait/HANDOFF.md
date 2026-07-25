@@ -21,8 +21,6 @@ its own visual and narrative identity.
 
 ## Unfinished
 
-- Complete exact-commit remote browser smoke checks.
-- Create the branch preview and Draft Pull Request.
 - Antigravity extended visual QA remains pending.
 
 ## Known issues
@@ -56,18 +54,20 @@ its own visual and narrative identity.
 - `npm run build:pages`: passed.
 - `npm run validate:pages`: passed, 398 references across 53 HTML/CSS files.
 - Local desktop browser smoke: passed; Antigravity narrow/extended QA pending.
+- Exact-commit remote browser smoke: passed, including all lazy-loaded images,
+  Data content and horizontal containment.
 
 ## Git and delivery
 
 - Branch: `codex/living-atlas-static-sites`
 - Base: `origin/main` through merge commit `518d7f9`
-- Latest commit: pending
-- Preview: pending
-- Pull Request: pending
+- Implementation commit: `6e8a19a`
+- Preview: <https://raw.githack.com/TSRat/My-Website/6e8a19a/ZHANGYONG-PORTRAIT/index.html>
+- Pull Request: <https://github.com/TSRat/My-Website/pull/21> (Draft)
 - Figma: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-30>
 - Antigravity QA: pending
 
 ## Next step
 
-Run the shared build and path validation, then publish the exact-commit preview
-and Draft PR.
+Review the exact-commit preview and Draft PR; request Antigravity extended QA if
+the responsive and section-overlay matrix is needed.

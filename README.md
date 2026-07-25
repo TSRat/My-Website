@@ -23,8 +23,8 @@
 | Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `sites/hildegard/`；`HILDEGARD/` 是构建镜像 | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
 | Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `sites/hypatia/`；`HYPATIA/` 是构建镜像 | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) | REFACTOR | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
 | Melromarc Sisters | Malty 与 Melty 的非官方多重故事档案 | `sites/melromarc-sisters/`；`MELROMARC-SISTERS/` 是构建镜像 | [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/) | REBUILD | 可维护重建与 Data 入口已通过 [PR #18](https://github.com/TSRat/My-Website/pull/18) 合并 |
-| 张勇的生活切片 | 围绕身份、身体、照料、关系、阅读与日常恢复的开放人物档案 | `sites/zhangyong-portrait/`；`ZHANGYONG-PORTRAIT/` 是构建镜像 | [张勇的生活切片](https://tsrat.github.io/My-Website/ZHANGYONG-PORTRAIT/) | PRESERVE | 已迁入直接维护的静态 HTML / CSS / ES modules；Preview 与 PR 待本分支交付 |
-| 两只天鹅：Malty 与 Melty | 十一章互动视觉小说；姐妹关系、责任、追责与重新连接 | `sites/malty-melty-childhood/`；`MALTY-MELTY-CHILDHOOD/` 是构建镜像 | [两只天鹅](https://tsrat.github.io/My-Website/MALTY-MELTY-CHILDHOOD/) | REFACTOR | 已从 Sites/Vinext/React 迁入直接维护的静态 HTML / CSS / ES modules；Preview 与 PR 待本分支交付 |
+| 张勇的生活切片 | 围绕身份、身体、照料、关系、阅读与日常恢复的开放人物档案 | `sites/zhangyong-portrait/`；`ZHANGYONG-PORTRAIT/` 是构建镜像 | [张勇的生活切片](https://tsrat.github.io/My-Website/ZHANGYONG-PORTRAIT/) | PRESERVE | 已迁入直接维护的静态 HTML / CSS / ES modules；[Draft PR #21](https://github.com/TSRat/My-Website/pull/21) 待审查 |
+| 两只天鹅：Malty 与 Melty | 十一章互动视觉小说；姐妹关系、责任、追责与重新连接 | `sites/malty-melty-childhood/`；`MALTY-MELTY-CHILDHOOD/` 是构建镜像 | [两只天鹅](https://tsrat.github.io/My-Website/MALTY-MELTY-CHILDHOOD/) | REFACTOR | 已从 Sites/Vinext/React 迁入直接维护的静态 HTML / CSS / ES modules；[Draft PR #21](https://github.com/TSRat/My-Website/pull/21) 待审查 |
 
 组合级详细审计见 [`web/portfolio-audit.md`](./web/portfolio-audit.md)，六阶段平台标准见 [`web/platform-standard.md`](./web/platform-standard.md)。共享 Figma 设计源为 [TSRat Web Design System · Portfolio Normalization](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt)。
 

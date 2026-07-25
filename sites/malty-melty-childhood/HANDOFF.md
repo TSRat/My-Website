@@ -22,8 +22,6 @@ the site's distinct identity and interactions.
 
 ## Unfinished
 
-- Complete exact-commit remote browser smoke checks.
-- Create the exact-commit preview and Draft Pull Request.
 - Antigravity extended visual and interaction QA remains pending.
 
 ## Known issues
@@ -58,18 +56,20 @@ the site's distinct identity and interactions.
 - `npm run validate:pages`: passed, 398 references across 53 HTML/CSS files.
 - Local desktop interactive browser smoke: passed through start, next beat,
   memory view and chapter drawer; Antigravity narrow/extended QA pending.
+- Exact-commit remote interactive smoke: passed through start, next beat,
+  sister memory, chapter drawer and close flow.
 
 ## Git and delivery
 
 - Branch: `codex/living-atlas-static-sites`
 - Base: `origin/main` through merge commit `518d7f9`
-- Latest commit: pending
-- Preview: pending
-- Pull Request: pending
+- Implementation commit: `6e8a19a`
+- Preview: <https://raw.githack.com/TSRat/My-Website/6e8a19a/MALTY-MELTY-CHILDHOOD/index.html>
+- Pull Request: <https://github.com/TSRat/My-Website/pull/21> (Draft)
 - Figma: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-76>
 - Antigravity QA: pending
 
 ## Next step
 
-Run the shared build and path validation, then publish the exact-commit preview
-and Draft PR.
+Review the exact-commit preview and Draft PR; request Antigravity extended QA if
+the complete keyboard, mobile and visual-interaction matrix is needed.

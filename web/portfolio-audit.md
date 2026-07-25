@@ -20,8 +20,8 @@ This file is the detailed audit, not a second website registry. Project names, p
 | Hildegard | PRESERVE | A — Editorial | Six-stage implementation merged in PR #16 | Antigravity deterministic-section visual QA remains optional follow-up |
 | Hypatia | REFACTOR | A — Editorial | Six-stage implementation merged in PR #16 | Antigravity deterministic-section visual QA remains optional follow-up |
 | Melromarc Sisters | REBUILD | B — Interactive | Maintainable reconstruction merged in PR #18 | Antigravity focus/visual QA remains optional follow-up |
-| 张勇的生活切片 | PRESERVE | A — Editorial | Direct static migration implemented on `codex/living-atlas-static-sites` | Exact-commit preview, PR and Antigravity section QA pending |
-| 两只天鹅 | REFACTOR | B — Interactive | Direct static migration implemented on `codex/living-atlas-static-sites` | Exact-commit preview, PR and Antigravity interaction QA pending |
+| 张勇的生活切片 | PRESERVE | A — Editorial | Direct static migration reviewable in Draft PR #21 | Antigravity section QA pending |
+| 两只天鹅 | REFACTOR | B — Interactive | Direct static migration reviewable in Draft PR #21 | Antigravity interaction QA pending |
 
 Counts: 8 audited; 3 PRESERVE; 4 REFACTOR; 1 REBUILD.
 
@@ -36,7 +36,7 @@ copies only the contracts its tier needs and preserves its own visual system.
 | 2 | Hypatia + Hildegard | Manifest, stable IDs, Data entry, source/citation events and Antigravity editorial browser checks | Implemented and merged in PR #16 |
 | 3 | Enheduanna | Tier A source, Data entry and repeatable mirror build | Implemented and merged in PR #17 |
 | 4 | Melromarc Sisters | Tier B source, Data entry, storage boundary and repeatable mirror build | Implemented and merged in PR #18 |
-| 5 | 张勇的生活切片 + 两只天鹅 | Direct static source, stable content registries, Data disclosure and no-provider event contracts | Implemented on `codex/living-atlas-static-sites`; preview and PR pending |
+| 5 | 张勇的生活切片 + 两只天鹅 | Direct static source, stable content registries, Data disclosure and no-provider event contracts | Implemented on `codex/living-atlas-static-sites`; exact previews and Draft PR #21 ready |
 
 The original four migration batches are implemented and merged. The fifth batch
 is implemented on its dedicated review branch. Antigravity extended QA remains
@@ -236,7 +236,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Accessibility and responsive state:** Skip link, one `h1`, visible focus and reduced motion are retained; desktop and narrow browser smoke remain required before delivery.
 - **Classification:** **PRESERVE** — the public design/content baseline is retained while the implementation source and required Data disclosure change.
 - **Figma URL:** [张勇的生活切片 · migration coverage](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-30).
-- **Preview / PR URL:** Pending branch push and Draft PR.
+- **Preview / PR URL:** [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/6e8a19a/ZHANGYONG-PORTRAIT/index.html); [Draft PR #21](https://github.com/TSRat/My-Website/pull/21).
 - **Remaining risks:** Upstream asset licensing notes were not available; creator confirmation is required before reuse outside the project. Antigravity extended section comparison remains pending.
 
 ## 两只天鹅
@@ -253,7 +253,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Accessibility and responsive state:** Skip link, focus containment/return, Escape, arrow controls, native buttons and responsive dialog styles are implemented; complete keyboard and visual QA remains delegated.
 - **Classification:** **REFACTOR** — visual identity and behavior are preserved while the framework implementation is replaced by the shared static maintenance model.
 - **Figma URL:** [Two Swans · migration coverage](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-76).
-- **Preview / PR URL:** Pending branch push and Draft PR.
+- **Preview / PR URL:** [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/6e8a19a/MALTY-MELTY-CHILDHOOD/index.html); [Draft PR #21](https://github.com/TSRat/My-Website/pull/21).
 - **Remaining risks:** Source image-generation/licensing notes were absent; exact browser comparison to the access-gated production deployment and Antigravity full reader QA remain pending.
 
 ## Migration queue

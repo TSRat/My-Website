@@ -156,6 +156,9 @@ The Living Atlas 可复用的站点包结构，同时保留各站点身份、适
   - 张勇站 1265px 首屏、主要图片、Data 标题、无横向溢出通过；
   - 两只天鹅 1265px 首屏、11 章、主图、开始故事、下一句、姐姐记忆和章节
     抽屉通过，无横向溢出。
+- Exact-commit remote smoke：
+  - 张勇站正文、Data、全部主图与懒加载图加载通过，无横向溢出；
+  - 两只天鹅首页、主图、开始、下一句、姐姐记忆、章节抽屉与关闭流程通过。
 - 当前浏览器表面不提供视口切换；390px 真实窄视口 smoke 未运行。CSS 窄屏
   规则和 Pages 资源已检查，Antigravity 仍需做移动端、键盘、完整交互与
   视觉回归。
@@ -173,16 +176,18 @@ The Living Atlas 可复用的站点包结构，同时保留各站点身份、适
 
 - Branch: `codex/living-atlas-static-sites`
 - Base: `origin/main` through merge commit `518d7f9`
-- Implementation commit: pending
-- Exact-commit previews: pending
-- Draft PR: pending
+- Implementation commit: `6e8a19a`
+- Exact-commit previews:
+  - <https://raw.githack.com/TSRat/My-Website/6e8a19a/ZHANGYONG-PORTRAIT/index.html>
+  - <https://raw.githack.com/TSRat/My-Website/6e8a19a/MALTY-MELTY-CHILDHOOD/index.html>
+- Draft PR: <https://github.com/TSRat/My-Website/pull/21>
 - Merge: not authorized and not performed
 - Antigravity extended QA: pending
 
 ### Next step
 
-提交并推送当前专用分支，打开 exact-commit previews 做远端 smoke，创建 Draft
-PR，再把 preview / PR / implementation commit 回写到根与项目 handoff。
+审查 Draft PR 与两个精确提交预览；如需要完整移动端、键盘和视觉回归证据，
+把 PR #21 与以上两个预览交给 Antigravity。
 
 - Last updated: 2026-07-19
 - Project: `TSRat/My-Website`
