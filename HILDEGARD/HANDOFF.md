@@ -99,3 +99,38 @@
 - 深色屏 numeral / meta 对比修复：`.chapter--vision .chapter-numeral` 现在使用 `--color-accent-soft`（gold-soft）+ opacity 0.55；`.chapter--botanical .chapter-numeral` 使用 gold-soft 0.7 + opacity 1；`.chapter-meta` 在深色屏由 muted 变为 accent-soft。
 - 05 权威章按用户要求拆成 A/B/C/D/E 五个小节，标题为"与修女的关系 · 把弱势当武器 · 搬离修道院·独立王国 · 通信欧洲的权力中心 · 性别与阶级的两面"。
 - 静态资源版本号：`hildegard-site.css?v=viriditas-v3`、`hildegard-refresh.js?v=viriditas-v3`。
+
+## 2026-07-25 · Six-stage migration batch
+
+### Current target
+
+Complete the Data / analytics stage and six-stage handoff while preserving the
+Viriditas Codex identity, chapter sequence, historical qualifications, and
+direct static deployment.
+
+### Completed
+
+- Added the visible `#data` appendix and optional footer entry.
+- Added `site-manifest.json` and provider-neutral `assets/site-analytics.js`.
+- Covered chapters, supporting sections, sources, video, and Data entry events
+  without a provider or persistent reader data.
+- Added editable Figma desktop/mobile and Data component references at
+  [node 27:2](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).
+- Added the six-stage handoff at
+  `web/sites/hildegard/six-stage-handoff.md` and shared contract tests.
+
+### Verification
+
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed — 359 local references across 43 HTML/CSS
+  files.
+- `npm test`: Passed — 11/11 tests, including the new historical-site contract.
+- `npm run lint`: Passed with 0 errors and 24 pre-existing warnings in the old
+  Hypatia bundle and Enheduanna source.
+- Browser smoke at 1280 and 390 CSS pixels: Data visible, analytics marker
+  present, 0 broken images, and no horizontal overflow.
+- Extended deterministic-section visual QA remains assigned to Antigravity.
+- Branch: `codex/hypatia-hildegard-six-stage`.
+- Implementation commit: `a8d393eb582d45e2a2a4af533d32ff534fa84721`.
+- [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/a8d393eb582d45e2a2a4af533d32ff534fa84721/HILDEGARD/index.html#data).
+- [Draft PR #16](https://github.com/TSRat/My-Website/pull/16); not merged.

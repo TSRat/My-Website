@@ -50,6 +50,7 @@
         <a href="#death" data-nav="death">教师之死</a>
         <a href="#memory" data-nav="memory">后世</a>
         <a href="#sources" data-nav="sources">史料</a>
+        <a href="#data" data-nav="data">Data</a>
       </nav>
     </header>
 
@@ -1055,6 +1056,25 @@
           </ul>
         </details>
       </section>
+
+      <section class="data-section observe-section" id="data" data-section="data" aria-labelledby="data-title">
+        <div class="data-heading">
+          <p class="kicker">Data · 阅读信号</p>
+          <h2 id="data-title">让未来的分析有边界，也有入口。</h2>
+          <p>
+            本站只定义章节进入、证据筛选、互动状态与来源跳转等匿名事件。
+            当前没有接入分析供应商，不发送网络请求，不写入 Cookie 或持久存储，也不识别读者。
+          </p>
+        </div>
+        <dl class="data-contract" aria-label="Hypatia 数据契约">
+          <div><dt>Provider</dt><dd>None · provider-neutral</dd></div>
+          <div><dt>Signals</dt><dd>章节、证据筛选、互动状态、来源与视频</dd></div>
+          <div><dt>Privacy</dt><dd>无身份、无原始内容、无持久存储</dd></div>
+        </dl>
+        <a class="data-manifest-link" href="./site-manifest.json" data-analytics-event="data_entry_opened" data-analytics-target="site-manifest">
+          <span>Machine-readable contract</span><b>查看 site-manifest.json</b><i>↗</i>
+        </a>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -1074,5 +1094,6 @@
   
 
     <script src="./assets/hypatia-refresh.js?v=interactive-v11" defer></script>
+    <script src="./assets/site-analytics.js?v=six-stage-v1" defer></script>
   </body>
 </html>

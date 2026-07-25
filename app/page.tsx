@@ -41,7 +41,12 @@ export default function Home() {
               每天 5 个值得停留的故事，沿着艺术人文、社会科学与女性主义三条线索展开。
             </p>
             <div className="hero-actions">
-              <Link className="button button-primary" href={`/briefings/${latest.date}`}>
+              <Link
+                className="button button-primary"
+                data-analytics-event="briefing_opened"
+                data-analytics-target={latest.date}
+                href={`/briefings/${latest.date}`}
+              >
                 阅读今日简报 <span aria-hidden="true">→</span>
               </Link>
               <a className="button button-secondary" href="#archive">
@@ -89,6 +94,8 @@ export default function Home() {
             {latest.stories.map((story, index) => (
               <Link
                 className={`story-card card-tone-${(index % 3) + 1}`}
+                data-analytics-event="briefing_opened"
+                data-analytics-target={`${latest.date}#story-${index + 1}`}
                 href={`/briefings/${latest.date}#story-${index + 1}`}
                 key={story.title}
               >
@@ -154,6 +161,36 @@ export default function Home() {
               <p>女性历史、性别、女性主义理论、健康、照护与权力结构。</p>
               <a href="#archive">本期 {latestCounts.feminism} 则 →</a>
             </article>
+          </div>
+        </section>
+
+        <section className="data-section" id="data" aria-labelledby="data-title">
+          <div className="page-frame data-grid">
+            <div className="data-heading">
+              <p className="eyebrow">Data / Analytics</p>
+              <h2 id="data-title">档案如何观察自己的使用</h2>
+              <p>
+                这里只公开测量边界，不展示尚不存在的访问量，也不把阅读质量压缩成停留时长。
+              </p>
+            </div>
+            <dl className="data-status" aria-label="当前分析状态">
+              <div>
+                <dt>Provider</dt>
+                <dd>None</dd>
+              </div>
+              <div>
+                <dt>Signals</dt>
+                <dd>搜索、筛选、打开日刊</dd>
+              </div>
+              <div>
+                <dt>Privacy</dt>
+                <dd>无 Cookie、无持久存储、无身份、无原始搜索文本</dd>
+              </div>
+            </dl>
+            <p className="data-note">
+              事件契约已经就绪；只有在明确数据来源、会话定义、保留期限与使用目的之后，才会接入分析供应商。
+              <a href="/ivory-site-manifest.json">查看机器可读 manifest →</a>
+            </p>
           </div>
         </section>
 

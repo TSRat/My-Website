@@ -18,10 +18,10 @@
 | 项目 | 用途 | 主要维护位置 | GitHub Pages URL | 审核分级 | 迁移 / 审查状态 |
 | --- | --- | --- | --- | --- | --- |
 | The Living Atlas | 总入口主站，一个人的开放档案馆 | `THE-LIVING-ATLAS/` | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) | REFACTOR | 内容系统通过 [PR #13](https://github.com/TSRat/My-Website/pull/13) 合并；Data / starter 与 Worlds 含混性修正通过 [PR #14](https://github.com/TSRat/My-Website/pull/14) 合并 |
-| IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `app/briefings.ts`、`app/`、`public/`、`scripts/build-github-pages.mjs` | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) | PRESERVE | 已审计；暂未开始实现迁移 |
-| Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；`npm run build:enheduanna` 更新 `ENHEDUANNA/` Pages 镜像 | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) | REFACTOR | 六阶段可维护重建与 Data 入口位于 [Draft PR #17](https://github.com/TSRat/My-Website/pull/17)；等待创作者检查 |
-| Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `HILDEGARD/` | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 已审计；暂未开始实现迁移 |
-| Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `HYPATIA/` | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) | REFACTOR | 已审计；等待独立的静态资产 / 响应式批次 |
+| IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `app/briefings.ts`、`app/`、`public/`、`scripts/build-github-pages.mjs` | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) | PRESERVE | 六阶段迁移已通过 [PR #15](https://github.com/TSRat/My-Website/pull/15) 合并：双渲染 parity、manifest、Data 入口与 provider-neutral events |
+| Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；`npm run build:enheduanna` 更新 `ENHEDUANNA/` Pages 镜像 | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) | REFACTOR | 六阶段可维护重建与 Data 入口已通过 [PR #17](https://github.com/TSRat/My-Website/pull/17) 合并 |
+| Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `HILDEGARD/` | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
+| Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `HYPATIA/` | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) | REFACTOR | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
 | Melromarc Sisters | Malty 与 Melty 的非官方多重故事档案 | `MELROMARC-SISTERS/` | [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/) | REBUILD | 已审计；完整上游源码与可重复构建未确认 |
 
 组合级详细审计见 [`web/portfolio-audit.md`](./web/portfolio-audit.md)，六阶段平台标准见 [`web/platform-standard.md`](./web/platform-standard.md)。共享 Figma 设计源为 [TSRat Web Design System · Portfolio Normalization](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt)。

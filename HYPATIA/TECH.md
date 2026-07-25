@@ -117,3 +117,14 @@ docs/HYPATIA/assets/hypatia-refresh.js
 - 未引用的历史 bundle/样式没有正式清理策略。
 - workflow 对 Hypatia 的检查比其他静态站点更具体，但仍不是完整浏览器测试。
 - `assets/agora-hypatia-teaching.jpg` 的既有缺图已于 2026-07-19 修复，并加入通用本地资源验证与 Hypatia 专用 workflow 检查。
+
+## Six-stage runtime contract
+
+- `site-manifest.json` is the machine-readable capability and privacy contract.
+- `assets/site-analytics.js` is provider-neutral. It dispatches
+  `tsrat:analytics` custom events in the page but performs no network request,
+  cookie write, persistent storage, identity capture, or raw-content capture.
+- The visible `#data` appendix links to the manifest and does not change the
+  GitHub Pages copy architecture or public slug.
+- `tests/historical-sites-six-stage.test.mjs` protects the contract and the
+  existing evidence-control hooks.

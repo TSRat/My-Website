@@ -62,3 +62,14 @@ Hypatia 那种"关键文件 grep smoke check"当前 workflow 只对 Hypatia 强�
 - `THE-LIVING-ATLAS/index.html` 的 `07 Sites` 中 Hildegard 行的位置与序号。
 - `assets/glyph-*.svg` 文件名与相对路径；替换图形请覆盖同名 SVG。
 - 页面 `<html lang="zh-CN">`。
+
+## Six-stage runtime contract
+
+- `site-manifest.json` is the machine-readable capability and privacy contract.
+- `assets/site-analytics.js` is provider-neutral. It dispatches
+  `tsrat:analytics` custom events in the page but performs no network request,
+  cookie write, persistent storage, identity capture, or raw-content capture.
+- The visible `#data` appendix and footer link do not change the Pages copy
+  architecture, relative assets, or public slug.
+- `tests/historical-sites-six-stage.test.mjs` protects chapters 00–08,
+  reduced-motion support, and the privacy contract.

@@ -66,9 +66,17 @@ Optional:
 
 Current shared Figma structure:
 
-- `01 · Foundations & Components`
-- `02 · Site Themes & Screens`
-- `03 · Baselines & Handoff`
+- Page `01 · Foundations & Components`
+- `TSRat Web Design System · Foundations`
+- `Shared Components`
+- `TSRat Content System · v1`
+- `TSRat Data & Analytics · v1`
+- `Remaining Sites · Six-Stage Migration v1`
+
+The remaining-site migration frame contains editable desktop/mobile states,
+site-specific Data components, and explicit Phase 5 blockers. Historical
+handoffs that refer to three top-level Figma pages describe an earlier intended
+organization; the current API-visible file uses one page with top-level frames.
 
 ### 4. Interactive prototype and design QA
 
