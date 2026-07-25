@@ -5,7 +5,7 @@ import { transform } from "esbuild";
 
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const artifactRoot = join(repositoryRoot, "MELROMARC-SISTERS");
-const sourceRoot = join(repositoryRoot, "static-sites", "melromarc-sisters");
+const sourceRoot = join(repositoryRoot, "sites", "melromarc-sisters");
 const bundlePath = join(artifactRoot, "assets", "page-Wf3IdOaW.js");
 const cssPath = join(artifactRoot, "assets", "index-CpUB6AfA.css");
 

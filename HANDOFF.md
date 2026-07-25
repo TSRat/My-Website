@@ -1,5 +1,75 @@
 # Repository handoff
 
+## 2026-07-25: Six-site maintenance structure unification
+
+### Current target
+
+检查六个公开网站是否采用同一套实现与维护思路，并把维护目录统一为
+The Living Atlas 可复用的站点包结构，同时保留各站点身份、适合自身的
+渲染技术、公开 URL 和 GitHub Actions Pages 架构。
+
+### Completed
+
+- 六个权威维护根统一为 `sites/<site-id>/`。
+- 每站统一包含 `site.config.json`、`CONTENT.md`、`DESIGN.md`、
+  `TECH.md`、`HANDOFF.md` 和站点特定源码 / 资源。
+- `README.md` 继续作为唯一权威项目表；每站配置只承担技术构建契约，
+  不创建竞争 registry。
+- 新增统一发现、结构校验与站点构建控制面：
+  `scripts/site-projects.mjs`、`scripts/validate-site-structure.mjs`、
+  `scripts/build-site.mjs`。
+- Living Atlas、Hypatia、Hildegard 使用 direct-static adapter；
+  Enheduanna、Melromarc 使用 Vite adapter；IVORY 保留 Vinext +
+  Pages 双渲染 adapter。
+- 五个大写公开目录统一为生成的 deploy mirror；维护 Markdown 与
+  `site.config.json` 不再进入直接静态发布镜像。
+- IVORY 的内容与 UI 实现迁入 `sites/ivory-archive/`；根 `app/` 仅保留
+  Vinext 路由适配器。
+- `scripts/build-github-pages.mjs` 从六个配置发现站点、刷新镜像并生成
+  Pages，不再维护硬编码站点列表。
+- 所有 manifest、targeted tests、组合审计、平台标准与项目技术文档已
+  指向统一维护路径。
+
+### Important decisions
+
+- “完全统一”指维护入口、文档、配置、manifest、发现、验证、构建、
+  镜像与 Pages 发布契约统一；不强迫六站使用同一框架或同一 UI。
+- 现有 Figma 文件仍是六阶段设计来源；本批次没有视觉 redesign，
+  因此复用既有 frame，不制造重复设计稿。
+- 大写目录、公开 slug、相对资源路径、Actions artifact 部署和历史
+  rollback bundle 均保留。
+
+### Verification
+
+- `npm run validate:sites`: passed — 6/6 maintenance packages.
+- `npm run build:sites`: passed — 3 direct-static + 2 Vite mirrors rebuilt.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed — 371 references across 46 HTML/CSS files.
+- `npm test`: passed — Vinext artifact plus 22/22 Node tests.
+- `npm run lint`: passed with 0 errors and 24 existing generated-bundle /
+  `<img>` warnings.
+- Browser basic smoke: all six public entries loaded, correct `h1`, no broken
+  images, and no horizontal overflow.
+- Antigravity extended visual/accessibility matrix: intentionally not run.
+
+### Delivery state
+
+- Branch: `codex/unify-site-maintenance`
+- Base: `636c198`
+- Implementation commit: `5fe5e06`
+- Push: completed.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/20>
+- Exact-commit Preview:
+  <https://raw.githack.com/TSRat/My-Website/5fe5e06/>
+- Preview status: hub and all six sites passed remote basic browser smoke.
+- Merge: not authorized and not performed.
+
+### Remaining
+
+- Review the Pull Request and exact-commit previews after publication.
+- Run Antigravity only if an extended multi-browser or section-overlay audit is
+  desired; no intentional visible change exists in this batch.
+
 ## 2026-07-25: IVORY ARCHIVE six-stage migration
 
 ### Current target
@@ -35,11 +105,89 @@
 - Preview status: deployed successfully; public link access requires creator approval.
 - Merge: not authorized and not performed.
 
-### Remaining
+## 2026-07-25: Zhang Yong Portrait + Two Swans direct-static migration
 
-- Confirm whether the owner-only Sites Preview may be made public for no-login review.
-- Give Antigravity PR #15, the Preview URL, `#data`, desktop / 390px scopes, and dynamic / Pages parity as its extended QA brief.
-- Continue the next independent batch: Hypatia + Hildegard.
+### Current target
+
+把 Sites 中的“张勇的生活切片”和“两只天鹅：Malty 与 Melty”迁入
+`My-Website`，采用与 The Living Atlas 同类的直接维护静态结构，同时保留
+两个站点各自的视觉、内容和交互身份。
+
+### Completed
+
+- 在独立 worktree 与 `codex/living-atlas-static-sites` 分支工作，没有修改
+  用户正在整理的原工作区。
+- `sites/zhangyong-portrait/` 现为直接维护的 HTML、CSS、ES modules、内容注册表、
+  manifest、Data 空状态与本地资产；不再依赖 Sites/Vinext/React。
+- `sites/malty-melty-childhood/` 从 Sites 的精确源码 commit 迁入 11 章、全部对白、
+  双视角记忆、章节抽屉、自动播放、续读、键盘操作和结局状态；生产运行时
+  不再包含 Sites/Vinext/Next.js/React。
+- “两只天鹅”的源码通过 Sites 短期仓库凭据读取，没有点击会向站点分享
+  姓名、邮箱和头像的登录授权。
+- 两站已纳入统一 `sites/<site-id>/` 维护根、`site.config.json`、共享站点
+  构建器和自动生成的大写部署镜像；当前权威项目表共八站。
+- README 权威项目表、Living Atlas published-sites registry、组合审计、平台
+  标准和 targeted tests 已同步。
+- Shared Figma 新增两个可编辑六阶段 desktop/mobile coverage：
+  [张勇的生活切片](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-30)
+  与 [Two Swans](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-76)。
+
+### Important decisions
+
+- 统一的是生产实现形态、稳定内容契约、可访问性、Data 边界和 Pages 交付，
+  不是视觉主题。
+- 张勇站为 `PRESERVE` / Tier A；两只天鹅为 `REFACTOR` / Tier B。
+- Figma 是设计与 QA 参考，不是两个站点的运行时或内容源。
+- 两站 analytics provider 均为 `none`；张勇站无浏览器存储，两只天鹅只在
+  当前设备保存数值型阅读进度 `two-swans-progress`。
+- 没有删除或修改原 Sites 部署，也没有 merge。
+
+### Validation
+
+- `node --check`：两个站点的关键 ES modules 通过。
+- `npm run validate:sites`：通过，8/8 维护包满足统一契约。
+- `npm run build:sites`：通过，七个部署镜像由权威维护包刷新。
+- `node --test tests/site-maintenance-structure.test.mjs tests/living-atlas-static-sites.test.mjs tests/living-atlas-content-system.test.mjs`：
+  13/13 通过。
+- `npm run build:pages`：通过，两个新镜像已复制到 `docs/`。
+- `npm run validate:pages`：通过，53 个 HTML/CSS 文件中的 398 条本地引用有效。
+- `git diff --check`：通过。
+- Browser desktop smoke：
+  - 张勇站 1265px 首屏、主要图片、Data 标题、无横向溢出通过；
+  - 两只天鹅 1265px 首屏、11 章、主图、开始故事、下一句、姐姐记忆和章节
+    抽屉通过，无横向溢出。
+- Exact-commit remote smoke：
+  - 张勇站正文、Data、全部主图与懒加载图加载通过，无横向溢出；
+  - 两只天鹅首页、主图、开始、下一句、姐姐记忆、章节抽屉与关闭流程通过。
+- 当前浏览器表面不提供视口切换；390px 真实窄视口 smoke 未运行。CSS 窄屏
+  规则和 Pages 资源已检查，Antigravity 仍需做移动端、键盘、完整交互与
+  视觉回归。
+
+### Known issues
+
+- 两站上游均未提供完整图片生成/授权记录；站内继续使用原发布资产，脱离
+  本项目复用前需要创作者确认。
+- 张勇站保留了基线的 minified `style.css`，新平台规则放在独立
+  `platform.css`。
+- 两只天鹅原 Sites 页面仍是 access-gated；Codex 的视觉基线来自其精确源码
+  commit 与本地迁移结果。
+
+### Delivery
+
+- Branch: `codex/living-atlas-static-sites`
+- Base: `origin/main` through merge commit `518d7f9`
+- Implementation commit: `6e8a19a`
+- Exact-commit previews:
+  - <https://raw.githack.com/TSRat/My-Website/6e8a19a/ZHANGYONG-PORTRAIT/index.html>
+  - <https://raw.githack.com/TSRat/My-Website/6e8a19a/MALTY-MELTY-CHILDHOOD/index.html>
+- Draft PR: <https://github.com/TSRat/My-Website/pull/21>
+- Merge: not authorized and not performed
+- Antigravity extended QA: pending
+
+### Next step
+
+审查 Draft PR 与两个精确提交预览；如需要完整移动端、键盘和视觉回归证据，
+把 PR #21 与以上两个预览交给 Antigravity。
 
 - Last updated: 2026-07-19
 - Project: `TSRat/My-Website`

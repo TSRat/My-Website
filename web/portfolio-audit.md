@@ -22,8 +22,10 @@ This file is the detailed audit, not a second website registry. Project names, p
 | Sartre / 《恶心》导读 | REFACTOR | B — Interactive | Six-stage migration in progress on `codex/sites-six-stage-import` | Image provenance confirmation and Antigravity extended QA remain |
 | Existentialism / 《存在主义是一种人道主义》 | PRESERVE | A/B — Editorial with local state | Six-stage migration in progress on `codex/sites-six-stage-import` | Source list and Antigravity extended QA remain |
 | Melromarc Sisters | REBUILD | B — Interactive | Maintainable reconstruction merged in PR #18 | Antigravity focus/visual QA remains optional follow-up |
+| 张勇的生活切片 | PRESERVE | A — Editorial | Direct static migration merged in PR #21 | Antigravity section QA pending |
+| 两只天鹅 | REFACTOR | B — Interactive | Direct static migration merged in PR #21 | Antigravity interaction QA pending |
 
-Counts: 8 audited; 3 PRESERVE; 4 REFACTOR; 1 REBUILD.
+Counts: 10 audited; 4 PRESERVE; 5 REFACTOR; 1 REBUILD.
 
 ## Remaining migration queue
 
@@ -37,10 +39,11 @@ copies only the contracts its tier needs and preserves its own visual system.
 | 3 | Hypatia + Hildegard | Manifest, stable IDs, Data entry, source/citation events and Antigravity editorial browser checks | Implemented and merged in PR #16 |
 | 4 | Enheduanna | Tier A source, Data entry and repeatable mirror build | Implemented and merged in PR #17 |
 | 5 | Melromarc Sisters | Tier B source, Data entry, storage boundary and repeatable mirror build | Implemented and merged in PR #18 |
+| 6 | 张勇的生活切片 + 两只天鹅 | Direct static source, stable content registries, Data disclosure and no-provider event contracts | Implemented and merged in PR #21 |
 
-The original four remaining migration batches are implemented and merged. The
-two imported philosophy guides are the active next batch. Antigravity extended
-QA remains a follow-up rather than a merge blocker.
+All listed batches are implemented. The two philosophy guides are the final
+active PR in this merge sequence. Antigravity extended QA remains a follow-up
+rather than a merge blocker.
 
 ## Visual baseline and evidence
 
@@ -57,7 +60,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## The Living Atlas
 
 - **Site / slug / live URL:** The Living Atlas; `THE-LIVING-ATLAS`; <https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/>
-- **Source path:** `THE-LIVING-ATLAS/`; language HTML shells, `content-registry.js`, `web-core.js`, `atlas.js`, `style.css`, and local image assets.
+- **Source path:** `sites/living-atlas/`; `THE-LIVING-ATLAS/` is the generated Pages mirror.
 - **Status:** Public archive hub.
 - **Product purpose:** Present TSRat as a living interdisciplinary archive and offer deliberately open-ended Worlds, published sites, knowledge, and index entry points.
 - **Primary audience and goal:** Readers encountering the archive; understand its atmosphere and enter a site or topic without reducing the homepage to a portfolio taxonomy.
@@ -85,7 +88,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## IVORY ARCHIVE
 
 - **Site / slug / live URL:** IVORY ARCHIVE; `IVORY-ARCHIVE`; <https://tsrat.github.io/My-Website/IVORY-ARCHIVE/>
-- **Source path:** `app/briefings.ts`, `app/`, `public/`, and Pages generation in `scripts/build-github-pages.mjs`; committed `IVORY-ARCHIVE/` is a stale snapshot.
+- **Source path:** `sites/ivory-archive/`, root `app/` route adapters, `public/`, and Pages generation in `scripts/build-github-pages.mjs`; committed `IVORY-ARCHIVE/` is a stale snapshot.
 - **Status:** Active daily thought-briefing archive.
 - **Product purpose:** Publish five-item Chinese briefings spanning culture, humanities, social science, and feminism.
 - **Primary audience and goal:** Readers seeking a curated daily briefing; locate an issue, search its entries, or filter by theme.
@@ -93,7 +96,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Current visual direction:** Warm ivory newspaper/archive layout with burgundy rules, restrained botanical imagery, issue numbering, and editorial serif headlines.
 - **Typography / color / layout:** Editorial serif headlines, compact sans/mono metadata, warm ivory surfaces, burgundy primary action, green support accent, column-led archive composition.
 - **Framework / language / rendering:** React/TypeScript dynamic application plus a custom static Pages renderer generated from the same briefing data.
-- **Content/data model:** `app/briefings.ts` is the current structured content source.
+- **Content/data model:** `sites/ivory-archive/briefings.ts` is the current structured content source.
 - **State/interactivity:** Search and taxonomy filters work in the accepted Pages baseline; issue and entry navigation are functional.
 - **Build system / deployment:** Root Vinext build for the application; custom Node generation for Pages; GitHub Actions artifact deployment.
 - **Analytics:** No provider. `page_viewed`, `search_performed`, `filter_applied`, `briefing_opened`, and `data_entry_opened` are defined by a provider-neutral adapter. It performs no network requests, sets no cookies or persistent storage, collects no identity, and never records raw search text.
@@ -113,7 +116,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## Enheduanna
 
 - **Site / slug / live URL:** Enheduanna / 恩赫杜安娜; `ENHEDUANNA`; <https://tsrat.github.io/My-Website/ENHEDUANNA/>
-- **Source path:** Readable source in `static-sites/enheduanna/`; current deploy mirror in `ENHEDUANNA/`.
+- **Source path:** Readable source in `sites/enheduanna/`; generated deploy mirror in `ENHEDUANNA/`.
 - **Status:** Public long-form historical profile, “Daughters of Time 004”.
 - **Product purpose:** Explain Enheduanna as princess, high priestess, author, and contested “first author” while preserving evidence boundaries.
 - **Primary audience and goal:** General readers of women’s and literary history; follow the narrative and inspect supporting evidence and sources.
@@ -141,7 +144,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## Hildegard
 
 - **Site / slug / live URL:** Hildegard / 希尔德加德; `HILDEGARD`; <https://tsrat.github.io/My-Website/HILDEGARD/>
-- **Source path:** `HILDEGARD/`.
+- **Source path:** `sites/hildegard/`; `HILDEGARD/` is the generated Pages mirror.
 - **Status:** Public long-form historical profile, “Daughters of Time 002”.
 - **Product purpose:** Present Hildegard as abbess, visionary, scholar, composer, and language inventor without flattening the tension between gender and class.
 - **Primary audience and goal:** Readers of women’s, religious, music, and intellectual history; move through the narrative and consult the source boundary.
@@ -169,7 +172,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## Hypatia
 
 - **Site / slug / live URL:** Hypatia / 希帕蒂娅; `HYPATIA`; <https://tsrat.github.io/My-Website/HYPATIA/>
-- **Source path:** `HYPATIA/index.html` and the CSS/JavaScript/assets actually referenced by it.
+- **Source path:** `sites/hypatia/index.html` and the CSS/JavaScript/assets actually referenced by it; `HYPATIA/` is the generated Pages mirror.
 - **Status:** Public long-form historical profile, “Daughters of Time 001”.
 - **Product purpose:** Explain Hypatia as teacher, philosopher, and public figure at the intersection of knowledge, faith, and political violence.
 - **Primary audience and goal:** General readers of women’s, philosophy, and late-antique history; begin the narrative and inspect the source boundary.
@@ -253,7 +256,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## Melromarc Sisters
 
 - **Site / slug / live URL:** Melromarc Sisters; `MELROMARC-SISTERS`; <https://tsrat.github.io/My-Website/MELROMARC-SISTERS/>
-- **Source path:** Maintained source in `static-sites/melromarc-sisters/`; generated Pages mirror in `MELROMARC-SISTERS/`.
+- **Source path:** Maintained source in `sites/melromarc-sisters/`; generated Pages mirror in `MELROMARC-SISTERS/`.
 - **Status:** Public fan-created multi-story archive.
 - **Product purpose:** Explore multiple possible lives and critical story branches for Malty and Melty while separating canon reference from fan-created premise.
 - **Primary audience and goal:** Readers familiar with the source franchise; enter the story archive and open a specific or random branch.
@@ -278,8 +281,43 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Preview / PR URL:** [Exact-commit reconstructed preview](https://raw.githack.com/TSRat/My-Website/edb5cd20374147c8738d4340374c7b90e930bede/MELROMARC-SISTERS/index.html); [PR #18](https://github.com/TSRat/My-Website/pull/18).
 - **Remaining risks:** Client rendering does not reproduce former Vinext RSC/SSR metadata; dialog focus trap/return and full visual comparison remain for Antigravity.
 
+## 张勇的生活切片
+
+- **Site / slug / target URL:** 张勇的生活切片; `ZHANGYONG-PORTRAIT`; <https://tsrat.github.io/My-Website/ZHANGYONG-PORTRAIT/>.
+- **Source path:** `sites/zhangyong-portrait/`; directly maintained HTML, CSS, ES modules, content/site manifests and local assets. `ZHANGYONG-PORTRAIT/` is the generated deploy mirror.
+- **Product purpose:** Present an open portrait through identity, body, care, relationships, reading and daily recovery without claiming a complete biography.
+- **Primary audience and goal:** Readers entering an intimate editorial portrait; understand its framing without mistaking interaction interpretation for objective ranking.
+- **Major route and navigation:** One long page with stable section anchors and a visible Data/privacy entry.
+- **Visual direction:** Dark cyber-editorial observatory with mint, orange and violet signals, large system typography, image windows and a relationship-orbit diagram.
+- **Framework / rendering:** Direct static HTML/CSS plus small ES modules; no Sites, Vinext or React runtime.
+- **Content/data model:** Stable section and asset records in `content-registry.js`; narrative and privacy boundaries in `CONTENT.md`.
+- **Analytics:** Provider none, no browser storage or external delivery; provider-neutral chapter/Data events only.
+- **Accessibility and responsive state:** Skip link, one `h1`, visible focus and reduced motion are retained; desktop and narrow browser smoke remain required before delivery.
+- **Classification:** **PRESERVE** — the public design/content baseline is retained while the implementation source and required Data disclosure change.
+- **Figma URL:** [张勇的生活切片 · migration coverage](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-30).
+- **Preview / PR URL:** [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/6e8a19a/ZHANGYONG-PORTRAIT/index.html); [Draft PR #21](https://github.com/TSRat/My-Website/pull/21).
+- **Remaining risks:** Upstream asset licensing notes were not available; creator confirmation is required before reuse outside the project. Antigravity extended section comparison remains pending.
+
+## 两只天鹅
+
+- **Site / slug / target URL:** 两只天鹅：Malty 与 Melty; `MALTY-MELTY-CHILDHOOD`; <https://tsrat.github.io/My-Website/MALTY-MELTY-CHILDHOOD/>.
+- **Source path:** `sites/malty-melty-childhood/`; directly maintained HTML, CSS, ES modules, content/site manifests and ten local chapter illustrations. `MALTY-MELTY-CHILDHOOD/` is the generated deploy mirror.
+- **Product purpose:** Present an eleven-chapter visual novel about responsibility, sisters and rebuilding a relationship.
+- **Primary audience and goal:** Readers familiar with the source characters; enter at chapter one or another chapter, inspect both memory perspectives and resume locally.
+- **Major route and navigation:** Static landing sections plus a full-screen dialog reader, chapter drawer, previous/next, autoplay, local resume and ending state.
+- **Visual direction:** Illustrated-book composition with warm paper, wine red, sister blue, shared violet and muted gold; full-bleed chapter art.
+- **Framework / rendering:** Direct static HTML/CSS and ES modules; the exact Sites source commit was migrated without keeping Vinext, Next.js or React in production.
+- **Content/data model:** `content-registry.js` owns eleven chapter IDs, all beats, dual memories, four landing acts and the canon/fan/branch/creator boundary.
+- **Analytics and storage:** Provider none and no external delivery. The only browser storage is numeric local reading progress under `two-swans-progress`.
+- **Accessibility and responsive state:** Skip link, focus containment/return, Escape, arrow controls, native buttons and responsive dialog styles are implemented; complete keyboard and visual QA remains delegated.
+- **Classification:** **REFACTOR** — visual identity and behavior are preserved while the framework implementation is replaced by the shared static maintenance model.
+- **Figma URL:** [Two Swans · migration coverage](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-76).
+- **Preview / PR URL:** [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/6e8a19a/MALTY-MELTY-CHILDHOOD/index.html); [Draft PR #21](https://github.com/TSRat/My-Website/pull/21).
+- **Remaining risks:** Source image-generation/licensing notes were absent; exact browser comparison to the access-gated production deployment and Antigravity full reader QA remain pending.
+
 ## Migration queue
 
 Living Atlas is the merged reference implementation through PR #14. IVORY,
-Hypatia, Hildegard, Enheduanna, and Melromarc now also have merged six-stage
-implementations through PRs #15–#18.
+Hypatia, Hildegard, Enheduanna, and Melromarc have merged six-stage
+implementations through PRs #15–#18. 张勇的生活切片 and 两只天鹅 are the
+current direct-static migration batch on `codex/living-atlas-static-sites`.

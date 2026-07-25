@@ -1,9 +1,9 @@
 # TSRat Website Content System
 
 - Version: 2
-- Reference implementation: `THE-LIVING-ATLAS/content-registry.js`, `THE-LIVING-ATLAS/web-core.js`
+- Reference implementation: `sites/living-atlas/content-registry.js`, `sites/living-atlas/web-core.js`
 - Figma: [TSRat Content System · v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=18-2)
-- Applies to: The Living Atlas now; the other five sites and future sites when they enter a scoped migration batch
+- Applies to: all eight site packages and future sites; runtime depth remains capability-specific
 - Reusable starter: `web/templates/site-starter/`
 
 ## Purpose
@@ -99,13 +99,13 @@ Adopt by capability, not by visual template.
 | React or TypeScript application | Reuse the registry contract and pure sorting/index functions; wrap UI behavior in native components |
 | Product or data-backed site | Keep the same IDs and state vocabulary while replacing the in-memory registry with an API or database adapter |
 
-For the five existing sites:
+For the other five existing sites:
 
 - IVORY ARCHIVE: reuse IDs, update records, publication states, and validation; keep its current React/content generator.
-- Enheduanna: adopt only after a repeatable source-to-mirror build is restored.
+- Enheduanna: uses the common site package and repeatable source-to-mirror build; adopt content primitives only where the editorial model benefits.
 - Hildegard: adopt registry metadata and shared validation; preserve Viriditas Codex.
 - Hypatia: adopt registry metadata, link states, and browser smoke tests without replacing its visual system.
-- Melromarc Sisters: defer runtime adoption until maintainable upstream source is confirmed.
+- Melromarc Sisters: uses the common package/build contract; keep its story schema and local saved-state behavior site-specific.
 
 ## Extension points
 
@@ -140,7 +140,10 @@ Every adopting site should test:
 
 ## Current deployment boundary
 
-The reference implementation currently ships inside `THE-LIVING-ATLAS/`, so it can be verified without changing the protected Pages build map. Moving it to a repository-level `shared/web-core/` runtime requires a separately authorized addition to `scripts/build-github-pages.mjs`; that change must not alter existing slugs, URLs, or the GitHub Actions artifact architecture.
+The reference implementation ships from `sites/living-atlas/` into its generated
+uppercase mirror. Moving it to a repository-level `shared/web-core/` runtime
+would still require a separately reviewed build-map change; that change must
+not alter existing slugs, URLs, or the GitHub Actions artifact architecture.
 
 The copyable migration starter lives under `web/templates/site-starter/`. It is
 source documentation and example code, not a deployed shared runtime, so each

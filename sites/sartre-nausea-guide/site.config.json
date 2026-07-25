@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "sartre-nausea-guide",
+  "title": "《恶心》：存在为何令人眩晕",
+  "slug": "SARTRE-NAUSEA-GUIDE",
+  "status": "published",
+  "interactionTier": "B",
+  "classification": "REFACTOR",
+  "maintenanceRoot": "sites/sartre-nausea-guide",
+  "documents": ["CONTENT.md", "DESIGN.md", "TECH.md", "HANDOFF.md"],
+  "source": {
+    "mode": "next-static",
+    "entry": "app/page.tsx",
+    "assets": ["public"]
+  },
+  "build": {
+    "command": "npm run build:sartre-nausea",
+    "staging": "sites/sartre-nausea-guide/out",
+    "mirror": "SARTRE-NAUSEA-GUIDE",
+    "mirrorPolicy": "replace"
+  },
+  "publicPath": "/My-Website/SARTRE-NAUSEA-GUIDE/",
+  "manifest": "public/site-manifest.json",
+  "figmaUrl": "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=33-32",
+  "hub": {
+    "order": 8,
+    "className": "sartre",
+    "cover": "chestnut-root.png",
+    "eyebrow": "PHILOSOPHY READING GUIDE",
+    "description": "从故事、人物、偶然性与阅读实验进入萨特《恶心》的互动导读。",
+    "metadata": [["类型", "互动阅读导览"], ["阅读路线", "20 / 45 / 90 分钟"]]
+  }
+}

@@ -19,7 +19,7 @@ const readRepoFile = (path) =>
 test("Enheduanna contract reports the maintainable production path", async () => {
   const manifest = JSON.parse(
     await readRepoFile(
-      "web/sites/enheduanna/site-manifest.proposed.json",
+      "sites/enheduanna/public/site-manifest.json",
     ),
   );
   const packageJson = JSON.parse(await readRepoFile("package.json"));
@@ -29,21 +29,21 @@ test("Enheduanna contract reports the maintainable production path", async () =>
   assert.equal(manifest.migration.stage5, "complete");
   assert.equal(manifest.migration.blocker, null);
   assert.equal(manifest.capabilities.dataEntry, true);
-  assert.equal(manifest.proposedAnalytics.provider, null);
-  assert.equal(manifest.proposedAnalytics.networkRequests, false);
-  assert.equal(manifest.proposedAnalytics.cookies, false);
-  assert.equal(manifest.proposedAnalytics.persistentStorage, false);
-  assert.equal(manifest.proposedAnalytics.identity, false);
+  assert.equal(manifest.analytics.provider, null);
+  assert.equal(manifest.analytics.networkRequests, false);
+  assert.equal(manifest.analytics.cookies, false);
+  assert.equal(manifest.analytics.persistentStorage, false);
+  assert.equal(manifest.analytics.identity, false);
   assert.equal(
     packageJson.scripts["build:enheduanna"],
-    "node scripts/build-maintainable-site.mjs enheduanna",
+    "node scripts/build-site.mjs enheduanna",
   );
 });
 
 test("Enheduanna readable-source assets still match the deployed mirror", async () => {
   for (const asset of sourceAssets) {
     const [source, mirror] = await Promise.all([
-      readRepoFile(`static-sites/enheduanna/public/${asset}`),
+      readRepoFile(`sites/enheduanna/public/${asset}`),
       readRepoFile(`ENHEDUANNA/${asset}`),
     ]);
     assert.deepEqual(source, mirror, `${asset} must remain byte-identical`);
@@ -52,7 +52,7 @@ test("Enheduanna readable-source assets still match the deployed mirror", async 
 
 test("Enheduanna mirror is a compiled Vite entry with the Data section", async () => {
   const [source, mirror] = await Promise.all([
-    readRepoFile("static-sites/enheduanna/page.tsx"),
+    readRepoFile("sites/enheduanna/page.tsx"),
     readRepoFile("ENHEDUANNA/index.html"),
   ]);
   const sourceText = source.toString("utf8");

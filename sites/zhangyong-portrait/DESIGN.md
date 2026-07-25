@@ -1,0 +1,52 @@
+# 张勇的生活切片 · Design
+
+## Classification
+
+`PRESERVE`
+
+This migration changes the implementation source, not the art direction. The
+captured public page is the visual baseline.
+
+## Visual identity
+
+- Dark editorial/cyber archive surface.
+- Mint is the primary signal color; orange and violet distinguish emotional and
+  narrative systems.
+- Large compressed headings, thin rules, monospace metadata and interface-like
+  labels create the “weather observatory / personal system” language.
+- Image windows, the relationship orbit and rabbit collage are narrative
+  devices rather than interchangeable decoration.
+- Dense sections alternate with large pauses. Do not normalize this into a
+  generic card grid.
+
+## Shared platform foundations
+
+The site adopts the portfolio foundations without adopting The Living Atlas
+art direction:
+
+- one page-level heading;
+- skip navigation;
+- visible `:focus-visible` treatment;
+- semantic section IDs;
+- responsive reflow at 1180px, 900px and 620px;
+- `prefers-reduced-motion`;
+- relative assets compatible with `/My-Website/ZHANGYONG-PORTRAIT/`;
+- visible Data/provider empty state.
+
+## Figma reference
+
+- Shared foundations:
+  <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
+- Editable desktop/mobile migration coverage:
+  <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-30>
+- Frame: `张勇的生活切片 · migration coverage`
+
+Figma is a design and QA reference only. The authoritative production
+implementation is this directory's static HTML, CSS, JavaScript modules and
+assets.
+
+## QA baseline
+
+Codex should compare one desktop route and one related narrow viewport against
+the captured Sites page. Antigravity should perform the complete visual
+preservation review, including section captures and keyboard/focus behavior.

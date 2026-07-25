@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "sartre-nausea-guide",
+  "slug": "SARTRE-NAUSEA-GUIDE",
+  "title": "《恶心》：存在为何令人眩晕",
+  "status": "published",
+  "interactionTier": "B",
+  "classification": "REFACTOR",
+  "maintenanceRoot": "sites/sartre-nausea-guide",
+  "publicPath": "/My-Website/SARTRE-NAUSEA-GUIDE/",
+  "figmaUrl": "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=33-32",
+  "analytics": {
+    "provider": "none",
+    "storage": "local progress only",
+    "identityCollection": "none"
+  }
+}

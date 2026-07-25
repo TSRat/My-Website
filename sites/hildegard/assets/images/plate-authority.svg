@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="A crown circled by four letter-scrolls addressed to Pope, Empress, King and Emperor — visual metaphor for the correspondence network.">
+  <defs>
+    <linearGradient id="au-parch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F0E6CF"/>
+      <stop offset="1" stop-color="#D7C5A4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#au-parch)"/>
+  <g stroke="#18382B" stroke-width="1.4" fill="none">
+    <!-- Central crown (empty, no face) -->
+    <path d="M340 260 L340 220 L360 240 L380 200 L400 240 L420 200 L440 240 L460 220 L460 260 Z"/>
+    <line x1="340" y1="260" x2="460" y2="260"/>
+    <circle cx="380" cy="220" r="4" fill="#B48A3C"/>
+    <circle cx="400" cy="220" r="4" fill="#B48A3C"/>
+    <circle cx="420" cy="220" r="4" fill="#B48A3C"/>
+    <text x="400" y="290" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-style="italic" font-size="16" fill="#18382B">the pen behind the crown</text>
+
+    <!-- Four scrolls, one per direction -->
+    <g>
+      <!-- top -->
+      <rect x="360" y="60" width="80" height="80"/>
+      <line x1="370" y1="80" x2="430" y2="80"/>
+      <line x1="370" y1="95" x2="420" y2="95"/>
+      <line x1="370" y1="110" x2="425" y2="110"/>
+      <line x1="370" y1="125" x2="415" y2="125"/>
+      <text x="400" y="52" text-anchor="middle" font-family="'Fira Code',monospace" font-size="10" letter-spacing="0.18em" fill="#3A3B33">POPE EUGENIUS III</text>
+      <line x1="400" y1="140" x2="400" y2="200" stroke-dasharray="3 3"/>
+    </g>
+    <g>
+      <!-- right -->
+      <rect x="620" y="220" width="80" height="80"/>
+      <line x1="630" y1="240" x2="690" y2="240"/>
+      <line x1="630" y1="255" x2="680" y2="255"/>
+      <line x1="630" y1="270" x2="685" y2="270"/>
+      <line x1="630" y1="285" x2="675" y2="285"/>
+      <text x="660" y="315" text-anchor="middle" font-family="'Fira Code',monospace" font-size="10" letter-spacing="0.18em" fill="#3A3B33">HENRY II</text>
+      <line x1="620" y1="260" x2="460" y2="240" stroke-dasharray="3 3"/>
+    </g>
+    <g>
+      <!-- bottom -->
+      <rect x="360" y="360" width="80" height="80"/>
+      <line x1="370" y1="380" x2="430" y2="380"/>
+      <line x1="370" y1="395" x2="420" y2="395"/>
+      <line x1="370" y1="410" x2="425" y2="410"/>
+      <line x1="370" y1="425" x2="415" y2="425"/>
+      <text x="400" y="465" text-anchor="middle" font-family="'Fira Code',monospace" font-size="10" letter-spacing="0.18em" fill="#3A3B33">BARBAROSSA</text>
+      <line x1="400" y1="360" x2="400" y2="290" stroke-dasharray="3 3"/>
+    </g>
+    <g>
+      <!-- left -->
+      <rect x="100" y="220" width="80" height="80"/>
+      <line x1="110" y1="240" x2="170" y2="240"/>
+      <line x1="110" y1="255" x2="160" y2="255"/>
+      <line x1="110" y1="270" x2="165" y2="270"/>
+      <line x1="110" y1="285" x2="155" y2="285"/>
+      <text x="140" y="315" text-anchor="middle" font-family="'Fira Code',monospace" font-size="10" letter-spacing="0.18em" fill="#3A3B33">ELEANOR OF AQUITAINE</text>
+      <line x1="180" y1="260" x2="340" y2="240" stroke-dasharray="3 3"/>
+    </g>
+
+    <!-- Halo around whole diagram -->
+    <circle cx="400" cy="250" r="230" opacity="0.25"/>
+  </g>
+</svg>

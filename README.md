@@ -17,24 +17,27 @@
 
 | 项目 | 用途 | 主要维护位置 | GitHub Pages URL | 审核分级 | 迁移 / 审查状态 |
 | --- | --- | --- | --- | --- | --- |
-| The Living Atlas | 总入口主站，一个人的开放档案馆 | `THE-LIVING-ATLAS/` | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) | REFACTOR | 内容系统通过 [PR #13](https://github.com/TSRat/My-Website/pull/13) 合并；Data / starter 与 Worlds 含混性修正通过 [PR #14](https://github.com/TSRat/My-Website/pull/14) 合并 |
-| IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `app/briefings.ts`、`app/`、`public/`、`scripts/build-github-pages.mjs` | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) | PRESERVE | 六阶段迁移已通过 [PR #15](https://github.com/TSRat/My-Website/pull/15) 合并：双渲染 parity、manifest、Data 入口与 provider-neutral events |
-| Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；`npm run build:enheduanna` 更新 `ENHEDUANNA/` Pages 镜像 | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) | REFACTOR | 六阶段可维护重建与 Data 入口已通过 [PR #17](https://github.com/TSRat/My-Website/pull/17) 合并 |
-| Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `HILDEGARD/` | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
-| Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `HYPATIA/` | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) | REFACTOR | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
-| Sartre / 《恶心》导读 | 面向初读者的互动阅读导览，连接故事、人物、偶然性与阅读实验 | 源码在 `sites/sartre-nausea-guide/`；Pages 输入镜像在 `SARTRE-NAUSEA-GUIDE/` | [《恶心》：存在为何令人眩晕](https://tsrat.github.io/My-Website/SARTRE-NAUSEA-GUIDE/) | REFACTOR | 六阶段迁移已进入 [Draft PR #19](https://github.com/TSRat/My-Website/pull/19)；immutable preview 基本检查通过 |
-| Existentialism / 《存在主义是一种人道主义》导读 | 面向初学者的讲演论证地图，保留自由、责任、行动与争议 | 源码在 `sites/existentialism-humanism-guide/`；Pages 输入镜像在 `EXISTENTIALISM-HUMANISM-GUIDE/` | [存在主义是一种人道主义](https://tsrat.github.io/My-Website/EXISTENTIALISM-HUMANISM-GUIDE/) | PRESERVE | 六阶段迁移已进入 [Draft PR #19](https://github.com/TSRat/My-Website/pull/19)；immutable preview 基本检查通过 |
-| Melromarc Sisters | Malty 与 Melty 的非官方多重故事档案 | `static-sites/melromarc-sisters/`；`MELROMARC-SISTERS/` 是构建镜像 | [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/) | REBUILD | 可维护重建与 Data 入口已通过 [PR #18](https://github.com/TSRat/My-Website/pull/18) 合并 |
+| The Living Atlas | 总入口主站，一个人的开放档案馆 | `sites/living-atlas/`；`THE-LIVING-ATLAS/` 是构建镜像 | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) | REFACTOR | 内容系统通过 [PR #13](https://github.com/TSRat/My-Website/pull/13) 合并；Data / starter 与 Worlds 含混性修正通过 [PR #14](https://github.com/TSRat/My-Website/pull/14) 合并 |
+| IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `sites/ivory-archive/`；`app/` 是 Vinext 路由适配器，`public/` 是框架资源根 | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) | PRESERVE | 六阶段迁移已通过 [PR #15](https://github.com/TSRat/My-Website/pull/15) 合并：双渲染 parity、manifest、Data 入口与 provider-neutral events |
+| Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | `sites/enheduanna/`；`npm run build:enheduanna` 更新 `ENHEDUANNA/` Pages 镜像 | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) | REFACTOR | 六阶段可维护重建与 Data 入口已通过 [PR #17](https://github.com/TSRat/My-Website/pull/17) 合并 |
+| Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `sites/hildegard/`；`HILDEGARD/` 是构建镜像 | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
+| Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `sites/hypatia/`；`HYPATIA/` 是构建镜像 | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) | REFACTOR | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
+| Sartre / 《恶心》导读 | 面向初读者的互动阅读导览，连接故事、人物、偶然性与阅读实验 | `sites/sartre-nausea-guide/`；`SARTRE-NAUSEA-GUIDE/` 是构建镜像 | [《恶心》：存在为何令人眩晕](https://tsrat.github.io/My-Website/SARTRE-NAUSEA-GUIDE/) | REFACTOR | 六阶段迁移由 [PR #19](https://github.com/TSRat/My-Website/pull/19) 交付 |
+| Existentialism / 《存在主义是一种人道主义》导读 | 面向初学者的讲演论证地图，保留自由、责任、行动与争议 | `sites/existentialism-humanism-guide/`；`EXISTENTIALISM-HUMANISM-GUIDE/` 是构建镜像 | [存在主义是一种人道主义](https://tsrat.github.io/My-Website/EXISTENTIALISM-HUMANISM-GUIDE/) | PRESERVE | 六阶段迁移由 [PR #19](https://github.com/TSRat/My-Website/pull/19) 交付 |
+| Melromarc Sisters | Malty 与 Melty 的非官方多重故事档案 | `sites/melromarc-sisters/`；`MELROMARC-SISTERS/` 是构建镜像 | [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/) | REBUILD | 可维护重建与 Data 入口已通过 [PR #18](https://github.com/TSRat/My-Website/pull/18) 合并 |
+| 张勇的生活切片 | 围绕身份、身体、照料、关系、阅读与日常恢复的开放人物档案 | `sites/zhangyong-portrait/`；`ZHANGYONG-PORTRAIT/` 是构建镜像 | [张勇的生活切片](https://tsrat.github.io/My-Website/ZHANGYONG-PORTRAIT/) | PRESERVE | 静态模块迁移已通过 [PR #21](https://github.com/TSRat/My-Website/pull/21) 合并 |
+| 两只天鹅：Malty 与 Melty | 十一章互动视觉小说；姐妹关系、责任、追责与重新连接 | `sites/malty-melty-childhood/`；`MALTY-MELTY-CHILDHOOD/` 是构建镜像 | [两只天鹅](https://tsrat.github.io/My-Website/MALTY-MELTY-CHILDHOOD/) | REFACTOR | 静态模块迁移已通过 [PR #21](https://github.com/TSRat/My-Website/pull/21) 合并 |
 
 组合级详细审计见 [`web/portfolio-audit.md`](./web/portfolio-audit.md)，六阶段平台标准见 [`web/platform-standard.md`](./web/platform-standard.md)。共享 Figma 设计源为 [TSRat Web Design System · Portfolio Normalization](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt)。
 
 ### 真实来源与静态快照
 
-- `IVORY-ARCHIVE/` 是已提交的历史静态快照，最后一次目录级更新停在第 02 期。当前 GitHub Pages 版本由 `app/briefings.ts` 和 `public/` 在 Actions 中重新生成；不要把旧快照当作主要内容源。
-- `static-sites/enheduanna/` 保存可读的 React/TSX/CSS 源码和 Vite 配置；`npm run build:enheduanna` 先构建到被忽略的 `.site-build/`，再更新 `ENHEDUANNA/` Pages 镜像。未被新入口引用的旧哈希 bundle 保留为回滚材料。
-- `HYPATIA/` 是可直接发布的 HTML/CSS/JavaScript 与资源目录；仓库中没有可确认的另一份完整上游应用源码。
-- `sites/sartre-nausea-guide/` 与 `sites/existentialism-humanism-guide/` 保存从 Sites 迁回的可维护源码；对应大写目录是经 `npm run sync:philosophy-sites` 刷新的静态 Pages 输入镜像。
-- `static-sites/melromarc-sisters/` 是从接受的 Sites/Vinext 部署基线重建的可读源码；运行 `npm run build:melromarc` 更新 `MELROMARC-SISTERS/`。旧 bundle 只作为回滚材料保留，不再是维护入口。
+- `IVORY-ARCHIVE/` 是已提交的历史静态快照，最后一次目录级更新停在第 02 期。当前 GitHub Pages 版本由 `sites/ivory-archive/briefings.ts` 和 `public/` 在 Actions 中重新生成；不要把旧快照当作主要内容源。
+- 所有十个网站的维护入口统一位于 `sites/<site-id>/`。每个站点包都包含 `site.config.json`、`CONTENT.md`、`DESIGN.md`、`TECH.md`、`HANDOFF.md` 与站点特定源码。
+- The Living Atlas、Hypatia 和 Hildegard 使用直接静态源码，通过共享站点构建器更新各自大写 Pages 镜像。
+- Enheduanna 与 Melromarc 使用 React/TypeScript/Vite；共享构建器先生成 `.site-build/`，再更新大写镜像，并保留未被新入口引用的旧 bundle 作为回滚材料。
+- 两个哲学导读保留独立 Next.js 源码；共享构建器通过静态导出与相对路径重写更新大写镜像。
+- IVORY 的内容、组件和项目文档位于 `sites/ivory-archive/`；Next/Vinext 所需的根 `app/` 只保留路由适配器，`public/` 继续作为框架要求的资源根。
 
 修改任何站点前，先阅读该项目的 `CONTENT.md`、`DESIGN.md`、`TECH.md` 和 `HANDOFF.md`。
 
@@ -48,18 +51,29 @@ My-Website/
 ├── HANDOFF.md
 ├── web/                         # 组合级网站审计与平台标准（受版本控制的源文档）
 ├── .github/workflows/publish-static-mirror.yml
-├── app/                         # IVORY ARCHIVE 的动态应用与内容数据
+├── sites/                       # 十个网站统一的权威维护目录
+│   ├── living-atlas/
+│   ├── ivory-archive/
+│   ├── enheduanna/
+│   ├── hildegard/
+│   ├── hypatia/
+│   ├── sartre-nausea-guide/
+│   ├── existentialism-humanism-guide/
+│   ├── melromarc-sisters/
+│   ├── zhangyong-portrait/
+│   └── malty-melty-childhood/
+├── app/                         # IVORY ARCHIVE 的 Vinext 路由适配器
 ├── public/                      # IVORY ARCHIVE 的图片和公共资源
 ├── scripts/                     # Pages 生成、构建与验证脚本
-├── static-sites/enheduanna/     # Enheduanna 可读源码
-├── sites/                        # 从 Sites 迁回的可维护独立站源码
 ├── ENHEDUANNA/                  # Enheduanna 当前发布镜像
-├── static-sites/melromarc-sisters/ # Melromarc 可读源码
-├── HYPATIA/                     # Hypatia 当前发布目录
-├── HILDEGARD/                   # Hildegard 当前发布目录（Viriditas Codex）
-├── SARTRE-NAUSEA-GUIDE/         # Sartre 当前 Pages 输入镜像
-├── EXISTENTIALISM-HUMANISM-GUIDE/ # Existentialism 当前 Pages 输入镜像
+├── HYPATIA/                     # Hypatia 当前发布镜像
+├── HILDEGARD/                   # Hildegard 当前发布镜像
+├── SARTRE-NAUSEA-GUIDE/         # Sartre 当前发布镜像
+├── EXISTENTIALISM-HUMANISM-GUIDE/ # Existentialism 当前发布镜像
 ├── MELROMARC-SISTERS/           # Melromarc 当前发布镜像
+├── THE-LIVING-ATLAS/            # Living Atlas 当前发布镜像
+├── ZHANGYONG-PORTRAIT/          # 张勇的生活切片当前发布镜像
+├── MALTY-MELTY-CHILDHOOD/       # 两只天鹅当前发布镜像
 ├── IVORY-ARCHIVE/               # IVORY 的旧静态快照，不是当前 Pages 来源
 └── tests/                       # 当前应用构建后的 Node 测试
 ```
@@ -92,36 +106,36 @@ npm ci
 npm run dev
 ```
 
-`npm run dev` 运行根目录的 Vinext/Vite 应用，主要用于 IVORY ARCHIVE 的动态版本。它不等于重建各个独立静态站点。
+`npm run dev` 与 `npm run dev:ivory` 运行根目录的 Vinext/Vite 适配器，页面实现来自 `sites/ivory-archive/`。
 
-Enheduanna 独立开发与构建：
+每站都有一致的 `dev:<site>` / `build:<site>` 入口：
 
 ```bash
+npm run dev:living-atlas
+npm run build:living-atlas
+npm run dev:hypatia
+npm run build:hypatia
+npm run dev:hildegard
+npm run build:hildegard
 npm run dev:enheduanna
 npm run build:enheduanna
+npm run dev:melromarc
+npm run build:melromarc
+npm run dev:sartre-nausea
+npm run build:sartre-nausea
+npm run dev:existentialism-humanism
+npm run build:existentialism-humanism
 ```
 
-生成与 GitHub Actions 相同的 Pages artifact：
+统一检查与构建全部站点：
 
 ```bash
+npm run validate:sites
+npm run build:sites
 npm run build:pages
 ```
 
-当两个哲学导读的源码发生变化时，先刷新其受版本控制的静态镜像：
-
-```bash
-npm run sync:philosophy-sites
-```
-
-Melromarc 独立开发与构建：
-
-```bash
-npm run dev:melromarc
-npm run build:melromarc
-```
-
-两个重建站点采用同一脚本：先在被忽略的 `.site-build/` 中生成，再更新
-现有大写 Pages 镜像；不会删除镜像中保留的旧 bundle。
+`build:pages` 会先按每个 `site.config.json` 刷新九个大写静态镜像，再生成 IVORY 与完整 Pages artifact。直接静态站点替换镜像；Vite 站点保留未引用的历史 bundle；Next 静态站点执行导出和相对路径重写。
 
 生成结果位于被忽略的 `docs/`。如需本地查看完整多站点路径，可在仓库根目录运行：
 
@@ -157,7 +171,7 @@ npm run lint
 1. 推送到 `main`，或手动触发 workflow。
 2. `.github/workflows/publish-static-mirror.yml` 安装 Node 22 依赖。
 3. workflow 运行 `npm run build:pages`。
-4. `scripts/build-github-pages.mjs` 生成总入口与 IVORY ARCHIVE，并复制 `ENHEDUANNA/`、`HYPATIA/`、`HILDEGARD/`、`SARTRE-NAUSEA-GUIDE/`、`EXISTENTIALISM-HUMANISM-GUIDE/`、`MELROMARC-SISTERS/`、`THE-LIVING-ATLAS/`。
+4. `scripts/build-github-pages.mjs` 根据十个站点包生成总入口与 IVORY ARCHIVE，并复制其余九个构建镜像。
 5. `npm run validate:pages` 检查生成页面的本地资源引用，workflow 再执行 Hypatia 关键文件 smoke checks。
 6. workflow 上传 `docs/`，再由 `actions/deploy-pages@v4` 发布。
 
@@ -171,7 +185,7 @@ npm run lint
 - [AGENTS.md](./AGENTS.md)：所有 AI Coding Agent 的工作规则
 - [TECH.md](./TECH.md)：全局技术架构、资产路径与部署约束
 - [HANDOFF.md](./HANDOFF.md)：仓库当前状态、风险与下一步
-- [web/portfolio-audit.md](./web/portfolio-audit.md)：六个公开网站的详细现状、分级、Figma、迁移状态与风险
+- [web/portfolio-audit.md](./web/portfolio-audit.md)：十个公开网站的详细现状、分级、Figma、迁移状态与风险
 - [web/platform-standard.md](./web/platform-standard.md)：共享六阶段标准、分层要求、视觉保护、QA 与分析事件规范
 - [web/content-system.md](./web/content-system.md)：跨站内容注册表、发布状态、共享 Web Core 与采用路径
 - [web/analytics-standard.md](./web/analytics-standard.md)：Data 入口、provider-neutral 事件、隐私边界与未来指标定义
@@ -186,13 +200,16 @@ npm run lint
 
 项目文档位置：
 
-- IVORY ARCHIVE：[`app/`](./app/)
-- Enheduanna：[`static-sites/enheduanna/`](./static-sites/enheduanna/)
-- Hypatia：[`HYPATIA/`](./HYPATIA/)
-- Hildegard：[`HILDEGARD/`](./HILDEGARD/)
+- The Living Atlas：[`sites/living-atlas/`](./sites/living-atlas/)
+- IVORY ARCHIVE：[`sites/ivory-archive/`](./sites/ivory-archive/)
+- Enheduanna：[`sites/enheduanna/`](./sites/enheduanna/)
+- Hypatia：[`sites/hypatia/`](./sites/hypatia/)
+- Hildegard：[`sites/hildegard/`](./sites/hildegard/)
 - Sartre / 《恶心》导读：[`sites/sartre-nausea-guide/`](./sites/sartre-nausea-guide/)
 - Existentialism 导读：[`sites/existentialism-humanism-guide/`](./sites/existentialism-humanism-guide/)
-- Melromarc Sisters：[`static-sites/melromarc-sisters/`](./static-sites/melromarc-sisters/)
+- Melromarc Sisters：[`sites/melromarc-sisters/`](./sites/melromarc-sisters/)
+- 张勇的生活切片：[`sites/zhangyong-portrait/`](./sites/zhangyong-portrait/)
+- 两只天鹅：[`sites/malty-melty-childhood/`](./sites/malty-melty-childhood/)
 
 ## 工作原则
 

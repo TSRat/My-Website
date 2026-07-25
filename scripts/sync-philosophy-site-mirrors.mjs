@@ -7,10 +7,12 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 const sites = [
   {
+    id: "sartre-nausea-guide",
     source: "sites/sartre-nausea-guide",
     mirror: "SARTRE-NAUSEA-GUIDE",
   },
   {
+    id: "existentialism-humanism-guide",
     source: "sites/existentialism-humanism-guide",
     mirror: "EXISTENTIALISM-HUMANISM-GUIDE",
   },
@@ -125,8 +127,34 @@ async function syncSite(site) {
   }
 }
 
-for (const site of sites) {
+export async function syncPhilosophySite(siteId) {
+  const site = sites.find(({ id }) => id === siteId);
+  if (!site) {
+    throw new Error(
+      `Unknown philosophy site "${siteId}". Expected one of: ${sites.map(({ id }) => id).join(", ")}`,
+    );
+  }
   await syncSite(site);
+  console.log(`Synced ${site.id} into ${site.mirror}/.`);
 }
 
-console.log("Synced the Sartre and Existentialism static review mirrors.");
+export async function syncAllPhilosophySites() {
+  for (const site of sites) {
+    await syncSite(site);
+  }
+  console.log("Synced the Sartre and Existentialism static review mirrors.");
+}
+
+const invokedAsScript =
+  process.argv[1] &&
+  fileURLToPath(import.meta.url) ===
+    fileURLToPath(new URL(`file://${process.argv[1]}`));
+
+if (invokedAsScript) {
+  const requestedSite = process.argv[2];
+  if (requestedSite) {
+    await syncPhilosophySite(requestedSite);
+  } else {
+    await syncAllPhilosophySites();
+  }
+}

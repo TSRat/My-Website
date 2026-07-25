@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "existentialism-humanism-guide",
+  "slug": "EXISTENTIALISM-HUMANISM-GUIDE",
+  "title": "存在主义是一种人道主义",
+  "status": "published",
+  "interactionTier": "B",
+  "classification": "PRESERVE",
+  "maintenanceRoot": "sites/existentialism-humanism-guide",
+  "publicPath": "/My-Website/EXISTENTIALISM-HUMANISM-GUIDE/",
+  "figmaUrl": "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=33-73",
+  "analytics": {
+    "provider": "none",
+    "storage": "ephemeral interface state only",
+    "identityCollection": "none"
+  }
+}

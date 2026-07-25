@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "melromarc-sisters",
+  "title": "Melromarc 姐妹故事",
+  "slug": "MELROMARC-SISTERS",
+  "status": "published",
+  "interactionTier": "B",
+  "classification": "REBUILD",
+  "maintenanceRoot": "sites/melromarc-sisters",
+  "documents": ["CONTENT.md", "DESIGN.md", "TECH.md", "HANDOFF.md"],
+  "source": {
+    "mode": "vite-static",
+    "entry": "main.tsx",
+    "viteConfig": "vite.config.ts",
+    "assets": ["public"]
+  },
+  "build": {
+    "command": "npm run build:melromarc",
+    "staging": ".site-build/melromarc-sisters",
+    "mirror": "MELROMARC-SISTERS",
+    "mirrorPolicy": "preserve-unreferenced"
+  },
+  "publicPath": "/My-Website/MELROMARC-SISTERS/",
+  "manifest": "public/site-manifest.json",
+  "figmaUrl": "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2",
+  "hub": {
+    "order": 4,
+    "className": "melromarc",
+    "artLabel": "M&M",
+    "eyebrow": "FAN-CREATED STORY ARCHIVE",
+    "description": "Malty 与 Melty 的多重故事档案：两个名字，生长出许多命运。",
+    "metadata": [["故事线", "13 条"], ["整理方式", "5 个改变时点"]]
+  }
+}

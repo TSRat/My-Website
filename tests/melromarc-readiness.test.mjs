@@ -55,7 +55,7 @@ const publicAssets = [
 test("Melromarc contract reports the maintainable rebuild and storage boundary", async () => {
   const manifest = JSON.parse(
     await readRepoFile(
-      "web/sites/melromarc-sisters/site-manifest.proposed.json",
+      "sites/melromarc-sisters/public/site-manifest.json",
     ),
   );
   const packageJson = JSON.parse(await readRepoFile("package.json"));
@@ -66,22 +66,22 @@ test("Melromarc contract reports the maintainable rebuild and storage boundary",
   assert.equal(manifest.migration.blocker, null);
   assert.equal(manifest.capabilities.dataEntry, true);
   assert.equal(manifest.functionalStorage.key, "melromarc-saved-stories");
-  assert.equal(manifest.proposedAnalytics.provider, null);
-  assert.equal(manifest.proposedAnalytics.networkRequests, false);
-  assert.equal(manifest.proposedAnalytics.cookies, false);
-  assert.equal(manifest.proposedAnalytics.persistentStorage, false);
-  assert.equal(manifest.proposedAnalytics.identity, false);
-  assert.equal(manifest.proposedAnalytics.rawSearchText, false);
+  assert.equal(manifest.analytics.provider, null);
+  assert.equal(manifest.analytics.networkRequests, false);
+  assert.equal(manifest.analytics.cookies, false);
+  assert.equal(manifest.analytics.persistentStorage, false);
+  assert.equal(manifest.analytics.identity, false);
+  assert.equal(manifest.analytics.rawSearchText, false);
   assert.equal(
     packageJson.scripts["build:melromarc"],
-    "node scripts/build-maintainable-site.mjs melromarc-sisters",
+    "node scripts/build-site.mjs melromarc-sisters",
   );
 });
 
 test("Melromarc recovered source preserves all stories, categories, and privacy state", async () => {
   const [content, page] = await Promise.all([
-    readRepoFile("static-sites/melromarc-sisters/content.ts"),
-    readRepoFile("static-sites/melromarc-sisters/page.tsx"),
+    readRepoFile("sites/melromarc-sisters/content.ts"),
+    readRepoFile("sites/melromarc-sisters/page.tsx"),
   ]);
   const contentText = content.toString("utf8");
   const pageText = page.toString("utf8");
@@ -109,7 +109,7 @@ test("Melromarc current mirror is compiled and source assets match it", async ()
 
   for (const asset of publicAssets) {
     const [source, mirror] = await Promise.all([
-      readRepoFile(`static-sites/melromarc-sisters/public/${asset}`),
+      readRepoFile(`sites/melromarc-sisters/public/${asset}`),
       readRepoFile(`MELROMARC-SISTERS/${asset}`),
     ]);
     assert.deepEqual(source, mirror, `${asset} must remain byte-identical`);
@@ -119,7 +119,7 @@ test("Melromarc current mirror is compiled and source assets match it", async ()
 test("Melromarc recovery baseline bundles remain available as rollback evidence", async () => {
   const manifest = JSON.parse(
     await readRepoFile(
-      "web/sites/melromarc-sisters/site-manifest.proposed.json",
+      "sites/melromarc-sisters/public/site-manifest.json",
     ),
   );
 

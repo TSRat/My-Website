@@ -2,7 +2,7 @@
 
 - Version: 1
 - Current provider: none
-- Reference implementation: `THE-LIVING-ATLAS/analytics.js`
+- Reference implementation: `sites/living-atlas/analytics.js`
 - Reusable starter: `web/templates/site-starter/analytics-adapter.js`
 - Figma: [TSRat Data & Analytics · v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=19-2)
 

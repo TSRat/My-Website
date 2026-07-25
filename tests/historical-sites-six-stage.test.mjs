@@ -18,9 +18,9 @@ const assertPrivateAdapter = (source) => {
 
 test("Hypatia exposes a provider-neutral Data contract without changing its evidence controls", async () => {
   const [html, script, manifest] = await Promise.all([
-    readText("HYPATIA/index.html"),
-    readText("HYPATIA/assets/site-analytics.js"),
-    readManifest("HYPATIA/site-manifest.json"),
+    readText("sites/hypatia/index.html"),
+    readText("sites/hypatia/assets/site-analytics.js"),
+    readManifest("sites/hypatia/site-manifest.json"),
   ]);
 
   assert.match(html, /<section class="data-section observe-section" id="data"/);
@@ -52,10 +52,10 @@ test("Hypatia exposes a provider-neutral Data contract without changing its evid
 
 test("Hildegard exposes a provider-neutral Data contract and preserves every chapter", async () => {
   const [html, script, manifest, styles] = await Promise.all([
-    readText("HILDEGARD/index.html"),
-    readText("HILDEGARD/assets/site-analytics.js"),
-    readManifest("HILDEGARD/site-manifest.json"),
-    readText("HILDEGARD/assets/hildegard-site.css"),
+    readText("sites/hildegard/index.html"),
+    readText("sites/hildegard/assets/site-analytics.js"),
+    readManifest("sites/hildegard/site-manifest.json"),
+    readText("sites/hildegard/assets/hildegard-site.css"),
   ]);
 
   assert.match(html, /<section class="data-section" id="data"/);

@@ -53,7 +53,7 @@ SARTRE-NAUSEA-GUIDE/
 ```
 
 The published repository path is `/My-Website/SARTRE-NAUSEA-GUIDE/`. Run
-`npm run sync:philosophy-sites` from the repository root after source changes;
+`npm run build:sartre-nausea` from the repository root after source changes;
 do not hand-edit the mirror.
 
 ## State and privacy

@@ -39,7 +39,7 @@ EXISTENTIALISM-HUMANISM-GUIDE/
 
 最终仓库公开路径是
 `/My-Website/EXISTENTIALISM-HUMANISM-GUIDE/`。源文件变化后从仓库根运行
-`npm run sync:philosophy-sites`，不要手改镜像。
+`npm run build:existentialism-humanism`，不要手改镜像。
 
 ## Migration exclusions
 
