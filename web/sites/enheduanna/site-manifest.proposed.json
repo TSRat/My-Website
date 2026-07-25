@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "enheduanna",
+  "title": "恩赫杜安娜：第一人",
+  "slug": "ENHEDUANNA",
+  "status": "published",
+  "language": "zh-CN",
+  "contentModel": "historical editorial narrative",
+  "migration": {
+    "state": "readiness",
+    "stage5": "blocked",
+    "blocker": "No confirmed reproducible source-to-mirror build"
+  },
+  "renderers": [
+    {
+      "id": "readable-source",
+      "source": "static-sites/enheduanna/",
+      "runtime": "React and TypeScript source; build scaffold unavailable"
+    },
+    {
+      "id": "pages-mirror",
+      "source": "ENHEDUANNA/",
+      "runtime": "compiled static artifact copied by Pages"
+    }
+  ],
+  "capabilities": {
+    "directoryNavigation": true,
+    "chapterNavigation": true,
+    "sourceLinks": true,
+    "videoLinks": true,
+    "notebookLink": true,
+    "dataEntry": false
+  },
+  "proposedAnalytics": {
+    "provider": null,
+    "networkRequests": false,
+    "cookies": false,
+    "persistentStorage": false,
+    "identity": false,
+    "rawContent": false,
+    "rawFreeFormText": false,
+    "events": [
+      "page_viewed",
+      "directory_opened",
+      "chapter_opened",
+      "source_opened",
+      "video_opened",
+      "notebook_opened",
+      "data_entry_opened"
+    ]
+  }
+}

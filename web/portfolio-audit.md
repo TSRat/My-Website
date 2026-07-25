@@ -16,7 +16,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 | --- | --- | --- | --- | --- |
 | The Living Atlas | REFACTOR | B — Interactive | Content system merged in PR #13; Data / starter and ambiguity correction merged in PR #14 | Shared runtime publication needs explicit Pages build-map authorization |
 | IVORY ARCHIVE | PRESERVE | B — Interactive | Audited; no implementation migration started | Dynamic and Pages renderers need explicit parity tests |
-| Enheduanna | REFACTOR | A — Editorial | Audited; implementation blocked | No reproducible source-to-mirror build; tablet overflow exists in the deployed mirror |
+| Enheduanna | REFACTOR | A — Editorial | Stages 1–4 and 6 documented; Stage 5 blocked | No reproducible source-to-mirror build; tablet overflow exists in the deployed mirror |
 | Hildegard | PRESERVE | A — Editorial | Audited; no implementation migration started | Long-page visual comparison must use deterministic sections |
 | Hypatia | REFACTOR | A — Editorial | Audited; no implementation migration started | Historical unreferenced assets and responsive cleanup need a scoped batch |
 | Melromarc Sisters | REBUILD | B — Interactive | Audited; rebuild blocked | Complete upstream source and reproducible build are not present |
@@ -32,7 +32,7 @@ copies only the contracts its tier needs and preserves its own visual system.
 | --- | --- | --- | --- |
 | 1 | IVORY ARCHIVE | Manifest, provider-neutral events, Data entry, renderer parity and Antigravity screenshot QA | Confirm dynamic/Pages parity fixtures |
 | 2 | Hypatia + Hildegard | Manifest, stable IDs, Data entry, source/citation events and Antigravity editorial browser checks | Give Antigravity deterministic chapter sections and viewport scope |
-| 3 | Enheduanna | Tier A contract only after source and mirror can be reproduced | Restore or document a repeatable source-to-mirror build |
+| 3 | Enheduanna | Tier A readiness contract complete; runtime adoption remains blocked | Restore or reconstruct a repeatable source-to-mirror build |
 | 4 | Melromarc Sisters | Tier B/Rebuild contract after upstream source is available | Confirm complete maintainable source and build |
 
 This ordering starts with maintainable sources. Enheduanna and Melromarc remain
@@ -120,8 +120,8 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Content/data model:** Content, sources, and repeated structures are encoded in `page.tsx`; deployed data is compiled into the mirror bundle.
 - **State/interactivity:** Anchor navigation, details menu, external source links, video embed, and hover/focus treatments.
 - **Build system / deployment:** No confirmed project-level source-to-mirror build command. Pages copies `ENHEDUANNA/` unchanged.
-- **Analytics:** No provider detected. Candidate neutral events: `chapter_opened`, `source_opened`, `video_opened`, `reading_map_opened`.
-- **Tests / CI:** Pages asset validation only for the mirror; no project-specific source build or source/mirror equivalence test.
+- **Analytics:** No provider in the deployed mirror. A non-deployed provider-neutral proposal defines directory, chapter, source, video, NotebookLM, and Data entry events with explicit privacy gates.
+- **Tests / CI:** Pages asset validation plus a readiness test that protects source/mirror public-asset parity and fails if the blocker state drifts. No source build or source/mirror renderer equivalence test can exist until the scaffold is restored.
 - **Accessibility state:** Semantic landmarks and image alternatives are present; reduced motion exists. A skip link and full keyboard/iframe-title verification remain.
 - **Responsive state:** Mobile first fold is coherent. At 1024px the accepted baseline shows approximately 20px horizontal overflow, traced to hero artwork and next-chapter geometry.
 - **Existing Figma:** Enheduanna theme variables, editable theme anatomy, representative desktop/mobile screens, shared components, and 3-viewport baselines.
@@ -129,9 +129,9 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Target architecture:** Recover or explicitly rebuild a reproducible project that emits the existing mirror without changing its public URL or visual contract.
 - **Shared-core adoption:** Focus, skip navigation, responsive constraints, caption/citation semantics, motion accessibility, and source/mirror QA.
 - **Site-specific theme:** Preserve the spine, paper/cobalt/red/gold tension, archaeological dossier structure, dark transitions, and evidence labels.
-- **Migration status:** Audit complete; implementation blocked until the source-to-mirror workflow is confirmed or explicitly authorized for reconstruction.
-- **Figma URL:** <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
-- **Preview / PR URL:** Local mirror preview verified; migration preview and PR blocked.
+- **Migration status:** Stages 1–4 and 6 have an editable readiness package; Stage 5 remains explicitly blocked until the source-to-mirror workflow is restored or reconstruction is authorized.
+- **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
+- **Preview / PR URL:** The review branch keeps the public mirror byte-unchanged; exact baseline preview and Draft PR are recorded after push.
 - **Remaining risks:** Directly patching hashed bundles would create an unreproducible fix; chapter-number ordering also needs creator confirmation.
 
 ## Hildegard

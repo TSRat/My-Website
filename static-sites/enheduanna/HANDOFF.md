@@ -106,3 +106,50 @@ npm run build:pages
 - Working tree clean at audit start: Yes
 - Working tree clean at handoff: Yes
 - Uncommitted changes: None
+
+## 2026-07-25 · Six-stage migration readiness
+
+### Current target
+
+Prepare every safe stage of the shared migration workflow without modifying
+the readable application source or compiled Pages mirror under an
+unreproducible build.
+
+### Completed
+
+- Product / UX: preserved the complete long-form journey and placed the future
+  Data entry after Sources.
+- Visual: specified a site-native archive/exhibition Data appendix.
+- Figma: added editable desktop/mobile and Data component references at
+  [node 27:2](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).
+- Prototype / QA: defined deterministic navigation, source, video, NotebookLM,
+  and Data states plus Antigravity viewport scope.
+- Data / analytics: added a non-deployed provider-neutral proposal with strict
+  privacy gates.
+- Added a readiness test for the explicit Stage 5 blocker and source/mirror
+  public-asset parity.
+
+### Blocked
+
+- Production implementation remains blocked because no confirmed command
+  rebuilds `ENHEDUANNA/` from `static-sites/enheduanna/`.
+- `ENHEDUANNA/` and its hashed bundles were not edited.
+- The current public page remains the review baseline, not a migrated preview.
+
+### Next action
+
+Provide the original scaffold or explicitly authorize reconstruction. See
+`web/sites/enheduanna/six-stage-handoff.md` for acceptance criteria.
+
+### Verification
+
+- `git diff --check`: Passed.
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed — 355 local references across 43 HTML/CSS
+  files.
+- `npm test`: Passed — 11/11, including both readiness tests.
+- `npm run lint`: 0 errors; 24 pre-existing warnings.
+- In-app browser baseline: 0 broken images; 390-pixel viewport has no
+  horizontal overflow; 1024-pixel viewport confirms the pre-existing 35-pixel
+  horizontal overflow.
+- Source rebuild and renderer equivalence: Not run because no command exists.

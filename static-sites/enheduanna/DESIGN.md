@@ -93,3 +93,15 @@ Primary stylesheet: `static-sites/enheduanna/globals.css`
 - 现代动漫启发的 Ishtar 图是否有计划替换为其他视觉。
 
 在确认前，不应把网站改成柔和博物馆模板、玻璃拟态或标准卡片落地页。
+
+## 2026-07-25 · Six-stage readiness
+
+- The proposed Data appendix belongs after Sources and preserves the
+  archive/exhibition rhythm rather than introducing a dashboard.
+- Its editable Figma component uses a blue-black field, gold mono metadata,
+  paper text, hard rules, and no rounded generic cards.
+- Desktop/mobile references are in
+  [Figma node 27:2](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).
+- This is a design target only. It must not be copied into the compiled mirror
+  until a reproducible source build or an explicitly authorized reconstruction
+  exists.

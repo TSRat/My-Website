@@ -258,6 +258,41 @@ python3 -m http.server 8000 --directory docs
 ### Verification status
 
 - Skill structure validation: Passed — 两个技能均通过 `quick_validate.py`。
+
+## 2026-07-25: Enheduanna six-stage readiness
+
+### Current target
+
+Complete all safe migration stages while respecting the confirmed separation
+between readable source and the compiled Pages mirror.
+
+### Completed
+
+- Added a six-stage readiness handoff and proposed machine-readable contract
+  under `web/sites/enheduanna/`.
+- Reused the editable Figma migration frame at node `27:2`.
+- Added tests for the explicit Stage 5 blocker and byte equality of all
+  same-name source/mirror public assets.
+- Updated the registry and project documentation without changing content,
+  `page.tsx`, CSS, the compiled mirror, workflow, build map, or public URL.
+
+### Blocker and decision
+
+Stage 5 remains blocked. The repository has no confirmed package, Vite config,
+or command that rebuilds `ENHEDUANNA/` from
+`static-sites/enheduanna/`. Hand-editing hashed bundles or claiming a source
+change is deployed would be unsafe. The next authorized action must be either
+scaffold restoration or an explicitly approved reconstruction.
+
+### Verification
+
+- Pages build and validation passed: 355 local references across 43 HTML/CSS
+  files.
+- Full tests passed: 11/11.
+- Lint completed with 0 errors and 24 pre-existing warnings.
+- Readiness tests confirm the blocker and byte-identical public assets.
+- Browser baseline confirms 0 broken images, no mobile overflow at 390 CSS
+  pixels, and the documented 35-pixel overflow at 1024 CSS pixels.
 - Repository diff checks: Passed — `git diff --check` 无错误；原文代码块比对通过，`build-new-site-to-pr` 仅为修复 YAML 语法给 `description` 增加引号。
 - Pages build and validation: Passed — `npm run build:pages` 成功；`npm run validate:pages` 验证 39 个 HTML/CSS 文件中的 343 个本地引用。
 

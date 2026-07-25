@@ -96,3 +96,23 @@ docs/ENHEDUANNA/assets/index-ZUWuKnJO.css
 ## Safe future improvement
 
 在不改 URL 的前提下，为 `static-sites/enheduanna/` 增加明确的 build script，并让验证能够比较或重建 `ENHEDUANNA/`。这是独立技术任务，不能在普通内容修改中顺手引入。
+
+## 2026-07-25 · Stage 5 acceptance gate
+
+The migration target and proposed analytics contract now live in
+`web/sites/enheduanna/`. They are deliberately outside both source and mirror,
+so the repository cannot mistake a specification for deployed functionality.
+
+Stage 5 remains blocked until one of these paths is authorized:
+
+1. restore the original package, Vite config, and build command; or
+2. reconstruct the project from readable source with the current mirror as the
+   accepted baseline.
+
+The resulting build must write to a temporary directory first, document public
+base and asset hashing, preserve `/My-Website/ENHEDUANNA/`, compare expected
+routes/assets, and update `ENHEDUANNA/` only through a reviewable Draft PR.
+
+`tests/enheduanna-readiness.test.mjs` currently protects the honest blocker
+state and byte equality of every same-name public asset. It is not a substitute
+for renderer equivalence.
