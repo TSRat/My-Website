@@ -74,8 +74,10 @@ hash-based tests.
 Pages continues to copy the uppercase mirror. No workflow, route, slug, Vite
 base, deployment permission, or Pages architecture changed.
 
-The review implementation is delivered through Draft PR #18. An exact-commit
-preview is added after the implementation commit is pushed.
+The review implementation is delivered through Draft PR #18 and the
+[exact implementation commit](https://raw.githack.com/TSRat/My-Website/edb5cd20374147c8738d4340374c7b90e930bede/MELROMARC-SISTERS/index.html).
+The remote preview passed resource, content-count, overflow, Data, and console
+smoke checks.
 
 ## 6. Data / analytics
 

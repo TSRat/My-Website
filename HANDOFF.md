@@ -757,13 +757,16 @@ URL, and Pages deployment architecture.
 - The reconstruction is client-rendered and does not preserve old Vinext
   RSC/SSR metadata.
 - Dialog focus trap/return remains for Antigravity.
-- Exact-commit preview and final lint/diff checks will be recorded in the
-  delivery commit.
+- `npm run lint`: passed with 0 errors and 24 existing warnings outside this
+  project.
+- `git diff --check`: passed.
+- The exact-commit remote preview passed with 13 stories, 18 gallery figures,
+  Data visible, no broken images, no overflow, and no console errors.
 
 ### Delivery
 
 - Enheduanna: [Draft PR #17](https://github.com/TSRat/My-Website/pull/17),
   [exact-commit preview](https://raw.githack.com/TSRat/My-Website/28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb/ENHEDUANNA/index.html).
-- Melromarc: [Draft PR #18](https://github.com/TSRat/My-Website/pull/18);
-  exact-commit preview to be recorded after push.
+- Melromarc: [Draft PR #18](https://github.com/TSRat/My-Website/pull/18),
+  [exact-commit preview](https://raw.githack.com/TSRat/My-Website/edb5cd20374147c8738d4340374c7b90e930bede/MELROMARC-SISTERS/index.html).
 - Merge: not performed.

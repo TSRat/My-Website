@@ -215,7 +215,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Site-specific theme:** Preserve the midnight archive, sister color polarity, character artwork, critical framing, and fan/canon distinctions.
 - **Migration status:** All six stages have an implemented review package in Draft PR #18; not merged.
 - **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
-- **Preview / PR URL:** Exact-commit reconstructed preview will be recorded after push; [Draft PR #18](https://github.com/TSRat/My-Website/pull/18).
+- **Preview / PR URL:** [Exact-commit reconstructed preview](https://raw.githack.com/TSRat/My-Website/edb5cd20374147c8738d4340374c7b90e930bede/MELROMARC-SISTERS/index.html); [Draft PR #18](https://github.com/TSRat/My-Website/pull/18).
 - **Remaining risks:** Client rendering does not reproduce former Vinext RSC/SSR metadata; dialog focus trap/return and full visual comparison remain for Antigravity.
 
 ## Migration queue

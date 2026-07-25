@@ -4,6 +4,7 @@
 - Project: Melromarc 姐妹故事
 - Branch: `codex/melromarc-six-stage-readiness`
 - Pull request: [Draft PR #18](https://github.com/TSRat/My-Website/pull/18)
+- Preview: [exact implementation commit](https://raw.githack.com/TSRat/My-Website/edb5cd20374147c8738d4340374c7b90e930bede/MELROMARC-SISTERS/index.html)
 
 ## Current goal
 
@@ -62,6 +63,8 @@ blue royal-archive identity.
   `["final-deception"]` to the compatibility key.
 - Extended Antigravity visual/accessibility matrix: not run; intentionally
   deferred under repository policy.
+- Remote exact-commit preview: passed at 1280px with 13 stories, 18 gallery
+  figures, Data visible, 0 broken images, 0 overflow, and 0 console errors.
 
 ## Remaining issues
 
