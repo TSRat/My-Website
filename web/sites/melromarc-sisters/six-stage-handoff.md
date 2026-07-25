@@ -1,35 +1,41 @@
-# Melromarc Sisters six-stage migration readiness
+# Melromarc Sisters six-stage implementation
 
 - Site: `MELROMARC-SISTERS`
 - Classification: `REBUILD`
 - Figma: [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
 - Review branch: `codex/melromarc-six-stage-readiness`
-- Production state: blocked before Phase 5 implementation
+- Pull request: [Draft PR #18](https://github.com/TSRat/My-Website/pull/18)
+- Merge state: not merged
 
-This is a readiness package, not a claim that the compiled artifact was
-migrated. The repository contains prerendered HTML, minified Vinext/React
-bundles, images, and stale bundles, but no confirmed editable upstream source
-or reproducible build.
+The original ChatGPT Work conversation and Sites page were located, but the
+Sites interface did not expose a usable source export. The repository owner
+explicitly authorized reconstruction, so the accepted deployed artifact became
+the product, content, interaction, and visual baseline.
 
 ## 1. Product / UX
 
-Preserve the 13 mutually incompatible story branches, five “first change”
-categories, feminist critical position, two non-negotiable foundations, search,
-filters, random opening, saved stories, reader modal, fate map, and image shelf.
+The rebuilt source preserves:
 
-The future Data entry belongs after the image shelf and before the footer. It
-must not turn the fan archive into a performance dashboard or imply one
-canonical story outcome.
+- 13 mutually incompatible story branches
+- five “first change” categories
+- the feminist critical position and two non-negotiable foundations
+- search, filter, random opening, saved stories, reader, fate map, and gallery
+- the distinction between canon reference, fan premise, story branch, and
+  creator position
+
+The visible Data entry follows the gallery and remains an archive-maintenance
+boundary rather than a performance dashboard.
 
 ## 2. Visual exploration
 
-Preserve the dark royal archive, Malty crimson / Melty blue dual axis, gold
-memory line, paper reading field, continuous editorial grids, square rules, and
-dark fate-map transitions. No new imagery is required.
+The implementation retains the dark royal archive, Malty crimson / Melty blue
+dual axis, gold memory lines, paper reading field, continuous editorial grids,
+hard rules, and dark fate-map transitions. Existing character and gallery
+imagery is retained; no new imagery was generated.
 
-The proposed Data appendix uses a divided red/blue night field with gold archive
-metadata. It must not collapse the sisters into one purple gradient or generic
-rounded cards.
+The Data appendix uses the site-native divided night field, gold metadata, and
+square editorial rules. It does not collapse both sisters into one purple
+gradient or generic rounded cards.
 
 ## 3. Figma design system
 
@@ -37,51 +43,62 @@ Node `27:2` contains editable desktop/mobile migration references and the
 Melromarc Data component. Shared semantic foundations remain separate from the
 site's character colors, fan-archive voice, story schema, and reader behavior.
 
+Figma remains the visual design reference. The source reconstruction is the
+maintainable production implementation.
+
 ## 4. Prototype and design QA
 
-The prototype contract covers mobile navigation, search, five filters, random
-story, saved-story toggle, reader open/close and scroll lock, fate-map buttons,
-gallery sources, and the future Data entry.
+The production prototype supports mobile navigation, search, all five filters,
+random story, saved-story toggle, reader open/close, scroll lock, Escape close,
+fate-map buttons, gallery sources, and the Data entry.
 
-Antigravity should compare deterministic states at desktop, tablet, and mobile:
-default archive, non-empty search, each filter, saved state after reload,
-reader open and closed, and mobile menu/modal.
+Codex smoke checks passed at 1280px and 390px. Antigravity still owns the
+extended deterministic matrix: desktop/tablet/mobile visual comparison,
+non-empty search, every filter, saved state after reload, reader focus
+trap/return, mobile menu/modal, and screenshot regression.
 
 ## 5. Production, GitHub, and preview
 
-**Blocked.** Do not patch the prerendered HTML and minified page bundle in
-parallel, do not edit every similar historical bundle, and do not call a
-reverse-engineered artifact “upstream source.”
+Readable React/TypeScript/Vite source now lives in
+`static-sites/melromarc-sisters/`. The site-specific build:
 
-Phase 5 can begin when either:
+```bash
+npm run build:melromarc
+```
 
-1. the complete original project and build command are restored; or
-2. the repository owner explicitly authorizes a maintainable rebuild using the
-   current artifact as the accepted product/content/visual baseline.
+builds in ignored `.site-build/melromarc-sisters/`, validates the compiled
+entry, and updates the committed `MELROMARC-SISTERS/` Pages mirror. Old
+unreferenced Vinext bundles remain rollback material and are protected by
+hash-based tests.
 
-Acceptance requires a structured story data source, source-controlled
-components and styles, explicit base/asset behavior, parity tests for all 13
-stories and five categories, saved-state compatibility, and a deliberate
-artifact update in a Draft PR.
+Pages continues to copy the uppercase mirror. No workflow, route, slug, Vite
+base, deployment permission, or Pages architecture changed.
 
-The current review package is [Draft PR #18](https://github.com/TSRat/My-Website/pull/18).
-Its [exact-commit page](https://raw.githack.com/TSRat/My-Website/bc06df1a6786171ce1be8b6516a2f4c70fa40ed5/MELROMARC-SISTERS/index.html)
-is the unchanged compiled baseline, not a migrated production preview.
+The review implementation is delivered through Draft PR #18. An exact-commit
+preview is added after the implementation commit is pushed.
 
 ## 6. Data / analytics
 
-The proposed contract is stored in `site-manifest.proposed.json` and is not
-referenced by the deployed artifact. It defines provider-neutral events for
-search-length buckets, filters, random/story/path openings, save toggles,
-gallery sources, and Data entry.
+The visible appendix reports `data-provider="none"`. There is no analytics
+network request, cookie, identity, raw search upload, story-text upload, or
+cross-site store.
 
-Analytics itself may use no network request, cookie, identity, raw search text,
-raw story text, or persistent storage. This is distinct from the existing
-functional `localStorage` key `melromarc-saved-stories`, which preserves a
-reader's saved stories locally and must remain documented.
+`site-manifest.proposed.json` preserves a provider-neutral future event
+contract for search-length buckets, filters, random/story/path openings, save
+toggles, gallery sources, and Data entry. This is explicitly distinct from the
+functional local-only `melromarc-saved-stories` key.
 
-## Safe next action
+## Verification summary
 
-Provide the upstream project or explicitly authorize a maintainable rebuild.
-Until then, this branch records the target and immutable active-artifact hashes,
-and leaves the public website unchanged.
+- Rebuild: passed; 18 modules.
+- Targeted tests: passed; 4/4.
+- Pages build and asset validation: passed.
+- Desktop/mobile resource, overflow, Data, console, filter, reader, scroll-lock,
+  and saved-state smoke checks: passed.
+- Antigravity extended visual/accessibility pass: not run.
+
+## Remaining review decision
+
+The maintainable reconstruction is implemented but intentionally unmerged.
+Creator review of the exact-commit preview and optional Antigravity comparison
+determine whether PR #18 is ready to merge.

@@ -27,7 +27,7 @@
 | IVORY ARCHIVE | `app/briefings.ts`、`app/`、`public/`、Pages 生成脚本 | 已提交但较旧的 `IVORY-ARCHIVE/` 快照 |
 | Enheduanna | `static-sites/enheduanna/`；发布前还需处理 `ENHEDUANNA/` 镜像 | 只改 TSX 却假设 workflow 会自动重建镜像 |
 | Hypatia | `HYPATIA/index.html`、被入口实际引用的 CSS/JS 与资源 | 目录中未被入口引用的旧 bundle 或样式文件 |
-| Melromarc Sisters | `MELROMARC-SISTERS/` 当前可部署 artifact；先确认上游源码是否可用 | 未经确认直接手改多个带哈希的编译 bundle |
+| Melromarc Sisters | `static-sites/melromarc-sisters/`；发布前运行 `npm run build:melromarc` 更新 `MELROMARC-SISTERS/` 镜像 | 旧 Vinext bundle、带哈希的编译文件或 `MELROMARC-SISTERS/` 中的项目文档 |
 
 如果真实上游源码或重建命令无法确认，停止高风险实现并把问题写入 `HANDOFF.md`。不要假装存在可重建流程。
 

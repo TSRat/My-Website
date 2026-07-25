@@ -22,7 +22,37 @@ const storyIds = [
   "calling",
 ];
 
-test("Melromarc readiness contract reports the rebuild blocker and storage boundary", async () => {
+const publicAssets = [
+  "favicon.svg",
+  "images/malty-anime.svg",
+  "images/melty-anime.svg",
+  "images/melty-queen.svg",
+  ...Array.from(
+    { length: 15 },
+    (_, index) =>
+      `images/gallery/${String(index + 1).padStart(2, "0")}-${
+        [
+          "childhood-hair",
+          "apology-embrace",
+          "balcony-embrace",
+          "carrying-sister",
+          "childhood-garden",
+          "public-notice",
+          "royal-family",
+          "walking-together",
+          "tavern-card-night",
+          "fireplace-comfort",
+          "dance-together",
+          "ruins-reunion",
+          "my-sister",
+          "final-magic",
+          "protect-my-sister",
+        ][index]
+      }.jpg`,
+  ),
+];
+
+test("Melromarc contract reports the maintainable rebuild and storage boundary", async () => {
   const manifest = JSON.parse(
     await readRepoFile(
       "web/sites/melromarc-sisters/site-manifest.proposed.json",
@@ -31,9 +61,10 @@ test("Melromarc readiness contract reports the rebuild blocker and storage bound
   const packageJson = JSON.parse(await readRepoFile("package.json"));
 
   assert.equal(manifest.id, "melromarc-sisters");
-  assert.equal(manifest.migration.state, "readiness");
-  assert.equal(manifest.migration.stage5, "blocked");
-  assert.equal(manifest.capabilities.dataEntry, false);
+  assert.equal(manifest.migration.state, "implemented");
+  assert.equal(manifest.migration.stage5, "complete");
+  assert.equal(manifest.migration.blocker, null);
+  assert.equal(manifest.capabilities.dataEntry, true);
   assert.equal(manifest.functionalStorage.key, "melromarc-saved-stories");
   assert.equal(manifest.proposedAnalytics.provider, null);
   assert.equal(manifest.proposedAnalytics.networkRequests, false);
@@ -42,44 +73,62 @@ test("Melromarc readiness contract reports the rebuild blocker and storage bound
   assert.equal(manifest.proposedAnalytics.identity, false);
   assert.equal(manifest.proposedAnalytics.rawSearchText, false);
   assert.equal(
-    Object.keys(packageJson.scripts).some((name) =>
-      name.toLowerCase().includes("melromarc"),
-    ),
-    false,
+    packageJson.scripts["build:melromarc"],
+    "node scripts/build-maintainable-site.mjs melromarc-sisters",
   );
 });
 
-test("Melromarc active artifact matches the recorded immutable baseline", async () => {
+test("Melromarc recovered source preserves all stories, categories, and privacy state", async () => {
+  const [content, page] = await Promise.all([
+    readRepoFile("static-sites/melromarc-sisters/content.ts"),
+    readRepoFile("static-sites/melromarc-sisters/page.tsx"),
+  ]);
+  const contentText = content.toString("utf8");
+  const pageText = page.toString("utf8");
+
+  for (const storyId of storyIds) {
+    assert.match(contentText, new RegExp(`"id": "${storyId}"`));
+  }
+
+  assert.equal((contentText.match(/"storyIds": \[/g) ?? []).length, 5);
+  assert.match(pageText, /melromarc-saved-stories/);
+  assert.match(pageText, /data-provider="none"/);
+  assert.match(pageText, /window\.localStorage\.getItem/);
+  assert.match(pageText, /window\.localStorage\.setItem/);
+});
+
+test("Melromarc current mirror is compiled and source assets match it", async () => {
+  const index = (
+    await readRepoFile("MELROMARC-SISTERS/index.html")
+  ).toString("utf8");
+
+  assert.doesNotMatch(index, /main\.tsx/);
+  assert.match(index, /\.\/assets\/index-[^"]+\.js/);
+  assert.match(index, /\.\/assets\/index-[^"]+\.css/);
+  assert.doesNotMatch(index, /__VINEXT_RSC_/);
+
+  for (const asset of publicAssets) {
+    const [source, mirror] = await Promise.all([
+      readRepoFile(`static-sites/melromarc-sisters/public/${asset}`),
+      readRepoFile(`MELROMARC-SISTERS/${asset}`),
+    ]);
+    assert.deepEqual(source, mirror, `${asset} must remain byte-identical`);
+  }
+});
+
+test("Melromarc recovery baseline bundles remain available as rollback evidence", async () => {
   const manifest = JSON.parse(
     await readRepoFile(
       "web/sites/melromarc-sisters/site-manifest.proposed.json",
     ),
   );
-  const index = await readRepoFile("MELROMARC-SISTERS/index.html");
 
   for (const [path, expectedHash] of Object.entries(
-    manifest.activeArtifact,
+    manifest.recoveryBaseline,
   )) {
+    if (path === "commit") continue;
     const source = await readRepoFile(`MELROMARC-SISTERS/${path}`);
     const actualHash = createHash("sha256").update(source).digest("hex");
-    assert.equal(actualHash, expectedHash, `${path} changed from the baseline`);
+    assert.equal(actualHash, expectedHash, `${path} changed from the recovery baseline`);
   }
-
-  const html = index.toString("utf8");
-  assert.match(html, /assets\/page-Wf3IdOaW\.js/);
-  assert.match(html, /assets\/index-CpUB6AfA\.css\?v=d5b0fc7/);
-  assert.match(html, /assets\/index-moQLGS8S\.js/);
-});
-
-test("Melromarc active bundle preserves all story ids and saved-story compatibility", async () => {
-  const bundle = (
-    await readRepoFile("MELROMARC-SISTERS/assets/page-Wf3IdOaW.js")
-  ).toString("utf8");
-
-  for (const storyId of storyIds) {
-    assert.match(bundle, new RegExp(`id:\\\`${storyId}\\\``));
-  }
-  assert.match(bundle, /melromarc-saved-stories/);
-  assert.match(bundle, /window\.localStorage\.getItem/);
-  assert.match(bundle, /window\.localStorage\.setItem/);
 });

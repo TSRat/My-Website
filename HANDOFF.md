@@ -700,3 +700,70 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 - Branch: `codex/living-atlas-template-data`
 - PR: <https://github.com/TSRat/My-Website/pull/14>
 - Merge: explicitly authorized by the creator; perform after configuration validation and push.
+
+## 2026-07-25: Melromarc Sisters maintainable reconstruction
+
+### Current target
+
+Rebuild Melromarc Sisters as a maintainable source project after the original
+ChatGPT Work conversation and Sites page were found but no source export was
+available. Preserve the accepted site content, identity, interactions, public
+URL, and Pages deployment architecture.
+
+### Completed
+
+- Recovered 13 story records, 18 gallery records, six filter labels, five
+  fate-map stages, and the complete accepted stylesheet from the former active
+  artifact into readable source.
+- Added `static-sites/melromarc-sisters/` as the authoritative React/TypeScript/
+  Vite project.
+- Added `npm run dev:melromarc` and `npm run build:melromarc`.
+- Added the shared maintainable-site build convention already used by the
+  independent Enheduanna Draft PR #17: ignored staging followed by a committed
+  uppercase Pages mirror.
+- Preserved `melromarc-saved-stories`, search, filters, random story, reader,
+  fate map, gallery, content boundaries, feminist critique, and site identity.
+- Added a visible provider-none Data entry without activating analytics.
+- Retained old unreferenced Vinext bundles as rollback material and added
+  source/mirror/hash tests.
+- Moved project documentation to the authoritative source directory and
+  updated the registry, platform audit, technical map, and Agent routing rule.
+
+### Important decisions
+
+- This is an authorized reconstruction from the accepted deployment baseline,
+  not a claim that the original Sites source was exported.
+- Future content and UI changes belong in
+  `static-sites/melromarc-sisters/`; `MELROMARC-SISTERS/` is generated.
+- Shared infrastructure does not imply shared visual identity.
+- No old bundle, public asset, route, or deployment workflow was deleted.
+- Draft PR #18 remains unmerged; creator review is required.
+
+### Verification
+
+- `npm run build:melromarc`: passed; 18 modules.
+- `node --test tests/melromarc-readiness.test.mjs`: passed; 4/4.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed; 327 references across 44 HTML/CSS files at
+  the implementation checkpoint.
+- Browser smoke at 1280px and 390px: no broken images, no horizontal overflow,
+  Data visible, no console errors.
+- Interactions: filter, random reader, save storage, dialog close, and body
+  scroll restore passed.
+- Antigravity extended visual/accessibility matrix: not run by design.
+
+### Remaining
+
+- The reconstruction is client-rendered and does not preserve old Vinext
+  RSC/SSR metadata.
+- Dialog focus trap/return remains for Antigravity.
+- Exact-commit preview and final lint/diff checks will be recorded in the
+  delivery commit.
+
+### Delivery
+
+- Enheduanna: [Draft PR #17](https://github.com/TSRat/My-Website/pull/17),
+  [exact-commit preview](https://raw.githack.com/TSRat/My-Website/28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb/ENHEDUANNA/index.html).
+- Melromarc: [Draft PR #18](https://github.com/TSRat/My-Website/pull/18);
+  exact-commit preview to be recorded after push.
+- Merge: not performed.
