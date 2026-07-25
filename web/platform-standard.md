@@ -71,10 +71,11 @@ Current shared Figma structure:
 - `Shared Components`
 - `TSRat Content System · v1`
 - `TSRat Data & Analytics · v1`
-- `Remaining Sites · Six-Stage Migration v1`
+- `Remaining Sites · Six-Stage Migration v2`
 
 The remaining-site migration frame contains editable desktop/mobile states,
-site-specific Data components, and explicit Phase 5 blockers. Historical
+site-specific Data components, and explicit production-review states, including
+the Zhang Yong Portrait and Two Swans direct-static migration batch. Historical
 handoffs that refer to three top-level Figma pages describe an earlier intended
 organization; the current API-visible file uses one page with top-level frames.
 

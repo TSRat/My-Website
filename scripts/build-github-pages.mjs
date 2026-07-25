@@ -42,6 +42,24 @@ const staticSites = [
     description: "Malty 与 Melty 的多重故事档案：两个名字，生长出许多命运。",
     metadata: [["故事线", "13 条"], ["整理方式", "5 个改变时点"]],
   },
+  {
+    slug: "ZHANGYONG-PORTRAIT",
+    className: "zhangyong",
+    cover: "assets/bawanglong.jpg",
+    eyebrow: "PORTRAIT IN DAILY FRAGMENTS",
+    title: "张勇的生活切片",
+    description: "围绕身份、身体、照料、关系、阅读与日常恢复展开的开放人物档案。",
+    metadata: [["类型", "人物画像"], ["结构", "静态编辑站点"]],
+  },
+  {
+    slug: "MALTY-MELTY-CHILDHOOD",
+    className: "two-swans",
+    cover: "assets/08-lakeside-dance.png",
+    eyebrow: "MALTY & MELTY · VISUAL NOVEL",
+    title: "两只天鹅",
+    description: "从童年、决裂与流放，到第二次拥有彼此的十一章互动视觉小说。",
+    metadata: [["章节", "11 章"], ["阅读状态", "仅本地保存"]],
+  },
 
   {
     slug: "THE-LIVING-ATLAS",

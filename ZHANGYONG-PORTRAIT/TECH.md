@@ -1,0 +1,59 @@
+# 张勇的生活切片 · Technical notes
+
+## Source of truth
+
+`ZHANGYONG-PORTRAIT/` is the directly maintained production source.
+
+There is no React, Vinext, generated bundle or Figma export in the runtime.
+GitHub Pages copies this directory unchanged into:
+
+```text
+/My-Website/ZHANGYONG-PORTRAIT/
+```
+
+## Implementation
+
+- `index.html` — semantic content and primary reading flow.
+- `style.css` — preserved site-specific visual language from the published
+  baseline.
+- `platform.css` — shared accessibility/state/Data additions kept separate from
+  the preserved baseline stylesheet.
+- `fonts.css` and `fonts/` — locally served Geist and Geist Mono assets.
+- `site.js` — small progressive-enhancement entry point.
+- `content-registry.js` — stable section and asset contracts.
+- `site-manifest.js` — tier, classification, path, source and provider record.
+- `analytics.js` — provider-neutral, no-storage event contract.
+- `assets/` — local narrative assets.
+
+Core content and navigation work without JavaScript. JavaScript only annotates
+the implementation, marks the active primary-nav destination and prepares
+provider-neutral events.
+
+## Data and privacy
+
+- Provider: none.
+- Browser storage: none.
+- Cookies/fingerprinting: none.
+- External event delivery: none.
+- Allowed events: `chapter_opened`, `data_section_opened`.
+- Direct identifiers and free-form text are not part of the event envelope.
+
+Connecting a provider requires explicit creator approval and a privacy review.
+
+## Local verification
+
+From the repository root:
+
+```bash
+npm run build:pages
+npm run validate:pages
+python3 -m http.server 4173 -d docs
+```
+
+Then open:
+
+```text
+http://127.0.0.1:4173/ZHANGYONG-PORTRAIT/
+```
+
+Do not hand-maintain or commit `docs/`.

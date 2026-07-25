@@ -35,6 +35,81 @@
 - Preview status: deployed successfully; public link access requires creator approval.
 - Merge: not authorized and not performed.
 
+## 2026-07-25: Zhang Yong Portrait + Two Swans direct-static migration
+
+### Current target
+
+把 Sites 中的“张勇的生活切片”和“两只天鹅：Malty 与 Melty”迁入
+`My-Website`，采用与 The Living Atlas 同类的直接维护静态结构，同时保留
+两个站点各自的视觉、内容和交互身份。
+
+### Completed
+
+- 在独立 worktree 与 `codex/living-atlas-static-sites` 分支工作，没有修改
+  用户正在整理的原工作区。
+- `ZHANGYONG-PORTRAIT/` 现为直接维护的 HTML、CSS、ES modules、内容注册表、
+  manifest、Data 空状态与本地资产；不再依赖 Sites/Vinext/React。
+- `MALTY-MELTY-CHILDHOOD/` 从 Sites 的精确源码 commit 迁入 11 章、全部对白、
+  双视角记忆、章节抽屉、自动播放、续读、键盘操作和结局状态；生产运行时
+  不再包含 Sites/Vinext/Next.js/React。
+- “两只天鹅”的源码通过 Sites 短期仓库凭据读取，没有点击会向站点分享
+  姓名、邮箱和头像的登录授权。
+- README 权威项目表、Pages 复制清单、Living Atlas published-sites registry、
+  组合审计、平台标准和 targeted tests 已同步。
+- Shared Figma 新增两个可编辑六阶段 desktop/mobile coverage：
+  [张勇的生活切片](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-30)
+  与 [Two Swans](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-76)。
+
+### Important decisions
+
+- 统一的是生产实现形态、稳定内容契约、可访问性、Data 边界和 Pages 交付，
+  不是视觉主题。
+- 张勇站为 `PRESERVE` / Tier A；两只天鹅为 `REFACTOR` / Tier B。
+- Figma 是设计与 QA 参考，不是两个站点的运行时或内容源。
+- 两站 analytics provider 均为 `none`；张勇站无浏览器存储，两只天鹅只在
+  当前设备保存数值型阅读进度 `two-swans-progress`。
+- 没有删除或修改原 Sites 部署，也没有 merge。
+
+### Validation
+
+- `node --check`：两个站点的关键 ES modules 通过。
+- `node --test tests/living-atlas-static-sites.test.mjs tests/living-atlas-content-system.test.mjs`：
+  12/12 通过。
+- `npm run build:pages`：通过，两个新目录已复制到 `docs/`。
+- `npm run validate:pages`：通过，53 个 HTML/CSS 文件中的 398 条本地引用有效。
+- `git diff --check`：通过。
+- Browser desktop smoke：
+  - 张勇站 1265px 首屏、主要图片、Data 标题、无横向溢出通过；
+  - 两只天鹅 1265px 首屏、11 章、主图、开始故事、下一句、姐姐记忆和章节
+    抽屉通过，无横向溢出。
+- 当前浏览器表面不提供视口切换；390px 真实窄视口 smoke 未运行。CSS 窄屏
+  规则和 Pages 资源已检查，Antigravity 仍需做移动端、键盘、完整交互与
+  视觉回归。
+
+### Known issues
+
+- 两站上游均未提供完整图片生成/授权记录；站内继续使用原发布资产，脱离
+  本项目复用前需要创作者确认。
+- 张勇站保留了基线的 minified `style.css`，新平台规则放在独立
+  `platform.css`。
+- 两只天鹅原 Sites 页面仍是 access-gated；Codex 的视觉基线来自其精确源码
+  commit 与本地迁移结果。
+
+### Delivery
+
+- Branch: `codex/living-atlas-static-sites`
+- Base commit: `636c198`
+- Implementation commit: pending
+- Exact-commit previews: pending
+- Draft PR: pending
+- Merge: not authorized and not performed
+- Antigravity extended QA: pending
+
+### Next step
+
+提交并推送当前专用分支，打开 exact-commit previews 做远端 smoke，创建 Draft
+PR，再把 preview / PR / implementation commit 回写到根与项目 handoff。
+
 ### Remaining
 
 - Confirm whether the owner-only Sites Preview may be made public for no-login review.

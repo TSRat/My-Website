@@ -23,6 +23,8 @@
 | Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `HILDEGARD/` | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
 | Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `HYPATIA/` | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) | REFACTOR | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
 | Melromarc Sisters | Malty 与 Melty 的非官方多重故事档案 | `static-sites/melromarc-sisters/`；`MELROMARC-SISTERS/` 是构建镜像 | [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/) | REBUILD | 可维护重建与 Data 入口已通过 [PR #18](https://github.com/TSRat/My-Website/pull/18) 合并 |
+| 张勇的生活切片 | 围绕身份、身体、照料、关系、阅读与日常恢复的开放人物档案 | `ZHANGYONG-PORTRAIT/` | [张勇的生活切片](https://tsrat.github.io/My-Website/ZHANGYONG-PORTRAIT/) | PRESERVE | 已迁入直接维护的静态 HTML / CSS / ES modules；Preview 与 PR 待本分支交付 |
+| 两只天鹅：Malty 与 Melty | 十一章互动视觉小说；姐妹关系、责任、追责与重新连接 | `MALTY-MELTY-CHILDHOOD/` | [两只天鹅](https://tsrat.github.io/My-Website/MALTY-MELTY-CHILDHOOD/) | REFACTOR | 已从 Sites/Vinext/React 迁入直接维护的静态 HTML / CSS / ES modules；Preview 与 PR 待本分支交付 |
 
 组合级详细审计见 [`web/portfolio-audit.md`](./web/portfolio-audit.md)，六阶段平台标准见 [`web/platform-standard.md`](./web/platform-standard.md)。共享 Figma 设计源为 [TSRat Web Design System · Portfolio Normalization](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt)。
 
@@ -54,6 +56,8 @@ My-Website/
 ├── HYPATIA/                     # Hypatia 当前发布目录
 ├── HILDEGARD/                   # Hildegard 当前发布目录（Viriditas Codex）
 ├── MELROMARC-SISTERS/           # Melromarc 当前发布镜像
+├── ZHANGYONG-PORTRAIT/          # 张勇的生活切片直接维护源码
+├── MALTY-MELTY-CHILDHOOD/       # 两只天鹅直接维护源码
 ├── IVORY-ARCHIVE/               # IVORY 的旧静态快照，不是当前 Pages 来源
 └── tests/                       # 当前应用构建后的 Node 测试
 ```
@@ -144,7 +148,7 @@ npm run lint
 1. 推送到 `main`，或手动触发 workflow。
 2. `.github/workflows/publish-static-mirror.yml` 安装 Node 22 依赖。
 3. workflow 运行 `npm run build:pages`。
-4. `scripts/build-github-pages.mjs` 生成总入口与 IVORY ARCHIVE，并复制 `ENHEDUANNA/`、`HYPATIA/`、`HILDEGARD/`、`MELROMARC-SISTERS/`、`THE-LIVING-ATLAS/`。
+4. `scripts/build-github-pages.mjs` 生成总入口与 IVORY ARCHIVE，并复制 `ENHEDUANNA/`、`HYPATIA/`、`HILDEGARD/`、`MELROMARC-SISTERS/`、`ZHANGYONG-PORTRAIT/`、`MALTY-MELTY-CHILDHOOD/`、`THE-LIVING-ATLAS/`。
 5. `npm run validate:pages` 检查生成页面的本地资源引用，workflow 再执行 Hypatia 关键文件 smoke checks。
 6. workflow 上传 `docs/`，再由 `actions/deploy-pages@v4` 发布。
 
@@ -158,7 +162,7 @@ npm run lint
 - [AGENTS.md](./AGENTS.md)：所有 AI Coding Agent 的工作规则
 - [TECH.md](./TECH.md)：全局技术架构、资产路径与部署约束
 - [HANDOFF.md](./HANDOFF.md)：仓库当前状态、风险与下一步
-- [web/portfolio-audit.md](./web/portfolio-audit.md)：六个公开网站的详细现状、分级、Figma、迁移状态与风险
+- [web/portfolio-audit.md](./web/portfolio-audit.md)：八个公开网站的详细现状、分级、Figma、迁移状态与风险
 - [web/platform-standard.md](./web/platform-standard.md)：共享六阶段标准、分层要求、视觉保护、QA 与分析事件规范
 - [web/content-system.md](./web/content-system.md)：跨站内容注册表、发布状态、共享 Web Core 与采用路径
 - [web/analytics-standard.md](./web/analytics-standard.md)：Data 入口、provider-neutral 事件、隐私边界与未来指标定义
@@ -178,6 +182,8 @@ npm run lint
 - Hypatia：[`HYPATIA/`](./HYPATIA/)
 - Hildegard：[`HILDEGARD/`](./HILDEGARD/)
 - Melromarc Sisters：[`static-sites/melromarc-sisters/`](./static-sites/melromarc-sisters/)
+- 张勇的生活切片：[`ZHANGYONG-PORTRAIT/`](./ZHANGYONG-PORTRAIT/)
+- 两只天鹅：[`MALTY-MELTY-CHILDHOOD/`](./MALTY-MELTY-CHILDHOOD/)
 
 ## 工作原则
 

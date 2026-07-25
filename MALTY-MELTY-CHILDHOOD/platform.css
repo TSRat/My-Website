@@ -1,0 +1,119 @@
+.skip-link {
+  background: var(--wine-dark);
+  color: #fff8ee;
+  left: 14px;
+  padding: 12px 16px;
+  position: fixed;
+  top: 12px;
+  transform: translateY(-180%);
+  transition: transform 180ms ease;
+  z-index: 200;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.novel-shell[hidden],
+[hidden] {
+  display: none !important;
+}
+
+.data-section {
+  background:
+    linear-gradient(135deg, rgb(116 46 56 / 7%), transparent 48%),
+    var(--paper);
+  display: grid;
+  gap: clamp(48px, 7vw, 110px);
+  grid-template-columns: minmax(300px, 0.9fr) minmax(420px, 1.1fr);
+}
+
+.data-section h2 {
+  color: var(--wine-dark);
+  font-family: var(--serif);
+  font-size: clamp(3rem, 5vw, 5.6rem);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 1.06;
+  margin: 0;
+}
+
+.data-empty-state {
+  align-self: center;
+  border: 1px solid var(--line);
+  background: rgb(255 251 243 / 54%);
+  padding: clamp(28px, 4vw, 50px);
+}
+
+.data-provider {
+  color: var(--wine);
+  font-family: Georgia, var(--serif);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  margin: 0;
+}
+
+.data-empty-state > p:not(.data-provider) {
+  color: var(--muted);
+  font-family: var(--serif);
+  line-height: 1.9;
+  margin: 26px 0 0;
+}
+
+.data-empty-state dl {
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 34px 0 0;
+}
+
+.data-empty-state dl div {
+  border-right: 1px solid var(--line);
+  padding: 18px 14px;
+}
+
+.data-empty-state dl div:first-child {
+  padding-left: 0;
+}
+
+.data-empty-state dl div:last-child {
+  border-right: 0;
+}
+
+.data-empty-state dt {
+  color: #94857c;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+}
+
+.data-empty-state dd {
+  color: var(--ink);
+  font-family: var(--serif);
+  margin: 10px 0 0;
+}
+
+@media (max-width: 760px) {
+  .data-section {
+    grid-template-columns: 1fr;
+  }
+
+  .data-section h2 {
+    font-size: clamp(2.6rem, 13vw, 4.2rem);
+  }
+
+  .data-empty-state dl {
+    grid-template-columns: 1fr;
+  }
+
+  .data-empty-state dl div,
+  .data-empty-state dl div:first-child {
+    border-bottom: 1px solid var(--line);
+    border-right: 0;
+    padding: 15px 0;
+  }
+
+  .data-empty-state dl div:last-child {
+    border-bottom: 0;
+  }
+}

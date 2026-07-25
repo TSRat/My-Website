@@ -233,6 +233,22 @@ npm run build:melromarc
 它从 2026-07-25 接受的旧 active bundle 读取 13 条故事、18 条图像记录、
 6 个筛选项和 5 个命运阶段，并复制当时资源。日常维护不需要再次运行它。
 
+## Direct static site sources
+
+`ZHANGYONG-PORTRAIT/` and `MALTY-MELTY-CHILDHOOD/` follow the direct static
+maintenance model used by The Living Atlas:
+
+- committed HTML is the semantic page shell;
+- committed CSS owns each site's distinct visual identity;
+- ES modules provide progressive interaction, stable content records,
+  site manifests and provider-neutral event contracts;
+- Pages copies each directory unchanged, with no framework build or generated
+  mirror between source and deployment.
+
+`MALTY-MELTY-CHILDHOOD/` stores only numeric reading progress locally under
+`two-swans-progress`. Neither site connects an analytics provider or sends
+events externally.
+
 ## Known technical gaps
 
 - 已审计当前全部 5 个 remote branches；其中没有 Hypatia 的完整上游框架源码。是否存在于仓库外仍待所有者确认。
