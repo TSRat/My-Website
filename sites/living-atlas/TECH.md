@@ -18,7 +18,9 @@ Primary files:
 - `web-core.js`: reusable localization, filtering, sorting, rendering, index, search, and mobile-menu primitives
 - `analytics.js`: provider-neutral, no-storage event adapter and Living Atlas event vocabulary
 - `atlas.js`: Living Atlas adapter plus carousel behavior
-- `assets/`: local site imagery, including the feathered alpha-backed `hypatia-sketch-transparent.webp`
+- `assets/`: local site imagery, including the feathered alpha-backed
+  `hypatia-sketch-transparent.webp` and real-page thumbnails for the two
+  migrated philosophy guides
 - `tsrat-logo.png`: local navigation logo
 
 Figma:

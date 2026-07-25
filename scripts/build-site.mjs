@@ -50,6 +50,14 @@ export async function buildSite(siteId) {
     return;
   }
 
+  if (site.source.mode === "next-static") {
+    const { syncPhilosophySite } = await import(
+      "./sync-philosophy-site-mirrors.mjs"
+    );
+    await syncPhilosophySite(site.id);
+    return;
+  }
+
   const stagingDirectory = join(repositoryRoot, site.build.staging);
   const mirrorDirectory = join(repositoryRoot, site.build.mirror);
 

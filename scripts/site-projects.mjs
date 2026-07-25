@@ -16,6 +16,7 @@ const expectedDocuments = [
 ];
 const supportedModes = new Set([
   "direct-static",
+  "next-static",
   "vite-static",
   "vinext-dual-renderer",
 ]);
@@ -61,7 +62,7 @@ export async function loadSiteProjects() {
 }
 
 async function validateSiteProjects(projects) {
-  assert(projects.length === 8, `Expected 8 site packages, found ${projects.length}`);
+  assert(projects.length === 10, `Expected 10 site packages, found ${projects.length}`);
 
   const ids = new Set();
   const slugs = new Set();

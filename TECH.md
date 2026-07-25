@@ -6,12 +6,13 @@ Default branch: `main`
 
 ## 架构概览
 
-仓库统一使用 `sites/<site-id>/` 作为网站维护控制面，同时保存三类渲染适配器：
+仓库统一使用 `sites/<site-id>/` 作为网站维护控制面，同时保存四类渲染适配器：
 
 1. `sites/ivory-archive/` 的 Vinext/Vite/React 实现；根 `app/` 只是框架路由适配器。
 2. `sites/enheduanna/` 与 `sites/melromarc-sisters/` 的 React/Vite 静态工程。
 3. `sites/living-atlas/`、`sites/hypatia/`、`sites/hildegard/`、
    `sites/zhangyong-portrait/` 与 `sites/malty-melty-childhood/` 的直接静态工程。
+4. `sites/sartre-nausea-guide/` 与 `sites/existentialism-humanism-guide/` 的 Next.js 静态导出工程。
 
 这些站点共享维护文档、`site.config.json`、构建控制面和 Pages 发布约定，但不共享视觉皮肤或强制同一框架。不要把 `npm run build` 的 `dist/` 与 `npm run build:pages` 的 `docs/` 混为一谈。
 
@@ -42,6 +43,8 @@ Default branch: `main`
 | `/My-Website/ENHEDUANNA/` | `sites/enheduanna/` 经 Vite 生成 `ENHEDUANNA/` 镜像，Pages 再复制 | React / TSX / CSS + Vite | `ENHEDUANNA/index.html` |
 | `/My-Website/HILDEGARD/` | `sites/hildegard/` 经共享直接静态构建器更新 `HILDEGARD/` | HTML/CSS/JS/SVG | `HILDEGARD/index.html` |
 | `/My-Website/HYPATIA/` | `sites/hypatia/` 经共享直接静态构建器更新 `HYPATIA/` | HTML/CSS/JS | `HYPATIA/index.html` |
+| `/My-Website/SARTRE-NAUSEA-GUIDE/` | `sites/sartre-nausea-guide/` 经 Next.js 静态导出更新镜像 | React / TypeScript + Next.js | `SARTRE-NAUSEA-GUIDE/index.html` |
+| `/My-Website/EXISTENTIALISM-HUMANISM-GUIDE/` | `sites/existentialism-humanism-guide/` 经 Next.js 静态导出更新镜像 | React / TypeScript + Next.js | `EXISTENTIALISM-HUMANISM-GUIDE/index.html` |
 | `/My-Website/MELROMARC-SISTERS/` | `sites/melromarc-sisters/` 经 Vite 生成 `MELROMARC-SISTERS/` 镜像 | React / TypeScript + Vite | `MELROMARC-SISTERS/index.html` |
 | `/My-Website/THE-LIVING-ATLAS/` | `sites/living-atlas/` 经共享直接静态构建器更新 `THE-LIVING-ATLAS/` | HTML/CSS/ES modules | `THE-LIVING-ATLAS/index.html` |
 | `/My-Website/ZHANGYONG-PORTRAIT/` | `sites/zhangyong-portrait/` 经共享直接静态构建器更新 `ZHANGYONG-PORTRAIT/` | HTML/CSS/ES modules | `ZHANGYONG-PORTRAIT/index.html` |
@@ -57,9 +60,10 @@ Default branch: `main`
 | --- | --- | --- |
 | `npm run dev` | 运行 Vite/Vinext 开发服务器 | 本地服务；Wrangler 日志留在忽略目录 |
 | `npm run build:pages` | 生成 GitHub Pages 多站点 artifact | `docs/` |
+| `npm run sync:philosophy-sites` | 从两个哲学导读源码重建受版本控制的静态 Pages 输入镜像 | `SARTRE-NAUSEA-GUIDE/`、`EXISTENTIALISM-HUMANISM-GUIDE/` |
 | `npm run validate:pages` | 检查 `docs/` 内 HTML/CSS 的本地资源引用 | 只读；缺失或越界引用时退出失败 |
-| `npm run validate:sites` | 检查八个站点包、维护文档、配置、入口、manifest 与 npm scripts | 只读 |
-| `npm run build:sites` | 按每站配置刷新七个大写 Pages 镜像 | `.site-build/` 与大写镜像 |
+| `npm run validate:sites` | 检查十个站点包、维护文档、配置、入口、manifest 与 npm scripts | 只读 |
+| `npm run build:sites` | 按每站配置刷新九个大写 Pages 镜像 | `.site-build/` 与大写镜像 |
 | `npm run dev:living-atlas` / `build:living-atlas` | 开发或同步 Living Atlas | `THE-LIVING-ATLAS/` |
 | `npm run dev:ivory` / `build:ivory` | 开发或构建 IVORY 动态应用 | `dist/` |
 | `npm run dev:enheduanna` | 运行 Enheduanna Vite 开发服务器 | 本地服务 |
@@ -130,16 +134,18 @@ Do not replace the existing GitHub Actions deployment architecture with
 
 `scripts/build-github-pages.mjs` 会：
 
-- 读取八个 `sites/<site-id>/site.config.json` 并先刷新七个大写静态镜像。
+- 读取十个 `sites/<site-id>/site.config.json` 并先刷新九个大写静态镜像。
 - 删除并重建 `docs/IVORY-ARCHIVE/`。
 - 删除旧的 `docs/briefings/` legacy redirect。
 - 生成 `docs/index.html`、`docs/hub.css`、`docs/404.html` 和 `.nojekyll`。
 - 从 `sites/ivory-archive/briefings.ts` 读取字面量数据，生成 IVORY 首页及每期详情页。
 - 从 `public/story-images/` 复制本期使用的图片。
 - 为旧 `/My-Website/briefings/<date>/` 路径生成到 IVORY 的 redirect。
-- 递归复制七个由站点包生成的大写镜像到 `docs/`。
+- 递归复制九个由站点包生成的大写镜像到 `docs/`。
 
 `docs/` 已在 `.gitignore` 中，应该由 Actions 每次生成，不应成为另一个手工维护分支。
+
+两个哲学导读采用“可维护源码 + 已提交静态镜像”的明确双层结构。`scripts/sync-philosophy-site-mirrors.mjs` 使用源码的 Next.js 静态导出，再把入口中的本地资源改为相对路径，以同时兼容 GitHub Pages 子目录和 immutable commit preview。修改源码后必须运行同步命令，并同时检查源码与镜像 diff。
 
 ## Vite and base paths
 
@@ -152,6 +158,7 @@ Do not replace the existing GitHub Actions deployment architecture with
 - 根 404 页面在生成脚本中显式使用 `/My-Website/hub.css` 和 `/My-Website/`。
 - IVORY 的页面与资源通过相对路径生成。
 - Enheduanna、Hypatia、Melromarc 的入口使用 `./assets/...` 或 `./images/...` 相对路径。
+- 两个哲学导读的静态镜像使用 `./_next/...` 与项目内相对资源；源码构建时可通过 `SITE_BASE_PATH` 验证任意子路径。
 - 子目录名称为大写；GitHub Pages 对大小写敏感。
 
 ## Assets
@@ -174,6 +181,13 @@ Do not replace the existing GitHub Actions deployment architecture with
 - 源资源集中在 `sites/hypatia/assets/`；`HYPATIA/` 是同步镜像。
 - `sites/hypatia/index.html` 实际引用 `hypatia-site.css`、`hypatia-v2.css` 和 `hypatia-refresh.js`。
 - workflow 还验证多张指定图片和 `lake-v11` / `interactive-v11` 版本标记。
+
+### Philosophy guides
+
+- 可维护源码分别位于 `sites/sartre-nausea-guide/` 与 `sites/existentialism-humanism-guide/`。
+- Pages 输入镜像分别位于 `SARTRE-NAUSEA-GUIDE/` 与 `EXISTENTIALISM-HUMANISM-GUIDE/`。
+- 镜像只通过 `npm run sync:philosophy-sites` 刷新；不要直接修改带哈希的 `_next/` 文件。
+- Sartre 的 `chestnut-root.png` 是正文视觉证据，必须随镜像一同验证；来源与授权状态仍应保留在项目文档中。
 
 ### Melromarc Sisters
 
@@ -225,13 +239,14 @@ git diff --stat
 
 ## Maintainable static-site builder
 
-`scripts/build-site.mjs` 是七个静态站点从统一维护包到既有 Pages 镜像
+`scripts/build-site.mjs` 是九个静态站点从统一维护包到既有 Pages 镜像
 的共享发布器。它读取每站的 `site.config.json`，并按渲染模式：
 
 1. 直接静态站点复制到 `.site-build/<site-id>/`，排除维护文档和配置，再原子式替换镜像。
 2. Vite 站点使用项目配置编译到 `.site-build/<site-id>/`，并检查入口引用哈希资源而不是 `.tsx`。
-3. 把通过检查的结果复制到受版本控制的大写镜像目录。
-4. Vite 站点不删除镜像中的历史 bundle，避免破坏回滚材料。
+3. Next 静态站点执行项目导出，再重写为兼容 Pages 子目录与 immutable preview 的相对资源路径。
+4. 把通过检查的结果复制到受版本控制的大写镜像目录。
+5. Vite 站点不删除镜像中的历史 bundle，避免破坏回滚材料。
 
 当前入口：
 
@@ -250,6 +265,10 @@ npm run dev:zhangyong
 npm run build:zhangyong
 npm run dev:two-swans
 npm run build:two-swans
+npm run dev:sartre-nausea
+npm run build:sartre-nausea
+npm run dev:existentialism-humanism
+npm run build:existentialism-humanism
 ```
 
 共享的是构建、镜像和验证约定，不是两个站点的视觉、内容模型或组件。

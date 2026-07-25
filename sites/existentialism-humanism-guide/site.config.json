@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "existentialism-humanism-guide",
+  "title": "存在主义是一种人道主义",
+  "slug": "EXISTENTIALISM-HUMANISM-GUIDE",
+  "status": "published",
+  "interactionTier": "B",
+  "classification": "PRESERVE",
+  "maintenanceRoot": "sites/existentialism-humanism-guide",
+  "documents": ["CONTENT.md", "DESIGN.md", "TECH.md", "HANDOFF.md"],
+  "source": {
+    "mode": "next-static",
+    "entry": "app/page.tsx",
+    "assets": ["public"]
+  },
+  "build": {
+    "command": "npm run build:existentialism-humanism",
+    "staging": "sites/existentialism-humanism-guide/out",
+    "mirror": "EXISTENTIALISM-HUMANISM-GUIDE",
+    "mirrorPolicy": "replace"
+  },
+  "publicPath": "/My-Website/EXISTENTIALISM-HUMANISM-GUIDE/",
+  "manifest": "public/site-manifest.json",
+  "figmaUrl": "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=33-73",
+  "hub": {
+    "order": 9,
+    "className": "existentialism",
+    "cover": "hub-cover.png",
+    "eyebrow": "PHILOSOPHY ARGUMENT MAP",
+    "description": "面向初学者的讲演导读：存在先于本质、自由、责任、行动与争议。",
+    "metadata": [["类型", "论证地图"], ["阅读时长", "约 20 分钟"]]
+  }
+}

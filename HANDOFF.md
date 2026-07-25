@@ -1,5 +1,53 @@
 # Repository handoff
 
+## 2026-07-25: Philosophy guides integrated into the ten-site build
+
+### Current target
+
+Resolve PR #19 against the merged maintenance-platform work, make the Sartre
+and Existentialism guides first-class `sites/<site-id>/` packages, and merge all
+authorized website migration PRs without touching the user's active worktree.
+
+### Completed
+
+- Added shared `site.config.json` and deployable manifests for both philosophy
+  guides.
+- Added the `next-static` adapter to the shared site discovery and build
+  control plane.
+- Replaced the old hard-coded Pages entries with the ten-site config registry.
+- Registered both guides in the Living Atlas with unique archive numbers and
+  preserved the entries added by PR #21.
+- Rebuilt all nine deploy mirrors and the complete Pages artifact.
+
+### Verification
+
+- `npm run validate:sites`: passed — 10/10 maintenance packages.
+- `npm run build:sites`: passed — nine deploy mirrors rebuilt.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed — 489 local references across 63 HTML/CSS files.
+- `node --test tests/*.test.mjs`: passed — 26/26.
+- Both project-local `npm test`: passed — 3/3 each.
+- Root and both project-local lint commands: passed with 0 errors; root retains
+  24 existing generated-bundle / `<img>` warnings.
+- `git diff --check`: passed.
+- Browser basic smoke on exact review commit `63a17bb`: passed at 1440 × 900
+  for both pages; expected title and `h1`, semantic `main`, no broken images,
+  no horizontal overflow, and no console or request failures.
+- Antigravity extended QA: pending.
+
+### Delivery state
+
+- Branch: `codex/sites-six-stage-import`
+- Integration commit: `a0b7bcd`
+- Pull Request: <https://github.com/TSRat/My-Website/pull/19>
+- PR #21: merged as `c0de306a377c610af73c60ac733b30396cfab504`.
+- Original user worktree: untouched.
+
+### Remaining
+
+- Mark PR #19 ready and merge it.
+- Asset provenance and extended Antigravity review remain creator follow-ups.
+
 ## 2026-07-25: Six-site maintenance structure unification
 
 ### Current target
@@ -986,6 +1034,111 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 - Branch: `codex/living-atlas-template-data`
 - PR: <https://github.com/TSRat/My-Website/pull/14>
 - Merge: explicitly authorized by the creator; perform after configuration validation and push.
+
+## 2026-07-25: Import the next two Sites projects
+
+### Current target
+
+继续把用户拥有的 OpenAI Sites 项目迁入 `My-Website` 六阶段体系，同时在
+独立 worktree / branch 中工作，不覆盖原工作区正在进行的整理。
+
+### Completed
+
+- 迁入两份哲学导读的可维护源码：
+  - `sites/sartre-nausea-guide/`
+  - `sites/existentialism-humanism-guide/`
+- 生成并提交两个完全静态、资源相对化的 Pages 镜像：
+  - `SARTRE-NAUSEA-GUIDE/`
+  - `EXISTENTIALISM-HUMANISM-GUIDE/`
+- 新增 `npm run sync:philosophy-sites`，由真实源码构建镜像；生成目录不是
+  手工维护来源。
+- 修正便携导出中的 public asset base：favicon、栗树根图片与 hydration
+  metadata 现在统一编译为相对路径，不再向预览域名根目录发出重复请求。
+- 更新 Pages 构建映射、README 权威项目表、TECH、portfolio audit 与
+  Living Atlas 唯一网站注册表。
+- 用实际页面截图生成 Living Atlas 缩略图。
+- Figma 共用文件已加入两站的主题 tokens、desktop / mobile 画面、六阶段
+  coverage 与 provider-neutral Data cards：
+  - Sartre: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=33-32>
+  - Existentialism: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=33-73>
+- Codex basic browser smoke 已覆盖 1440 × 900、390 × 844、真实基线并排、
+  资源加载、横向 containment、console 与一个核心交互状态。
+
+### Important decisions
+
+- 本批只迁移两站；其他私人、真人资料或同人 IP 站点继续保持待确认状态，
+  不擅自公开。
+- Sartre Nausea Guide 分级为 `REFACTOR`；只允许文档化的可访问性与部署
+  修正。
+- Existentialism Guide 分级为 `PRESERVE`；正文、视觉和交互保持原样。
+- 统一基础设施、可访问性、QA、部署和分析契约，不统一两站视觉。
+- Analytics 仅建立 provider-neutral 规范；没有启用外部 provider、
+  cookie、identity 或自由文本采集。
+- 保留现有 GitHub Actions Pages 架构；没有创建或启用 `gh-pages`。
+
+### Known issues / remaining
+
+- `public/chestnut-root.png`、favicon 和装饰资源的来源与使用权需要创作者
+  确认。
+- Existentialism 子项目的干净安装报告 6 个依赖漏洞（1 low、5 high）；
+  未在迁移任务中擅自升级依赖。
+- Antigravity 扩展全路线、多浏览器、键盘、网络与 overlay QA 待执行。
+- 两个 exact-commit raw.githack preview 与 Draft PR #19 已通过基本浏览器
+  smoke；不得在没有单独授权时 merge。
+- 其他 Sites 迁移候选仍需逐站处理隐私、来源、授权和去重门槛。
+
+### Modified files
+
+- `README.md`
+- `TECH.md`
+- `HANDOFF.md`
+- `package.json`
+- `scripts/build-github-pages.mjs`
+- `scripts/sync-philosophy-site-mirrors.mjs`
+- `web/portfolio-audit.md`
+- `THE-LIVING-ATLAS/content-registry.js`
+- `THE-LIVING-ATLAS/TECH.md`
+- `THE-LIVING-ATLAS/HANDOFF.md`
+- `THE-LIVING-ATLAS/assets/thumb-sartre.png`
+- `THE-LIVING-ATLAS/assets/thumb-existentialism.png`
+- `sites/sartre-nausea-guide/`
+- `sites/existentialism-humanism-guide/`
+- `SARTRE-NAUSEA-GUIDE/`
+- `EXISTENTIALISM-HUMANISM-GUIDE/`
+
+### Commands and results
+
+- Site-local install, lint, static export and 3/3 exported-HTML tests: Passed
+  for both sites.
+- `npm run sync:philosophy-sites`: Passed.
+- `node --test tests/*.test.mjs`: expectedly failed before the root Worker
+  artifact existed; the two renderer tests require `npm run build` first.
+- `npm test`: Passed — root build and 21/21 tests.
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed — 461 local references across 56 HTML/CSS
+  files.
+- `npm run lint`: Passed — 0 errors and 24 pre-existing warnings outside this
+  batch.
+- Portable-mirror local network smoke: Passed — 两站页面、脚本、样式与图片
+  均从各自大写子目录加载，未再出现 root-path favicon / chestnut 404。
+- `git diff --check`: Passed.
+
+### Git state
+
+- Dedicated worktree: `/private/tmp/My-Website-sites-six-stage`
+- Branch: `codex/sites-six-stage-import`
+- Starting commit: `2d36674`
+- Implementation commit: `2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd`.
+- Sartre exact preview:
+  <https://raw.githack.com/TSRat/My-Website/2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd/SARTRE-NAUSEA-GUIDE/index.html>.
+- Existentialism exact preview:
+  <https://raw.githack.com/TSRat/My-Website/2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd/EXISTENTIALISM-HUMANISM-GUIDE/index.html>.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/19>.
+
+### Next step
+
+Hand Draft PR #19 and both immutable previews to Antigravity. Do not merge
+without explicit creator authorization.
 
 ## 2026-07-25: Melromarc Sisters maintainable reconstruction
 

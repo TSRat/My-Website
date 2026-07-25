@@ -346,6 +346,36 @@
 - Exact Chinese Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/zh.html#worlds>
 - Merge: creator authorized PR #14 on 2026-07-24; perform after the validation-policy configuration commit is pushed.
 
+## 2026-07-25: Register two migrated philosophy guides
+
+### Current target
+
+把两份已完成基础六阶段迁移的萨特互动导读加入 Living Atlas 的唯一网站
+注册表，不改变 Living Atlas 的视觉系统或开放 Worlds 定义。
+
+### Completed
+
+- 新增 `009 / SARTRE · NAUSEA GUIDE` 与
+  `008 / EXISTENTIALISM IS A HUMANISM` 两个 `published` 条目。
+- 链接分别使用 `../SARTRE-NAUSEA-GUIDE/` 与
+  `../EXISTENTIALISM-HUMANISM-GUIDE/`。
+- 缩略图来自实际迁移镜像的 1440 × 900 浏览器首屏，不使用占位图。
+- Latest 新增“两份萨特互动导读完成迁移”记录。
+- 保留 Worlds 的含混性、现有站点编号和注册表驱动的自动计数。
+
+### Modified files
+
+- `sites/living-atlas/content-registry.js`
+- `sites/living-atlas/assets/thumb-sartre.png`
+- `sites/living-atlas/assets/thumb-existentialism.png`
+- `sites/living-atlas/TECH.md`
+- `sites/living-atlas/HANDOFF.md`
+
+### Verification
+
+- 根迁移 handoff 记录 targeted test、Pages build / validation 与浏览器 smoke。
+- Antigravity 扩展 Living Atlas 列表、搜索、双语与视觉 QA：Pending。
+
 ## 2026-07-25 · Parent archive navigation
 
 - Added `Website Archive` / `网站总入口` links to the English and Chinese
@@ -360,5 +390,5 @@
   `77eb3c3a2e3d2a4e344b8536b3ebaf44e45626d4`.
 - Exact English preview:
   <https://raw.githack.com/TSRat/My-Website/77eb3c3a2e3d2a4e344b8536b3ebaf44e45626d4/THE-LIVING-ATLAS/index.html>.
-- Draft PR: <https://github.com/TSRat/My-Website/pull/22>; not merged.
+- PR: <https://github.com/TSRat/My-Website/pull/22>; merged.
 - Extended QA remains with Antigravity.

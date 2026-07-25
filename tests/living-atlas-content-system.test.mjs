@@ -22,7 +22,7 @@ const readAtlasPage = (name) =>
 test("Living Atlas registry exposes only valid published sites", () => {
   const sites = getPublishedSites(livingAtlasContent);
 
-  assert.equal(sites.length, 7);
+  assert.equal(sites.length, 9);
   assert.equal(new Set(sites.map((site) => site.id)).size, sites.length);
   assert.equal(new Set(sites.map((site) => site.number)).size, sites.length);
 

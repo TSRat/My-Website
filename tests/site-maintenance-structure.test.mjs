@@ -20,23 +20,25 @@ const pathExists = async (path) => {
 test("all public websites use the shared maintenance package contract", async () => {
   const projects = await loadSiteProjects();
 
-  assert.equal(projects.length, 8);
+  assert.equal(projects.length, 10);
   assert.deepEqual(
     projects.map(({ id }) => id),
     [
       "enheduanna",
+      "existentialism-humanism-guide",
       "hildegard",
       "hypatia",
       "ivory-archive",
       "living-atlas",
       "malty-melty-childhood",
       "melromarc-sisters",
+      "sartre-nausea-guide",
       "zhangyong-portrait",
     ],
   );
   assert.equal(
     projects.filter(({ build }) => build.mirror).length,
-    7,
+    9,
   );
   assert.equal(
     projects.filter(({ source }) => source.mode === "vinext-dual-renderer")
@@ -52,7 +54,7 @@ test("all public websites use the shared maintenance package contract", async ()
       `${project.id} hub card is missing an image cover`,
     );
     const coverSource =
-      project.source.mode === "vite-static"
+      ["vite-static", "next-static"].includes(project.source.mode)
         ? join(project.packageRoot, "public", project.hub.cover)
         : join(project.packageRoot, project.hub.cover);
     assert.equal(

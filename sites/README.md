@@ -17,7 +17,8 @@ sites/<site-id>/
 
 The package layout is uniform; the renderer is intentionally not. Static
 editorial sites keep readable HTML/CSS/JavaScript, React sites use Vite, and
-IVORY keeps its Vinext route adapters plus generated Pages renderer.
+the philosophy guides use Next.js static export. IVORY keeps its Vinext route
+adapters plus generated Pages renderer.
 
 Public uppercase directories such as `HYPATIA/`, `ZHANGYONG-PORTRAIT/` and
 `MALTY-MELTY-CHILDHOOD/` are deploy

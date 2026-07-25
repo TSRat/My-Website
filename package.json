@@ -7,6 +7,7 @@
   },
   "scripts": {
     "build:pages": "node scripts/build-github-pages.mjs",
+    "sync:philosophy-sites": "node scripts/sync-philosophy-site-mirrors.mjs",
     "validate:pages": "node scripts/validate-pages-assets.mjs",
     "validate:sites": "node scripts/validate-site-structure.mjs",
     "build:sites": "node scripts/build-site.mjs --all",
@@ -26,13 +27,17 @@
     "build:zhangyong": "node scripts/build-site.mjs zhangyong-portrait",
     "dev:two-swans": "vite sites/malty-melty-childhood",
     "build:two-swans": "node scripts/build-site.mjs malty-melty-childhood",
+    "dev:sartre-nausea": "npm --prefix sites/sartre-nausea-guide run dev",
+    "build:sartre-nausea": "node scripts/build-site.mjs sartre-nausea-guide",
+    "dev:existentialism-humanism": "npm --prefix sites/existentialism-humanism-guide run dev",
+    "build:existentialism-humanism": "node scripts/build-site.mjs existentialism-humanism-guide",
     "install:ci": "bash scripts/install-ci.sh",
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vite",
     "build": "bash scripts/build-verified.sh",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "test": "npm run build && node --test tests/*.test.mjs",
     "validate:artifact": "bash scripts/validate-artifact.sh",
-    "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .site-build --ignore-pattern docs --ignore-pattern IVORY-ARCHIVE --ignore-pattern ENHEDUANNA --ignore-pattern HILDEGARD --ignore-pattern HYPATIA --ignore-pattern MELROMARC-SISTERS --ignore-pattern THE-LIVING-ATLAS --ignore-pattern ZHANGYONG-PORTRAIT --ignore-pattern MALTY-MELTY-CHILDHOOD --ignore-pattern briefings",
+    "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .site-build --ignore-pattern docs --ignore-pattern IVORY-ARCHIVE --ignore-pattern ENHEDUANNA --ignore-pattern HILDEGARD --ignore-pattern HYPATIA --ignore-pattern MELROMARC-SISTERS --ignore-pattern THE-LIVING-ATLAS --ignore-pattern ZHANGYONG-PORTRAIT --ignore-pattern MALTY-MELTY-CHILDHOOD --ignore-pattern SARTRE-NAUSEA-GUIDE --ignore-pattern EXISTENTIALISM-HUMANISM-GUIDE --ignore-pattern sites/sartre-nausea-guide --ignore-pattern sites/existentialism-humanism-guide --ignore-pattern briefings",
     "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate"
   },
   "dependencies": {

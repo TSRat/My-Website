@@ -77,6 +77,37 @@ export const livingAtlasContent = {
   ],
   sites: [
     {
+      id: "sartre-nausea-guide",
+      number: "009",
+      status: "published",
+      title: { en: "SARTRE · NAUSEA GUIDE", zh: "《恶心》入门导读" },
+      series: { en: "Interactive reading guide", zh: "互动阅读导览" },
+      href: "../SARTRE-NAUSEA-GUIDE/",
+      thumbnail: "assets/thumb-sartre.png",
+      thumbnailAlt: {
+        en: "Sartre Nausea Guide website preview",
+        zh: "《恶心》入门导读网站预览",
+      },
+      updatedAt: "2026-07-25",
+    },
+    {
+      id: "existentialism-humanism-guide",
+      number: "008",
+      status: "published",
+      title: {
+        en: "EXISTENTIALISM IS A HUMANISM",
+        zh: "《存在主义是一种人道主义》导读",
+      },
+      series: { en: "Interactive argument map", zh: "互动论证地图" },
+      href: "../EXISTENTIALISM-HUMANISM-GUIDE/",
+      thumbnail: "assets/thumb-existentialism.png",
+      thumbnailAlt: {
+        en: "Existentialism Is a Humanism Guide website preview",
+        zh: "《存在主义是一种人道主义》导读网站预览",
+      },
+      updatedAt: "2026-07-25",
+    },
+    {
       id: "zhangyong-portrait",
       number: "007",
       status: "published",
@@ -182,6 +213,15 @@ export const livingAtlasContent = {
     },
   ],
   updates: [
+    {
+      id: "philosophy-guides-migrated",
+      date: "2026-07-25",
+      title: {
+        en: "Two interactive Sartre guides migrated",
+        zh: "两份萨特互动导读完成迁移",
+      },
+      href: "../SARTRE-NAUSEA-GUIDE/",
+    },
     {
       id: "two-sites-static-migration",
       date: "2026-07-25",
