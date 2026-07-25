@@ -32,7 +32,7 @@ copies only the contracts its tier needs and preserves its own visual system.
 
 | Order | Batch | Starter adoption | Gate before implementation |
 | --- | --- | --- | --- |
-| 1 | Sartre + Existentialism | Full source recovery, static export, theme variables, representative frames, provider-neutral events, exact-commit preview | Complete current branch smoke QA and Draft PR |
+| 1 | Sartre + Existentialism | Full source recovery, static export, theme variables, representative frames, provider-neutral events, exact-commit preview | Implemented in Draft PR #19; Antigravity extended QA pending |
 | 2 | IVORY ARCHIVE | Manifest, provider-neutral events, Data entry, renderer parity and Antigravity screenshot QA | Implemented and merged in PR #15 |
 | 3 | Hypatia + Hildegard | Manifest, stable IDs, Data entry, source/citation events and Antigravity editorial browser checks | Implemented and merged in PR #16 |
 | 4 | Enheduanna | Tier A source, Data entry and repeatable mirror build | Implemented and merged in PR #17 |
@@ -217,9 +217,9 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Target architecture:** Keep a self-contained static interactive guide; do not add a server, database, account, or analytics provider.
 - **Shared-core adoption:** Static export/mirror contract, skip/focus/motion rules, semantic tabs, provider-neutral events, exact-commit preview, and section-based visual QA.
 - **Site-specific theme:** Preserve the field-note identity, paper/burgundy/charcoal palette, text hierarchy, map/evidence composition, and chestnut-root imagery.
-- **Migration status:** Source and Figma migration implemented on `codex/sites-six-stage-import`; exact-commit preview and Draft PR pending.
+- **Migration status:** Source and Figma migration implemented on `codex/sites-six-stage-import`; immutable preview smoke passed in Draft PR #19.
 - **Figma URL:** [Portfolio design system · Sartre frame](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=33-32).
-- **Preview / PR URL:** Pending the exact review commit; use full-SHA raw.githack only after the committed mirror is pushed.
+- **Preview / PR URL:** [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd/SARTRE-NAUSEA-GUIDE/index.html); [Draft PR #19](https://github.com/TSRat/My-Website/pull/19).
 - **Remaining risks:** The chestnut-root image’s source/license still needs creator confirmation; comprehensive keyboard, persistence, multi-browser, and overlay review remains Antigravity QA.
 
 ## Existentialism / 《存在主义是一种人道主义》导读
@@ -245,9 +245,9 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Target architecture:** Keep a minimal static editorial application with local-only interaction state and native disclosure controls.
 - **Shared-core adoption:** Static export/mirror contract, skip/focus/motion rules, provider-neutral events, exact-commit preview, and section-based visual QA.
 - **Site-specific theme:** Preserve the black/red/ivory publication composition, question-mark diagram, chapter rhythm, and argumentative voice.
-- **Migration status:** Source and Figma migration implemented on `codex/sites-six-stage-import`; exact-commit preview and Draft PR pending.
+- **Migration status:** Source and Figma migration implemented on `codex/sites-six-stage-import`; immutable preview smoke passed in Draft PR #19.
 - **Figma URL:** [Portfolio design system · Existentialism frame](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=33-73).
-- **Preview / PR URL:** Pending the exact review commit; use full-SHA raw.githack only after the committed mirror is pushed.
+- **Preview / PR URL:** [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd/EXISTENTIALISM-HUMANISM-GUIDE/index.html); [Draft PR #19](https://github.com/TSRat/My-Website/pull/19).
 - **Remaining risks:** The site currently lacks an explicit source list for historical/interpretive claims; comprehensive responsive, keyboard, console/network, and overlay review remains Antigravity QA.
 
 ## Melromarc Sisters

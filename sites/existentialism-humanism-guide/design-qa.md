@@ -18,8 +18,8 @@
 
 ## Codex checks
 
-Status: `Codex basic smoke passed — Antigravity extended QA and exact-commit
-preview verification remain pending until push`.
+Status: `Codex local and immutable-preview basic smoke passed — Antigravity
+extended QA remains pending`.
 
 Engineering preflight passed:
 
@@ -60,5 +60,6 @@ Status: `Pending`.
 
 ## Preview
 
-Exact-commit raw.githack preview URL will be added after the branch is pushed.
-A branch-name preview is not accepted as final evidence.
+[Exact-commit raw.githack preview](https://raw.githack.com/TSRat/My-Website/2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd/EXISTENTIALISM-HUMANISM-GUIDE/index.html)
+was verified at desktop and 390 × 844 mobile. Title, relative assets, horizontal
+containment, console, and the dilemma button's `aria-pressed` state passed.

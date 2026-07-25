@@ -12,7 +12,7 @@ Migrate the imported Sartre *Nausea* guide into the portfolio's six-stage websit
 | 2. Visual exploration | Preserved | Existing Sites page remains the approved visual baseline |
 | 3. Figma design system | Documented | Editable theme tokens, desktop/mobile screens, and analytics card in node `33:32` |
 | 4. Interactive prototype + design QA | Basic smoke passed | Desktop side-by-side, mobile containment, assets, console, and representative tab interaction checked; Antigravity pending |
-| 5. Production engineering + preview | Integrated | Static mirror and root Pages build are integrated; exact-commit preview URL is added after push |
+| 5. Production engineering + preview | Delivered for review | Static mirror, root Pages build, immutable preview, and Draft PR #19 are verified |
 | 6. Data / analytics | Specified | See provider-neutral `ANALYTICS.md`; no provider installed |
 
 ## Completed
@@ -34,7 +34,6 @@ Migrate the imported Sartre *Nausea* guide into the portfolio's six-stage websit
 
 ## Remaining
 
-- Add and verify the exact-commit unmerged preview after push.
 - Complete extended Antigravity route, state, keyboard, network, and visual QA.
 - Confirm the source and usage rights for `public/chestnut-root.png`, favicon, and decorative assets.
 
@@ -85,10 +84,11 @@ Migrate the imported Sartre *Nausea* guide into the portfolio's six-stage websit
 
 - Branch: `codex/sites-six-stage-import`
 - Starting commit: `2d36674`
-- Commit, push, PR, and final exact-commit preview are completed by the root
-  handoff after repository-wide validation.
+- Implementation commit: `2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd`.
+- Exact preview:
+  `https://raw.githack.com/TSRat/My-Website/2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd/SARTRE-NAUSEA-GUIDE/index.html`.
+- Draft PR: `https://github.com/TSRat/My-Website/pull/19`.
 
 ## Next step
 
-Run repository-wide validation, push the dedicated branch, verify the immutable
-preview, and hand the PR to Antigravity for extended QA.
+Hand Draft PR #19 and its immutable preview to Antigravity for extended QA.

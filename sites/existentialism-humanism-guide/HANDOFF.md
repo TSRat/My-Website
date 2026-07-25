@@ -29,7 +29,6 @@
 
 ## Unfinished
 
-- 推送后补 exact-commit unmerged preview URL 并再次 smoke check。
 - 需要 Antigravity 扩展视觉、响应式、键盘、网络和对比 QA。
 
 ## Known issues
@@ -75,9 +74,12 @@
 
 - Branch: `codex/sites-six-stage-import`
 - Base commit: `2d36674`
-- Commit、push、PR 与 final preview 由根 handoff 在验证后填写。
+- Implementation commit:
+  `2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd`.
+- Exact preview:
+  `https://raw.githack.com/TSRat/My-Website/2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd/EXISTENTIALISM-HUMANISM-GUIDE/index.html`.
+- Draft PR: `https://github.com/TSRat/My-Website/pull/19`.
 
 ## Next step
 
-完成根级验证、推送 dedicated branch、检查 immutable preview，并交给
-Antigravity 做扩展 QA。
+把 Draft PR #19 与 immutable preview 交给 Antigravity 做扩展 QA。

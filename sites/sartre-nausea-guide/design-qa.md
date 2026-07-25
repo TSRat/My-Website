@@ -2,8 +2,8 @@
 
 ## Status
 
-**Codex basic smoke passed — Antigravity extended QA and the exact unmerged
-preview URL remain pending until the branch is pushed.**
+**Codex local and immutable-preview basic smoke passed — Antigravity extended
+QA remains pending.**
 
 ## Baseline
 
@@ -50,5 +50,6 @@ The extended reviewer should still cover:
 
 ## Preview
 
-Exact-commit raw.githack preview will be added after the branch is pushed. A
-branch-name preview is not accepted as final evidence.
+[Exact-commit raw.githack preview](https://raw.githack.com/TSRat/My-Website/2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd/SARTRE-NAUSEA-GUIDE/index.html)
+was verified at desktop and 390 × 844 mobile. The title, primary image, relative
+assets, horizontal containment, console, and representative tab state passed.

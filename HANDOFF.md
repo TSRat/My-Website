@@ -885,8 +885,8 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 - Existentialism 子项目的干净安装报告 6 个依赖漏洞（1 low、5 high）；
   未在迁移任务中擅自升级依赖。
 - Antigravity 扩展全路线、多浏览器、键盘、网络与 overlay QA 待执行。
-- Exact-commit raw.githack preview、commit、push 和 Draft PR 在根验证完成后
-  补充。
+- 两个 exact-commit raw.githack preview 与 Draft PR #19 已通过基本浏览器
+  smoke；不得在没有单独授权时 merge。
 - 其他 Sites 迁移候选仍需逐站处理隐私、来源、授权和去重门槛。
 
 ### Modified files
@@ -928,13 +928,18 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 - Dedicated worktree: `/private/tmp/My-Website-sites-six-stage`
 - Branch: `codex/sites-six-stage-import`
 - Starting commit: `2d36674`
-- Latest commit / exact previews / Draft PR: pending final validation and push.
+- Implementation commit: `2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd`.
+- Sartre exact preview:
+  <https://raw.githack.com/TSRat/My-Website/2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd/SARTRE-NAUSEA-GUIDE/index.html>.
+- Existentialism exact preview:
+  <https://raw.githack.com/TSRat/My-Website/2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd/EXISTENTIALISM-HUMANISM-GUIDE/index.html>.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/19>.
 
 ### Next step
 
-Integrate current `origin/main`, run root Pages and targeted checks, push the
-dedicated branch, verify immutable previews, and hand the Draft PR to
-Antigravity. Do not merge without explicit creator authorization.
+Hand Draft PR #19 and both immutable previews to Antigravity. Do not merge
+without explicit creator authorization.
+
 ## 2026-07-25: Melromarc Sisters maintainable reconstruction
 
 ### Current target
