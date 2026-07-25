@@ -78,10 +78,9 @@
 
 - Branch: `codex/sites-six-stage-import`
 - Base commit: `2d36674`
-- Implementation commit:
-  `2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd`.
+- Final integration commit: `a0b7bcd`.
 - Exact preview:
-  `https://raw.githack.com/TSRat/My-Website/2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd/EXISTENTIALISM-HUMANISM-GUIDE/index.html`.
+  `https://raw.githack.com/TSRat/My-Website/a0b7bcd/EXISTENTIALISM-HUMANISM-GUIDE/index.html`.
 - Draft PR: `https://github.com/TSRat/My-Website/pull/19`.
 
 ## Next step

@@ -1,5 +1,52 @@
 # Repository handoff
 
+## 2026-07-25: Philosophy guides integrated into the ten-site build
+
+### Current target
+
+Resolve PR #19 against the merged maintenance-platform work, make the Sartre
+and Existentialism guides first-class `sites/<site-id>/` packages, and merge all
+authorized website migration PRs without touching the user's active worktree.
+
+### Completed
+
+- Added shared `site.config.json` and deployable manifests for both philosophy
+  guides.
+- Added the `next-static` adapter to the shared site discovery and build
+  control plane.
+- Replaced the old hard-coded Pages entries with the ten-site config registry.
+- Registered both guides in the Living Atlas with unique archive numbers and
+  preserved the entries added by PR #21.
+- Rebuilt all nine deploy mirrors and the complete Pages artifact.
+
+### Verification
+
+- `npm run validate:sites`: passed — 10/10 maintenance packages.
+- `npm run build:sites`: passed — nine deploy mirrors rebuilt.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed — 489 local references across 63 HTML/CSS files.
+- `node --test tests/*.test.mjs`: passed — 26/26.
+- Both project-local `npm test`: passed — 3/3 each.
+- Root and both project-local lint commands: passed with 0 errors; root retains
+  24 existing generated-bundle / `<img>` warnings.
+- `git diff --check`: passed.
+- Browser basic smoke on the final exact-commit previews: pending after push.
+- Antigravity extended QA: pending.
+
+### Delivery state
+
+- Branch: `codex/sites-six-stage-import`
+- Integration commit: `a0b7bcd`
+- Pull Request: <https://github.com/TSRat/My-Website/pull/19>
+- PR #21: merged as `c0de306a377c610af73c60ac733b30396cfab504`.
+- Original user worktree: untouched.
+
+### Remaining
+
+- Push the review commit, open both exact-commit previews for a basic smoke
+  check, mark PR #19 ready, and merge it.
+- Asset provenance and extended Antigravity review remain creator follow-ups.
+
 ## 2026-07-25: Six-site maintenance structure unification
 
 ### Current target

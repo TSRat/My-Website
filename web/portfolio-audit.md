@@ -222,7 +222,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Site-specific theme:** Preserve the field-note identity, paper/burgundy/charcoal palette, text hierarchy, map/evidence composition, and chestnut-root imagery.
 - **Migration status:** Source and Figma migration implemented on `codex/sites-six-stage-import`; immutable preview smoke passed in Draft PR #19.
 - **Figma URL:** [Portfolio design system · Sartre frame](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=33-32).
-- **Preview / PR URL:** [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd/SARTRE-NAUSEA-GUIDE/index.html); [Draft PR #19](https://github.com/TSRat/My-Website/pull/19).
+- **Preview / PR URL:** [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/a0b7bcd/SARTRE-NAUSEA-GUIDE/index.html); [PR #19](https://github.com/TSRat/My-Website/pull/19).
 - **Remaining risks:** The chestnut-root image’s source/license still needs creator confirmation; comprehensive keyboard, persistence, multi-browser, and overlay review remains Antigravity QA.
 
 ## Existentialism / 《存在主义是一种人道主义》导读
@@ -250,7 +250,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Site-specific theme:** Preserve the black/red/ivory publication composition, question-mark diagram, chapter rhythm, and argumentative voice.
 - **Migration status:** Source and Figma migration implemented on `codex/sites-six-stage-import`; immutable preview smoke passed in Draft PR #19.
 - **Figma URL:** [Portfolio design system · Existentialism frame](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=33-73).
-- **Preview / PR URL:** [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/2ecd4325f72a61d5d6d3ba5a1833809cdd3a6cdd/EXISTENTIALISM-HUMANISM-GUIDE/index.html); [Draft PR #19](https://github.com/TSRat/My-Website/pull/19).
+- **Preview / PR URL:** [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/a0b7bcd/EXISTENTIALISM-HUMANISM-GUIDE/index.html); [PR #19](https://github.com/TSRat/My-Website/pull/19).
 - **Remaining risks:** The site currently lacks an explicit source list for historical/interpretive claims; comprehensive responsive, keyboard, console/network, and overlay review remains Antigravity QA.
 
 ## Melromarc Sisters
