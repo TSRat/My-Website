@@ -41,8 +41,13 @@
 
 ### Delivery state
 
-- Dedicated branch: created.
-- Commit / push / Draft PR / exact Preview: pending final batch delivery.
+- Dedicated branch: `codex/remaining-sites-six-stage-migration`.
+- Implementation commit: `2da67ce`.
+- Sites binding commit: `58f8df0`.
+- Push: completed.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/15>.
+- Owner-only Preview: <https://tsrat-ivory-migration-preview.tsrat.chatgpt.site>.
+- Preview deployment: succeeded; public access requires creator approval.
 - Merge: not authorized and not performed.
 
 ## Current goal

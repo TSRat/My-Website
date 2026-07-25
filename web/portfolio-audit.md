@@ -15,7 +15,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 | Site | Classification | Interaction tier | Migration status | Primary blocker |
 | --- | --- | --- | --- | --- |
 | The Living Atlas | REFACTOR | B — Interactive | Content system merged in PR #13; Data / starter and ambiguity correction merged in PR #14 | Shared runtime publication needs explicit Pages build-map authorization |
-| IVORY ARCHIVE | PRESERVE | B — Interactive | Six-stage migration implemented; Draft PR / Preview pending | Antigravity extended QA pending |
+| IVORY ARCHIVE | PRESERVE | B — Interactive | Six-stage migration implemented in Draft PR #15 | Public Preview access and Antigravity extended QA pending |
 | Enheduanna | REFACTOR | A — Editorial | Audited; implementation blocked | No reproducible source-to-mirror build; tablet overflow exists in the deployed mirror |
 | Hildegard | PRESERVE | A — Editorial | Audited; no implementation migration started | Long-page visual comparison must use deterministic sections |
 | Hypatia | REFACTOR | A — Editorial | Audited; no implementation migration started | Historical unreferenced assets and responsive cleanup need a scoped batch |
@@ -101,9 +101,9 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Target architecture:** Keep the structured briefing source and both renderers; add parity checks before shared-component refactors.
 - **Shared-core adoption:** Accessibility primitives, focus, filter/search state conventions, citations, image captions, event specification, and screenshot QA.
 - **Site-specific theme:** Preserve the newspaper rhythm, botanical restraint, burgundy rule system, archive numbering, and Chinese editorial voice.
-- **Migration status:** Six-stage preservation migration implemented on `codex/remaining-sites-six-stage-migration`; exact Preview and Draft PR are added at delivery.
+- **Migration status:** Six-stage preservation migration implemented on `codex/remaining-sites-six-stage-migration` in Draft PR #15.
 - **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).
-- **Preview / PR URL:** Local Pages desktop/mobile smoke passed; exact Preview and Draft PR pending delivery.
+- **Preview / PR URL:** [Owner-only Sites Preview](https://tsrat-ivory-migration-preview.tsrat.chatgpt.site); [Draft PR #15](https://github.com/TSRat/My-Website/pull/15). Deployment succeeded; public link access needs separate creator approval.
 - **Remaining risks:** The stale committed snapshot can mislead maintainers. The parity test covers content, assets, routes, and contracts, not pixel identity. Antigravity extended QA is pending.
 
 ## Enheduanna

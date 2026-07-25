@@ -93,8 +93,12 @@ review, and purpose. No KPI target is defined without real data.
 
 ## Review status
 
-- Codex basic gate: passed locally; final commit checks and exact Preview smoke
-  are recorded in the PR handoff.
+- Draft PR: [#15](https://github.com/TSRat/My-Website/pull/15).
+- Sites Preview: <https://tsrat-ivory-migration-preview.tsrat.chatgpt.site>.
+- Preview access: owner-only; deployment succeeded, but public link access needs
+  separate creator approval.
+- Codex basic gate: passed locally. The deployed URL reaches the Sites sign-in
+  gate, so the page behind that gate is not claimed as browser-verified.
 - Antigravity QA: pending.
 - Intentional visible difference: the additive Data navigation item and Data
   section only.

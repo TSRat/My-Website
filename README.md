@@ -18,7 +18,7 @@
 | 项目 | 用途 | 主要维护位置 | GitHub Pages URL | 审核分级 | 迁移 / 审查状态 |
 | --- | --- | --- | --- | --- | --- |
 | The Living Atlas | 总入口主站，一个人的开放档案馆 | `THE-LIVING-ATLAS/` | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) | REFACTOR | 内容系统通过 [PR #13](https://github.com/TSRat/My-Website/pull/13) 合并；Data / starter 与 Worlds 含混性修正通过 [PR #14](https://github.com/TSRat/My-Website/pull/14) 合并 |
-| IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `app/briefings.ts`、`app/`、`public/`、`scripts/build-github-pages.mjs` | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) | PRESERVE | 六阶段迁移已实现：双渲染 parity、manifest、Data 入口与 provider-neutral events；Draft PR / Preview 待本批交付 |
+| IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `app/briefings.ts`、`app/`、`public/`、`scripts/build-github-pages.mjs` | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) | PRESERVE | 六阶段迁移已实现于 [Draft PR #15](https://github.com/TSRat/My-Website/pull/15)：双渲染 parity、manifest、Data 入口与 provider-neutral events；Sites Preview 当前为 owner-only |
 | Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；当前 Pages 输入镜像在 `ENHEDUANNA/` | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) | REFACTOR | 已审计；缺少可重复源码 → 镜像构建，实施阻塞 |
 | Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `HILDEGARD/` | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 已审计；暂未开始实现迁移 |
 | Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `HYPATIA/` | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) | REFACTOR | 已审计；等待独立的静态资产 / 响应式批次 |
