@@ -153,3 +153,12 @@ Provide the original scaffold or explicitly authorize reconstruction. See
   horizontal overflow; 1024-pixel viewport confirms the pre-existing 35-pixel
   horizontal overflow.
 - Source rebuild and renderer equivalence: Not run because no command exists.
+
+### Delivery
+
+- Branch: `codex/enheduanna-six-stage-readiness`.
+- Readiness commit: `a755cc3d84ab09a43e595e2723f2e9a8312fd0a5`.
+- [Exact-commit unchanged mirror baseline](https://raw.githack.com/TSRat/My-Website/a755cc3d84ab09a43e595e2723f2e9a8312fd0a5/ENHEDUANNA/index.html).
+- [Draft PR #17](https://github.com/TSRat/My-Website/pull/17); not merged.
+- The remote baseline opened successfully with the expected compiled script and
+  0 broken images. It is not labeled as a migrated preview.

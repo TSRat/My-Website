@@ -60,6 +60,10 @@ Acceptance requires one command that builds into a temporary directory,
 documented asset/base behavior, source-to-output smoke tests, and a deliberate
 mirror update reviewed in a Draft PR.
 
+The current review package is [Draft PR #17](https://github.com/TSRat/My-Website/pull/17).
+Its [exact-commit page](https://raw.githack.com/TSRat/My-Website/a755cc3d84ab09a43e595e2723f2e9a8312fd0a5/ENHEDUANNA/index.html)
+is the unchanged mirror baseline, not a migrated production preview.
+
 ## 6. Data / analytics
 
 The proposed contract is stored in `site-manifest.proposed.json` and is not
