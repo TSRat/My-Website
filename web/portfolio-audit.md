@@ -131,7 +131,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Site-specific theme:** Preserve the spine, paper/cobalt/red/gold tension, archaeological dossier structure, dark transitions, and evidence labels.
 - **Migration status:** All six stages are implemented at review depth; Stage 5 now has a reproducible build and reviewable mirror, and Stage 6 has a provider-none Data entry without invented metrics.
 - **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
-- **Preview / PR URL:** [Exact-commit unchanged mirror baseline](https://raw.githack.com/TSRat/My-Website/a755cc3d84ab09a43e595e2723f2e9a8312fd0a5/ENHEDUANNA/index.html); [Draft PR #17](https://github.com/TSRat/My-Website/pull/17).
+- **Preview / PR URL:** [Exact-commit reconstructed preview](https://raw.githack.com/TSRat/My-Website/28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb/ENHEDUANNA/index.html); [Draft PR #17](https://github.com/TSRat/My-Website/pull/17).
 - **Remaining risks:** Antigravity still needs the extended deterministic-section visual comparison; chapter-number ordering still needs creator confirmation.
 
 ## Hildegard

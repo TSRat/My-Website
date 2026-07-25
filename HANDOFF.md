@@ -727,5 +727,6 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 
 - Branch: `codex/enheduanna-six-stage-readiness`.
 - Draft PR: <https://github.com/TSRat/My-Website/pull/17>.
-- Exact-commit Preview: add after push.
+- Implementation commit: `28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb`.
+- Exact-commit Preview: <https://raw.githack.com/TSRat/My-Website/28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb/ENHEDUANNA/index.html>.
 - Merge: not authorized and not performed.

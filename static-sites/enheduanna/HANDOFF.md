@@ -71,5 +71,6 @@ npm run validate:pages
 
 - Branch: `codex/enheduanna-six-stage-readiness`
 - PR: [#17](https://github.com/TSRat/My-Website/pull/17)
-- Exact-commit Preview: add after the implementation commit is pushed.
+- Implementation commit: `28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb`.
+- Exact-commit Preview: <https://raw.githack.com/TSRat/My-Website/28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb/ENHEDUANNA/index.html>.
 - Merge: not authorized and not performed.
