@@ -56,7 +56,12 @@ The Living Atlas 可复用的站点包结构，同时保留各站点身份、适
 
 - Branch: `codex/unify-site-maintenance`
 - Base: `636c198`
-- Commit / push / Pull Request / exact-commit Preview: pending final diff review.
+- Implementation commit: `5fe5e06`
+- Push: completed.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/20>
+- Exact-commit Preview:
+  <https://raw.githack.com/TSRat/My-Website/5fe5e06/>
+- Preview status: hub and all six sites passed remote basic browser smoke.
 - Merge: not authorized and not performed.
 
 ### Remaining
