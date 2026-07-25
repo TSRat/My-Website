@@ -30,7 +30,13 @@ npm run lint
 
 ## GitHub Pages subpath
 
-The site uses `output: "export"` and `trailingSlash: true`. It accepts `SITE_BASE_PATH` at build time; `next.config.ts` applies it as the router base path and exposes the normalized value as `NEXT_PUBLIC_SITE_BASE_PATH` for public assets. `SITE_ASSET_PREFIX` separately controls generated `_next` asset URLs and defaults to the base path. Layout metadata and the chestnut-root image are generated with the base-path prefix.
+The site uses `output: "export"` and `trailingSlash: true`. It accepts
+`SITE_BASE_PATH` at build time; `next.config.ts` applies it as the router base
+path. `SITE_ASSET_PREFIX` separately controls generated `_next` asset URLs and
+defaults to the base path. When `SITE_ASSET_PREFIX=.` is requested for the
+portable mirror, `NEXT_PUBLIC_SITE_BASE_PATH` is also set to `.` so metadata
+and the chestnut-root image are compiled as relative resources rather than
+issuing duplicate requests against the preview host root.
 
 Example:
 

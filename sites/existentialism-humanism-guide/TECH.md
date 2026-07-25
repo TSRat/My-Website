@@ -29,7 +29,9 @@
 - 静态导出
 - 将 favicon 指向同一子路径
 
-根目录同步脚本使用 `SITE_BASE_PATH=/ SITE_ASSET_PREFIX=.` 生成可移植镜像：
+根目录同步脚本使用 `SITE_BASE_PATH=/ SITE_ASSET_PREFIX=.` 生成可移植镜像。
+此模式同时把 `NEXT_PUBLIC_SITE_BASE_PATH` 设为 `.`，使 favicon 和 Next
+hydration metadata 都使用相对资源路径，不会额外请求预览域名根目录：
 
 ```text
 EXISTENTIALISM-HUMANISM-GUIDE/

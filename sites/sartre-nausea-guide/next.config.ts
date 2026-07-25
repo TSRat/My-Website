@@ -17,6 +17,8 @@ const assetPrefix =
       : requestedAssetPrefix === "."
         ? "."
         : `/${requestedAssetPrefix.replace(/^\/+|\/+$/g, "")}`;
+const publicAssetBasePath =
+  requestedAssetPrefix === "." ? "." : siteBasePath;
 const projectRoot = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
@@ -25,7 +27,7 @@ const nextConfig: NextConfig = {
   assetPrefix,
   trailingSlash: true,
   env: {
-    NEXT_PUBLIC_SITE_BASE_PATH: siteBasePath,
+    NEXT_PUBLIC_SITE_BASE_PATH: publicAssetBasePath,
   },
   images: { unoptimized: true },
   turbopack: {

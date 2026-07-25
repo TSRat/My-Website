@@ -8,7 +8,10 @@ const basePath =
   requestedBasePath === "/"
     ? ""
     : `/${requestedBasePath.replace(/^\/+|\/+$/g, "")}`;
-const assetPrefix = process.env.SITE_ASSET_PREFIX ?? basePath;
+const requestedAssetPrefix = process.env.SITE_ASSET_PREFIX;
+const assetPrefix = requestedAssetPrefix ?? basePath;
+const publicAssetBasePath =
+  requestedAssetPrefix === "." ? "." : basePath;
 const projectRoot = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
@@ -20,7 +23,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   env: {
-    NEXT_PUBLIC_SITE_BASE_PATH: basePath,
+    NEXT_PUBLIC_SITE_BASE_PATH: publicAssetBasePath,
   },
   turbopack: {
     root: projectRoot,

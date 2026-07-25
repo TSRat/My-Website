@@ -67,6 +67,10 @@
 - Browser smoke: Passed at 1440 × 900 and 390 × 844 for load, real source
   side-by-side, horizontal containment, local assets, representative dilemma
   state, and console output.
+- Portable-mirror network smoke: Passed after compiling favicon metadata with
+  `NEXT_PUBLIC_SITE_BASE_PATH=.`; the local server log contains only
+  `EXISTENTIALISM-HUMANISM-GUIDE/` resource requests and no root-path favicon
+  404.
 - Antigravity QA: Pending。
 - Root `npm run build:pages` / `validate:pages`: 由根 handoff 在 commit 前记录。
 

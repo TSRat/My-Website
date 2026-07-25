@@ -856,6 +856,8 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
   - `EXISTENTIALISM-HUMANISM-GUIDE/`
 - 新增 `npm run sync:philosophy-sites`，由真实源码构建镜像；生成目录不是
   手工维护来源。
+- 修正便携导出中的 public asset base：favicon、栗树根图片与 hydration
+  metadata 现在统一编译为相对路径，不再向预览域名根目录发出重复请求。
 - 更新 Pages 构建映射、README 权威项目表、TECH、portfolio audit 与
   Living Atlas 唯一网站注册表。
 - 用实际页面截图生成 Living Atlas 缩略图。
@@ -921,6 +923,8 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
   files.
 - `npm run lint`: Passed — 0 errors and 24 pre-existing warnings outside this
   batch.
+- Portable-mirror local network smoke: Passed — 两站页面、脚本、样式与图片
+  均从各自大写子目录加载，未再出现 root-path favicon / chestnut 404。
 - `git diff --check`: Passed.
 
 ### Git state

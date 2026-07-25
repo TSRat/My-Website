@@ -77,6 +77,10 @@ Migrate the imported Sartre *Nausea* guide into the portfolio's six-stage websit
 - Browser smoke — passed at 1440 × 900 and 390 × 844 for page load,
   representative tab interaction, local image loading, console output, and
   horizontal containment.
+- Portable-mirror network smoke — passed after compiling public assets with
+  `NEXT_PUBLIC_SITE_BASE_PATH=.`; the local server log contains only
+  `SARTRE-NAUSEA-GUIDE/` resource requests and no root-path favicon or
+  chestnut-image 404.
 - Visual comparison — passed for Codex basic smoke; evidence is
   `qa-comparison-desktop.png`. Antigravity extended QA remains pending.
 
