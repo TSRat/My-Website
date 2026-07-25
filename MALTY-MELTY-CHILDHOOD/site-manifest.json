@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "malty-melty-childhood",
+  "slug": "MALTY-MELTY-CHILDHOOD",
+  "title": "两只天鹅：Malty 与 Melty",
+  "status": "published",
+  "interactionTier": "B",
+  "classification": "REFACTOR",
+  "maintenanceRoot": "sites/malty-melty-childhood",
+  "publicPath": "/My-Website/MALTY-MELTY-CHILDHOOD/",
+  "figmaUrl": "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-76",
+  "analytics": {
+    "provider": "none",
+    "storage": "local-progress-only",
+    "identityCollection": "none"
+  }
+}

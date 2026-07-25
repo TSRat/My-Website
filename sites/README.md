@@ -19,7 +19,8 @@ The package layout is uniform; the renderer is intentionally not. Static
 editorial sites keep readable HTML/CSS/JavaScript, React sites use Vite, and
 IVORY keeps its Vinext route adapters plus generated Pages renderer.
 
-Public uppercase directories such as `HYPATIA/` and `ENHEDUANNA/` are deploy
+Public uppercase directories such as `HYPATIA/`, `ZHANGYONG-PORTRAIT/` and
+`MALTY-MELTY-CHILDHOOD/` are deploy
 mirrors. Edit the corresponding package under `sites/`, then run its
 `build:<site>` command or `npm run build:sites`. `app/` is the thin Vinext
 route adapter for `sites/ivory-archive/`; `public/` remains its framework-level

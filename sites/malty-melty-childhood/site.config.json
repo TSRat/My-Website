@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "malty-melty-childhood",
+  "title": "两只天鹅：Malty 与 Melty",
+  "slug": "MALTY-MELTY-CHILDHOOD",
+  "status": "published",
+  "interactionTier": "B",
+  "classification": "REFACTOR",
+  "maintenanceRoot": "sites/malty-melty-childhood",
+  "documents": ["CONTENT.md", "DESIGN.md", "TECH.md", "HANDOFF.md"],
+  "source": {
+    "mode": "direct-static",
+    "entry": "index.html",
+    "assets": ["assets"]
+  },
+  "build": {
+    "command": "npm run build:two-swans",
+    "staging": ".site-build/malty-melty-childhood",
+    "mirror": "MALTY-MELTY-CHILDHOOD",
+    "mirrorPolicy": "replace"
+  },
+  "publicPath": "/My-Website/MALTY-MELTY-CHILDHOOD/",
+  "manifest": "site-manifest.json",
+  "figmaUrl": "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-76",
+  "hub": {
+    "order": 7,
+    "className": "two-swans",
+    "cover": "assets/08-lakeside-dance.png",
+    "eyebrow": "MALTY & MELTY · VISUAL NOVEL",
+    "description": "从童年、决裂与流放，到第二次拥有彼此的十一章互动视觉小说。",
+    "metadata": [["章节", "11 章"], ["阅读状态", "仅本地保存"]]
+  }
+}

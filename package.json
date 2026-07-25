@@ -22,13 +22,17 @@
     "build:hypatia": "node scripts/build-site.mjs hypatia",
     "dev:melromarc": "vite --config sites/melromarc-sisters/vite.config.ts",
     "build:melromarc": "node scripts/build-site.mjs melromarc-sisters",
+    "dev:zhangyong": "vite sites/zhangyong-portrait",
+    "build:zhangyong": "node scripts/build-site.mjs zhangyong-portrait",
+    "dev:two-swans": "vite sites/malty-melty-childhood",
+    "build:two-swans": "node scripts/build-site.mjs malty-melty-childhood",
     "install:ci": "bash scripts/install-ci.sh",
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vite",
     "build": "bash scripts/build-verified.sh",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "test": "npm run build && node --test tests/*.test.mjs",
     "validate:artifact": "bash scripts/validate-artifact.sh",
-    "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .site-build --ignore-pattern docs --ignore-pattern IVORY-ARCHIVE --ignore-pattern ENHEDUANNA --ignore-pattern HILDEGARD --ignore-pattern HYPATIA --ignore-pattern MELROMARC-SISTERS --ignore-pattern THE-LIVING-ATLAS --ignore-pattern briefings",
+    "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .site-build --ignore-pattern docs --ignore-pattern IVORY-ARCHIVE --ignore-pattern ENHEDUANNA --ignore-pattern HILDEGARD --ignore-pattern HYPATIA --ignore-pattern MELROMARC-SISTERS --ignore-pattern THE-LIVING-ATLAS --ignore-pattern ZHANGYONG-PORTRAIT --ignore-pattern MALTY-MELTY-CHILDHOOD --ignore-pattern briefings",
     "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate"
   },
   "dependencies": {

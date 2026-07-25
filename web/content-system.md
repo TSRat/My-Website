@@ -3,7 +3,7 @@
 - Version: 2
 - Reference implementation: `sites/living-atlas/content-registry.js`, `sites/living-atlas/web-core.js`
 - Figma: [TSRat Content System · v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=18-2)
-- Applies to: all six site packages and future sites; runtime depth remains capability-specific
+- Applies to: all eight site packages and future sites; runtime depth remains capability-specific
 - Reusable starter: `web/templates/site-starter/`
 
 ## Purpose

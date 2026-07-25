@@ -61,7 +61,7 @@ export async function loadSiteProjects() {
 }
 
 async function validateSiteProjects(projects) {
-  assert(projects.length === 6, `Expected 6 site packages, found ${projects.length}`);
+  assert(projects.length === 8, `Expected 8 site packages, found ${projects.length}`);
 
   const ids = new Set();
   const slugs = new Set();

@@ -77,6 +77,37 @@ export const livingAtlasContent = {
   ],
   sites: [
     {
+      id: "zhangyong-portrait",
+      number: "007",
+      status: "published",
+      title: { en: "ZHANGYONG PORTRAIT", zh: "张勇的生活切片" },
+      series: { en: "Portrait in daily fragments", zh: "日常生活切片人物档案" },
+      href: "../ZHANGYONG-PORTRAIT/",
+      thumbnail: "../ZHANGYONG-PORTRAIT/assets/bawanglong.jpg",
+      thumbnailAlt: {
+        en: "Zhang Yong portrait website preview with the bird Bawanglong",
+        zh: "以小鸟霸王龙为画面的张勇人物档案网站预览",
+      },
+      updatedAt: "2026-07-25",
+    },
+    {
+      id: "malty-melty-childhood",
+      number: "006",
+      status: "published",
+      title: { en: "TWO SWANS", zh: "两只天鹅" },
+      series: {
+        en: "Malty & Melty visual novel",
+        zh: "Malty 与 Melty 互动视觉小说",
+      },
+      href: "../MALTY-MELTY-CHILDHOOD/",
+      thumbnail: "../MALTY-MELTY-CHILDHOOD/assets/08-lakeside-dance.png",
+      thumbnailAlt: {
+        en: "Two Swans visual novel lakeside scene",
+        zh: "两只天鹅视觉小说的湖边场景",
+      },
+      updatedAt: "2026-07-25",
+    },
+    {
       id: "hildegard",
       number: "005",
       status: "published",
@@ -151,6 +182,15 @@ export const livingAtlasContent = {
     },
   ],
   updates: [
+    {
+      id: "two-sites-static-migration",
+      date: "2026-07-25",
+      title: {
+        en: "Zhang Yong Portrait and Two Swans joined the archive",
+        zh: "张勇的生活切片与两只天鹅迁入开放档案馆",
+      },
+      href: "#sites",
+    },
     {
       id: "ivory-issue-10",
       date: "2026-07-23",

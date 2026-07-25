@@ -20,7 +20,7 @@ const pathExists = async (path) => {
 test("all public websites use the shared maintenance package contract", async () => {
   const projects = await loadSiteProjects();
 
-  assert.equal(projects.length, 6);
+  assert.equal(projects.length, 8);
   assert.deepEqual(
     projects.map(({ id }) => id),
     [
@@ -29,12 +29,14 @@ test("all public websites use the shared maintenance package contract", async ()
       "hypatia",
       "ivory-archive",
       "living-atlas",
+      "malty-melty-childhood",
       "melromarc-sisters",
+      "zhangyong-portrait",
     ],
   );
   assert.equal(
     projects.filter(({ build }) => build.mirror).length,
-    5,
+    7,
   );
   assert.equal(
     projects.filter(({ source }) => source.mode === "vinext-dual-renderer")
