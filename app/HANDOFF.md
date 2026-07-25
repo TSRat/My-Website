@@ -1,9 +1,49 @@
 # IVORY ARCHIVE handoff
 
-- Last updated: 2026-07-19
+- Last updated: 2026-07-25
 - Project: IVORY ARCHIVE
-- Current branch: `agent/document-and-validate-sites`
-- Latest relevant commit: `edcc2b7` — `Publish IVORY ARCHIVE issue 06 with editorial illustrations`
+- Current branch: `codex/remaining-sites-six-stage-migration`
+- Base commit: `2d36674` — `publish: IVORY ARCHIVE issue 11 for 2026-07-24`
+
+## 2026-07-25 six-stage migration
+
+### Current target
+
+在不改变 IVORY 编辑身份和内容立场的前提下，完成 Product / UX、视觉保护、Figma、交互、生产交付和 Data / Analytics 六阶段迁移。
+
+### Completed
+
+- 保留现有五则日刊、搜索、筛选、日期路由和双渲染结构。
+- 动态版与 Pages 版均加入 Data 入口与同一隐私边界。
+- 新增机器可读 manifest 和 provider-neutral analytics adapter。
+- 事件只覆盖页面、搜索长度区间、筛选、日刊打开和 Data 打开；无网络、cookie、持久存储、身份或原始搜索文本。
+- 新增内容 schema、图片、路由、隐私和 dynamic / Pages parity 测试。
+- Figma 新增可编辑桌面 / 移动 Data 状态与可复用组件，节点 `27:2`。
+- Codex 本地桌面与 390px 窄视口 smoke 通过；Antigravity extended QA pending。
+
+### Intentional visible difference
+
+仅新增 Header 中的 `Data` 导航项和一个延续象牙纸 / 酒红 / 森林绿语言的 Data 区块。
+
+### Modified files
+
+- `app/layout.tsx`
+- `app/site-shell.tsx`
+- `app/page.tsx`
+- `app/archive-explorer.tsx`
+- `app/globals.css`
+- `public/ivory-site-manifest.json`
+- `public/ivory-analytics.js`
+- `scripts/build-github-pages.mjs`
+- `scripts/github-pages-data.css`
+- `tests/ivory-renderer-parity.test.mjs`
+- IVORY 与组合级设计、技术、审计和交接文档
+
+### Delivery state
+
+- Dedicated branch: created.
+- Commit / push / Draft PR / exact Preview: pending final batch delivery.
+- Merge: not authorized and not performed.
 
 ## Current goal
 

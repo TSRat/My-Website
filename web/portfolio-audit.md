@@ -15,7 +15,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 | Site | Classification | Interaction tier | Migration status | Primary blocker |
 | --- | --- | --- | --- | --- |
 | The Living Atlas | REFACTOR | B — Interactive | Content system merged in PR #13; Data / starter and ambiguity correction merged in PR #14 | Shared runtime publication needs explicit Pages build-map authorization |
-| IVORY ARCHIVE | PRESERVE | B — Interactive | Audited; no implementation migration started | Dynamic and Pages renderers need explicit parity tests |
+| IVORY ARCHIVE | PRESERVE | B — Interactive | Six-stage migration implemented; Draft PR / Preview pending | Antigravity extended QA pending |
 | Enheduanna | REFACTOR | A — Editorial | Audited; implementation blocked | No reproducible source-to-mirror build; tablet overflow exists in the deployed mirror |
 | Hildegard | PRESERVE | A — Editorial | Audited; no implementation migration started | Long-page visual comparison must use deterministic sections |
 | Hypatia | REFACTOR | A — Editorial | Audited; no implementation migration started | Historical unreferenced assets and responsive cleanup need a scoped batch |
@@ -30,7 +30,7 @@ copies only the contracts its tier needs and preserves its own visual system.
 
 | Order | Batch | Starter adoption | Gate before implementation |
 | --- | --- | --- | --- |
-| 1 | IVORY ARCHIVE | Manifest, provider-neutral events, Data entry, renderer parity and Antigravity screenshot QA | Confirm dynamic/Pages parity fixtures |
+| 1 | IVORY ARCHIVE | Manifest, provider-neutral events, Data entry, renderer parity and Antigravity screenshot QA | Implemented; exact Preview and Antigravity extended QA remain |
 | 2 | Hypatia + Hildegard | Manifest, stable IDs, Data entry, source/citation events and Antigravity editorial browser checks | Give Antigravity deterministic chapter sections and viewport scope |
 | 3 | Enheduanna | Tier A contract only after source and mirror can be reproduced | Restore or document a repeatable source-to-mirror build |
 | 4 | Melromarc Sisters | Tier B/Rebuild contract after upstream source is available | Confirm complete maintainable source and build |
@@ -92,19 +92,19 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Content/data model:** `app/briefings.ts` is the current structured content source.
 - **State/interactivity:** Search and taxonomy filters work in the accepted Pages baseline; issue and entry navigation are functional.
 - **Build system / deployment:** Root Vinext build for the application; custom Node generation for Pages; GitHub Actions artifact deployment.
-- **Analytics:** No provider detected. Candidate neutral events: `search_performed`, `filter_applied`, `issue_opened`, `briefing_item_opened`.
-- **Tests / CI:** Root build/test/lint plus Pages asset validation; no explicit parity test between the dynamic app and Pages output.
+- **Analytics:** No provider. `page_viewed`, `search_performed`, `filter_applied`, `briefing_opened`, and `data_entry_opened` are defined by a provider-neutral adapter. It performs no network requests, sets no cookies or persistent storage, collects no identity, and never records raw search text.
+- **Tests / CI:** Root build/test/lint plus Pages asset validation and `tests/ivory-renderer-parity.test.mjs`, which validates the five-story content contract, assets, routes, privacy manifest, and dynamic/Pages home data parity.
 - **Accessibility state:** Skip link, semantic landmarks, headings, image alternatives, search, and filters are present; keyboard state and result announcements still need targeted testing.
 - **Responsive state:** Accepted desktop, tablet, and mobile first folds show no horizontal overflow.
-- **Existing Figma:** Ivory theme variables, editable theme anatomy, shared components, representative desktop/mobile screens, and 3-viewport baselines.
+- **Existing Figma:** Ivory theme variables plus editable desktop/mobile Data states and reusable `Site / Ivory Archive / Data Entry` component in `Remaining Sites · Six-Stage Migration v1`.
 - **Classification:** **PRESERVE** — the source model, renderer, interaction set, and visual system are healthy.
 - **Target architecture:** Keep the structured briefing source and both renderers; add parity checks before shared-component refactors.
 - **Shared-core adoption:** Accessibility primitives, focus, filter/search state conventions, citations, image captions, event specification, and screenshot QA.
 - **Site-specific theme:** Preserve the newspaper rhythm, botanical restraint, burgundy rule system, archive numbering, and Chinese editorial voice.
-- **Migration status:** Audit complete; no code migration started.
-- **Figma URL:** <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
-- **Preview / PR URL:** Local Pages preview verified; migration preview and PR not started.
-- **Remaining risks:** The stale committed snapshot can mislead maintainers; dynamic/static parity is not automatically enforced.
+- **Migration status:** Six-stage preservation migration implemented on `codex/remaining-sites-six-stage-migration`; exact Preview and Draft PR are added at delivery.
+- **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).
+- **Preview / PR URL:** Local Pages desktop/mobile smoke passed; exact Preview and Draft PR pending delivery.
+- **Remaining risks:** The stale committed snapshot can mislead maintainers. The parity test covers content, assets, routes, and contracts, not pixel identity. Antigravity extended QA is pending.
 
 ## Enheduanna
 
