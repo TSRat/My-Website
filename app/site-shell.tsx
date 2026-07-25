@@ -12,6 +12,7 @@ export function SiteHeader({ active }: { active?: "home" | "briefing" }) {
         <Link className={active === "home" ? "active" : ""} href="/">首页</Link>
         <Link className={active === "briefing" ? "active" : ""} href="/#archive">日刊</Link>
         <Link href="/#topics">主题索引</Link>
+        <Link data-analytics-event="data_entry_opened" data-analytics-target="header" href="/#data">Data</Link>
         <Link href="/#about">关于</Link>
       </nav>
     </header>
@@ -31,6 +32,7 @@ export function SiteFooter() {
           <Link href="/#today">今日五则</Link>
           <Link href="/#archive">全部日刊</Link>
           <Link href="/#method">去重方法</Link>
+          <Link data-analytics-event="data_entry_opened" data-analytics-target="footer" href="/#data">Data</Link>
         </div>
         <p className="footer-note">Ivory Archive · 始于 2026</p>
       </div>

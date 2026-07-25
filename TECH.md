@@ -37,7 +37,7 @@ Default branch: `main`
 | --- | --- | --- | --- |
 | `/My-Website/` | `scripts/build-github-pages.mjs` 生成 | 生成函数和 `scripts/github-pages-hub.css` | `docs/index.html`（构建时生成） |
 | `/My-Website/IVORY-ARCHIVE/` | 根据 `app/briefings.ts` 生成，图片来自 `public/` | `app/`、`public/`、`scripts/github-pages.css/js` | `docs/IVORY-ARCHIVE/index.html`（构建时生成） |
-| `/My-Website/ENHEDUANNA/` | 直接复制已提交的 `ENHEDUANNA/` | `static-sites/enheduanna/`；独立 PR #17 提供可重复构建 | `ENHEDUANNA/index.html` |
+| `/My-Website/ENHEDUANNA/` | `npm run build:enheduanna` 从 `static-sites/enheduanna/` 生成已提交的 `ENHEDUANNA/`，Pages 再复制镜像 | React / TSX / CSS + Vite | `ENHEDUANNA/index.html` |
 | `/My-Website/HYPATIA/` | 直接复制 `HYPATIA/` | 当前目录中的 HTML/CSS/JS | `HYPATIA/index.html` |
 | `/My-Website/MELROMARC-SISTERS/` | 直接复制 `MELROMARC-SISTERS/` | `static-sites/melromarc-sisters/`；`npm run build:melromarc` 更新镜像 | `MELROMARC-SISTERS/index.html` |
 
@@ -52,6 +52,9 @@ Default branch: `main`
 | `npm run dev` | 运行 Vite/Vinext 开发服务器 | 本地服务；Wrangler 日志留在忽略目录 |
 | `npm run build:pages` | 生成 GitHub Pages 多站点 artifact | `docs/` |
 | `npm run validate:pages` | 检查 `docs/` 内 HTML/CSS 的本地资源引用 | 只读；缺失或越界引用时退出失败 |
+| `npm run dev:enheduanna` | 运行 Enheduanna Vite 开发服务器 | 本地服务 |
+| `npm run build:enheduanna` | 从可读 React/Vite 源码更新 Enheduanna 镜像 | `.site-build/enheduanna/`、`ENHEDUANNA/` |
+| `npm run dev:melromarc` | 运行 Melromarc Vite 开发服务器 | 本地服务 |
 | `npm run build:melromarc` | 从可读 React/Vite 源码更新 Melromarc 镜像 | `.site-build/melromarc-sisters/`、`MELROMARC-SISTERS/` |
 | `npm run install:ci` | 在 Sites 隔离环境中执行受限的 `npm ci` | `node_modules/`、`.sites-runtime/` |
 | `npm run build` | 运行受限时长 Vinext build，并验证 Worker artifact | `dist/` |
@@ -148,7 +151,8 @@ Do not replace the existing GitHub Actions deployment architecture with
 
 - 源资源：`static-sites/enheduanna/public/`
 - 当前发布资源：`ENHEDUANNA/` 根目录和 `ENHEDUANNA/assets/`
-- 独立 PR #17 增加 source-to-mirror 构建；该 PR 与 Melromarc 采用同一构建脚本和镜像约定。
+- 使用 `npm run build:enheduanna` 可把源码、CSS 和 `public/` 资源一起编译到临时目录，再覆盖镜像中的当前入口与资源。
+- 构建器不会删除镜像内未引用的旧哈希 bundle；这些文件继续作为回滚材料，入口只引用本次新产物。
 
 ### Hypatia
 
@@ -206,11 +210,24 @@ git diff --stat
 
 ## Maintainable static-site builder
 
-`scripts/build-maintainable-site.mjs` 是本分支的 Melromarc 最小构建入口；
-独立 PR #17 使用同一脚本实现 Enheduanna。两份 PR 合并后，它按站点 ID
-选择 Vite 配置，在 `.site-build/` 中验证生成的入口，再复制到受保护的
-大写 Pages 镜像。它统一的是构建和镜像约定，不会统一两站的视觉、内容
-模型或组件。
+`scripts/build-maintainable-site.mjs` 是 Enheduanna 与 Melromarc 从源码
+工程到既有 Pages 镜像的共享发布器。它按站点 ID：
+
+1. 使用站点自己的 Vite 配置构建到被忽略的 `.site-build/<site-id>/`。
+2. 检查临时入口已经引用编译后的哈希资源，而不是 `.tsx`。
+3. 把通过检查的结果复制到受版本控制的既有大写镜像目录。
+4. 不删除镜像中的历史 bundle，避免破坏回滚材料。
+
+当前入口：
+
+```bash
+npm run dev:enheduanna
+npm run build:enheduanna
+npm run dev:melromarc
+npm run build:melromarc
+```
+
+共享的是构建、镜像和验证约定，不是两个站点的视觉、内容模型或组件。
 
 `scripts/recover-melromarc-source.mjs` 是一次性、可审计的来源恢复工具：
 它从 2026-07-25 接受的旧 active bundle 读取 13 条故事、18 条图像记录、

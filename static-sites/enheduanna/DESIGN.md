@@ -83,6 +83,8 @@ Primary stylesheet: `static-sites/enheduanna/globals.css`
 - 深色章节用于真正的叙事转折，不是随意的视觉轮换。
 - 图片同时承担证据和现代再创作的不同角色，页面必须说清差异。
 - 不是所有内容都放进圆角卡片；多数结构依赖直线、网格和连续版式。
+- Data / Signals 延续深蓝、金色元数据、纸色正文和硬分隔线；它是档案附录，不是通用 dashboard 卡片。
+- `1100px` 以下允许 hero 标题换行并解除网格最小宽度，以修复旧镜像的平板横向溢出，不改变桌面艺术方向。
 
 ## Needs creator confirmation
 
@@ -93,3 +95,15 @@ Primary stylesheet: `static-sites/enheduanna/globals.css`
 - 现代动漫启发的 Ishtar 图是否有计划替换为其他视觉。
 
 在确认前，不应把网站改成柔和博物馆模板、玻璃拟态或标准卡片落地页。
+
+## 2026-07-25 · Six-stage readiness
+
+- The proposed Data appendix belongs after Sources and preserves the
+  archive/exhibition rhythm rather than introducing a dashboard.
+- Its editable Figma component uses a blue-black field, gold mono metadata,
+  paper text, hard rules, and no rounded generic cards.
+- Desktop/mobile references are in
+  [Figma node 27:2](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).
+- This is a design target only. It must not be copied into the compiled mirror
+  until a reproducible source build or an explicitly authorized reconstruction
+  exists.

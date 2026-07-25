@@ -10,6 +10,8 @@
     "validate:pages": "node scripts/validate-pages-assets.mjs",
     "dev:melromarc": "vite --config static-sites/melromarc-sisters/vite.config.ts",
     "build:melromarc": "node scripts/build-maintainable-site.mjs melromarc-sisters",
+    "dev:enheduanna": "vite --config static-sites/enheduanna/vite.config.ts",
+    "build:enheduanna": "node scripts/build-maintainable-site.mjs enheduanna",
     "install:ci": "bash scripts/install-ci.sh",
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vite",
     "build": "bash scripts/build-verified.sh",

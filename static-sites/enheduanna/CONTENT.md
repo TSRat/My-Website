@@ -52,6 +52,7 @@ Primary content file: `static-sites/enheduanna/page.tsx`
 12. `10` THE SILENT TRADITION — “第一人，从来不是一个人”。
 13. `11` WATCH — 视频入口。
 14. `12` SOURCES — 17 项博物馆、原始文本、学术版本和背景来源。
+15. `13` DATA / SIGNALS — 保留未来阅读信号入口，明确当前 provider 为 none，不展示虚构数据。
 
 ## Important people and concepts
 
