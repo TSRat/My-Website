@@ -113,3 +113,35 @@ python3 -m http.server 8000 --directory docs
 - Working tree clean at audit start: Yes
 - Working tree clean at handoff: Yes
 - Uncommitted changes: None
+
+## 2026-07-25 · Six-stage migration batch
+
+### Current target
+
+Add the missing Data / analytics layer and complete an auditable six-stage
+handoff without rewriting the narrative, replacing the lake-blue identity, or
+changing the deployment architecture.
+
+### Completed
+
+- Added the visible `#data` appendix after Sources.
+- Added `site-manifest.json` and provider-neutral `assets/site-analytics.js`.
+- Covered section, evidence filter, interactive state, source, video, and Data
+  entry events without a provider or persistent reader data.
+- Added editable Figma desktop/mobile and Data component references at
+  [node 27:2](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).
+- Added the six-stage handoff at
+  `web/sites/hypatia/six-stage-handoff.md` and shared contract tests.
+
+### Verification
+
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed — 359 local references across 43 HTML/CSS
+  files.
+- `npm test`: Passed — 11/11 tests, including the new historical-site contract.
+- `npm run lint`: Passed with 0 errors and 24 pre-existing warnings in the old
+  Hypatia bundle and Enheduanna source.
+- Browser smoke at 1280 and 390 CSS pixels: Data visible, analytics marker
+  present, 0 broken images, and no horizontal overflow.
+- Extended deterministic-section visual QA remains assigned to Antigravity.
+- Exact preview, commit, branch, and Draft PR are recorded after push.

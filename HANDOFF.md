@@ -258,6 +258,49 @@ python3 -m http.server 8000 --directory docs
 ### Verification status
 
 - Skill structure validation: Passed — 两个技能均通过 `quick_validate.py`。
+
+## 2026-07-25: Hypatia + Hildegard six-stage migration batch
+
+### Current target
+
+Migrate the two maintainable historical static sites through the shared
+six-stage workflow while preserving their distinct identities, historical
+qualifications, relative paths, and GitHub Pages artifact deployment.
+
+### Completed
+
+- Kept Hypatia's lake-blue exhibition system and Hildegard's Viriditas Codex.
+- Added a site-specific Data appendix to each page.
+- Added machine-readable manifests and provider-neutral runtime adapters with
+  no network requests, cookies, persistent storage, identity, or raw-content
+  capture.
+- Added shared tests for privacy contracts, expected events, existing Hypatia
+  interaction hooks, Hildegard chapters, and reduced motion.
+- Added per-site six-stage handoffs under `web/sites/`.
+- Linked both sites to the editable shared Figma migration frame at node `27:2`.
+
+### Verification
+
+- `git diff --check`: Passed.
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed — 359 local references across 43 HTML/CSS
+  files.
+- `npm test`: Passed — 11/11.
+- `npm run lint`: 0 errors; 24 pre-existing warnings.
+- In-app browser smoke: Hypatia and Hildegard Data anchors at 1280 and 390 CSS
+  pixels, 0 broken images, no horizontal overflow, provider-neutral marker
+  present.
+
+### Important decisions and remaining work
+
+- Codex performs only the necessary basic browser checks; Antigravity owns
+  extended deterministic-section visual comparison.
+- No workflow, slug, route, build map, historical narrative, or upstream
+  artifact was changed.
+- This batch uses `codex/hypatia-hildegard-six-stage`; exact commit, preview,
+  and Draft PR are appended after push. It is not auto-merged.
+- Enheduanna and Melromarc Sisters still need separate readiness PRs because a
+  reproducible source-to-mirror build or complete upstream source is absent.
 - Repository diff checks: Passed — `git diff --check` 无错误；原文代码块比对通过，`build-new-site-to-pr` 仅为修复 YAML 语法给 `description` 增加引号。
 - Pages build and validation: Passed — `npm run build:pages` 成功；`npm run validate:pages` 验证 39 个 HTML/CSS 文件中的 343 个本地引用。
 
