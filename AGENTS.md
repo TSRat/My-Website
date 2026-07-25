@@ -24,10 +24,12 @@
 
 | 项目 | 应优先修改 | 不应误当作主要来源 |
 | --- | --- | --- |
-| IVORY ARCHIVE | `app/briefings.ts`、`app/`、`public/`、Pages 生成脚本 | 已提交但较旧的 `IVORY-ARCHIVE/` 快照 |
-| Enheduanna | `static-sites/enheduanna/`；发布前还需处理 `ENHEDUANNA/` 镜像 | 只改 TSX 却假设 workflow 会自动重建镜像 |
-| Hypatia | `HYPATIA/index.html`、被入口实际引用的 CSS/JS 与资源 | 目录中未被入口引用的旧 bundle 或样式文件 |
-| Melromarc Sisters | `static-sites/melromarc-sisters/`；发布前运行 `npm run build:melromarc` 更新 `MELROMARC-SISTERS/` 镜像 | 旧 Vinext bundle、带哈希的编译文件或 `MELROMARC-SISTERS/` 中的项目文档 |
+| The Living Atlas | `sites/living-atlas/`；`npm run build:living-atlas` 更新 `THE-LIVING-ATLAS/` 镜像 | 直接手改大写发布镜像 |
+| IVORY ARCHIVE | `sites/ivory-archive/`、`public/`、Pages 生成脚本；`app/` 只保留路由适配器 | 已提交但较旧的 `IVORY-ARCHIVE/` 快照 |
+| Enheduanna | `sites/enheduanna/`；发布前运行 `npm run build:enheduanna` | 只改 TSX 却忽略 `ENHEDUANNA/` 镜像 |
+| Hypatia | `sites/hypatia/`；`npm run build:hypatia` 更新 `HYPATIA/` 镜像 | 大写镜像及其中未被入口引用的旧 bundle 或样式文件 |
+| Hildegard | `sites/hildegard/`；`npm run build:hildegard` 更新 `HILDEGARD/` 镜像 | 直接手改大写发布镜像 |
+| Melromarc Sisters | `sites/melromarc-sisters/`；发布前运行 `npm run build:melromarc` | 旧 Vinext bundle、带哈希的编译文件或 `MELROMARC-SISTERS/` 镜像 |
 
 如果真实上游源码或重建命令无法确认，停止高风险实现并把问题写入 `HANDOFF.md`。不要假装存在可重建流程。
 
@@ -52,7 +54,7 @@ Agent 不得：
 - 删除现有功能、内容、图片或来源链接。
 - 把多个独立站点强行统一为同一套 UI。
 - 根据自己的审美重做整个页面。
-- 移动或重命名现有网站目录。
+- 移动或重命名现有公开大写镜像目录。
 - 改变路由、Vite `base` 或 GitHub Pages 子目录。
 - 把 Pages 改为 Deploy from a branch。
 - 创建、重新启用或发布 `gh-pages` branch。

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "ivory-archive",
+  "title": "IVORY ARCHIVE",
+  "slug": "IVORY-ARCHIVE",
+  "status": "published",
+  "interactionTier": "B",
+  "classification": "PRESERVE",
+  "maintenanceRoot": "sites/ivory-archive",
+  "documents": ["CONTENT.md", "DESIGN.md", "TECH.md", "HANDOFF.md"],
+  "source": {
+    "mode": "vinext-dual-renderer",
+    "entry": "page.tsx",
+    "content": "briefings.ts",
+    "routeAdapter": "../../app",
+    "assets": ["../../public", "../../scripts"]
+  },
+  "build": {
+    "command": "npm run build:ivory",
+    "staging": "dist",
+    "mirror": null,
+    "mirrorPolicy": "generated-pages"
+  },
+  "publicPath": "/My-Website/IVORY-ARCHIVE/",
+  "manifest": "../../public/ivory-site-manifest.json",
+  "figmaUrl": "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2"
+}

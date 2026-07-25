@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Two figures at a desk beneath vaulting — Jutta hands Hildegard a scroll; visual metaphor for asceticism inheriting into literacy.">
+  <defs>
+    <linearGradient id="in-parch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F0E6CF"/>
+      <stop offset="1" stop-color="#D7C5A4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#in-parch)"/>
+  <g stroke="#18382B" stroke-width="1.4" fill="none">
+    <!-- Romanesque arch -->
+    <path d="M120 440 L120 240 Q120 120 240 120 L560 120 Q680 120 680 240 L680 440"/>
+    <path d="M160 440 L160 260 Q160 160 260 160 L540 160 Q640 160 640 260 L640 440"/>
+    <!-- Column bases and capitals -->
+    <rect x="105" y="440" width="30" height="20"/>
+    <rect x="665" y="440" width="30" height="20"/>
+    <line x1="120" y1="240" x2="160" y2="260"/>
+    <line x1="680" y1="240" x2="640" y2="260"/>
+    <!-- Desk -->
+    <line x1="240" y1="380" x2="560" y2="380"/>
+    <line x1="260" y1="380" x2="260" y2="440"/>
+    <line x1="540" y1="380" x2="540" y2="440"/>
+    <!-- Scroll unfurling between figures -->
+    <path d="M320 375 Q400 340 480 375"/>
+    <circle cx="320" cy="375" r="6" fill="#B48A3C"/>
+    <circle cx="480" cy="375" r="6" fill="#B48A3C"/>
+    <!-- Figure L (Jutta, ascetic) — simple geometry, hooded silhouette -->
+    <path d="M260 300 Q280 250 300 300 L300 380 L260 380 Z" fill="#14170F"/>
+    <path d="M260 300 Q280 250 300 300 L300 260 Q300 240 280 240 Q260 240 260 260 Z" fill="#3A3B33"/>
+    <text x="280" y="465" text-anchor="middle" font-family="'Fira Code',monospace" font-size="11" letter-spacing="0.18em" fill="#3A3B33">JUTTA · 45</text>
+    <!-- Figure R (Hildegard, learner) — with book -->
+    <path d="M500 300 Q520 250 540 300 L540 380 L500 380 Z" fill="#18382B"/>
+    <path d="M500 300 Q520 250 540 300 L540 260 Q540 240 520 240 Q500 240 500 260 Z" fill="#547A52"/>
+    <rect x="505" y="345" width="30" height="22" fill="#F0E6CF" stroke="#B48A3C" stroke-width="1"/>
+    <text x="520" y="465" text-anchor="middle" font-family="'Fira Code',monospace" font-size="11" letter-spacing="0.18em" fill="#3A3B33">HILDEGARD · 81</text>
+    <!-- Central marginalia dot -->
+    <circle cx="400" cy="200" r="14" fill="#B48A3C" opacity="0.35"/>
+    <text x="400" y="205" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-style="italic" font-size="18" fill="#18382B">➤</text>
+  </g>
+</svg>

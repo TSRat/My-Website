@@ -1,70 +1,38 @@
 import { copyFile, cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildAllDeployMirrors } from "./build-site.mjs";
+import { loadSiteProjects } from "./site-projects.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const pagesRoot = join(root, "docs");
 const siteSlug = "IVORY-ARCHIVE";
-const staticSites = [
-  {
-    slug: "ENHEDUANNA",
-    className: "enheduanna",
-    artLabel: "004",
-    eyebrow: "DAUGHTERS OF TIME · 004",
-    title: "恩赫杜安娜：第一人",
-    description: "从乌尔神庙、流放与伊南娜赞歌出发，认识公主、祭司、作者与先驱恩赫杜安娜。",
-    metadata: [["时代", "约公元前23世纪"], ["地点", "美索不达米亚 · 乌尔"]],
-  },
-  {
-    slug: "HILDEGARD",
-    className: "hildegard",
-    artLabel: "002",
-    eyebrow: "DAUGHTERS OF TIME · 002",
-    title: "谦卑的反叛者：宾根的希尔德加德",
-    description: "从 1163 年那封警告皇帝的信出发，重新走近 12 世纪莱茵兰的女院长、先知、学者、音乐家与语言发明者。",
-    metadata: [["时代", "1098 — 1179"], ["地点", "莱茵兰 · 鲁珀茨贝格"]],
-  },
-  {
-    slug: "HYPATIA",
-    className: "hypatia",
-    cover: "assets/hypatia-cover.png",
-    eyebrow: "DAUGHTERS OF TIME · 001",
-    title: "教师之死：希帕蒂娅",
-    description: "从教师、哲学家与公共人物出发，在古代史料与后世塑造之间重新认识希帕蒂娅。",
-    metadata: [["时代", "约 350/370—415"], ["地点", "亚历山大里亚"]],
-  },
-  {
-    slug: "MELROMARC-SISTERS",
-    className: "melromarc",
-    artLabel: "M&amp;M",
-    eyebrow: "FAN-CREATED STORY ARCHIVE",
-    title: "Melromarc 姐妹故事",
-    description: "Malty 与 Melty 的多重故事档案：两个名字，生长出许多命运。",
-    metadata: [["故事线", "13 条"], ["整理方式", "5 个改变时点"]],
-  },
-
-  {
-    slug: "THE-LIVING-ATLAS",
-    className: "living-atlas",
-    artLabel: "ATLAS",
-    eyebrow: "TSRAT · MAIN HUB",
-    title: "The Living Atlas 开放档案馆",
-    description: "在算法与人性之间建立桥梁：历史、女性主义、心理学、设计、技术与文学的公共档案馆主站。",
-    metadata: [["类型", "主页 (Hub)"], ["架构", "Editorial Digital Archive"]],
-  },
-];
+await buildAllDeployMirrors();
+const staticSites = (await loadSiteProjects())
+  .filter((project) => project.build.mirror && project.hub)
+  .sort((left, right) => left.hub.order - right.hub.order)
+  .map((project) => ({
+    slug: project.slug,
+    title: project.title,
+    ...project.hub,
+  }));
 const output = join(pagesRoot, siteSlug);
-const source = await readFile(join(root, "app/briefings.ts"), "utf8");
+const source = await readFile(
+  join(root, "sites/ivory-archive/briefings.ts"),
+  "utf8",
+);
 const declaration = source.indexOf("export const briefings");
 const literalStart = source.indexOf("[", declaration);
 const literalEnd = source.lastIndexOf("];");
 
 if (declaration < 0 || literalStart < 0 || literalEnd < literalStart) {
-  throw new Error("Could not locate the briefings array in app/briefings.ts");
+  throw new Error(
+    "Could not locate the briefings array in sites/ivory-archive/briefings.ts",
+  );
 }
 
-// app/briefings.ts deliberately stores the archive as literal data, so the
-// static mirror can evaluate the array without adding a TypeScript runtime.
+// sites/ivory-archive/briefings.ts deliberately stores the archive as literal
+// data, so the static mirror can evaluate it without a TypeScript runtime.
 const briefings = Function(`"use strict"; return (${source.slice(literalStart, literalEnd + 1)});`)();
 
 const scopes = [

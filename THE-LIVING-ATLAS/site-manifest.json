@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "living-atlas",
+  "title": "The Living Atlas",
+  "slug": "THE-LIVING-ATLAS",
+  "status": "published",
+  "language": ["en", "zh-CN"],
+  "contentModel": "bilingual personal archive registry",
+  "renderers": [
+    {
+      "id": "pages",
+      "source": "sites/living-atlas/",
+      "runtime": "static HTML, CSS and ES modules"
+    }
+  ],
+  "capabilities": {
+    "bilingualPages": true,
+    "search": true,
+    "publishedSiteIndex": true,
+    "carousel": true,
+    "dataEntry": true
+  },
+  "analytics": {
+    "provider": null,
+    "networkRequests": false,
+    "cookies": false,
+    "persistentStorage": false,
+    "identity": false,
+    "rawSearchText": false,
+    "events": [
+      "search_performed",
+      "search_result_opened",
+      "published_site_opened",
+      "data_section_opened"
+    ]
+  }
+}

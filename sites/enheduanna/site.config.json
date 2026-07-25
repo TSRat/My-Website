@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "enheduanna",
+  "title": "恩赫杜安娜：第一人",
+  "slug": "ENHEDUANNA",
+  "status": "published",
+  "interactionTier": "A",
+  "classification": "REFACTOR",
+  "maintenanceRoot": "sites/enheduanna",
+  "documents": ["CONTENT.md", "DESIGN.md", "TECH.md", "HANDOFF.md"],
+  "source": {
+    "mode": "vite-static",
+    "entry": "main.tsx",
+    "viteConfig": "vite.config.ts",
+    "assets": ["public"]
+  },
+  "build": {
+    "command": "npm run build:enheduanna",
+    "staging": ".site-build/enheduanna",
+    "mirror": "ENHEDUANNA",
+    "mirrorPolicy": "preserve-unreferenced"
+  },
+  "publicPath": "/My-Website/ENHEDUANNA/",
+  "manifest": "public/site-manifest.json",
+  "figmaUrl": "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2",
+  "hub": {
+    "order": 1,
+    "className": "enheduanna",
+    "artLabel": "004",
+    "eyebrow": "DAUGHTERS OF TIME · 004",
+    "description": "从乌尔神庙、流放与伊南娜赞歌出发，认识公主、祭司、作者与先驱恩赫杜安娜。",
+    "metadata": [["时代", "约公元前23世纪"], ["地点", "美索不达米亚 · 乌尔"]]
+  }
+}

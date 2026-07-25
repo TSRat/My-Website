@@ -3,7 +3,7 @@
 - Classification: `PRESERVE`
 - Interaction tier: `B — Interactive`
 - Public path: `/My-Website/IVORY-ARCHIVE/`
-- Source of truth: `app/briefings.ts`, `app/`, `public/`, and `scripts/build-github-pages.mjs`
+- Source of truth: `sites/ivory-archive/`, root `app/` adapters, `public/`, and `scripts/build-github-pages.mjs`
 - Figma: [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
 - Delivery branch: `codex/remaining-sites-six-stage-migration`
 

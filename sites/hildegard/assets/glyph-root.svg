@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true">
+  <title>Root — Viriditas root system</title>
+  <path d="M100 12 L100 130" />
+  <path d="M100 130 C 60 150, 40 180, 30 244" />
+  <path d="M100 130 C 140 150, 160 180, 170 244" />
+  <path d="M100 130 C 90 170, 80 210, 78 244" />
+  <path d="M100 130 C 110 170, 120 210, 122 244" />
+  <circle cx="100" cy="12" r="6" fill="currentColor" fill-opacity="0.15"/>
+  <path d="M100 40 c -12 -6 -24 4 -18 18" />
+  <path d="M100 40 c 12 -6 24 4 18 18" />
+</svg>

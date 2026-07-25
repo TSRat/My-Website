@@ -48,7 +48,7 @@ and human overlay comparison.
 
 Stage 5 is implemented:
 
-- `static-sites/enheduanna/` is the maintainable React / TSX / CSS source.
+- `sites/enheduanna/` is the maintainable React / TSX / CSS source.
 - `vite.config.ts` provides a site-specific development configuration.
 - `npm run build:enheduanna` builds into `.site-build/enheduanna/`, validates
   the compiled entry, and updates `ENHEDUANNA/`.
@@ -61,7 +61,8 @@ Stage 5 is implemented:
 ## 6. Data / analytics
 
 The visible Data entry reports provider `none` and displays no invented
-metrics. The contract in `site-manifest.proposed.json` allows no cookies,
+metrics. The deployed contract in `sites/enheduanna/public/site-manifest.json`
+allows no cookies,
 persistent identity, raw content, raw free-form text, or network delivery
 without a future explicit provider decision.
 

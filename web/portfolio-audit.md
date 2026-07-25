@@ -53,7 +53,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## The Living Atlas
 
 - **Site / slug / live URL:** The Living Atlas; `THE-LIVING-ATLAS`; <https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/>
-- **Source path:** `THE-LIVING-ATLAS/`; language HTML shells, `content-registry.js`, `web-core.js`, `atlas.js`, `style.css`, and local image assets.
+- **Source path:** `sites/living-atlas/`; `THE-LIVING-ATLAS/` is the generated Pages mirror.
 - **Status:** Public archive hub.
 - **Product purpose:** Present TSRat as a living interdisciplinary archive and offer deliberately open-ended Worlds, published sites, knowledge, and index entry points.
 - **Primary audience and goal:** Readers encountering the archive; understand its atmosphere and enter a site or topic without reducing the homepage to a portfolio taxonomy.
@@ -81,7 +81,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## IVORY ARCHIVE
 
 - **Site / slug / live URL:** IVORY ARCHIVE; `IVORY-ARCHIVE`; <https://tsrat.github.io/My-Website/IVORY-ARCHIVE/>
-- **Source path:** `app/briefings.ts`, `app/`, `public/`, and Pages generation in `scripts/build-github-pages.mjs`; committed `IVORY-ARCHIVE/` is a stale snapshot.
+- **Source path:** `sites/ivory-archive/`, root `app/` route adapters, `public/`, and Pages generation in `scripts/build-github-pages.mjs`; committed `IVORY-ARCHIVE/` is a stale snapshot.
 - **Status:** Active daily thought-briefing archive.
 - **Product purpose:** Publish five-item Chinese briefings spanning culture, humanities, social science, and feminism.
 - **Primary audience and goal:** Readers seeking a curated daily briefing; locate an issue, search its entries, or filter by theme.
@@ -89,7 +89,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Current visual direction:** Warm ivory newspaper/archive layout with burgundy rules, restrained botanical imagery, issue numbering, and editorial serif headlines.
 - **Typography / color / layout:** Editorial serif headlines, compact sans/mono metadata, warm ivory surfaces, burgundy primary action, green support accent, column-led archive composition.
 - **Framework / language / rendering:** React/TypeScript dynamic application plus a custom static Pages renderer generated from the same briefing data.
-- **Content/data model:** `app/briefings.ts` is the current structured content source.
+- **Content/data model:** `sites/ivory-archive/briefings.ts` is the current structured content source.
 - **State/interactivity:** Search and taxonomy filters work in the accepted Pages baseline; issue and entry navigation are functional.
 - **Build system / deployment:** Root Vinext build for the application; custom Node generation for Pages; GitHub Actions artifact deployment.
 - **Analytics:** No provider. `page_viewed`, `search_performed`, `filter_applied`, `briefing_opened`, and `data_entry_opened` are defined by a provider-neutral adapter. It performs no network requests, sets no cookies or persistent storage, collects no identity, and never records raw search text.
@@ -109,7 +109,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## Enheduanna
 
 - **Site / slug / live URL:** Enheduanna / 恩赫杜安娜; `ENHEDUANNA`; <https://tsrat.github.io/My-Website/ENHEDUANNA/>
-- **Source path:** Readable source in `static-sites/enheduanna/`; current deploy mirror in `ENHEDUANNA/`.
+- **Source path:** Readable source in `sites/enheduanna/`; generated deploy mirror in `ENHEDUANNA/`.
 - **Status:** Public long-form historical profile, “Daughters of Time 004”.
 - **Product purpose:** Explain Enheduanna as princess, high priestess, author, and contested “first author” while preserving evidence boundaries.
 - **Primary audience and goal:** General readers of women’s and literary history; follow the narrative and inspect supporting evidence and sources.
@@ -137,7 +137,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## Hildegard
 
 - **Site / slug / live URL:** Hildegard / 希尔德加德; `HILDEGARD`; <https://tsrat.github.io/My-Website/HILDEGARD/>
-- **Source path:** `HILDEGARD/`.
+- **Source path:** `sites/hildegard/`; `HILDEGARD/` is the generated Pages mirror.
 - **Status:** Public long-form historical profile, “Daughters of Time 002”.
 - **Product purpose:** Present Hildegard as abbess, visionary, scholar, composer, and language inventor without flattening the tension between gender and class.
 - **Primary audience and goal:** Readers of women’s, religious, music, and intellectual history; move through the narrative and consult the source boundary.
@@ -165,7 +165,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## Hypatia
 
 - **Site / slug / live URL:** Hypatia / 希帕蒂娅; `HYPATIA`; <https://tsrat.github.io/My-Website/HYPATIA/>
-- **Source path:** `HYPATIA/index.html` and the CSS/JavaScript/assets actually referenced by it.
+- **Source path:** `sites/hypatia/index.html` and the CSS/JavaScript/assets actually referenced by it; `HYPATIA/` is the generated Pages mirror.
 - **Status:** Public long-form historical profile, “Daughters of Time 001”.
 - **Product purpose:** Explain Hypatia as teacher, philosopher, and public figure at the intersection of knowledge, faith, and political violence.
 - **Primary audience and goal:** General readers of women’s, philosophy, and late-antique history; begin the narrative and inspect the source boundary.
@@ -193,7 +193,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## Melromarc Sisters
 
 - **Site / slug / live URL:** Melromarc Sisters; `MELROMARC-SISTERS`; <https://tsrat.github.io/My-Website/MELROMARC-SISTERS/>
-- **Source path:** Maintained source in `static-sites/melromarc-sisters/`; generated Pages mirror in `MELROMARC-SISTERS/`.
+- **Source path:** Maintained source in `sites/melromarc-sisters/`; generated Pages mirror in `MELROMARC-SISTERS/`.
 - **Status:** Public fan-created multi-story archive.
 - **Product purpose:** Explore multiple possible lives and critical story branches for Malty and Melty while separating canon reference from fan-created premise.
 - **Primary audience and goal:** Readers familiar with the source franchise; enter the story archive and open a specific or random branch.
