@@ -1089,3 +1089,53 @@ URL, and Pages deployment architecture.
 - Implementation commit: `28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb`.
 - Exact-commit Preview: <https://raw.githack.com/TSRat/My-Website/28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb/ENHEDUANNA/index.html>.
 - Merge: not authorized and not performed.
+
+## 2026-07-25: Website Archive image covers
+
+### Current target
+
+Replace every formal Website Archive card's abstract placeholder with a
+representative image in the established Hypatia full-bleed format, and expose
+the parent Website Archive from both Living Atlas language variants.
+
+### Completed
+
+- All six root cards now render full-bleed image covers through one shared CSS
+  rule.
+- Enheduanna, Hildegard, and Hypatia use web-optimized 1600px derivatives of
+  creator-owned `Women Story` cover artwork. Repository documentation records
+  their modern/creator-artwork status without committing a private local path.
+- Melromarc uses the existing sisters-holding-hands gallery image
+  `08-walking-together.jpg`, as directed by the creator.
+- IVORY reuses its botanical archive image; Living Atlas reuses its existing
+  Kandinsky hero.
+- Living Atlas English and Chinese desktop navigation and mobile menus now link
+  to the parent archive with relative `../` URLs.
+- The project registry and regression tests require every mirror-backed site's
+  hub cover to exist in its maintainable source.
+- Existing shared Figma source remains applicable; this small approved
+  adaptation did not require a new Figma frame or a new visual direction.
+
+### Validation
+
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed — 380 references across 46 HTML/CSS files.
+- `npm run build`: passed.
+- `npm test`: passed — 22/22.
+- `npm run lint`: passed with 0 errors and 24 existing warnings.
+- Browser smoke: root desktop/mobile and Living Atlas English desktop/Chinese
+  mobile passed with six loaded covers, working parent links, no broken images,
+  no horizontal overflow, and an operable mobile-menu destination.
+- Extended cross-browser and accessibility review remains assigned to
+  Antigravity.
+
+### Git state
+
+- Branch: `codex/hub-image-covers`.
+- Base: merged `main` at `518d7f9`.
+- Implementation commit: `77eb3c3a2e3d2a4e344b8536b3ebaf44e45626d4`.
+- Push: completed to `origin/codex/hub-image-covers`.
+- Verified unmerged archive preview:
+  <https://htmlpreview.github.io/?https://gist.githubusercontent.com/TSRat/0bf430d6576faa8f7708da3bb4f7b7ab/raw/4dcc04246de17dfd7c89671f2b70992fb959bdee/website-archive-preview.html>.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/22>.
+- Merge: not performed; automatic merge remains prohibited.

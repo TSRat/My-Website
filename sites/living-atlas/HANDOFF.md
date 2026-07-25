@@ -345,3 +345,20 @@
 - Exact English Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/index.html#worlds>
 - Exact Chinese Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/zh.html#worlds>
 - Merge: creator authorized PR #14 on 2026-07-24; perform after the validation-policy configuration commit is pushed.
+
+## 2026-07-25 · Parent archive navigation
+
+- Added `Website Archive` / `网站总入口` links to the English and Chinese
+  desktop navigation and mobile menu.
+- Links use `../`, preserving the `/My-Website/THE-LIVING-ATLAS/` deployment
+  contract and both local/Pages behavior.
+- The root archive card reuses `assets/hero-kandinsky.jpg` as its full-bleed
+  representative cover.
+- Regression tests verify both language links; desktop/mobile browser smoke
+  passed with no broken images or horizontal overflow.
+- Branch: `codex/hub-image-covers`; implementation commit
+  `77eb3c3a2e3d2a4e344b8536b3ebaf44e45626d4`.
+- Exact English preview:
+  <https://raw.githack.com/TSRat/My-Website/77eb3c3a2e3d2a4e344b8536b3ebaf44e45626d4/THE-LIVING-ATLAS/index.html>.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/22>; not merged.
+- Extended QA remains with Antigravity.

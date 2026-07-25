@@ -61,7 +61,7 @@ const storyImageName = (story) => story.image.split("/").at(-1);
 
 function staticSiteCard(site) {
   const art = site.cover
-    ? `<div class="card-art" aria-hidden="true" style="background:#f7fbff"><img src="${escapeHtml(site.slug)}/${escapeHtml(site.cover)}" alt="" style="position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center"></div>`
+    ? `<div class="card-art" aria-hidden="true"><img src="${escapeHtml(site.slug)}/${escapeHtml(site.cover)}" alt=""></div>`
     : `<div class="card-art" aria-hidden="true"><span>${site.artLabel}</span></div>`;
   const metadata = site.metadata
     .map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`)
@@ -104,7 +104,7 @@ function hubPage() {
       <div class="section-heading"><span>01</span><h2 id="sites-title">公开网站</h2></div>
       <div class="site-grid">
         <a class="site-card ivory" href="${siteSlug}/">
-          <div class="card-art" aria-hidden="true"><span>IA</span></div>
+          <div class="card-art" aria-hidden="true"><img src="${siteSlug}/ivory-botanical-archive.png" alt=""></div>
           <div class="card-copy">
             <p>DAILY THOUGHT BRIEFING</p>
             <h3>IVORY ARCHIVE</h3>

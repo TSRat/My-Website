@@ -143,3 +143,12 @@ direct static deployment.
 - Implementation commit: `a8d393eb582d45e2a2a4af533d32ff534fa84721`.
 - [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/a8d393eb582d45e2a2a4af533d32ff534fa84721/HILDEGARD/index.html#data).
 - [Draft PR #16](https://github.com/TSRat/My-Website/pull/16); not merged.
+
+## 2026-07-25 · Website Archive cover
+
+- Added `assets/hub-cover.jpg`, a 1600px web derivative of the creator-owned
+  `Women Story / Hildegard / 封面2` Vol.1 artwork.
+- `site.config.json` now exposes that asset to the parent Website Archive.
+- The image is documented as creator artwork, not historical evidence.
+- Pages build, asset validation, tests, lint, and desktop/mobile browser smoke
+  passed on `codex/hub-image-covers`; extended QA remains with Antigravity.

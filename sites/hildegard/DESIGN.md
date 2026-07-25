@@ -132,3 +132,10 @@ Living Manuscript
   screens without touching any chapter template.
 - Editable desktop/mobile references and the reusable site Data component are
   in [Figma node 27:2](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).
+
+## Website Archive cover
+
+`assets/hub-cover.jpg` is a web-optimized derivative of the creator-owned
+`Women Story / Hildegard` Vol.1 cover artwork (`封面2`). It is used only as the
+decorative image for this site's card in the parent Website Archive. It is
+creator artwork, not a historical portrait or evidentiary image.
