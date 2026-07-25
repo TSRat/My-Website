@@ -173,16 +173,18 @@ function shell({ title, description, prefix, body }) {
   <title>${escapeHtml(title)} · 思想简报档案馆</title>
   <link rel="icon" href="${prefix}favicon.svg">
   <link rel="stylesheet" href="${prefix}styles.css">
+  <link rel="stylesheet" href="${prefix}data.css">
 </head>
 <body>
   <a class="skip-link" href="#content">跳到正文</a>
   <header class="site-header frame">
     <a class="brand" href="${prefix}index.html"><img class="brand-logo" src="${prefix}tsrat-logo.png" alt="TS鼠 Logo"><span class="brand-copy"><strong>思想简报档案馆</strong><em>Ivory Archive</em></span></a>
-    <nav aria-label="主要导航"><a href="${prefix}index.html#today">今日五则</a><a href="${prefix}index.html#archive">日刊档案</a><a href="${prefix}index.html#topics">主题范围</a></nav>
+    <nav aria-label="主要导航"><a href="${prefix}index.html#today">今日五则</a><a href="${prefix}index.html#archive">日刊档案</a><a href="${prefix}index.html#topics">主题范围</a><a href="${prefix}index.html#data" data-analytics-event="data_entry_opened" data-analytics-target="header">Data</a></nav>
   </header>
   <main id="content">${body}</main>
   <footer><div class="frame footer-inner"><div class="footer-identity"><img class="footer-logo" src="${prefix}tsrat-logo.png" alt="TS鼠 Logo"><p>思想简报档案馆 · Ivory Archive</p></div><p>GitHub Pages 公开静态镜像</p></div></footer>
   <script src="${prefix}site.js" defer></script>
+  <script src="${prefix}ivory-analytics.js" defer></script>
 </body>
 </html>`;
 }
@@ -190,13 +192,13 @@ function shell({ title, description, prefix, body }) {
 function homePage() {
   const latest = briefings[0];
   const cards = latest.stories.map((story, index) => `
-    <a class="story-card" data-category="${escapeHtml(story.category)}" data-search="${escapeHtml(`${story.title} ${story.summary} ${story.category}`.toLowerCase())}" href="briefings/${latest.date}/index.html#story-${index + 1}">
+    <a class="story-card" data-analytics-event="briefing_opened" data-analytics-target="${escapeHtml(`${latest.date}#story-${index + 1}`)}" data-category="${escapeHtml(story.category)}" data-search="${escapeHtml(`${story.title} ${story.summary} ${story.category}`.toLowerCase())}" href="briefings/${latest.date}/index.html#story-${index + 1}">
       <img src="story-images/${escapeHtml(storyImageName(story))}" alt="${escapeHtml(story.imageAlt)}">
       <div class="card-copy"><span class="number">${String(index + 1).padStart(2, "0")}</span><span class="tag">${escapeHtml(story.category)}</span><h3>${escapeHtml(story.title)}</h3><p>${escapeHtml(story.summary)}</p></div>
     </a>`).join("");
 
   const archive = briefings.map((briefing) => `
-    <a class="archive-entry" data-topics="${escapeHtml(briefing.topics.join(" "))}" data-search="${escapeHtml(`${briefing.theme} ${briefing.stories.map((story) => story.title).join(" ")}`.toLowerCase())}" href="briefings/${briefing.date}/index.html">
+    <a class="archive-entry" data-analytics-event="briefing_opened" data-analytics-target="${escapeHtml(briefing.date)}" data-topics="${escapeHtml(briefing.topics.join(" "))}" data-search="${escapeHtml(`${briefing.theme} ${briefing.stories.map((story) => story.title).join(" ")}`.toLowerCase())}" href="briefings/${briefing.date}/index.html">
       <div><span>${escapeHtml(briefing.displayDate)}</span><strong>第 ${escapeHtml(briefing.issueNo)} 期</strong></div>
       <div><h3>${escapeHtml(briefing.theme)}</h3><p>${briefing.topics.map((topic) => `<span>${escapeHtml(topic)}</span>`).join("")}</p></div><b>→</b>
     </a>`).join("");
@@ -204,15 +206,20 @@ function homePage() {
   const body = `
     <section class="hero frame">
       <div class="hero-meta"><span>ISSUE ${escapeHtml(latest.issueNo)}</span><strong>${escapeHtml(latest.displayDate)}</strong><small>IVORY ARCHIVE</small></div>
-      <div class="hero-copy"><p class="eyebrow">每日思想简报 · Daily Thought Briefing</p><h1>把今天的文化新闻，变成明天的思考素材</h1><p>每天 5 个值得停留的故事，沿着艺术人文、社会科学与女性主义三条线索展开。</p><a class="button" href="briefings/${latest.date}/index.html">阅读今日简报 →</a><span class="unique">✓ ${latest.uniqueCount}/${latest.stories.length} 与历史档案无实质重复</span></div>
+      <div class="hero-copy"><p class="eyebrow">每日思想简报 · Daily Thought Briefing</p><h1>把今天的文化新闻，变成明天的思考素材</h1><p>每天 5 个值得停留的故事，沿着艺术人文、社会科学与女性主义三条线索展开。</p><a class="button" data-analytics-event="briefing_opened" data-analytics-target="${escapeHtml(latest.date)}" href="briefings/${latest.date}/index.html">阅读今日简报 →</a><span class="unique">✓ ${latest.uniqueCount}/${latest.stories.length} 与历史档案无实质重复</span></div>
       <div class="hero-art"><img src="ivory-botanical-archive.png" alt="森林绿色植物标本风档案插图"><span>${escapeHtml(latest.displayDate)}<br>No.${escapeHtml(latest.issueNo)}</span></div>
     </section>
     <section class="section frame" id="today"><header class="section-title"><div><p class="eyebrow">Today's Index</p><h2>今日五则</h2></div><p>${escapeHtml(latest.theme)}</p></header>
-      <div class="toolbar"><button class="active" data-filter="全部">全部</button>${scopes.map((scope) => `<button data-filter="${escapeHtml(scope.name)}">${escapeHtml(scope.name)}</button>`).join("")}<label><span>搜索</span><input id="story-search" type="search" placeholder="人物、作品或议题"></label></div>
+      <div class="toolbar"><button class="active" data-analytics-event="filter_applied" data-analytics-target="全部" data-filter="全部">全部</button>${scopes.map((scope) => `<button data-analytics-event="filter_applied" data-analytics-target="${escapeHtml(scope.name)}" data-filter="${escapeHtml(scope.name)}">${escapeHtml(scope.name)}</button>`).join("")}<label><span>搜索</span><input id="story-search" data-analytics-event="search_performed" data-analytics-target="archive-search" type="search" placeholder="人物、作品或议题"></label></div>
       <div class="story-grid">${cards}</div>
     </section>
     <section class="archive" id="archive"><div class="frame"><header class="section-title light"><div><p class="eyebrow">Daily Archive</p><h2>日刊档案</h2></div><p>每一期都是独立入口，也回到同一张不断生长的知识地图。</p></header><div class="archive-list">${archive}</div></div></section>
-    <section class="section frame" id="topics"><header class="section-title"><div><p class="eyebrow">Topic Index</p><h2>三条长期线索</h2></div><p>范围明确，但允许故事跨越不同标签。</p></header><div class="scope-grid">${scopes.map((scope, index) => `<article><span>0${index + 1}</span><h3>${escapeHtml(scope.name)}</h3><p>${escapeHtml(scope.text)}</p></article>`).join("")}</div></section>`;
+    <section class="section frame" id="topics"><header class="section-title"><div><p class="eyebrow">Topic Index</p><h2>三条长期线索</h2></div><p>范围明确，但允许故事跨越不同标签。</p></header><div class="scope-grid">${scopes.map((scope, index) => `<article><span>0${index + 1}</span><h3>${escapeHtml(scope.name)}</h3><p>${escapeHtml(scope.text)}</p></article>`).join("")}</div></section>
+    <section class="data-section" id="data" aria-labelledby="data-title"><div class="frame data-grid">
+      <div class="data-heading"><p class="eyebrow">Data / Analytics</p><h2 id="data-title">档案如何观察自己的使用</h2><p>这里只公开测量边界，不展示尚不存在的访问量，也不把阅读质量压缩成停留时长。</p></div>
+      <dl class="data-status" aria-label="当前分析状态"><div><dt>Provider</dt><dd>None</dd></div><div><dt>Signals</dt><dd>搜索、筛选、打开日刊</dd></div><div><dt>Privacy</dt><dd>无 Cookie、无持久存储、无身份、无原始搜索文本</dd></div></dl>
+      <p class="data-note">事件契约已经就绪；只有在明确数据来源、会话定义、保留期限与使用目的之后，才会接入分析供应商。<a href="ivory-site-manifest.json">查看机器可读 manifest →</a></p>
+    </div></section>`;
 
   return shell({
     title: "首页",
@@ -236,6 +243,7 @@ function issuePage(briefing) {
 }
 
 const styles = await readFile(join(root, "scripts/github-pages.css"), "utf8");
+const dataStyles = await readFile(join(root, "scripts/github-pages-data.css"), "utf8");
 const client = await readFile(join(root, "scripts/github-pages.js"), "utf8");
 const hubStyles = await readFile(join(root, "scripts/github-pages-hub.css"), "utf8");
 
@@ -250,7 +258,10 @@ await writeFile(join(pagesRoot, "hub.css"), hubStyles);
 await writeFile(join(pagesRoot, "404.html"), root404Page());
 await writeFile(join(output, "index.html"), homePage());
 await writeFile(join(output, "styles.css"), styles);
+await writeFile(join(output, "data.css"), dataStyles);
 await writeFile(join(output, "site.js"), client);
+await copyFile(join(root, "public/ivory-analytics.js"), join(output, "ivory-analytics.js"));
+await copyFile(join(root, "public/ivory-site-manifest.json"), join(output, "ivory-site-manifest.json"));
 await writeFile(join(output, "404.html"), shell({ title: "页面未找到", description: "页面未找到", prefix: "./", body: '<section class="not-found frame"><p class="eyebrow">404</p><h1>这张档案卡还不存在</h1><a class="button" href="./index.html">返回首页</a></section>' }));
 await copyFile(join(root, "public/favicon.svg"), join(output, "favicon.svg"));
 await copyFile(join(root, "public/ivory-botanical-archive.png"), join(output, "ivory-botanical-archive.png"));
