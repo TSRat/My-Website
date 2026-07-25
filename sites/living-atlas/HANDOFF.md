@@ -355,8 +355,8 @@
 
 ### Completed
 
-- 新增 `007 / SARTRE · NAUSEA GUIDE` 与
-  `006 / EXISTENTIALISM IS A HUMANISM` 两个 `published` 条目。
+- 新增 `009 / SARTRE · NAUSEA GUIDE` 与
+  `008 / EXISTENTIALISM IS A HUMANISM` 两个 `published` 条目。
 - 链接分别使用 `../SARTRE-NAUSEA-GUIDE/` 与
   `../EXISTENTIALISM-HUMANISM-GUIDE/`。
 - 缩略图来自实际迁移镜像的 1440 × 900 浏览器首屏，不使用占位图。
@@ -365,13 +365,30 @@
 
 ### Modified files
 
-- `THE-LIVING-ATLAS/content-registry.js`
-- `THE-LIVING-ATLAS/assets/thumb-sartre.png`
-- `THE-LIVING-ATLAS/assets/thumb-existentialism.png`
-- `THE-LIVING-ATLAS/TECH.md`
-- `THE-LIVING-ATLAS/HANDOFF.md`
+- `sites/living-atlas/content-registry.js`
+- `sites/living-atlas/assets/thumb-sartre.png`
+- `sites/living-atlas/assets/thumb-existentialism.png`
+- `sites/living-atlas/TECH.md`
+- `sites/living-atlas/HANDOFF.md`
 
 ### Verification
 
 - 根迁移 handoff 记录 targeted test、Pages build / validation 与浏览器 smoke。
 - Antigravity 扩展 Living Atlas 列表、搜索、双语与视觉 QA：Pending。
+
+## 2026-07-25 · Parent archive navigation
+
+- Added `Website Archive` / `网站总入口` links to the English and Chinese
+  desktop navigation and mobile menu.
+- Links use `../`, preserving the `/My-Website/THE-LIVING-ATLAS/` deployment
+  contract and both local/Pages behavior.
+- The root archive card reuses `assets/hero-kandinsky.jpg` as its full-bleed
+  representative cover.
+- Regression tests verify both language links; desktop/mobile browser smoke
+  passed with no broken images or horizontal overflow.
+- Branch: `codex/hub-image-covers`; implementation commit
+  `77eb3c3a2e3d2a4e344b8536b3ebaf44e45626d4`.
+- Exact English preview:
+  <https://raw.githack.com/TSRat/My-Website/77eb3c3a2e3d2a4e344b8536b3ebaf44e45626d4/THE-LIVING-ATLAS/index.html>.
+- PR: <https://github.com/TSRat/My-Website/pull/22>; merged.
+- Extended QA remains with Antigravity.

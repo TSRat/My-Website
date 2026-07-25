@@ -26,7 +26,7 @@
   "hub": {
     "order": 1,
     "className": "enheduanna",
-    "artLabel": "004",
+    "cover": "hub-cover.jpg",
     "eyebrow": "DAUGHTERS OF TIME · 004",
     "description": "从乌尔神庙、流放与伊南娜赞歌出发，认识公主、祭司、作者与先驱恩赫杜安娜。",
     "metadata": [["时代", "约公元前23世纪"], ["地点", "美索不达米亚 · 乌尔"]]

@@ -84,3 +84,12 @@ npm run validate:pages
 - Implementation commit: `28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb`.
 - Exact-commit Preview: <https://raw.githack.com/TSRat/My-Website/28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb/ENHEDUANNA/index.html>.
 - Merge: not authorized and not performed.
+
+## 2026-07-25 · Website Archive cover
+
+- Added `public/hub-cover.jpg`, a 1600px web derivative of the creator-owned
+  `Women Story / Enheduanna / 封面2` artwork.
+- `site.config.json` now exposes that asset to the parent Website Archive.
+- The image is documented as creator artwork, not historical evidence.
+- Pages build, asset validation, tests, lint, and desktop/mobile browser smoke
+  passed on `codex/hub-image-covers`; extended QA remains with Antigravity.

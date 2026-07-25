@@ -25,7 +25,7 @@
   "hub": {
     "order": 3,
     "className": "hypatia",
-    "cover": "assets/hypatia-cover.png",
+    "cover": "assets/hub-cover.jpg",
     "eyebrow": "DAUGHTERS OF TIME · 001",
     "description": "从教师、哲学家与公共人物出发，在古代史料与后世塑造之间重新认识希帕蒂娅。",
     "metadata": [["时代", "约 350/370—415"], ["地点", "亚历山大里亚"]]

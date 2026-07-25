@@ -25,7 +25,7 @@
   "hub": {
     "order": 9,
     "className": "existentialism",
-    "artLabel": "E",
+    "cover": "hub-cover.png",
     "eyebrow": "PHILOSOPHY ARGUMENT MAP",
     "description": "面向初学者的讲演导读：存在先于本质、自由、责任、行动与争议。",
     "metadata": [["类型", "论证地图"], ["阅读时长", "约 20 分钟"]]

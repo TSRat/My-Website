@@ -107,3 +107,10 @@ Primary stylesheet: `sites/enheduanna/globals.css`
 - This is a design target only. It must not be copied into the compiled mirror
   until a reproducible source build or an explicitly authorized reconstruction
   exists.
+
+## Website Archive cover
+
+`public/hub-cover.jpg` is a web-optimized derivative of the creator-owned
+`Women Story / Enheduanna` cover artwork (`封面2`). It is used only as the
+decorative image for this site's card in the parent Website Archive. It is
+creator artwork, not a historical portrait or evidentiary image.
