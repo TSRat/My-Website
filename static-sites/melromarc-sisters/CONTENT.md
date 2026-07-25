@@ -1,8 +1,8 @@
 # Melromarc Sisters content guide
 
-- Last audited: 2026-07-19
+- Last audited: 2026-07-25
 - Project: Melromarc 姐妹故事
-Primary published content: `MELROMARC-SISTERS/index.html` and `assets/page-Wf3IdOaW.js`
+Primary content: `static-sites/melromarc-sisters/content.ts`
 
 ## Project theme
 

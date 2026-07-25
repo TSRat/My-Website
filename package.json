@@ -8,6 +8,8 @@
   "scripts": {
     "build:pages": "node scripts/build-github-pages.mjs",
     "validate:pages": "node scripts/validate-pages-assets.mjs",
+    "dev:melromarc": "vite --config static-sites/melromarc-sisters/vite.config.ts",
+    "build:melromarc": "node scripts/build-maintainable-site.mjs melromarc-sisters",
     "dev:enheduanna": "vite --config static-sites/enheduanna/vite.config.ts",
     "build:enheduanna": "node scripts/build-maintainable-site.mjs enheduanna",
     "install:ci": "bash scripts/install-ci.sh",

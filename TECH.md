@@ -1,6 +1,6 @@
 # 全局技术与部署说明
 
-- Last audited: 2026-07-19
+- Last audited: 2026-07-25
 - Repository: `TSRat/My-Website`
 Default branch: `main`
 
@@ -39,7 +39,7 @@ Default branch: `main`
 | `/My-Website/IVORY-ARCHIVE/` | 根据 `app/briefings.ts` 生成，图片来自 `public/` | `app/`、`public/`、`scripts/github-pages.css/js` | `docs/IVORY-ARCHIVE/index.html`（构建时生成） |
 | `/My-Website/ENHEDUANNA/` | `npm run build:enheduanna` 从 `static-sites/enheduanna/` 生成已提交的 `ENHEDUANNA/`，Pages 再复制镜像 | React / TSX / CSS + Vite | `ENHEDUANNA/index.html` |
 | `/My-Website/HYPATIA/` | 直接复制 `HYPATIA/` | 当前目录中的 HTML/CSS/JS | `HYPATIA/index.html` |
-| `/My-Website/MELROMARC-SISTERS/` | 直接复制 `MELROMARC-SISTERS/` | 当前仓库只能确认已生成 artifact | `MELROMARC-SISTERS/index.html` |
+| `/My-Website/MELROMARC-SISTERS/` | 直接复制 `MELROMARC-SISTERS/` | `static-sites/melromarc-sisters/`；`npm run build:melromarc` 更新镜像 | `MELROMARC-SISTERS/index.html` |
 
 根目录的 `index.html`、`hub.css`、`briefings/` 和 `IVORY-ARCHIVE/` 是已提交的静态文件或历史快照。当前 Pages build 不读取根 `index.html`、`hub.css` 或 `IVORY-ARCHIVE/`；总入口和 IVORY 会在 `docs/` 中重新生成。
 
@@ -52,6 +52,10 @@ Default branch: `main`
 | `npm run dev` | 运行 Vite/Vinext 开发服务器 | 本地服务；Wrangler 日志留在忽略目录 |
 | `npm run build:pages` | 生成 GitHub Pages 多站点 artifact | `docs/` |
 | `npm run validate:pages` | 检查 `docs/` 内 HTML/CSS 的本地资源引用 | 只读；缺失或越界引用时退出失败 |
+| `npm run dev:enheduanna` | 运行 Enheduanna Vite 开发服务器 | 本地服务 |
+| `npm run build:enheduanna` | 从可读 React/Vite 源码更新 Enheduanna 镜像 | `.site-build/enheduanna/`、`ENHEDUANNA/` |
+| `npm run dev:melromarc` | 运行 Melromarc Vite 开发服务器 | 本地服务 |
+| `npm run build:melromarc` | 从可读 React/Vite 源码更新 Melromarc 镜像 | `.site-build/melromarc-sisters/`、`MELROMARC-SISTERS/` |
 | `npm run install:ci` | 在 Sites 隔离环境中执行受限的 `npm ci` | `node_modules/`、`.sites-runtime/` |
 | `npm run build` | 运行受限时长 Vinext build，并验证 Worker artifact | `dist/` |
 | `npm run start` | 启动 Vinext 生产服务 | 本地服务 |
@@ -158,9 +162,14 @@ Do not replace the existing GitHub Actions deployment architecture with
 
 ### Melromarc Sisters
 
-- 图片位于 `MELROMARC-SISTERS/images/` 和 `images/gallery/`。
-- JavaScript/CSS 位于 `MELROMARC-SISTERS/assets/`，文件名带 content hash。
-- `index.html` 引用的文件名、CSS query string 与 module preload 必须保持一致。
+- 源图片位于 `static-sites/melromarc-sisters/public/images/` 和
+  `public/images/gallery/`。
+- 故事、图像与命运分支记录集中在
+  `static-sites/melromarc-sisters/content.ts`；交互在 `page.tsx`。
+- `npm run build:melromarc` 生成带 hash 的 JavaScript/CSS，并更新
+  `MELROMARC-SISTERS/` 发布镜像。
+- 旧 Vinext bundle 在镜像中保留作回滚材料，但新入口不再引用它们；
+  不要直接编辑或删除。
 
 ### 通用规则
 
@@ -199,18 +208,10 @@ git diff --stat
 
 完整的多站点、多路由、desktop / tablet / mobile、控制台 / 网络、交互、键盘可访问性和截图回归检查交给 Antigravity。Antigravity 报告缺失不阻止 Codex commit、PR 或创作者明确授权的 merge；交接中必须标记其状态，且不能把基本 smoke check 写成完整视觉验证。
 
-## Known technical gaps
-
-- 已审计当前全部 5 个 remote branches；其中没有 Hypatia 的完整上游框架源码。是否存在于仓库外仍待所有者确认。
-- 已审计当前全部 5 个 remote branches；其中没有 Melromarc Sisters 的完整未编译源码。是否存在于仓库外仍待所有者确认。
-- `IVORY-ARCHIVE/` 是旧快照，容易被误认为当前源文件。
-- 根目录存在若干静态快照文件，当前 Pages build 不读取它们；删除策略尚未由创作者确认。
-
-以上缺口应通过补充可重复构建流程解决，而不是通过移动目录或改变公开 URL 解决。
-
 ## Maintainable static-site builder
 
-`scripts/build-maintainable-site.mjs` 是源码工程到既有 Pages 镜像的共享发布器。它按站点 ID：
+`scripts/build-maintainable-site.mjs` 是 Enheduanna 与 Melromarc 从源码
+工程到既有 Pages 镜像的共享发布器。它按站点 ID：
 
 1. 使用站点自己的 Vite 配置构建到被忽略的 `.site-build/<site-id>/`。
 2. 检查临时入口已经引用编译后的哈希资源，而不是 `.tsx`。
@@ -222,7 +223,25 @@ git diff --stat
 ```bash
 npm run dev:enheduanna
 npm run build:enheduanna
+npm run dev:melromarc
+npm run build:melromarc
 ```
+
+共享的是构建、镜像和验证约定，不是两个站点的视觉、内容模型或组件。
+
+`scripts/recover-melromarc-source.mjs` 是一次性、可审计的来源恢复工具：
+它从 2026-07-25 接受的旧 active bundle 读取 13 条故事、18 条图像记录、
+6 个筛选项和 5 个命运阶段，并复制当时资源。日常维护不需要再次运行它。
+
+## Known technical gaps
+
+- 已审计当前全部 5 个 remote branches；其中没有 Hypatia 的完整上游框架源码。是否存在于仓库外仍待所有者确认。
+- Enheduanna 与 Melromarc 的原 ChatGPT Sites 编辑器未提供可用源码导出；
+  当前可维护工程是依据接受的部署基线重建，不应被描述为原始 Sites 源项目。
+- `IVORY-ARCHIVE/` 是旧快照，容易被误认为当前源文件。
+- 根目录存在若干静态快照文件，当前 Pages build 不读取它们；删除策略尚未由创作者确认。
+
+以上缺口应通过补充可重复构建流程解决，而不是通过移动目录或改变公开 URL 解决。
 
 ## Reusable website migration starter
 

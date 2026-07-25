@@ -19,7 +19,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 | Enheduanna | REFACTOR | A — Editorial | Maintainable rebuild merged in PR #17 | Antigravity extended visual QA remains optional follow-up |
 | Hildegard | PRESERVE | A — Editorial | Six-stage implementation merged in PR #16 | Antigravity deterministic-section visual QA remains optional follow-up |
 | Hypatia | REFACTOR | A — Editorial | Six-stage implementation merged in PR #16 | Antigravity deterministic-section visual QA remains optional follow-up |
-| Melromarc Sisters | REBUILD | B — Interactive | Audited; rebuild blocked | Complete upstream source and reproducible build are not present |
+| Melromarc Sisters | REBUILD | B — Interactive | Maintainable reconstruction merged in PR #18 | Antigravity focus/visual QA remains optional follow-up |
 
 Counts: 6 audited; 2 PRESERVE; 3 REFACTOR; 1 REBUILD.
 
@@ -33,10 +33,10 @@ copies only the contracts its tier needs and preserves its own visual system.
 | 1 | IVORY ARCHIVE | Manifest, provider-neutral events, Data entry, renderer parity and Antigravity screenshot QA | Implemented and merged in PR #15 |
 | 2 | Hypatia + Hildegard | Manifest, stable IDs, Data entry, source/citation events and Antigravity editorial browser checks | Implemented and merged in PR #16 |
 | 3 | Enheduanna | Tier A source, Data entry and repeatable mirror build | Implemented and merged in PR #17 |
-| 4 | Melromarc Sisters | Tier B/Rebuild contract after upstream source is available | Confirm complete maintainable source and build |
+| 4 | Melromarc Sisters | Tier B source, Data entry, storage boundary and repeatable mirror build | Implemented and merged in PR #18 |
 
-This ordering starts with maintainable sources. Enheduanna has cleared its
-source/build gate; Melromarc remains blocked by source/build provenance.
+All four remaining migration batches are implemented and merged. Antigravity
+extended QA remains an optional follow-up rather than a merge blocker.
 
 ## Visual baseline and evidence
 
@@ -129,9 +129,9 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Target architecture:** Implemented: maintainable source emits the existing mirror without changing its public URL or visual contract.
 - **Shared-core adoption:** Focus, skip navigation, responsive constraints, caption/citation semantics, motion accessibility, and source/mirror QA.
 - **Site-specific theme:** Preserve the spine, paper/cobalt/red/gold tension, archaeological dossier structure, dark transitions, and evidence labels.
-- **Migration status:** All six stages are implemented at review depth; Stage 5 now has a reproducible build and reviewable mirror, and Stage 6 has a provider-none Data entry without invented metrics.
+- **Migration status:** All six stages are implemented and merged in PR #17; Stage 5 has a reproducible build and Stage 6 has a provider-none Data entry without invented metrics.
 - **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
-- **Preview / PR URL:** [Exact-commit reconstructed preview](https://raw.githack.com/TSRat/My-Website/28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb/ENHEDUANNA/index.html); [Draft PR #17](https://github.com/TSRat/My-Website/pull/17).
+- **Preview / PR URL:** [Exact-commit reconstructed preview](https://raw.githack.com/TSRat/My-Website/28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb/ENHEDUANNA/index.html); [PR #17](https://github.com/TSRat/My-Website/pull/17).
 - **Remaining risks:** Antigravity still needs the extended deterministic-section visual comparison; chapter-number ordering still needs creator confirmation.
 
 ## Hildegard
@@ -193,34 +193,33 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## Melromarc Sisters
 
 - **Site / slug / live URL:** Melromarc Sisters; `MELROMARC-SISTERS`; <https://tsrat.github.io/My-Website/MELROMARC-SISTERS/>
-- **Source path:** Current deploy artifact in `MELROMARC-SISTERS/`; complete upstream source is not confirmed.
+- **Source path:** Maintained source in `static-sites/melromarc-sisters/`; generated Pages mirror in `MELROMARC-SISTERS/`.
 - **Status:** Public fan-created multi-story archive.
 - **Product purpose:** Explore multiple possible lives and critical story branches for Malty and Melty while separating canon reference from fan-created premise.
 - **Primary audience and goal:** Readers familiar with the source franchise; enter the story archive and open a specific or random branch.
 - **Major routes and navigation:** One generated static entry with story navigation, random-story dialog, and character/story sections.
 - **Current visual direction:** Midnight navy story archive with red/blue sister polarity, gold details, anime character artwork, and cinematic framing.
 - **Typography / color / layout:** Serif story display, compact archive metadata, dark navy surfaces, red and sister-blue accents, warm gold support; symmetrical desktop hero becomes a layered mobile composition.
-- **Framework / language / rendering:** Vinext/React-generated static HTML with hashed JavaScript/CSS and local images.
-- **Content/data model:** Compiled into the artifact; readable upstream content source is not present in the repository.
-- **State/interactivity:** Random-story dialog opens and closes correctly; body scroll locking is restored on close.
-- **Build system / deployment:** No confirmed reproducible upstream build. Pages copies the artifact unchanged.
-- **Analytics:** No provider detected. Candidate neutral events: `story_opened`, `random_story_opened`, `character_path_opened`.
-- **Tests / CI:** Pages asset validation only; no source tests or reproducible project build.
+- **Framework / language / rendering:** React 19, TypeScript, Vite, client-rendered static application with local images.
+- **Content/data model:** `content.ts` owns 13 structured stories, 18 gallery records, six filter labels, and five fate-map stages.
+- **State/interactivity:** Search, filters, random story, saved stories, reader, Escape/backdrop close, scroll locking, fate-map buttons, mobile navigation, and gallery links are readable source.
+- **Build system / deployment:** `npm run build:melromarc` uses the shared maintainable-site builder to update the committed mirror; Pages still copies that mirror unchanged.
+- **Analytics:** No provider in the deployed artifact. A non-deployed provider-neutral proposal separates analytics privacy from the existing functional `melromarc-saved-stories` localStorage key and defines search-length, filter, random/story/path, save, gallery-source, and Data entry events.
+- **Tests / CI:** Targeted tests cover build/source contracts, 13 story IDs, five stages, functional storage, source/mirror asset equality, absence of old runtime markers from the active entry, and retained rollback-bundle hashes.
 - **Accessibility state:** Landmarks, one `h1`, button names, and image alternatives are present. Skip navigation, dialog focus trapping/return, and keyboard traversal need verification.
 - **Responsive state:** Accepted first folds at all three viewports show no horizontal overflow.
 - **Existing Figma:** Melromarc theme variables, editable theme anatomy, shared components, representative desktop/mobile screens, and 3-viewport baselines.
-- **Classification:** **REBUILD** — the rendered identity is recognizable, but the missing upstream source prevents safe, maintainable evolution.
-- **Target architecture:** Recover the original source or explicitly rebuild a maintainable React/static application that preserves the URL, recognizable art direction, content boundaries, and key dialog behavior.
+- **Classification:** **REBUILD** — original Sites source export was unavailable, so the accepted artifact was reconstructed as a maintainable project.
+- **Target architecture:** Implemented React/Vite source plus committed uppercase Pages mirror, preserving the URL, art direction, content boundaries, and key interaction contracts.
 - **Shared-core adoption:** Accessible dialog, focus return, skip navigation, routing/state conventions, asset validation, analytics event contract, and screenshot QA.
 - **Site-specific theme:** Preserve the midnight archive, sister color polarity, character artwork, critical framing, and fan/canon distinctions.
-- **Migration status:** Audit complete; implementation blocked pending upstream source or explicit rebuild authorization.
-- **Figma URL:** <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
-- **Preview / PR URL:** Local artifact preview verified; migration preview and PR blocked.
-- **Remaining risks:** Root-relative duplicate asset requests produce 404s in local logs even though relative assets load; direct hashed-bundle edits would be unreproducible.
+- **Migration status:** All six stages are implemented and merged in PR #18.
+- **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
+- **Preview / PR URL:** [Exact-commit reconstructed preview](https://raw.githack.com/TSRat/My-Website/edb5cd20374147c8738d4340374c7b90e930bede/MELROMARC-SISTERS/index.html); [PR #18](https://github.com/TSRat/My-Website/pull/18).
+- **Remaining risks:** Client rendering does not reproduce former Vinext RSC/SSR metadata; dialog focus trap/return and full visual comparison remain for Antigravity.
 
 ## Migration queue
 
-Living Atlas is now the merged reference implementation through PR #14.
-The authoritative remaining order is the four-batch table near the top of this
-file: IVORY ARCHIVE; Hypatia + Hildegard; Enheduanna after build recovery;
-Melromarc after source recovery or explicit rebuild approval.
+Living Atlas is the merged reference implementation through PR #14. IVORY,
+Hypatia, Hildegard, Enheduanna, and Melromarc now also have merged six-stage
+implementations through PRs #15–#18.

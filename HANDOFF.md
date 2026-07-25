@@ -300,6 +300,53 @@ python3 -m http.server 8000 --directory docs
 
 - Skill structure validation: Passed — 两个技能均通过 `quick_validate.py`。
 
+## 2026-07-25: Melromarc Sisters six-stage readiness
+
+### Current target
+
+Complete every safe migration stage while preserving the current artifact and
+refusing to treat minified output as editable upstream source.
+
+### Completed
+
+- Added a six-stage readiness handoff, proposed machine-readable contract, and
+  active-artifact hash baseline under `web/sites/melromarc-sisters/`.
+- Reused the editable Figma migration frame at node `27:2`.
+- Added tests for the blocker, active graph and hashes, all 13 story IDs, and
+  `melromarc-saved-stories` compatibility.
+- Updated the registry and project documentation without changing story
+  content, critical position, HTML, bundles, images, workflow, build map, or
+  public URL.
+
+### Blocker and decision
+
+Stage 5 remains blocked. The repository contains a deployable artifact but no
+complete source or reproducible build. Hand-editing prerendered HTML and
+minified bundles risks hydration mismatch and cannot become the reusable system
+the user requested. The next authorized action must be upstream recovery or an
+explicitly approved maintainable rebuild.
+### Verification
+
+- Pages build and validation passed: 355 local references across 43 HTML/CSS
+  files.
+- Full tests passed: 12/12.
+- Lint completed with 0 errors and 24 pre-existing warnings.
+- Browser baseline at 1280 and 390 CSS pixels found 13 story cards, 18 gallery
+  figures, 0 broken images, and no horizontal overflow.
+- Random story, reader open/close, and body-scroll restoration passed.
+- Saved-state reload remains assigned to Antigravity because the in-app browser
+  inspection context does not expose localStorage.
+
+### Delivery
+
+- Branch: `codex/melromarc-six-stage-readiness`.
+- Readiness commit: `bc06df1a6786171ce1be8b6516a2f4c70fa40ed5`.
+- Unchanged artifact baseline:
+  <https://raw.githack.com/TSRat/My-Website/bc06df1a6786171ce1be8b6516a2f4c70fa40ed5/MELROMARC-SISTERS/index.html>
+- Draft PR: <https://github.com/TSRat/My-Website/pull/18>
+- The remote page was opened and verified, but it intentionally contains no
+  Stage 5 migration changes.
+
 ## 2026-07-25: Enheduanna six-stage readiness
 
 ### Current target
@@ -791,6 +838,76 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 - Branch: `codex/living-atlas-template-data`
 - PR: <https://github.com/TSRat/My-Website/pull/14>
 - Merge: explicitly authorized by the creator; perform after configuration validation and push.
+
+## 2026-07-25: Melromarc Sisters maintainable reconstruction
+
+### Current target
+
+Rebuild Melromarc Sisters as a maintainable source project after the original
+ChatGPT Work conversation and Sites page were found but no source export was
+available. Preserve the accepted site content, identity, interactions, public
+URL, and Pages deployment architecture.
+
+### Completed
+
+- Recovered 13 story records, 18 gallery records, six filter labels, five
+  fate-map stages, and the complete accepted stylesheet from the former active
+  artifact into readable source.
+- Added `static-sites/melromarc-sisters/` as the authoritative React/TypeScript/
+  Vite project.
+- Added `npm run dev:melromarc` and `npm run build:melromarc`.
+- Added the shared maintainable-site build convention already used by the
+  independent Enheduanna Draft PR #17: ignored staging followed by a committed
+  uppercase Pages mirror.
+- Preserved `melromarc-saved-stories`, search, filters, random story, reader,
+  fate map, gallery, content boundaries, feminist critique, and site identity.
+- Added a visible provider-none Data entry without activating analytics.
+- Retained old unreferenced Vinext bundles as rollback material and added
+  source/mirror/hash tests.
+- Moved project documentation to the authoritative source directory and
+  updated the registry, platform audit, technical map, and Agent routing rule.
+
+### Important decisions
+
+- This is an authorized reconstruction from the accepted deployment baseline,
+  not a claim that the original Sites source was exported.
+- Future content and UI changes belong in
+  `static-sites/melromarc-sisters/`; `MELROMARC-SISTERS/` is generated.
+- Shared infrastructure does not imply shared visual identity.
+- No old bundle, public asset, route, or deployment workflow was deleted.
+- Draft PR #18 remains unmerged; creator review is required.
+
+### Verification
+
+- `npm run build:melromarc`: passed; 18 modules.
+- `node --test tests/melromarc-readiness.test.mjs`: passed; 4/4.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed; 327 references across 44 HTML/CSS files at
+  the implementation checkpoint.
+- Browser smoke at 1280px and 390px: no broken images, no horizontal overflow,
+  Data visible, no console errors.
+- Interactions: filter, random reader, save storage, dialog close, and body
+  scroll restore passed.
+- Antigravity extended visual/accessibility matrix: not run by design.
+
+### Remaining
+
+- The reconstruction is client-rendered and does not preserve old Vinext
+  RSC/SSR metadata.
+- Dialog focus trap/return remains for Antigravity.
+- `npm run lint`: passed with 0 errors and 24 existing warnings outside this
+  project.
+- `git diff --check`: passed.
+- The exact-commit remote preview passed with 13 stories, 18 gallery figures,
+  Data visible, no broken images, no overflow, and no console errors.
+
+### Delivery
+
+- Enheduanna: [Draft PR #17](https://github.com/TSRat/My-Website/pull/17),
+  [exact-commit preview](https://raw.githack.com/TSRat/My-Website/28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb/ENHEDUANNA/index.html).
+- Melromarc: [Draft PR #18](https://github.com/TSRat/My-Website/pull/18),
+  [exact-commit preview](https://raw.githack.com/TSRat/My-Website/edb5cd20374147c8738d4340374c7b90e930bede/MELROMARC-SISTERS/index.html).
+- Merge: not performed.
 
 ## 2026-07-25: Enheduanna maintainable source reconstruction
 
