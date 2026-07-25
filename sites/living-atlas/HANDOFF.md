@@ -356,5 +356,9 @@
   representative cover.
 - Regression tests verify both language links; desktop/mobile browser smoke
   passed with no broken images or horizontal overflow.
-- Branch: `codex/hub-image-covers`; exact preview and Draft PR remain to be
-  produced. Extended QA remains with Antigravity.
+- Branch: `codex/hub-image-covers`; implementation commit
+  `77eb3c3a2e3d2a4e344b8536b3ebaf44e45626d4`.
+- Exact English preview:
+  <https://raw.githack.com/TSRat/My-Website/77eb3c3a2e3d2a4e344b8536b3ebaf44e45626d4/THE-LIVING-ATLAS/index.html>.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/22>; not merged.
+- Extended QA remains with Antigravity.

@@ -1055,5 +1055,9 @@ the parent Website Archive from both Living Atlas language variants.
 
 - Branch: `codex/hub-image-covers`.
 - Base: merged `main` at `518d7f9`.
-- Commit, push, exact-commit preview, and Draft PR are the remaining delivery
-  steps for this branch; automatic merge is not authorized.
+- Implementation commit: `77eb3c3a2e3d2a4e344b8536b3ebaf44e45626d4`.
+- Push: completed to `origin/codex/hub-image-covers`.
+- Verified unmerged archive preview:
+  <https://htmlpreview.github.io/?https://gist.githubusercontent.com/TSRat/0bf430d6576faa8f7708da3bb4f7b7ab/raw/4dcc04246de17dfd7c89671f2b70992fb959bdee/website-archive-preview.html>.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/22>.
+- Merge: not performed; automatic merge remains prohibited.
