@@ -22,6 +22,8 @@
 | Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；当前 Pages 输入镜像在 `ENHEDUANNA/` | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) | REFACTOR | 已审计；缺少可重复源码 → 镜像构建，实施阻塞 |
 | Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `HILDEGARD/` | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 已审计；暂未开始实现迁移 |
 | Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `HYPATIA/` | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) | REFACTOR | 已审计；等待独立的静态资产 / 响应式批次 |
+| Sartre / 《恶心》导读 | 面向初读者的互动阅读导览，连接故事、人物、偶然性与阅读实验 | 源码在 `sites/sartre-nausea-guide/`；Pages 输入镜像在 `SARTRE-NAUSEA-GUIDE/` | [《恶心》：存在为何令人眩晕](https://tsrat.github.io/My-Website/SARTRE-NAUSEA-GUIDE/) | REFACTOR | 六阶段迁移批次进行中；独立分支预览与 PR 待生成 |
+| Existentialism / 《存在主义是一种人道主义》导读 | 面向初学者的讲演论证地图，保留自由、责任、行动与争议 | 源码在 `sites/existentialism-humanism-guide/`；Pages 输入镜像在 `EXISTENTIALISM-HUMANISM-GUIDE/` | [存在主义是一种人道主义](https://tsrat.github.io/My-Website/EXISTENTIALISM-HUMANISM-GUIDE/) | PRESERVE | 六阶段迁移批次进行中；独立分支预览与 PR 待生成 |
 | Melromarc Sisters | Malty 与 Melty 的非官方多重故事档案 | `MELROMARC-SISTERS/` | [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/) | REBUILD | 已审计；完整上游源码与可重复构建未确认 |
 
 组合级详细审计见 [`web/portfolio-audit.md`](./web/portfolio-audit.md)，六阶段平台标准见 [`web/platform-standard.md`](./web/platform-standard.md)。共享 Figma 设计源为 [TSRat Web Design System · Portfolio Normalization](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt)。
@@ -31,6 +33,7 @@
 - `IVORY-ARCHIVE/` 是已提交的历史静态快照，最后一次目录级更新停在第 02 期。当前 GitHub Pages 版本由 `app/briefings.ts` 和 `public/` 在 Actions 中重新生成；不要把旧快照当作主要内容源。
 - `static-sites/enheduanna/` 保存可读的 TSX/CSS 源码，`ENHEDUANNA/` 保存当前被 Pages workflow 直接复制的构建镜像。仓库暂时没有把两者自动同步的 npm script。
 - `HYPATIA/` 是可直接发布的 HTML/CSS/JavaScript 与资源目录；仓库中没有可确认的另一份完整上游应用源码。
+- `sites/sartre-nausea-guide/` 与 `sites/existentialism-humanism-guide/` 保存从 Sites 迁回的可维护源码；对应大写目录是经 `npm run sync:philosophy-sites` 刷新的静态 Pages 输入镜像。
 - `MELROMARC-SISTERS/` 是 Vinext/React 生成的静态 HTML、带哈希的 JavaScript/CSS 和图片；完整未编译源码位置无法从当前仓库确认。
 
 修改任何站点前，先阅读该项目的 `CONTENT.md`、`DESIGN.md`、`TECH.md` 和 `HANDOFF.md`。
@@ -49,9 +52,12 @@ My-Website/
 ├── public/                      # IVORY ARCHIVE 的图片和公共资源
 ├── scripts/                     # Pages 生成、构建与验证脚本
 ├── static-sites/enheduanna/     # Enheduanna 可读源码
+├── sites/                        # 从 Sites 迁回的可维护独立站源码
 ├── ENHEDUANNA/                  # Enheduanna 当前发布镜像
 ├── HYPATIA/                     # Hypatia 当前发布目录
 ├── HILDEGARD/                   # Hildegard 当前发布目录（Viriditas Codex）
+├── SARTRE-NAUSEA-GUIDE/         # Sartre 当前 Pages 输入镜像
+├── EXISTENTIALISM-HUMANISM-GUIDE/ # Existentialism 当前 Pages 输入镜像
 ├── MELROMARC-SISTERS/           # Melromarc 当前发布目录
 ├── IVORY-ARCHIVE/               # IVORY 的旧静态快照，不是当前 Pages 来源
 └── tests/                       # 当前应用构建后的 Node 测试
@@ -93,6 +99,12 @@ npm run dev
 npm run build:pages
 ```
 
+当两个哲学导读的源码发生变化时，先刷新其受版本控制的静态镜像：
+
+```bash
+npm run sync:philosophy-sites
+```
+
 生成结果位于被忽略的 `docs/`。如需本地查看完整多站点路径，可在仓库根目录运行：
 
 ```bash
@@ -112,6 +124,7 @@ npm run lint
 ```
 
 - `build:pages`：生成 GitHub Pages 的 `docs/` artifact。
+- `sync:philosophy-sites`：从两个哲学导读的 Next.js 源码执行静态导出，并重建 Pages 输入镜像。
 - `validate:pages`：检查生成页面中所有本地 HTML/CSS 资源引用，缺图、缺脚本、缺样式或越出 `docs/` 的路径会失败。
 - `build`：运行 Vinext 的受限时长构建并验证 Worker artifact。
 - `test`：再次运行 `build`，然后执行 `tests/rendered-html.test.mjs`。
@@ -126,7 +139,7 @@ npm run lint
 1. 推送到 `main`，或手动触发 workflow。
 2. `.github/workflows/publish-static-mirror.yml` 安装 Node 22 依赖。
 3. workflow 运行 `npm run build:pages`。
-4. `scripts/build-github-pages.mjs` 生成总入口与 IVORY ARCHIVE，并复制 `ENHEDUANNA/`、`HYPATIA/`、`HILDEGARD/`、`MELROMARC-SISTERS/`、`THE-LIVING-ATLAS/`。
+4. `scripts/build-github-pages.mjs` 生成总入口与 IVORY ARCHIVE，并复制 `ENHEDUANNA/`、`HYPATIA/`、`HILDEGARD/`、`SARTRE-NAUSEA-GUIDE/`、`EXISTENTIALISM-HUMANISM-GUIDE/`、`MELROMARC-SISTERS/`、`THE-LIVING-ATLAS/`。
 5. `npm run validate:pages` 检查生成页面的本地资源引用，workflow 再执行 Hypatia 关键文件 smoke checks。
 6. workflow 上传 `docs/`，再由 `actions/deploy-pages@v4` 发布。
 
@@ -159,6 +172,8 @@ npm run lint
 - Enheduanna：[`static-sites/enheduanna/`](./static-sites/enheduanna/)
 - Hypatia：[`HYPATIA/`](./HYPATIA/)
 - Hildegard：[`HILDEGARD/`](./HILDEGARD/)
+- Sartre / 《恶心》导读：[`sites/sartre-nausea-guide/`](./sites/sartre-nausea-guide/)
+- Existentialism 导读：[`sites/existentialism-humanism-guide/`](./sites/existentialism-humanism-guide/)
 - Melromarc Sisters：[`MELROMARC-SISTERS/`](./MELROMARC-SISTERS/)
 
 ## 工作原则

@@ -336,3 +336,33 @@
 - Exact English Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/index.html#worlds>
 - Exact Chinese Preview: <https://raw.githack.com/TSRat/My-Website/2b7fa13bef09cc9c1cfa68f4d705e732550cfacc/THE-LIVING-ATLAS/zh.html#worlds>
 - Merge: creator authorized PR #14 on 2026-07-24; perform after the validation-policy configuration commit is pushed.
+
+## 2026-07-25: Register two migrated philosophy guides
+
+### Current target
+
+把两份已完成基础六阶段迁移的萨特互动导读加入 Living Atlas 的唯一网站
+注册表，不改变 Living Atlas 的视觉系统或开放 Worlds 定义。
+
+### Completed
+
+- 新增 `007 / SARTRE · NAUSEA GUIDE` 与
+  `006 / EXISTENTIALISM IS A HUMANISM` 两个 `published` 条目。
+- 链接分别使用 `../SARTRE-NAUSEA-GUIDE/` 与
+  `../EXISTENTIALISM-HUMANISM-GUIDE/`。
+- 缩略图来自实际迁移镜像的 1440 × 900 浏览器首屏，不使用占位图。
+- Latest 新增“两份萨特互动导读完成迁移”记录。
+- 保留 Worlds 的含混性、现有站点编号和注册表驱动的自动计数。
+
+### Modified files
+
+- `THE-LIVING-ATLAS/content-registry.js`
+- `THE-LIVING-ATLAS/assets/thumb-sartre.png`
+- `THE-LIVING-ATLAS/assets/thumb-existentialism.png`
+- `THE-LIVING-ATLAS/TECH.md`
+- `THE-LIVING-ATLAS/HANDOFF.md`
+
+### Verification
+
+- 根迁移 handoff 记录 targeted test、Pages build / validation 与浏览器 smoke。
+- Antigravity 扩展 Living Atlas 列表、搜索、双语与视觉 QA：Pending。

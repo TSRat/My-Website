@@ -39,6 +39,8 @@ Default branch: `main`
 | `/My-Website/IVORY-ARCHIVE/` | 根据 `app/briefings.ts` 生成，图片来自 `public/` | `app/`、`public/`、`scripts/github-pages.css/js` | `docs/IVORY-ARCHIVE/index.html`（构建时生成） |
 | `/My-Website/ENHEDUANNA/` | 直接复制已提交的 `ENHEDUANNA/` | `static-sites/enheduanna/` 存在 TSX/CSS，但无自动同步 script | `ENHEDUANNA/index.html` |
 | `/My-Website/HYPATIA/` | 直接复制 `HYPATIA/` | 当前目录中的 HTML/CSS/JS | `HYPATIA/index.html` |
+| `/My-Website/SARTRE-NAUSEA-GUIDE/` | 直接复制已提交的 `SARTRE-NAUSEA-GUIDE/` | `sites/sartre-nausea-guide/` | `SARTRE-NAUSEA-GUIDE/index.html` |
+| `/My-Website/EXISTENTIALISM-HUMANISM-GUIDE/` | 直接复制已提交的 `EXISTENTIALISM-HUMANISM-GUIDE/` | `sites/existentialism-humanism-guide/` | `EXISTENTIALISM-HUMANISM-GUIDE/index.html` |
 | `/My-Website/MELROMARC-SISTERS/` | 直接复制 `MELROMARC-SISTERS/` | 当前仓库只能确认已生成 artifact | `MELROMARC-SISTERS/index.html` |
 
 根目录的 `index.html`、`hub.css`、`briefings/` 和 `IVORY-ARCHIVE/` 是已提交的静态文件或历史快照。当前 Pages build 不读取根 `index.html`、`hub.css` 或 `IVORY-ARCHIVE/`；总入口和 IVORY 会在 `docs/` 中重新生成。
@@ -51,6 +53,7 @@ Default branch: `main`
 | --- | --- | --- |
 | `npm run dev` | 运行 Vite/Vinext 开发服务器 | 本地服务；Wrangler 日志留在忽略目录 |
 | `npm run build:pages` | 生成 GitHub Pages 多站点 artifact | `docs/` |
+| `npm run sync:philosophy-sites` | 从两个哲学导读源码重建受版本控制的静态 Pages 输入镜像 | `SARTRE-NAUSEA-GUIDE/`、`EXISTENTIALISM-HUMANISM-GUIDE/` |
 | `npm run validate:pages` | 检查 `docs/` 内 HTML/CSS 的本地资源引用 | 只读；缺失或越界引用时退出失败 |
 | `npm run install:ci` | 在 Sites 隔离环境中执行受限的 `npm ci` | `node_modules/`、`.sites-runtime/` |
 | `npm run build` | 运行受限时长 Vinext build，并验证 Worker artifact | `dist/` |
@@ -118,9 +121,11 @@ Do not replace the existing GitHub Actions deployment architecture with
 - 从 `app/briefings.ts` 读取字面量数据，生成 IVORY 首页及每期详情页。
 - 从 `public/story-images/` 复制本期使用的图片。
 - 为旧 `/My-Website/briefings/<date>/` 路径生成到 IVORY 的 redirect。
-- 递归复制 `ENHEDUANNA/`、`HYPATIA/`、`MELROMARC-SISTERS/` 到 `docs/`。
+- 递归复制 `ENHEDUANNA/`、`HYPATIA/`、`SARTRE-NAUSEA-GUIDE/`、`EXISTENTIALISM-HUMANISM-GUIDE/`、`MELROMARC-SISTERS/` 到 `docs/`。
 
 `docs/` 已在 `.gitignore` 中，应该由 Actions 每次生成，不应成为另一个手工维护分支。
+
+两个哲学导读采用“可维护源码 + 已提交静态镜像”的明确双层结构。`scripts/sync-philosophy-site-mirrors.mjs` 使用源码的 Next.js 静态导出，再把入口中的本地资源改为相对路径，以同时兼容 GitHub Pages 子目录和 immutable commit preview。修改源码后必须运行同步命令，并同时检查源码与镜像 diff。
 
 ## Vite and base paths
 
@@ -133,6 +138,7 @@ Do not replace the existing GitHub Actions deployment architecture with
 - 根 404 页面在生成脚本中显式使用 `/My-Website/hub.css` 和 `/My-Website/`。
 - IVORY 的页面与资源通过相对路径生成。
 - Enheduanna、Hypatia、Melromarc 的入口使用 `./assets/...` 或 `./images/...` 相对路径。
+- 两个哲学导读的静态镜像使用 `./_next/...` 与项目内相对资源；源码构建时可通过 `SITE_BASE_PATH` 验证任意子路径。
 - 子目录名称为大写；GitHub Pages 对大小写敏感。
 
 ## Assets
@@ -154,6 +160,13 @@ Do not replace the existing GitHub Actions deployment architecture with
 - 资源集中在 `HYPATIA/assets/`。
 - `HYPATIA/index.html` 实际引用 `hypatia-site.css`、`hypatia-v2.css` 和 `hypatia-refresh.js`。
 - workflow 还验证多张指定图片和 `lake-v11` / `interactive-v11` 版本标记。
+
+### Philosophy guides
+
+- 可维护源码分别位于 `sites/sartre-nausea-guide/` 与 `sites/existentialism-humanism-guide/`。
+- Pages 输入镜像分别位于 `SARTRE-NAUSEA-GUIDE/` 与 `EXISTENTIALISM-HUMANISM-GUIDE/`。
+- 镜像只通过 `npm run sync:philosophy-sites` 刷新；不要直接修改带哈希的 `_next/` 文件。
+- Sartre 的 `chestnut-root.png` 是正文视觉证据，必须随镜像一同验证；来源与授权状态仍应保留在项目文档中。
 
 ### Melromarc Sisters
 

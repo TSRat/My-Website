@@ -1,7 +1,7 @@
 # Website Portfolio Audit
 
-- Audit date: 2026-07-23
-- Branch: `codex/normalize-web-portfolio`
+- Audit date: 2026-07-25
+- Branch: `codex/sites-six-stage-import`
 - Base commit: `3a91388`
 - Last implementation update: 2026-07-24 on `codex/living-atlas-template-data`
 - Authoritative registry: [`README.md`](../README.md#当前项目)
@@ -19,9 +19,11 @@ This file is the detailed audit, not a second website registry. Project names, p
 | Enheduanna | REFACTOR | A — Editorial | Audited; implementation blocked | No reproducible source-to-mirror build; tablet overflow exists in the deployed mirror |
 | Hildegard | PRESERVE | A — Editorial | Audited; no implementation migration started | Long-page visual comparison must use deterministic sections |
 | Hypatia | REFACTOR | A — Editorial | Audited; no implementation migration started | Historical unreferenced assets and responsive cleanup need a scoped batch |
+| Sartre / 《恶心》导读 | REFACTOR | B — Interactive | Six-stage migration in progress on `codex/sites-six-stage-import` | Image provenance confirmation and Antigravity extended QA remain |
+| Existentialism / 《存在主义是一种人道主义》 | PRESERVE | A/B — Editorial with local state | Six-stage migration in progress on `codex/sites-six-stage-import` | Source list and Antigravity extended QA remain |
 | Melromarc Sisters | REBUILD | B — Interactive | Audited; rebuild blocked | Complete upstream source and reproducible build are not present |
 
-Counts: 6 audited; 2 PRESERVE; 3 REFACTOR; 1 REBUILD.
+Counts: 8 audited; 3 PRESERVE; 4 REFACTOR; 1 REBUILD.
 
 ## Remaining migration queue
 
@@ -30,10 +32,11 @@ copies only the contracts its tier needs and preserves its own visual system.
 
 | Order | Batch | Starter adoption | Gate before implementation |
 | --- | --- | --- | --- |
-| 1 | IVORY ARCHIVE | Manifest, provider-neutral events, Data entry, renderer parity and Antigravity screenshot QA | Confirm dynamic/Pages parity fixtures |
-| 2 | Hypatia + Hildegard | Manifest, stable IDs, Data entry, source/citation events and Antigravity editorial browser checks | Give Antigravity deterministic chapter sections and viewport scope |
-| 3 | Enheduanna | Tier A contract only after source and mirror can be reproduced | Restore or document a repeatable source-to-mirror build |
-| 4 | Melromarc Sisters | Tier B/Rebuild contract after upstream source is available | Confirm complete maintainable source and build |
+| 1 | Sartre + Existentialism | Full source recovery, static export, theme variables, representative frames, provider-neutral events, exact-commit preview | Complete current branch smoke QA and Draft PR |
+| 2 | IVORY ARCHIVE | Manifest, provider-neutral events, Data entry, renderer parity and Antigravity screenshot QA | Confirm dynamic/Pages parity fixtures |
+| 3 | Hypatia + Hildegard | Manifest, stable IDs, Data entry, source/citation events and Antigravity editorial browser checks | Give Antigravity deterministic chapter sections and viewport scope |
+| 4 | Enheduanna | Tier A contract only after source and mirror can be reproduced | Restore or document a repeatable source-to-mirror build |
+| 5 | Melromarc Sisters | Tier B/Rebuild contract after upstream source is available | Confirm complete maintainable source and build |
 
 This ordering starts with maintainable sources. Enheduanna and Melromarc remain
 blocked by source/build provenance.
@@ -189,6 +192,62 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Figma URL:** <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
 - **Preview / PR URL:** Local Pages preview verified; migration preview and PR not started.
 - **Remaining risks:** Unreferenced historical bundles cannot be assumed safe to delete; full-page reveal capture remains unreliable.
+
+## Sartre / 《恶心》导读
+
+- **Site / slug / live URL:** 《恶心》：存在为何令人眩晕; `SARTRE-NAUSEA-GUIDE`; target <https://tsrat.github.io/My-Website/SARTRE-NAUSEA-GUIDE/>.
+- **Source path:** `sites/sartre-nausea-guide/`; generated Pages input mirror `SARTRE-NAUSEA-GUIDE/`.
+- **Status:** Public interactive philosophy reading guide migrated from the owner’s Sites project.
+- **Product purpose:** Help first-time readers enter Sartre’s *Nausea* through plot, people, five “nausea moments”, interpretive layers, quizzes, and 20/45/90-minute reading routes.
+- **Primary audience and goal:** Chinese-language first readers; understand the novel’s experience before opening or continuing the text.
+- **Major routes and navigation:** One long page with anchored chapters, a mobile menu, location/object/character tabs, argument layers, quiz feedback, and reading-route tabs.
+- **Current visual direction:** Warm paper field notes with burgundy emphasis, charcoal-teal evidence sections, numbered cards, a map, and a real chestnut-root image.
+- **Typography / color / layout:** Chinese serif display with sans reading/UI; parchment, `#7e2637` burgundy, and `#233034` charcoal teal; editorial two-column desktop reflows to one column on mobile.
+- **Framework / language / rendering:** React 19 / Next.js 16 / TypeScript source with `output: "export"` and a committed static mirror.
+- **Content/data model:** Editorial copy and interaction data remain in `app/page.tsx`; visual rules remain in `app/globals.css`; the image remains local.
+- **State/interactivity:** Reading progress, object/character/argument tabs, quiz answers, mobile navigation, and route selection; tab semantics and keyboard behavior are explicit in the migrated source.
+- **Build system / deployment:** Project-local static export; `npm run sync:philosophy-sites` refreshes the committed mirror; the root Pages build copies the mirror without changing the Actions architecture.
+- **Analytics:** No provider, storage, or identity collection. Provider-neutral events are documented in `ANALYTICS.md`, including `chapter_opened`, `quiz_answered`, and `reading_route_selected`.
+- **Tests / CI:** Project lint, static-export assertions, root Pages build, and asset validation. Codex browser smoke covers one desktop and one narrow state; Antigravity owns full interaction and visual regression.
+- **Accessibility state:** Skip link, visible focus, reduced-motion handling, descriptive image alternative, 44px touch targets, and complete tab relationships/keyboard behavior are part of the migrated source.
+- **Responsive state:** Original desktop/mobile baselines showed no page-level overflow; the exact review mirror still requires final Codex smoke and Antigravity matrix coverage.
+- **Existing Figma:** Theme collection `Theme / Sartre · Nausea Guide`; editable six-stage coverage frame `33:32`, desktop `33:51`, mobile `33:62`.
+- **Classification:** **REFACTOR** — the product and identity are strong, while Pages paths and interaction semantics required maintainability/accessibility repair.
+- **Target architecture:** Keep a self-contained static interactive guide; do not add a server, database, account, or analytics provider.
+- **Shared-core adoption:** Static export/mirror contract, skip/focus/motion rules, semantic tabs, provider-neutral events, exact-commit preview, and section-based visual QA.
+- **Site-specific theme:** Preserve the field-note identity, paper/burgundy/charcoal palette, text hierarchy, map/evidence composition, and chestnut-root imagery.
+- **Migration status:** Source and Figma migration implemented on `codex/sites-six-stage-import`; exact-commit preview and Draft PR pending.
+- **Figma URL:** [Portfolio design system · Sartre frame](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=33-32).
+- **Preview / PR URL:** Pending the exact review commit; use full-SHA raw.githack only after the committed mirror is pushed.
+- **Remaining risks:** The chestnut-root image’s source/license still needs creator confirmation; comprehensive keyboard, persistence, multi-browser, and overlay review remains Antigravity QA.
+
+## Existentialism / 《存在主义是一种人道主义》导读
+
+- **Site / slug / live URL:** 存在主义是一种人道主义：初学者导读; `EXISTENTIALISM-HUMANISM-GUIDE`; target <https://tsrat.github.io/My-Website/EXISTENTIALISM-HUMANISM-GUIDE/>.
+- **Source path:** `sites/existentialism-humanism-guide/`; generated Pages input mirror `EXISTENTIALISM-HUMANISM-GUIDE/`.
+- **Status:** Editorial argument map migrated from an owner-only Sites project into the public portfolio at the owner’s request.
+- **Product purpose:** Explain the 1945 lecture through existence-before-essence, freedom/responsibility, situation, action, humanism, misconceptions, and a glossary.
+- **Primary audience and goal:** Chinese-language beginners; follow the argument in order and test it against the student dilemma.
+- **Major routes and navigation:** One long anchored page, two dilemma choices with live feedback, and eight native `details/summary` misconception disclosures.
+- **Current visual direction:** Warm ivory publication design with black type, brick-red accents, fine rules, registration marks, and an oversized question mark.
+- **Typography / color / layout:** Heavy editorial sans/serif contrast, warm ivory, black, and brick red; publication grid on desktop and a linear mobile reading flow.
+- **Framework / language / rendering:** React 19 / Next.js 16 / TypeScript source with `output: "export"` and a committed static mirror.
+- **Content/data model:** Editorial copy and local interaction state in `app/page.tsx`; the complete visual system and responsive rules in `app/globals.css`.
+- **State/interactivity:** Two `aria-pressed` dilemma choices with `aria-live` feedback and native disclosure states; no server state.
+- **Build system / deployment:** Project-local static export; the shared mirror sync command and root Pages copier preserve the existing deployment workflow.
+- **Analytics:** No provider, storage, or identity collection. `ANALYTICS.md` specifies only provider-neutral `argument_opened`, `dilemma_selected`, and `misconception_opened`-style events.
+- **Tests / CI:** Project lint and three static-export assertions plus root Pages build/asset validation.
+- **Accessibility state:** Correct language, one `h1`, valid labelled sections, native disclosures, stateful dilemma controls, focus treatment, and a newly added skip link.
+- **Responsive state:** The source design is documented for desktop/mobile; exact review mirror smoke and Antigravity responsive comparison remain.
+- **Existing Figma:** Theme collection `Theme / Existentialism Guide`; editable six-stage coverage frame `33:73`, desktop `33:92`, mobile `33:103`.
+- **Classification:** **PRESERVE** — the architecture, semantics, and visual identity are healthy; only export/path cleanup and a skip link are approved.
+- **Target architecture:** Keep a minimal static editorial application with local-only interaction state and native disclosure controls.
+- **Shared-core adoption:** Static export/mirror contract, skip/focus/motion rules, provider-neutral events, exact-commit preview, and section-based visual QA.
+- **Site-specific theme:** Preserve the black/red/ivory publication composition, question-mark diagram, chapter rhythm, and argumentative voice.
+- **Migration status:** Source and Figma migration implemented on `codex/sites-six-stage-import`; exact-commit preview and Draft PR pending.
+- **Figma URL:** [Portfolio design system · Existentialism frame](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=33-73).
+- **Preview / PR URL:** Pending the exact review commit; use full-SHA raw.githack only after the committed mirror is pushed.
+- **Remaining risks:** The site currently lacks an explicit source list for historical/interpretive claims; comprehensive responsive, keyboard, console/network, and overlay review remains Antigravity QA.
 
 ## Melromarc Sisters
 

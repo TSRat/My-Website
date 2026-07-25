@@ -652,3 +652,93 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 - Branch: `codex/living-atlas-template-data`
 - PR: <https://github.com/TSRat/My-Website/pull/14>
 - Merge: explicitly authorized by the creator; perform after configuration validation and push.
+
+## 2026-07-25: Import the next two Sites projects
+
+### Current target
+
+继续把用户拥有的 OpenAI Sites 项目迁入 `My-Website` 六阶段体系，同时在
+独立 worktree / branch 中工作，不覆盖原工作区正在进行的整理。
+
+### Completed
+
+- 迁入两份哲学导读的可维护源码：
+  - `sites/sartre-nausea-guide/`
+  - `sites/existentialism-humanism-guide/`
+- 生成并提交两个完全静态、资源相对化的 Pages 镜像：
+  - `SARTRE-NAUSEA-GUIDE/`
+  - `EXISTENTIALISM-HUMANISM-GUIDE/`
+- 新增 `npm run sync:philosophy-sites`，由真实源码构建镜像；生成目录不是
+  手工维护来源。
+- 更新 Pages 构建映射、README 权威项目表、TECH、portfolio audit 与
+  Living Atlas 唯一网站注册表。
+- 用实际页面截图生成 Living Atlas 缩略图。
+- Figma 共用文件已加入两站的主题 tokens、desktop / mobile 画面、六阶段
+  coverage 与 provider-neutral Data cards：
+  - Sartre: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=33-32>
+  - Existentialism: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=33-73>
+- Codex basic browser smoke 已覆盖 1440 × 900、390 × 844、真实基线并排、
+  资源加载、横向 containment、console 与一个核心交互状态。
+
+### Important decisions
+
+- 本批只迁移两站；其他私人、真人资料或同人 IP 站点继续保持待确认状态，
+  不擅自公开。
+- Sartre Nausea Guide 分级为 `REFACTOR`；只允许文档化的可访问性与部署
+  修正。
+- Existentialism Guide 分级为 `PRESERVE`；正文、视觉和交互保持原样。
+- 统一基础设施、可访问性、QA、部署和分析契约，不统一两站视觉。
+- Analytics 仅建立 provider-neutral 规范；没有启用外部 provider、
+  cookie、identity 或自由文本采集。
+- 保留现有 GitHub Actions Pages 架构；没有创建或启用 `gh-pages`。
+
+### Known issues / remaining
+
+- `public/chestnut-root.png`、favicon 和装饰资源的来源与使用权需要创作者
+  确认。
+- Existentialism 子项目的干净安装报告 6 个依赖漏洞（1 low、5 high）；
+  未在迁移任务中擅自升级依赖。
+- Antigravity 扩展全路线、多浏览器、键盘、网络与 overlay QA 待执行。
+- Exact-commit raw.githack preview、commit、push 和 Draft PR 在根验证完成后
+  补充。
+- 其他 Sites 迁移候选仍需逐站处理隐私、来源、授权和去重门槛。
+
+### Modified files
+
+- `README.md`
+- `TECH.md`
+- `HANDOFF.md`
+- `package.json`
+- `scripts/build-github-pages.mjs`
+- `scripts/sync-philosophy-site-mirrors.mjs`
+- `web/portfolio-audit.md`
+- `THE-LIVING-ATLAS/content-registry.js`
+- `THE-LIVING-ATLAS/TECH.md`
+- `THE-LIVING-ATLAS/HANDOFF.md`
+- `THE-LIVING-ATLAS/assets/thumb-sartre.png`
+- `THE-LIVING-ATLAS/assets/thumb-existentialism.png`
+- `sites/sartre-nausea-guide/`
+- `sites/existentialism-humanism-guide/`
+- `SARTRE-NAUSEA-GUIDE/`
+- `EXISTENTIALISM-HUMANISM-GUIDE/`
+
+### Commands and results
+
+- Site-local install, lint, static export and 3/3 exported-HTML tests: Passed
+  for both sites.
+- `npm run sync:philosophy-sites`: Passed.
+- Root `npm run build:pages`, `npm run validate:pages`, targeted Living Atlas
+  tests, final Git diff checks: recorded after final validation.
+
+### Git state
+
+- Dedicated worktree: `/private/tmp/My-Website-sites-six-stage`
+- Branch: `codex/sites-six-stage-import`
+- Starting commit: `2d36674`
+- Latest commit / exact previews / Draft PR: pending final validation and push.
+
+### Next step
+
+Integrate current `origin/main`, run root Pages and targeted checks, push the
+dedicated branch, verify immutable previews, and hand the Draft PR to
+Antigravity. Do not merge without explicit creator authorization.
