@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "zhangyong-portrait",
+  "slug": "ZHANGYONG-PORTRAIT",
+  "title": "张勇的生活切片",
+  "status": "published",
+  "interactionTier": "A",
+  "classification": "PRESERVE",
+  "maintenanceRoot": "sites/zhangyong-portrait",
+  "publicPath": "/My-Website/ZHANGYONG-PORTRAIT/",
+  "figmaUrl": "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-30",
+  "analytics": {
+    "provider": "none",
+    "storage": "none",
+    "identityCollection": "none"
+  }
+}

@@ -33,7 +33,8 @@ repeat sticky and reveal regions in the current browser backend.
 
 ## 5. Production, GitHub, and preview
 
-The static source remains `HYPATIA/`. The migration adds a visible Data
+The maintainable static source is `sites/hypatia/`; `HYPATIA/` is the generated
+deploy mirror. The migration adds a visible Data
 appendix, a machine-readable manifest, a provider-neutral event adapter, and
 contract tests. Review the [exact implementation commit](https://raw.githack.com/TSRat/My-Website/a8d393eb582d45e2a2a4af533d32ff534fa84721/HYPATIA/index.html#data)
 in [Draft PR #16](https://github.com/TSRat/My-Website/pull/16). Nothing is

@@ -7,7 +7,10 @@ import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 async function readBriefings() {
-  const source = await readFile(join(root, "app/briefings.ts"), "utf8");
+  const source = await readFile(
+    join(root, "sites/ivory-archive/briefings.ts"),
+    "utf8",
+  );
   const declaration = source.indexOf("export const briefings");
   const literalStart = source.indexOf("[", declaration);
   const literalEnd = source.lastIndexOf("];");

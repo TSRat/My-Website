@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "zhangyong-portrait",
+  "title": "张勇的生活切片",
+  "slug": "ZHANGYONG-PORTRAIT",
+  "status": "published",
+  "interactionTier": "A",
+  "classification": "PRESERVE",
+  "maintenanceRoot": "sites/zhangyong-portrait",
+  "documents": ["CONTENT.md", "DESIGN.md", "TECH.md", "HANDOFF.md"],
+  "source": {
+    "mode": "direct-static",
+    "entry": "index.html",
+    "assets": ["assets", "fonts"]
+  },
+  "build": {
+    "command": "npm run build:zhangyong",
+    "staging": ".site-build/zhangyong-portrait",
+    "mirror": "ZHANGYONG-PORTRAIT",
+    "mirrorPolicy": "replace"
+  },
+  "publicPath": "/My-Website/ZHANGYONG-PORTRAIT/",
+  "manifest": "site-manifest.json",
+  "figmaUrl": "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-30",
+  "hub": {
+    "order": 6,
+    "className": "zhangyong",
+    "cover": "assets/bawanglong.jpg",
+    "eyebrow": "PORTRAIT IN DAILY FRAGMENTS",
+    "description": "围绕身份、身体、照料、关系、阅读与日常恢复展开的开放人物档案。",
+    "metadata": [["类型", "人物画像"], ["结构", "静态编辑站点"]]
+  }
+}

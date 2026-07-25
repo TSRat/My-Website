@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "hypatia",
+  "title": "教师之死：希帕蒂娅",
+  "slug": "HYPATIA",
+  "status": "published",
+  "interactionTier": "B",
+  "classification": "REFACTOR",
+  "maintenanceRoot": "sites/hypatia",
+  "documents": ["CONTENT.md", "DESIGN.md", "TECH.md", "HANDOFF.md"],
+  "source": {
+    "mode": "direct-static",
+    "entry": "index.html",
+    "assets": ["assets"]
+  },
+  "build": {
+    "command": "npm run build:hypatia",
+    "staging": ".site-build/hypatia",
+    "mirror": "HYPATIA",
+    "mirrorPolicy": "replace"
+  },
+  "publicPath": "/My-Website/HYPATIA/",
+  "manifest": "site-manifest.json",
+  "figmaUrl": "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2",
+  "hub": {
+    "order": 3,
+    "className": "hypatia",
+    "cover": "assets/hypatia-cover.png",
+    "eyebrow": "DAUGHTERS OF TIME · 001",
+    "description": "从教师、哲学家与公共人物出发，在古代史料与后世塑造之间重新认识希帕蒂娅。",
+    "metadata": [["时代", "约 350/370—415"], ["地点", "亚历山大里亚"]]
+  }
+}

@@ -2,22 +2,22 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-import { livingAtlasContent } from "../THE-LIVING-ATLAS/content-registry.js";
+import { livingAtlasContent } from "../sites/living-atlas/content-registry.js";
 import {
   buildIndexEntries,
   getPublishedSites,
   getSortedUpdates,
-} from "../THE-LIVING-ATLAS/web-core.js";
+} from "../sites/living-atlas/web-core.js";
 import {
   ANALYTICS_EVENTS,
   createAnalyticsAdapter,
-} from "../THE-LIVING-ATLAS/analytics.js";
+} from "../sites/living-atlas/analytics.js";
 import {
   createAnalyticsAdapter as createStarterAnalyticsAdapter,
 } from "../web/templates/site-starter/analytics-adapter.js";
 
 const readAtlasPage = (name) =>
-  readFile(new URL(`../THE-LIVING-ATLAS/${name}`, import.meta.url), "utf8");
+  readFile(new URL(`../sites/living-atlas/${name}`, import.meta.url), "utf8");
 
 test("Living Atlas registry exposes only valid published sites", () => {
   const sites = getPublishedSites(livingAtlasContent);
@@ -167,12 +167,12 @@ test("Living Atlas Hypatia portrait uses a real alpha-backed asset", async () =>
     readAtlasPage("index.html"),
     readAtlasPage("zh.html"),
     readFile(
-      new URL("../THE-LIVING-ATLAS/style.css", import.meta.url),
+      new URL("../sites/living-atlas/style.css", import.meta.url),
       "utf8",
     ),
     readFile(
       new URL(
-        "../THE-LIVING-ATLAS/assets/hypatia-sketch-transparent.webp",
+        "../sites/living-atlas/assets/hypatia-sketch-transparent.webp",
         import.meta.url,
       ),
     ),

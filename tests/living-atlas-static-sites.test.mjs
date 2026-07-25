@@ -5,27 +5,27 @@ import test from "node:test";
 import {
   chapters,
   storyMetadata,
-} from "../MALTY-MELTY-CHILDHOOD/content-registry.js";
+} from "../sites/malty-melty-childhood/content-registry.js";
 import {
   createAnalyticsAdapter as createSwansAnalytics,
-} from "../MALTY-MELTY-CHILDHOOD/analytics.js";
+} from "../sites/malty-melty-childhood/analytics.js";
 import {
   zhangYongContent,
-} from "../ZHANGYONG-PORTRAIT/content-registry.js";
+} from "../sites/zhangyong-portrait/content-registry.js";
 import {
   createAnalyticsAdapter as createZhangAnalytics,
-} from "../ZHANGYONG-PORTRAIT/analytics.js";
-import { livingAtlasContent } from "../THE-LIVING-ATLAS/content-registry.js";
+} from "../sites/zhangyong-portrait/analytics.js";
+import { livingAtlasContent } from "../sites/living-atlas/content-registry.js";
 
 const readRepoFile = (path) =>
   readFile(new URL(`../${path}`, import.meta.url), "utf8");
 
 test("both migrated Sites projects are direct static ES-module implementations", async () => {
-  for (const slug of ["ZHANGYONG-PORTRAIT", "MALTY-MELTY-CHILDHOOD"]) {
+  for (const packageId of ["zhangyong-portrait", "malty-melty-childhood"]) {
     const [html, siteJs, manifest] = await Promise.all([
-      readRepoFile(`${slug}/index.html`),
-      readRepoFile(`${slug}/site.js`),
-      readRepoFile(`${slug}/site-manifest.js`),
+      readRepoFile(`sites/${packageId}/index.html`),
+      readRepoFile(`sites/${packageId}/site.js`),
+      readRepoFile(`sites/${packageId}/site-manifest.js`),
     ]);
     assert.match(
       html,
@@ -38,7 +38,7 @@ test("both migrated Sites projects are direct static ES-module implementations",
 });
 
 test("the Zhang Yong portrait keeps stable sections and a no-provider data entry", async () => {
-  const html = await readRepoFile("ZHANGYONG-PORTRAIT/index.html");
+  const html = await readRepoFile("sites/zhangyong-portrait/index.html");
   const sectionIds = new Set(zhangYongContent.sections.map(({ id }) => id));
   for (const id of [
     "fragments",
@@ -64,8 +64,8 @@ test("the Zhang Yong portrait keeps stable sections and a no-provider data entry
 
 test("Two Swans preserves all chapters, fan-created boundaries, and local resume state", async () => {
   const [html, siteJs] = await Promise.all([
-    readRepoFile("MALTY-MELTY-CHILDHOOD/index.html"),
-    readRepoFile("MALTY-MELTY-CHILDHOOD/site.js"),
+    readRepoFile("sites/malty-melty-childhood/index.html"),
+    readRepoFile("sites/malty-melty-childhood/site.js"),
   ]);
   assert.equal(chapters.length, 11);
   assert.equal(new Set(chapters.map(({ id }) => id)).size, 11);
@@ -86,7 +86,7 @@ test("Two Swans preserves all chapters, fan-created boundaries, and local resume
   );
 });
 
-test("Living Atlas and the Pages build map publish both sites", async () => {
+test("Living Atlas and the shared site registry publish both sites", async () => {
   const registered = new Map(
     livingAtlasContent.sites.map((site) => [site.id, site]),
   );
@@ -99,7 +99,10 @@ test("Living Atlas and the Pages build map publish both sites", async () => {
     "../MALTY-MELTY-CHILDHOOD/",
   );
 
-  const buildScript = await readRepoFile("scripts/build-github-pages.mjs");
-  assert.match(buildScript, /slug: "ZHANGYONG-PORTRAIT"/u);
-  assert.match(buildScript, /slug: "MALTY-MELTY-CHILDHOOD"/u);
+  const [zhangConfig, swansConfig] = await Promise.all([
+    readRepoFile("sites/zhangyong-portrait/site.config.json"),
+    readRepoFile("sites/malty-melty-childhood/site.config.json"),
+  ]);
+  assert.equal(JSON.parse(zhangConfig).slug, "ZHANGYONG-PORTRAIT");
+  assert.equal(JSON.parse(swansConfig).slug, "MALTY-MELTY-CHILDHOOD");
 });
