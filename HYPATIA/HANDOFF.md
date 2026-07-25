@@ -144,4 +144,7 @@ changing the deployment architecture.
 - Browser smoke at 1280 and 390 CSS pixels: Data visible, analytics marker
   present, 0 broken images, and no horizontal overflow.
 - Extended deterministic-section visual QA remains assigned to Antigravity.
-- Exact preview, commit, branch, and Draft PR are recorded after push.
+- Branch: `codex/hypatia-hildegard-six-stage`.
+- Implementation commit: `a8d393eb582d45e2a2a4af533d32ff534fa84721`.
+- [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/a8d393eb582d45e2a2a4af533d32ff534fa84721/HYPATIA/index.html#data).
+- [Draft PR #16](https://github.com/TSRat/My-Website/pull/16); not merged.

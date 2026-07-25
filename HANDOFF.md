@@ -298,9 +298,20 @@ qualifications, relative paths, and GitHub Pages artifact deployment.
 - No workflow, slug, route, build map, historical narrative, or upstream
   artifact was changed.
 - This batch uses `codex/hypatia-hildegard-six-stage`; exact commit, preview,
-  and Draft PR are appended after push. It is not auto-merged.
+  and Draft PR are recorded below. It is not auto-merged.
 - Enheduanna and Melromarc Sisters still need separate readiness PRs because a
   reproducible source-to-mirror build or complete upstream source is absent.
+
+### Delivery
+
+- Implementation commit: `a8d393eb582d45e2a2a4af533d32ff534fa84721`.
+- Hypatia exact preview:
+  <https://raw.githack.com/TSRat/My-Website/a8d393eb582d45e2a2a4af533d32ff534fa84721/HYPATIA/index.html#data>
+- Hildegard exact preview:
+  <https://raw.githack.com/TSRat/My-Website/a8d393eb582d45e2a2a4af533d32ff534fa84721/HILDEGARD/index.html#data>
+- Draft PR: <https://github.com/TSRat/My-Website/pull/16>
+- Both remote previews were opened through their one-time external-content
+  notice and verified in the in-app browser. The PR remains unmerged.
 - Repository diff checks: Passed — `git diff --check` 无错误；原文代码块比对通过，`build-new-site-to-pr` 仅为修复 YAML 语法给 `description` 增加引号。
 - Pages build and validation: Passed — `npm run build:pages` 成功；`npm run validate:pages` 验证 39 个 HTML/CSS 文件中的 343 个本地引用。
 

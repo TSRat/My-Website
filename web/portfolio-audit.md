@@ -159,7 +159,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Site-specific theme:** Preserve Viriditas Codex, its six templates, manuscript/botanical/cosmic contrast, image-credit language, and narrative pacing.
 - **Migration status:** Six-stage implementation completed in the current review branch without replacing Viriditas Codex or changing historical content.
 - **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
-- **Preview / PR URL:** Exact-commit preview and Draft PR are added after the branch is pushed.
+- **Preview / PR URL:** [Exact-commit Hildegard preview](https://raw.githack.com/TSRat/My-Website/a8d393eb582d45e2a2a4af533d32ff534fa84721/HILDEGARD/index.html#data); [Draft PR #16](https://github.com/TSRat/My-Website/pull/16).
 - **Remaining risks:** Full-page screenshots are unreliable with reveal behavior; section-based visual comparison is required.
 
 ## Hypatia
@@ -187,7 +187,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Site-specific theme:** Preserve the pale scholarly atmosphere, marble/classical framing, azure action language, and source-boundary hierarchy.
 - **Migration status:** Six-stage implementation completed in the current review branch without rewriting the historical narrative or replacing the lake-blue identity.
 - **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
-- **Preview / PR URL:** Exact-commit preview and Draft PR are added after the branch is pushed.
+- **Preview / PR URL:** [Exact-commit Hypatia preview](https://raw.githack.com/TSRat/My-Website/a8d393eb582d45e2a2a4af533d32ff534fa84721/HYPATIA/index.html#data); [Draft PR #16](https://github.com/TSRat/My-Website/pull/16).
 - **Remaining risks:** Unreferenced historical bundles cannot be assumed safe to delete; full-page reveal capture remains unreliable.
 
 ## Melromarc Sisters

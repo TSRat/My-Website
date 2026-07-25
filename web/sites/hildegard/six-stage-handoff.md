@@ -33,8 +33,9 @@ full-page capture evidence.
 
 The deployable source remains `HILDEGARD/`. The migration adds a visible Data
 appendix, a machine-readable manifest, a provider-neutral event adapter, and
-contract tests. The exact commit preview and Draft PR URL are recorded after
-push; nothing is merged automatically.
+contract tests. Review the [exact implementation commit](https://raw.githack.com/TSRat/My-Website/a8d393eb582d45e2a2a4af533d32ff534fa84721/HILDEGARD/index.html#data)
+in [Draft PR #16](https://github.com/TSRat/My-Website/pull/16). Nothing is
+merged automatically.
 
 ## 6. Data / analytics
 
