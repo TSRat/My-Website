@@ -26,3 +26,11 @@
 
 完整跨站契约见 `../../web/content-system.md`、`../../web/analytics-standard.md`
 和 `../../web/templates/site-starter/`。
+
+## 背景音乐
+
+- 页面提供创作者指定的本地背景音乐，但默认不播放。
+- 播放与暂停只能由读者通过可见的双语控制按钮触发；不记忆用户选择，也不跨页面自动继续。
+- 播放音量固定为 35%，避免背景音乐压过阅读。
+- 音频只承担氛围功能，不改变正文、Worlds 含混性或内容层级。
+- 当前录音由创作者提供；公开传播授权状态为 `Needs creator confirmation`。

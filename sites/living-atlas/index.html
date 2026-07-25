@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TSRat · The Living Atlas</title>
   <meta name="description" content="A living index of TSRat's knowledge, fiction, media, and interactive projects.">
-  <link rel="stylesheet" href="style.css?v=data-system-20260724-1">
+  <link rel="stylesheet" href="style.css?v=background-music-20260726-1">
   <!-- Fonts: Inter (Sans), Noto Serif SC (Serif), Fira Code (Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -284,7 +284,27 @@
     </div>
   </footer>
 
+  <audio
+    data-background-music
+    src="assets/who-are-you-the-who.mp3"
+    preload="none"
+    loop
+  ></audio>
+  <button
+    class="music-toggle"
+    type="button"
+    data-music-toggle
+    data-label-off="Music · Off"
+    data-label-on="Music · On"
+    data-aria-off="Play background music"
+    data-aria-on="Pause background music"
+    aria-pressed="false"
+    aria-label="Play background music"
+  >
+    <span class="music-toggle__indicator" aria-hidden="true"></span>
+    <span data-music-label>Music · Off</span>
+  </button>
 
-  <script type="module" src="atlas.js?v=worlds-ambiguity-20260724-1"></script>
+  <script type="module" src="atlas.js?v=background-music-20260726-1"></script>
 </body>
 </html>

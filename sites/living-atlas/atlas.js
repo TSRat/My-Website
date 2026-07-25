@@ -93,6 +93,46 @@ const initCarousel = () => {
   }
 };
 
+const initBackgroundMusic = () => {
+  const audio = document.querySelector("[data-background-music]");
+  const toggle = document.querySelector("[data-music-toggle]");
+  const label = toggle?.querySelector("[data-music-label]");
+  if (!audio || !toggle || !label) return;
+
+  audio.volume = 0.35;
+
+  const renderState = (isPlaying) => {
+    toggle.setAttribute("aria-pressed", String(isPlaying));
+    toggle.setAttribute(
+      "aria-label",
+      isPlaying ? toggle.dataset.ariaOn : toggle.dataset.ariaOff,
+    );
+    label.textContent = isPlaying
+      ? toggle.dataset.labelOn
+      : toggle.dataset.labelOff;
+  };
+
+  toggle.addEventListener("click", async () => {
+    if (!audio.paused) {
+      audio.pause();
+      renderState(false);
+      return;
+    }
+
+    try {
+      await audio.play();
+      renderState(true);
+    } catch {
+      renderState(false);
+    }
+  });
+
+  audio.addEventListener("pause", () => renderState(false));
+  audio.addEventListener("play", () => renderState(true));
+  audio.addEventListener("ended", () => renderState(false));
+  renderState(false);
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const locale = getLocale();
 
@@ -130,6 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   initCarousel();
+  initBackgroundMusic();
   initMobileMenu();
   initSearch(createSearchEntries(livingAtlasContent, locale), document, {
     onSearch: ({ queryLength, resultCount }) => {

@@ -392,3 +392,63 @@
   <https://raw.githack.com/TSRat/My-Website/77eb3c3a2e3d2a4e344b8536b3ebaf44e45626d4/THE-LIVING-ATLAS/index.html>.
 - PR: <https://github.com/TSRat/My-Website/pull/22>; merged.
 - Extended QA remains with Antigravity.
+
+## 2026-07-26 · Manual background music
+
+### 当前目标
+
+为个人主页加入仓库内的背景音乐，并让读者能够明确手动开启或关闭。
+
+### 已完成
+
+- 将创作者提供的 `Who Are You - The Who.mp3` 移入权威源码目录并改为
+  URL-safe 文件名 `assets/who-are-you-the-who.mp3`。
+- 英文与中文入口都加入同一个本地 `<audio>`，使用 `preload="none"`、
+  `loop`，且不包含 `autoplay`。
+- 新增右下角双语开关。初始状态为 Off / 关；点击后播放，再次点击暂停。
+- 背景播放音量固定为 35%，避免抢过页面阅读。
+- 按钮用文字、方形指示器和 `aria-pressed` 同步状态；播放失败时恢复关闭
+  状态。
+- 不写 cookie / localStorage / sessionStorage；刷新或切换页面后保持默认
+  关闭。
+- 复用现有 Living Atlas Figma 设计源与 Ivory / Ink / Cobalt / Fira Code
+  视觉系统；这是小型功能适配，未创建新的 Figma 画面。
+
+### 重要决定与已知问题
+
+- 音频由创作者提供，但商业录音的公开传播授权未在仓库中得到证明：
+  `Needs creator confirmation`。
+- 音频约 15 MB，使用 `preload="none"` 避免页面打开时主动下载；第一次
+  播放仍取决于网络速度。
+- Antigravity 扩展响应式、跨浏览器、网络与可访问性 QA：Pending。
+
+### 修改文件
+
+- `sites/living-atlas/index.html`
+- `sites/living-atlas/zh.html`
+- `sites/living-atlas/style.css`
+- `sites/living-atlas/atlas.js`
+- `sites/living-atlas/assets/who-are-you-the-who.mp3`
+- `sites/living-atlas/CONTENT.md`
+- `sites/living-atlas/DESIGN.md`
+- `sites/living-atlas/TECH.md`
+- `sites/living-atlas/HANDOFF.md`
+- `tests/living-atlas-content-system.test.mjs`
+- `THE-LIVING-ATLAS/`（由 `npm run build:living-atlas` 更新）
+
+### 验证与交付
+
+- 当前 branch: `codex/living-atlas-background-music`
+- `node --check sites/living-atlas/atlas.js`: Passed.
+- `node --test tests/living-atlas-content-system.test.mjs`: Passed — 9 / 9.
+- `npm run build:living-atlas`: Passed.
+- `npm run build:pages`: Passed；构建重算的两个无关 Next.js 镜像已恢复到
+  `HEAD`，未混入本任务。
+- `npm run validate:pages`: Passed — 522 local references across 65 HTML/CSS
+  files.
+- Local browser smoke: Passed — 英文桌面从 Off 切换为 On；中文
+  `390 × 844` 从关切换为开；主要资源加载、控件视口包含与页面布局正常。
+- Console: 音乐资源与脚本无错误；仅有仓库未提供 `favicon.ico` 造成的既有
+  404。
+- Antigravity extended QA: Pending.
+- Commit、push、exact Preview 与 PR：待完成。

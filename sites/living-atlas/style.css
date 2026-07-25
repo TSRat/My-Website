@@ -204,6 +204,43 @@ summary:focus-visible {
   color: var(--c-ink);
 }
 
+.music-toggle {
+  position: fixed;
+  right: max(1rem, var(--container-margin));
+  bottom: 1rem;
+  z-index: 45;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 2.75rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--c-ink);
+  border-radius: 0;
+  background: var(--c-ivory);
+  color: var(--c-ink);
+  box-shadow: 0.3rem 0.3rem 0 var(--c-cobalt);
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.music-toggle:hover {
+  color: var(--c-cobalt);
+}
+
+.music-toggle__indicator {
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 1px solid currentColor;
+  background: transparent;
+}
+
+.music-toggle[aria-pressed="true"] .music-toggle__indicator {
+  background: var(--c-cobalt);
+  border-color: var(--c-cobalt);
+}
+
 .mobile-menu {
   display: none;
   position: relative;
@@ -712,6 +749,11 @@ main section {
 
   .mobile-menu {
     display: block;
+  }
+
+  .music-toggle {
+    right: 1rem;
+    bottom: 1rem;
   }
 }
 

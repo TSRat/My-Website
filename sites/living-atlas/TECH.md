@@ -20,7 +20,8 @@ Primary files:
 - `atlas.js`: Living Atlas adapter plus carousel behavior
 - `assets/`: local site imagery, including the feathered alpha-backed
   `hypatia-sketch-transparent.webp` and real-page thumbnails for the two
-  migrated philosophy guides
+  migrated philosophy guides; it also contains the creator-provided
+  `who-are-you-the-who.mp3` background track
 - `tsrat-logo.png`: local navigation logo
 
 Figma:
@@ -48,6 +49,10 @@ public URL.
 - Worlds, Knowledge, Now, Sites, Latest, Data, and Index use the shared bilingual content and navigation contracts.
 - Analytics remains no-op until `analytics.setProvider(...)` receives an explicitly approved provider; no browser storage or external request is used by default.
 - Both language variants share `content-registry.js`, `web-core.js`, `style.css`, and `atlas.js`; behavior changes must be verified in both.
+- Background audio uses a native `<audio>` element with `preload="none"` and
+  `loop`. `atlas.js` starts playback only after the visible bilingual control is
+  activated, sets the playback volume to `0.35`, reflects state through
+  `aria-pressed`, and does not use browser storage or autoplay.
 
 ## Visual contract
 
@@ -93,6 +98,9 @@ Browser QA must cover:
 - Full-page screenshots are not accepted from the current browser backend because sticky/reveal composition can repeat or omit regions. Use matching section or anchor captures.
 - The Featured World Hypatia portrait must keep a real, softly feathered alpha channel. Keep the shared `.hypatia-portrait` multiply treatment; do not replace `hypatia-sketch-transparent.webp` with the legacy opaque `hypatia-sketch.jpg` and rely on browser blend-mode compositing alone.
 - The Data entry is not evidence that tracking is enabled. Keep `PROVIDER / NONE` until a provider and privacy boundary are explicitly approved.
+- The background track is a creator-provided commercial recording. Repository
+  inclusion does not establish public distribution rights:
+  `Needs creator confirmation`.
 
 ## Safe next improvement
 
