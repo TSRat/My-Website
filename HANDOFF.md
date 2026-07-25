@@ -1,5 +1,46 @@
 # Repository handoff
 
+## 2026-07-25: IVORY ARCHIVE six-stage migration
+
+### Current target
+
+按照组合级六阶段标准迁移 IVORY ARCHIVE，同时保留既有编辑身份、双渲染架构、公开路径和 GitHub Pages workflow。
+
+### Completed
+
+- Product / UX：保留五则日刊、搜索、筛选、日期路由和来源结构。
+- Visual：只新增延续象牙纸、酒红和森林绿语言的 Data 区块。
+- Figma：`Remaining Sites · Six-Stage Migration v1` 新增 IVORY 桌面 / 移动状态和可复用 Data 组件。
+- Prototype / QA：本地 Pages 桌面与 390px Data 流程 smoke 通过。
+- Production：动态和 Pages 渲染器均加入 manifest、Data 入口、事件标记和一致性测试。
+- Data：provider-neutral adapter 无网络、cookie、持久存储、身份或原始搜索文本。
+
+### Validation
+
+- `git diff --check`: passed.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: 395 local references passed.
+- `npm test`: 12 / 12 passed.
+- `npm run lint`: 0 errors; 24 pre-existing warnings.
+- Codex browser smoke: local desktop and narrow viewport passed.
+- Antigravity extended QA: pending.
+
+### Delivery
+
+- Branch: `codex/remaining-sites-six-stage-migration`
+- Implementation commit: `2da67ce`
+- Sites binding commit: `58f8df0`
+- Draft PR: <https://github.com/TSRat/My-Website/pull/15>
+- Owner-only Preview: <https://tsrat-ivory-migration-preview.tsrat.chatgpt.site>
+- Preview status: deployed successfully; public link access requires creator approval.
+- Merge: not authorized and not performed.
+
+### Remaining
+
+- Confirm whether the owner-only Sites Preview may be made public for no-login review.
+- Give Antigravity PR #15, the Preview URL, `#data`, desktop / 390px scopes, and dynamic / Pages parity as its extended QA brief.
+- Continue the next independent batch: Hypatia + Hildegard.
+
 - Last updated: 2026-07-19
 - Project: `TSRat/My-Website`
 - Current branch: `agent/document-and-validate-sites`

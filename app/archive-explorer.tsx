@@ -30,6 +30,8 @@ export function ArchiveExplorer({ briefings }: { briefings: Briefing[] }) {
           {filters.map((filter) => (
             <button
               className={activeFilter === filter ? "active" : ""}
+              data-analytics-event="filter_applied"
+              data-analytics-target={filter}
               key={filter}
               onClick={() => setActiveFilter(filter)}
               type="button"
@@ -43,6 +45,8 @@ export function ArchiveExplorer({ briefings }: { briefings: Briefing[] }) {
           <span aria-hidden="true">⌕</span>
           <input
             onChange={(event) => setQuery(event.target.value)}
+            data-analytics-event="search_performed"
+            data-analytics-target="archive-search"
             placeholder="搜索人物、作品或议题"
             type="search"
             value={query}
@@ -52,7 +56,13 @@ export function ArchiveExplorer({ briefings }: { briefings: Briefing[] }) {
 
       <div className="archive-results" aria-live="polite">
         {visible.length ? visible.map((briefing) => (
-          <Link className="archive-entry" href={`/briefings/${briefing.date}`} key={briefing.date}>
+          <Link
+            className="archive-entry"
+            data-analytics-event="briefing_opened"
+            data-analytics-target={briefing.date}
+            href={`/briefings/${briefing.date}`}
+            key={briefing.date}
+          >
             <div className="archive-entry-date">
               <span>{briefing.displayDate.slice(0, 4)}</span>
               <strong>{briefing.displayDate.slice(5)}</strong>
