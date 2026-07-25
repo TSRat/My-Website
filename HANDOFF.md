@@ -296,6 +296,16 @@ explicitly approved maintainable rebuild.
 - Random story, reader open/close, and body-scroll restoration passed.
 - Saved-state reload remains assigned to Antigravity because the in-app browser
   inspection context does not expose localStorage.
+
+### Delivery
+
+- Branch: `codex/melromarc-six-stage-readiness`.
+- Readiness commit: `bc06df1a6786171ce1be8b6516a2f4c70fa40ed5`.
+- Unchanged artifact baseline:
+  <https://raw.githack.com/TSRat/My-Website/bc06df1a6786171ce1be8b6516a2f4c70fa40ed5/MELROMARC-SISTERS/index.html>
+- Draft PR: <https://github.com/TSRat/My-Website/pull/18>
+- The remote page was opened and verified, but it intentionally contains no
+  Stage 5 migration changes.
 - Repository diff checks: Passed — `git diff --check` 无错误；原文代码块比对通过，`build-new-site-to-pr` 仅为修复 YAML 语法给 `description` 增加引号。
 - Pages build and validation: Passed — `npm run build:pages` 成功；`npm run validate:pages` 验证 39 个 HTML/CSS 文件中的 343 个本地引用。
 

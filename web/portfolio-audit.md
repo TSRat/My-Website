@@ -215,7 +215,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Site-specific theme:** Preserve the midnight archive, sister color polarity, character artwork, critical framing, and fan/canon distinctions.
 - **Migration status:** Stages 1–4 and 6 have an editable readiness package; Stage 5 remains explicitly blocked pending upstream source or authorized maintainable rebuild.
 - **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
-- **Preview / PR URL:** The review branch keeps the compiled artifact hash-identical; exact baseline preview and Draft PR are recorded after push.
+- **Preview / PR URL:** [Exact-commit unchanged artifact baseline](https://raw.githack.com/TSRat/My-Website/bc06df1a6786171ce1be8b6516a2f4c70fa40ed5/MELROMARC-SISTERS/index.html); [Draft PR #18](https://github.com/TSRat/My-Website/pull/18).
 - **Remaining risks:** Root-relative duplicate asset requests produce 404s in local logs even though relative assets load; direct hashed-bundle edits would be unreproducible.
 
 ## Migration queue

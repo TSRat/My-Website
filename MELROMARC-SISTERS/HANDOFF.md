@@ -160,3 +160,12 @@ Provide upstream source or explicitly authorize a maintainable rebuild. See
   context does not expose localStorage. Bundle/static compatibility assertions
   passed; Antigravity retains the saved-state browser check.
 - Project rebuild: Not run because no source or command exists.
+
+### Delivery
+
+- Branch: `codex/melromarc-six-stage-readiness`.
+- Readiness commit: `bc06df1a6786171ce1be8b6516a2f4c70fa40ed5`.
+- [Exact-commit unchanged artifact baseline](https://raw.githack.com/TSRat/My-Website/bc06df1a6786171ce1be8b6516a2f4c70fa40ed5/MELROMARC-SISTERS/index.html).
+- [Draft PR #18](https://github.com/TSRat/My-Website/pull/18); not merged.
+- The remote baseline opened with 13 story cards, 18 gallery figures, 0 broken
+  images, and no horizontal overflow. It is not labeled as migrated.

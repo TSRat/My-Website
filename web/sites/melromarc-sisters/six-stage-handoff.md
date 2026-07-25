@@ -64,6 +64,10 @@ components and styles, explicit base/asset behavior, parity tests for all 13
 stories and five categories, saved-state compatibility, and a deliberate
 artifact update in a Draft PR.
 
+The current review package is [Draft PR #18](https://github.com/TSRat/My-Website/pull/18).
+Its [exact-commit page](https://raw.githack.com/TSRat/My-Website/bc06df1a6786171ce1be8b6516a2f4c70fa40ed5/MELROMARC-SISTERS/index.html)
+is the unchanged compiled baseline, not a migrated production preview.
+
 ## 6. Data / analytics
 
 The proposed contract is stored in `site-manifest.proposed.json` and is not
