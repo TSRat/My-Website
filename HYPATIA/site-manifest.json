@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "hypatia",
+  "title": "教师之死：希帕蒂娅",
+  "slug": "HYPATIA",
+  "status": "published",
+  "language": "zh-CN",
+  "contentModel": "historical editorial narrative",
+  "renderers": [
+    {
+      "id": "pages",
+      "source": "HYPATIA/",
+      "runtime": "static HTML, CSS and JavaScript"
+    }
+  ],
+  "capabilities": {
+    "sectionNavigation": true,
+    "evidenceFiltering": true,
+    "interactiveEvidence": true,
+    "sourceLinks": true,
+    "videoLinks": true,
+    "dataEntry": true
+  },
+  "analytics": {
+    "provider": null,
+    "networkRequests": false,
+    "cookies": false,
+    "persistentStorage": false,
+    "identity": false,
+    "rawContent": false,
+    "events": [
+      "page_viewed",
+      "section_opened",
+      "evidence_filter_applied",
+      "interactive_state_changed",
+      "source_opened",
+      "video_opened",
+      "data_entry_opened"
+    ]
+  }
+}

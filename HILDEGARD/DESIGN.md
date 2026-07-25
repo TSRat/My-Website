@@ -122,3 +122,13 @@ Living Manuscript
 ## Figma editability
 
 设计变量与 Figma Variables 一一对应，命名保持 kebab-case。SVG 全部为独立文件，可以直接从 Figma 导出后覆盖 `HILDEGARD/assets/glyph-*.svg`。详细对照见 `HILDEGARD/design/figma-handoff.md`。
+
+## 2026-07-25 · Six-stage Data appendix
+
+- Data is a final manuscript appendix, not a replacement visual direction.
+- It reuses Viriditas Deep, Gold Soft, parchment ink, mono metadata, serif
+  display type, hairline borders, and square geometry.
+- The three-column contract collapses to a single manuscript column on narrow
+  screens without touching any chapter template.
+- Editable desktop/mobile references and the reusable site Data component are
+  in [Figma node 27:2](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).
