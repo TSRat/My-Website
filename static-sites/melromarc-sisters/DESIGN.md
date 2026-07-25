@@ -1,7 +1,7 @@
 # Melromarc Sisters design guide
 
-- Last audited: 2026-07-19
-Primary stylesheet: `MELROMARC-SISTERS/assets/index-CpUB6AfA.css`
+- Last audited: 2026-07-25
+Primary stylesheets: `static-sites/melromarc-sisters/styles.css` and `data.css`
 
 ## Visual direction
 
@@ -99,8 +99,18 @@ Malty 与 Melty 的颜色是结构性对照，不应合并成单一紫色渐变�
 
 仓库没有保存所有设计试验和明确否决记录。需要确认：
 
-- 是否有计划用完整可编辑源项目替换当前编译 artifact。
 - 当前 hero 的 Anime 参考图是否为长期选择。
 - 是否明确拒绝过某种玻璃拟态、粉色浪漫或通用卡片风格。
 
 在确认前，保持暗色王室档案、红蓝双轴和编辑网格，不进行整体视觉重做。
+
+## 2026-07-25 · Maintainable reconstruction
+
+- The Data appendix is implemented after the image shelf and before the footer;
+  it remains part of the fan archive, not a performance dashboard.
+- It uses a divided crimson/blue night field, gold archive metadata, paper text,
+  hard rules, and no generic rounded cards.
+- Desktop/mobile references are in
+  [Figma node 27:2](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).
+- The readable React/Vite source is authoritative. `MELROMARC-SISTERS/` is a
+  generated mirror and old Vinext bundles are rollback material only.

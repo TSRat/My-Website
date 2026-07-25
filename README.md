@@ -18,23 +18,23 @@
 | 项目 | 用途 | 主要维护位置 | GitHub Pages URL | 审核分级 | 迁移 / 审查状态 |
 | --- | --- | --- | --- | --- | --- |
 | The Living Atlas | 总入口主站，一个人的开放档案馆 | `THE-LIVING-ATLAS/` | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) | REFACTOR | 内容系统通过 [PR #13](https://github.com/TSRat/My-Website/pull/13) 合并；Data / starter 与 Worlds 含混性修正通过 [PR #14](https://github.com/TSRat/My-Website/pull/14) 合并 |
-| IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `app/briefings.ts`、`app/`、`public/`、`scripts/build-github-pages.mjs` | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) | PRESERVE | 已审计；暂未开始实现迁移 |
-| Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；当前 Pages 输入镜像在 `ENHEDUANNA/` | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) | REFACTOR | 已审计；缺少可重复源码 → 镜像构建，实施阻塞 |
-| Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `HILDEGARD/` | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 已审计；暂未开始实现迁移 |
-| Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `HYPATIA/` | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) | REFACTOR | 已审计；等待独立的静态资产 / 响应式批次 |
+| IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `app/briefings.ts`、`app/`、`public/`、`scripts/build-github-pages.mjs` | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) | PRESERVE | 六阶段迁移已通过 [PR #15](https://github.com/TSRat/My-Website/pull/15) 合并：双渲染 parity、manifest、Data 入口与 provider-neutral events |
+| Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | 源码在 `static-sites/enheduanna/`；`npm run build:enheduanna` 更新 `ENHEDUANNA/` Pages 镜像 | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) | REFACTOR | 六阶段可维护重建与 Data 入口已通过 [PR #17](https://github.com/TSRat/My-Website/pull/17) 合并 |
+| Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `HILDEGARD/` | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
+| Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `HYPATIA/` | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) | REFACTOR | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
 | Sartre / 《恶心》导读 | 面向初读者的互动阅读导览，连接故事、人物、偶然性与阅读实验 | 源码在 `sites/sartre-nausea-guide/`；Pages 输入镜像在 `SARTRE-NAUSEA-GUIDE/` | [《恶心》：存在为何令人眩晕](https://tsrat.github.io/My-Website/SARTRE-NAUSEA-GUIDE/) | REFACTOR | 六阶段迁移批次进行中；独立分支预览与 PR 待生成 |
 | Existentialism / 《存在主义是一种人道主义》导读 | 面向初学者的讲演论证地图，保留自由、责任、行动与争议 | 源码在 `sites/existentialism-humanism-guide/`；Pages 输入镜像在 `EXISTENTIALISM-HUMANISM-GUIDE/` | [存在主义是一种人道主义](https://tsrat.github.io/My-Website/EXISTENTIALISM-HUMANISM-GUIDE/) | PRESERVE | 六阶段迁移批次进行中；独立分支预览与 PR 待生成 |
-| Melromarc Sisters | Malty 与 Melty 的非官方多重故事档案 | `MELROMARC-SISTERS/` | [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/) | REBUILD | 已审计；完整上游源码与可重复构建未确认 |
+| Melromarc Sisters | Malty 与 Melty 的非官方多重故事档案 | `static-sites/melromarc-sisters/`；`MELROMARC-SISTERS/` 是构建镜像 | [Melromarc 姐妹故事](https://tsrat.github.io/My-Website/MELROMARC-SISTERS/) | REBUILD | 可维护重建与 Data 入口已通过 [PR #18](https://github.com/TSRat/My-Website/pull/18) 合并 |
 
 组合级详细审计见 [`web/portfolio-audit.md`](./web/portfolio-audit.md)，六阶段平台标准见 [`web/platform-standard.md`](./web/platform-standard.md)。共享 Figma 设计源为 [TSRat Web Design System · Portfolio Normalization](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt)。
 
 ### 真实来源与静态快照
 
 - `IVORY-ARCHIVE/` 是已提交的历史静态快照，最后一次目录级更新停在第 02 期。当前 GitHub Pages 版本由 `app/briefings.ts` 和 `public/` 在 Actions 中重新生成；不要把旧快照当作主要内容源。
-- `static-sites/enheduanna/` 保存可读的 TSX/CSS 源码，`ENHEDUANNA/` 保存当前被 Pages workflow 直接复制的构建镜像。仓库暂时没有把两者自动同步的 npm script。
+- `static-sites/enheduanna/` 保存可读的 React/TSX/CSS 源码和 Vite 配置；`npm run build:enheduanna` 先构建到被忽略的 `.site-build/`，再更新 `ENHEDUANNA/` Pages 镜像。未被新入口引用的旧哈希 bundle 保留为回滚材料。
 - `HYPATIA/` 是可直接发布的 HTML/CSS/JavaScript 与资源目录；仓库中没有可确认的另一份完整上游应用源码。
 - `sites/sartre-nausea-guide/` 与 `sites/existentialism-humanism-guide/` 保存从 Sites 迁回的可维护源码；对应大写目录是经 `npm run sync:philosophy-sites` 刷新的静态 Pages 输入镜像。
-- `MELROMARC-SISTERS/` 是 Vinext/React 生成的静态 HTML、带哈希的 JavaScript/CSS 和图片；完整未编译源码位置无法从当前仓库确认。
+- `static-sites/melromarc-sisters/` 是从接受的 Sites/Vinext 部署基线重建的可读源码；运行 `npm run build:melromarc` 更新 `MELROMARC-SISTERS/`。旧 bundle 只作为回滚材料保留，不再是维护入口。
 
 修改任何站点前，先阅读该项目的 `CONTENT.md`、`DESIGN.md`、`TECH.md` 和 `HANDOFF.md`。
 
@@ -54,11 +54,12 @@ My-Website/
 ├── static-sites/enheduanna/     # Enheduanna 可读源码
 ├── sites/                        # 从 Sites 迁回的可维护独立站源码
 ├── ENHEDUANNA/                  # Enheduanna 当前发布镜像
+├── static-sites/melromarc-sisters/ # Melromarc 可读源码
 ├── HYPATIA/                     # Hypatia 当前发布目录
 ├── HILDEGARD/                   # Hildegard 当前发布目录（Viriditas Codex）
 ├── SARTRE-NAUSEA-GUIDE/         # Sartre 当前 Pages 输入镜像
 ├── EXISTENTIALISM-HUMANISM-GUIDE/ # Existentialism 当前 Pages 输入镜像
-├── MELROMARC-SISTERS/           # Melromarc 当前发布目录
+├── MELROMARC-SISTERS/           # Melromarc 当前发布镜像
 ├── IVORY-ARCHIVE/               # IVORY 的旧静态快照，不是当前 Pages 来源
 └── tests/                       # 当前应用构建后的 Node 测试
 ```
@@ -91,7 +92,14 @@ npm ci
 npm run dev
 ```
 
-`npm run dev` 运行根目录的 Vinext/Vite 应用，主要用于 IVORY ARCHIVE 的动态版本。它不等于重建所有三个独立静态站点。
+`npm run dev` 运行根目录的 Vinext/Vite 应用，主要用于 IVORY ARCHIVE 的动态版本。它不等于重建各个独立静态站点。
+
+Enheduanna 独立开发与构建：
+
+```bash
+npm run dev:enheduanna
+npm run build:enheduanna
+```
 
 生成与 GitHub Actions 相同的 Pages artifact：
 
@@ -104,6 +112,16 @@ npm run build:pages
 ```bash
 npm run sync:philosophy-sites
 ```
+
+Melromarc 独立开发与构建：
+
+```bash
+npm run dev:melromarc
+npm run build:melromarc
+```
+
+两个重建站点采用同一脚本：先在被忽略的 `.site-build/` 中生成，再更新
+现有大写 Pages 镜像；不会删除镜像中保留的旧 bundle。
 
 生成结果位于被忽略的 `docs/`。如需本地查看完整多站点路径，可在仓库根目录运行：
 
@@ -174,7 +192,7 @@ npm run lint
 - Hildegard：[`HILDEGARD/`](./HILDEGARD/)
 - Sartre / 《恶心》导读：[`sites/sartre-nausea-guide/`](./sites/sartre-nausea-guide/)
 - Existentialism 导读：[`sites/existentialism-humanism-guide/`](./sites/existentialism-humanism-guide/)
-- Melromarc Sisters：[`MELROMARC-SISTERS/`](./MELROMARC-SISTERS/)
+- Melromarc Sisters：[`static-sites/melromarc-sisters/`](./static-sites/melromarc-sisters/)
 
 ## 工作原则
 

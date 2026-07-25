@@ -109,3 +109,15 @@ Git 历史明确显示当前方向经过以下变化：
 - 入口未引用的旧 CSS/bundle 是否作为回滚材料保留。
 
 在确认前，不重做整个 UI，也不删除旧文件。
+
+## 2026-07-25 · Six-stage Data appendix
+
+- The Data appendix is an extension of the established lake-blue exhibition
+  system, not a new site theme: dark lake field, white serif heading, pale-blue
+  metadata, hairline divisions, and square geometry.
+- It remains after Sources so evidence and historical interpretation keep
+  priority over measurement infrastructure.
+- Desktop uses a split heading and three-column contract; narrow screens stack
+  both without changing the existing chapter layouts.
+- Editable desktop/mobile references and the reusable site Data component are
+  in [Figma node 27:2](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).

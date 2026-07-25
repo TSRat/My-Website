@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "ivory-archive",
+  "title": "IVORY ARCHIVE",
+  "slug": "IVORY-ARCHIVE",
+  "status": "published",
+  "language": "zh-CN",
+  "contentModel": "dated editorial briefings",
+  "renderers": [
+    {
+      "id": "dynamic",
+      "source": "app/",
+      "runtime": "React + Vinext"
+    },
+    {
+      "id": "pages",
+      "source": "scripts/build-github-pages.mjs",
+      "runtime": "generated static HTML"
+    }
+  ],
+  "capabilities": {
+    "search": true,
+    "filter": true,
+    "datedRoutes": true,
+    "dataEntry": true
+  },
+  "analytics": {
+    "provider": null,
+    "networkRequests": false,
+    "cookies": false,
+    "persistentStorage": false,
+    "identity": false,
+    "rawSearchText": false,
+    "events": [
+      "page_viewed",
+      "search_performed",
+      "filter_applied",
+      "briefing_opened",
+      "data_entry_opened"
+    ]
+  }
+}

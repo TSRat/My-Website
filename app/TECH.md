@@ -1,6 +1,6 @@
 # IVORY ARCHIVE technical notes
 
-Last audited: 2026-07-19
+Last audited: 2026-07-25
 
 ## Two rendered forms
 
@@ -23,9 +23,13 @@ IVORY ARCHIVE 在仓库中有两个当前相关的呈现路径：
 | `app/layout.tsx` | 根 layout 与 metadata |
 | `app/globals.css` | 动态应用样式 |
 | `public/story-images/` | 故事图片源 |
+| `public/ivory-site-manifest.json` | 双渲染器共用的机器可读能力与隐私 manifest |
+| `public/ivory-analytics.js` | 无供应商、无网络、无持久存储的事件适配器 |
 | `scripts/build-github-pages.mjs` | 静态 Pages HTML 生成器 |
 | `scripts/github-pages.css` | 静态 IVORY 样式 |
+| `scripts/github-pages-data.css` | 静态 Pages Data 区块样式 |
 | `scripts/github-pages.js` | 静态 IVORY 筛选/搜索脚本 |
+| `tests/ivory-renderer-parity.test.mjs` | 内容 schema、资产、路由、隐私与双渲染 parity |
 
 ## Routes
 
@@ -91,8 +95,21 @@ npm run lint
 - Pages build：`docs/IVORY-ARCHIVE/`
 - 两个目录都被 `.gitignore` 忽略。
 
-## Known gaps
+## Analytics contract
+
+`ivory-analytics.js` 暴露 provider-neutral `window.TSRatAnalytics.track`，
+并通过 `tsrat:analytics` 自定义事件留出未来接入点。当前实现：
+
+- 不发送网络请求；
+- 不写 cookie、`localStorage` 或 `sessionStorage`；
+- 不采集身份；
+- 搜索只保留长度区间，不保留原始文本；
+- 只允许 manifest 中列出的事件。
+
+接入真实 provider 前必须补齐数据来源、session 定义、保留期限、隐私审查和用途。
+
+## Remaining gaps
 
 - 动态版与 Pages 静态版使用两套 JSX/HTML/CSS 实现，内容来自同一数据，但 UI 可能产生差异。
-- 当前没有自动截图或 DOM 对比测试来检查两种呈现是否保持同一信息。
+- `tests/ivory-renderer-parity.test.mjs` 已检查两套首页的当前内容、全部日刊入口、资产和 Data contract；它不替代视觉回归。
 - `IVORY-ARCHIVE/` 旧快照容易误导新 Agent；保留或归档策略需要创作者确认。

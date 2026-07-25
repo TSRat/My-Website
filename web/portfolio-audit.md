@@ -2,8 +2,8 @@
 
 - Audit date: 2026-07-25
 - Branch: `codex/sites-six-stage-import`
-- Base commit: `3a91388`
-- Last implementation update: 2026-07-24 on `codex/living-atlas-template-data`
+- Base commit: `636c198`
+- Last implementation update: 2026-07-25 on `codex/sites-six-stage-import`
 - Authoritative registry: [`README.md`](../README.md#当前项目)
 - Platform standard: [`web/platform-standard.md`](./platform-standard.md)
 - Figma: [TSRat Web Design System · Portfolio Normalization](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt)
@@ -15,13 +15,13 @@ This file is the detailed audit, not a second website registry. Project names, p
 | Site | Classification | Interaction tier | Migration status | Primary blocker |
 | --- | --- | --- | --- | --- |
 | The Living Atlas | REFACTOR | B — Interactive | Content system merged in PR #13; Data / starter and ambiguity correction merged in PR #14 | Shared runtime publication needs explicit Pages build-map authorization |
-| IVORY ARCHIVE | PRESERVE | B — Interactive | Audited; no implementation migration started | Dynamic and Pages renderers need explicit parity tests |
-| Enheduanna | REFACTOR | A — Editorial | Audited; implementation blocked | No reproducible source-to-mirror build; tablet overflow exists in the deployed mirror |
-| Hildegard | PRESERVE | A — Editorial | Audited; no implementation migration started | Long-page visual comparison must use deterministic sections |
-| Hypatia | REFACTOR | A — Editorial | Audited; no implementation migration started | Historical unreferenced assets and responsive cleanup need a scoped batch |
+| IVORY ARCHIVE | PRESERVE | B — Interactive | Six-stage implementation merged in PR #15 | Antigravity extended QA remains optional follow-up |
+| Enheduanna | REFACTOR | A — Editorial | Maintainable rebuild merged in PR #17 | Antigravity extended visual QA remains optional follow-up |
+| Hildegard | PRESERVE | A — Editorial | Six-stage implementation merged in PR #16 | Antigravity deterministic-section visual QA remains optional follow-up |
+| Hypatia | REFACTOR | A — Editorial | Six-stage implementation merged in PR #16 | Antigravity deterministic-section visual QA remains optional follow-up |
 | Sartre / 《恶心》导读 | REFACTOR | B — Interactive | Six-stage migration in progress on `codex/sites-six-stage-import` | Image provenance confirmation and Antigravity extended QA remain |
 | Existentialism / 《存在主义是一种人道主义》 | PRESERVE | A/B — Editorial with local state | Six-stage migration in progress on `codex/sites-six-stage-import` | Source list and Antigravity extended QA remain |
-| Melromarc Sisters | REBUILD | B — Interactive | Audited; rebuild blocked | Complete upstream source and reproducible build are not present |
+| Melromarc Sisters | REBUILD | B — Interactive | Maintainable reconstruction merged in PR #18 | Antigravity focus/visual QA remains optional follow-up |
 
 Counts: 8 audited; 3 PRESERVE; 4 REFACTOR; 1 REBUILD.
 
@@ -33,13 +33,14 @@ copies only the contracts its tier needs and preserves its own visual system.
 | Order | Batch | Starter adoption | Gate before implementation |
 | --- | --- | --- | --- |
 | 1 | Sartre + Existentialism | Full source recovery, static export, theme variables, representative frames, provider-neutral events, exact-commit preview | Complete current branch smoke QA and Draft PR |
-| 2 | IVORY ARCHIVE | Manifest, provider-neutral events, Data entry, renderer parity and Antigravity screenshot QA | Confirm dynamic/Pages parity fixtures |
-| 3 | Hypatia + Hildegard | Manifest, stable IDs, Data entry, source/citation events and Antigravity editorial browser checks | Give Antigravity deterministic chapter sections and viewport scope |
-| 4 | Enheduanna | Tier A contract only after source and mirror can be reproduced | Restore or document a repeatable source-to-mirror build |
-| 5 | Melromarc Sisters | Tier B/Rebuild contract after upstream source is available | Confirm complete maintainable source and build |
+| 2 | IVORY ARCHIVE | Manifest, provider-neutral events, Data entry, renderer parity and Antigravity screenshot QA | Implemented and merged in PR #15 |
+| 3 | Hypatia + Hildegard | Manifest, stable IDs, Data entry, source/citation events and Antigravity editorial browser checks | Implemented and merged in PR #16 |
+| 4 | Enheduanna | Tier A source, Data entry and repeatable mirror build | Implemented and merged in PR #17 |
+| 5 | Melromarc Sisters | Tier B source, Data entry, storage boundary and repeatable mirror build | Implemented and merged in PR #18 |
 
-This ordering starts with maintainable sources. Enheduanna and Melromarc remain
-blocked by source/build provenance.
+The original four remaining migration batches are implemented and merged. The
+two imported philosophy guides are the active next batch. Antigravity extended
+QA remains a follow-up rather than a merge blocker.
 
 ## Visual baseline and evidence
 
@@ -95,19 +96,19 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Content/data model:** `app/briefings.ts` is the current structured content source.
 - **State/interactivity:** Search and taxonomy filters work in the accepted Pages baseline; issue and entry navigation are functional.
 - **Build system / deployment:** Root Vinext build for the application; custom Node generation for Pages; GitHub Actions artifact deployment.
-- **Analytics:** No provider detected. Candidate neutral events: `search_performed`, `filter_applied`, `issue_opened`, `briefing_item_opened`.
-- **Tests / CI:** Root build/test/lint plus Pages asset validation; no explicit parity test between the dynamic app and Pages output.
+- **Analytics:** No provider. `page_viewed`, `search_performed`, `filter_applied`, `briefing_opened`, and `data_entry_opened` are defined by a provider-neutral adapter. It performs no network requests, sets no cookies or persistent storage, collects no identity, and never records raw search text.
+- **Tests / CI:** Root build/test/lint plus Pages asset validation and `tests/ivory-renderer-parity.test.mjs`, which validates the five-story content contract, assets, routes, privacy manifest, and dynamic/Pages home data parity.
 - **Accessibility state:** Skip link, semantic landmarks, headings, image alternatives, search, and filters are present; keyboard state and result announcements still need targeted testing.
 - **Responsive state:** Accepted desktop, tablet, and mobile first folds show no horizontal overflow.
-- **Existing Figma:** Ivory theme variables, editable theme anatomy, shared components, representative desktop/mobile screens, and 3-viewport baselines.
+- **Existing Figma:** Ivory theme variables plus editable desktop/mobile Data states and reusable `Site / Ivory Archive / Data Entry` component in `Remaining Sites · Six-Stage Migration v1`.
 - **Classification:** **PRESERVE** — the source model, renderer, interaction set, and visual system are healthy.
 - **Target architecture:** Keep the structured briefing source and both renderers; add parity checks before shared-component refactors.
 - **Shared-core adoption:** Accessibility primitives, focus, filter/search state conventions, citations, image captions, event specification, and screenshot QA.
 - **Site-specific theme:** Preserve the newspaper rhythm, botanical restraint, burgundy rule system, archive numbering, and Chinese editorial voice.
-- **Migration status:** Audit complete; no code migration started.
-- **Figma URL:** <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
-- **Preview / PR URL:** Local Pages preview verified; migration preview and PR not started.
-- **Remaining risks:** The stale committed snapshot can mislead maintainers; dynamic/static parity is not automatically enforced.
+- **Migration status:** Six-stage preservation migration implemented on `codex/remaining-sites-six-stage-migration` in Draft PR #15.
+- **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2).
+- **Preview / PR URL:** [Owner-only Sites Preview](https://tsrat-ivory-migration-preview.tsrat.chatgpt.site); [Draft PR #15](https://github.com/TSRat/My-Website/pull/15). Deployment succeeded; public link access needs separate creator approval.
+- **Remaining risks:** The stale committed snapshot can mislead maintainers. The parity test covers content, assets, routes, and contracts, not pixel identity. Antigravity extended QA is pending.
 
 ## Enheduanna
 
@@ -116,26 +117,26 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Status:** Public long-form historical profile, “Daughters of Time 004”.
 - **Product purpose:** Explain Enheduanna as princess, high priestess, author, and contested “first author” while preserving evidence boundaries.
 - **Primary audience and goal:** General readers of women’s and literary history; follow the narrative and inspect supporting evidence and sources.
-- **Major routes and navigation:** One long page with chapter anchors, full-directory details menu, works, debate, video, and sources.
+- **Major routes and navigation:** One long page with chapter anchors, full-directory details menu, works, debate, video, sources, and an honest Data / Signals entry.
 - **Current visual direction:** Ancient archive meets modern exhibition catalogue; hard borders, paper, cobalt spine, red conflict accents, gold sacred accents, and deliberate dark narrative transitions.
 - **Typography / color / layout:** Chinese serif for titles/quotations, sans for reading/UI, condensed archive metadata; paper `#f4eedc`, cobalt `#153a8a`, red `#c83b2c`, ink `#101010`, clay/gold support; asymmetric editorial grids.
-- **Framework / language / rendering:** Readable React/TSX/CSS source exists, but the public site is a prebuilt Vite/React static mirror with hashed assets.
+- **Framework / language / rendering:** React/TSX/CSS source with a dedicated Vite config; the committed Pages mirror is reproducibly generated with hashed assets.
 - **Content/data model:** Content, sources, and repeated structures are encoded in `page.tsx`; deployed data is compiled into the mirror bundle.
 - **State/interactivity:** Anchor navigation, details menu, external source links, video embed, and hover/focus treatments.
-- **Build system / deployment:** No confirmed project-level source-to-mirror build command. Pages copies `ENHEDUANNA/` unchanged.
-- **Analytics:** No provider detected. Candidate neutral events: `chapter_opened`, `source_opened`, `video_opened`, `reading_map_opened`.
-- **Tests / CI:** Pages asset validation only for the mirror; no project-specific source build or source/mirror equivalence test.
+- **Build system / deployment:** `npm run build:enheduanna` builds into `.site-build/enheduanna/`, validates the compiled entry, and updates `ENHEDUANNA/` without deleting historical bundles. Pages continues to copy that mirror unchanged.
+- **Analytics:** The visible Data entry honestly reports provider `none`; the provider-neutral contract defines directory, chapter, source, video, NotebookLM, and Data interactions with explicit privacy gates.
+- **Tests / CI:** Targeted tests protect the maintainable build contract, source/mirror public-asset parity, compiled entry, and visible provider-none Data source.
 - **Accessibility state:** Semantic landmarks and image alternatives are present; reduced motion exists. A skip link and full keyboard/iframe-title verification remain.
-- **Responsive state:** Mobile first fold is coherent. At 1024px the accepted baseline shows approximately 20px horizontal overflow, traced to hero artwork and next-chapter geometry.
+- **Responsive state:** Desktop, 1024px tablet, and 390px mobile smoke checks have no horizontal overflow. The previous tablet overflow was fixed by allowing the hero grid and title to shrink/wrap below 1100px.
 - **Existing Figma:** Enheduanna theme variables, editable theme anatomy, representative desktop/mobile screens, shared components, and 3-viewport baselines.
 - **Classification:** **REFACTOR** — the source and identity are strong, but reproducibility and responsive behavior block safe maintenance.
-- **Target architecture:** Recover or explicitly rebuild a reproducible project that emits the existing mirror without changing its public URL or visual contract.
+- **Target architecture:** Implemented: maintainable source emits the existing mirror without changing its public URL or visual contract.
 - **Shared-core adoption:** Focus, skip navigation, responsive constraints, caption/citation semantics, motion accessibility, and source/mirror QA.
 - **Site-specific theme:** Preserve the spine, paper/cobalt/red/gold tension, archaeological dossier structure, dark transitions, and evidence labels.
-- **Migration status:** Audit complete; implementation blocked until the source-to-mirror workflow is confirmed or explicitly authorized for reconstruction.
-- **Figma URL:** <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
-- **Preview / PR URL:** Local mirror preview verified; migration preview and PR blocked.
-- **Remaining risks:** Directly patching hashed bundles would create an unreproducible fix; chapter-number ordering also needs creator confirmation.
+- **Migration status:** All six stages are implemented and merged in PR #17; Stage 5 has a reproducible build and Stage 6 has a provider-none Data entry without invented metrics.
+- **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
+- **Preview / PR URL:** [Exact-commit reconstructed preview](https://raw.githack.com/TSRat/My-Website/28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb/ENHEDUANNA/index.html); [PR #17](https://github.com/TSRat/My-Website/pull/17).
+- **Remaining risks:** Antigravity still needs the extended deterministic-section visual comparison; chapter-number ordering still needs creator confirmation.
 
 ## Hildegard
 
@@ -151,8 +152,8 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Content/data model:** Hand-authored long-form HTML with local decorative and chapter assets.
 - **State/interactivity:** Anchor navigation, reveal behavior, embedded video, source links, and reduced-motion handling.
 - **Build system / deployment:** Copied unchanged into Pages by the custom build script.
-- **Analytics:** No provider detected. Candidate neutral events: `chapter_opened`, `source_opened`, `video_opened`.
-- **Tests / CI:** Pages asset validation; no site-specific interaction or screenshot test.
+- **Analytics:** Provider-neutral runtime contract with no network, cookies, identity, or persistent storage. Events cover chapters, supporting sections, sources, video, and the Data entry.
+- **Tests / CI:** Pages asset validation plus site-specific contract, privacy, chapter-preservation, and reduced-motion assertions. Codex performs basic browser smoke; Antigravity owns extended deterministic-section visual QA.
 - **Accessibility state:** Skip link, semantic structure, alternatives, and reduced motion are present. Lazy media and contrast should remain part of browser QA.
 - **Responsive state:** Accepted first folds at all three viewports show no horizontal overflow. Some lazy images are intentionally pending before scroll.
 - **Existing Figma:** Hildegard theme variables, editable theme anatomy, shared components, representative desktop/mobile screens, and 3-viewport baselines.
@@ -160,9 +161,9 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Target architecture:** Keep the static structure; add narrowly shared accessibility/QA primitives only where they do not disturb chapter templates.
 - **Shared-core adoption:** Focus, link validation, media loading checks, captions, citations, motion QA, and section screenshot conventions.
 - **Site-specific theme:** Preserve Viriditas Codex, its six templates, manuscript/botanical/cosmic contrast, image-credit language, and narrative pacing.
-- **Migration status:** Audit complete; no implementation migration started.
-- **Figma URL:** <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
-- **Preview / PR URL:** Local Pages preview verified; migration preview and PR not started.
+- **Migration status:** Six-stage implementation completed in the current review branch without replacing Viriditas Codex or changing historical content.
+- **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
+- **Preview / PR URL:** [Exact-commit Hildegard preview](https://raw.githack.com/TSRat/My-Website/a8d393eb582d45e2a2a4af533d32ff534fa84721/HILDEGARD/index.html#data); [Draft PR #16](https://github.com/TSRat/My-Website/pull/16).
 - **Remaining risks:** Full-page screenshots are unreliable with reveal behavior; section-based visual comparison is required.
 
 ## Hypatia
@@ -179,8 +180,8 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Content/data model:** Hand-authored HTML and local assets; directory also contains historical unreferenced bundles/styles.
 - **State/interactivity:** Anchor navigation, start-reading action, source-boundary links, lazy media, and section reveals.
 - **Build system / deployment:** Copied unchanged into Pages by the custom build script.
-- **Analytics:** No provider detected. Candidate neutral events: `chapter_opened`, `source_opened`, `figure_opened`.
-- **Tests / CI:** Pages validation plus existing workflow smoke checks for key files and version/title markers.
+- **Analytics:** Provider-neutral runtime contract with no network, cookies, identity, raw content, or persistent storage. Events cover sections, evidence filters, interactive states, sources, video, and the Data entry.
+- **Tests / CI:** Pages validation plus existing workflow smoke checks and new site-specific contract, privacy, and interaction-hook preservation assertions. Codex performs basic browser smoke; Antigravity owns extended deterministic-section visual QA.
 - **Accessibility state:** Skip link, landmarks, headings, image alternatives, and focusable navigation are present; lazy media and complete keyboard order still need targeted testing.
 - **Responsive state:** Accepted first folds at all three viewports show no horizontal overflow.
 - **Existing Figma:** Hypatia theme variables, editable theme anatomy, shared components, representative desktop/mobile screens, and 3-viewport baselines.
@@ -188,9 +189,9 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Target architecture:** Keep a static editorial implementation while clarifying referenced assets and adding non-destructive tests; do not delete legacy assets without confirmation.
 - **Shared-core adoption:** Focus, captions, citations, motion/accessibility checks, lazy-media verification, and section screenshot QA.
 - **Site-specific theme:** Preserve the pale scholarly atmosphere, marble/classical framing, azure action language, and source-boundary hierarchy.
-- **Migration status:** Audit complete; no implementation migration started.
-- **Figma URL:** <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
-- **Preview / PR URL:** Local Pages preview verified; migration preview and PR not started.
+- **Migration status:** Six-stage implementation completed in the current review branch without rewriting the historical narrative or replacing the lake-blue identity.
+- **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
+- **Preview / PR URL:** [Exact-commit Hypatia preview](https://raw.githack.com/TSRat/My-Website/a8d393eb582d45e2a2a4af533d32ff534fa84721/HYPATIA/index.html#data); [Draft PR #16](https://github.com/TSRat/My-Website/pull/16).
 - **Remaining risks:** Unreferenced historical bundles cannot be assumed safe to delete; full-page reveal capture remains unreliable.
 
 ## Sartre / 《恶心》导读
@@ -252,34 +253,33 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 ## Melromarc Sisters
 
 - **Site / slug / live URL:** Melromarc Sisters; `MELROMARC-SISTERS`; <https://tsrat.github.io/My-Website/MELROMARC-SISTERS/>
-- **Source path:** Current deploy artifact in `MELROMARC-SISTERS/`; complete upstream source is not confirmed.
+- **Source path:** Maintained source in `static-sites/melromarc-sisters/`; generated Pages mirror in `MELROMARC-SISTERS/`.
 - **Status:** Public fan-created multi-story archive.
 - **Product purpose:** Explore multiple possible lives and critical story branches for Malty and Melty while separating canon reference from fan-created premise.
 - **Primary audience and goal:** Readers familiar with the source franchise; enter the story archive and open a specific or random branch.
 - **Major routes and navigation:** One generated static entry with story navigation, random-story dialog, and character/story sections.
 - **Current visual direction:** Midnight navy story archive with red/blue sister polarity, gold details, anime character artwork, and cinematic framing.
 - **Typography / color / layout:** Serif story display, compact archive metadata, dark navy surfaces, red and sister-blue accents, warm gold support; symmetrical desktop hero becomes a layered mobile composition.
-- **Framework / language / rendering:** Vinext/React-generated static HTML with hashed JavaScript/CSS and local images.
-- **Content/data model:** Compiled into the artifact; readable upstream content source is not present in the repository.
-- **State/interactivity:** Random-story dialog opens and closes correctly; body scroll locking is restored on close.
-- **Build system / deployment:** No confirmed reproducible upstream build. Pages copies the artifact unchanged.
-- **Analytics:** No provider detected. Candidate neutral events: `story_opened`, `random_story_opened`, `character_path_opened`.
-- **Tests / CI:** Pages asset validation only; no source tests or reproducible project build.
+- **Framework / language / rendering:** React 19, TypeScript, Vite, client-rendered static application with local images.
+- **Content/data model:** `content.ts` owns 13 structured stories, 18 gallery records, six filter labels, and five fate-map stages.
+- **State/interactivity:** Search, filters, random story, saved stories, reader, Escape/backdrop close, scroll locking, fate-map buttons, mobile navigation, and gallery links are readable source.
+- **Build system / deployment:** `npm run build:melromarc` uses the shared maintainable-site builder to update the committed mirror; Pages still copies that mirror unchanged.
+- **Analytics:** No provider in the deployed artifact. A non-deployed provider-neutral proposal separates analytics privacy from the existing functional `melromarc-saved-stories` localStorage key and defines search-length, filter, random/story/path, save, gallery-source, and Data entry events.
+- **Tests / CI:** Targeted tests cover build/source contracts, 13 story IDs, five stages, functional storage, source/mirror asset equality, absence of old runtime markers from the active entry, and retained rollback-bundle hashes.
 - **Accessibility state:** Landmarks, one `h1`, button names, and image alternatives are present. Skip navigation, dialog focus trapping/return, and keyboard traversal need verification.
 - **Responsive state:** Accepted first folds at all three viewports show no horizontal overflow.
 - **Existing Figma:** Melromarc theme variables, editable theme anatomy, shared components, representative desktop/mobile screens, and 3-viewport baselines.
-- **Classification:** **REBUILD** — the rendered identity is recognizable, but the missing upstream source prevents safe, maintainable evolution.
-- **Target architecture:** Recover the original source or explicitly rebuild a maintainable React/static application that preserves the URL, recognizable art direction, content boundaries, and key dialog behavior.
+- **Classification:** **REBUILD** — original Sites source export was unavailable, so the accepted artifact was reconstructed as a maintainable project.
+- **Target architecture:** Implemented React/Vite source plus committed uppercase Pages mirror, preserving the URL, art direction, content boundaries, and key interaction contracts.
 - **Shared-core adoption:** Accessible dialog, focus return, skip navigation, routing/state conventions, asset validation, analytics event contract, and screenshot QA.
 - **Site-specific theme:** Preserve the midnight archive, sister color polarity, character artwork, critical framing, and fan/canon distinctions.
-- **Migration status:** Audit complete; implementation blocked pending upstream source or explicit rebuild authorization.
-- **Figma URL:** <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt>
-- **Preview / PR URL:** Local artifact preview verified; migration preview and PR blocked.
-- **Remaining risks:** Root-relative duplicate asset requests produce 404s in local logs even though relative assets load; direct hashed-bundle edits would be unreproducible.
+- **Migration status:** All six stages are implemented and merged in PR #18.
+- **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
+- **Preview / PR URL:** [Exact-commit reconstructed preview](https://raw.githack.com/TSRat/My-Website/edb5cd20374147c8738d4340374c7b90e930bede/MELROMARC-SISTERS/index.html); [PR #18](https://github.com/TSRat/My-Website/pull/18).
+- **Remaining risks:** Client rendering does not reproduce former Vinext RSC/SSR metadata; dialog focus trap/return and full visual comparison remain for Antigravity.
 
 ## Migration queue
 
-Living Atlas is now the merged reference implementation through PR #14.
-The authoritative remaining order is the four-batch table near the top of this
-file: IVORY ARCHIVE; Hypatia + Hildegard; Enheduanna after build recovery;
-Melromarc after source recovery or explicit rebuild approval.
+Living Atlas is the merged reference implementation through PR #14. IVORY,
+Hypatia, Hildegard, Enheduanna, and Melromarc now also have merged six-stage
+implementations through PRs #15–#18.

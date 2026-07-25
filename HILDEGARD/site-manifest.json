@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "hildegard",
+  "title": "谦卑的反叛者：宾根的希尔德加德",
+  "slug": "HILDEGARD",
+  "status": "published",
+  "language": "zh-CN",
+  "contentModel": "historical editorial narrative",
+  "renderers": [
+    {
+      "id": "pages",
+      "source": "HILDEGARD/",
+      "runtime": "static HTML, CSS and JavaScript"
+    }
+  ],
+  "capabilities": {
+    "chapterNavigation": true,
+    "sourceLinks": true,
+    "videoLinks": true,
+    "dataEntry": true
+  },
+  "analytics": {
+    "provider": null,
+    "networkRequests": false,
+    "cookies": false,
+    "persistentStorage": false,
+    "identity": false,
+    "rawContent": false,
+    "events": [
+      "page_viewed",
+      "chapter_opened",
+      "section_opened",
+      "source_opened",
+      "video_opened",
+      "data_entry_opened"
+    ]
+  }
+}
