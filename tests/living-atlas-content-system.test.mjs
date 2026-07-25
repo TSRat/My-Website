@@ -99,6 +99,41 @@ test("Living Atlas language pages use the shared data hooks without fake links",
   assert.doesNotMatch(chinese, /这里只收录已经发布且可以抵达的内容/);
 });
 
+test("Living Atlas background music is manual, bilingual, and locally bundled", async () => {
+  const [english, chinese, script, styles, audio] = await Promise.all([
+    readAtlasPage("index.html"),
+    readAtlasPage("zh.html"),
+    readAtlasPage("atlas.js"),
+    readAtlasPage("style.css"),
+    readFile(
+      new URL(
+        "../sites/living-atlas/assets/who-are-you-the-who.mp3",
+        import.meta.url,
+      ),
+    ),
+  ]);
+
+  for (const page of [english, chinese]) {
+    assert.match(page, /data-background-music/);
+    assert.match(page, /src="assets\/who-are-you-the-who\.mp3"/);
+    assert.match(page, /preload="none"/);
+    assert.match(page, /\sloop/);
+    assert.match(page, /data-music-toggle/);
+    assert.match(page, /aria-pressed="false"/);
+    assert.doesNotMatch(page, /\sautoplay/);
+  }
+
+  assert.match(english, /data-label-off="Music · Off"/);
+  assert.match(chinese, /data-label-off="音乐 · 关"/);
+  assert.match(script, /const initBackgroundMusic = \(\) =>/);
+  assert.match(script, /await audio\.play\(\)/);
+  assert.match(script, /audio\.pause\(\)/);
+  assert.match(script, /audio\.volume = 0\.35/);
+  assert.match(styles, /\.music-toggle\s*{/);
+  assert.ok(audio.byteLength > 1_000_000);
+  assert.equal(audio.subarray(0, 3).toString("ascii"), "ID3");
+});
+
 test("Living Atlas analytics is provider-neutral and excludes raw search text", () => {
   const delivered = [];
   const adapter = createAnalyticsAdapter({
