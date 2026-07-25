@@ -450,5 +450,17 @@
   `390 × 844` 从关切换为开；主要资源加载、控件视口包含与页面布局正常。
 - Console: 音乐资源与脚本无错误；仅有仓库未提供 `favicon.ico` 造成的既有
   404。
+- Exact remote Preview smoke: Passed — raw.githack 安全确认页之后，页面、
+  主资源与 15 MB 音频可加载，按钮从 `Music · Off` 切换为
+  `Music · On`。
 - Antigravity extended QA: Pending.
-- Commit、push、exact Preview 与 PR：待完成。
+- Implementation commit: `4013a1f` —
+  `add manual living atlas background music`.
+- Push: completed to `origin/codex/living-atlas-background-music`.
+- Exact implementation Preview:
+  <https://raw.githack.com/TSRat/My-Website/4013a1f1de34a9f52c3b31cdc9afd480258f78c4/THE-LIVING-ATLAS/index.html>.
+  raw.githack may first show an external-content notice; choose
+  `Open the page`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/23>.
+- Merge: not performed; creator review and explicit merge authorization are
+  still required.
