@@ -37,7 +37,7 @@ Default branch: `main`
 | --- | --- | --- | --- |
 | `/My-Website/` | `scripts/build-github-pages.mjs` 生成 | 生成函数和 `scripts/github-pages-hub.css` | `docs/index.html`（构建时生成） |
 | `/My-Website/IVORY-ARCHIVE/` | 根据 `app/briefings.ts` 生成，图片来自 `public/` | `app/`、`public/`、`scripts/github-pages.css/js` | `docs/IVORY-ARCHIVE/index.html`（构建时生成） |
-| `/My-Website/ENHEDUANNA/` | 直接复制已提交的 `ENHEDUANNA/` | `static-sites/enheduanna/` 存在 TSX/CSS，但无自动同步 script | `ENHEDUANNA/index.html` |
+| `/My-Website/ENHEDUANNA/` | `npm run build:enheduanna` 从 `static-sites/enheduanna/` 生成已提交的 `ENHEDUANNA/`，Pages 再复制镜像 | React / TSX / CSS + Vite | `ENHEDUANNA/index.html` |
 | `/My-Website/HYPATIA/` | 直接复制 `HYPATIA/` | 当前目录中的 HTML/CSS/JS | `HYPATIA/index.html` |
 | `/My-Website/MELROMARC-SISTERS/` | 直接复制 `MELROMARC-SISTERS/` | 当前仓库只能确认已生成 artifact | `MELROMARC-SISTERS/index.html` |
 
@@ -147,7 +147,8 @@ Do not replace the existing GitHub Actions deployment architecture with
 
 - 源资源：`static-sites/enheduanna/public/`
 - 当前发布资源：`ENHEDUANNA/` 根目录和 `ENHEDUANNA/assets/`
-- 两处同名资源目前需要人工保持一致；不要只替换一处后假设另一处会自动变化。
+- 使用 `npm run build:enheduanna` 可把源码、CSS 和 `public/` 资源一起编译到临时目录，再覆盖镜像中的当前入口与资源。
+- 构建器不会删除镜像内未引用的旧哈希 bundle；这些文件继续作为回滚材料，入口只引用本次新产物。
 
 ### Hypatia
 
@@ -200,13 +201,28 @@ git diff --stat
 
 ## Known technical gaps
 
-- 没有 npm script 将 `static-sites/enheduanna/` 重建到 `ENHEDUANNA/`。
 - 已审计当前全部 5 个 remote branches；其中没有 Hypatia 的完整上游框架源码。是否存在于仓库外仍待所有者确认。
 - 已审计当前全部 5 个 remote branches；其中没有 Melromarc Sisters 的完整未编译源码。是否存在于仓库外仍待所有者确认。
 - `IVORY-ARCHIVE/` 是旧快照，容易被误认为当前源文件。
 - 根目录存在若干静态快照文件，当前 Pages build 不读取它们；删除策略尚未由创作者确认。
 
 以上缺口应通过补充可重复构建流程解决，而不是通过移动目录或改变公开 URL 解决。
+
+## Maintainable static-site builder
+
+`scripts/build-maintainable-site.mjs` 是源码工程到既有 Pages 镜像的共享发布器。它按站点 ID：
+
+1. 使用站点自己的 Vite 配置构建到被忽略的 `.site-build/<site-id>/`。
+2. 检查临时入口已经引用编译后的哈希资源，而不是 `.tsx`。
+3. 把通过检查的结果复制到受版本控制的既有大写镜像目录。
+4. 不删除镜像中的历史 bundle，避免破坏回滚材料。
+
+当前入口：
+
+```bash
+npm run dev:enheduanna
+npm run build:enheduanna
+```
 
 ## Reusable website migration starter
 

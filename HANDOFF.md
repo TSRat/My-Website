@@ -697,3 +697,35 @@ The unrelated `.agents/skills/build-new-site-to-pr/` files remain unstaged; the 
 - Branch: `codex/living-atlas-template-data`
 - PR: <https://github.com/TSRat/My-Website/pull/14>
 - Merge: explicitly authorized by the creator; perform after configuration validation and push.
+
+## 2026-07-25: Enheduanna maintainable source reconstruction
+
+### Current target
+
+在未能从 ChatGPT Work / Sites 导出原工程的情况下，按创作者明确授权，利用仓库内完整可读 TSX/CSS/资源和当前 Pages 镜像，恢复可维护源码工程与可重复 source-to-mirror 构建。
+
+### Completed
+
+- 找到 Enheduanna 的 ChatGPT Work / Sites 任务与站点输出；编辑界面没有暴露源码下载或导出。
+- 新增共享 `scripts/build-maintainable-site.mjs`，先构建到 `.site-build/`，检查入口后再更新既有大写 Pages 镜像。
+- 新增 `static-sites/enheduanna/vite.config.ts`、`npm run dev:enheduanna` 与 `npm run build:enheduanna`。
+- 从权威源码重建当前 `ENHEDUANNA/` 入口与哈希 JS/CSS；历史 bundle 不删除。
+- 实现 `13 · DATA / SIGNALS` provider-none 入口，不启用网络分析、Cookie、持久化身份或虚构指标。
+- 修复旧基线在 1024px 的 hero 横向溢出；不改变桌面艺术方向、内容章节或公开 URL。
+- 更新 README registry、全局/项目技术文档、组合审计、六阶段 handoff、manifest 与 targeted tests。
+
+### Validation
+
+- `npm run build:enheduanna`: Passed.
+- `node --test tests/enheduanna-readiness.test.mjs`: Passed — 3/3.
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed.
+- Playwright basic smoke: 1280 / 1024 / 390 CSS pixels, Data visible, 8/8 images loaded, no console errors, no horizontal overflow.
+- Antigravity extended QA: not run; section-level visual comparison, keyboard and multi-browser review remain delegated.
+
+### Delivery state
+
+- Branch: `codex/enheduanna-six-stage-readiness`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/17>.
+- Exact-commit Preview: add after push.
+- Merge: not authorized and not performed.

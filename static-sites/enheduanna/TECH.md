@@ -1,67 +1,71 @@
 # Enheduanna technical notes
 
-Last audited: 2026-07-19
+Last updated: 2026-07-25
 
 ## Source and mirror
 
-本项目具有两套目录：
-
 | Directory | Role |
 | --- | --- |
-| `static-sites/enheduanna/` | 可读的 React/TSX/CSS 源码和原始资源 |
-| `ENHEDUANNA/` | 当前 GitHub Pages workflow 直接复制的静态镜像 |
+| `static-sites/enheduanna/` | 权威的 React / TSX / CSS 源码、Vite 配置和原始资源 |
+| `.site-build/enheduanna/` | 被 Git 忽略的临时构建目录 |
+| `ENHEDUANNA/` | 受版本控制、由 GitHub Pages workflow 复制的发布镜像 |
 
-当前仓库没有 npm script 自动把前者构建到后者。修改源目录不等于更新公开 Pages 输入。
-
-## Source entries
-
-- `static-sites/enheduanna/index.html`
-- `static-sites/enheduanna/main.tsx`
-- `static-sites/enheduanna/page.tsx`
-- `static-sites/enheduanna/globals.css`
-- `static-sites/enheduanna/public/`
-
-发布镜像入口：
-
-- `ENHEDUANNA/index.html`
-- `ENHEDUANNA/assets/index-DIQsAFLE.js`
-- `ENHEDUANNA/assets/index-ZUWuKnJO.css`
-- 其余图片与 favicon 位于 `ENHEDUANNA/` 根目录。
-
-## Current deployment behavior
-
-`npm run build:pages` 不会编译 `static-sites/enheduanna/`。它执行：
-
-```text
-copy ENHEDUANNA/ -> docs/ENHEDUANNA/
-```
-
-公开路径是：
+公开路径保持：
 
 ```text
 /My-Website/ENHEDUANNA/
 ```
 
-不要改变目录名大小写或入口中的 `./assets/...` 相对路径。
+不要改变目录名大小写、Pages slug 或入口中的相对资源路径。
 
-## Rebuild status
+## Source entries
 
-仓库结构表明该项目曾由 Vite/React 构建，但没有保存可确认的专用 build command、Vite config 或 package script。
+- `index.html`
+- `main.tsx`
+- `page.tsx`
+- `globals.css`
+- `public/`
+- `vite.config.ts`
 
-因此：
+`page.tsx` 是内容与页面结构的主要维护入口；`globals.css` 保存站点独有的展览图录视觉、响应式规则和 Data / Signals 附录样式。
 
-- 不要声称 `npm run build` 会重建 Enheduanna；它构建根 Vinext 应用。
-- 不要只改 `page.tsx` 后就报告 Pages 已更新。
-- 不要直接编辑带哈希 bundle 来模拟可靠源码流程，除非任务明确要求紧急镜像修补。
-- 在找到或补充构建命令前，任何内容/UI 修改都必须说明源目录与发布镜像是否同步。
+## Local development and production build
 
-2026-07-19 已审计当前全部 5 个 remote branches。仓库仅保留本目录的 TSX/CSS/资源与已编译镜像，没有找到缺失的项目级 `package.json`、Vite config 或原始构建脚手架。因此不能在不猜测架构的情况下补写可靠的重建命令。
+```bash
+npm run dev:enheduanna
+npm run build:enheduanna
+```
 
-TODO: needs confirmation — 原始构建命令、Vite root 和输出参数是否保存在仓库外。
+`dev:enheduanna` 使用项目级 Vite 配置。`build:enheduanna` 调用共享发布器 `scripts/build-maintainable-site.mjs`：
 
-## Assets
+1. 构建到 `.site-build/enheduanna/`。
+2. 检查临时 `index.html` 已引用哈希 JS/CSS，不再引用 `main.tsx`。
+3. 把通过检查的文件复制到 `ENHEDUANNA/`。
+4. 保留未被新入口引用的旧哈希 bundle 作为回滚材料。
 
-源码资源在 `static-sites/enheduanna/public/`，发布资源在 `ENHEDUANNA/`。当前有以下同名文件：
+修改源码、CSS 或 `public/` 后，必须运行 `npm run build:enheduanna` 并提交源码与当前镜像；不要直接修补编译 bundle。
+
+## Pages deployment
+
+`npm run build:pages` 仍然执行：
+
+```text
+copy ENHEDUANNA/ -> docs/ENHEDUANNA/
+```
+
+它不会隐式运行站点源码构建。因此正确顺序是：
+
+```bash
+npm run build:enheduanna
+npm run build:pages
+npm run validate:pages
+```
+
+现有 GitHub Actions artifact 架构、公开 URL 和 `scripts/build-github-pages.mjs` 的复制映射均未改变。
+
+## Assets and rollback policy
+
+源码资源位于 `static-sites/enheduanna/public/`，Vite 会把它们复制到发布镜像根目录。当前同名资源：
 
 - `enheduanna-disc.jpg`
 - `enheduanna-portrait.png`
@@ -72,47 +76,34 @@ TODO: needs confirmation — 原始构建命令、Vite root 和输出参数是�
 - `tsrat-logo.png`
 - `favicon.svg`
 
-替换资源时必须检查两处以及构建结果；文件名大小写必须一致。
+新入口只引用当前构建生成的哈希 JS/CSS。旧 bundle 不应手工引用，也不应在没有单独归档决定时删除。
+
+## Data / analytics
+
+页面包含可见的 `#data` 入口，并明确：
+
+- provider 为 `none`
+- 无网络上报
+- 无 Cookie 或持久化分析标识
+- 不采集身份、正文、自由输入或跨站行为
+
+`web/sites/enheduanna/site-manifest.proposed.json` 保存 provider-neutral 事件与隐私契约。它不是已启用的外部分析服务。
 
 ## Verification
 
-当前可运行的全局 Pages 检查：
+最小相关检查：
 
 ```bash
+npm run build:enheduanna
+node --test tests/enheduanna-readiness.test.mjs
 npm run build:pages
 npm run validate:pages
 ```
 
-然后确认：
+浏览器基本检查覆盖当前入口、8 张图片、Data 入口、控制台错误和横向溢出。扩展的多浏览器、键盘、section-level 截图与感知比较交给 Antigravity。
 
-```text
-docs/ENHEDUANNA/index.html
-docs/ENHEDUANNA/assets/index-DIQsAFLE.js
-docs/ENHEDUANNA/assets/index-ZUWuKnJO.css
-```
+## Known limits
 
-浏览器检查应覆盖目录导航、图片、外部来源链接、Bilibili iframe、移动端布局和控制台 404。
-
-## Safe future improvement
-
-在不改 URL 的前提下，为 `static-sites/enheduanna/` 增加明确的 build script，并让验证能够比较或重建 `ENHEDUANNA/`。这是独立技术任务，不能在普通内容修改中顺手引入。
-
-## 2026-07-25 · Stage 5 acceptance gate
-
-The migration target and proposed analytics contract now live in
-`web/sites/enheduanna/`. They are deliberately outside both source and mirror,
-so the repository cannot mistake a specification for deployed functionality.
-
-Stage 5 remains blocked until one of these paths is authorized:
-
-1. restore the original package, Vite config, and build command; or
-2. reconstruct the project from readable source with the current mirror as the
-   accepted baseline.
-
-The resulting build must write to a temporary directory first, document public
-base and asset hashing, preserve `/My-Website/ENHEDUANNA/`, compare expected
-routes/assets, and update `ENHEDUANNA/` only through a reviewable Draft PR.
-
-`tests/enheduanna-readiness.test.mjs` currently protects the honest blocker
-state and byte equality of every same-name public asset. It is not a substitute
-for renderer equivalence.
+- 章节编号仍按创作者保留的非递增叙事顺序；是否调整需要创作者确认。
+- 旧哈希 bundle 作为回滚材料保留，当前尚未建立正式的长期归档/清理策略。
+- 原始 ChatGPT Sites 编辑器没有暴露可下载源码；本工程是基于仓库内完整可读源码和既有镜像、按创作者授权完成的可维护重建。

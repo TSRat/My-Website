@@ -202,6 +202,7 @@ export default function Home() {
             <a href="#debate">作者争议</a>
             <a href="#silence">沉默传统</a>
             <a href="#sources">来源</a>
+            <a href="#data">Data / Signals</a>
           </div>
         </details>
       </header>
@@ -758,6 +759,23 @@ export default function Home() {
         <a className="notebook-link" href="https://notebooklm.google.com/notebook/607c3089-e539-4491-b567-ad63822d9e24" target="_blank" rel="noreferrer">
           <span>NOTEBOOKLM</span><b>打开 Enheduanna 研究笔记本</b><i>↗</i>
         </a>
+      </section>
+
+      <section className="data-entry section-pad" id="data" aria-labelledby="data-title" data-provider="none">
+        <div className="data-entry__meta">
+          <div className="section-tag light"><span>13</span> DATA / SIGNALS</div>
+          <p>PROVIDER / NONE</p>
+        </div>
+        <div className="data-entry__copy">
+          <p className="kicker">MEASUREMENT SPACE</p>
+          <h2 id="data-title">这里保留阅读信号的入口，<br />但不假装已经拥有数据。</h2>
+          <p>当前页面没有接入分析服务，也不会为这个板块设置 Cookie、持久化标识或采集正文与自由输入。未来只有在明确选择数据来源与用途后，才会显示真实且可解释的阅读信号。</p>
+        </div>
+        <dl className="data-entry__rules">
+          <div><dt>现在</dt><dd>无分析提供方<br />无网络上报</dd></div>
+          <div><dt>可能回答</dt><dd>读者进入哪些章节<br />哪些来源被继续打开</dd></div>
+          <div><dt>不会收集</dt><dd>身份与原始文本<br />跨站行为与私密数据</dd></div>
+        </dl>
       </section>
 
       <footer>
