@@ -9,12 +9,12 @@
   "renderers": [
     {
       "id": "dynamic",
-      "source": "app/",
+      "source": "sites/ivory-archive/ with app/ route adapters",
       "runtime": "React + Vinext"
     },
     {
       "id": "pages",
-      "source": "scripts/build-github-pages.mjs",
+      "source": "sites/ivory-archive/briefings.ts + scripts/build-github-pages.mjs",
       "runtime": "generated static HTML"
     }
   ],

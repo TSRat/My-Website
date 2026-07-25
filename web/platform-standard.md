@@ -6,6 +6,42 @@
 
 The platform standard unifies infrastructure, semantics, accessibility, QA, and delivery. It does not unify art direction, narrative voice, imagery, palette, project-specific typography, or storytelling composition.
 
+## Maintenance package contract
+
+Every public site has one authoritative maintenance package:
+
+```text
+sites/<site-id>/
+├── site.config.json
+├── CONTENT.md
+├── DESIGN.md
+├── TECH.md
+├── HANDOFF.md
+└── site-specific source and assets
+```
+
+`README.md` remains the authoritative human project registry. The per-site
+configuration is a technical build contract, not a competing registry. It
+declares the existing public path, renderer mode, source entry, build command,
+manifest, and deployment-mirror policy.
+
+All sites use the same discovery, validation, and build control plane:
+
+```bash
+npm run validate:sites
+npm run build:sites
+npm run build:pages
+```
+
+Renderer adapters remain proportional to the site:
+
+- direct static copy for Living Atlas, Hypatia, and Hildegard;
+- Vite static build for Enheduanna and Melromarc Sisters;
+- Vinext plus a dedicated Pages renderer for IVORY ARCHIVE.
+
+Uppercase public directories are deploy mirrors, not editing surfaces.
+`IVORY-ARCHIVE/` remains an explicitly documented historical snapshot.
+
 ## Project tiers
 
 | Tier | Typical site | Required depth |

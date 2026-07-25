@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Two pillars — one crowned by an eye of vision, one by a leaf of knowledge — carrying a lintel of authority.">
+  <defs>
+    <radialGradient id="tp-glow" cx="0.5" cy="0.4" r="0.5">
+      <stop offset="0" stop-color="#7CA0D9" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#0B1524" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="#0B1524"/>
+  <rect width="800" height="500" fill="url(#tp-glow)"/>
+  <g stroke="#D9B366" stroke-width="1.5" fill="none">
+    <!-- Left pillar: Vision -->
+    <rect x="200" y="180" width="60" height="240"/>
+    <path d="M190 180 L270 180 L270 165 L190 165 Z"/>
+    <path d="M195 420 L265 420 L265 435 L195 435 Z"/>
+    <!-- Fluting -->
+    <line x1="215" y1="180" x2="215" y2="420" opacity="0.5"/>
+    <line x1="230" y1="180" x2="230" y2="420" opacity="0.5"/>
+    <line x1="245" y1="180" x2="245" y2="420" opacity="0.5"/>
+    <!-- Vision emblem: eye + halo -->
+    <circle cx="230" cy="110" r="34"/>
+    <circle cx="230" cy="110" r="44" stroke-dasharray="2 4"/>
+    <ellipse cx="230" cy="110" rx="16" ry="8"/>
+    <circle cx="230" cy="110" r="4" fill="#D9B366"/>
+    <text x="230" y="470" text-anchor="middle" font-family="'Fira Code',monospace" font-size="12" letter-spacing="0.18em" fill="#B9B29A">神启 · VISIO</text>
+
+    <!-- Right pillar: Knowledge -->
+    <rect x="540" y="180" width="60" height="240"/>
+    <path d="M530 180 L610 180 L610 165 L530 165 Z"/>
+    <path d="M535 420 L605 420 L605 435 L535 435 Z"/>
+    <line x1="555" y1="180" x2="555" y2="420" opacity="0.5"/>
+    <line x1="570" y1="180" x2="570" y2="420" opacity="0.5"/>
+    <line x1="585" y1="180" x2="585" y2="420" opacity="0.5"/>
+    <!-- Knowledge emblem: leaf + branches -->
+    <path d="M570 80 Q555 105 570 145 Q585 105 570 80"/>
+    <line x1="570" y1="115" x2="550" y2="90"/>
+    <line x1="570" y1="115" x2="590" y2="90"/>
+    <line x1="570" y1="115" x2="540" y2="120"/>
+    <line x1="570" y1="115" x2="600" y2="120"/>
+    <circle cx="570" cy="115" r="3" fill="#A7B77A"/>
+    <text x="570" y="470" text-anchor="middle" font-family="'Fira Code',monospace" font-size="12" letter-spacing="0.18em" fill="#B9B29A">学识 · SCIENTIA</text>
+
+    <!-- Lintel: authority -->
+    <line x1="180" y1="140" x2="620" y2="140"/>
+    <line x1="180" y1="150" x2="620" y2="150"/>
+    <text x="400" y="132" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-style="italic" font-size="22" fill="#D9B366">AUCTORITAS</text>
+
+    <!-- Star between pillars -->
+    <g transform="translate(400 280)">
+      <circle r="60" opacity="0.35"/>
+      <path d="M0 -50 L12 -12 L50 0 L12 12 L0 50 L-12 12 L-50 0 L-12 -12 Z" fill="#D9B366" opacity="0.85"/>
+    </g>
+  </g>
+</svg>

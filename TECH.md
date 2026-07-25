@@ -6,12 +6,13 @@ Default branch: `main`
 
 ## 架构概览
 
-仓库同时保存两类技术形态：
+仓库统一使用 `sites/<site-id>/` 作为网站维护控制面，同时保存三类渲染适配器：
 
-1. 根目录的 Vinext/Vite/React 应用，主要承载 IVORY ARCHIVE 的动态版本和 Worker 兼容构建。
-2. GitHub Pages 的静态多站点 artifact，由自定义 Node 脚本生成或复制后，通过 GitHub Actions 发布。
+1. `sites/ivory-archive/` 的 Vinext/Vite/React 实现；根 `app/` 只是框架路由适配器。
+2. `sites/enheduanna/` 与 `sites/melromarc-sisters/` 的 React/Vite 静态工程。
+3. `sites/living-atlas/`、`sites/hypatia/` 与 `sites/hildegard/` 的直接静态工程。
 
-这两类构建共享仓库，但不是同一个输出。不要把 `npm run build` 的 `dist/` 与 `npm run build:pages` 的 `docs/` 混为一谈。
+这些站点共享维护文档、`site.config.json`、构建控制面和 Pages 发布约定，但不共享视觉皮肤或强制同一框架。不要把 `npm run build` 的 `dist/` 与 `npm run build:pages` 的 `docs/` 混为一谈。
 
 ## Tech stack
 
@@ -36,10 +37,12 @@ Default branch: `main`
 | 公开路径 | Pages artifact 来源 | 可读上游源码 | 入口文件 |
 | --- | --- | --- | --- |
 | `/My-Website/` | `scripts/build-github-pages.mjs` 生成 | 生成函数和 `scripts/github-pages-hub.css` | `docs/index.html`（构建时生成） |
-| `/My-Website/IVORY-ARCHIVE/` | 根据 `app/briefings.ts` 生成，图片来自 `public/` | `app/`、`public/`、`scripts/github-pages.css/js` | `docs/IVORY-ARCHIVE/index.html`（构建时生成） |
-| `/My-Website/ENHEDUANNA/` | `npm run build:enheduanna` 从 `static-sites/enheduanna/` 生成已提交的 `ENHEDUANNA/`，Pages 再复制镜像 | React / TSX / CSS + Vite | `ENHEDUANNA/index.html` |
-| `/My-Website/HYPATIA/` | 直接复制 `HYPATIA/` | 当前目录中的 HTML/CSS/JS | `HYPATIA/index.html` |
-| `/My-Website/MELROMARC-SISTERS/` | 直接复制 `MELROMARC-SISTERS/` | `static-sites/melromarc-sisters/`；`npm run build:melromarc` 更新镜像 | `MELROMARC-SISTERS/index.html` |
+| `/My-Website/IVORY-ARCHIVE/` | 根据 `sites/ivory-archive/briefings.ts` 生成，图片来自 `public/` | `sites/ivory-archive/`、`public/`、`scripts/github-pages.css/js` | `docs/IVORY-ARCHIVE/index.html`（构建时生成） |
+| `/My-Website/ENHEDUANNA/` | `sites/enheduanna/` 经 Vite 生成 `ENHEDUANNA/` 镜像，Pages 再复制 | React / TSX / CSS + Vite | `ENHEDUANNA/index.html` |
+| `/My-Website/HILDEGARD/` | `sites/hildegard/` 经共享直接静态构建器更新 `HILDEGARD/` | HTML/CSS/JS/SVG | `HILDEGARD/index.html` |
+| `/My-Website/HYPATIA/` | `sites/hypatia/` 经共享直接静态构建器更新 `HYPATIA/` | HTML/CSS/JS | `HYPATIA/index.html` |
+| `/My-Website/MELROMARC-SISTERS/` | `sites/melromarc-sisters/` 经 Vite 生成 `MELROMARC-SISTERS/` 镜像 | React / TypeScript + Vite | `MELROMARC-SISTERS/index.html` |
+| `/My-Website/THE-LIVING-ATLAS/` | `sites/living-atlas/` 经共享直接静态构建器更新 `THE-LIVING-ATLAS/` | HTML/CSS/ES modules | `THE-LIVING-ATLAS/index.html` |
 
 根目录的 `index.html`、`hub.css`、`briefings/` 和 `IVORY-ARCHIVE/` 是已提交的静态文件或历史快照。当前 Pages build 不读取根 `index.html`、`hub.css` 或 `IVORY-ARCHIVE/`；总入口和 IVORY 会在 `docs/` 中重新生成。
 
@@ -52,10 +55,16 @@ Default branch: `main`
 | `npm run dev` | 运行 Vite/Vinext 开发服务器 | 本地服务；Wrangler 日志留在忽略目录 |
 | `npm run build:pages` | 生成 GitHub Pages 多站点 artifact | `docs/` |
 | `npm run validate:pages` | 检查 `docs/` 内 HTML/CSS 的本地资源引用 | 只读；缺失或越界引用时退出失败 |
+| `npm run validate:sites` | 检查六个站点包、维护文档、配置、入口、manifest 与 npm scripts | 只读 |
+| `npm run build:sites` | 按每站配置刷新五个大写 Pages 镜像 | `.site-build/` 与大写镜像 |
+| `npm run dev:living-atlas` / `build:living-atlas` | 开发或同步 Living Atlas | `THE-LIVING-ATLAS/` |
+| `npm run dev:ivory` / `build:ivory` | 开发或构建 IVORY 动态应用 | `dist/` |
 | `npm run dev:enheduanna` | 运行 Enheduanna Vite 开发服务器 | 本地服务 |
-| `npm run build:enheduanna` | 从可读 React/Vite 源码更新 Enheduanna 镜像 | `.site-build/enheduanna/`、`ENHEDUANNA/` |
+| `npm run build:enheduanna` | 从 `sites/enheduanna/` 更新 Enheduanna 镜像 | `.site-build/enheduanna/`、`ENHEDUANNA/` |
+| `npm run dev:hildegard` / `build:hildegard` | 开发或同步 Hildegard | `HILDEGARD/` |
+| `npm run dev:hypatia` / `build:hypatia` | 开发或同步 Hypatia | `HYPATIA/` |
 | `npm run dev:melromarc` | 运行 Melromarc Vite 开发服务器 | 本地服务 |
-| `npm run build:melromarc` | 从可读 React/Vite 源码更新 Melromarc 镜像 | `.site-build/melromarc-sisters/`、`MELROMARC-SISTERS/` |
+| `npm run build:melromarc` | 从 `sites/melromarc-sisters/` 更新 Melromarc 镜像 | `.site-build/melromarc-sisters/`、`MELROMARC-SISTERS/` |
 | `npm run install:ci` | 在 Sites 隔离环境中执行受限的 `npm ci` | `node_modules/`、`.sites-runtime/` |
 | `npm run build` | 运行受限时长 Vinext build，并验证 Worker artifact | `dist/` |
 | `npm run start` | 启动 Vinext 生产服务 | 本地服务 |
@@ -116,13 +125,14 @@ Do not replace the existing GitHub Actions deployment architecture with
 
 `scripts/build-github-pages.mjs` 会：
 
+- 读取六个 `sites/<site-id>/site.config.json` 并先刷新五个大写静态镜像。
 - 删除并重建 `docs/IVORY-ARCHIVE/`。
 - 删除旧的 `docs/briefings/` legacy redirect。
 - 生成 `docs/index.html`、`docs/hub.css`、`docs/404.html` 和 `.nojekyll`。
-- 从 `app/briefings.ts` 读取字面量数据，生成 IVORY 首页及每期详情页。
+- 从 `sites/ivory-archive/briefings.ts` 读取字面量数据，生成 IVORY 首页及每期详情页。
 - 从 `public/story-images/` 复制本期使用的图片。
 - 为旧 `/My-Website/briefings/<date>/` 路径生成到 IVORY 的 redirect。
-- 递归复制 `ENHEDUANNA/`、`HYPATIA/`、`MELROMARC-SISTERS/` 到 `docs/`。
+- 递归复制五个由站点包生成的大写镜像到 `docs/`。
 
 `docs/` 已在 `.gitignore` 中，应该由 Actions 每次生成，不应成为另一个手工维护分支。
 
@@ -145,27 +155,27 @@ Do not replace the existing GitHub Actions deployment architecture with
 
 - 源图片：`public/story-images/`
 - 站点标志与封面：`public/tsrat-logo.png`、`public/ivory-botanical-archive.png`、`public/favicon.svg`
-- Pages build 只复制 `app/briefings.ts` 实际引用的 story images。
+- Pages build 只复制 `sites/ivory-archive/briefings.ts` 实际引用的 story images。
 
 ### Enheduanna
 
-- 源资源：`static-sites/enheduanna/public/`
+- 源资源：`sites/enheduanna/public/`
 - 当前发布资源：`ENHEDUANNA/` 根目录和 `ENHEDUANNA/assets/`
 - 使用 `npm run build:enheduanna` 可把源码、CSS 和 `public/` 资源一起编译到临时目录，再覆盖镜像中的当前入口与资源。
 - 构建器不会删除镜像内未引用的旧哈希 bundle；这些文件继续作为回滚材料，入口只引用本次新产物。
 
 ### Hypatia
 
-- 资源集中在 `HYPATIA/assets/`。
-- `HYPATIA/index.html` 实际引用 `hypatia-site.css`、`hypatia-v2.css` 和 `hypatia-refresh.js`。
+- 源资源集中在 `sites/hypatia/assets/`；`HYPATIA/` 是同步镜像。
+- `sites/hypatia/index.html` 实际引用 `hypatia-site.css`、`hypatia-v2.css` 和 `hypatia-refresh.js`。
 - workflow 还验证多张指定图片和 `lake-v11` / `interactive-v11` 版本标记。
 
 ### Melromarc Sisters
 
-- 源图片位于 `static-sites/melromarc-sisters/public/images/` 和
+- 源图片位于 `sites/melromarc-sisters/public/images/` 和
   `public/images/gallery/`。
 - 故事、图像与命运分支记录集中在
-  `static-sites/melromarc-sisters/content.ts`；交互在 `page.tsx`。
+  `sites/melromarc-sisters/content.ts`；交互在 `page.tsx`。
 - `npm run build:melromarc` 生成带 hash 的 JavaScript/CSS，并更新
   `MELROMARC-SISTERS/` 发布镜像。
 - 旧 Vinext bundle 在镜像中保留作回滚材料，但新入口不再引用它们；
@@ -210,19 +220,25 @@ git diff --stat
 
 ## Maintainable static-site builder
 
-`scripts/build-maintainable-site.mjs` 是 Enheduanna 与 Melromarc 从源码
-工程到既有 Pages 镜像的共享发布器。它按站点 ID：
+`scripts/build-site.mjs` 是五个静态站点从统一维护包到既有 Pages 镜像
+的共享发布器。它读取每站的 `site.config.json`，并按渲染模式：
 
-1. 使用站点自己的 Vite 配置构建到被忽略的 `.site-build/<site-id>/`。
-2. 检查临时入口已经引用编译后的哈希资源，而不是 `.tsx`。
-3. 把通过检查的结果复制到受版本控制的既有大写镜像目录。
-4. 不删除镜像中的历史 bundle，避免破坏回滚材料。
+1. 直接静态站点复制到 `.site-build/<site-id>/`，排除维护文档和配置，再原子式替换镜像。
+2. Vite 站点使用项目配置编译到 `.site-build/<site-id>/`，并检查入口引用哈希资源而不是 `.tsx`。
+3. 把通过检查的结果复制到受版本控制的大写镜像目录。
+4. Vite 站点不删除镜像中的历史 bundle，避免破坏回滚材料。
 
 当前入口：
 
 ```bash
+npm run dev:living-atlas
+npm run build:living-atlas
 npm run dev:enheduanna
 npm run build:enheduanna
+npm run dev:hildegard
+npm run build:hildegard
+npm run dev:hypatia
+npm run build:hypatia
 npm run dev:melromarc
 npm run build:melromarc
 ```
@@ -235,7 +251,7 @@ npm run build:melromarc
 
 ## Known technical gaps
 
-- 已审计当前全部 5 个 remote branches；其中没有 Hypatia 的完整上游框架源码。是否存在于仓库外仍待所有者确认。
+- Hypatia 没有可确认的完整上游框架源码；当前可读静态实现已纳入 `sites/hypatia/` 的统一维护包。
 - Enheduanna 与 Melromarc 的原 ChatGPT Sites 编辑器未提供可用源码导出；
   当前可维护工程是依据接受的部署基线重建，不应被描述为原始 Sites 源项目。
 - `IVORY-ARCHIVE/` 是旧快照，容易被误认为当前源文件。
@@ -247,6 +263,6 @@ npm run build:melromarc
 
 `web/templates/site-starter/` is version-controlled source documentation and
 example code. It is not copied into `docs/` and is not a deployed shared
-runtime. Each site adopts the needed contracts inside its real maintained
-source directory so public URLs and the protected Pages build map remain
-unchanged.
+runtime. Every current site now implements the common maintenance package
+contract under `sites/`; the starter remains the capability template for future
+sites.

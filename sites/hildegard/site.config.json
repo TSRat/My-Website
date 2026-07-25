@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "hildegard",
+  "title": "谦卑的反叛者：宾根的希尔德加德",
+  "slug": "HILDEGARD",
+  "status": "published",
+  "interactionTier": "A",
+  "classification": "PRESERVE",
+  "maintenanceRoot": "sites/hildegard",
+  "documents": ["CONTENT.md", "DESIGN.md", "TECH.md", "HANDOFF.md"],
+  "source": {
+    "mode": "direct-static",
+    "entry": "index.html",
+    "assets": ["assets"]
+  },
+  "build": {
+    "command": "npm run build:hildegard",
+    "staging": ".site-build/hildegard",
+    "mirror": "HILDEGARD",
+    "mirrorPolicy": "replace"
+  },
+  "publicPath": "/My-Website/HILDEGARD/",
+  "manifest": "site-manifest.json",
+  "figmaUrl": "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2",
+  "hub": {
+    "order": 2,
+    "className": "hildegard",
+    "artLabel": "002",
+    "eyebrow": "DAUGHTERS OF TIME · 002",
+    "description": "从 1163 年那封警告皇帝的信出发，重新走近 12 世纪莱茵兰的女院长、先知、学者、音乐家与语言发明者。",
+    "metadata": [["时代", "1098 — 1179"], ["地点", "莱茵兰 · 鲁珀茨贝格"]]
+  }
+}

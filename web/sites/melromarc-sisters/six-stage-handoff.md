@@ -60,7 +60,7 @@ trap/return, mobile menu/modal, and screenshot regression.
 ## 5. Production, GitHub, and preview
 
 Readable React/TypeScript/Vite source now lives in
-`static-sites/melromarc-sisters/`. The site-specific build:
+`sites/melromarc-sisters/`. The site-specific build:
 
 ```bash
 npm run build:melromarc
@@ -85,7 +85,8 @@ The visible appendix reports `data-provider="none"`. There is no analytics
 network request, cookie, identity, raw search upload, story-text upload, or
 cross-site store.
 
-`site-manifest.proposed.json` preserves a provider-neutral future event
+`sites/melromarc-sisters/public/site-manifest.json` preserves a
+provider-neutral future event
 contract for search-length buckets, filters, random/story/path openings, save
 toggles, gallery sources, and Data entry. This is explicitly distinct from the
 functional local-only `melromarc-saved-stories` key.

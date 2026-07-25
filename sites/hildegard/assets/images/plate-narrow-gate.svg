@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Two towers flanking a narrow gate — a visual metaphor for the two closed doors and one open path facing 12th-century women.">
+  <defs>
+    <linearGradient id="ng-parch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F0E6CF"/>
+      <stop offset="1" stop-color="#D7C5A4"/>
+    </linearGradient>
+    <linearGradient id="ng-ink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#18382B"/>
+      <stop offset="1" stop-color="#14170F"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#ng-parch)"/>
+  <g stroke="#18382B" stroke-width="1.4" fill="none">
+    <!-- ground line -->
+    <line x1="40" y1="440" x2="760" y2="440"/>
+    <!-- Left tower (world of kings) -->
+    <rect x="120" y="180" width="120" height="260"/>
+    <path d="M120 180 L180 120 L240 180 Z"/>
+    <line x1="180" y1="220" x2="180" y2="440"/>
+    <rect x="150" y="240" width="20" height="30"/>
+    <rect x="190" y="240" width="20" height="30"/>
+    <rect x="150" y="300" width="20" height="30"/>
+    <rect x="190" y="300" width="20" height="30"/>
+    <text x="180" y="475" text-anchor="middle" font-family="'Fira Code',monospace" font-size="12" letter-spacing="0.16em" fill="#3A3B33">WORLD · KINGS</text>
+    <!-- Right tower (church hierarchy) -->
+    <rect x="560" y="180" width="120" height="260"/>
+    <path d="M560 180 L620 120 L680 180 Z"/>
+    <line x1="620" y1="220" x2="620" y2="440"/>
+    <rect x="590" y="240" width="20" height="30"/>
+    <rect x="630" y="240" width="20" height="30"/>
+    <rect x="590" y="300" width="20" height="30"/>
+    <rect x="630" y="300" width="20" height="30"/>
+    <text x="620" y="475" text-anchor="middle" font-family="'Fira Code',monospace" font-size="12" letter-spacing="0.16em" fill="#3A3B33">CHURCH · BISHOPS</text>
+    <!-- Narrow gate (center, arched) -->
+    <path d="M370 440 L370 260 Q400 200 430 260 L430 440 Z" fill="#18382B" stroke="#18382B"/>
+    <path d="M383 440 L383 275 Q400 235 417 275 L417 440 Z" fill="url(#ng-parch)"/>
+    <circle cx="400" cy="255" r="4" fill="#B48A3C"/>
+    <text x="400" y="475" text-anchor="middle" font-family="'Fira Code',monospace" font-size="12" letter-spacing="0.16em" fill="#B48A3C">THE NARROW GATE</text>
+  </g>
+  <!-- Barred doors on both towers (X pattern = closed) -->
+  <g stroke="#7A2A2A" stroke-width="2" fill="none" opacity="0.7">
+    <line x1="150" y1="350" x2="210" y2="410"/><line x1="210" y1="350" x2="150" y2="410"/>
+    <rect x="150" y="350" width="60" height="60"/>
+    <line x1="590" y1="350" x2="650" y2="410"/><line x1="650" y1="350" x2="590" y2="410"/>
+    <rect x="590" y="350" width="60" height="60"/>
+  </g>
+  <!-- Halo above gate -->
+  <g fill="none" stroke="#B48A3C" stroke-width="1" opacity="0.8">
+    <circle cx="400" cy="180" r="42"/>
+    <circle cx="400" cy="180" r="52" stroke-dasharray="2 4"/>
+  </g>
+</svg>

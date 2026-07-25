@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true">
+  <title>Branch — botanical divider</title>
+  <path d="M4 60 C 60 60, 60 20, 130 20 S 200 60, 260 60 T 316 60"/>
+  <g>
+    <circle cx="60"  cy="42" r="4" fill="currentColor" fill-opacity="0.6"/>
+    <circle cx="130" cy="20" r="5" fill="currentColor" fill-opacity="0.8"/>
+    <circle cx="200" cy="42" r="4" fill="currentColor" fill-opacity="0.6"/>
+    <circle cx="260" cy="60" r="4" fill="currentColor" fill-opacity="0.6"/>
+    <path d="M130 20 c 6 -12 22 -14 30 -6" />
+    <path d="M60 42 c -8 -10 -22 -10 -30 0" />
+    <path d="M200 42 c 8 -10 22 -10 30 0" />
+  </g>
+</svg>

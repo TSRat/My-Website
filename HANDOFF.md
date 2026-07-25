@@ -1,5 +1,70 @@
 # Repository handoff
 
+## 2026-07-25: Six-site maintenance structure unification
+
+### Current target
+
+检查六个公开网站是否采用同一套实现与维护思路，并把维护目录统一为
+The Living Atlas 可复用的站点包结构，同时保留各站点身份、适合自身的
+渲染技术、公开 URL 和 GitHub Actions Pages 架构。
+
+### Completed
+
+- 六个权威维护根统一为 `sites/<site-id>/`。
+- 每站统一包含 `site.config.json`、`CONTENT.md`、`DESIGN.md`、
+  `TECH.md`、`HANDOFF.md` 和站点特定源码 / 资源。
+- `README.md` 继续作为唯一权威项目表；每站配置只承担技术构建契约，
+  不创建竞争 registry。
+- 新增统一发现、结构校验与站点构建控制面：
+  `scripts/site-projects.mjs`、`scripts/validate-site-structure.mjs`、
+  `scripts/build-site.mjs`。
+- Living Atlas、Hypatia、Hildegard 使用 direct-static adapter；
+  Enheduanna、Melromarc 使用 Vite adapter；IVORY 保留 Vinext +
+  Pages 双渲染 adapter。
+- 五个大写公开目录统一为生成的 deploy mirror；维护 Markdown 与
+  `site.config.json` 不再进入直接静态发布镜像。
+- IVORY 的内容与 UI 实现迁入 `sites/ivory-archive/`；根 `app/` 仅保留
+  Vinext 路由适配器。
+- `scripts/build-github-pages.mjs` 从六个配置发现站点、刷新镜像并生成
+  Pages，不再维护硬编码站点列表。
+- 所有 manifest、targeted tests、组合审计、平台标准与项目技术文档已
+  指向统一维护路径。
+
+### Important decisions
+
+- “完全统一”指维护入口、文档、配置、manifest、发现、验证、构建、
+  镜像与 Pages 发布契约统一；不强迫六站使用同一框架或同一 UI。
+- 现有 Figma 文件仍是六阶段设计来源；本批次没有视觉 redesign，
+  因此复用既有 frame，不制造重复设计稿。
+- 大写目录、公开 slug、相对资源路径、Actions artifact 部署和历史
+  rollback bundle 均保留。
+
+### Verification
+
+- `npm run validate:sites`: passed — 6/6 maintenance packages.
+- `npm run build:sites`: passed — 3 direct-static + 2 Vite mirrors rebuilt.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed — 371 references across 46 HTML/CSS files.
+- `npm test`: passed — Vinext artifact plus 22/22 Node tests.
+- `npm run lint`: passed with 0 errors and 24 existing generated-bundle /
+  `<img>` warnings.
+- Browser basic smoke: all six public entries loaded, correct `h1`, no broken
+  images, and no horizontal overflow.
+- Antigravity extended visual/accessibility matrix: intentionally not run.
+
+### Delivery state
+
+- Branch: `codex/unify-site-maintenance`
+- Base: `636c198`
+- Commit / push / Pull Request / exact-commit Preview: pending final diff review.
+- Merge: not authorized and not performed.
+
+### Remaining
+
+- Review the Pull Request and exact-commit previews after publication.
+- Run Antigravity only if an extended multi-browser or section-overlay audit is
+  desired; no intentional visible change exists in this batch.
+
 ## 2026-07-25: IVORY ARCHIVE six-stage migration
 
 ### Current target
