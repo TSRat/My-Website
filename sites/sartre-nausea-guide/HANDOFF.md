@@ -90,7 +90,7 @@ Migrate the imported Sartre *Nausea* guide into the portfolio's six-stage websit
 - Starting commit: `2d36674`
 - Final integration commit: `a0b7bcd`.
 - Exact preview:
-  `https://raw.githack.com/TSRat/My-Website/a0b7bcd/SARTRE-NAUSEA-GUIDE/index.html`.
+  `https://raw.githack.com/TSRat/My-Website/63a17bb/SARTRE-NAUSEA-GUIDE/index.html`.
 - Draft PR: `https://github.com/TSRat/My-Website/pull/19`.
 
 ## Next step

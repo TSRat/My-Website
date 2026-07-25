@@ -30,7 +30,9 @@ authorized website migration PRs without touching the user's active worktree.
 - Root and both project-local lint commands: passed with 0 errors; root retains
   24 existing generated-bundle / `<img>` warnings.
 - `git diff --check`: passed.
-- Browser basic smoke on the final exact-commit previews: pending after push.
+- Browser basic smoke on exact review commit `63a17bb`: passed at 1440 × 900
+  for both pages; expected title and `h1`, semantic `main`, no broken images,
+  no horizontal overflow, and no console or request failures.
 - Antigravity extended QA: pending.
 
 ### Delivery state
@@ -43,8 +45,7 @@ authorized website migration PRs without touching the user's active worktree.
 
 ### Remaining
 
-- Push the review commit, open both exact-commit previews for a basic smoke
-  check, mark PR #19 ready, and merge it.
+- Mark PR #19 ready and merge it.
 - Asset provenance and extended Antigravity review remain creator follow-ups.
 
 ## 2026-07-25: Six-site maintenance structure unification
