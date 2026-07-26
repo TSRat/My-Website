@@ -32,6 +32,138 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    date: "2026-07-26",
+    displayDate: "2026.07.26",
+    issueNo: "13",
+    theme: "图像、算法与公共系统：谁决定我们如何看见世界？",
+    intro:
+      "今天的五个故事都在追问一种看似自然的判断如何被制造：热带图案如何继承殖民凝视，食物照片如何变成失真的营养数字，森林如何由互助规范而非单一命令治理，卫星如何把公共基础设施送到五十亿部手机，孕期风险又如何被疾病控制与照护条件共同改变。",
+    uniqueCount: 5,
+    topics: ["艺术人文", "社会科学", "女性主义"],
+    stories: [
+      {
+        category: "艺术人文 × 艺术与设计 × 殖民图像史",
+        image: "/story-images/joiri-minaya-tropics.jpg",
+        imageAlt: "热带植物纹样、织物褶皱、被遮蔽的纪念碑轮廓与跨洋地图层叠的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释 Joiri Minaya 对“热带”图像、纺织品与殖民纪念物的研究，并非艺术家作品复制、展览现场或历史地图",
+        title: "“热带”不是自然风景，而是一套被反复印刷的想象",
+        summary:
+          "Henry Art Gallery 为 Joiri Minaya 开设个展，以 Aloha 衬衫、花卉弹力布和包裹殖民纪念物的纺织实践，拆解“热带”如何从加勒比延伸为全球消费图像。",
+        happened:
+          "展览于 7 月 25 日在西雅图开幕。Minaya 出生于纽约、在多米尼加共和国长大；她把自己定位为表演者与“破坏者”，用纺织、摄影和遮蔽动作对抗把热带地区及居民简化为异国幻想的视觉传统。",
+        importance:
+          "棕榈、花朵和鲜艳布料看似中性装饰，却常把殖民历史、旅游经济与种族化身体压成可消费的愉悦背景。Minaya 的工作不是拒绝植物或色彩，而是让图案显出是谁设计、谁穿着、谁被观看，以及哪些历史被遮住。",
+        creatorAngle:
+          "选择一枚常见“热带”花纹，追踪它从植物学图谱、殖民贸易、旅游海报到服装印花的四次转译；再设计一块可包裹纪念物的布，让遮蔽本身成为重新命名空间的动作。",
+        facts: [
+          "展期为 2026 年 7 月 25 日至 2027 年 5 月 2 日，地点是 University of Washington 的 Henry Art Gallery",
+          "Joiri Minaya 1990 年出生于纽约，在多米尼加共和国长大，创作横跨纺织、摄影与表演",
+          "展览从加勒比延伸到太平洋，讨论“全球热带”如何被制造为供消费的异国想象",
+          "展品线索包括艺术家的 Aloha 衬衫，以及她设计来包裹殖民纪念物的花卉弹力布",
+        ],
+        sourceName: "Henry Art Gallery",
+        sourceUrl: "https://henryart.org/press/2026-spring-summer-exhibition-announcements",
+        sourceDate: "新闻稿 2026-04-15；展览开幕 2026-07-25",
+      },
+      {
+        category: "社会科学 × 传播与测量 × AI 消费工具",
+        image: "/story-images/calorie-app-measurement.jpg",
+        imageAlt: "餐盘照片穿过识别框后变成缺失脂肪与热量的数字卡片的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释食物识别应用的测量误差，并非真实应用界面、产品标识、研究图表或医疗建议",
+        title: "拍下餐盘之后，四款应用都把热量算少了",
+        summary:
+          "NIH Clinical Center 团队用代谢厨房中精确称重的餐食测试四款照片识别应用：它们平均少算 250 至 345 千卡，并把脂肪低估约 30 克。",
+        happened:
+          "研究者先拍摄 102 份标准化餐食，分别交给 MyFitnessPal、LoseIt!、CalAI 与 Appediet 识别，再与精确到 0.1 克的配方记录比较；随后又分析 200 多份餐食，初步发现高脂低碳餐更容易被低估。",
+        importance:
+          "照片让记录饮食变得轻松，却也把食材识别、份量推断和营养数据库三层不确定性压成一个精确数字。误差若系统性偏向脂肪与特定饮食，会影响个人决策和基于应用数据的研究；不过这仍是会议摘要，尚未完成期刊同行评审。",
+        creatorAngle:
+          "把同一餐盘拆成“相机看见的形状、模型猜测的食物、数据库匹配的份量、真实称重”四层，逐步显示误差在哪里累积，并让用户手动修改份量后观察数字如何变化。",
+        facts: [
+          "首轮测试使用 102 份 NIH 代谢厨房餐食，原料称量精确到 0.1 克",
+          "测试对象为 MyFitnessPal、LoseIt!、CalAI 和 Appediet 四款照片识别应用",
+          "四款应用平均少算 250 至 345 千卡，并把脂肪含量低估约 30 克",
+          "研究者随后分析 200 多份额外餐食；初步结果显示高脂的生酮餐更难估算，研究目前属于 NUTRITION 2026 会议摘要、尚未经过完整同行评审",
+        ],
+        sourceName: "American Society for Nutrition／NIH NIDDK",
+        sourceUrl: "https://www.newswise.com/articles/photo-based-calorie-tracking-apps-may-underestimate-energy-in-meals",
+        sourceDate: "2026-07-25",
+      },
+      {
+        category: "社会科学 × 人类学与地理 × 共有资源治理",
+        image: "/story-images/swidden-social-rules.jpg",
+        imageAlt: "森林斑块、互助劳动的人形节点、休耕周期与卫星网格组成的共有资源治理编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释轮耕、互助规范与森林斑块模型，并非真实社群、遥感影像、农地地图或研究结果截图",
+        title: "森林没有等政府命令：邻居是否来帮忙，也能限制开垦规模",
+        summary:
+          "一项结合人类学、遥感与模型的研究分析逾 18,000 个森林斑块，发现轮耕社群可通过互助和撤回合作，约束过大的开垦请求并维持森林再生。",
+        happened:
+          "研究团队比较中南美洲、撒哈拉以南非洲、南亚和东南亚的遥感图像，并建立劳动共享模型。在 Belize 的例子中，合理的两英亩农地容易获得邻里协作，二十英亩的过大请求则可能因无人相助而无法实现。",
+        importance:
+          "“刀耕火种”常把差异巨大的实践都写成环境破坏，也让政策误以为只有外部监管能保护森林。研究提示社会规范可以成为治理机制，但它不是浪漫化社群的免检证：土地压力、权力差异和市场变化仍可能破坏休耕周期。",
+        creatorAngle:
+          "制作一张可切换的斑块地图：改变请求面积、可用劳力、休耕年限和合作意愿，观察森林结构如何变化；同时标出模型没有测量的土地权、性别劳动与商品价格。",
+        facts: [
+          "研究分析超过 18,000 个森林斑块，并结合遥感、计算模型与实地人类学经验",
+          "轮耕在热带与亚热带地区已有约 10,000 年历史，通常经历清理、燃烧、种植一至两次和长期休耕",
+          "Belize 例子显示，两英亩规模的请求较易获得互助，二十英亩的过大请求可能因邻居撤回劳动而无法完成",
+          "研究覆盖中南美洲、撒哈拉以南非洲、南亚和东南亚，并指出中等程度扰动可能创造新的生态位、提高景观层面的生物多样性",
+        ],
+        sourceName: "Ohio State University／Proceedings of the National Academy of Sciences",
+        sourceUrl: "https://www.newswise.com/articles/unwritten-social-rules-not-government-oversight-help-keep-forest-land-sustainable",
+        sourceDate: "2026-07-23",
+      },
+      {
+        category: "社会科学 × 天文学与空间技术 × 公共基础设施",
+        image: "/story-images/galileo-public-infrastructure.jpg",
+        imageAlt: "两颗导航卫星、原子钟脉冲、地面控制站与手机定位网格连接成公共基础设施的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释 Galileo 卫星、地面控制与公共导航服务，并非卫星实拍、任务图示、ESA 标识或导航界面",
+        title: "两颗卫星入列之后，五十亿部手机背后的公共系统更有余量",
+        summary:
+          "Galileo 的 SAT 33 与 SAT 34 完成在轨测试并进入服务。新增冗余不仅提高定位连续性，也显出卫星、原子钟、地面站、安全认证和产业供应链共同构成的欧洲公共基础设施。",
+        happened:
+          "两颗卫星于去年 12 月由 Ariane 6 发射，经过约七天早期运行和数月调试，被送入 23,222 公里高的精确轨道。SAT 33 在 5 月获准服务，SAT 34 于 7 月 23 日获批，L14 任务至此完成部署。",
+        importance:
+          "手机上的定位点看起来像设备自身功能，实际依赖长期公共投资、跨机构认证和持续地面维护。把“航天成就”只写成发射瞬间，会忽略真正决定可靠性的测试、备份、时钟与治理；系统自主性也必须与开放标准和国际互操作一起讨论。",
+        creatorAngle:
+          "从一个手机定位点向后展开五层基础设施：卫星信号、原子钟、轨道控制、地面测试、安全认证；再模拟一颗卫星离线，观察冗余如何保护铁路、航运、金融授时与救援服务。",
+        facts: [
+          "SAT 33 与 SAT 34 于 2025 年 12 月 17 日由 Ariane 6 发射，卫星分离约在升空四小时后完成",
+          "早期运行阶段约七天，随后完成导航载荷、原子钟、转发器和安全功能测试",
+          "两颗卫星被送入距离地面 23,222 公里的轨道；SAT 33 于 2026 年 5 月获准服务，SAT 34 于 7 月 23 日获批",
+          "Galileo 自 2016 年提供开放服务，目前服务超过 50 亿智能手机用户；第一代仍有四颗卫星待发射",
+        ],
+        sourceName: "European Space Agency",
+        sourceUrl: "https://www.esa.int/Applications/Satellite_navigation/Two_new_Galileo_satellites_enter_service",
+        sourceDate: "2026-07-24",
+      },
+      {
+        category: "女性主义 × 健康与照护 × 孕期临床证据",
+        image: "/story-images/pregnancy-asthma-care.jpg",
+        imageAlt: "呼吸气流、胎盘轮廓、空气污染颗粒与连续照护节点交织的孕期哮喘编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释孕期哮喘控制、环境暴露与母胎照护，并非患者肖像、医学影像、胎儿照片或治疗建议",
+        title: "孕期哮喘的危险，主要来自没有被控制的疾病",
+        summary:
+          "Mount Sinai 团队综述最新证据：哮喘影响 8% 至 13% 的妊娠，真正推动早产、高血压性疾病和胎儿生长风险的主要因素，是持续失控而非诊断标签本身。",
+        happened:
+          "发表于《American Journal of Obstetrics and Gynecology》的综述整合气道炎症、氧化应激、胎盘功能与母体低氧机制，并把病毒感染、空气污染、室内暴露、肥胖和睡眠呼吸暂停纳入管理框架。",
+        importance:
+          "孕期常见的“少用药更安全”直觉可能让控制药物被自行停用，反而增加母体与胎儿风险。把差异归因于疾病控制，也能把责任从孕妇个人移向连续监测、环境暴露、可及药物与跨专科照护；具体治疗仍必须由临床医生个体化决定。",
+        creatorAngle:
+          "绘制两条并行妊娠时间线：一条只记录“有哮喘”标签，另一条记录症状、肺功能、药物、空气暴露和随访，让风险从静态身份改为可以被观察和干预的过程。",
+        facts: [
+          "综述估计哮喘影响 8% 至 13% 的妊娠",
+          "与控制良好者相比，失控哮喘相关的早产调整优势比由 1.3 上升至 1.6，高血压性疾病由 1.2 上升至 1.5",
+          "胎儿生长受限或小于胎龄儿的调整优势比由控制状态下的 1.2 上升至失控状态下的 1.4",
+          "论文讨论病毒感染、空气污染、室内暴露、肥胖、过敏性鼻炎、胃食管反流和阻塞性睡眠呼吸暂停等可改变因素，并强调持续监测与控制治疗",
+        ],
+        sourceName: "Mount Sinai Health System／American Journal of Obstetrics and Gynecology",
+        sourceUrl: "https://www.newswise.com/articles/mount-sinai-researchers-synthesize-emerging-evidence-to-inform-management-of-pregnancy-specific-asthma-affecting-nearly-1-in-10-pregnancies",
+        sourceDate: "2026-07-24；期刊 2026 年 8 月号",
+      },
+    ],
+  },
+  {
     date: "2026-07-25",
     displayDate: "2026.07.25",
     issueNo: "12",
