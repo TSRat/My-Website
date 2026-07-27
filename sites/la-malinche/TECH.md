@@ -49,7 +49,7 @@ The shared direct-static builder copies deployable source into `.site-build/la-m
   `Women Story/Malinche` remain unmodified.
 - The hero PNG is a background-removed derivative of the supplied monochrome
   illustration.
-- Nine large public-domain / CC0 archive images are stored locally as WebP to avoid
+- Eight large public-domain / CC0 archive images are stored locally as WebP to avoid
   fragile hotlinks. Visible captions and `CONTENT.md` retain source provenance.
 - The hero cut-out uses its intrinsic `1065 / 1476` ratio with `object-fit:
   contain`; browser QA checks the rendered ratio against the natural ratio.
