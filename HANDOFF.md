@@ -48,7 +48,7 @@ directly without reusing their covers elsewhere.
 ### Delivery state
 
 - Branch: `codex/site-la-malinche`.
-- Previous implementation commit: `1d9474844b804fca515d21314bfbbef57f2c9b68`.
+- Redesign implementation commit: `20773ed`.
 - Figma v2: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-2>.
 - New exact-commit preview: pending the redesign commit and push.
 - Pull Request: <https://github.com/TSRat/My-Website/pull/26>.

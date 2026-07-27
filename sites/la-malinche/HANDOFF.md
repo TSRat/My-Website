@@ -99,8 +99,7 @@ inside the players only.
 
 ## Pending
 
-- Commit and push the redesign, update PR #26, and verify the new exact-commit
-  preview.
+- Push the redesign, update PR #26, and verify the new exact-commit preview.
 - Review through Antigravity if comprehensive multi-browser and visual
   comparison is desired.
 
@@ -108,7 +107,7 @@ inside the players only.
 
 - Branch: `codex/site-la-malinche`
 - Base: `origin/main` at `fb78a4f`
-- Latest commit before this redesign handoff: `abd241b`
-- Current worktree: contains the scoped redesign and generated mirrors pending
-  commit.
+- Latest implementation commit: `20773ed`
+- Current worktree: only this handoff metadata update remains before the final
+  documentation commit.
 - Merge: not authorized and not performed.
