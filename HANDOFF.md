@@ -43,13 +43,18 @@ mirror contract and GitHub Actions Pages artifact deployment.
 ### Delivery state
 
 - Branch: `codex/site-la-malinche`.
+- Implementation commit: `1d9474844b804fca515d21314bfbbef57f2c9b68`.
 - Figma: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-3>.
-- Exact-commit preview and Pull Request: record after branch push.
+- Exact-commit preview:
+  <https://raw.githack.com/TSRat/My-Website/1d9474844b804fca515d21314bfbbef57f2c9b68/LA-MALINCHE/index.html>.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/26>.
+- Preview status: desktop load, 30-screen DOM, primary cover, stylesheet,
+  no-overflow, clean console and name-lens interaction passed.
 - Merge: not authorized and not performed.
 
 ### Remaining
 
-- Review the exact unmerged preview and Pull Request.
+- Review the exact unmerged preview and Pull Request #26.
 - Add an external scholarly bibliography only if the creator wants the site to
   make claims beyond the supplied manuscript and subtitle transcripts.
 - Antigravity extended QA remains a follow-up.

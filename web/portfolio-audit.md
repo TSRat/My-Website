@@ -167,7 +167,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Site-specific theme:** Preserve the three-name palette, obsidian archive, translation split, creator cover/maps, and red ideological rupture.
 - **Migration status:** Production implementation is in the current dedicated branch; merge remains creator-controlled.
 - **Figma URL:** [La Malinche Web Design System](https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-3).
-- **Preview / PR URL:** To be recorded after the exact review commit is pushed.
+- **Preview / PR URL:** [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/1d9474844b804fca515d21314bfbbef57f2c9b68/LA-MALINCHE/index.html); [PR #26](https://github.com/TSRat/My-Website/pull/26).
 - **Remaining risks:** Historical details beyond the creator manuscript still need a separate source bibliography if the creator wants external citations; Antigravity extended visual and interaction QA remains pending.
 
 ## Hildegard

@@ -27,9 +27,9 @@ Turn the creator’s 21-page Malinche manuscript and selected hybrid design dire
 | Capability | Level | Used | Result / artifact | Skip or blocker reason |
 | --- | --- | --- | --- | --- |
 | Figma | Mandatory | Yes | Editable file, variables, components, key desktop/mobile screens, states | — |
-| Browser | Mandatory | Yes | Local 1440 × 900 and 390 × 844 smoke; interactions and console checked | Exact-preview smoke follows push |
-| GitHub | Mandatory | Pending | Dedicated branch exists; push and PR follow final local verification | — |
-| Preview deployment | Mandatory | Pending | Exact-commit raw.githack URL follows push | — |
+| Browser | Mandatory | Yes | Local 1440 × 900 and 390 × 844 smoke plus exact-commit remote smoke; interactions and console checked | — |
+| GitHub | Mandatory | Yes | Branch pushed; [PR #26](https://github.com/TSRat/My-Website/pull/26) opened | — |
+| Preview deployment | Mandatory | Yes | [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/1d9474844b804fca515d21314bfbbef57f2c9b68/LA-MALINCHE/index.html) verified | — |
 | Product Design | Strongly recommended | No separate focused workflow | Product and UX spec created directly from the selected hybrid direction | The repository skill forbids forcing another three-option ideation round after a direction is selected |
 | Creative Production | Strongly recommended | Reviewed, generation skipped | Creator cover and map asset system retained | Supplied creator assets already resolve the visual direction; new AI imagery would add unsupported historical interpretation |
 | Data Analytics | Strongly recommended | Documented directly | Provider-neutral event and privacy contract | This is a simple editorial site with provider `none`; no data source or KPI required a separate analytical artifact |
@@ -59,6 +59,7 @@ Turn the creator’s 21-page Malinche manuscript and selected hybrid design dire
 - Codex browser mobile: passed; 390 × 844, compact menu and mobile translation disclosures active, no overflow.
 - Name lens, Xicalango map stage, two-sided final reflection and mobile chapter menu: passed.
 - Console warnings/errors: none in checked desktop and mobile states.
+- Exact-commit preview: passed; correct title, 30 screens, loaded stylesheet and cover, no horizontal overflow or console errors, and name-lens interaction succeeded.
 - Antigravity extended QA: pending.
 
 ## Modified files
@@ -78,12 +79,14 @@ Turn the creator’s 21-page Malinche manuscript and selected hybrid design dire
 
 ## Pending
 
-- Final branch commit, push, immutable preview, and PR.
+- Creator review of the Figma file, immutable preview, and PR #26.
 - Antigravity extended multi-route / multi-device / keyboard / visual QA.
 
 ## Git state
 
 - Branch: `codex/site-la-malinche`
 - Base: `origin/main` at `fb78a4f`
-- Latest implementation commit: pending final commit
-- Current worktree: only task-scoped La Malinche, registry, build, test and documentation changes
+- Latest implementation commit: `1d9474844b804fca515d21314bfbbef57f2c9b68`
+- Pull Request: <https://github.com/TSRat/My-Website/pull/26>
+- Preview: <https://raw.githack.com/TSRat/My-Website/1d9474844b804fca515d21314bfbbef57f2c9b68/LA-MALINCHE/index.html>
+- Current worktree: clean before this final handoff metadata update
