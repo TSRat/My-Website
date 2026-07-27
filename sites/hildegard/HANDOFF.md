@@ -1,5 +1,12 @@
 # Hildegard handoff
 
+## 2026-07-27 · Creator-supplied replacements
+
+- 已将创作者新放入 `HILDEGARD/assets/` 的三张图复制到权威的 `sites/hildegard/assets/images/`，并替换第 02、05、06 章主图。
+- 第 02、05 章使用《Vision》剧照；第 06 章使用未知之语字母表现代转录示意。caption 与图片来源说明明确标为现代视觉材料。
+- `npm run build:hildegard` 已通过，发布镜像已更新；`git diff --check` 通过。
+- 本地页面没有横向溢出；第 02 章新剧照已在浏览器中加载，第 05、06 章资源请求在本地预览中均返回 HTTP 200（它们仍按原有 `loading="lazy"` 行为在滚动到相应章节时加载）。
+
 ## 2026-07-26 · Real-image chapter plates
 
 ### Current target
