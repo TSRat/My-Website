@@ -108,8 +108,9 @@ public route and stable section anchors.
 - Branch: `codex/zhangyong-content-rebuild`
 - Base: `origin/main` at `fb78a4f`
 - Implementation commit: `8b87b5d`
+- Relationship update commit: `adbee37`
 - Preview:
-  <https://raw.githack.com/TSRat/My-Website/8b87b5d6d4c47860128022663307eebbeacbff46/ZHANGYONG-PORTRAIT/index.html>
+  <https://raw.githack.com/TSRat/My-Website/adbee37630424a901d8e74bfa354077e32619293/ZHANGYONG-PORTRAIT/index.html>
 - Pull Request: <https://github.com/TSRat/My-Website/pull/25> (Draft)
 - Figma:
   <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=40-30>
