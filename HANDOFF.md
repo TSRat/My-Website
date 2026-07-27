@@ -44,13 +44,14 @@ the Spanish landing, Tlaxcala, and Cholula enough independent narrative space.
 
 - Branch: `codex/site-la-malinche`.
 - Pre-refinement head: `b7d21fb`.
-- Exact-commit preview: pending final documentation commit and push.
+- Refinement implementation: `e629f30`.
+- Verified implementation preview:
+  <https://raw.githack.com/TSRat/My-Website/e629f30/LA-MALINCHE/index.html>.
 - Pull Request: <https://github.com/TSRat/My-Website/pull/26>.
 - Merge: not authorized and not performed.
 
 ### Remaining
 
-- Verify the exact pushed commit through an immutable live preview.
 - Review PR #26; run Antigravity extended QA if desired.
 
 ## 2026-07-27: La Malinche differentiated visual rebuild

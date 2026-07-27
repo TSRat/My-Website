@@ -5,7 +5,8 @@
 - Branch: `codex/site-la-malinche`
 - Figma v3: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-13>
 - Pull Request: <https://github.com/TSRat/My-Website/pull/26>
-- Exact-commit preview: pending the final documentation commit.
+- Verified implementation preview:
+  <https://raw.githack.com/TSRat/My-Website/e629f30/LA-MALINCHE/index.html>
 
 ## Current goal
 
@@ -86,7 +87,10 @@ in browser review.
   detected display-title orphans, and preserved hero aspect ratio.
 - Visual smoke inspected the hero, landing, both Tlaxcala scenes, both Cholula
   scenes, and the Moctezuma / Malinche / Cortés encounter on desktop and mobile.
-- Exact remote-commit smoke: pending final push.
+- Exact implementation-commit smoke passed at desktop and mobile widths:
+  33 scenes, corrected wording, no horizontal overflow or display-title
+  orphans, preserved hero ratio, and all four new archive images loaded at
+  their natural dimensions.
 - Antigravity extended multi-browser, keyboard, and visual-regression QA:
   pending.
 
@@ -102,7 +106,6 @@ in browser review.
 
 ## Pending
 
-- Commit and push the refinement, then verify its immutable preview.
 - Review the exact-commit preview and PR #26.
 - Run Antigravity extended QA if comprehensive multi-browser, keyboard, and
   visual comparison is desired.
@@ -111,5 +114,6 @@ in browser review.
 
 - Branch: `codex/site-la-malinche`
 - Pre-refinement head: `b7d21fb`
-- Current refinement: uncommitted at the time of this handoff update.
+- Refinement implementation: `e629f30`
+- Current worktree: this verified-preview handoff update only.
 - Merge: not authorized and not performed.
