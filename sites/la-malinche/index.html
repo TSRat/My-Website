@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="沿着马林钦、玛丽娜夫人与拉·马琳切三个名字，重读翻译、征服、幸存与被制造的背叛。"
+    />
+    <meta name="theme-color" content="#11100d" />
+    <meta property="og:title" content="马琳切：谁背叛了背叛者？" />
+    <meta
+      property="og:description"
+      content="时间的女儿 003：一部关于翻译、征服、幸存与历史记忆的三十三屏视觉叙事。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/malinche-cutout.png" />
+    <title>马琳切：谁背叛了背叛者？</title>
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./assets/site.css" />
+    <script src="./assets/analytics.js" defer></script>
+    <script src="./assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#prologue">跳到正文</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="回到马琳切专题开头">
+        <span class="brand-mark">M</span>
+        <span class="brand-series">Daughters of Time · 003</span>
+      </a>
+      <div class="header-actions">
+        <a class="header-link" href="#watch">观看上下集</a>
+        <a class="header-link" href="#traitor">谁背叛了谁？</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="chapter-menu"
+        >
+          章节
+        </button>
+      </div>
+    </header>
+
+    <div class="chapter-menu" id="chapter-menu" hidden>
+      <nav aria-label="章节导航">
+        <a href="#before"><span>01</span>前世</a>
+        <a href="#translator"><span>02</span>翻译者</a>
+        <a href="#conqueror"><span>03</span>征服者</a>
+        <a href="#killing"><span>04</span>杀戮</a>
+        <a href="#rupture"><span>05</span>撕裂</a>
+        <a href="#endgame"><span>06</span>终局</a>
+        <a href="#survivor"><span>07</span>幸存者</a>
+        <a href="#traitor"><span>08</span>背叛者</a>
+      </nav>
+    </div>
+
+    <nav class="progress-rail" aria-label="八章阅读进度">
+      <a href="#before" title="第一章 前世">01</a>
+      <a href="#translator" title="第二章 翻译者">02</a>
+      <a href="#conqueror" title="第三章 征服者">03</a>
+      <a href="#killing" title="第四章 杀戮">04</a>
+      <a href="#rupture" title="第五章 撕裂">05</a>
+      <a href="#endgame" title="第六章 终局">06</a>
+      <a href="#survivor" title="第七章 幸存者">07</a>
+      <a href="#traitor" title="第八章 背叛者">08</a>
+    </nav>
+
+    <main id="top">
+      <section class="scene hero" data-screen="00" data-chapter="prologue">
+        <div class="hero-jade" aria-hidden="true"></div>
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow"><span class="scene-number">00</span>时间的女儿 · 003</p>
+          <p class="hero-overline">LA MALINCHE / MALINTZIN / DOÑA MARINA</p>
+          <h1>马琳切</h1>
+          <p class="hero-question">谁背叛了<br />背叛者？</p>
+          <p class="body-copy">
+            她是被转卖的女孩、掌握多种语言的翻译者、征服军中的外交行动者，
+            也是数百年后被写成“背叛”的民族象征。
+          </p>
+          <a class="scroll-cue" href="#prologue">沿着三个名字开始 ↓</a>
+        </div>
+        <figure class="hero-portrait" data-reveal>
+          <img
+            src="./assets/malinche-cutout.png"
+            alt="黑白网点风格的马琳切人物插图抠像"
+            width="1065"
+            height="1476"
+            fetchpriority="high"
+          />
+        </figure>
+        <div class="hero-index" aria-hidden="true">
+          <span>0</span><span>0</span><b>003</b>
+        </div>
+      </section>
+
+      <section
+        class="scene name-atlas"
+        id="prologue"
+        data-screen="01"
+        data-chapter="prologue"
+        tabindex="-1"
+      >
+        <div class="scene-inner" data-reveal>
+          <p class="eyebrow"><span class="scene-number">01</span>一个人 · 三个名字</p>
+          <h2 class="display-lines"><span>名字从来</span><span>不是中性的。</span></h2>
+          <p class="lead name-intro">
+            每个名字都来自一套权力关系：出生的世界、受洗后的秩序，以及后世替她制造的意义。
+          </p>
+          <div class="name-controls" role="group" aria-label="选择名字视角">
+            <button class="name-control" type="button" data-lens="all" aria-pressed="true">
+              <small>全部视角</small><strong>三个名字</strong>
+            </button>
+            <button class="name-control" type="button" data-lens="malintzin" aria-pressed="false">
+              <small>出生世界</small><strong>Malintzin</strong><em>马林钦</em>
+            </button>
+            <button class="name-control" type="button" data-lens="marina" aria-pressed="false">
+              <small>殖民命名</small><strong>Doña Marina</strong><em>玛丽娜夫人</em>
+            </button>
+            <button class="name-control" type="button" data-lens="malinche" aria-pressed="false">
+              <small>后世象征</small><strong>La Malinche</strong><em>拉·马琳切</em>
+            </button>
+          </div>
+          <p class="lens-note" id="lens-note" aria-live="polite">
+            三个名字同时保留：她不是三个互相取代的符号，而是一个在不同权力关系中不断被重新命名的人。
+          </p>
+        </div>
+      </section>
+
+      <section class="scene reader-primer" data-screen="02" data-chapter="prologue">
+        <div class="primer-title" data-reveal>
+          <p class="eyebrow"><span class="scene-number">02</span>先认识她</p>
+          <h2 class="display-lines"><span>她是谁？</span><span>为什么重要？</span></h2>
+          <p class="lead">先把人物和时代放回原位，再讨论她是否“背叛”。</p>
+        </div>
+        <div class="primer-panels">
+          <article>
+            <b>WHAT / 是什么</b>
+            <h3 class="display-lines"><span>一位被奴役、转交，</span><span>并重新命名的纳瓦女性。</span></h3>
+            <p>她约生于 1500 年，原名没有留下。1519 年受洗后，西班牙记录称她为玛丽娜夫人。</p>
+          </article>
+          <article>
+            <b>WHY / 为什么重要</b>
+            <h3 class="display-lines"><span>她让三个语言世界</span><span>第一次持续对话。</span></h3>
+            <p>纳瓦特尔语、玛雅语与西班牙语经由她相接；谈判、停战、结盟与命令因此能够跨越边界。</p>
+          </article>
+          <article>
+            <b>QUESTION / 本站分析什么</b>
+            <h3 class="display-lines"><span>参与征服，是否等于拥有</span><span>征服者的决定权？</span></h3>
+            <p>本站区分她造成的实际影响、她所受的强迫，以及后世把集体历史压成一个女人罪名的过程。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="scene evidence-contract" data-screen="03" data-chapter="prologue">
+        <div class="evidence-marquee" aria-hidden="true">
+          FACT · INTERPRETATION · NARRATIVE · METAPHOR ·
+        </div>
+        <div class="scene-inner" data-reveal>
+          <p class="eyebrow"><span class="scene-number">03</span>阅读坐标</p>
+          <h2>四条边界，贯穿全文。</h2>
+          <div class="evidence-line">
+            <article><b>01</b><h3>历史事实</h3><p>由现存记录、时间线与多方材料相互支持。</p></article>
+            <article><b>02</b><h3>学术解释</h3><p>面对冲突或不足的证据，保留“可能”。</p></article>
+            <article><b>03</b><h3>叙事框架</h3><p>组织因果的讲述方式，不替代私人证词。</p></article>
+            <article><b>04</b><h3>视觉隐喻</h3><p>名字、断裂、湖面与红线构成当代设计语言。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene chapter-gate chapter-before" id="before" data-screen="04" data-chapter="before">
+        <div class="gate-number" aria-hidden="true">01</div>
+        <div class="gate-copy" data-reveal>
+          <span class="chapter-index">第一章 · 前世</span>
+          <h2 class="display-lines"><span>在“墨西哥”之前，</span><span>是一张破碎的政治地图。</span></h2>
+          <p class="lead">
+            把十六世纪初的中部美洲理解成现代民族国家，会让“背叛”这个判断从一开始就站错位置。
+          </p>
+        </div>
+        <p class="gate-note">
+          城邦、附庸、贡赋与竞争关系层层相叠。不同纳瓦语群体不会天然拥有同一个政治忠诚。
+        </p>
+      </section>
+
+      <section class="scene archive-bleed" data-screen="05" data-chapter="before">
+        <figure class="archive-wall">
+          <img
+            src="./assets/archive/codex-azcatitlan.webp"
+            alt="阿兹卡蒂特兰手抄本图页，科尔特斯与马琳切位于行进队伍前方"
+            width="2600"
+            height="1868"
+            loading="lazy"
+          />
+          <figcaption>《阿兹卡蒂特兰手抄本》图页 · Gallica / Wikimedia Commons · Public Domain</figcaption>
+        </figure>
+        <div class="archive-note" data-reveal>
+          <p class="eyebrow"><span class="scene-number">05</span>阿兹特兰 · 纳瓦 · 墨西加</p>
+          <h3>一个帝国，也有许多名字。</h3>
+          <p>
+            “阿兹特克”是后世常用的总称；“墨西加”更具体地指向建立特诺奇蒂特兰的群体。
+            三城同盟通过战争与贡赋扩大控制，却没有抹去地方政治。
+          </p>
+          <details class="evidence-note">
+            <summary><span class="badge interpretation">学术解释</span>为什么名字需要谨慎？</summary>
+            <p>“纳瓦人”“墨西加人”“阿兹特克帝国”与现代墨西哥国族不是同义词。</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="scene origin-map" data-screen="06" data-chapter="before">
+        <div class="origin-copy" data-reveal>
+          <p class="eyebrow"><span class="scene-number">06</span>约 1500 · 奥卢塔</p>
+          <h3 class="display-lines"><span>她出生在帝国</span><span>边缘。</span></h3>
+          <p>
+            她大约出生于今天墨西哥湾沿岸附近。具体年份、地点与出生名都无人知晓。
+            西班牙记录称她出身于地方贵族家庭，但这些记载本身也带着征服者的视角。
+          </p>
+        </div>
+        <figure class="origin-figure" data-reveal>
+          <img
+            src="./assets/maps/oluta.webp"
+            alt="奥卢塔与墨西哥湾沿岸位置示意图"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
+          <figcaption>奥卢塔位置示意 · Own Map</figcaption>
+        </figure>
+        <p class="origin-edge">边缘不是空白：这里连接纳瓦语与玛雅语世界，也连接贡赋网络、海岸贸易与地方权力。</p>
+      </section>
+
+      <section class="scene uncertainty-ledger" data-screen="07" data-chapter="before">
+        <div class="scene-inner" data-reveal>
+          <p class="eyebrow"><span class="scene-number">07</span>失去的出生名</p>
+          <h2 class="display-lines"><span>史料记住她的语言，</span><span>却没有留下她最初的声音。</span></h2>
+          <div class="ledger">
+            <div><span>出生日期</span><strong>大约</strong><em>而非确定</em></div>
+            <div><span>出生名字</span><strong>未知</strong><em>无法复原</em></div>
+            <div><span>贵族身份</span><strong>可能</strong><em>由记述与语言能力间接支持</em></div>
+            <div><span>童年感受</span><strong>空白</strong><em>没有第一人称文本</em></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene split-testimony" data-screen="08" data-chapter="before">
+        <div class="split-title" data-reveal>
+          <p class="eyebrow"><span class="scene-number">08</span>第一次背叛</p>
+          <h2>她怎样成为奴隶？</h2>
+          <p>史料给出不同故事，现存证据不足以让其中一种完全胜出。</p>
+        </div>
+        <article class="testimony testimony-a">
+          <span>A</span><h3>家庭继承说</h3>
+          <p>一种叙述称母亲再婚后，为保护新家庭的继承，把她交给了商人。这个故事流传最广，却也可能经过道德化整理。</p>
+        </article>
+        <article class="testimony testimony-b">
+          <span>B</span><h3>战争与贡赋说</h3>
+          <p>另一种解释把她放进地方战争、政治交换或贡赋网络中。无论哪一种成立，她都不是自由选择离开家园。</p>
+        </article>
+      </section>
+
+      <section class="scene route-console" data-screen="09" data-chapter="before">
+        <div class="route-copy" data-reveal>
+          <p class="eyebrow"><span class="scene-number">09</span>被迫南下的路线</p>
+          <h3 class="display-lines" id="map-title"><span>奥卢塔 →</span><span>希卡兰戈 →</span><span>波顿查恩</span></h3>
+          <p id="map-copy">
+            她可能先被带到重要贸易节点希卡兰戈，后来又进入玛雅语世界的波顿查恩。
+            地理位移同时切断了亲族、身份与原有语言环境。
+          </p>
+          <div class="map-chooser" role="group" aria-label="选择路线地图阶段">
+            <button type="button" data-map-stage="route" aria-pressed="true">总路线</button>
+            <button type="button" data-map-stage="oluta" aria-pressed="false">奥卢塔</button>
+            <button type="button" data-map-stage="xicalango" aria-pressed="false">希卡兰戈</button>
+            <button type="button" data-map-stage="potonchan" aria-pressed="false">波顿查恩</button>
+            <button type="button" data-map-stage="maya" aria-pressed="false">玛雅语区</button>
+          </div>
+        </div>
+        <figure class="route-map" data-reveal>
+          <img
+            id="route-map"
+            src="./assets/maps/route.webp"
+            alt="从奥卢塔经希卡兰戈到波顿查恩的迁移路线示意图"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
+          <figcaption>路线示意 · Own Map</figcaption>
+        </figure>
+        <div class="route-coordinate" aria-hidden="true">18° N / GULF COAST / MOVEMENT UNDER FORCE</div>
+      </section>
+
+      <section class="scene language-night" data-screen="10" data-chapter="before">
+        <div class="language-word" aria-hidden="true">LANGUAGE</div>
+        <div class="language-copy" data-reveal>
+          <p class="eyebrow"><span class="scene-number">10</span>语言作为生存方法</p>
+          <h2 class="display-lines"><span>她失去了自由，</span><span>却学会了另一种语言。</span></h2>
+          <p>
+            在玛雅语世界生活多年后，她掌握当地语言。学习语言可以是适应，也是被迫生活留下的技术。
+          </p>
+          <strong>语言先救她活下去，后来也被战争征用。</strong>
+        </div>
+      </section>
+
+      <section class="scene landing-sequence" id="translator" data-screen="11" data-chapter="translator">
+        <figure class="landing-image">
+          <img
+            src="./assets/archive/cortes-landing-bl.webp"
+            alt="十六世纪欧洲手抄本对科尔特斯一行于 1519 年登陆的后世想象"
+            width="1057"
+            height="1714"
+            loading="lazy"
+          />
+          <figcaption>科尔特斯登陆的十六世纪欧洲描绘 · British Library Add MS 37177 · CC0；不作现场记录使用</figcaption>
+        </figure>
+        <div class="landing-copy" data-reveal>
+          <span class="chapter-index">第二章 · 翻译者</span>
+          <p class="eyebrow"><span class="scene-number">11</span>1519 · 西班牙人登陆</p>
+          <h2 class="display-lines"><span>她不是去迎接征服，</span><span>征服闯进了她所在的海岸。</span></h2>
+          <p class="lead">
+            科尔特斯率领一支规模不大的远征队抵达玛雅世界。船、马、钢铁与火器制造了巨大的军事冲击，
+            但此后改变战争的还有数以千计的原住民盟军。
+          </p>
+        </div>
+        <ol class="landing-steps" aria-label="波顿查恩到翻译者位置改变的四个阶段">
+          <li><b>01</b><strong>波顿查恩战败</strong><p>当地军队在冲突后求和；这不是马琳切可以决定的战争。</p></li>
+          <li><b>02</b><strong>二十名女性被交出</strong><p>她与另外十九名女性被作为“礼物”交给胜利者，本质上仍是被转交。</p></li>
+          <li><b>03</b><strong>她被受洗并重新分配</strong><p>新名字“玛丽娜”没有自动带来自由，也没有抹去她的奴役处境。</p></li>
+          <li><b>04</b><strong>语言改变了她的位置</strong><p>当队伍进入纳瓦特尔语区，她能把纳瓦特尔语转成玛雅语，因而成为不可替代的翻译者。</p></li>
+        </ol>
+      </section>
+
+      <section class="scene baptism-archive" data-screen="12" data-chapter="translator">
+        <figure>
+          <img
+            src="./assets/archive/malinche-tlaxcala.webp"
+            alt="十六世纪末图像中的马琳切与科尔特斯一行"
+            width="2400"
+            height="1948"
+            loading="lazy"
+          />
+          <figcaption>《马琳切与科尔特斯在 Xaltelolco》· 16 世纪末 · Wikimedia Commons · Public Domain</figcaption>
+        </figure>
+        <div class="baptism-label" data-reveal>
+          <p class="eyebrow"><span class="scene-number">12</span>受洗 · 命名</p>
+          <h2>她成为<br /><i>Doña Marina.</i></h2>
+          <p>受洗把她纳入西班牙基督教秩序，“Doña”又暗示她被承认为有地位的女性。但尊称没有取消依附与不自由。</p>
+        </div>
+      </section>
+
+      <section class="scene translation-seam" data-screen="13" data-chapter="translator">
+        <div class="seam-head" data-reveal>
+          <p class="eyebrow"><span class="scene-number">13</span>翻译链</p>
+          <h2>不是把单词搬过边界，<br />而是决定什么能被听见。</h2>
+        </div>
+        <div class="translation-world world-left">
+          <span>NAHUATL / MAYA</span>
+          <h3 class="display-lines"><span>贡赋 · 亲族 · 礼仪</span><span>威胁 · 联盟</span></h3>
+          <p>每个词都带着无法直接替换的政治含义。</p>
+        </div>
+        <div class="translation-bridge">
+          <small>THE INTERPRETER</small><strong>马琳切</strong><p>纳瓦特尔语 → 玛雅语 → 西班牙语</p>
+        </div>
+        <div class="translation-world world-right">
+          <span>CASTILIAN</span>
+          <h3 class="display-lines"><span>王权 · 改宗 · 占有</span><span>契约 · 命令</span></h3>
+          <p>征服者的概念通过她进入另一个政治宇宙。</p>
+        </div>
+      </section>
+
+      <section class="scene name-echo" data-screen="14" data-chapter="translator">
+        <div class="echo-bg" aria-hidden="true">MALINCHE</div>
+        <div class="scene-inner" data-reveal>
+          <p class="eyebrow"><span class="scene-number">14</span>“Malinche”的诞生</p>
+          <h2 class="display-lines"><span>一个名字，</span><span>最初甚至可能指向科尔特斯。</span></h2>
+          <p class="lead">
+            “Malintzin”的敬称被西班牙耳朵转写为“Malinche”。在某些记录里，
+            科尔特斯也因总与她共同出现而被称作“马琳切的领主”。
+          </p>
+          <blockquote>共同完成的政治行动，最后变成一个女人单独承担的历史符号。</blockquote>
+        </div>
+      </section>
+
+      <section class="scene chapter-gate chapter-conqueror" id="conqueror" data-screen="15" data-chapter="conqueror">
+        <div class="gate-number" aria-hidden="true">03</div>
+        <div class="gate-copy" data-reveal>
+          <span class="chapter-index">第三章 · 征服者</span>
+          <h2 class="display-lines"><span>科尔特斯不是神，</span><span>而是殖民远征的首领。</span></h2>
+          <p class="lead">
+            他带来的，是对土地、主权、宗教与财富截然不同的规则——以及把地方冲突转化为殖民征服的野心。
+          </p>
+        </div>
+        <details class="evidence-note gate-detail">
+          <summary><span class="badge interpretation">学术解释</span>关于神话式相遇</summary>
+          <p>更谨慎的读法关注武力、联盟、信息差与相互试探，而不把一方描述为被动等待征服。</p>
+        </details>
+      </section>
+
+      <section class="scene alliance-map" data-screen="16" data-chapter="conqueror">
+        <figure>
+          <img
+            src="./assets/maps/totonacapan.webp"
+            alt="托托纳卡潘区域与联盟位置示意图"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
+          <figcaption>托托纳卡潘位置示意 · Own Map</figcaption>
+        </figure>
+        <div class="alliance-copy" data-reveal>
+          <p class="eyebrow"><span class="scene-number">16</span>韦拉克鲁斯 · 托托纳克</p>
+          <h3>联盟从贡赋的不满中长出来。</h3>
+          <p>
+            受三城同盟贡赋压力的托托纳克政治领袖，把新来者视为可能改变力量平衡的伙伴。
+            他们是在既有冲突中行动。
+          </p>
+          <strong>马琳切让不满变成承诺，让承诺变成兵力、补给与路线。</strong>
+        </div>
+      </section>
+
+      <section class="scene tlaxcala-context" data-screen="17" data-chapter="conqueror">
+        <figure class="tlaxcala-map">
+          <img
+            src="./assets/archive/tlaxcala-map.webp"
+            alt="特拉斯卡拉四个主要区域及河流的历史地图"
+            width="1920"
+            height="1500"
+            loading="lazy"
+          />
+          <figcaption>特拉斯卡拉四区历史地图 · Wikimedia Commons · Public Domain</figcaption>
+        </figure>
+        <div class="tlaxcala-intro" data-reveal>
+          <p class="eyebrow"><span class="scene-number">17</span>特拉斯卡拉 · 是什么</p>
+          <h2 class="display-lines"><span>不是帝国的附庸，</span><span>而是被包围的对手。</span></h2>
+          <p class="lead">
+            特拉斯卡拉是由多个政治中心共同构成的强大政体。它与墨西加人同属纳瓦语世界，
+            却长期保持独立，并在三城同盟的包围与贸易压力下持续对抗。
+          </p>
+          <div class="context-key">
+            <div><b>关系</b><p>共同语言不等于共同国家，也不自动产生政治忠诚。</p></div>
+            <div><b>处境</b><p>它不是等待“解放”的空白，而是有自身领袖、军队与目标的行动者。</p></div>
+            <div><b>为什么重要</b><p>没有特拉斯卡拉等原住民盟军，几百名西班牙人无法独自完成征服。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene negotiation-steps" data-screen="18" data-chapter="conqueror">
+        <div class="steps-title" data-reveal>
+          <p class="eyebrow"><span class="scene-number">18</span>特拉斯卡拉 · 为什么先战后盟</p>
+          <h2 class="display-lines"><span>先战斗，</span><span>再谈判，</span><span>再结盟。</span></h2>
+          <p>
+            一支来历不明的武装力量进入领地，首先引发的是抵抗。数周冲突后，
+            双方才在损失、技术差距与共同敌人的现实中重新计算利益。
+          </p>
+        </div>
+        <ol class="steps">
+          <li><b>01</b><span>抵抗</span><p>陌生军队进入领地；特拉斯卡拉首先以战斗回应威胁。</p></li>
+          <li><b>02</b><span>消耗</span><p>西班牙军队一度濒临崩溃，同时以骑兵袭击周边村庄制造压力。</p></li>
+          <li><b>03</b><span>翻译</span><p>马琳切传达威胁、停战条件与联盟提议，让谈判成为可能。</p></li>
+          <li><b>04</b><span>结盟</span><p>对墨西加的长期敌意与现实利益压过暂时冲突；这是政治计算，不是民族背叛。</p></li>
+        </ol>
+      </section>
+
+      <section class="scene cholula-context" id="killing" data-screen="19" data-chapter="killing">
+        <div class="cholula-monument" aria-hidden="true">
+          <span>圣城</span><i></i><b>乔卢拉</b>
+        </div>
+        <div class="cholula-intro" data-reveal>
+          <span class="chapter-index">第四章 · 杀戮</span>
+          <p class="eyebrow"><span class="scene-number">19</span>乔卢拉 · 是什么</p>
+          <h2 class="display-lines"><span>一座圣城，</span><span>也是通往都城的政治关口。</span></h2>
+          <p class="lead">
+            乔卢拉是重要的宗教与贸易中心，以羽蛇神信仰和巨型金字塔闻名。
+            它位于通往特诺奇蒂特兰的路线上，与墨西加政治网络关系密切；
+            西班牙—特拉斯卡拉联军进入这里，本身就是一次高度紧张的政治行动。
+          </p>
+          <dl class="cholula-basics">
+            <div><dt>宗教</dt><dd>跨地区朝圣与祭祀中心</dd></div>
+            <div><dt>地理</dt><dd>从特拉斯卡拉前往墨西哥谷地的路线节点</dd></div>
+            <div><dt>权力</dt><dd>宗教威望、地方领袖与墨西加关系彼此重叠</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="scene cholula-canvas" data-screen="20" data-chapter="killing">
+        <figure>
+          <img
+            src="./assets/archive/cholula-1877.webp"
+            alt="费利克斯·帕拉绘制的乔卢拉大屠杀场景"
+            width="2026"
+            height="1252"
+            loading="lazy"
+          />
+          <figcaption>Félix Parra，《乔卢拉大屠杀》· 1877 · Wikimedia Commons · Public Domain</figcaption>
+        </figure>
+        <div class="cholula-copy" data-reveal>
+          <p class="eyebrow"><span class="scene-number">20</span>乔卢拉 · 发生了什么</p>
+          <h2 class="display-lines"><span>屠杀确定发生，</span><span>“阴谋”仍有争议。</span></h2>
+          <p>
+            联军在城中发动大规模杀戮。科尔特斯声称自己发现了伏击；特拉斯卡拉叙述强调旧怨与使者受辱；
+            后来的墨西加叙述则把责任归向特拉斯卡拉。各方都在为自身行动组织理由。
+          </p>
+          <div class="cholula-verdict">
+            <strong>马琳切的“告密”故事</strong>
+            <p>据称，一位乔卢拉女性向她透露伏击计划。但故事来自征服者叙述，可能也承担为“先发制人”暴力辩护的功能。</p>
+          </div>
+          <details class="evidence-note">
+            <summary><span class="badge interpretation">学术解释</span>责任不能由“传递信息”替换</summary>
+            <p>她是否、如何获得警告，以及信息影响多大，都需来源批判；发动并实施屠杀的决定仍属于持有军事指挥权的人。</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="scene tenochtitlan-atlas" data-screen="21" data-chapter="killing">
+        <figure>
+          <img
+            src="./assets/archive/tenochtitlan-1524.webp"
+            alt="1524 年印制的特诺奇蒂特兰与墨西哥湾地图"
+            width="3840"
+            height="2433"
+            loading="lazy"
+          />
+          <figcaption>《特诺奇蒂特兰及墨西哥湾地图》· 1524 · Newberry Library / Wikimedia Commons · Public Domain</figcaption>
+        </figure>
+        <div class="atlas-title" data-reveal>
+          <p class="eyebrow"><span class="scene-number">21</span>湖上的堤道</p>
+          <h2>一座从水中<br />升起的城市。</h2>
+          <p>1519 年 11 月，西班牙人与数量更多的原住民盟军沿堤道进入特诺奇蒂特兰。</p>
+        </div>
+      </section>
+
+      <section class="scene encounter" data-screen="22" data-chapter="killing">
+        <figure class="encounter-portrait portrait-moctezuma">
+          <img
+            src="./assets/archive/moctezuma-mendoza.webp"
+            alt="《门多萨手抄本》中象征蒙特苏马二世的十六世纪图像"
+            width="572"
+            height="920"
+            loading="lazy"
+          />
+          <figcaption><b>蒙特苏马二世</b>《门多萨手抄本》中的十六世纪形象；不是写实肖像 · Public Domain</figcaption>
+        </figure>
+        <div class="encounter-voice" data-reveal>
+          <p class="eyebrow"><span class="scene-number">22</span>1519 年 11 月 8 日 · 相遇</p>
+          <h2 class="display-lines"><span>他们听见彼此，</span><span>经过她的声音。</span></h2>
+          <p>蒙特苏马以外交礼仪迎接来者；科尔特斯带着王权与占有的主张进入。礼物、称谓、主权声明与威胁都要穿过翻译链。</p>
+          <strong>她能解释话语，却不能让双方共享同一套政治规则。</strong>
+          <details class="evidence-note">
+            <summary><span class="badge framing">叙事框架</span>她当时怎么想？</summary>
+            <p>她对蒙特苏马、科尔特斯或这座城市的私人感受无人知晓。</p>
+          </details>
+        </div>
+        <figure class="encounter-portrait portrait-cortes">
+          <img
+            src="./assets/archive/cortes-weiditz.webp"
+            alt="克里斯托夫·魏迪茨于 1529 年绘制的埃尔南·科尔特斯形象"
+            width="1040"
+            height="1401"
+            loading="lazy"
+          />
+          <figcaption><b>埃尔南·科尔特斯</b>Christoph Weiditz，1529；征服结束后的形象 · Public Domain</figcaption>
+        </figure>
+      </section>
+
+      <section class="scene occupation-stripes" data-screen="23" data-chapter="killing">
+        <div class="scene-inner" data-reveal>
+          <p class="eyebrow"><span class="scene-number">23</span>黄金 · 神庙 · 软禁</p>
+          <h2 class="display-lines"><span>宾客很快</span><span>成为占领者。</span></h2>
+          <div class="occupation-copy">
+            <p>西班牙人追问黄金、冲击宗教空间，并把蒙特苏马控制在自己手中。</p>
+            <p>马琳切继续翻译命令、要求与解释。她的能力扩大了西班牙人的行动范围，也让她更深地卷入暴力。</p>
+            <strong>承认她的作用，不等于把决定战争的人从责任中移走。</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene rupture-gate" id="rupture" data-screen="24" data-chapter="rupture">
+        <div class="rip" aria-hidden="true"></div>
+        <div class="rupture-copy" data-reveal>
+          <span class="chapter-index">第五章 · 撕裂</span>
+          <p class="eyebrow"><span class="scene-number">24</span>先说明“什么规则”</p>
+          <h2 class="display-lines"><span>同一场相遇，</span><span>双方读成两套秩序。</span></h2>
+          <p class="lead">
+            蒙特苏马一方以外交、礼物与安排住处管理来客；科尔特斯一方却把接待理解为进入、索取并控制政治中心的机会。
+          </p>
+          <div class="rupture-explainer">
+            <article><b>此前</b><p>礼仪与互赠暂时维持关系，翻译帮助双方理解说了什么。</p></article>
+            <article><b>变化</b><p>西班牙人软禁蒙特苏马、干预宗教空间，把受邀停留变成武装占领。</p></article>
+            <article><b>为什么会撕裂</b><p>翻译不能迫使掌握武器的人遵守对方边界；语言能力也不等于军事决定权。</p></article>
+          </div>
+          <blockquote>把“为什么没有阻止一切”只问向翻译者，会遮住真正拥有命令权的人。</blockquote>
+        </div>
+      </section>
+
+      <section class="scene silence-question" data-screen="25" data-chapter="rupture">
+        <div class="question-mark" aria-hidden="true">?</div>
+        <div class="silence-copy" data-reveal>
+          <p class="eyebrow"><span class="scene-number">25</span>托斯卡特尔节</p>
+          <h2>语言能阻止<br />一场战争吗？</h2>
+          <p>
+            科尔特斯离城期间，阿尔瓦拉多的部队在宗教节庆中发动杀戮。
+            触发原因在记录中互相冲突，但持武器者主动施加的大规模暴力并不因此消失。
+          </p>
+        </div>
+      </section>
+
+      <section class="scene night-retreat" data-screen="26" data-chapter="rupture">
+        <div class="rain" aria-hidden="true"></div>
+        <div class="retreat-copy" data-reveal>
+          <p class="eyebrow"><span class="scene-number">26</span>悲痛之夜</p>
+          <h2 class="display-lines"><span>城市反击。</span><span>队伍在雨夜撤离。</span></h2>
+          <p>逃离特诺奇蒂特兰的堤道上，许多人死于战斗、拥挤与湖水。她活了下来。</p>
+          <strong>活下去。</strong>
+          <small>这是对她生存位置的叙事概括。</small>
+        </div>
+      </section>
+
+      <section class="scene chapter-gate chapter-endgame" id="endgame" data-screen="27" data-chapter="endgame">
+        <div class="gate-number" aria-hidden="true">06</div>
+        <div class="gate-copy" data-reveal>
+          <span class="chapter-index">第六章 · 终局</span>
+          <h2 class="display-lines"><span>天花先于围城，</span><span>进入没有免疫记忆的城市。</span></h2>
+          <p class="lead">疫病、地方敌对、军事技术与湖上封锁共同改变了力量平衡。</p>
+        </div>
+        <p class="gate-note">最后围攻这座城市的，绝不只有几百名欧洲人。</p>
+      </section>
+
+      <section class="scene siege-columns" data-screen="28" data-chapter="endgame">
+        <div class="siege-head" data-reveal>
+          <p class="eyebrow"><span class="scene-number">28</span>1521 · 围城与陷落</p>
+          <h2 class="display-lines"><span>水、粮食、道路与时间，</span><span>都成为武器。</span></h2>
+        </div>
+        <div class="siege-grid">
+          <article><b>水</b><p>堤道与湖面被封锁。</p></article>
+          <article><b>粮</b><p>补给越来越困难。</p></article>
+          <article><b>病</b><p>疾病与饥饿共同杀人。</p></article>
+          <article><b>城</b><p>防线被逐区压缩。</p></article>
+        </div>
+        <p class="siege-note">
+          马琳切继续参与翻译与谈判。就结果而言，她确实帮助征服更快、更有效地发生；
+          但她既不是发动殖民工程的人，也不是造成这一切的唯一力量。
+        </p>
+      </section>
+
+      <section class="scene survivor-profile" id="survivor" data-screen="29" data-chapter="survivor">
+        <div class="survivor-title" data-reveal>
+          <span class="chapter-index">第七章 · 幸存者</span>
+          <p class="eyebrow"><span class="scene-number">29</span>战争以后</p>
+          <h2>她没有从历史中<br />立刻消失。</h2>
+        </div>
+        <div class="survivor-facts">
+          <p>继续参与远征与外交</p><p>拥有财产</p><p>生育子女</p><p>与胡安·哈拉米约成婚</p>
+        </div>
+        <div class="survivor-copy">
+          <p>她与科尔特斯的关系不能只写成爱情，也不能只用现代的单一关系词概括。权力、性别、依附、策略与生存彼此纠缠。</p>
+          <p>她何时去世、因何去世，史料众说纷纭。晚年不是一个已经被完整找回的结局。</p>
+          <strong>幸存不是自由的同义词。能动性与强迫可以同时存在。</strong>
+        </div>
+      </section>
+
+      <section class="watch-theater" id="watch" aria-labelledby="watch-title">
+        <div class="watch-head">
+          <span>DIRECT SCREENING / 双片放映</span>
+          <h2 id="watch-title">从文稿回到影像。</h2>
+          <p>上下集在此直接播放；站内其他位置不使用视频封面。</p>
+        </div>
+        <div class="video-act">
+          <div class="video-frame">
+            <iframe
+              src="https://player.bilibili.com/player.html?bvid=BV1A72vBQEEJ&page=1&high_quality=1&danmaku=0"
+              title="《谁背叛了背叛者：拉·马琳切》上集"
+              loading="lazy"
+              scrolling="no"
+              allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-meta">
+            <b>ACT I / 上</b>
+            <h3 class="display-lines"><span>一个马琳切，</span><span>半部美洲征服史</span></h3>
+            <span>35:09</span>
+            <a href="https://www.bilibili.com/video/BV1A72vBQEEJ/" target="_blank" rel="noreferrer">在 Bilibili 打开 ↗</a>
+          </div>
+        </div>
+        <div class="video-act video-act-reverse">
+          <div class="video-frame">
+            <iframe
+              src="https://player.bilibili.com/player.html?bvid=BV1iWBeBEEFg&page=1&high_quality=1&danmaku=0"
+              title="《谁背叛了背叛者：拉·马琳切》下集"
+              loading="lazy"
+              scrolling="no"
+              allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-meta">
+            <b>ACT II / 下</b>
+            <h3 class="display-lines"><span>阿兹特克在烈火中</span><span>死去，她在尸骨上重生</span></h3>
+            <span>42:47</span>
+            <a href="https://www.bilibili.com/video/BV1iWBeBEEFg/" target="_blank" rel="noreferrer">在 Bilibili 打开 ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene traitor-field" id="traitor" data-screen="30" data-chapter="traitor">
+        <div class="traitor-word" aria-label="叛徒，文字被划去">叛徒</div>
+        <div class="traitor-copy" data-reveal>
+          <span class="chapter-index">第八章 · 背叛者</span>
+          <p class="eyebrow"><span class="scene-number">30</span>Malinchismo</p>
+          <p class="lead">
+            数百年后，“malinchismo”被用来指责崇洋、出卖本国与否定自身文化。
+            一个十六世纪的原住民女性，被放进后来才形成的民族国家想象里受审。
+          </p>
+          <div class="counterweight">
+            <div><strong>结果不能被抹去</strong><p>她的语言、信息与外交工作帮助了征服，也使殖民暴力更有效地推进。</p></div>
+            <div><strong>责任不能被偷换</strong><p>她先被奴役、被转交；后世又把共同历史创伤压在她一个人身上。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene reread-gallery" data-screen="31" data-chapter="traitor">
+        <div class="reread-title" data-reveal>
+          <p class="eyebrow"><span class="scene-number">31</span>重新阅读</p>
+          <h2 class="display-lines"><span>英雄与叛徒，</span><span>都是太窄的容器。</span></h2>
+        </div>
+        <article class="reread-card card-feminist">
+          <span>01</span><h3>女性主义重读</h3>
+          <p>为什么殖民者的决策常被解释为政治，而女性的生存策略却被解释为道德缺陷？</p>
+        </article>
+        <article class="reread-card card-indigenous">
+          <span>02</span><h3>原住民重读</h3>
+          <p>不把所有地方群体抹成同一个阵营，也不让殖民暴力因内部联盟而失去名字。</p>
+        </article>
+        <p class="reread-close">她是在强迫、机会、危险与不完整选择之间行动的人。</p>
+      </section>
+
+      <section class="scene final-question" data-screen="32" data-chapter="traitor">
+        <div class="final-copy" data-reveal>
+          <p class="eyebrow"><span class="scene-number">32</span>把问题留给读者</p>
+          <h2>谁背叛了<br />背叛者？</h2>
+          <p>这里没有唯一正确选项。选择只改变下方的阅读回应，不会被保存或发送。</p>
+        </div>
+        <div class="reflection-options" role="group" aria-label="选择一种阅读回应">
+          <button type="button" data-reflection="structure" aria-pressed="false">
+            <strong>是结构先背叛了她</strong><span>奴役、战争与殖民秩序不断压缩选择。</span>
+          </button>
+          <button type="button" data-reflection="history" aria-pressed="false">
+            <strong>是后世背叛了她</strong><span>集体责任被压成一个女人的名字。</span>
+          </button>
+          <button type="button" data-reflection="both" aria-pressed="false">
+            <strong>两者同时成立</strong><span>参与造成后果，也仍可能是被强迫与被书写的人。</span>
+          </button>
+        </div>
+        <p class="reflection-response" id="reflection-response" aria-live="polite">
+          选择一个角度，继续检视“责任”与“选择”之间的距离。
+        </p>
+      </section>
+
+      <section class="source-room" id="sources" aria-labelledby="sources-title">
+        <div class="source-head">
+          <p class="eyebrow">来源与证据边界</p>
+          <h2 id="sources-title">文稿、史料图与限定语。</h2>
+        </div>
+        <div class="source-columns">
+          <article>
+            <h3>主要文稿</h3>
+            <p>21 页中文原稿《马琳切：谁背叛了背叛者？》，按八章组织；两份中文字幕稿补充影像叙事。</p>
+          </article>
+          <article>
+            <h3>图像档案</h3>
+            <p>本页使用来自 Gallica、Newberry Library 与 Wikimedia Commons 的公共领域图像，以及 Own Map 地图。</p>
+          </article>
+          <article>
+            <h3>限定语</h3>
+            <ul>
+              <li>出生名、出生时间与晚年细节并不确定。</li>
+              <li>乔卢拉警告与屠杀记录需要来源批判。</li>
+              <li>情绪性第一人称均属叙事框架。</li>
+            </ul>
+          </article>
+          <article>
+            <h3>隐私</h3>
+            <p>不连接分析服务，不设置跟踪 Cookie，不保存名字视角、地图选择或最终回应。</p>
+          </article>
+        </div>
+        <div class="archive-links">
+          <a href="https://commons.wikimedia.org/wiki/File:Codex_azcatitlan222.jpg" target="_blank" rel="noreferrer">Codex Azcatitlan ↗</a>
+          <a href="https://commons.wikimedia.org/wiki/File:Malinche_Tlaxcala.jpg" target="_blank" rel="noreferrer">Malinche Tlaxcala ↗</a>
+          <a href="https://commons.wikimedia.org/wiki/File:Map_of_Tenochtitlan_and_Gulf_of_Mexico,_1524.jpg" target="_blank" rel="noreferrer">Tenochtitlan Map ↗</a>
+          <a href="https://commons.wikimedia.org/wiki/File:Felix_Parra_Episodios_de_la_conquista_La_matanza_de_Cholula.jpg" target="_blank" rel="noreferrer">Cholula, 1877 ↗</a>
+          <a href="https://commons.wikimedia.org/wiki/File:Hernando_Cortes_landing_in_Mexico,_16th_C_-_BL_Add_MS_37177.jpg" target="_blank" rel="noreferrer">Cortés Landing Manuscript ↗</a>
+          <a href="https://commons.wikimedia.org/wiki/File:Tlaxcalamap.jpg" target="_blank" rel="noreferrer">Tlaxcala Map ↗</a>
+          <a href="https://commons.wikimedia.org/wiki/File:Moctezuma_Mendoza.jpg" target="_blank" rel="noreferrer">Moctezuma, Codex Mendoza ↗</a>
+          <a href="https://commons.wikimedia.org/wiki/File:Weiditz_Trachtenbuch_077_Hernan_Cort%C3%A9s.jpg" target="_blank" rel="noreferrer">Cortés by Weiditz ↗</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>时间的女儿 · 003</p>
+      <strong>马琳切：谁背叛了背叛者？</strong>
+      <a href="../THE-LIVING-ATLAS/">返回 The Living Atlas</a>
+    </footer>
+  </body>
+</html>

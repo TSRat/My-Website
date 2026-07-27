@@ -20,6 +20,7 @@
 | The Living Atlas | 总入口主站，一个人的开放档案馆 | `sites/living-atlas/`；`THE-LIVING-ATLAS/` 是构建镜像 | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) | REFACTOR | 内容系统通过 [PR #13](https://github.com/TSRat/My-Website/pull/13) 合并；Data / starter 与 Worlds 含混性修正通过 [PR #14](https://github.com/TSRat/My-Website/pull/14) 合并 |
 | IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `sites/ivory-archive/`；`app/` 是 Vinext 路由适配器，`public/` 是框架资源根 | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) | PRESERVE | 六阶段迁移已通过 [PR #15](https://github.com/TSRat/My-Website/pull/15) 合并：双渲染 parity、manifest、Data 入口与 provider-neutral events |
 | Enheduanna / 恩赫杜安娜 | “时间的女儿 004”人物专题；公主、祭司、作者与先驱 | `sites/enheduanna/`；`npm run build:enheduanna` 更新 `ENHEDUANNA/` Pages 镜像 | [恩赫杜安娜：第一人](https://tsrat.github.io/My-Website/ENHEDUANNA/) | REFACTOR | 六阶段可维护重建与 Data 入口已通过 [PR #17](https://github.com/TSRat/My-Website/pull/17) 合并 |
+| La Malinche / 马琳切 | “时间的女儿 003”人物专题；翻译、征服、幸存与被制造的背叛 | `sites/la-malinche/`；`npm run build:malinche` 更新 `LA-MALINCHE/` Pages 镜像 | [马琳切：谁背叛了背叛者？](https://tsrat.github.io/My-Website/LA-MALINCHE/) | REBUILD | 33 屏初学者导向视觉叙事、双片放映与评审预览由当前 PR 交付 |
 | Hildegard / 希尔德加德 | “时间的女儿 002”人物专题；女院长、先知、学者、音乐家与语言发明者 | `sites/hildegard/`；`HILDEGARD/` 是构建镜像 | [谦卑的反叛者：宾根的希尔德加德](https://tsrat.github.io/My-Website/HILDEGARD/) | PRESERVE | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
 | Hypatia / 希帕蒂娅 | “时间的女儿 001”人物专题；教师、哲学家与公共人物 | `sites/hypatia/`；`HYPATIA/` 是构建镜像 | [教师之死：希帕蒂娅](https://tsrat.github.io/My-Website/HYPATIA/) | REFACTOR | 六阶段实现已通过 [PR #16](https://github.com/TSRat/My-Website/pull/16) 合并 |
 | Sartre / 《恶心》导读 | 面向初读者的互动阅读导览，连接故事、人物、偶然性与阅读实验 | `sites/sartre-nausea-guide/`；`SARTRE-NAUSEA-GUIDE/` 是构建镜像 | [《恶心》：存在为何令人眩晕](https://tsrat.github.io/My-Website/SARTRE-NAUSEA-GUIDE/) | REFACTOR | 六阶段迁移由 [PR #19](https://github.com/TSRat/My-Website/pull/19) 交付 |
@@ -33,7 +34,7 @@
 ### 真实来源与静态快照
 
 - `IVORY-ARCHIVE/` 是已提交的历史静态快照，最后一次目录级更新停在第 02 期。当前 GitHub Pages 版本由 `sites/ivory-archive/briefings.ts` 和 `public/` 在 Actions 中重新生成；不要把旧快照当作主要内容源。
-- 所有十个网站的维护入口统一位于 `sites/<site-id>/`。每个站点包都包含 `site.config.json`、`CONTENT.md`、`DESIGN.md`、`TECH.md`、`HANDOFF.md` 与站点特定源码。
+- 所有十一个网站的维护入口统一位于 `sites/<site-id>/`。每个站点包都包含 `site.config.json`、`CONTENT.md`、`DESIGN.md`、`TECH.md`、`HANDOFF.md` 与站点特定源码。
 - The Living Atlas、Hypatia 和 Hildegard 使用直接静态源码，通过共享站点构建器更新各自大写 Pages 镜像。
 - Enheduanna 与 Melromarc 使用 React/TypeScript/Vite；共享构建器先生成 `.site-build/`，再更新大写镜像，并保留未被新入口引用的旧 bundle 作为回滚材料。
 - 两个哲学导读保留独立 Next.js 源码；共享构建器通过静态导出与相对路径重写更新大写镜像。
@@ -51,10 +52,11 @@ My-Website/
 ├── HANDOFF.md
 ├── web/                         # 组合级网站审计与平台标准（受版本控制的源文档）
 ├── .github/workflows/publish-static-mirror.yml
-├── sites/                       # 十个网站统一的权威维护目录
+├── sites/                       # 十一个网站统一的权威维护目录
 │   ├── living-atlas/
 │   ├── ivory-archive/
 │   ├── enheduanna/
+│   ├── la-malinche/
 │   ├── hildegard/
 │   ├── hypatia/
 │   ├── sartre-nausea-guide/
@@ -66,6 +68,7 @@ My-Website/
 ├── public/                      # IVORY ARCHIVE 的图片和公共资源
 ├── scripts/                     # Pages 生成、构建与验证脚本
 ├── ENHEDUANNA/                  # Enheduanna 当前发布镜像
+├── LA-MALINCHE/                 # La Malinche 当前发布镜像
 ├── HYPATIA/                     # Hypatia 当前发布镜像
 ├── HILDEGARD/                   # Hildegard 当前发布镜像
 ├── SARTRE-NAUSEA-GUIDE/         # Sartre 当前发布镜像
@@ -119,6 +122,8 @@ npm run dev:hildegard
 npm run build:hildegard
 npm run dev:enheduanna
 npm run build:enheduanna
+npm run dev:malinche
+npm run build:malinche
 npm run dev:melromarc
 npm run build:melromarc
 npm run dev:sartre-nausea
@@ -135,7 +140,7 @@ npm run build:sites
 npm run build:pages
 ```
 
-`build:pages` 会先按每个 `site.config.json` 刷新九个大写静态镜像，再生成 IVORY 与完整 Pages artifact。直接静态站点替换镜像；Vite 站点保留未引用的历史 bundle；Next 静态站点执行导出和相对路径重写。
+`build:pages` 会先按每个 `site.config.json` 刷新十个大写静态镜像，再生成 IVORY 与完整 Pages artifact。直接静态站点替换镜像；Vite 站点保留未引用的历史 bundle；Next 静态站点执行导出和相对路径重写。
 
 生成结果位于被忽略的 `docs/`。如需本地查看完整多站点路径，可在仓库根目录运行：
 
@@ -171,7 +176,7 @@ npm run lint
 1. 推送到 `main`，或手动触发 workflow。
 2. `.github/workflows/publish-static-mirror.yml` 安装 Node 22 依赖。
 3. workflow 运行 `npm run build:pages`。
-4. `scripts/build-github-pages.mjs` 根据十个站点包生成总入口与 IVORY ARCHIVE，并复制其余九个构建镜像。
+4. `scripts/build-github-pages.mjs` 根据十一个站点包生成总入口与 IVORY ARCHIVE，并复制其余十个构建镜像。
 5. `npm run validate:pages` 检查生成页面的本地资源引用，workflow 再执行 Hypatia 关键文件 smoke checks。
 6. workflow 上传 `docs/`，再由 `actions/deploy-pages@v4` 发布。
 
@@ -185,7 +190,7 @@ npm run lint
 - [AGENTS.md](./AGENTS.md)：所有 AI Coding Agent 的工作规则
 - [TECH.md](./TECH.md)：全局技术架构、资产路径与部署约束
 - [HANDOFF.md](./HANDOFF.md)：仓库当前状态、风险与下一步
-- [web/portfolio-audit.md](./web/portfolio-audit.md)：十个公开网站的详细现状、分级、Figma、迁移状态与风险
+- [web/portfolio-audit.md](./web/portfolio-audit.md)：十一个公开网站的详细现状、分级、Figma、迁移状态与风险
 - [web/platform-standard.md](./web/platform-standard.md)：共享六阶段标准、分层要求、视觉保护、QA 与分析事件规范
 - [web/content-system.md](./web/content-system.md)：跨站内容注册表、发布状态、共享 Web Core 与采用路径
 - [web/analytics-standard.md](./web/analytics-standard.md)：Data 入口、provider-neutral 事件、隐私边界与未来指标定义

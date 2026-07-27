@@ -1,5 +1,124 @@
 # Repository handoff
 
+## 2026-07-27: La Malinche beginner-first narrative expansion
+
+### Current target
+
+Respond to creator browser review by making `时间的女儿 · 003` understandable
+without prior knowledge, correcting the hero and title-wrap defects, and giving
+the Spanish landing, Tlaxcala, and Cholula enough independent narrative space.
+
+### Completed
+
+- Expanded the site from 30 to 33 numbered scenes.
+- Added a first-time-reader primer and a standalone Spanish-landing scene.
+- Rebuilt Tlaxcala as two scenes: polity and pressure first, then the path from
+  resistance through translation and negotiation to alliance.
+- Rebuilt Cholula as two scenes: sacred / route context first, then massacre,
+  conflicting testimony, and the boundary between interpreter and commander.
+- Added four credited, locally optimized public-domain assets: landing,
+  Tlaxcala map, Moctezuma II, and Cortés.
+- Corrected `波通昌` to `波顿查恩`, preserved the hero's intrinsic ratio,
+  removed display-title orphans at the checked viewports, and standardized
+  display-to-copy spacing without flattening scene variety.
+- Updated source, generated mirror, registry row, target documentation,
+  readiness test, and non-destructive Figma v3:
+  <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-13>.
+
+### Verification
+
+- `node --check sites/la-malinche/assets/site.js`: passed.
+- `node --test tests/malinche-readiness.test.mjs`: passed — 2/2.
+- `npm run build:malinche`: passed.
+- `npm run validate:sites`: passed — 11 maintenance packages.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed — 541 local references across 67 HTML/CSS files.
+- `npm run lint`: passed with 0 errors and 24 existing warnings in Enheduanna
+  and the committed Hypatia bundle.
+- Codex in-app browser layout audit passed at `1782 × 864`, `1440 × 900`,
+  `1024 × 768`, and `390 × 844`; visual smoke covered the changed narrative
+  sequence at desktop and mobile widths.
+- Antigravity extended route, keyboard, multi-browser, and visual QA: pending.
+
+### Delivery state
+
+- Branch: `codex/site-la-malinche`.
+- Pre-refinement head: `b7d21fb`.
+- Refinement implementation: `e629f30`.
+- Verified implementation preview:
+  <https://raw.githack.com/TSRat/My-Website/e629f30/LA-MALINCHE/index.html>.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/26>.
+- Merge: not authorized and not performed.
+
+### Remaining
+
+- Review PR #26; run Antigravity extended QA if desired.
+
+## 2026-07-27: La Malinche differentiated visual rebuild
+
+### Current target
+
+Rebuild `时间的女儿 · 003` so its thirty scenes use materially different
+compositions, the supplied monochrome figure becomes a transparent hero, larger
+archival images support the narrative, and the two Malinche videos display
+directly without reusing their covers elsewhere.
+
+### Completed
+
+- Added `sites/la-malinche/` as the authoritative direct-static source and
+  `LA-MALINCHE/` as its generated deploy mirror.
+- Registered the site in the authoritative README project table, shared
+  discovery control plane, generated archive hub and The Living Atlas.
+- Rebuilt all 30 scenes across eight chapters with cut-out poster, archival
+  walls, route console, translation seam, full-screen 1524 map, video theater,
+  red `malinchismo` rupture, rereading gallery, and final reflection.
+- Added four credited public-domain archive images and two direct Bilibili
+  players; removed all production references to both legacy cover WebPs.
+- Updated the dedicated editable Figma design source with a non-destructive v2:
+  <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-2>.
+- Updated the series number, registry entry, project table, config, manifest,
+  tests, documentation, source, and generated mirrors to `003`.
+- Preserved the existing workflow, public paths, other site identities and the
+  user’s separate dirty worktree.
+
+### Verification
+
+- `npm run validate:sites`: passed — 11 maintenance packages.
+- `npm run build:malinche`: passed — source and mirror rebuilt.
+- `node --test tests/malinche-readiness.test.mjs tests/site-maintenance-structure.test.mjs`:
+  passed — 3/3.
+- `npm run build:pages`: passed — complete multi-site artifact generated.
+- `npm run validate:pages`: passed — 537 local references across 67 HTML/CSS files.
+- `npm run lint`: passed with 0 errors and 24 existing warnings in Enheduanna
+  `<img>` usage and the committed Hypatia bundle.
+- JavaScript syntax checks and `git diff --check`: passed.
+- Codex in-app browser smoke: passed at `1440 × 900` and `390 × 844`;
+  no horizontal overflow, broken loaded images or console warnings/errors.
+- Interactions checked: name lens, route map, and mobile chapter disclosure.
+- Visual smoke checked the desktop and mobile hero, archival wall, and direct
+  video theater.
+- Antigravity extended route, keyboard, multi-browser and visual QA: pending.
+
+### Delivery state
+
+- Branch: `codex/site-la-malinche`.
+- Redesign implementation commit: `20773ed`.
+- Figma v2: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-2>.
+- Verified exact-commit preview:
+  <https://raw.githack.com/TSRat/My-Website/fe85f8a5b702d4d9ce467112b0ec6a8229c98528/LA-MALINCHE/index.html>.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/26>.
+- Preview status: remote desktop and mobile load, 30-screen DOM, cut-out hero,
+  four archive assets, two players, no cover references, no overflow, clean
+  console and name-lens interaction passed.
+- Merge: not authorized and not performed.
+
+### Remaining
+
+- Review the verified exact-commit preview and PR #26.
+- Add an external scholarly bibliography only if the creator wants the site to
+  make claims beyond the supplied manuscript and subtitle transcripts.
+- Antigravity extended QA remains a follow-up.
+
 ## 2026-07-25: Philosophy guides integrated into the ten-site build
 
 ### Current target
