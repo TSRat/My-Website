@@ -96,7 +96,12 @@
 - 视频版本：<https://www.bilibili.com/video/BV1VE4gzNEYJ>
 - 页面锚点：`#watch`（页内 iframe）、`#sources`（史料表 + 外链清单 + 图形来源）。
 
+## 图像来源（2026-07-27）
+
+- 第 02、05、06 章使用创作者提供的《Vision》剧照（尤塔与希尔德加德、修道院场景）及未知之语字母表现代转录示意；caption 明确标注它们是现代视觉材料，不是历史现场记录或原始字形。
+- 其余五张章节主图来自 Wikimedia Commons 的 Public Domain 或 CC0 图像；每张都在页面的“图像与图形说明”中链接到其文件页，并在 caption 中区分手稿、后世纪念图像与当代遗址。
+- 五枚小型 glyph 仍是原创 SVG，仅作为无障碍隐藏的版式装饰和视觉隐喻；不承担史料或章节配图功能。
+
 ## 仍在等待创作者确认
 
-- 是否引入公版抄本图像（例如 Rupertsberg Scivias 手稿的公版扫描），以及授权来源。
 - 是否补充 Kristin Hayter / Hildegard von Blingin' 的官方链接（当前只作文字提及）。
