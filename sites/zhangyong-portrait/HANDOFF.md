@@ -112,7 +112,9 @@ without impersonating a real party or government body.
   horizontally scrollable without causing body-level overflow.
 - Hidden-entry and return-path smoke: passed.
 - Native details interaction and all four local images: passed.
-- Exact-commit remote smoke: pending until the branch is pushed.
+- Exact-commit remote smoke: passed; the original route exposes the low-opacity
+  entry, the alternate route renders its disclosure and fictional count, all
+  four local images load and both routes remain horizontally contained.
 - Antigravity extended route, focus, network and perceptual comparison: pending.
 
 ## Capability usage
@@ -122,8 +124,8 @@ without impersonating a real party or government body.
 | Product / UX | Strongly recommended | Yes | Hidden-entry flow, parody disclosure and return path documented | — |
 | Figma | Mandatory | Yes | Editable red-parody frame, variables, component, desktop/mobile screens | — |
 | Browser | Mandatory | Yes | Desktop/mobile smoke, entry/return flow, anchors, details and image checks passed | Antigravity extended QA remains pending |
-| GitHub | Mandatory | Pending delivery | Clean dedicated branch created | Commit, push and PR pending |
-| Preview | Mandatory | Pending delivery | Exact-commit preview pending | Requires committed branch |
+| GitHub | Mandatory | Yes | Commit `07ccc63`, pushed branch and Draft PR #27 | — |
+| Preview | Mandatory | Yes | Exact-commit original and alternate routes smoke-tested | — |
 | Creative Production | Strongly recommended | No | — | Existing Zhang Yong imagery and researched portal references fully define the art direction |
 | Data / Analytics | Strongly recommended | No | Provider-none contract and fictional-counter boundary documented locally | No real metric or provider is being designed; invoking analytics would risk legitimizing a fictional count |
 | Visualization | Strongly recommended | No | — | Two-route flow is simpler as a short product-spec sequence |
@@ -132,14 +134,17 @@ without impersonating a real party or government body.
 
 - Branch: `codex/zhangyong-red-parody`
 - Base: `origin/main` at `86467f7`
-- Implementation commit: pending
-- Preview: pending
-- Pull Request: pending
+- Implementation commit: `07ccc63`
+- Preview:
+  <https://raw.githack.com/TSRat/My-Website/07ccc632fe04c044a84863ee3ed61698f3e92927/ZHANGYONG-PORTRAIT/red.html>
+- Original route preview:
+  <https://raw.githack.com/TSRat/My-Website/07ccc632fe04c044a84863ee3ed61698f3e92927/ZHANGYONG-PORTRAIT/index.html>
+- Pull Request: <https://github.com/TSRat/My-Website/pull/27> (Draft)
 - Figma:
   <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=43-39>
 - Antigravity QA: pending
 
 ## Next step
 
-Complete builds and browser smoke, then push the dedicated branch and review
-the exact-commit preview and Draft PR.
+Review the hidden-entry discoverability and parody tone in the exact-commit
+preview, then run Antigravity extended QA before marking the PR ready.
