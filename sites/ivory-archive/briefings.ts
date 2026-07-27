@@ -32,6 +32,143 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    date: "2026-07-27",
+    displayDate: "2026.07.27",
+    issueNo: "14",
+    theme: "土地、声音与数据：看似天然的分类如何被重新打开？",
+    intro:
+      "今天的五个故事都在拆开一个被当成理所当然的分类：五十州的土为何被染成同一种红，沙漠住宅怎样参与艺术生产，母语如何改变我们听见英语元音的方式，一颗“近地小行星”如何被重新认作彗星，实验室又怎样从法律性别走向激素、器官与个体化参考区间。",
+    uniqueCount: 5,
+    topics: ["艺术人文", "社会科学", "女性主义"],
+    stories: [
+      {
+        category: "艺术人文 × 艺术与设计 × 土地、国家与材料",
+        image: "/story-images/red-flags-earth.jpg",
+        imageAlt: "五十面抽象旗帜、赭红土壤纹理与地图碎片组成的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释 Andy Goldsworthy《Red Flags》的材料、地理与国家象征，并非艺术作品复制、展览现场、美国国旗或历史地图",
+        title: "五十州的土壤被染成同一种红之后，国旗还在区分谁？",
+        summary:
+          "Andy Goldsworthy 的《Red Flags》把美国五十州的土分别研入五十面旗帜；每面都失去州徽，却保留来自具体土地的颜色与颗粒。",
+        happened:
+          "FOR-SITE Foundation 将这组 2020 年作品带到旧金山 Fort Mason，完成西海岸首展。五十面旗帜各为 5×8 英尺，分别以美国一个州的土壤染红；展览恰逢《独立宣言》签署 250 周年，另以红土作品补充 Goldsworthy 长期使用土地材料的线索。",
+        importance:
+          "旗帜通常把土地变成抽象边界，《Red Flags》反向把国家符号重新变回会掉粉、带色差的物质。五十面看似统一的红色仍来自五十处不同地质与采集关系，也让“统一”显出运输、劳动和策展所需的基础设施。",
+        creatorAngle:
+          "制作一张从土样到旗面的材料履历：标出采集地、地质颜色、运输距离、染色与悬挂方式；然后隐去州名，测试观众还能依据哪些线索想象国家。",
+        facts: [
+          "展览于 2026 年 7 月 1 日至 30 日在 San Francisco 的 Fort Mason Gateway Pavilion 举行，免费开放",
+          "装置由 50 面旗帜组成，每面尺寸为 5×8 英尺",
+          "每面旗帜分别以美国 50 个州之一采集的土壤染成红色，不使用各州通常的徽记",
+          "作品最初于 2020 年在 New York 的 Rockefeller Center 展出，此次为美国西海岸首展",
+          "旧金山展览与《独立宣言》签署 250 周年同年发生，并补充展示 Goldsworthy 以红土为材料的其他作品",
+        ],
+        sourceName: "FOR-SITE Foundation",
+        sourceUrl: "https://www.for-site.org/andy-goldsworthy-red-flags",
+        sourceDate: "展期 2026-07-01 至 2026-07-30；2026-07-27 核验",
+      },
+      {
+        category: "艺术人文 × 女性主义 × 艺术、建筑与批评史",
+        image: "/story-images/okeeffe-ghost-ranch.jpg",
+        imageAlt: "沙岩地貌、房屋平面、窗框与工作台叠合成创作环境的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释 Georgia O’Keeffe、Ghost Ranch 与创作环境，并非 O’Keeffe 作品、人物肖像、住宅照片或展览视觉",
+        title: "把 Ghost Ranch 当作工具，而不是女艺术家的传奇背景",
+        summary:
+          "Courtauld 将以 Georgia O’Keeffe 的 Ghost Ranch 住宅与周边景观组织新展，把沙漠从传记布景改写为影响取景、采集、尺度和系列创作的工作条件。",
+        happened:
+          "7 月 27 日公布的《Georgia O’Keeffe: Ghost Ranch》计划于 2027 年 10 月开幕。展览将呈现近二十余件相关作品，其中 18 件从未在英国展出，并把室内陈设、动物骨骼、步行与附近地貌纳入作品理解。",
+        importance:
+          "O’Keeffe 长期被男性批评家用花朵、女性身体和孤绝天才的框架解释。把住宅视为工作基础设施，能同时看见她如何选择观看距离、积累自然物、控制生活节奏，也避免把女性艺术家的家只写成浪漫传记。",
+        creatorAngle:
+          "以一幅虚构风景为中心，画出窗框、步行路线、采集物、工作台和储藏空间的来源关系；再比较“沙漠灵感”与“长期空间实践”两种叙事分别省略了什么。",
+        facts: [
+          "《Georgia O’Keeffe: Ghost Ranch》计划于 2027 年 10 月在 London 的 Courtauld Gallery 开幕",
+          "展览标题公布时称将有 18 件作品首次在英国展出；报道同时指出全部展品接近两打",
+          "Ghost Ranch 位于 New Mexico 北部一片约 21,000 英亩的庄园中，O’Keeffe 于 1934 年开始在此居住",
+          "她在 New Mexico 另有一处 Abiquiú 住宅，位于牧场以南约 16 英里",
+          "约两打拟展作品中，此前只有 6 件曾在英国展出；1993 年英国男性评论家曾以“商业插画”等措辞贬低其创作",
+        ],
+        sourceName: "The Guardian／The Courtauld Gallery",
+        sourceUrl: "https://www.theguardian.com/culture/2026/jul/27/new-exhibition-to-explore-how-georgia-okeeffes-desert-home-shaped-her-art",
+        sourceDate: "2026-07-27",
+      },
+      {
+        category: "社会科学 × 语言学 × 第二语言与声学测量",
+        image: "/story-images/language-vowel-cues.jpg",
+        imageAlt: "元音声波、频谱轮廓、抽象口腔几何与听说双向路径组成的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释英语元音的时长、频谱与感知—发音联系，并非真实参与者、实验界面、声谱图或研究数据",
+        title: "我们并不是先听准、再说准：母语会替不同元音挑选线索",
+        summary:
+          "一项针对台湾华语英语学习者的实验发现，听辨与模仿的联系并非整体能力：beat–bit 主要依赖时长，bat–bet 则更依赖频谱与舌位形成的音质。",
+        happened:
+          "25 名参与者先完成 490 次听觉分类，再完成 180 次语音模仿。研究者把元音的频谱与时长独立操纵，发现个体在听觉中给某条声学线索的权重，会预测其发音在同一维度上能拉开多大差异。",
+        importance:
+          "把口音只理解为“发音器官没练好”，会漏掉学习者实际听见了哪些差异。研究提示训练应针对具体音位和具体线索，而不是笼统要求“听得更准”；但样本只有 25 人，不能直接代表全部华语学习者。",
+        creatorAngle:
+          "制作一个可以独立调整时长与音质的四词播放器，让 beat–bit 与 bat–bet 轮流越过分类边界；同时把听觉权重与发音结果画成两条对应轨迹。",
+        facts: [
+          "论文于 2026 年 7 月 19 日在线发表于《Second Language Research》，DOI 为 10.1177/02676583261461946",
+          "研究招募 25 名台湾华语母语者，其中 15 名女性、10 名男性，年龄为 20 至 37 岁",
+          "实验使用 beat–bit 与 bat–bet 两组英语元音对，并把频谱与时长分别做成 7 级连续体",
+          "每位参与者完成 490 次感知分类试次和 180 次模仿试次，整个实验约一小时",
+          "beat–bit 的听说联系主要出现在时长维度，bat–bet 则主要出现在频谱／音质维度；含混的 beat–bit 刺激还受到华语 /i/ 类别影响",
+        ],
+        sourceName: "Second Language Research／National Yang Ming Chiao Tung University",
+        sourceUrl: "https://journals.sagepub.com/doi/10.1177/02676583261461946",
+        sourceDate: "论文在线发表 2026-07-19；机构解读 2026-07-25",
+      },
+      {
+        category: "社会科学 × 天文学 × 观测分类与行星防御",
+        image: "/story-images/hidden-comet-tracking.jpg",
+        imageAlt: "细弱彗尾、轨道预测线、望远镜口径与偏离点叠成观测网络的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释 P/1998 SH2 的轨道偏差、微弱彗尾与多台望远镜协作，并非天文实拍、NASA 图示、雷达图或真实轨道数据",
+        title: "一颗“近地小行星”失约之后，望远镜才看见它其实是彗星",
+        summary:
+          "1998 SH2 在预计位置上没有出现。NASA 团队从非引力轨道偏差推断微弱喷气，再由三台大型望远镜找到几乎不可见的彗尾，将其增列为 P/1998 SH2。",
+        happened:
+          "这颗天体在 2025 年 8 月以约 300 万公里距离安全掠过地球，但 Deep Space Network 雷达没能按预报位置捕捉它。研究者重算 1998 年以来的测量，怀疑太阳加热冰物质造成喷气推力；随后 Hawaii 与 Chile 的望远镜共同确认微弱彗尾。",
+        importance:
+          "“小行星”或“彗星”不是只凭外观一次决定的标签。长期位置测量、模型残差与跨台站复核会改变分类，也会改变行星防御如何预测轨道；一次未观测到的目标，有时不是设备失败，而是模型暴露了新物理过程。",
+        creatorAngle:
+          "把故事做成一张误差逐步放大的侦测图：预报位置、雷达空白、历史测量、非引力残差、望远镜口径和最终彗尾依次出现，明确区分推断与直接影像证据。",
+        facts: [
+          "1998 SH2 绕太阳一周约需 4.5 年，2025 年 8 月 28 日曾在约 200 万英里（300 万公里）外安全掠过地球",
+          "其轨道从 1998 至 2016 年已有追踪记录，但此后完成两次公转而没有新的望远镜观测，直到 2025 年雷达尝试",
+          "确认工作使用 3.6 米 Canada–France–Hawaii Telescope、1.5 米 ESO Danish Telescope 和 8.2 米 Very Large Telescope",
+          "观测得到微弱但清晰的彗尾后，天体新增彗星临时编号 P/1998 SH2",
+          "自 2016 年发现首颗“暗彗星”以来，约又识别出十余颗；NASA 认为持续精密测轨可帮助判断喷气如何影响近地天体风险",
+        ],
+        sourceName: "NASA Jet Propulsion Laboratory",
+        sourceUrl: "https://www.nasa.gov/solar-system/comets/nasa-study-finds-near-earth-asteroid-is-actually-comet/",
+        sourceDate: "2026-07-16",
+      },
+      {
+        category: "女性主义 × 性别与健康 × 实验室数据基础设施",
+        image: "/story-images/gender-diverse-lab-data.jpg",
+        imageAlt: "血液样本、参考区间、器官清单与电子病历字段连接成个体化诊断路径的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释性别多元患者的检验参考区间、器官清单与电子病历，不代表真实患者、检验报告、医院界面或医疗建议",
+        title: "一张化验单不能只问法律性别：参考区间需要知道激素与器官",
+        summary:
+          "ADLM 发布美国首份广泛覆盖性别多元患者的检验医学与病理学指引，要求实验室把激素治疗、器官清单和信息系统能力纳入结果解释。",
+        happened:
+          "指引聚焦稳定接受性别肯定激素治疗至少六个月的成年人，覆盖检验参考区间、输血、尸检、组织学和病理信息学五个领域。它建议电子病历记录器官是否存在及手术日期，并在证据不足时允许双重报告参考区间。",
+        importance:
+          "许多实验室系统仍用法律性别自动选择区间与筛查提醒，可能把个体生理压进错误的二元默认值。更精确的做法不是取消生物信息，而是把激素状态、实际器官、治疗史和临床情境分开记录；指引也承认现有前瞻研究仍然有限。",
+        creatorAngle:
+          "把一张化验单拆成四层：法律字段、性别认同、激素状态和器官清单；让同一指标在不同信息组合下显示参考区间、证据强度与需要临床复核的位置。",
+        facts: [
+          "Association for Diagnostics & Laboratory Medicine 于 2026 年 7 月 1 日发布这份美国首个广泛覆盖该领域的专业指引",
+          "指引集中讨论 5 类问题：激素治疗影响的参考区间、输血、尸检与死亡调查、组织学，以及实验室信息学",
+          "主要证据对象为稳定接受性别肯定激素治疗至少 6 个月的成年人，因为更早阶段的数据仍很有限",
+          "指导表列出血红蛋白、肌酐、胱抑素 C、心肌肌钙蛋白、脂质、肝酶与激素等检验在不同治疗下的变化或证据缺口",
+          "建议电子病历设置器官清单；对部分指标可考虑同时报告女性与男性参考区间，尸检则应同时记录法律性别与确认的性别认同并使用正确姓名和代词",
+        ],
+        sourceName: "Association for Diagnostics & Laboratory Medicine",
+        sourceUrl: "https://myadlm.org/science-and-research/academy-guidance/gender-diversity",
+        sourceDate: "2026-07-01",
+      },
+    ],
+  },
+  {
     date: "2026-07-26",
     displayDate: "2026.07.26",
     issueNo: "13",
