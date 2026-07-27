@@ -3,58 +3,52 @@
 - Project: `马琳切：谁背叛了背叛者？`
 - Series: `时间的女儿 · 003`
 - Branch: `codex/site-la-malinche`
-- Figma v3: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-13>
+- Figma v4: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=14-2>
 - Pull Request: <https://github.com/TSRat/My-Website/pull/26>
 - Verified implementation preview:
-  <https://raw.githack.com/TSRat/My-Website/e629f30/LA-MALINCHE/index.html>
+  <https://raw.githack.com/TSRat/My-Website/0da661b/LA-MALINCHE/index.html>
 
 ## Current goal
 
-Refine the differentiated historical editorial for a first-time reader. Explain
-who and what the reader is encountering before presenting the argument, give
-the Spanish landing, Tlaxcala, and Cholula enough narrative space, and correct
-hero proportion, display-title wrapping, spacing, and alignment defects found
-in browser review.
+Complete the first-time-reader structure by explaining the Spanish background
+before the campaign and rebuilding Chapters 5 and 6 as a legible occupation,
+retreat, return, lake blockade, siege, and fall sequence. Preserve visual
+variety while correcting display spacing, title wrapping, image proportion,
+and alignment defects found through browser review.
 
 ## Completed
 
-- Expanded the site from 30 to 33 numbered scenes while preserving all eight
-  manuscript chapter anchors and the supplied argument.
-- Added an early `她是谁 / 为什么重要 / 这篇要问什么` primer.
-- Made `1519 · 西班牙人登陆` a standalone full-height scene that explains
-  the defeat of `波顿查恩`, the transfer of twenty women, Malinche's second
-  transfer, and why language changed her position.
-- Split Tlaxcala into two scenes:
-  1. what the independent polity was and why it resisted both the Triple
-     Alliance and an unknown armed force;
-  2. how weeks of fighting, translation, shared interest, and negotiation
-     produced an alliance without reducing it to friendship.
-- Split Cholula into two scenes:
-  1. what made it a major sacred and route center;
-  2. what is known about the massacre, why the surviving stories conflict, and
-     why a later warning story does not transfer command responsibility.
-- Added visibly captioned, locally optimized public-domain images for the
-  landing, a large Tlaxcala map, Moctezuma II, and Cortés.
-- Kept later depictions explicitly separate from historical likeness or现场记录.
-- Corrected every production occurrence of `波通昌` to `波顿查恩`.
-- Preserved the transparent monochrome hero and fixed its intrinsic ratio with
-  `object-fit: contain`.
-- Added authored display lines and shared display-to-copy spacing tokens to
-  prevent one- or two-character title orphans and collisions.
+- Expanded the site from 33 to 41 numbered scenes while preserving the eight
+  manuscript chapter anchors and the beginner-first opening.
+- Added three independent Spanish-background scenes: the Iberian 1492 turn,
+  Caribbean colonial practice, and a people / material / network explanation
+  of how a small expedition grew.
+- Rebuilt Chapter 5 as reception → occupation → Toxcatl massacre → failed
+  mediation → interpreter limit → retreat.
+- Rebuilt Chapter 6 as smallpox and regrouping → lake control → siege
+  mechanics → continued resistance and Cuauhtémoc's capture.
+- Added thirteen optimized visuals from `Women Story/Malinche/photo`, with
+  visible media-type and evidence qualifications. Film stills appear as
+  labelled reconstructions, not video-cover substitutes.
+- Added a restrained sun motif to the expedition ledger and retained the sharp
+  archive / jade / gold / red system without turning every scene into the same
+  card layout.
+- Increased title-to-deck and deck-to-body spacing, corrected image/title
+  alignment, preserved intrinsic image ratios, and removed the remaining
+  two-character mobile title ending.
 - Kept the two Bilibili videos directly playable and left legacy video-cover
   files unreferenced outside the players.
-- Updated the editable Figma source non-destructively with a v3 beginner-first
-  sequence; v1 and v2 remain available for comparison.
+- Updated the editable Figma source non-destructively with a six-screen V4
+  Spain + siege catalogue; V1–V3 remain available for comparison.
 
 ## Important decisions
 
 - Beginner context now precedes interpretation: identity and stakes first,
-  event sequence second, the creator's analysis third.
-- Tlaxcala's alliance is framed as political negotiation under shared pressure,
-  not as uncomplicated loyalty.
-- Cholula's evidentiary conflict remains visible. The site does not turn one
-  contested account into certainty or shift military command to the
-  interpreter.
+  Spanish context and event sequence second, the manuscript's analysis third.
+- Historical event, later history painting, colonial image narration, film
+  still, and digital reconstruction are explicitly distinguished.
+- The interpreter-limit screen keeps Malinche's influence visible without
+  transferring military command to her.
 - Image scale, background color, alignment, and scene structure vary with the
   argument while shared spacing and grid rules keep the page coherent.
 - Video-cover imagery is allowed only inside the direct embedded players.
@@ -63,8 +57,8 @@ in browser review.
 
 ## Modified files
 
-- `sites/la-malinche/index.html`, `assets/site.css`, `assets/site.js`
-- four new files under `sites/la-malinche/assets/archive/`
+- `sites/la-malinche/index.html`, `assets/site.css`
+- thirteen new files under `sites/la-malinche/assets/creator/`
 - `sites/la-malinche/{CONTENT,DESIGN,TECH,HANDOFF}.md`
 - `sites/la-malinche/site.config.json`, `site-manifest.json`
 - generated `LA-MALINCHE/` mirror
@@ -79,18 +73,18 @@ in browser review.
 - `npm run build:malinche`: passed.
 - `npm run validate:sites`: passed — 11 packages.
 - `npm run build:pages`: passed.
-- `npm run validate:pages`: passed — 541 local references across 67 HTML/CSS files.
+- `npm run validate:pages`: passed — 554 local references across 67 HTML/CSS files.
 - `npm run lint`: passed with 0 errors and 24 pre-existing warnings in
   Enheduanna and the committed Hypatia bundle.
-- Dynamic local browser layout audit passed at `1782 × 864`, `1440 × 900`,
-  `1024 × 768`, and `390 × 844`: 33 scenes, no horizontal overflow, no
-  detected display-title orphans, and preserved hero aspect ratio.
-- Visual smoke inspected the hero, landing, both Tlaxcala scenes, both Cholula
-  scenes, and the Moctezuma / Malinche / Cortés encounter on desktop and mobile.
-- Exact implementation-commit smoke passed at desktop and mobile widths:
-  33 scenes, corrected wording, no horizontal overflow or display-title
-  orphans, preserved hero ratio, and all four new archive images loaded at
-  their natural dimensions.
+- Dynamic local browser layout audit passed at `1782 × 864` and `390 × 844`:
+  41 scenes, no horizontal overflow, no detected title / copy collisions, all
+  images loaded, and preserved hero aspect ratio.
+- Visual smoke inspected the hero, Spanish-background sequence, expedition
+  ledger, Toxcatl massacre, interpreter limit, lake blockade, siege overview,
+  city fall, and rereading screen on desktop and mobile.
+- Exact implementation-commit smoke passed at `1782 × 864`: 41 scenes, zero
+  document overflow, preserved hero ratio, and all lazy images loaded after
+  their corresponding scenes entered the viewport.
 - Antigravity extended multi-browser, keyboard, and visual-regression QA:
   pending.
 
@@ -99,6 +93,8 @@ in browser review.
 - External scholarly bibliography remains limited to the manuscript and
   visible image-source records; broader claim expansion needs a separate source
   review.
+- Authorization status for selected `Women Story/Malinche/photo` images needs
+  confirmation before reuse outside this project.
 - Google-hosted fonts fall back to installed Chinese serif/sans fonts if the
   service is unavailable.
 - Bilibili embeds require network access and may behave differently behind
@@ -113,7 +109,8 @@ in browser review.
 ## Git state
 
 - Branch: `codex/site-la-malinche`
-- Pre-refinement head: `b7d21fb`
-- Refinement implementation: `e629f30`
-- Current worktree: this verified-preview handoff update only.
+- Pre-revision head: `3863e2a`
+- Spain + siege implementation: `0da661b`
+- Current worktree: this verified-preview handoff update and SVG permission
+  normalization only.
 - Merge: not authorized and not performed.

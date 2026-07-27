@@ -1,5 +1,59 @@
 # Repository handoff
 
+## 2026-07-27: La Malinche Spain and siege expansion
+
+### Current target
+
+Respond to creator browser review by adding beginner-readable Spanish context,
+expanding the occupation and siege narrative, prioritizing selected
+`Women Story/Malinche/photo` imagery, and fixing spacing / alignment defects
+without flattening the site's varied visual language.
+
+### Completed
+
+- Expanded `时间的女儿 · 003` from 33 to 41 numbered scenes.
+- Added three Spanish-background scenes and eight event-linked Chapter 5 / 6
+  scenes covering occupation, Toxcatl, failed mediation, retreat, smallpox,
+  lake control, siege mechanics, resistance, and the city's fall.
+- Added thirteen optimized project-library visuals / motifs with explicit
+  later-depiction, film-still, reconstruction, or authorization qualifications.
+- Corrected display spacing, image proportions, reveal-transform alignment, and
+  the last two-character mobile title ending.
+- Preserved the two direct video players and did not reuse video-cover imagery.
+- Added a non-destructive editable Figma V4 key-screen catalogue:
+  <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=14-2>.
+
+### Verification
+
+- `node --check sites/la-malinche/assets/site.js`: passed.
+- `node --test tests/malinche-readiness.test.mjs`: passed — 2/2.
+- `npm run build:malinche`: passed.
+- `npm run validate:sites`: passed — 11 packages.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed — 554 local references across 67 HTML/CSS files.
+- `npm run lint`: passed with 0 errors and 24 existing warnings in Enheduanna
+  and the committed Hypatia bundle.
+- Codex in-app browser layout smoke passed at `1782 × 864` and `390 × 844`:
+  41 scenes, no document overflow, no broken images after lazy-load traversal,
+  no visible title / copy collision, and preserved hero ratio.
+- Antigravity extended route, keyboard, multi-browser, and visual QA: pending.
+
+### Delivery state
+
+- Branch: `codex/site-la-malinche`.
+- Implementation: `0da661b`.
+- Exact implementation preview:
+  <https://raw.githack.com/TSRat/My-Website/0da661b/LA-MALINCHE/index.html>.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/26>.
+- Merge: not authorized and not performed.
+
+### Remaining
+
+- Confirm authorization before reusing selected project-library images outside
+  this site.
+- Review PR #26; run Antigravity extended QA if comprehensive overlay,
+  keyboard, and multi-browser comparison is desired.
+
 ## 2026-07-27: La Malinche beginner-first narrative expansion
 
 ### Current target
