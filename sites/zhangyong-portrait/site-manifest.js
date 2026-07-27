@@ -16,7 +16,7 @@ export const siteManifest = {
     capturedAt: "2026-07-25",
   },
   figmaUrl:
-    "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-30",
+    "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=40-30",
   previewUrl: null,
   analytics: {
     provider: "none",

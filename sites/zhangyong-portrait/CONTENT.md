@@ -5,26 +5,39 @@
 This is a Tier A editorial portrait site. Its primary reading flow is:
 
 1. enter through the weather/identity premise;
-2. move through identity fragments and the reconstructed timeline;
-3. inspect care, relationship, reading and humor fragments;
+2. move through identity fragments and a practical-life creative ledger;
+3. read the deep-night food receipt, care, friendship, reading and humor
+   fragments;
 4. close on the right to pause and rename oneself.
 
-The site is a narrative framing based on the already published source page. It
-is not a complete biography and must not be rewritten as one.
+The site combines a source-based portrait with two visibly labeled creative
+narratives. It is not a complete biography and must not be rewritten as one.
 
 ## Content boundaries
 
-- Historical or biographical fact: only statements already present in the
-  captured public source, with its qualifications preserved.
+- Source-based portrait: only statements supported by the supplied analysis or
+  the captured public source, with qualifications preserved.
+- Creative narrative: the practical ledger comes from `张勇发财记`; its
+  products, sales, amounts and assets are story premises rather than proof of
+  real events.
+- Creative narrative: the food receipt comes from `张勇深夜觅食记`; its
+  prices and reactions belong to the story scene rather than a verified
+  transaction history.
 - Narrative framing: the weather, orbit, system and field-note metaphors.
 - Visual metaphor: rabbit images and interface-like labels.
 - Evidence-like imagery: the bird, food and care images that anchor the
   narrative in concrete daily life.
 - Privacy boundary: do not add UINs, private exports, private links, email
   addresses or new identifying details.
+- Relationship material: Underhail and velna are included only at the level of
+  creator-confirmed relationship importance and report-supported public
+  patterns. Private messages, account identifiers and unconfirmed details stay
+  outside the page.
+- Excluded material: private or intimate relationship reporting beyond those
+  bounded public patterns is intentionally outside the public page.
 
-The visible “宠幸者名单” is explicitly an interaction reading, not an objective
-closeness ranking. Keep the methodology note attached to it.
+Visible content-status notes must remain attached to the practical ledger and
+deep-night receipt.
 
 ## Stable section IDs
 
@@ -61,7 +74,9 @@ runtime and still need creator confirmation before reuse outside this project.
 ## Editing rules
 
 - Preserve meaning, uncertainty and relationship boundaries.
+- Keep source-based observations and creative story premises visibly separate.
+- Use the creator-corrected spelling `velna`; do not copy the report's mistaken
+  name into public content.
 - Keep image alternatives accurate and descriptive.
-- Do not infer dates, rankings or counts that are not present in the captured
-  page.
+- Do not infer dates, rankings, sales or real-world assets from creative text.
 - Do not expose private source documents or add analytics identifiers.
