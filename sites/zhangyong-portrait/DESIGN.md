@@ -14,7 +14,7 @@ direction. The captured public page remains the visual baseline.
   narrative systems.
 - Large compressed headings, thin rules, monospace metadata and interface-like
   labels create the “weather observatory / personal system” language.
-- Image windows, the friendship orbit and rabbit collage are narrative
+- Image windows, the two-node friendship orbit and rabbit collage are narrative
   devices rather than interchangeable decoration.
 - Dense sections alternate with large pauses. Do not normalize this into a
   generic card grid.
@@ -32,6 +32,9 @@ art direction:
 - `prefers-reduced-motion`;
 - relative assets compatible with `/My-Website/ZHANGYONG-PORTRAIT/`;
 - visible Data/provider empty state.
+
+The friendship orbit may show Underhail and velna as distinct satellite nodes.
+Their positions and colors communicate two relationship modes, not a ranking.
 
 ## Figma reference
 

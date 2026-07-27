@@ -29,8 +29,12 @@ narratives. It is not a complete biography and must not be rewritten as one.
   narrative in concrete daily life.
 - Privacy boundary: do not add UINs, private exports, private links, email
   addresses or new identifying details.
-- Excluded material: private or intimate relationship reporting and identifying
-  details are intentionally outside the public page.
+- Relationship material: Underhail and velna are included only at the level of
+  creator-confirmed relationship importance and report-supported public
+  patterns. Private messages, account identifiers and unconfirmed details stay
+  outside the page.
+- Excluded material: private or intimate relationship reporting beyond those
+  bounded public patterns is intentionally outside the public page.
 
 Visible content-status notes must remain attached to the practical ledger and
 deep-night receipt.
@@ -71,6 +75,8 @@ runtime and still need creator confirmation before reuse outside this project.
 
 - Preserve meaning, uncertainty and relationship boundaries.
 - Keep source-based observations and creative story premises visibly separate.
+- Use the creator-corrected spelling `velna`; do not copy the report's mistaken
+  name into public content.
 - Keep image alternatives accurate and descriptive.
 - Do not infer dates, rankings, sales or real-world assets from creative text.
 - Do not expose private source documents or add analytics identifiers.

@@ -16,6 +16,11 @@ public route and stable section anchors.
   food receipt based on `张勇深夜觅食记`.
 - Kept source-based identity, body, care, friendship, reading and humor
   material, while excluding private and intimate relationship reporting.
+- Added velna as a second creator-confirmed important relationship, using only
+  the report-supported patterns of daily continuity, shared language, gaming
+  and low-formality trust.
+- Updated the friendship orbit to show Underhail and velna as distinct,
+  non-ranked nodes and corrected the public spelling to `velna`.
 - Kept all original public section IDs and updated the content registry,
   metadata and portfolio registry.
 - Added product, visual-direction, analytics and Figma-to-production handoff
@@ -55,6 +60,7 @@ public route and stable section anchors.
 - `sites/zhangyong-portrait/index.html`
 - `sites/zhangyong-portrait/content-registry.js`
 - `sites/zhangyong-portrait/site-manifest.js`
+- `sites/zhangyong-portrait/platform.css`
 - `sites/zhangyong-portrait/CONTENT.md`
 - `sites/zhangyong-portrait/DESIGN.md`
 - `sites/zhangyong-portrait/TECH.md`
@@ -73,10 +79,13 @@ public route and stable section anchors.
 - `npm run validate:pages`: passed, 522 references across 65 HTML/CSS files.
 - `git diff --check`: passed.
 - Public-copy exclusion search: passed for source, mirror and design documents.
+- Reviewed the supplied velna relationship report through page renders and
+  targeted text extraction; only non-private relationship structure was used.
 - Local desktop smoke at 1440×900: passed; requested navigation and content are
-  visible, primary assets load and horizontal containment is intact.
-- Local mobile smoke at 390×844: passed; ledger and receipt reflow without
-  horizontal overflow.
+  visible, both relationship nodes remain contained, primary assets load and
+  horizontal containment is intact.
+- Local mobile smoke at 390×844: passed; both relationship nodes and their
+  supporting notes remain legible without horizontal overflow.
 - Exact-commit remote smoke: passed; requested content, primary images and
   horizontal containment are present on the pushed implementation commit.
 - Antigravity extended route, focus, network and perceptual comparison: pending.
@@ -86,7 +95,7 @@ public route and stable section anchors.
 | Capability | Result |
 | --- | --- |
 | Product / UX | Used for content boundaries, IA and stable-anchor mapping |
-| Figma | Used; editable v2 screens, variables and component created |
+| Figma | Used; editable v2 screens retained and the relationship navigation label updated |
 | Browser | Used for desktop/mobile source smoke checks |
 | GitHub | Used; scoped commit pushed and Draft PR opened |
 | Preview | Used; exact-commit remote preview passed |

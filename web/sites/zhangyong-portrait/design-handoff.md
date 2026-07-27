@@ -25,10 +25,11 @@ file for comparison.
 
 | Figma element | Production source |
 | --- | --- |
-| Desktop/mobile navigation | `index.html` `.topbar`, `.nav-links` |
+| Desktop/mobile navigation | `index.html` `.topbar`, `.nav-links`; the production label is `关系轨道` |
 | Weather hero and source imagery | `index.html` `.hero`, `.hero-collage` |
 | Practical ledger | `#timeline`, preserving the existing timeline visual rail |
 | Deep-night receipt | `#favored`, preserving the existing dense list treatment |
+| Important relationships | `#underhail`, with separate Underhail and velna orbit nodes |
 | Theme colors and type rhythm | Existing `style.css` custom properties and type system |
 | Content-status labels | Visible copy attached to `#timeline` and `#favored` |
 

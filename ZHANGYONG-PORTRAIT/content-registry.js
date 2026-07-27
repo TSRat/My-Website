@@ -13,7 +13,7 @@ export const zhangYongContent = {
     { id: "timeline", number: "02", title: "解决真实问题的创作账本" },
     { id: "favored", number: "03", title: "27.3 元的深夜胜利" },
     { id: "bawanglong", number: "04", title: "霸王龙照料档案" },
-    { id: "underhail", number: "05", title: "现实友谊轨道" },
+    { id: "underhail", number: "05", title: "Underhail 与 velna 的重要关系轨道" },
     { id: "mind", number: "06", title: "精神信息密度" },
     { id: "field-note", number: "07", title: "兔子现场笔记" },
     { id: "data", number: "08", title: "数据与隐私" },
