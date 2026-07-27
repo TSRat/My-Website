@@ -5,15 +5,15 @@ export const zhangYongContent = {
   contentBoundary: {
     type: "narrative-framing",
     description:
-      "基于既有公开人物画像页面的叙事性整理；不是完整传记，也不替人物下定义。",
+      "基于人物画像与创作文本的分层整理；事实观察、创作叙事与视觉隐喻分别标注，不替人物下定义。",
   },
   sections: [
     { id: "main-content", number: "00", title: "张勇｜不是一种答案，是一种天气" },
     { id: "fragments", number: "01", title: "张勇，首先是她自己" },
-    { id: "timeline", number: "02", title: "张勇时间线" },
-    { id: "favored", number: "03", title: "张勇乐园宠幸者名单" },
+    { id: "timeline", number: "02", title: "解决真实问题的创作账本" },
+    { id: "favored", number: "03", title: "27.3 元的深夜胜利" },
     { id: "bawanglong", number: "04", title: "霸王龙照料档案" },
-    { id: "underhail", number: "05", title: "现实关系轨道" },
+    { id: "underhail", number: "05", title: "现实友谊轨道" },
     { id: "mind", number: "06", title: "精神信息密度" },
     { id: "field-note", number: "07", title: "兔子现场笔记" },
     { id: "data", number: "08", title: "数据与隐私" },

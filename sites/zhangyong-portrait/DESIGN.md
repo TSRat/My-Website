@@ -4,8 +4,8 @@
 
 `PRESERVE`
 
-This migration changes the implementation source, not the art direction. The
-captured public page is the visual baseline.
+This content rebuild changes the information architecture and copy, not the art
+direction. The captured public page remains the visual baseline.
 
 ## Visual identity
 
@@ -14,7 +14,7 @@ captured public page is the visual baseline.
   narrative systems.
 - Large compressed headings, thin rules, monospace metadata and interface-like
   labels create the “weather observatory / personal system” language.
-- Image windows, the relationship orbit and rabbit collage are narrative
+- Image windows, the friendship orbit and rabbit collage are narrative
   devices rather than interchangeable decoration.
 - Dense sections alternate with large pauses. Do not normalize this into a
   generic card grid.
@@ -40,10 +40,15 @@ art direction:
 - Editable desktop/mobile migration coverage:
   <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=36-30>
 - Frame: `张勇的生活切片 · migration coverage`
+- Editable content-rebuild screens:
+  <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=40-30>
+- Frame: `张勇的生活切片 · content rebuild v2`
+- Theme variables: `Theme / 张勇的生活切片`
+- Site component: `Site / 张勇 / Ledger Row`
 
-Figma is a design and QA reference only. The authoritative production
-implementation is this directory's static HTML, CSS, JavaScript modules and
-assets.
+The v2 rebuild frame is the design source of truth for this change. The
+authoritative production runtime remains this directory's static HTML, CSS,
+JavaScript modules and assets.
 
 ## QA baseline
 

@@ -26,6 +26,8 @@ The shared site builder copies this package into:
 - `site-manifest.js` — tier, classification, path, source and provider record.
 - `analytics.js` — provider-neutral, no-storage event contract.
 - `assets/` — local narrative assets.
+- `../../web/sites/zhangyong-portrait/design-handoff.md` — Figma node and
+  production mapping for this content rebuild.
 
 Core content and navigation work without JavaScript. JavaScript only annotates
 the implementation, marks the active primary-nav destination and prepares
