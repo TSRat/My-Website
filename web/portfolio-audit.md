@@ -17,6 +17,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 | The Living Atlas | REFACTOR | B — Interactive | Content system merged in PR #13; Data / starter and ambiguity correction merged in PR #14 | Shared runtime publication needs explicit Pages build-map authorization |
 | IVORY ARCHIVE | PRESERVE | B — Interactive | Six-stage implementation merged in PR #15 | Antigravity extended QA remains optional follow-up |
 | Enheduanna | REFACTOR | A — Editorial | Maintainable rebuild merged in PR #17 | Antigravity extended visual QA remains optional follow-up |
+| La Malinche / 马琳切 | REBUILD | B — Interactive editorial | 30-screen new-site implementation in current review branch | Live preview, PR review and Antigravity extended QA |
 | Hildegard | PRESERVE | A — Editorial | Six-stage implementation merged in PR #16 | Antigravity deterministic-section visual QA remains optional follow-up |
 | Hypatia | REFACTOR | A — Editorial | Six-stage implementation merged in PR #16 | Antigravity deterministic-section visual QA remains optional follow-up |
 | Sartre / 《恶心》导读 | REFACTOR | B — Interactive | Six-stage migration in progress on `codex/sites-six-stage-import` | Image provenance confirmation and Antigravity extended QA remain |
@@ -25,7 +26,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 | 张勇的生活切片 | PRESERVE | A — Editorial | Direct static migration merged in PR #21 | Antigravity section QA pending |
 | 两只天鹅 | REFACTOR | B — Interactive | Direct static migration merged in PR #21 | Antigravity interaction QA pending |
 
-Counts: 10 audited; 4 PRESERVE; 5 REFACTOR; 1 REBUILD.
+Counts: 11 audited; 4 PRESERVE; 5 REFACTOR; 2 REBUILD.
 
 ## Remaining migration queue
 
@@ -140,6 +141,34 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Figma URL:** [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
 - **Preview / PR URL:** [Exact-commit reconstructed preview](https://raw.githack.com/TSRat/My-Website/28b7b8cc91b1cbcec53c0fea0eaf0fac404241bb/ENHEDUANNA/index.html); [PR #17](https://github.com/TSRat/My-Website/pull/17).
 - **Remaining risks:** Antigravity still needs the extended deterministic-section visual comparison; chapter-number ordering still needs creator confirmation.
+
+## La Malinche
+
+- **Site / slug / live URL:** La Malinche / 马琳切; `LA-MALINCHE`; <https://tsrat.github.io/My-Website/LA-MALINCHE/>
+- **Source path:** `sites/la-malinche/`; `LA-MALINCHE/` is the generated Pages mirror.
+- **Status:** New interactive historical editorial, “Daughters of Time 005”.
+- **Product purpose:** Reframe Malinche through three names and eight manuscript chapters without flattening her into either innocent heroine or timeless traitor.
+- **Primary audience and goal:** Chinese readers of women’s, colonial, translation, and Mesoamerican history; follow the chronology while distinguishing evidence from interpretation.
+- **Major routes and navigation:** One 30-screen route with eight stable chapter anchors, name lens, route map, evidence annotations, translation split, reflection, sources, and Data boundary.
+- **Current visual direction:** Obsidian archive, jade codex rules, colonial blue, gold evidence marks, and one red full-screen rupture at `malinchismo`.
+- **Typography / color / layout:** Monumental Chinese serif display, restrained sans body, 12-column desktop system and single-column mobile narrative.
+- **Framework / language / rendering:** Direct static HTML, CSS, and vanilla JavaScript; creator assets are web-optimized local WebP files.
+- **Content/data model:** Creator’s 21-page manuscript, two subtitle transcripts, cover artworks, and Own Map files; the site labels fact, interpretation, framing, and metaphor separately.
+- **State/interactivity:** `aria-pressed` name/map/reflection controls, native `details`, chapter scrollspy, reduced-motion reveal behavior, and keyboard-visible focus.
+- **Build system / deployment:** `npm run build:malinche` replaces the generated `LA-MALINCHE/` mirror; the existing GitHub Actions Pages artifact architecture remains unchanged.
+- **Analytics:** Provider `none`; no cookies, identity, network analytics, or persistence. The eight semantic event intents are documented but only emitted locally.
+- **Tests / CI:** Site structure and 30-screen readiness tests plus Pages asset validation. Codex browser smoke covers one desktop and one narrow viewport; Antigravity extended QA remains pending.
+- **Accessibility state:** Skip link, semantic headings, native controls, live regions, captions, descriptive alternatives, focus visibility, and reduced motion are implemented.
+- **Responsive state:** Full translation triptych becomes native mobile disclosures; name, evidence, source, reflection, and Data grids collapse without hiding content.
+- **Existing Figma:** Dedicated local design system, variables, styles, components, desktop/mobile key screens, interaction states, and implementation handoff.
+- **Classification:** **REBUILD** — this is a new maintainable site synthesized from four creator-approved concepts.
+- **Target architecture:** Keep the single-route direct-static model; extend only if new manuscript or source material requires structured content extraction.
+- **Shared-core adoption:** Registry, build contract, manifest, accessibility rules, preview requirement, asset validation, and provider-neutral Data boundary.
+- **Site-specific theme:** Preserve the three-name palette, obsidian archive, translation split, creator cover/maps, and red ideological rupture.
+- **Migration status:** Production implementation is in the current dedicated branch; merge remains creator-controlled.
+- **Figma URL:** [La Malinche Web Design System](https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-3).
+- **Preview / PR URL:** To be recorded after the exact review commit is pushed.
+- **Remaining risks:** Historical details beyond the creator manuscript still need a separate source bibliography if the creator wants external citations; Antigravity extended visual and interaction QA remains pending.
 
 ## Hildegard
 

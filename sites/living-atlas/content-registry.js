@@ -77,6 +77,23 @@ export const livingAtlasContent = {
   ],
   sites: [
     {
+      id: "la-malinche",
+      number: "010",
+      status: "published",
+      title: { en: "LA MALINCHE", zh: "马琳切" },
+      series: {
+        en: "Daughters of Time · 005",
+        zh: "时间的女儿 · 005",
+      },
+      href: "../LA-MALINCHE/",
+      thumbnail: "../LA-MALINCHE/assets/cover-green.webp",
+      thumbnailAlt: {
+        en: "La Malinche editorial website cover",
+        zh: "马琳切历史编辑网站封面",
+      },
+      updatedAt: "2026-07-27",
+    },
+    {
       id: "sartre-nausea-guide",
       number: "009",
       status: "published",
@@ -213,6 +230,15 @@ export const livingAtlasContent = {
     },
   ],
   updates: [
+    {
+      id: "la-malinche-published",
+      date: "2026-07-27",
+      title: {
+        en: "La Malinche joined Daughters of Time",
+        zh: "马琳切加入“时间的女儿”系列",
+      },
+      href: "../LA-MALINCHE/",
+    },
     {
       id: "philosophy-guides-migrated",
       date: "2026-07-25",

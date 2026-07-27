@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "la-malinche",
+  "title": "马琳切：谁背叛了背叛者？",
+  "slug": "LA-MALINCHE",
+  "status": "published",
+  "interactionTier": "B",
+  "classification": "REBUILD",
+  "maintenanceRoot": "sites/la-malinche",
+  "documents": ["CONTENT.md", "DESIGN.md", "TECH.md", "HANDOFF.md"],
+  "source": {
+    "mode": "direct-static",
+    "entry": "index.html",
+    "assets": ["assets"]
+  },
+  "build": {
+    "command": "npm run build:malinche",
+    "staging": ".site-build/la-malinche",
+    "mirror": "LA-MALINCHE",
+    "mirrorPolicy": "replace"
+  },
+  "publicPath": "/My-Website/LA-MALINCHE/",
+  "manifest": "site-manifest.json",
+  "figmaUrl": "https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-3",
+  "hub": {
+    "order": 10,
+    "className": "la-malinche",
+    "cover": "assets/cover-green.webp",
+    "eyebrow": "DAUGHTERS OF TIME · 005",
+    "description": "沿着马林钦、玛丽娜夫人与拉·马琳切三个名字，重读翻译、征服、幸存与被制造的背叛。",
+    "metadata": [["时代", "约1500—1520年代"], ["地点", "中部美洲"]]
+  }
+}

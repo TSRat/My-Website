@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "siteId": "la-malinche",
+  "title": "马琳切：谁背叛了背叛者？",
+  "series": "时间的女儿 · 005",
+  "language": "zh-CN",
+  "classification": "REBUILD",
+  "interactionTier": "B",
+  "routes": [
+    {
+      "path": "./",
+      "title": "马琳切：谁背叛了背叛者？",
+      "description": "一部关于翻译、征服、幸存与历史记忆的三十屏互动叙事。"
+    }
+  ],
+  "analytics": {
+    "provider": "none",
+    "personalData": false,
+    "persistence": false,
+    "eventsDocumentedAt": "../../web/sites/la-malinche/analytics.md"
+  },
+  "contentSource": {
+    "type": "creator-manuscript",
+    "title": "马琳切：谁背叛了背叛者？",
+    "chapters": 8,
+    "screens": 30
+  },
+  "designSource": "https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-3"
+}

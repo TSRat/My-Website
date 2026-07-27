@@ -1,5 +1,59 @@
 # Repository handoff
 
+## 2026-07-27: La Malinche added as the eleventh website package
+
+### Current target
+
+Build `时间的女儿 · 005` from the creator’s full manuscript, cover artwork and
+Own Map assets, while preserving the existing multi-site registry, source /
+mirror contract and GitHub Actions Pages artifact deployment.
+
+### Completed
+
+- Added `sites/la-malinche/` as the authoritative direct-static source and
+  `LA-MALINCHE/` as its generated deploy mirror.
+- Registered the site in the authoritative README project table, shared
+  discovery control plane, generated archive hub and The Living Atlas.
+- Implemented 30 viewport-scale scenes across the manuscript’s eight chapters,
+  with three name lenses, creator route maps, evidence annotations, translation
+  split, one red `malinchismo` rupture, final reflection, sources and a visible
+  provider-none Data boundary.
+- Created a dedicated editable Figma design system:
+  <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-3>.
+- Preserved the existing workflow, public paths, other site identities and the
+  user’s separate dirty worktree.
+
+### Verification
+
+- `npm run validate:sites`: passed — 11 maintenance packages.
+- `npm run build:malinche`: passed — source and mirror rebuilt.
+- `node --test tests/malinche-readiness.test.mjs tests/site-maintenance-structure.test.mjs`:
+  passed — 3/3.
+- `npm run build:pages`: passed — complete multi-site artifact generated.
+- `npm run validate:pages`: passed — 536 local references across 67 HTML/CSS files.
+- `npm run lint`: passed with 0 errors and 24 existing warnings in Enheduanna
+  `<img>` usage and the committed Hypatia bundle.
+- JavaScript syntax checks and `git diff --check`: passed.
+- Codex in-app browser smoke: passed at `1440 × 900` and `390 × 844`;
+  no horizontal overflow, broken loaded images or console warnings/errors.
+- Interactions checked: name lens, route map, final reflection and mobile
+  chapter disclosure.
+- Antigravity extended route, keyboard, multi-browser and visual QA: pending.
+
+### Delivery state
+
+- Branch: `codex/site-la-malinche`.
+- Figma: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-3>.
+- Exact-commit preview and Pull Request: record after branch push.
+- Merge: not authorized and not performed.
+
+### Remaining
+
+- Review the exact unmerged preview and Pull Request.
+- Add an external scholarly bibliography only if the creator wants the site to
+  make claims beyond the supplied manuscript and subtitle transcripts.
+- Antigravity extended QA remains a follow-up.
+
 ## 2026-07-25: Philosophy guides integrated into the ten-site build
 
 ### Current target
