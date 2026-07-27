@@ -31,6 +31,7 @@ sites/hildegard/ -> .site-build/hildegard/
 - `./assets/glyph-cosmic-wheel.svg`
 - `./assets/glyph-branch.svg`
 - `./assets/glyph-root.svg`
+- `./assets/images/hildegard-*.jpg`：八章的真实章节主图；来源、作者与许可集中记录在页面 `#sources` 的“图像与图形说明”中。
 - Google Fonts：`Cormorant Garamond`, `Noto Serif SC`, `Noto Sans SC`, `Fira Code`（含 `preconnect`）
 
 `hildegard-site.css` 通过 `@import "./hildegard-tokens.css"` 引入全部设计变量。`assets/glyph-star.svg` 保留作后续扩展背景。

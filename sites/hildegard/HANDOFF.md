@@ -1,5 +1,34 @@
 # Hildegard handoff
 
+## 2026-07-26 · Real-image chapter plates
+
+### Current target
+
+将八章开头的原创 SVG 章节配图替换为可追溯的真实图像，同时继续明确区分史料、后世纪念图像、现代遗址与视觉隐喻。
+
+### Completed
+
+- `index.html` 的八张 `plate-*.svg` 已替换为本地优化的 JPEG：迪西博登贝格祭坛局部、修女群像、《认识道路》细密画、《天启交响曲》手稿、鲁珀茨贝格赎罪券、《自然学》抄本、鲁珀茨贝格旧址与艾宾根雕像。
+- 每张图都有具体 alt 文本及不夸大其年代/性质的 caption；没有把后世作品或现代遗址写作现场记录。
+- `#sources` 的图像说明已逐项链接至 Wikimedia Commons 文件页，记录《自然学》抄本的 Sailko / CC BY 3.0 归属，其余为 Public Domain 或 CC0。
+- 原 SVG plate 文件保留在仓库中作历史/回滚材料，但入口不再引用它们；小型 glyph 仍只作无障碍隐藏的版式装饰。
+
+### Verification
+
+- `npm run build:pages`: passed; refreshed the generated `HILDEGARD/` mirror and Pages artifact.
+- `npm run validate:pages`: passed — 522 local references across 65 HTML/CSS files.
+- Browser basic smoke: desktop loaded all 8 chapter images at their expected natural dimensions; no horizontal overflow and no console errors. At 390 px, no horizontal overflow was present; lazy loading kept offscreen images unloaded until viewed, as expected.
+- `git diff --check`: passed.
+
+### Modified files
+
+- `sites/hildegard/index.html`
+- `sites/hildegard/assets/images/hildegard-*.jpg` (8 new optimized source images)
+- `sites/hildegard/CONTENT.md`
+- `sites/hildegard/TECH.md`
+- `sites/hildegard/HANDOFF.md`
+- `HILDEGARD/index.html` and `HILDEGARD/assets/images/hildegard-*.jpg` (generated deploy mirror)
+
 ## 2026-07-25 · Unified maintenance package
 
 - Authoritative maintenance root: `sites/hildegard/`.

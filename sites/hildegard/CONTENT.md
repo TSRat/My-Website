@@ -96,7 +96,12 @@
 - 视频版本：<https://www.bilibili.com/video/BV1VE4gzNEYJ>
 - 页面锚点：`#watch`（页内 iframe）、`#sources`（史料表 + 外链清单 + 图形来源）。
 
+## 图像来源（2026-07-26）
+
+- 八张章节主图已改为 Wikimedia Commons 上可追溯的真实图像；每张都在页面的“图像与图形说明”中链接到其文件页，并在 caption 中区分手稿、后世纪念图像与当代遗址，避免把它们伪装为 12 世纪现场记录。
+- 其中《自然学》抄本图由 Sailko 以 CC BY 3.0 发布，页面保留作者与许可；其余七张为 Public Domain 或 CC0。下载到仓库的是为网页尺寸压缩的衍生文件。
+- 五枚小型 glyph 仍是原创 SVG，仅作为无障碍隐藏的版式装饰和视觉隐喻；不承担史料或章节配图功能。
+
 ## 仍在等待创作者确认
 
-- 是否引入公版抄本图像（例如 Rupertsberg Scivias 手稿的公版扫描），以及授权来源。
 - 是否补充 Kristin Hayter / Hildegard von Blingin' 的官方链接（当前只作文字提及）。
