@@ -35,6 +35,18 @@
 | `v3 · Cholula — evidence` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-77> |
 | `v3 · Encounter triptych` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-83> |
 
+### V4 Spain + siege
+
+| Frame | Node |
+| --- | --- |
+| `v4 · Spain + siege catalogue` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=14-2> |
+| `16 · Iberia / 1492` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=14-7> |
+| `18 · Expedition system` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=14-20> |
+| `30 · Interpreter limit` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=14-40> |
+| `34 · Lake blockade` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=14-50> |
+| `35 · Siege overview` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=14-66> |
+| `36 · City fall` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=14-81> |
+
 ## Editable system
 
 - Six required pages are present.
@@ -48,9 +60,9 @@
   - `Archive Annotation`
 - Desktop, mobile, translation, selected, annotation, loading, error, and keyboard-focus states are represented.
 - The supplied cut-out, Codex page, and 1524 map are placed as actual image fills.
-- V1 and V2 remain intact for comparison; V3 is the current implementation
-  source for beginner ordering, display spacing, Tlaxcala, Cholula, and the
-  portrait encounter.
+- V1, V2, and V3 remain intact for comparison. V4 is the current implementation
+  source for the 41-scene count, enlarged display spacing, Spanish background,
+  interpreter-limit screen, lake blockade, siege mechanics, and city fall.
 
 ## Implementation mapping
 

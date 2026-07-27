@@ -4,7 +4,7 @@
 
 `Cut-out Poster × Mutable Archive × Translation Seam × Survivor Red`
 
-This site is distinct from the other `时间的女儿` projects. Its thirty-three numbered
+This site is distinct from the other `时间的女儿` projects. Its forty-one numbered
 scenes deliberately alternate composition rather than repeating a two-column
 card template. Image scale, color field, density, direction, and type hierarchy
 change with the historical argument.
@@ -17,6 +17,12 @@ change with the historical argument.
   `是什么 / 为什么重要 / 本站分析什么`.
 - Tlaxcala and Cholula each use two deliberately different screens: context
   first, event and evidence second.
+- The Spanish background uses three different structures: an Iberian portrait /
+  history-painting field, an Atlantic image-led system explanation, and a
+  four-part expedition ledger.
+- Chapters 5 and 6 form a visual sequence rather than one siege summary:
+  festival image, failed mediation, interpreter limit, rain retreat, epidemic
+  split, lake blockade, siege matrix, and final capture.
 - Full archival walls at the Codex, Tlaxcala, Cholula, and Tenochtitlan moments.
 - The Moctezuma–Malinche–Cortés encounter is a portrait triptych, not oversized
   decorative names behind a narrow text box.
@@ -48,6 +54,9 @@ change with the historical argument.
 - Tablet removes the fixed rail and reduces monumental type.
 - Mobile stacks the name panels, uses the compact chapter menu, and keeps both translation positions around the central seam.
 - Maps preserve aspect ratio and stay within the viewport.
+- Image-led mobile scenes retain the image’s intrinsic ratio and place captions
+  next to their corresponding image rather than separating them into a generic
+  gallery.
 
 ## Motion and accessibility
 
@@ -59,4 +68,7 @@ change with the historical argument.
 
 ## Figma
 
-Design source: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-13>
+Design source: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=14-2>
+
+V4 adds six editable key compositions for Spain and the siege while preserving
+the V3 beginner sequence for comparison.

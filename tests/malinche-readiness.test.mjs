@@ -5,7 +5,7 @@ import test from "node:test";
 const repoFile = (path) => new URL(`../${path}`, import.meta.url);
 const readText = async (path) => readFile(repoFile(path), "utf8");
 
-test("La Malinche keeps the 33-screen beginner-first editorial and evidence contract", async () => {
+test("La Malinche keeps the 41-screen beginner-first editorial and evidence contract", async () => {
   const [html, css, js, manifestText, configText, registry] = await Promise.all([
     readText("sites/la-malinche/index.html"),
     readText("sites/la-malinche/assets/site.css"),
@@ -17,7 +17,7 @@ test("La Malinche keeps the 33-screen beginner-first editorial and evidence cont
   const manifest = JSON.parse(manifestText);
   const config = JSON.parse(configText);
 
-  assert.equal((html.match(/data-screen="/g) ?? []).length, 33);
+  assert.equal((html.match(/data-screen="/g) ?? []).length, 41);
   for (const chapter of [
     "before",
     "translator",
@@ -49,6 +49,14 @@ test("La Malinche keeps the 33-screen beginner-first editorial and evidence cont
   assert.match(html, /波顿查恩战败/);
   assert.match(html, /moctezuma-mendoza\.webp/);
   assert.match(html, /cortes-weiditz\.webp/);
+  assert.match(html, /1492 不是起点/);
+  assert.match(html, /征服已经被练习过/);
+  assert.match(html, /为什么能不断变大/);
+  assert.match(html, /托斯卡特尔节/);
+  assert.match(html, /翻译者的边界/);
+  assert.match(html, /十三艘双桅帆船/);
+  assert.match(html, /水、粮食、道路与时间/);
+  assert.match(html, /瓜乌特莫克被俘/);
   assert.doesNotMatch(`${html}\n${js}`, /波通昌/);
   assert.doesNotMatch(`${html}\n${css}\n${configText}\n${registry}`, /cover-(?:green|red)\.webp/);
   assert.doesNotMatch(html, /创作者提供|创作者解释性地图|并非十六世纪|不是马琳切的历史肖像/);
@@ -57,7 +65,7 @@ test("La Malinche keeps the 33-screen beginner-first editorial and evidence cont
   assert.match(js, /aria-pressed/);
   assert.equal(manifest.series, "时间的女儿 · 003");
   assert.equal(config.hub.eyebrow, "DAUGHTERS OF TIME · 003");
-  assert.equal(manifest.contentSource.screens, 33);
+  assert.equal(manifest.contentSource.screens, 41);
   assert.equal(manifest.analytics.provider, "none");
   assert.equal(manifest.analytics.persistence, false);
 });
@@ -73,6 +81,19 @@ test("La Malinche source assets and generated mirror are complete", async () => 
     "sites/la-malinche/assets/archive/tlaxcala-map.webp",
     "sites/la-malinche/assets/archive/moctezuma-mendoza.webp",
     "sites/la-malinche/assets/archive/cortes-weiditz.webp",
+    "sites/la-malinche/assets/creator/isabella-castile.webp",
+    "sites/la-malinche/assets/creator/ferdinand-aragon.webp",
+    "sites/la-malinche/assets/creator/scuttle-fleet.webp",
+    "sites/la-malinche/assets/creator/reconquista-painting.webp",
+    "sites/la-malinche/assets/creator/temple-massacre-codex.webp",
+    "sites/la-malinche/assets/creator/moctezuma-pleads.webp",
+    "sites/la-malinche/assets/creator/malinche-interior-still.webp",
+    "sites/la-malinche/assets/creator/tenochtitlan-rain-reconstruction.webp",
+    "sites/la-malinche/assets/creator/smallpox-codex.webp",
+    "sites/la-malinche/assets/creator/lake-canoe-still.webp",
+    "sites/la-malinche/assets/creator/tenochtitlan-aerial-reconstruction.webp",
+    "sites/la-malinche/assets/creator/cuauhtemoc-capture.webp",
+    "sites/la-malinche/assets/creator/aztec-sun-motif.svg",
     "sites/la-malinche/assets/maps/route.webp",
     "sites/la-malinche/assets/maps/totonacapan.webp",
     "LA-MALINCHE/index.html",

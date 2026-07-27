@@ -25,10 +25,21 @@ The opening now answers three questions before presenting the interpretation:
 2. Why did multilingual mediation matter in the 1519 campaign?
 3. Why is participation not identical to military or colonial decision power?
 
+Chapter 3 then gives a first-time reader three independent pieces of Spanish
+background before returning to the campaign: the 1492 political turn in
+Iberia, the Caribbean colonial system in which conquest was rehearsed, and the
+people / ships / weapons / alliances that let a small expedition grow.
+
 Tlaxcala and Cholula each receive two scenes. The first establishes the polity,
 place, and political context; the second explains the event, Malinche’s role,
 and the evidence boundary. Do not collapse either pair back into a verdict-only
 screen.
+
+Chapters 5 and 6 now read as an event chain rather than a single conclusion:
+reception becomes occupation; the Toxcatl festival becomes a massacre;
+Moctezuma’s mediation fails; the coalition retreats; smallpox and regrouping
+change the field; brigantines close the lake; water, food, roads, and time become
+siege weapons; the city falls after continued resistance.
 
 ## Eight manuscript chapters
 
@@ -72,7 +83,11 @@ screen.
 
 - The supplied black-and-white figure becomes a transparent cut-out in the poster-like hero.
 - Own Map assets explain the manuscript’s geography.
-- CSS codex pattern, lake strata, broken rules, and red strike-throughs are modern interpretive graphics.
+- The low-opacity sun motif, lake strata, broken rules, and red strike-throughs
+  are modern interpretive graphics, not evidence of a single timeless
+  “Mesoamerican style.”
+- Film stills and digital reconstructions are atmosphere and spatial aids. They
+  are labelled as visual reconstructions rather than event records.
 
 ## Required qualifications
 
@@ -123,5 +138,33 @@ The ending must remain morally double:
   is not labelled as a realist portrait.
 - `assets/archive/cortes-weiditz.webp`: Christoph Weiditz’s 1529 depiction of
   Hernán Cortés, Wikimedia Commons, Public Domain.
+- `assets/creator/isabella-castile.webp`,
+  `assets/creator/ferdinand-aragon.webp`,
+  `assets/creator/reconquista-painting.webp`, and
+  `assets/creator/scuttle-fleet.webp`: optimized derivatives selected from
+  `Women Story/Malinche/photo/Aztec 2/` to establish the Iberian and Atlantic
+  background. They are visibly labelled as later portraits or history
+  paintings; authorization status needs confirmation before reuse outside this
+  project.
+- `assets/creator/temple-massacre-codex.webp`,
+  `assets/creator/moctezuma-pleads.webp`, and
+  `assets/creator/cuauhtemoc-capture.webp`: optimized derivatives from the same
+  project library. They support the Toxcatl massacre, failed mediation, and
+  capture scenes, with captions distinguishing colonial / later depiction from
+  event evidence. Authorization status needs confirmation.
+- `assets/creator/malinche-interior-still.webp` and
+  `assets/creator/lake-canoe-still.webp`: cropped, optimized film stills from
+  the project library, used only as labelled visual reconstructions.
+  Authorization status needs confirmation.
+- `assets/creator/tenochtitlan-rain-reconstruction.webp` and
+  `assets/creator/tenochtitlan-aerial-reconstruction.webp`: optimized digital
+  reconstruction imagery from the project library, labelled as reconstruction,
+  not historical documentation. Authorization status needs confirmation.
+- `assets/creator/smallpox-codex.webp`: optimized project-library image used as
+  a qualified visual narration of epidemic disease. Authorization status needs
+  confirmation.
+- `assets/creator/aztec-sun-motif.svg`: project-library vector used at low
+  opacity as a decorative motif; it does not authenticate the site as a single
+  historical Indigenous visual system. Authorization status needs confirmation.
 
 Source-page links are included in the visible source room.

@@ -32,7 +32,7 @@ This is intentionally one public route. Deep links use stable section anchors.
 | `#watch` | Direct screening of the two-part Malinche video |
 | `#sources` | Source, evidence, image-credit, and privacy notes |
 
-## Thirty-three-screen reading architecture
+## Forty-one-screen reading architecture
 
 Every numbered scene is designed to occupy approximately one viewport on a typical device. Long passages can exceed one viewport when content integrity requires it.
 
@@ -47,31 +47,39 @@ Every numbered scene is designed to occupy approximately one viewport on a typic
 9. `08` — Betrayed into slavery: two explanations held apart
 10. `09` — Xicalango and Potonchán: a forced route south
 11. `10` — Language learned as a means of survival
-12. `11` — Spanish landing: battle, twenty women, reassignment, language
+12. `11` — Spanish arrival: battle, twenty women, reassignment, language
 13. `12` — Baptism and the name Marina
 14. `13` — The translation chain: Maya ↔ Nahuatl ↔ Spanish
 15. `14` — “Malinche” as a name born between two people
-16. `15` — Cortés and the rules of a different world
-17. `16` — Veracruz, Totonac grievances, and alliance
-18. `17` — Tlaxcala: what the independent, surrounded polity was
-19. `18` — Tlaxcala: why resistance became negotiation and alliance
-20. `19` — Cholula: sacred city, route, and political position
-21. `20` — Cholula: massacre, competing accounts, and responsibility
-22. `21` — The causeway to Tenochtitlan
-23. `22` — Moctezuma–Malinche–Cortés portrait encounter
-24. `23` — Gold, the sacred precinct, and the seizure of a ruler
-25. `24` — Which rules were torn, what changed, and who held command
-26. `25` — The Toxcatl massacre and the failure of language
-27. `26` — La Noche Triste: “活下去”
-28. `27` — Smallpox, regrouping, and the coalition’s return
-29. `28` — Siege, hunger, water, and the fall of the city
-30. `29` — Survivor: diplomacy, family, property, and uncertain death
-31. `30` — Malinchismo: the full-screen red rupture
-32. `31` — Feminist and Indigenous rereadings
-33. `32` — Who betrayed whom? Reader reflection
+16. `15` — Beginner question: why the Spaniards came
+17. `16` — Iberia and the 1492 political turn
+18. `17` — The Caribbean as a colonial training ground
+19. `18` — How people, ships, weapons, and alliances enlarged the expedition
+20. `19` — Veracruz, Totonac grievances, and alliance
+21. `20` — Tlaxcala: what the independent, surrounded polity was
+22. `21` — Tlaxcala: why resistance became negotiation and alliance
+23. `22` — Cholula: sacred city, route, and political position
+24. `23` — Cholula: massacre, competing accounts, and responsibility
+25. `24` — The causeway city of Tenochtitlan
+26. `25` — Moctezuma–Malinche–Cortés portrait encounter
+27. `26` — Gold, the sacred precinct, and the seizure of a ruler
+28. `27` — Why reception became occupation
+29. `28` — The Toxcatl festival massacre
+30. `29` — Moctezuma’s failed mediation and collapsing authority
+31. `30` — Interpreter power and the limit of command
+32. `31` — La Noche Triste: retreat through rain, mud, and lake water
+33. `32` — Beginner question: how the coalition returned and surrounded a lake city
+34. `33` — Smallpox, regrouping, and the coalition’s return
+35. `34` — Lake war and thirteen brigantines
+36. `35` — Water, food, roads, and time as siege weapons
+37. `36` — Continued resistance, final assault, and Cuauhtémoc’s capture
+38. `37` — Survivor: diplomacy, family, property, and uncertain death
+39. `38` — Malinchismo: the full-screen red rupture
+40. `39` — Feminist and Indigenous rereadings
+41. `40` — Who betrayed whom? Reader reflection
 
-The direct two-part video theater sits between scenes `29` and `30` without
-changing the manuscript's thirty-three numbered scenes.
+The direct two-part video theater sits between scenes `37` and `38` without
+changing the manuscript's forty-one numbered scenes.
 
 ## Primary reading flow
 
