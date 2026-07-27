@@ -16,10 +16,13 @@ The shared site builder copies this package into:
 ## Implementation
 
 - `index.html` — semantic content and primary reading flow.
+- `red.html` — alternate creative-parody route reached from the discreet entry
+  on the primary page.
 - `style.css` — preserved site-specific visual language from the published
   baseline.
 - `platform.css` — shared accessibility/state/Data additions kept separate from
   the preserved baseline stylesheet.
+- `red.css` — self-contained red-portal visual system for the parody route.
 - `fonts.css` and `fonts/` — locally served Geist and Geist Mono assets.
 - `site.js` — small progressive-enhancement entry point.
 - `content-registry.js` — stable section and asset contracts.
@@ -32,6 +35,9 @@ The shared site builder copies this package into:
 Core content and navigation work without JavaScript. JavaScript only annotates
 the implementation, marks the active primary-nav destination and prepares
 provider-neutral events.
+
+The alternate route is plain HTML/CSS. Its `2,135,227+` counter is hard-coded
+display copy, not a measurement system or persistence mechanism.
 
 ## Data and privacy
 

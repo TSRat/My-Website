@@ -5,6 +5,7 @@
 - Classification: `PRESERVE`
 - Tier: A — editorial/static
 - Primary route: `/My-Website/ZHANGYONG-PORTRAIT/`
+- Alternate route: `/My-Website/ZHANGYONG-PORTRAIT/red.html`
 - Source of truth: `sites/zhangyong-portrait/`
 
 ## Goal
@@ -59,6 +60,16 @@ UIN、私聊内容或新的身份线索。
 4. 回到有材料支撑的照料、现实友谊、阅读和幽默。
 5. 在 Data 区确认隐私边界，再以“无需每天证明强壮”结束。
 
+## Alternate parody flow
+
+1. 读者在原版页脚附近发现一个低透明度小红点。
+2. 悬停或键盘聚焦时出现“进入学习专区”提示。
+3. 点击进入独立红色专题页；页首立即说明“民间戏仿·非官方网站”。
+4. 通过要闻、精神要义、贯彻落实和群众来信重新阅读张勇的独特性。
+5. 任何位置均可通过页首、导航或页脚返回原版。
+
+红色版的主要价值是制造形式与人物材料之间的反差，不增加新的事实主张。
+
 ## Navigation and interaction
 
 - 桌面主导航：`实用账本`、`深夜觅食`、`霸王龙`、`关系轨道`。
@@ -66,6 +77,9 @@ UIN、私聊内容或新的身份线索。
 - 所有核心内容和锚点在无 JavaScript 时可用。
 - JavaScript 只负责当前锚点标记和 provider-neutral 事件准备。
 - 不新增搜索、购物车、音效、横向滚动图表或真实购买流程。
+- 隐藏入口低调但必须可聚焦、具备可读名称，并在 focus 时显露提示。
+- 红色版所有导航均为真实锚点；群众来信使用原生 `details` 展开。
+- `2,135,227+` 是固定且明确标注的戏仿数字，不写入存储、不随访问变化。
 
 ## State inventory
 
@@ -76,6 +90,9 @@ UIN、私聊内容或新的身份线索。
 - Loading / empty / error：静态正文无加载状态；Data 使用明确的 provider-none
   empty state。
 - Reduced motion：关闭平滑滚动和非必要 reveal/ticker 动画。
+- Hidden entry resting：只显示低透明度 9px 红点。
+- Hidden entry hover/focus：显示“进入学习专区”文字提示。
+- Parody disclosure：页首、访问量和页脚三处持续说明非官方与虚构边界。
 
 ## Responsive behavior
 
@@ -83,6 +100,7 @@ UIN、私聊内容或新的身份线索。
 - Tablet：内容块转为单列或简化列数，不隐藏核心文字。
 - Mobile：保持现有 620px 规则、单列阅读、无横向溢出；图片与账单行继续可读。
 - 本次不改变断点、主要字号比例、图像裁切规则或移动端顶栏结构。
+- 红色版在 980px 转为两列，在 640px 转为单列；横向导航可滚动且不截断。
 
 ## Accessibility requirements
 

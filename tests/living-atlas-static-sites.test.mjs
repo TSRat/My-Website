@@ -62,6 +62,26 @@ test("the Zhang Yong portrait keeps stable sections and a no-provider data entry
   assert.equal(result.event.content_id, "timeline");
 });
 
+test("the Zhang Yong red alternate stays explicitly fictional and untracked", async () => {
+  const [mainHtml, redHtml] = await Promise.all([
+    readRepoFile("sites/zhangyong-portrait/index.html"),
+    readRepoFile("sites/zhangyong-portrait/red.html"),
+  ]);
+
+  assert.equal(
+    zhangYongContent.alternateRoutes[0]?.path,
+    "./red.html",
+  );
+  assert.match(mainHtml, /class="red-parody-entry"/u);
+  assert.match(mainHtml, /href="\.\/red\.html"/u);
+  assert.match(redHtml, /民间戏仿专题/u);
+  assert.match(redHtml, /非官方网站/u);
+  assert.match(redHtml, /2,135,227\+/u);
+  assert.match(redHtml, /戏仿设定值 · 非真实统计/u);
+  assert.doesNotMatch(redHtml, /<script\b/u);
+  assert.doesNotMatch(redHtml, /政府网站标识码|京ICP备|中华人民共和国中央人民政府/u);
+});
+
 test("Two Swans preserves all chapters, fan-created boundaries, and local resume state", async () => {
   const [html, siteJs] = await Promise.all([
     readRepoFile("sites/malty-melty-childhood/index.html"),

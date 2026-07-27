@@ -57,3 +57,14 @@ schema_version
 - food orders or health-related behavior;
 - returning-user identity;
 - cross-site behavior.
+
+## Red parody route
+
+The visible `2,135,227+` visitor count on `red.html` is a fixed narrative prop.
+It is not derived from page views, analytics, storage or a remote service. The
+page labels it as fictional beside the number and repeats provider `none`.
+
+The hidden-entry click is not instrumented in the current implementation. A
+future provider review could add a bounded `alternate_route_opened` event, but
+only after creator approval; it must not convert the fictional counter into a
+claimed traffic metric.

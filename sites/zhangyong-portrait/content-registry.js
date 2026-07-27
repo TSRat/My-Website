@@ -2,6 +2,14 @@ export const zhangYongContent = {
   schemaVersion: 1,
   locale: "zh-CN",
   title: "张勇的生活切片",
+  alternateRoutes: [
+    {
+      id: "red-parody",
+      path: "./red.html",
+      title: "张勇精神学习宣传工作专栏",
+      status: "creative-parody",
+    },
+  ],
   contentBoundary: {
     type: "narrative-framing",
     description:

@@ -13,6 +13,10 @@ This is a Tier A editorial portrait site. Its primary reading flow is:
 The site combines a source-based portrait with two visibly labeled creative
 narratives. It is not a complete biography and must not be rewritten as one.
 
+The package also includes `red.html`, an explicitly labeled creative parody of
+a dense red government/party-study portal. It rephrases already public Zhang
+Yong themes as mock notices, study materials and implementation guidance.
+
 ## Content boundaries
 
 - Source-based portrait: only statements supported by the supplied analysis or
@@ -35,9 +39,17 @@ narratives. It is not a complete biography and must not be rewritten as one.
   outside the page.
 - Excluded material: private or intimate relationship reporting beyond those
   bounded public patterns is intentionally outside the public page.
+- Parody boundary: `red.html` must continuously identify itself as a
+  non-official, folk-created parody. It must not use real agency names, seals,
+  government website identifiers, filing numbers or service claims.
+- Counter boundary: `2,135,227+` is a fixed narrative prop, visibly labeled as
+  fictional and never presented as measured traffic.
 
 Visible content-status notes must remain attached to the practical ledger and
 deep-night receipt.
+
+The parody disclaimer, fictional-counter label and return-to-original link must
+remain visible on `red.html`.
 
 ## Stable section IDs
 
