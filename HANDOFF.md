@@ -50,16 +50,17 @@ directly without reusing their covers elsewhere.
 - Branch: `codex/site-la-malinche`.
 - Redesign implementation commit: `20773ed`.
 - Figma v2: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-2>.
-- New exact-commit preview: pending the redesign commit and push.
+- Verified exact-commit preview:
+  <https://raw.githack.com/TSRat/My-Website/fe85f8a5b702d4d9ce467112b0ec6a8229c98528/LA-MALINCHE/index.html>.
 - Pull Request: <https://github.com/TSRat/My-Website/pull/26>.
-- Local preview status: desktop and mobile load, 30-screen DOM, cut-out hero,
-  four archive assets, two players, no overflow, clean console, name-lens and
-  route interactions passed.
+- Preview status: remote desktop and mobile load, 30-screen DOM, cut-out hero,
+  four archive assets, two players, no cover references, no overflow, clean
+  console and name-lens interaction passed.
 - Merge: not authorized and not performed.
 
 ### Remaining
 
-- Push the redesign, update and review the new exact-commit preview and PR #26.
+- Review the verified exact-commit preview and PR #26.
 - Add an external scholarly bibliography only if the creator wants the site to
   make claims beyond the supplied manuscript and subtitle transcripts.
 - Antigravity extended QA remains a follow-up.

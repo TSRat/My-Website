@@ -5,6 +5,8 @@
 - Branch: `codex/site-la-malinche`
 - Figma v2: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-2>
 - Pull Request: <https://github.com/TSRat/My-Website/pull/26>
+- Verified exact-commit preview:
+  <https://raw.githack.com/TSRat/My-Website/fe85f8a5b702d4d9ce467112b0ec6a8229c98528/LA-MALINCHE/index.html>
 
 ## Current goal
 
@@ -99,7 +101,7 @@ inside the players only.
 
 ## Pending
 
-- Push the redesign, update PR #26, and verify the new exact-commit preview.
+- Review the verified exact-commit preview and PR #26.
 - Review through Antigravity if comprehensive multi-browser and visual
   comparison is desired.
 
@@ -108,6 +110,7 @@ inside the players only.
 - Branch: `codex/site-la-malinche`
 - Base: `origin/main` at `fb78a4f`
 - Latest implementation commit: `20773ed`
-- Current worktree: only this handoff metadata update remains before the final
-  documentation commit.
+- Verified remote preview commit: `fe85f8a`
+- Current worktree: only this verification metadata update remains before the
+  final documentation commit.
 - Merge: not authorized and not performed.
