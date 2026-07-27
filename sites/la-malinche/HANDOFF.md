@@ -4,7 +4,7 @@
 - Series: `时间的女儿 · 003`
 - Branch: `codex/site-la-malinche`
 - Figma V5: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=16-2>
-- Pull Request: <https://github.com/TSRat/My-Website/pull/26>
+- Pull Request: <https://github.com/TSRat/My-Website/pull/28>
 - Verified exact-implementation preview:
   <https://raw.githack.com/TSRat/My-Website/697dd53878cfd93ee59211558ed2c255f85f9718/LA-MALINCHE/index.html>
 
@@ -100,10 +100,10 @@ background, and give Tlaxcala and Cholula enough independent explanation.
 
 - Branch: `codex/site-la-malinche`
 - 52-screen implementation: `697dd53878cfd93ee59211558ed2c255f85f9718`
-- Handoff update: pending as a documentation-only follow-up commit.
+- Verified handoff record: `f6e80a5e26c4640b7ab52f514f4cdf21ab37f1fc`.
 - Merge: not authorized and not performed.
 
 ## Next step
 
-Review the exact-commit preview and PR #26. Run Antigravity extended QA if a
+Review the exact-commit preview and PR #28. Run Antigravity extended QA if a
 comprehensive overlay, keyboard, multi-browser, and full-route audit is desired.

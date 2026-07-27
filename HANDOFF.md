@@ -43,14 +43,14 @@ with no prior Mesoamerican-history knowledge.
 - Implementation: `697dd53878cfd93ee59211558ed2c255f85f9718`.
 - Exact implementation preview:
   <https://raw.githack.com/TSRat/My-Website/697dd53878cfd93ee59211558ed2c255f85f9718/LA-MALINCHE/index.html>.
-- Pull Request: <https://github.com/TSRat/My-Website/pull/26>.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/28>.
 - Merge: not authorized and not performed.
 
 ### Remaining
 
 - Confirm authorization before reusing project-library images outside this
   site.
-- Review PR #26; run Antigravity extended QA if comprehensive overlay,
+- Review PR #28; run Antigravity extended QA if comprehensive overlay,
   keyboard, multi-browser, and full-route comparison is desired.
 
 ## 2026-07-27: La Malinche Spain and siege expansion
