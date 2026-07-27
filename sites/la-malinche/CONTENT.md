@@ -17,6 +17,19 @@ The site follows one woman through three names:
 
 The site must not flatten her into either saviour or traitor. It ends with the manuscript’s position: she helped accelerate conquest and its violence, while history also suppressed her voice and compressed an era’s responsibility into one woman.
 
+## Beginner-first reading order
+
+The opening now answers three questions before presenting the interpretation:
+
+1. What was Malintzin’s historical position?
+2. Why did multilingual mediation matter in the 1519 campaign?
+3. Why is participation not identical to military or colonial decision power?
+
+Tlaxcala and Cholula each receive two scenes. The first establishes the polity,
+place, and political context; the second explains the event, Malinche’s role,
+and the evidence boundary. Do not collapse either pair back into a verdict-only
+screen.
+
 ## Eight manuscript chapters
 
 1. 前世
@@ -99,5 +112,16 @@ The ending must remain morally double:
   Mexico, 1524.jpg`, Newberry Library / Wikimedia Commons, Public Domain.
 - `assets/archive/cholula-1877.webp`: Félix Parra, `Episodios de la conquista:
   La matanza de Cholula` (1877), Wikimedia Commons, Public Domain.
+- `assets/archive/cortes-landing-bl.webp`: sixteenth-century European manuscript
+  depiction of Cortés landing in 1519, British Library Add MS 37177,
+  Wikimedia Commons, CC0. It is labelled as a later depiction rather than an
+  eyewitness image.
+- `assets/archive/tlaxcala-map.webp`: high-resolution historical map of
+  Tlaxcala’s four principal sectors, Wikimedia Commons, Public Domain.
+- `assets/archive/moctezuma-mendoza.webp`: symbolic sixteenth-century depiction
+  of Moctezuma II from the Codex Mendoza, Wikimedia Commons, Public Domain. It
+  is not labelled as a realist portrait.
+- `assets/archive/cortes-weiditz.webp`: Christoph Weiditz’s 1529 depiction of
+  Hernán Cortés, Wikimedia Commons, Public Domain.
 
 Source-page links are included in the visible source room.

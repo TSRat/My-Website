@@ -17,7 +17,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 | The Living Atlas | REFACTOR | B — Interactive | Content system merged in PR #13; Data / starter and ambiguity correction merged in PR #14 | Shared runtime publication needs explicit Pages build-map authorization |
 | IVORY ARCHIVE | PRESERVE | B — Interactive | Six-stage implementation merged in PR #15 | Antigravity extended QA remains optional follow-up |
 | Enheduanna | REFACTOR | A — Editorial | Maintainable rebuild merged in PR #17 | Antigravity extended visual QA remains optional follow-up |
-| La Malinche / 马琳切 | REBUILD | B — Interactive editorial | 30-screen new-site implementation in current review branch | Live preview, PR review and Antigravity extended QA |
+| La Malinche / 马琳切 | REBUILD | B — Interactive editorial | 33-screen beginner-first new-site implementation in current review branch | Live preview, PR review and Antigravity extended QA |
 | Hildegard | PRESERVE | A — Editorial | Six-stage implementation merged in PR #16 | Antigravity deterministic-section visual QA remains optional follow-up |
 | Hypatia | REFACTOR | A — Editorial | Six-stage implementation merged in PR #16 | Antigravity deterministic-section visual QA remains optional follow-up |
 | Sartre / 《恶心》导读 | REFACTOR | B — Interactive | Six-stage migration in progress on `codex/sites-six-stage-import` | Image provenance confirmation and Antigravity extended QA remain |
@@ -149,7 +149,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Status:** New interactive historical editorial, “Daughters of Time 003”.
 - **Product purpose:** Reframe Malinche through three names and eight manuscript chapters without flattening her into either innocent heroine or timeless traitor.
 - **Primary audience and goal:** Chinese readers of women’s, colonial, translation, and Mesoamerican history; follow the chronology while distinguishing evidence from interpretation.
-- **Major routes and navigation:** One 30-screen route with eight stable chapter anchors, name lens, route map, evidence annotations, translation split, reflection, sources, and Data boundary.
+- **Major routes and navigation:** One 33-screen route with eight stable chapter anchors, beginner primer, name lens, route map, two-screen Tlaxcala and Cholula explanations, evidence annotations, translation split, reflection, sources, and Data boundary.
 - **Current visual direction:** Thirty deliberately varied editorial compositions: cut-out poster, archival walls, route console, translation seam, cartographic table, red rupture, and direct two-part video theater.
 - **Typography / color / layout:** Monumental Chinese serif display, restrained sans body, 12-column desktop system and single-column mobile narrative.
 - **Framework / language / rendering:** Direct static HTML, CSS, and vanilla JavaScript; creator assets are web-optimized local WebP files.
@@ -157,7 +157,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **State/interactivity:** `aria-pressed` name/map/reflection controls, native `details`, chapter scrollspy, reduced-motion reveal behavior, and keyboard-visible focus.
 - **Build system / deployment:** `npm run build:malinche` replaces the generated `LA-MALINCHE/` mirror; the existing GitHub Actions Pages artifact architecture remains unchanged.
 - **Analytics:** Provider `none`; no cookies, identity, network analytics, or persistence. The eight semantic event intents are documented but only emitted locally.
-- **Tests / CI:** Site structure and 30-screen readiness tests plus Pages asset validation. Codex browser smoke covers one desktop and one narrow viewport; Antigravity extended QA remains pending.
+- **Tests / CI:** Site structure and 33-screen readiness tests plus Pages asset validation. Codex browser smoke covers the creator’s 1782 × 864 screenshot size plus desktop, tablet, and narrow viewports; Antigravity extended QA remains pending.
 - **Accessibility state:** Skip link, semantic headings, native controls, live regions, captions, descriptive alternatives, focus visibility, and reduced motion are implemented.
 - **Responsive state:** Translation worlds stack around the interpreter seam; name, evidence, source, video, and reflection structures collapse without hiding content.
 - **Existing Figma:** Dedicated local design system, variables, styles, components, desktop/mobile key screens, interaction states, and implementation handoff.
@@ -166,7 +166,7 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 - **Shared-core adoption:** Registry, build contract, manifest, accessibility rules, preview requirement, asset validation, and provider-neutral Data boundary.
 - **Site-specific theme:** Preserve the three-name palette, transparent monochrome hero, archival scale changes, translation seam, Own Map assets, video theater, and red ideological rupture.
 - **Migration status:** Production implementation is in the current dedicated branch; merge remains creator-controlled.
-- **Figma URL:** [La Malinche v2 visual narrative](https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-2).
+- **Figma URL:** [La Malinche v3 beginner narrative](https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-13).
 - **Preview / PR URL:** [Exact-commit preview](https://raw.githack.com/TSRat/My-Website/1d9474844b804fca515d21314bfbbef57f2c9b68/LA-MALINCHE/index.html); [PR #26](https://github.com/TSRat/My-Website/pull/26).
 - **Remaining risks:** Historical details beyond the creator manuscript still need a separate source bibliography if the creator wants external citations; Antigravity extended visual and interaction QA remains pending.
 

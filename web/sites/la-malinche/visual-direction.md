@@ -38,6 +38,11 @@ Red is reserved. It appears as small warnings before the eighth chapter and beco
 
 The site does not use pseudo-Aztec novelty fonts. Historical weight comes from scale, spacing, repetition, and hard rules.
 
+Display headings use authored line breaks at wide viewports. A single line must
+not be left with only one or two Chinese characters. The standard display-to-deck
+gap is 28–56px and the deck-to-body gap is 18–32px; these are implemented as
+`--display-gap` and `--copy-gap`.
+
 ## Grid and spacing
 
 - Desktop: 12 columns with 96px outer margins.
@@ -48,7 +53,8 @@ The site does not use pseudo-Aztec novelty fonts. Historical weight comes from s
 
 ## Imagery
 
-Primary visual assets come from the creator’s `Women Story/Malinche` folder:
+Primary map and portrait assets begin with the creator’s `Women Story/Malinche`
+folder:
 
 - `封面2.png` and `封面7.png`
 - `Own Map/route.png`
@@ -62,7 +68,12 @@ Primary visual assets come from the creator’s `Women Story/Malinche` folder:
 
 They are credited as creator artwork or creator-made explanatory maps. They are not described as historical portraits, archaeological records, or contemporary maps.
 
-No additional AI image was generated. The supplied assets already establish a distinctive visual language, and reusing them avoids introducing an unsupported face, costume, or historical claim.
+No additional AI image was generated. The v3 implementation supplements the
+creator assets with locally stored public-domain / CC0 material: a British
+Library landing manuscript, a high-resolution Tlaxcala map, the Codex Mendoza
+Moctezuma image, and the 1529 Weiditz depiction of Cortés. Every later depiction
+is labelled by date and is not described as an eyewitness photograph or realist
+portrait.
 
 ## Texture and shape
 

@@ -49,8 +49,12 @@ The shared direct-static builder copies deployable source into `.site-build/la-m
   `Women Story/Malinche` remain unmodified.
 - The hero PNG is a background-removed derivative of the supplied monochrome
   illustration.
-- Four large public-domain archive images are stored locally as WebP to avoid
+- Nine large public-domain / CC0 archive images are stored locally as WebP to avoid
   fragile hotlinks. Visible captions and `CONTENT.md` retain source provenance.
+- The hero cut-out uses its intrinsic `1065 / 1476` ratio with `object-fit:
+  contain`; browser QA checks the rendered ratio against the natural ratio.
+- Desktop typography QA includes a `1782 × 864` viewport matching the creator
+  screenshot, plus `1440 × 900`, `1024 × 768`, and `390 × 844`.
 - The two legacy cover WebPs remain in the source archive but are not referenced
   by HTML, CSS, configuration, or the Living Atlas.
 - The two Malinche Bilibili videos are embedded with the official player; neither

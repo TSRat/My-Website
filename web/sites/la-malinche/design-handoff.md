@@ -22,6 +22,19 @@
 | `v2 · Mobile hero` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-48> |
 | `v1 · Existing system reference` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-2> |
 
+### V3 beginner narrative
+
+| Frame | Node |
+| --- | --- |
+| `v3 · Beginner narrative catalogue` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-13> |
+| `v3 · Beginner primer` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-16> |
+| `v3 · Spanish landing` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-30> |
+| `v3 · Tlaxcala — what` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-43> |
+| `v3 · Tlaxcala — why` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-54> |
+| `v3 · Cholula — what` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-65> |
+| `v3 · Cholula — evidence` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-77> |
+| `v3 · Encounter triptych` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-83> |
+
 ## Editable system
 
 - Six required pages are present.
@@ -35,7 +48,9 @@
   - `Archive Annotation`
 - Desktop, mobile, translation, selected, annotation, loading, error, and keyboard-focus states are represented.
 - The supplied cut-out, Codex page, and 1524 map are placed as actual image fills.
-- V1 remains intact for comparison; V2 is the implementation source.
+- V1 and V2 remain intact for comparison; V3 is the current implementation
+  source for beginner ordering, display spacing, Tlaxcala, Cholula, and the
+  portrait encounter.
 
 ## Implementation mapping
 

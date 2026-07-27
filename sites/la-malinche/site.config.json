@@ -21,7 +21,7 @@
   },
   "publicPath": "/My-Website/LA-MALINCHE/",
   "manifest": "site-manifest.json",
-  "figmaUrl": "https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-2",
+  "figmaUrl": "https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-13",
   "hub": {
     "order": 10,
     "className": "la-malinche",

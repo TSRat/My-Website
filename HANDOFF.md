@@ -1,5 +1,58 @@
 # Repository handoff
 
+## 2026-07-27: La Malinche beginner-first narrative expansion
+
+### Current target
+
+Respond to creator browser review by making `时间的女儿 · 003` understandable
+without prior knowledge, correcting the hero and title-wrap defects, and giving
+the Spanish landing, Tlaxcala, and Cholula enough independent narrative space.
+
+### Completed
+
+- Expanded the site from 30 to 33 numbered scenes.
+- Added a first-time-reader primer and a standalone Spanish-landing scene.
+- Rebuilt Tlaxcala as two scenes: polity and pressure first, then the path from
+  resistance through translation and negotiation to alliance.
+- Rebuilt Cholula as two scenes: sacred / route context first, then massacre,
+  conflicting testimony, and the boundary between interpreter and commander.
+- Added four credited, locally optimized public-domain assets: landing,
+  Tlaxcala map, Moctezuma II, and Cortés.
+- Corrected `波通昌` to `波顿查恩`, preserved the hero's intrinsic ratio,
+  removed display-title orphans at the checked viewports, and standardized
+  display-to-copy spacing without flattening scene variety.
+- Updated source, generated mirror, registry row, target documentation,
+  readiness test, and non-destructive Figma v3:
+  <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-13>.
+
+### Verification
+
+- `node --check sites/la-malinche/assets/site.js`: passed.
+- `node --test tests/malinche-readiness.test.mjs`: passed — 2/2.
+- `npm run build:malinche`: passed.
+- `npm run validate:sites`: passed — 11 maintenance packages.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed — 541 local references across 67 HTML/CSS files.
+- `npm run lint`: passed with 0 errors and 24 existing warnings in Enheduanna
+  and the committed Hypatia bundle.
+- Codex in-app browser layout audit passed at `1782 × 864`, `1440 × 900`,
+  `1024 × 768`, and `390 × 844`; visual smoke covered the changed narrative
+  sequence at desktop and mobile widths.
+- Antigravity extended route, keyboard, multi-browser, and visual QA: pending.
+
+### Delivery state
+
+- Branch: `codex/site-la-malinche`.
+- Pre-refinement head: `b7d21fb`.
+- Exact-commit preview: pending final documentation commit and push.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/26>.
+- Merge: not authorized and not performed.
+
+### Remaining
+
+- Verify the exact pushed commit through an immutable live preview.
+- Review PR #26; run Antigravity extended QA if desired.
+
 ## 2026-07-27: La Malinche differentiated visual rebuild
 
 ### Current target

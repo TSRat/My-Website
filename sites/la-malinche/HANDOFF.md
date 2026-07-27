@@ -3,114 +3,113 @@
 - Project: `马琳切：谁背叛了背叛者？`
 - Series: `时间的女儿 · 003`
 - Branch: `codex/site-la-malinche`
-- Figma v2: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-2>
+- Figma v3: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-13>
 - Pull Request: <https://github.com/TSRat/My-Website/pull/26>
-- Verified exact-commit preview:
-  <https://raw.githack.com/TSRat/My-Website/fe85f8a5b702d4d9ce467112b0ec6a8229c98528/LA-MALINCHE/index.html>
+- Exact-commit preview: pending the final documentation commit.
 
 ## Current goal
 
-Replace the repetitive first implementation with a visually differentiated,
-thirty-screen historical editorial. Use the supplied monochrome figure as the
-hero cut-out, add larger archival imagery and a directly playable two-part
-video theater, preserve the eight-chapter argument, and keep video-cover imagery
-inside the players only.
+Refine the differentiated historical editorial for a first-time reader. Explain
+who and what the reader is encountering before presenting the argument, give
+the Spanish landing, Tlaxcala, and Cholula enough narrative space, and correct
+hero proportion, display-title wrapping, spacing, and alignment defects found
+in browser review.
 
 ## Completed
 
-- Preserved 30 numbered scenes, all eight manuscript chapter anchors, and the
-  fact / interpretation / framing / metaphor evidence boundary.
-- Rebuilt the page around distinct scene skeletons: cut-out poster, typographic
-  name atlas, evidence strip, chapter gates, archival wall, diagonal origin map,
-  uncertainty ledger, split testimony, route console, language field,
-  translation seam, negotiation steps, cartographic table, red rupture, siege
-  measures, survivor dossier, video theater, rereading gallery, and final
-  reflection.
-- Removed every production reference to `cover-green.webp` and
-  `cover-red.webp`. Those files remain only as unreferenced archive material.
-- Added the official Bilibili players for `BV1A72vBQEEJ` and `BV1iWBeBEEFg`.
-- Updated the series number from `005` to `003` in the site, manifest, config,
-  authoritative project table, Figma file, and Living Atlas discovery entry.
-- Generated a transparent hero PNG from the supplied monochrome illustration.
-- Added four locally optimized public-domain archival images with visible
-  source and collection captions.
-- Added and documented Figma v2 frames for hero, archive, map, video, mobile,
-  and composition catalogue while retaining v1 for comparison.
-- Rebuilt `LA-MALINCHE/` and `THE-LIVING-ATLAS/`.
+- Expanded the site from 30 to 33 numbered scenes while preserving all eight
+  manuscript chapter anchors and the supplied argument.
+- Added an early `她是谁 / 为什么重要 / 这篇要问什么` primer.
+- Made `1519 · 西班牙人登陆` a standalone full-height scene that explains
+  the defeat of `波顿查恩`, the transfer of twenty women, Malinche's second
+  transfer, and why language changed her position.
+- Split Tlaxcala into two scenes:
+  1. what the independent polity was and why it resisted both the Triple
+     Alliance and an unknown armed force;
+  2. how weeks of fighting, translation, shared interest, and negotiation
+     produced an alliance without reducing it to friendship.
+- Split Cholula into two scenes:
+  1. what made it a major sacred and route center;
+  2. what is known about the massacre, why the surviving stories conflict, and
+     why a later warning story does not transfer command responsibility.
+- Added visibly captioned, locally optimized public-domain images for the
+  landing, a large Tlaxcala map, Moctezuma II, and Cortés.
+- Kept later depictions explicitly separate from historical likeness or现场记录.
+- Corrected every production occurrence of `波通昌` to `波顿查恩`.
+- Preserved the transparent monochrome hero and fixed its intrinsic ratio with
+  `object-fit: contain`.
+- Added authored display lines and shared display-to-copy spacing tokens to
+  prevent one- or two-character title orphans and collisions.
+- Kept the two Bilibili videos directly playable and left legacy video-cover
+  files unreferenced outside the players.
+- Updated the editable Figma source non-destructively with a v3 beginner-first
+  sequence; v1 and v2 remain available for comparison.
 
 ## Important decisions
 
-- Video-cover imagery is allowed only as part of the direct embedded player.
-- Image size, color field, direction, and typography vary by argument; the site
-  does not normalize chapters into a repeated card grid.
-- The supplied figure is treated as an editorial illustration and kept
-  monochrome after background removal.
-- Own Map assets remain available in the interactive route console. A large
-  1524 map from the Newberry Library is used for the Tenochtitlan atlas scene.
-- Historical qualifications such as `大约`, `可能`, `无人知晓`,
-  `众说纷纭`, and source conflict remain present.
-- No external analytics provider, persistence, autoplay, or automatic merge.
+- Beginner context now precedes interpretation: identity and stakes first,
+  event sequence second, the creator's analysis third.
+- Tlaxcala's alliance is framed as political negotiation under shared pressure,
+  not as uncomplicated loyalty.
+- Cholula's evidentiary conflict remains visible. The site does not turn one
+  contested account into certainty or shift military command to the
+  interpreter.
+- Image scale, background color, alignment, and scene structure vary with the
+  argument while shared spacing and grid rules keep the page coherent.
+- Video-cover imagery is allowed only inside the direct embedded players.
+- No external analytics provider, persistence, autoplay, automatic merge, or
+  deployment-architecture change.
 
 ## Modified files
 
 - `sites/la-malinche/index.html`, `assets/site.css`, `assets/site.js`
-- `sites/la-malinche/assets/malinche-cutout.png`
-- `sites/la-malinche/assets/archive/*.webp`
+- four new files under `sites/la-malinche/assets/archive/`
 - `sites/la-malinche/{CONTENT,DESIGN,TECH,HANDOFF}.md`
 - `sites/la-malinche/site.config.json`, `site-manifest.json`
 - generated `LA-MALINCHE/` mirror
-- `sites/living-atlas/content-registry.js` and generated
-  `THE-LIVING-ATLAS/content-registry.js`
-- `README.md`, `HANDOFF.md`, `web/portfolio-audit.md`
-- `web/sites/la-malinche/product-spec.md`,
-  `web/sites/la-malinche/design-handoff.md`
+- `README.md`, root `HANDOFF.md`, `web/portfolio-audit.md`
+- `web/sites/la-malinche/{product-spec,visual-direction,design-handoff}.md`
 - `tests/malinche-readiness.test.mjs`
 
 ## Validation
 
-- `npm run build:malinche`: passed.
-- `npm run build:living-atlas`: passed.
-- `npm run validate:sites`: passed — 11 packages.
-- `node --test tests/malinche-readiness.test.mjs tests/site-maintenance-structure.test.mjs`:
-  passed — 3/3.
 - `node --check sites/la-malinche/assets/site.js`: passed.
-- `node --check sites/la-malinche/assets/analytics.js`: passed.
+- `node --test tests/malinche-readiness.test.mjs`: passed — 2/2.
+- `npm run build:malinche`: passed.
+- `npm run validate:sites`: passed — 11 packages.
 - `npm run build:pages`: passed.
-- `npm run validate:pages`: passed — 537 local references across 67 HTML/CSS files.
+- `npm run validate:pages`: passed — 541 local references across 67 HTML/CSS files.
 - `npm run lint`: passed with 0 errors and 24 pre-existing warnings in
   Enheduanna and the committed Hypatia bundle.
-- `git diff --check`: passed.
-- Local browser desktop `1440 × 900`: 30 screens, eight chapters, two players,
-  no horizontal overflow, no broken loaded images, and clean console.
-- Local browser mobile `390 × 844`: no horizontal overflow or broken loaded
-  images; compact chapter menu, name lens, and route selector passed.
-- Visual smoke inspected the cut-out hero, full archival wall, and direct video
-  theater.
-- Antigravity extended multi-browser, keyboard, and visual regression QA:
+- Dynamic local browser layout audit passed at `1782 × 864`, `1440 × 900`,
+  `1024 × 768`, and `390 × 844`: 33 scenes, no horizontal overflow, no
+  detected display-title orphans, and preserved hero aspect ratio.
+- Visual smoke inspected the hero, landing, both Tlaxcala scenes, both Cholula
+  scenes, and the Moctezuma / Malinche / Cortés encounter on desktop and mobile.
+- Exact remote-commit smoke: pending final push.
+- Antigravity extended multi-browser, keyboard, and visual-regression QA:
   pending.
 
 ## Known issues
 
-- External scholarly bibliography is still limited to the manuscript and the
-  four image-source records; claims beyond the manuscript would need a separate
-  source review.
+- External scholarly bibliography remains limited to the manuscript and
+  visible image-source records; broader claim expansion needs a separate source
+  review.
 - Google-hosted fonts fall back to installed Chinese serif/sans fonts if the
   service is unavailable.
-- The Bilibili embeds require network access and may behave differently behind
+- Bilibili embeds require network access and may behave differently behind
   regional or privacy restrictions.
 
 ## Pending
 
-- Review the verified exact-commit preview and PR #26.
-- Review through Antigravity if comprehensive multi-browser and visual
-  comparison is desired.
+- Commit and push the refinement, then verify its immutable preview.
+- Review the exact-commit preview and PR #26.
+- Run Antigravity extended QA if comprehensive multi-browser, keyboard, and
+  visual comparison is desired.
 
 ## Git state
 
 - Branch: `codex/site-la-malinche`
-- Base: `origin/main` at `fb78a4f`
-- Latest implementation commit: `20773ed`
-- Verified remote preview commit: `fe85f8a`
-- Current worktree: only this verification metadata update remains before the
-  final documentation commit.
+- Pre-refinement head: `b7d21fb`
+- Current refinement: uncommitted at the time of this handoff update.
 - Merge: not authorized and not performed.

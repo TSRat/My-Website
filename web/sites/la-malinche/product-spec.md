@@ -32,55 +32,60 @@ This is intentionally one public route. Deep links use stable section anchors.
 | `#watch` | Direct screening of the two-part Malinche video |
 | `#sources` | Source, evidence, image-credit, and privacy notes |
 
-## Thirty-screen reading architecture
+## Thirty-three-screen reading architecture
 
 Every numbered scene is designed to occupy approximately one viewport on a typical device. Long passages can exceed one viewport when content integrity requires it.
 
 1. `00` — Cover: “一个女人，却活在三个名字里”
 2. `01` — Three names: Malintzin / Doña Marina / La Malinche
-3. `02` — Reading contract: fact / interpretation / framing / metaphor
-4. `03` — A broken political world of city-states
-5. `04` — Aztlan, Nahua, Mexica, and the Triple Alliance
-6. `05` — Oluta at the imperial edge
-7. `06` — A lost birth name and the evidence of courtly speech
-8. `07` — Betrayed into slavery: two explanations held apart
-9. `08` — Xicalango and Potonchán: a forced route south
-10. `09` — Language learned as a means of survival
-11. `10` — Ships, horses, firearms, and a second transfer
-12. `11` — Baptism and the name Marina
-13. `12` — The translation chain: Maya ↔ Nahuatl ↔ Spanish
-14. `13` — “Malinche” as a name born between two people
-15. `14` — Cortés and the rules of a different world
-16. `15` — Veracruz, Totonac grievances, and alliance
-17. `16` — Tlaxcala: enemy, negotiator, ally
-18. `17` — Cholula: warning, sources, and massacre
-19. `18` — The causeway to Tenochtitlan
-20. `19` — Meeting Moctezuma through her voice
-21. `20` — Gold, the sacred precinct, and the seizure of a ruler
-22. `21` — A world order torn open
-23. `22` — The Toxcatl massacre and the failure of language
-24. `23` — La Noche Triste: “活下去”
-25. `24` — Smallpox, regrouping, and the coalition’s return
-26. `25` — Siege, hunger, water, and the fall of the city
-27. `26` — Survivor: diplomacy, family, property, and uncertain death
-28. `27` — Malinchismo: the full-screen red rupture
-29. `28` — Feminist and Indigenous rereadings
-30. `29` — Who betrayed whom? Reader reflection
+3. `02` — Beginner primer: what she was, why she matters, what the site analyses
+4. `03` — Reading contract: fact / interpretation / framing / metaphor
+5. `04` — A broken political world of city-states
+6. `05` — Aztlan, Nahua, Mexica, and the Triple Alliance
+7. `06` — Oluta at the imperial edge
+8. `07` — A lost birth name and the evidence of courtly speech
+9. `08` — Betrayed into slavery: two explanations held apart
+10. `09` — Xicalango and Potonchán: a forced route south
+11. `10` — Language learned as a means of survival
+12. `11` — Spanish landing: battle, twenty women, reassignment, language
+13. `12` — Baptism and the name Marina
+14. `13` — The translation chain: Maya ↔ Nahuatl ↔ Spanish
+15. `14` — “Malinche” as a name born between two people
+16. `15` — Cortés and the rules of a different world
+17. `16` — Veracruz, Totonac grievances, and alliance
+18. `17` — Tlaxcala: what the independent, surrounded polity was
+19. `18` — Tlaxcala: why resistance became negotiation and alliance
+20. `19` — Cholula: sacred city, route, and political position
+21. `20` — Cholula: massacre, competing accounts, and responsibility
+22. `21` — The causeway to Tenochtitlan
+23. `22` — Moctezuma–Malinche–Cortés portrait encounter
+24. `23` — Gold, the sacred precinct, and the seizure of a ruler
+25. `24` — Which rules were torn, what changed, and who held command
+26. `25` — The Toxcatl massacre and the failure of language
+27. `26` — La Noche Triste: “活下去”
+28. `27` — Smallpox, regrouping, and the coalition’s return
+29. `28` — Siege, hunger, water, and the fall of the city
+30. `29` — Survivor: diplomacy, family, property, and uncertain death
+31. `30` — Malinchismo: the full-screen red rupture
+32. `31` — Feminist and Indigenous rereadings
+33. `32` — Who betrayed whom? Reader reflection
 
-The direct two-part video theater sits between scenes `26` and `27` without
-changing the manuscript's thirty numbered scenes.
+The direct two-part video theater sits between scenes `29` and `30` without
+changing the manuscript's thirty-three numbered scenes.
 
 ## Primary reading flow
 
 1. Enter through the three names.
-2. Choose a name lens or continue with all three.
-3. Read chronologically while the right-side progress rail marks the eight manuscript chapters.
-4. Open nearby evidence annotations without leaving the scene.
-5. Use the route map to understand forced movement and coalition geography.
-6. Compare translation positions across a hard central seam.
-7. Watch the two-part Bilibili documentary directly in the video theater.
-8. Encounter the red `Malinchismo` rupture.
-9. Answer a non-persisted reflection prompt and review evidence boundaries.
+2. Establish what she was, why she matters, and what question the site asks.
+3. Choose a name lens or continue with all three.
+4. Read chronologically while the right-side progress rail marks the eight manuscript chapters.
+5. Open nearby evidence annotations without leaving the scene.
+6. Use the route map to understand forced movement and coalition geography.
+7. Read Tlaxcala and Cholula as context → event → role → evidence, not verdicts.
+8. Compare translation positions across a hard central seam.
+9. Watch the two-part Bilibili documentary directly in the video theater.
+10. Encounter the red `Malinchismo` rupture.
+11. Answer a non-persisted reflection prompt and review evidence boundaries.
 
 ## Interactions
 
