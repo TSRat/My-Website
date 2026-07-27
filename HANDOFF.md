@@ -20,6 +20,7 @@ without flattening the site's varied visual language.
 - Corrected display spacing, image proportions, reveal-transform alignment, and
   the last two-character mobile title ending.
 - Preserved the two direct video players and did not reuse video-cover imagery.
+- Reused the existing TSRat identity mark in the top navigation and footer.
 - Added a non-destructive editable Figma V4 key-screen catalogue:
   <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=14-2>.
 
@@ -30,12 +31,15 @@ without flattening the site's varied visual language.
 - `npm run build:malinche`: passed.
 - `npm run validate:sites`: passed — 11 packages.
 - `npm run build:pages`: passed.
-- `npm run validate:pages`: passed — 554 local references across 67 HTML/CSS files.
+- `npm run validate:pages`: passed — 557 local references across 67 HTML/CSS files.
 - `npm run lint`: passed with 0 errors and 24 existing warnings in Enheduanna
   and the committed Hypatia bundle.
 - Codex in-app browser layout smoke passed at `1782 × 864` and `390 × 844`:
   41 scenes, no document overflow, no broken images after lazy-load traversal,
   no visible title / copy collision, and preserved hero ratio.
+- Chrome / Computer Use follow-up confirmed the TSRat mark in the fixed header
+  and closing footer at `1800 × 928`; both loaded at their natural ratio with
+  zero document overflow.
 - Antigravity extended route, keyboard, multi-browser, and visual QA: pending.
 
 ### Delivery state

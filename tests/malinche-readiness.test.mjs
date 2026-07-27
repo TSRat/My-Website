@@ -49,6 +49,7 @@ test("La Malinche keeps the 41-screen beginner-first editorial and evidence cont
   assert.match(html, /波顿查恩战败/);
   assert.match(html, /moctezuma-mendoza\.webp/);
   assert.match(html, /cortes-weiditz\.webp/);
+  assert.equal((html.match(/assets\/tsrat-logo\.png/g) ?? []).length, 2);
   assert.match(html, /1492 不是起点/);
   assert.match(html, /征服已经被练习过/);
   assert.match(html, /为什么能不断变大/);
@@ -73,6 +74,7 @@ test("La Malinche keeps the 41-screen beginner-first editorial and evidence cont
 test("La Malinche source assets and generated mirror are complete", async () => {
   for (const path of [
     "sites/la-malinche/assets/malinche-cutout.png",
+    "sites/la-malinche/assets/tsrat-logo.png",
     "sites/la-malinche/assets/archive/codex-azcatitlan.webp",
     "sites/la-malinche/assets/archive/malinche-tlaxcala.webp",
     "sites/la-malinche/assets/archive/tenochtitlan-1524.webp",

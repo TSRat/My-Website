@@ -114,6 +114,8 @@ The ending must remain morally double:
 - `assets/malinche-cutout.png`: background-removed derivative of the supplied
   black-and-white Malinche illustration. The monochrome line and halftone texture
   are retained.
+- `assets/tsrat-logo.png`: existing transparent TSRat identity mark reused from
+  the repository, displayed in the fixed header and closing footer.
 - `assets/maps/*.webp`: WebP derivatives of the supplied `Own Map` files from
   `Women Story/Malinche`.
 - `assets/cover-green.webp` and `assets/cover-red.webp`: retained as source

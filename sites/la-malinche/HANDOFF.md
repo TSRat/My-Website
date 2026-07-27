@@ -33,6 +33,8 @@ and alignment defects found through browser review.
 - Added a restrained sun motif to the expedition ledger and retained the sharp
   archive / jade / gold / red system without turning every scene into the same
   card layout.
+- Reused the repository's transparent TSRat identity mark in both the fixed
+  header and the closing footer.
 - Increased title-to-deck and deck-to-body spacing, corrected image/title
   alignment, preserved intrinsic image ratios, and removed the remaining
   two-character mobile title ending.
@@ -73,7 +75,7 @@ and alignment defects found through browser review.
 - `npm run build:malinche`: passed.
 - `npm run validate:sites`: passed — 11 packages.
 - `npm run build:pages`: passed.
-- `npm run validate:pages`: passed — 554 local references across 67 HTML/CSS files.
+- `npm run validate:pages`: passed — 557 local references across 67 HTML/CSS files.
 - `npm run lint`: passed with 0 errors and 24 pre-existing warnings in
   Enheduanna and the committed Hypatia bundle.
 - Dynamic local browser layout audit passed at `1782 × 864` and `390 × 844`:
@@ -85,6 +87,9 @@ and alignment defects found through browser review.
 - Exact implementation-commit smoke passed at `1782 × 864`: 41 scenes, zero
   document overflow, preserved hero ratio, and all lazy images loaded after
   their corresponding scenes entered the viewport.
+- Logo follow-up smoke passed in Chrome at `1800 × 928`: two intrinsic-ratio
+  TSRat marks loaded, the header mark rendered at `115 × 32`, the footer mark
+  at `176 × 53`, and the document retained zero horizontal overflow.
 - Antigravity extended multi-browser, keyboard, and visual-regression QA:
   pending.
 

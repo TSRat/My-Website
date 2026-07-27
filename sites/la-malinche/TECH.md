@@ -23,6 +23,7 @@ Public path:
 - `assets/maps/*.webp`
 - `assets/archive/*.webp`
 - `assets/creator/*.{webp,svg}`
+- `assets/tsrat-logo.png`
 - `assets/malinche-cutout.png`
 - `site-manifest.json`
 - `site.config.json`

@@ -68,15 +68,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .brand, .header-actions { display: flex; align-items: center; gap: 1rem; }
 .brand { text-decoration: none; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
-.brand-mark {
-  display: grid;
-  width: 30px;
-  height: 30px;
-  place-items: center;
-  border: 1px solid currentColor;
-  color: var(--gold);
-  font-family: var(--serif);
-  font-size: 1rem;
+.brand-logo {
+  width: clamp(5.2rem, 7vw, 7.2rem);
+  height: 2rem;
+  object-fit: contain;
+  object-position: left center;
 }
 .header-link, .menu-toggle {
   border: 0;
@@ -791,9 +787,12 @@ p { line-height: 1.85; }
 .source-columns p, .source-columns li { font-size: .75rem; }
 .archive-links { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 3rem; }
 .archive-links a { border: 1px solid currentColor; padding: .65rem .8rem; font-size: .68rem; text-decoration: none; }
-.site-footer { display: grid; grid-template-columns: .5fr 1fr .5fr; align-items: center; padding: 3rem 5vw; background: var(--ink); color: var(--bone); }
+.site-footer { display: grid; grid-template-columns: .5fr 1fr .5fr; align-items: center; gap: 2rem; padding: 3rem 5vw; background: var(--ink); color: var(--bone); }
+.footer-logo { display: block; width: clamp(8rem, 11vw, 11rem); }
+.footer-logo img { width: 100%; height: auto; }
+.footer-title { display: grid; gap: .55rem; text-align: center; }
 .site-footer p { margin: 0; color: var(--gold); font-size: .68rem; letter-spacing: .12em; }
-.site-footer strong { text-align: center; font-family: var(--serif); }
+.site-footer strong { font-family: var(--serif); }
 .site-footer a { justify-self: end; font-size: .72rem; }
 
 /* reveal is additive: the page remains legible before and without JS */
@@ -977,6 +976,7 @@ p { line-height: 1.85; }
   .reflection-options { padding-top: 2rem; }
   .source-head { grid-template-columns: 1fr; }
   .site-footer { grid-template-columns: 1fr; gap: 1rem; text-align: center; }
+  .footer-logo { justify-self: center; width: 9rem; }
   .site-footer a { justify-self: center; }
 }
 
