@@ -2,9 +2,9 @@
 
 ## Current target
 
-Rebuild the site's public content from the selected proposal and supplied
-reports while preserving the existing dark cyber-editorial visual identity,
-public route and stable section anchors.
+Add a discreet, accessible entry from the preserved portrait to a separate
+red public-portal parody that promotes the fictional “Zhang Yong spirit”
+without impersonating a real party or government body.
 
 ## Completed
 
@@ -28,6 +28,19 @@ public route and stable section anchors.
 - Added an editable Figma v2 frame with desktop/mobile key screens, a receipt
   detail state, theme variables and a reusable ledger-row component.
 - Regenerated `ZHANGYONG-PORTRAIT/` from the maintained source.
+- Added a low-opacity, focusable red-dot entry that reveals its label on hover
+  or keyboard focus without changing the main portrait composition.
+- Added `red.html` as a self-contained red/paper editorial portal with real
+  anchors for headlines, principles, implementation cases and letters.
+- Reframed Zhang Yong's public themes as mock notices and study materials:
+  self-naming, practical problem-solving, physical strength, concrete care,
+  hot food, ordinary-life dignity and humor.
+- Added non-official parody disclosure at the top, counter and footer; omitted
+  real seals, agency names, filing numbers and government service claims.
+- Added a fixed `2,135,227+` narrative visitor count, visibly labeled as
+  fictional and disconnected from analytics.
+- Added editable Figma desktop/mobile screens, entry states, theme variables,
+  the real Bawanglong image and a reusable red bulletin component.
 
 ## Unfinished
 
@@ -40,8 +53,10 @@ public route and stable section anchors.
 - `style.css` remains minified because it is the preserved visual baseline.
 - The supplied PDF reports remain local, untracked review inputs and are not
   part of the public site or commit.
-- Unrelated pre-existing changes in the philosophy guides, root handoff and
-  local skill files remain outside this task's commit.
+- The main working copy still contains unrelated pre-existing changes; this
+  task is isolated in a clean worktree and does not include them.
+- The public-portal research is used as a structural reference only. The
+  alternate page must retain its visible non-official parody labels.
 
 ## Important decisions
 
@@ -54,20 +69,29 @@ public route and stable section anchors.
 - No new commerce flow, analytics provider, generated imagery or external
   dependency was introduced.
 - Analytics remains provider `none`.
+- The main route remains `PRESERVE`; the approved visual departure is isolated
+  to `red.html`.
+- The visitor count is creative copy, not traffic evidence.
+- The alternate page uses flat colors, existing local imagery and typography;
+  no new external runtime, official icon or generated institutional asset was
+  introduced.
 
 ## Changed files
 
 - `sites/zhangyong-portrait/index.html`
+- `sites/zhangyong-portrait/red.html`
+- `sites/zhangyong-portrait/red.css`
 - `sites/zhangyong-portrait/content-registry.js`
-- `sites/zhangyong-portrait/site-manifest.js`
 - `sites/zhangyong-portrait/platform.css`
 - `sites/zhangyong-portrait/CONTENT.md`
 - `sites/zhangyong-portrait/DESIGN.md`
 - `sites/zhangyong-portrait/TECH.md`
 - `sites/zhangyong-portrait/HANDOFF.md`
+- `sites/zhangyong-portrait/design-qa.md`
 - `ZHANGYONG-PORTRAIT/` generated deploy mirror, excluding local PDF inputs
 - `web/sites/zhangyong-portrait/`
 - `README.md`
+- `tests/living-atlas-static-sites.test.mjs`
 
 ## Commands and results
 
@@ -76,47 +100,46 @@ public route and stable section anchors.
 - `npm run validate:sites`: passed for all 10 maintenance packages.
 - `npm run build:zhangyong`: passed; deploy mirror regenerated.
 - `npm run build:pages`: passed.
-- `npm run validate:pages`: passed, 522 references across 65 HTML/CSS files.
+- `npm run validate:pages`: passed, 575 references across 71 HTML/CSS files.
 - `git diff --check`: passed.
 - Public-copy exclusion search: passed for source, mirror and design documents.
 - Reviewed the supplied velna relationship report through page renders and
   targeted text extraction; only non-private relationship structure was used.
-- Local desktop smoke at 1440×900: passed; requested navigation and content are
-  visible, both relationship nodes remain contained, primary assets load and
-  horizontal containment is intact.
-- Local mobile smoke at 390×844: passed; both relationship nodes and their
-  supporting notes remain legible without horizontal overflow.
-- Exact-commit remote smoke: passed; requested content, primary images and
-  horizontal containment are present on the pushed implementation commit.
+- Local desktop smoke at 1440×900: passed; masthead, parody disclosure, fixed
+  narrative count, local imagery and navigation are visible without horizontal
+  overflow.
+- Local mobile smoke at 390×844: passed; the long navigation remains
+  horizontally scrollable without causing body-level overflow.
+- Hidden-entry and return-path smoke: passed.
+- Native details interaction and all four local images: passed.
+- Exact-commit remote smoke: pending until the branch is pushed.
 - Antigravity extended route, focus, network and perceptual comparison: pending.
 
 ## Capability usage
 
-| Capability | Result |
-| --- | --- |
-| Product / UX | Used for content boundaries, IA and stable-anchor mapping |
-| Figma | Used; editable v2 screens retained and the relationship navigation label updated |
-| Browser | Used for desktop/mobile source smoke checks |
-| GitHub | Used; scoped commit pushed and Draft PR opened |
-| Preview | Used; exact-commit remote preview passed |
-| Creative Production | Skipped; existing approved assets fully cover the preserved direction |
-| Data / Analytics | Existing provider-neutral Tier A contract retained and documented |
-| Visualization | Skipped; the single linear reading flow is clearer as a table |
+| Capability | Level | Used | Result / artifact | Skip or blocker reason |
+| --- | --- | --- | --- | --- |
+| Product / UX | Strongly recommended | Yes | Hidden-entry flow, parody disclosure and return path documented | — |
+| Figma | Mandatory | Yes | Editable red-parody frame, variables, component, desktop/mobile screens | — |
+| Browser | Mandatory | Yes | Desktop/mobile smoke, entry/return flow, anchors, details and image checks passed | Antigravity extended QA remains pending |
+| GitHub | Mandatory | Pending delivery | Clean dedicated branch created | Commit, push and PR pending |
+| Preview | Mandatory | Pending delivery | Exact-commit preview pending | Requires committed branch |
+| Creative Production | Strongly recommended | No | — | Existing Zhang Yong imagery and researched portal references fully define the art direction |
+| Data / Analytics | Strongly recommended | No | Provider-none contract and fictional-counter boundary documented locally | No real metric or provider is being designed; invoking analytics would risk legitimizing a fictional count |
+| Visualization | Strongly recommended | No | — | Two-route flow is simpler as a short product-spec sequence |
 
 ## Git and delivery
 
-- Branch: `codex/zhangyong-content-rebuild`
-- Base: `origin/main` at `fb78a4f`
-- Implementation commit: `8b87b5d`
-- Relationship update commit: `adbee37`
-- Preview:
-  <https://raw.githack.com/TSRat/My-Website/adbee37630424a901d8e74bfa354077e32619293/ZHANGYONG-PORTRAIT/index.html>
-- Pull Request: <https://github.com/TSRat/My-Website/pull/25> (Draft)
+- Branch: `codex/zhangyong-red-parody`
+- Base: `origin/main` at `86467f7`
+- Implementation commit: pending
+- Preview: pending
+- Pull Request: pending
 - Figma:
-  <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=40-30>
+  <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=43-39>
 - Antigravity QA: pending
 
 ## Next step
 
-Review the exact-commit preview and Draft PR; request Antigravity extended QA
-before treating visual preservation as comprehensive.
+Complete builds and browser smoke, then push the dedicated branch and review
+the exact-commit preview and Draft PR.

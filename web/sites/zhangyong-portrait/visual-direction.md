@@ -71,3 +71,27 @@ These values mirror the current CSS baseline; they are not a new palette.
 
 本批次属于“批准的内容与结构调整”，不是重设计。允许改变章节标题、段落、标签和
 信息顺序；不批准改变调色板、字体体系、hero、图像角色、断点和总体构图。
+
+## Alternate direction — red public-portal parody
+
+`red.html` deliberately leaves the preserved dark portrait system and adopts a
+separate public-portal vocabulary:
+
+- deep red masthead and navigation;
+- warm paper and white information surfaces;
+- Noto Serif-style headline hierarchy with dense sans-serif lists;
+- document numbers, dates, thin rules and compact bulletin rows;
+- three-column lead story with a real Bawanglong image;
+- flat color fields only, without official emblems, seals or fake filing marks.
+
+Research references:
+
+- Beijing Municipal Government portal: masthead, red navigation, headline and
+  public-information density.
+- 12371 study portal: learning-topic hierarchy, bulletin lists and red/gold
+  campaign blocks.
+- Government Website Development Guidelines: prominent site naming,
+  information publishing and service-oriented structure.
+
+The design extracts layout conventions, not official identity. Visible parody
+labels are part of the composition rather than a removable legal footnote.

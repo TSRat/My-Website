@@ -53,6 +53,23 @@ The v2 rebuild frame is the design source of truth for this change. The
 authoritative production runtime remains this directory's static HTML, CSS,
 JavaScript modules and assets.
 
+## Red parody alternate
+
+`red.html` is an intentionally separate visual mode. It may use the dense
+headline hierarchy, deep-red navigation, paper surface, serif headlines,
+notice lists and administrative-document rhythm of Chinese public portals.
+It must not visually alter the main `index.html` portrait beyond the discreet,
+focusable entry point.
+
+- Figma:
+  <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=43-39>
+- Frame: `张勇精神学习宣传专栏 · red parody v1`
+- Theme variables: `Theme / 张勇红色戏仿版`
+- Component: `Site / 张勇 / Red Bulletin Item`
+
+The parody always uses explicit non-official labels and omits real emblems,
+seals and government identifiers.
+
 ## QA baseline
 
 Codex should compare one desktop route and one related narrow viewport against
