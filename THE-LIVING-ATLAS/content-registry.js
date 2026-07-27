@@ -82,11 +82,11 @@ export const livingAtlasContent = {
       status: "published",
       title: { en: "LA MALINCHE", zh: "马琳切" },
       series: {
-        en: "Daughters of Time · 005",
-        zh: "时间的女儿 · 005",
+        en: "Daughters of Time · 003",
+        zh: "时间的女儿 · 003",
       },
       href: "../LA-MALINCHE/",
-      thumbnail: "../LA-MALINCHE/assets/cover-green.webp",
+      thumbnail: "../LA-MALINCHE/assets/malinche-cutout.png",
       thumbnailAlt: {
         en: "La Malinche editorial website cover",
         zh: "马琳切历史编辑网站封面",

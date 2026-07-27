@@ -3,7 +3,7 @@
 ## Product
 
 - Site name: `马琳切：谁背叛了背叛者？`
-- Series: `时间的女儿 · 005`
+- Series: `时间的女儿 · 003`
 - Slug: `LA-MALINCHE`
 - Public path: `/My-Website/LA-MALINCHE/`
 - Product type: single-route interactive historical documentary and long-form editorial
@@ -29,8 +29,8 @@ This is intentionally one public route. Deep links use stable section anchors.
 | `#endgame` | Chapter 6 · 终局 |
 | `#survivor` | Chapter 7 · 幸存者 |
 | `#traitor` | Chapter 8 · 背叛者 |
-| `#sources` | Source and evidence notes |
-| `#data` | Provider-neutral measurement boundary |
+| `#watch` | Direct screening of the two-part Malinche video |
+| `#sources` | Source, evidence, image-credit, and privacy notes |
 
 ## Thirty-screen reading architecture
 
@@ -65,7 +65,10 @@ Every numbered scene is designed to occupy approximately one viewport on a typic
 27. `26` — Survivor: diplomacy, family, property, and uncertain death
 28. `27` — Malinchismo: the full-screen red rupture
 29. `28` — Feminist and Indigenous rereadings
-30. `29` — Who betrayed whom? Reader reflection, sources, and data boundary
+30. `29` — Who betrayed whom? Reader reflection
+
+The direct two-part video theater sits between scenes `26` and `27` without
+changing the manuscript's thirty numbered scenes.
 
 ## Primary reading flow
 
@@ -74,10 +77,10 @@ Every numbered scene is designed to occupy approximately one viewport on a typic
 3. Read chronologically while the right-side progress rail marks the eight manuscript chapters.
 4. Open nearby evidence annotations without leaving the scene.
 5. Use the route map to understand forced movement and coalition geography.
-6. Compare translation positions in a desktop split view or a mobile accordion.
-7. Encounter one intentional visual rupture in the `Malinchismo` scene.
-8. Answer a non-persisted reflection prompt.
-9. Review the site’s evidence and measurement boundaries.
+6. Compare translation positions across a hard central seam.
+7. Watch the two-part Bilibili documentary directly in the video theater.
+8. Encounter the red `Malinchismo` rupture.
+9. Answer a non-persisted reflection prompt and review evidence boundaries.
 
 ## Interactions
 
@@ -102,13 +105,13 @@ Every numbered scene is designed to occupy approximately one viewport on a typic
 
 ### Route map
 
-- Buttons select creator-made route maps and replace the image, title, alt text, and short explanation.
+- Buttons select route maps and replace the image, title, alt text, and short explanation.
 - The textual route remains present when images or JavaScript fail.
 
 ### Translation split
 
 - Desktop: Nahuatl/Maya and Spanish positions flank a stable central Malinche narrative.
-- Mobile: an accordion reveals one side at a time, with both sections present in the DOM.
+- Mobile: both language worlds stack around the central interpreter seam.
 
 ### Final reflection
 
@@ -128,7 +131,7 @@ Every numbered scene is designed to occupy approximately one viewport on a typic
 | Error | Map fallback lists the route in text |
 | Selected | Lens and reflection state are announced in a live region |
 | Disabled | Not used in the primary experience |
-| Empty | Data section states provider `none`; it does not show fabricated metrics |
+| Empty | Source room states that no analytics provider is connected |
 | Success | Reflection update confirms that no answer was stored |
 
 ## Accessibility
@@ -137,8 +140,9 @@ Every numbered scene is designed to occupy approximately one viewport on a typic
 - Skip link targets the first reading scene.
 - All buttons are native buttons; all annotations use native `details`.
 - Meaning is never carried by jade / blue / red alone.
-- Map captions identify creator-made visual material, not historical maps.
-- The cover image is creator artwork, not a historical portrait.
+- Map captions identify the local `Own Map` assets.
+- Archival images include direct collection, date, and public-domain credits.
+- The hero uses the supplied black-and-white figure as a transparent cut-out.
 - Focus remains visible on dark and light scenes.
 - `prefers-reduced-motion: reduce` disables smooth scrolling, reveals, cursor light, and parallax transforms.
 - Text contrast targets WCAG AA; primary text is designed for AAA where practical.
@@ -148,5 +152,5 @@ Every numbered scene is designed to occupy approximately one viewport on a typic
 
 - `≥ 1100px`: 12-column composition, sticky progress rail, full translation split.
 - `768–1099px`: simplified grid, no fixed side rail, reduced monumental type.
-- `≤ 767px`: single column, compact header, name panels stack, maps stay 16:10, translation split becomes accordion, and decorative cursor light is disabled.
+- `≤ 767px`: single column, compact header, name panels stack, maps stay contained, the translation worlds stack, and decorative motion is disabled.
 - Text width remains close to 65ch; edge-to-edge red scenes retain at least 24px content padding.

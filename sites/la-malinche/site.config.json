@@ -21,12 +21,12 @@
   },
   "publicPath": "/My-Website/LA-MALINCHE/",
   "manifest": "site-manifest.json",
-  "figmaUrl": "https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-3",
+  "figmaUrl": "https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-2",
   "hub": {
     "order": 10,
     "className": "la-malinche",
-    "cover": "assets/cover-green.webp",
-    "eyebrow": "DAUGHTERS OF TIME · 005",
+    "cover": "assets/malinche-cutout.png",
+    "eyebrow": "DAUGHTERS OF TIME · 003",
     "description": "沿着马林钦、玛丽娜夫人与拉·马琳切三个名字，重读翻译、征服、幸存与被制造的背叛。",
     "metadata": [["时代", "约1500—1520年代"], ["地点", "中部美洲"]]
   }

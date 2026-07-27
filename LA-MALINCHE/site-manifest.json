@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "siteId": "la-malinche",
   "title": "马琳切：谁背叛了背叛者？",
-  "series": "时间的女儿 · 005",
+  "series": "时间的女儿 · 003",
   "language": "zh-CN",
   "classification": "REBUILD",
   "interactionTier": "B",
@@ -25,5 +25,5 @@
     "chapters": 8,
     "screens": 30
   },
-  "designSource": "https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-3"
+  "designSource": "https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-2"
 }

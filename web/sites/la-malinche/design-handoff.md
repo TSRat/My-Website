@@ -14,10 +14,13 @@
 
 | Frame | Node |
 | --- | --- |
-| `Home · Desktop · 1440×900` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-3> |
-| `Home · Mobile · 390×844` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-23> |
-| `Chapter 02 · Translation Split · Desktop` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-41> |
-| `Chapter 08 · Malinchismo Shock` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-57> |
+| `v2 · Visual narrative catalogue` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-2> |
+| `v2 · Cut-out poster hero` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-3> |
+| `v2 · Archival wall` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-22> |
+| `v2 · Route / cartographic console` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-31> |
+| `v2 · Direct video theater` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-38> |
+| `v2 · Mobile hero` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=9-48> |
+| `v1 · Existing system reference` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=6-2> |
 
 ## Editable system
 
@@ -31,18 +34,20 @@
   - `Chapter Marker`
   - `Archive Annotation`
 - Desktop, mobile, translation, selected, annotation, loading, error, and keyboard-focus states are represented.
-- Creator cover and route map are placed as actual image fills.
+- The supplied cut-out, Codex page, and 1524 map are placed as actual image fills.
+- V1 remains intact for comparison; V2 is the implementation source.
 
 ## Implementation mapping
 
 | Figma role | Code role |
 | --- | --- |
 | Semantic color variables | CSS custom properties in `assets/site.css` |
-| Name Toggle | `.name-lens` buttons and `[data-lens-copy]` |
-| Evidence Badge | `.evidence-badge` |
-| Chapter Marker | `.chapter-mark` and scrollspy |
-| Translation Split | `.translation-split` / mobile `details` |
+| Name Toggle | `.name-control` and `[data-lens]` |
+| Evidence Badge | `.badge` inside native `.evidence-note` |
+| Chapter Marker | `.chapter-index` and scrollspy |
+| Translation Split | `.translation-seam` |
 | Map state | `[data-map-stage]` and `#route-map` |
-| Malinchismo Shock | `.scene--rupture` |
+| Video theater | `.watch-theater` and two direct player iframes |
+| Malinchismo Shock | `.traitor-field` |
 
 Figma is the design and QA source. The creator manuscript remains the content source.

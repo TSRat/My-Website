@@ -1,8 +1,8 @@
 # La Malinche content guide
 
-- Project: `时间的女儿 · 005`
-- Primary source: creator manuscript `马琳切：谁背叛了背叛者？` (21 pages)
-- Supporting source: creator Chinese subtitle transcripts `中文1.srt` and `中文2.srt`
+- Project: `时间的女儿 · 003`
+- Primary source: manuscript `马琳切：谁背叛了背叛者？` (21 pages)
+- Supporting source: Chinese subtitle transcripts `中文1.srt` and `中文2.srt`
 - Primary content file: `index.html`
 
 ## Core argument
@@ -57,8 +57,8 @@ The site must not flatten her into either saviour or traitor. It ends with the m
 
 ### Visual metaphor
 
-- Creator cover images are modern editorial artwork, not historical portraits.
-- Creator maps explain the manuscript’s geography; they are not contemporary sixteenth-century maps.
+- The supplied black-and-white figure becomes a transparent cut-out in the poster-like hero.
+- Own Map assets explain the manuscript’s geography.
 - CSS codex pattern, lake strata, broken rules, and red strike-throughs are modern interpretive graphics.
 
 ## Required qualifications
@@ -83,4 +83,21 @@ The ending must remain morally double:
 
 ## Asset provenance
 
-The creator-owned / creator-made cover and map PNGs supplied from `Women Story/Malinche` are published here as WebP derivatives. Their repository captions must keep that status explicit. The site does not claim that their embedded figures, borders, or geographic styling are public-domain historical evidence.
+- `assets/malinche-cutout.png`: background-removed derivative of the supplied
+  black-and-white Malinche illustration. The monochrome line and halftone texture
+  are retained.
+- `assets/maps/*.webp`: WebP derivatives of the supplied `Own Map` files from
+  `Women Story/Malinche`.
+- `assets/cover-green.webp` and `assets/cover-red.webp`: retained as source
+  archive files but intentionally unreferenced by the page. Video-cover imagery
+  appears only inside the two direct Bilibili players.
+- `assets/archive/codex-azcatitlan.webp`: `Codex azcatitlan222.jpg`, Gallica /
+  Wikimedia Commons, Public Domain.
+- `assets/archive/malinche-tlaxcala.webp`: `Malinche Tlaxcala.jpg`, late
+  sixteenth-century image, Wikimedia Commons, Public Domain.
+- `assets/archive/tenochtitlan-1524.webp`: `Map of Tenochtitlan and Gulf of
+  Mexico, 1524.jpg`, Newberry Library / Wikimedia Commons, Public Domain.
+- `assets/archive/cholula-1877.webp`: Félix Parra, `Episodios de la conquista:
+  La matanza de Cholula` (1877), Wikimedia Commons, Public Domain.
+
+Source-page links are included in the visible source room.

@@ -21,7 +21,8 @@ Public path:
 - `assets/site.js`
 - `assets/analytics.js`
 - `assets/maps/*.webp`
-- `assets/cover-*.webp`
+- `assets/archive/*.webp`
+- `assets/malinche-cutout.png`
 - `site-manifest.json`
 - `site.config.json`
 
@@ -37,13 +38,23 @@ The shared direct-static builder copies deployable source into `.site-build/la-m
 ## Progressive enhancement
 
 - All chapters and primary content exist in HTML.
-- JavaScript adds scrollspy, lens selection, reveal classes, map switching, and the local reflection response.
+- JavaScript adds scrollspy, lens selection, subtle reveal transforms, map switching, and the local reflection response.
 - The final reflection is not persisted.
 - The analytics adapter is a no-op with no network request.
 
 ## Assets
 
-The creator cover and maps are copied, resized, encoded as WebP, and assigned ASCII lowercase filenames for case-safe GitHub Pages URLs. The original PNG and PSD files remain in the creator’s `Women Story/Malinche` source folder and are not modified.
+- Own Map files are copied, resized, encoded as WebP, and assigned lowercase
+  filenames for case-safe GitHub Pages URLs. Originals in
+  `Women Story/Malinche` remain unmodified.
+- The hero PNG is a background-removed derivative of the supplied monochrome
+  illustration.
+- Four large public-domain archive images are stored locally as WebP to avoid
+  fragile hotlinks. Visible captions and `CONTENT.md` retain source provenance.
+- The two legacy cover WebPs remain in the source archive but are not referenced
+  by HTML, CSS, configuration, or the Living Atlas.
+- The two Malinche Bilibili videos are embedded with the official player; neither
+  iframe autoplays.
 
 ## Validation
 
