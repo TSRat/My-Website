@@ -26,8 +26,6 @@ public route and stable section anchors.
 
 ## Unfinished
 
-- Exact-branch remote preview and Pull Request links are pending until the
-  implementation commit is pushed.
 - Antigravity extended visual QA remains pending.
 
 ## Known issues
@@ -79,6 +77,8 @@ public route and stable section anchors.
   visible, primary assets load and horizontal containment is intact.
 - Local mobile smoke at 390×844: passed; ledger and receipt reflow without
   horizontal overflow.
+- Exact-commit remote smoke: passed; requested content, primary images and
+  horizontal containment are present on the pushed implementation commit.
 - Antigravity extended route, focus, network and perceptual comparison: pending.
 
 ## Capability usage
@@ -88,8 +88,8 @@ public route and stable section anchors.
 | Product / UX | Used for content boundaries, IA and stable-anchor mapping |
 | Figma | Used; editable v2 screens, variables and component created |
 | Browser | Used for desktop/mobile source smoke checks |
-| GitHub | Pending commit/push/PR in this branch |
-| Preview | Pending exact-branch remote smoke |
+| GitHub | Used; scoped commit pushed and Draft PR opened |
+| Preview | Used; exact-commit remote preview passed |
 | Creative Production | Skipped; existing approved assets fully cover the preserved direction |
 | Data / Analytics | Existing provider-neutral Tier A contract retained and documented |
 | Visualization | Skipped; the single linear reading flow is clearer as a table |
@@ -98,14 +98,15 @@ public route and stable section anchors.
 
 - Branch: `codex/zhangyong-content-rebuild`
 - Base: `origin/main` at `fb78a4f`
-- Implementation commit: pending
-- Preview: pending
-- Pull Request: pending
+- Implementation commit: `8b87b5d`
+- Preview:
+  <https://raw.githack.com/TSRat/My-Website/8b87b5d6d4c47860128022663307eebbeacbff46/ZHANGYONG-PORTRAIT/index.html>
+- Pull Request: <https://github.com/TSRat/My-Website/pull/25> (Draft)
 - Figma:
   <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=40-30>
 - Antigravity QA: pending
 
 ## Next step
 
-Commit only the Zhang Yong source, generated mirror and scoped documentation;
-then push, verify the exact branch preview and open the Pull Request.
+Review the exact-commit preview and Draft PR; request Antigravity extended QA
+before treating visual preservation as comprehensive.
