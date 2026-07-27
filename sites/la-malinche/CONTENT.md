@@ -25,10 +25,15 @@ The opening now answers three questions before presenting the interpretation:
 2. Why did multilingual mediation matter in the 1519 campaign?
 3. Why is participation not identical to military or colonial decision power?
 
-Chapter 3 then gives a first-time reader three independent pieces of Spanish
-background before returning to the campaign: the 1492 political turn in
-Iberia, the Caribbean colonial system in which conquest was rehearsed, and the
-people / ships / weapons / alliances that let a small expedition grow.
+The 52-scene order now stays inside Malintzin's available world through the end
+of Chapter 2. It explains enslavement, Potonchán, baptism, translation, the
+birth of “Malinche,” the Totonac encounter, and her gradual recognition of
+Spanish intentions before making a visibly disruptive transition to Chapter 3.
+
+Chapter 3 then gives a first-time reader independent pieces of Spanish
+background before returning to the campaign: Atlantic navigation, the
+political unification of Spain and conquistador identity, Columbus's crossing,
+the Caribbean colonial system, Cortés in Cuba, and the 1519 expedition.
 
 Tlaxcala and Cholula each receive two scenes. The first establishes the polity,
 place, and political context; the second explains the event, Malinche’s role,
@@ -129,6 +134,11 @@ The ending must remain morally double:
   Mexico, 1524.jpg`, Newberry Library / Wikimedia Commons, Public Domain.
 - `assets/archive/cholula-1877.webp`: Félix Parra, `Episodios de la conquista:
   La matanza de Cholula` (1877), Wikimedia Commons, Public Domain.
+- `assets/archive/cholula-pyramid.webp`: modern photograph of the Great Pyramid
+  of Cholula archaeological zone and the church above it, by
+  `carvallo.pedro`, Wikimedia Commons, CC BY-SA 3.0. The downloaded source was
+  resized to a 2200 × 1650 WebP derivative; the visible caption identifies it
+  as a modern archaeological view rather than a 1519 event image.
 - `assets/archive/cortes-landing-bl.webp`: sixteenth-century European manuscript
   depiction of Cortés landing in 1519, British Library Add MS 37177,
   Wikimedia Commons, CC0. It is labelled as a later depiction rather than an

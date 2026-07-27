@@ -5,7 +5,7 @@ import test from "node:test";
 const repoFile = (path) => new URL(`../${path}`, import.meta.url);
 const readText = async (path) => readFile(repoFile(path), "utf8");
 
-test("La Malinche keeps the 41-screen beginner-first editorial and evidence contract", async () => {
+test("La Malinche keeps the 52-screen beginner-first editorial and evidence contract", async () => {
   const [html, css, js, manifestText, configText, registry] = await Promise.all([
     readText("sites/la-malinche/index.html"),
     readText("sites/la-malinche/assets/site.css"),
@@ -17,7 +17,7 @@ test("La Malinche keeps the 41-screen beginner-first editorial and evidence cont
   const manifest = JSON.parse(manifestText);
   const config = JSON.parse(configText);
 
-  assert.equal((html.match(/data-screen="/g) ?? []).length, 41);
+  assert.equal((html.match(/data-screen="/g) ?? []).length, 52);
   for (const chapter of [
     "before",
     "translator",
@@ -39,19 +39,26 @@ test("La Malinche keeps the 41-screen beginner-first editorial and evidence cont
   assert.match(html, /BV1A72vBQEEJ/);
   assert.match(html, /BV1iWBeBEEFg/);
   assert.match(html, /malinche-cutout\.png/);
-  assert.match(html, /codex-azcatitlan\.webp/);
   assert.match(html, /tenochtitlan-1524\.webp/);
-  assert.match(html, /1519 · 西班牙人登陆/);
-  assert.match(html, /特拉斯卡拉 · 是什么/);
-  assert.match(html, /特拉斯卡拉 · 为什么先战后盟/);
-  assert.match(html, /乔卢拉 · 是什么/);
-  assert.match(html, /乔卢拉 · 发生了什么/);
+  assert.match(html, /1519 · 波顿查恩战败/);
+  assert.match(html, /先认识特拉斯卡拉/);
+  assert.match(html, /特拉斯卡拉 · 从战争到联盟/);
+  assert.match(html, /先认识乔卢拉/);
+  assert.match(html, /1519 · 乔卢拉大屠杀/);
   assert.match(html, /波顿查恩战败/);
   assert.match(html, /moctezuma-mendoza\.webp/);
   assert.match(html, /cortes-weiditz\.webp/);
+  assert.match(html, /cholula-pyramid\.webp/);
   assert.equal((html.match(/assets\/tsrat-logo\.png/g) ?? []).length, 2);
-  assert.match(html, /1492 不是起点/);
-  assert.match(html, /征服已经被练习过/);
+  assert.match(html, /中部美洲 · 城邦林立/);
+  assert.match(html, /三国同盟 · 贡赋圈/);
+  assert.match(html, /神祇 · 战争 · 祭祀 · 奴役/);
+  assert.match(html, /Doña Marina/);
+  assert.match(html, /托托纳克 · 第一场政治谈判/);
+  assert.match(html, /视野越过海岸/);
+  assert.match(html, /什么是西班牙殖民地/);
+  assert.match(html, /科尔特斯在古巴/);
+  assert.match(html, /韦拉克鲁斯 · 法律上的脱离/);
   assert.match(html, /为什么能不断变大/);
   assert.match(html, /托斯卡特尔节/);
   assert.match(html, /翻译者的边界/);
@@ -66,7 +73,7 @@ test("La Malinche keeps the 41-screen beginner-first editorial and evidence cont
   assert.match(js, /aria-pressed/);
   assert.equal(manifest.series, "时间的女儿 · 003");
   assert.equal(config.hub.eyebrow, "DAUGHTERS OF TIME · 003");
-  assert.equal(manifest.contentSource.screens, 41);
+  assert.equal(manifest.contentSource.screens, 52);
   assert.equal(manifest.analytics.provider, "none");
   assert.equal(manifest.analytics.persistence, false);
 });
@@ -79,6 +86,7 @@ test("La Malinche source assets and generated mirror are complete", async () => 
     "sites/la-malinche/assets/archive/malinche-tlaxcala.webp",
     "sites/la-malinche/assets/archive/tenochtitlan-1524.webp",
     "sites/la-malinche/assets/archive/cholula-1877.webp",
+    "sites/la-malinche/assets/archive/cholula-pyramid.webp",
     "sites/la-malinche/assets/archive/cortes-landing-bl.webp",
     "sites/la-malinche/assets/archive/tlaxcala-map.webp",
     "sites/la-malinche/assets/archive/moctezuma-mendoza.webp",

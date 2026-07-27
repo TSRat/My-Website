@@ -161,26 +161,26 @@ p { line-height: 1.85; }
 .evidence-note summary { padding: .85rem 0; cursor: pointer; font-weight: 700; }
 .evidence-note p { padding: 0 0 1rem; margin: 0; font-size: .88rem; }
 
-/* 00 — cut-out poster */
+/* 00 — profile table and proportional cut-out */
 .hero { min-height: 112svh; background: var(--ink); color: var(--bone); }
-.hero-jade { position: absolute; inset: 0 58% 0 0; background: var(--jade); }
+.hero-jade { position: absolute; inset: 0 55% 0 0; background: var(--jade); }
 .hero-jade::after {
   position: absolute;
   inset: 0;
   content: "";
   background: repeating-linear-gradient(90deg, transparent 0 42px, rgba(255,255,255,.06) 43px);
 }
-.hero-copy { position: absolute; z-index: 2; top: 14vh; left: 5vw; width: 42vw; }
-.hero-copy h1 { margin: 0; color: var(--gold); font-size: clamp(5rem, 13vw, 12rem); line-height: .86; letter-spacing: -.075em; }
+.hero-copy { position: absolute; z-index: 2; top: 12vh; left: 5vw; width: 38vw; }
+.hero-copy h1 { margin: 0; color: var(--gold); font-size: clamp(5rem, 9.5vw, 9.5rem); line-height: .92; letter-spacing: -.065em; }
 .hero-overline { margin: 0 0 1rem; font-size: .62rem; letter-spacing: .2em; }
-.hero-question { margin: 3rem 0 1.6rem; font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 4.8rem); font-weight: 900; line-height: 1.06; letter-spacing: -.02em; }
+.hero-question { margin: 2rem 0 1.5rem; max-width: 550px; font-family: var(--serif); font-size: clamp(1.8rem, 2.8vw, 3.25rem); font-weight: 900; line-height: 1.2; letter-spacing: -.015em; text-wrap: balance; }
 .hero-copy .body-copy { width: min(430px, 90%); font-size: .9rem; }
-.scroll-cue { display: inline-block; margin-top: 1rem; color: var(--gold); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-decoration: none; }
+.scroll-cue { position: absolute; z-index: 3; left: 5vw; bottom: 2.2rem; display: inline-block; color: var(--gold); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-decoration: none; }
 .hero-portrait {
   position: absolute;
   z-index: 1;
-  right: 15vw;
-  bottom: -1rem;
+  right: 5vw;
+  bottom: 0;
   width: auto;
   height: min(92svh, 1180px);
   aspect-ratio: 1065 / 1476;
@@ -188,23 +188,27 @@ p { line-height: 1.85; }
   filter: contrast(1.08);
 }
 .hero-portrait img { width: auto; height: 100%; object-fit: contain; }
-.hero-index {
+.hero-portrait figcaption { position: absolute; right: 0; bottom: 1rem; width: 19rem; color: rgba(244,236,220,.68); text-align: right; }
+.hero-facts {
   position: absolute;
-  z-index: 0;
-  top: 13vh;
-  right: 4vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  color: rgba(244,236,220,.13);
-  font: 900 clamp(7rem, 15vw, 15rem)/.64 var(--sans);
+  z-index: 3;
+  left: 5vw;
+  bottom: 5.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 38vw;
+  margin: 0;
+  border-top: 1px solid rgba(244,236,220,.6);
+  border-left: 1px solid rgba(244,236,220,.6);
 }
-.hero-index b { margin-top: 2rem; color: var(--red); font-size: clamp(2.5rem, 5vw, 5.5rem); }
+.hero-facts div { min-height: 78px; padding: .85rem 1rem; border-right: 1px solid rgba(244,236,220,.6); border-bottom: 1px solid rgba(244,236,220,.6); }
+.hero-facts dt { color: var(--gold); font-size: .7rem; font-weight: 900; letter-spacing: .06em; }
+.hero-facts dd { margin: .4rem 0 0; font-size: .72rem; line-height: 1.55; }
 
 /* 01 — typographic name atlas */
 .name-atlas { background: var(--bone); }
 .name-atlas .scene-inner { padding-bottom: 7rem; }
-.name-atlas h2 { max-width: 820px; }
+.name-atlas h2 { max-width: none; font-size: clamp(3.4rem, 5vw, 5.5rem); white-space: nowrap; }
 .name-intro { margin-left: 35%; }
 .name-controls { display: grid; grid-template-columns: .65fr 1.25fr 1.25fr 1.25fr; margin-top: 5rem; border-top: 2px solid var(--ink); }
 .name-control {
@@ -233,7 +237,7 @@ p { line-height: 1.85; }
   padding: 8rem 5vw 5rem;
   border-right: 1px solid var(--ink);
 }
-.primer-title h2 { color: var(--jade); font-size: clamp(3.4rem, 5.5vw, 6rem); }
+.primer-title h2 { color: var(--jade); font-size: clamp(3.4rem, 4.4vw, 4.8rem); }
 .primer-title .lead { margin: 0; max-width: 560px; }
 .primer-panels { display: grid; grid-template-rows: repeat(3, 1fr); }
 .primer-panels article { display: grid; grid-template-columns: 120px 1fr; gap: 1.5rem; align-content: center; padding: 2.5rem 5vw; border-bottom: 1px solid var(--ink); }
@@ -276,9 +280,10 @@ p { line-height: 1.85; }
 .chapter-before .gate-copy h2 { font-size: clamp(2.8rem, 4.2vw, 4.6rem); }
 .chapter-conqueror .gate-copy h2,
 .chapter-endgame .gate-copy h2 { font-size: clamp(2.9rem, 4vw, 4.4rem); }
-.gate-note { align-self: end; margin: 0; padding: 2rem 1.4rem 5rem; border-left: 1px solid var(--ink); font-size: .76rem; writing-mode: vertical-rl; }
+.gate-note { align-self: end; margin: 0; padding: 2rem 4.5rem 5rem 1.4rem; border-left: 1px solid var(--ink); font-size: .76rem; writing-mode: vertical-rl; }
 .chapter-translator { background: var(--blue); color: var(--bone); }
 .chapter-translator .gate-number { background: var(--gold); color: var(--ink); }
+.chapter-translator .gate-copy h2 { font-size: clamp(3rem, 4.4vw, 5.1rem); }
 .chapter-conqueror { background: var(--ink); color: var(--bone); }
 .chapter-conqueror .gate-number { background: var(--red); color: var(--bone); }
 .chapter-endgame { background: #cabf9e; }
@@ -287,7 +292,56 @@ p { line-height: 1.85; }
 .arrival-list { align-self: end; margin: 0; padding: 3rem 1rem 4rem; border-left: 1px solid currentColor; list-style: decimal-leading-zero inside; font-size: .78rem; }
 .arrival-list li { padding: 1rem 0; border-bottom: 1px solid currentColor; }
 
-/* 04 — full archival wall */
+/* 05–07 — three distinct introductions to the pre-contact world */
+.meso-polities {
+  background:
+    linear-gradient(rgba(17,16,13,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17,16,13,.055) 1px, transparent 1px),
+    var(--bone);
+  background-size: 48px 48px;
+}
+.meso-polities .scene-inner { position: relative; z-index: 1; }
+.meso-polities h2 { max-width: 850px; color: var(--jade); }
+.meso-polities .lead { margin-left: 36%; }
+.polity-field { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: var(--display-gap); border: 2px solid var(--ink); }
+.polity-field article { min-height: 170px; padding: 1.5rem; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.polity-field article:nth-child(3n) { border-right: 0; }
+.polity-field article:nth-child(n+4) { border-bottom: 0; }
+.polity-field article:nth-child(1) { background: var(--jade); color: var(--bone); }
+.polity-field article:nth-child(4) { background: var(--gold); }
+.polity-field b, .polity-field span { display: block; }
+.polity-field b { margin-bottom: 2.5rem; font: 700 clamp(1.2rem, 2vw, 2rem)/1.3 var(--serif); }
+.polity-field span { font-size: .78rem; }
+
+.tribute-network { display: grid; grid-template-columns: 54% 46%; min-height: 108svh; background: var(--gold); }
+.tribute-network figure { position: relative; margin: 0; overflow: hidden; background: #9a8c66; }
+.tribute-network figure img { width: 100%; height: 100%; object-fit: cover; }
+.tribute-network figure::after { position: absolute; inset: 0; content: ""; box-shadow: inset -18px 0 0 var(--red); pointer-events: none; }
+.tribute-network figcaption { position: absolute; inset: auto 2rem 2rem; width: max-content; padding: .5rem .7rem; background: var(--ink); color: var(--bone); }
+.tribute-copy { align-self: center; padding: 8rem 5vw; }
+.tribute-copy h2 { max-width: 760px; font-size: clamp(3.2rem, 4.8vw, 5.3rem); }
+.tribute-copy > p { max-width: 690px; }
+.tribute-flow { display: grid; grid-template-columns: 1fr; gap: .45rem; margin: var(--display-gap) 0; border-left: 8px solid var(--red); padding-left: 1.5rem; }
+.tribute-flow span, .tribute-flow strong { font: 700 clamp(1.2rem, 2vw, 2rem)/1.35 var(--serif); }
+.tribute-flow i { font-size: .72rem; font-style: normal; letter-spacing: .1em; }
+
+.ritual-society { display: grid; grid-template-columns: .8fr 1.2fr; min-height: 108svh; background: var(--jade-dark); color: var(--bone); }
+.ritual-society::before {
+  position: absolute; inset: 0; content: ""; opacity: .09;
+  background: url("./creator/aztec-sun-motif.svg") -12vw center / 58vw no-repeat;
+}
+.ritual-title { position: relative; z-index: 1; align-self: center; padding: 8rem 5vw; }
+.ritual-title h2 { color: var(--gold); font-size: clamp(3rem, 4.2vw, 4.7rem); }
+.ritual-title p { max-width: 590px; }
+.ritual-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; margin: 5rem 5vw 5rem 0; border: 1px solid rgba(244,236,220,.55); }
+.ritual-grid article { display: flex; flex-direction: column; justify-content: flex-end; min-height: 42svh; padding: 2rem; border-right: 1px solid rgba(244,236,220,.4); border-bottom: 1px solid rgba(244,236,220,.4); }
+.ritual-grid article:nth-child(2n) { border-right: 0; }
+.ritual-grid article:nth-child(n+3) { border-bottom: 0; }
+.ritual-grid article:nth-child(2), .ritual-grid article:nth-child(3) { background: rgba(212,169,52,.12); }
+.ritual-grid b { color: var(--gold); font: 700 clamp(1.4rem, 2.2vw, 2.2rem)/1.3 var(--serif); }
+.ritual-grid p { margin: 1rem 0 0; font-size: .82rem; }
+
+/* 08 — diagonal map */
 .archive-bleed { min-height: 110svh; background: #a99777; }
 .archive-wall { position: absolute; inset: 0 24% 0 0; margin: 0; overflow: hidden; }
 .archive-wall img { width: 100%; height: 100%; object-fit: cover; filter: sepia(.2) contrast(1.08); }
@@ -308,13 +362,22 @@ p { line-height: 1.85; }
 /* 05 — diagonal map */
 .origin-map { min-height: 105svh; background: var(--gold); }
 .origin-copy { position: absolute; z-index: 2; top: 14%; left: 6%; width: 34%; }
-.origin-copy h3 { font-size: clamp(3.4rem, 5.5vw, 6rem); }
+.origin-copy h3 { font-size: clamp(3.2rem, 4.4vw, 4.7rem); }
 .origin-figure { position: absolute; inset: 8% -5% 7% 42%; margin: 0; transform: rotate(-3deg); }
 .origin-figure img { width: 100%; height: 100%; border: 12px solid var(--bone); object-fit: cover; box-shadow: -30px 30px 0 var(--red); }
 .origin-figure figcaption { position: absolute; right: 1rem; bottom: 1rem; padding: .5rem; background: var(--bone); }
 .origin-edge { position: absolute; left: 6%; bottom: 7%; width: 30%; border-top: 2px solid var(--ink); padding-top: 1rem; font-weight: 700; }
 
-/* 06 — ledger */
+/* 09 — evidence for a possible noble childhood */
+.noble-evidence { background: #dad1bd; }
+.noble-evidence h2 { max-width: 1080px; font-size: clamp(3rem, 4.6vw, 5rem); }
+.noble-evidence .lead { margin-left: 28%; }
+.evidence-stack { margin-top: var(--display-gap); border-top: 2px solid var(--ink); }
+.evidence-stack div { display: grid; grid-template-columns: .7fr 1.7fr; gap: 3rem; min-height: 110px; align-items: center; border-bottom: 1px solid var(--ink); }
+.evidence-stack b { color: var(--red); font: 700 clamp(1.1rem, 1.7vw, 1.55rem)/1.4 var(--serif); }
+.evidence-stack p { margin: 0; max-width: 720px; }
+
+/* legacy ledger */
 .uncertainty-ledger { background: #dad1bd; }
 .uncertainty-ledger h2 { max-width: 1050px; font-size: clamp(3rem, 4.4vw, 4.8rem); }
 .ledger { margin-top: 4rem; border-top: 3px solid var(--ink); }
@@ -326,7 +389,7 @@ p { line-height: 1.85; }
 /* 07 — split testimony */
 .split-testimony { display: grid; grid-template: 1fr 1fr / 1fr 1fr; min-height: 100svh; background: var(--bone); }
 .split-title { grid-column: 1 / -1; align-self: center; padding: 7rem 6vw 3rem; }
-.split-title h2 { margin: 0; }
+.split-title h2 { margin: 0 0 var(--copy-gap); }
 .split-title p { max-width: 560px; margin-left: auto; }
 .testimony { position: relative; padding: 3rem 6vw 6rem; border-top: 2px solid var(--ink); }
 .testimony + .testimony { border-left: 2px solid var(--ink); }
@@ -412,6 +475,102 @@ p { line-height: 1.85; }
 .name-echo .lead { margin-left: 28%; }
 .name-echo blockquote { max-width: 780px; margin: 4rem 0 0 auto; border-left: 12px solid var(--red); padding-left: 2rem; font: 700 clamp(1.5rem, 3vw, 3rem)/1.4 var(--serif); }
 
+/* 16–22 — translator's rise, constraint, and the visual turn toward Spain */
+.dona-marina { display: grid; grid-template-columns: 58% 42%; min-height: 104svh; background: var(--gold); }
+.dona-title { align-self: center; padding: 8rem 6vw; }
+.dona-title h2 { max-width: 850px; font-size: clamp(3.2rem, 3.8vw, 4.3rem); }
+.dona-title h2 i { color: var(--red); }
+.dona-title > p:last-child { max-width: 720px; font-size: 1rem; }
+.dona-ledger { display: grid; grid-template-rows: repeat(3, 1fr); background: var(--ink); color: var(--bone); }
+.dona-ledger article { display: grid; align-content: center; padding: 3rem 5vw; border-bottom: 1px solid rgba(244,236,220,.35); }
+.dona-ledger article:last-child { border-bottom: 0; background: var(--jade); }
+.dona-ledger b { margin-bottom: 1.2rem; color: var(--gold); font: 700 clamp(1.4rem, 2.2vw, 2.2rem)/1.3 var(--serif); }
+.dona-ledger p { margin: 0; max-width: 600px; }
+
+.captive-duality { min-height: 110svh; background: var(--ink); color: var(--bone); }
+.captive-duality figure { position: absolute; inset: 0; margin: 0; }
+.captive-duality figure::after { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgba(17,16,13,.05) 0 38%, rgba(17,16,13,.94) 75%); }
+.captive-duality figure img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+.captive-duality figcaption { position: absolute; z-index: 1; inset: auto auto 1rem 1rem; padding: .55rem .7rem; background: rgba(17,16,13,.86); }
+.captive-copy { position: absolute; z-index: 2; top: 50%; right: 5vw; width: min(620px, 43vw); transform: translateY(-50%); }
+.captive-copy h2 { color: var(--gold); font-size: clamp(3.1rem, 4.6vw, 5.1rem); }
+.captive-copy > p { max-width: 580px; }
+
+.totonac-awakening { display: grid; grid-template-columns: 58% 42%; min-height: 105svh; background: var(--bone); }
+.totonac-awakening figure { position: relative; margin: 0; overflow: hidden; background: #b3a98f; }
+.totonac-awakening figure img { width: 100%; height: 100%; object-fit: cover; }
+.totonac-awakening figcaption { position: absolute; inset: auto 1rem 1rem; padding: .5rem .7rem; background: var(--ink); color: var(--bone); }
+.totonac-copy { align-self: center; padding: 8rem 5vw; background: var(--gold); }
+.totonac-copy h2 { font-size: clamp(3rem, 4.2vw, 4.8rem); }
+.totonac-copy strong { display: block; margin-top: var(--copy-gap); border-top: 2px solid var(--ink); padding-top: 1.4rem; font: 700 clamp(1.1rem, 1.7vw, 1.55rem)/1.6 var(--serif); }
+
+.spanish-listening { display: grid; place-items: center; min-height: 108svh; background: var(--jade-dark); color: var(--bone); }
+.listening-word { position: absolute; left: -2vw; bottom: -3vw; color: rgba(212,169,52,.1); font: 900 clamp(8rem, 24vw, 25rem)/.78 var(--sans); letter-spacing: -.1em; }
+.listening-copy { position: relative; z-index: 1; width: min(950px, 82vw); margin-left: 18vw; }
+.listening-copy h2 { color: var(--gold); font-size: clamp(3.4rem, 5.4vw, 6rem); }
+.listening-copy p { max-width: 680px; }
+.listening-copy p + p { margin: var(--copy-gap) 0 0 auto; border-left: 8px solid var(--red); padding-left: 1.5rem; }
+
+.spain-threshold { display: grid; grid-template-columns: 44% 56%; min-height: 108svh; background: var(--red); color: var(--bone); }
+.threshold-meso { display: flex; flex-direction: column; justify-content: flex-end; padding: 8rem 5vw; background: var(--jade); }
+.threshold-meso span { margin-bottom: 1rem; font-size: .72rem; letter-spacing: .14em; }
+.threshold-meso strong { color: var(--gold); font: 700 clamp(2.2rem, 4vw, 4.2rem)/1.35 var(--serif); }
+.threshold-rip { position: absolute; z-index: 1; left: calc(44% - 45px); top: 0; width: 90px; height: 100%; background: var(--bone); clip-path: polygon(45% 0, 83% 8%, 42% 19%, 75% 31%, 34% 45%, 73% 58%, 39% 70%, 79% 84%, 45% 100%, 0 100%, 0 0); }
+.threshold-spain { align-self: center; padding: 8rem 7vw 7rem 9vw; }
+.threshold-spain h2 { color: var(--gold); font-size: clamp(3.2rem, 5vw, 5.6rem); }
+.threshold-spain p { max-width: 720px; }
+
+/* 23–30 — Spanish archive chapter */
+.navigation-age { display: grid; grid-template-columns: .9fr 1.1fr; min-height: 105svh; background: var(--blue); color: var(--bone); }
+.navigation-age::before {
+  position: absolute; inset: 0; content: ""; opacity: .16;
+  background: repeating-radial-gradient(circle at 74% 52%, transparent 0 74px, var(--gold) 75px 76px);
+}
+.navigation-copy { position: relative; z-index: 1; align-self: center; padding: 8rem 5vw; }
+.navigation-copy h2 { color: var(--gold); font-size: clamp(3.2rem, 4.5vw, 5rem); }
+.navigation-copy p { max-width: 640px; }
+.navigation-diagram { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; margin: 8rem 5vw 6rem 0; border: 1px solid rgba(244,236,220,.5); }
+.navigation-diagram span { display: flex; flex-direction: column; justify-content: flex-end; min-height: 36svh; padding: 2rem; border-right: 1px solid rgba(244,236,220,.4); border-bottom: 1px solid rgba(244,236,220,.4); }
+.navigation-diagram span:nth-child(2n) { border-right: 0; }
+.navigation-diagram span:nth-child(n+3) { border-bottom: 0; }
+.navigation-diagram b { margin-bottom: 1rem; color: var(--gold); font: 700 clamp(1.3rem, 2.1vw, 2.1rem)/1.3 var(--serif); }
+
+.columbus-crossing { min-height: 104svh; background: var(--red); color: var(--bone); }
+.crossing-year { position: absolute; left: -4vw; top: 50%; color: rgba(17,16,13,.2); font: 900 clamp(12rem, 32vw, 32rem)/.8 var(--sans); transform: translateY(-50%); }
+.crossing-copy { position: absolute; z-index: 1; top: 50%; right: 7vw; width: min(680px, 45vw); transform: translateY(-50%); }
+.crossing-copy h2 { color: var(--gold); font-size: clamp(3.1rem, 4.4vw, 4.9rem); }
+.crossing-copy ol { margin: var(--display-gap) 0 0; padding: 0; border-top: 1px solid currentColor; list-style: none; }
+.crossing-copy li { display: grid; grid-template-columns: 100px 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid currentColor; }
+.crossing-copy li b { color: var(--gold); }
+
+.colony-system { display: grid; grid-template-columns: .8fr 1.2fr; min-height: 108svh; background: var(--paper); }
+.colony-title { align-self: center; padding: 8rem 5vw; }
+.colony-title h2 { color: var(--red); font-size: clamp(3.2rem, 4.5vw, 5rem); }
+.colony-machine { display: grid; grid-template-columns: 1fr 1fr; margin: 5rem 5vw 5rem 0; border: 2px solid var(--ink); }
+.colony-machine article { display: flex; flex-direction: column; justify-content: flex-end; min-height: 42svh; padding: 2rem; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.colony-machine article:nth-child(2n) { border-right: 0; }
+.colony-machine article:nth-child(n+3) { border-bottom: 0; }
+.colony-machine article:last-child { background: var(--red); color: var(--bone); }
+.colony-machine b { color: var(--blue); font: 700 clamp(1.5rem, 2.5vw, 2.5rem)/1.3 var(--serif); }
+.colony-machine article:last-child b { color: var(--gold); }
+
+.decision-merge { display: grid; grid-template-columns: .9fr 1.1fr; min-height: 108svh; background: var(--gold); }
+.decision-question { align-self: center; padding: 8rem 5vw; }
+.decision-question h2 { max-width: 760px; font-size: clamp(3.2rem, 4.8vw, 5.4rem); }
+.decision-balance { display: grid; grid-template-columns: 1fr 1fr; background: var(--blue); color: var(--bone); }
+.decision-balance article { display: flex; flex-direction: column; justify-content: flex-end; min-height: 50svh; padding: 2.5rem; border-right: 1px solid rgba(244,236,220,.4); border-bottom: 1px solid rgba(244,236,220,.4); }
+.decision-balance article:nth-child(2n) { border-right: 0; }
+.decision-balance article:nth-child(n+3) { border-bottom: 0; }
+.decision-balance b { color: var(--gold); font: 700 clamp(1.8rem, 3vw, 3rem)/1.2 var(--serif); }
+.decision-balance p { margin: 1rem 0 0; font-size: .82rem; }
+
+.veracruz-charter { min-height: 105svh; background: #c8b98f; }
+.veracruz-charter::after { position: absolute; inset: 0; content: ""; background: repeating-linear-gradient(0deg, transparent 0 52px, rgba(17,16,13,.08) 53px); }
+.charter-seal { position: absolute; z-index: 1; left: 6vw; top: 50%; color: var(--red); font: 900 clamp(7rem, 14vw, 14rem)/.72 var(--serif); transform: translateY(-50%) rotate(-6deg); opacity: .2; }
+.charter-copy { position: relative; z-index: 2; width: min(900px, 60vw); margin-left: auto; padding: 12rem 8vw 7rem 0; }
+.charter-copy h2 { color: var(--red); font-size: clamp(3.2rem, 4.8vw, 5.3rem); }
+.charter-copy strong { display: block; margin-top: var(--display-gap); border-left: 10px solid var(--red); padding-left: 1.5rem; font: 700 clamp(1.2rem, 2vw, 2rem)/1.55 var(--serif); }
+
 /* 16 — Iberia before the Atlantic turn */
 .iberia-context {
   display: grid;
@@ -442,7 +601,7 @@ p { line-height: 1.85; }
 .iberia-rulers figure:nth-child(2) img { object-position: 48% 18%; }
 .iberia-rulers figcaption { position: absolute; inset: auto .6rem .6rem; padding: .4rem .5rem; background: rgba(17,16,13,.84); }
 .iberia-copy { align-self: end; padding: 17rem 5vw 7rem 11vw; }
-.iberia-copy h2 { max-width: 820px; color: var(--gold); font-size: clamp(3.2rem, 4.8vw, 5.5rem); }
+.iberia-copy h2 { max-width: 820px; color: var(--gold); font-size: clamp(3.2rem, 3.9vw, 4.4rem); }
 .iberia-copy .lead { max-width: 780px; font-size: clamp(1.05rem, 1.65vw, 1.5rem); }
 .context-ledger { display: grid; grid-template-columns: 1fr 1fr; margin: var(--display-gap) 0 0; border-top: 1px solid rgba(244,236,220,.5); }
 .context-ledger div { padding: 1.35rem 1.2rem 0 0; }
@@ -466,7 +625,7 @@ p { line-height: 1.85; }
   padding: 8rem 5vw;
   background: var(--gold);
 }
-.atlantic-copy h2 { max-width: 800px; font-size: clamp(3.1rem, 4.4vw, 5rem); }
+.atlantic-copy h2 { max-width: 800px; font-size: clamp(3.1rem, 3.55vw, 4rem); }
 .atlantic-copy > p:not(.eyebrow, .source-caution) { max-width: 720px; font-size: 1rem; }
 .atlantic-copy blockquote { margin: var(--copy-gap) 0; border-left: 10px solid var(--red); padding-left: 1.5rem; font: 700 clamp(1.3rem, 2vw, 2rem)/1.55 var(--serif); }
 .source-caution { margin: 0; padding-top: 1rem; border-top: 1px solid var(--ink); font-size: .76rem; }
@@ -476,7 +635,7 @@ p { line-height: 1.85; }
 .mesoamerican-sun { position: absolute; right: -10vw; top: -16vw; width: min(52vw, 820px); opacity: .06; filter: invert(1); }
 .expedition-title { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; align-items: end; column-gap: 6vw; }
 .expedition-title .eyebrow, .expedition-title h2 { grid-column: 1; }
-.expedition-title h2 { margin-bottom: 0; color: var(--gold); font-size: clamp(3.2rem, 4.8vw, 5.4rem); }
+.expedition-title h2 { margin-bottom: 0; color: var(--gold); font-size: clamp(3.2rem, 3.8vw, 4.3rem); }
 .expedition-title > p:last-child { grid-column: 2; margin: 0; max-width: 620px; }
 .expedition-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 5rem; border: 1px solid rgba(244,236,220,.5); }
 .expedition-grid article { min-height: 280px; padding: 2rem; border-right: 1px solid rgba(244,236,220,.5); }
@@ -523,6 +682,10 @@ p { line-height: 1.85; }
 
 /* 19 — Cholula before the massacre */
 .cholula-context { display: grid; grid-template-columns: .8fr 1.2fr; min-height: 105svh; background: var(--gold); }
+.cholula-photo { position: relative; margin: 0; overflow: hidden; background: var(--red); }
+.cholula-photo::after { position: absolute; inset: 0; content: ""; box-shadow: inset -16px 0 0 var(--red); pointer-events: none; }
+.cholula-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 46% center; }
+.cholula-photo figcaption { position: absolute; z-index: 1; inset: auto 1rem 1rem; max-width: 520px; padding: .6rem .75rem; background: rgba(17,16,13,.86); color: var(--bone); }
 .cholula-monument { position: relative; display: grid; place-items: center; overflow: hidden; background: var(--red); color: var(--bone); }
 .cholula-monument span { position: absolute; top: 9rem; left: 3vw; font: 900 clamp(4rem, 8vw, 8rem)/1 var(--serif); }
 .cholula-monument i {
@@ -550,7 +713,7 @@ p { line-height: 1.85; }
 .cholula-canvas figure img { width: 100%; height: 100%; object-fit: cover; }
 .cholula-canvas figcaption { position: absolute; z-index: 1; left: 1rem; bottom: 1rem; padding: .5rem; background: var(--bone); color: var(--ink); }
 .cholula-copy { position: absolute; z-index: 2; top: 10%; right: 4%; width: min(680px, 45%); padding: 2.5rem; border-top: 10px solid var(--red); background: rgba(17,16,13,.9); }
-.cholula-copy h2 { color: var(--gold); font-size: clamp(3rem, 4.4vw, 4.8rem); }
+.cholula-copy h2 { color: var(--gold); font-size: clamp(3rem, 3.2vw, 3.65rem); }
 .cholula-verdict { margin: var(--copy-gap) 0; padding: 1.1rem; background: var(--bone); color: var(--ink); }
 .cholula-verdict strong { color: var(--red); font-family: var(--serif); }
 .cholula-verdict p { margin: .45rem 0 0; font-size: .78rem; line-height: 1.6; }
@@ -810,11 +973,11 @@ p { line-height: 1.85; }
   .scene { min-height: auto; }
   .scene-inner { width: 88vw; padding: 6.5rem 0 5rem; }
 
-  .hero { min-height: 920px; }
-  .hero-jade { inset: 0 0 46% 0; }
+  .hero { min-height: 1120px; }
+  .hero-jade { inset: 0 0 52% 0; }
   .hero-copy { top: 6.5rem; left: 6vw; width: 88vw; }
-  .hero-copy h1 { font-size: clamp(5rem, 25vw, 8rem); }
-  .hero-question { font-size: 2.5rem; }
+  .hero-copy h1 { font-size: clamp(4.8rem, 23vw, 7rem); }
+  .hero-question { margin-top: 1.4rem; font-size: 2.15rem; }
   .hero-question {
     width: max-content;
     max-width: 92%;
@@ -822,10 +985,22 @@ p { line-height: 1.85; }
     background: rgba(17, 16, 13, .74);
     text-shadow: 0 2px 0 var(--ink);
   }
-  .hero-copy .body-copy { display: none; }
-  .hero-portrait { right: -9vw; bottom: 0; width: 92vw; height: auto; aspect-ratio: 1065 / 1476; }
+  .hero-copy .body-copy {
+    display: block;
+    width: calc(100vw - 12vw);
+    max-width: none;
+    white-space: normal;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    font-size: .82rem;
+  }
+  .hero-portrait { right: -8vw; bottom: 0; width: 78vw; height: auto; aspect-ratio: 1065 / 1476; }
   .hero-portrait img { height: auto; }
-  .hero-index { top: 50%; right: auto; left: 5vw; font-size: 8rem; }
+  .hero-portrait figcaption { right: 9vw; bottom: 1rem; width: 16rem; }
+  .hero-facts { left: 6vw; bottom: 15rem; grid-template-columns: 1fr; width: 46vw; }
+  .hero-facts div { min-height: auto; padding: .65rem .75rem; }
+  .hero-facts div:nth-child(3), .hero-facts div:nth-child(4) { display: none; }
+  .scroll-cue { left: 6vw; bottom: 11.5rem; }
 
   .name-intro, .name-echo .lead { margin-left: 0; }
   .name-controls { grid-template-columns: 1fr; }
@@ -837,6 +1012,19 @@ p { line-height: 1.85; }
   .reader-primer { grid-template-columns: 1fr; }
   .primer-title { padding: 7rem 6vw 4rem; border-right: 0; border-bottom: 1px solid var(--ink); }
   .primer-panels article { padding-inline: 6vw; }
+
+  .meso-polities .lead, .noble-evidence .lead { margin-left: 0; }
+  .polity-field { grid-template-columns: 1fr 1fr; }
+  .polity-field article:nth-child(3n) { border-right: 1px solid var(--ink); }
+  .polity-field article:nth-child(2n) { border-right: 0; }
+  .polity-field article:nth-child(n+4) { border-bottom: 1px solid var(--ink); }
+  .polity-field article:nth-child(n+5) { border-bottom: 0; }
+  .tribute-network, .ritual-society { grid-template-columns: 1fr; }
+  .tribute-network figure { min-height: 560px; }
+  .tribute-copy, .ritual-title { padding: 5rem 6vw; }
+  .ritual-grid { margin: 0 6vw 5rem; }
+  .ritual-grid article { min-height: 300px; }
+  .evidence-stack div { grid-template-columns: 1fr; gap: .6rem; padding: 1.2rem 0; }
 
   .chapter-gate { grid-template-columns: 88px 1fr; min-height: 780px; }
   .gate-number { font-size: 7rem; }
@@ -876,6 +1064,26 @@ p { line-height: 1.85; }
   .translation-bridge { writing-mode: horizontal-tb; }
   .translation-bridge strong { margin: .5rem 0; }
   .name-echo blockquote { margin-left: 0; }
+  .dona-marina, .totonac-awakening, .spain-threshold, .navigation-age,
+  .colony-system, .decision-merge { grid-template-columns: 1fr; }
+  .dona-title, .navigation-copy, .colony-title, .decision-question { padding: 6.5rem 6vw 4rem; }
+  .dona-ledger article { min-height: 260px; padding: 3rem 6vw; }
+  .captive-duality { min-height: 980px; }
+  .captive-duality figure::after { background: linear-gradient(0deg, rgba(17,16,13,.96) 0 56%, rgba(17,16,13,.05) 92%); }
+  .captive-copy { top: auto; right: 6vw; bottom: 4rem; width: 88vw; transform: none; }
+  .totonac-awakening figure { min-height: 520px; }
+  .totonac-copy { padding: 5rem 6vw; }
+  .listening-copy { width: 88vw; margin-left: 0; padding: 7rem 0 5rem; }
+  .threshold-meso { min-height: 460px; padding: 7rem 6vw 4rem; }
+  .threshold-rip { left: 0; top: calc(46% - 36px); width: 100%; height: 72px; clip-path: polygon(0 46%, 10% 10%, 23% 55%, 36% 18%, 49% 66%, 62% 22%, 76% 61%, 88% 16%, 100% 48%, 100% 100%, 0 100%); }
+  .threshold-spain { padding: 6rem 6vw 5rem; }
+  .navigation-diagram, .colony-machine { margin: 0 6vw 5rem; }
+  .navigation-diagram span, .colony-machine article { min-height: 280px; }
+  .crossing-year { top: 8rem; transform: none; font-size: 12rem; }
+  .crossing-copy { position: relative; top: auto; right: auto; width: 88vw; margin: 0 auto; padding: 15rem 0 5rem; transform: none; }
+  .decision-balance article { min-height: 300px; }
+  .charter-copy { width: 88vw; padding: 8rem 6vw 6rem; }
+  .charter-seal { left: -8vw; }
   .iberia-context { grid-template-columns: 1fr; min-height: auto; }
   .iberia-reconquista { min-height: 560px; }
   .iberia-rulers { left: 6%; top: 15%; width: 72%; min-width: 0; }
@@ -905,6 +1113,7 @@ p { line-height: 1.85; }
   .steps-title { padding: 7rem 6vw 3rem; }
   .steps li { min-height: 260px; }
   .cholula-context { grid-template-columns: 1fr; }
+  .cholula-photo { min-height: 580px; }
   .cholula-monument { min-height: 540px; }
   .cholula-monument b { writing-mode: horizontal-tb; }
   .cholula-intro { padding: 5rem 6vw; }
@@ -981,6 +1190,7 @@ p { line-height: 1.85; }
 }
 
 @media (max-width: 560px) {
+  .name-atlas h2 { font-size: clamp(2rem, 8.8vw, 2.3rem); letter-spacing: -.045em; }
   .evidence-line, .source-columns, .steps, .siege-grid { grid-template-columns: 1fr; }
   .evidence-line article, .source-columns article, .siege-grid article { border-right: 0; border-bottom: 1px solid currentColor; }
   .primer-panels article { grid-template-columns: 1fr; }

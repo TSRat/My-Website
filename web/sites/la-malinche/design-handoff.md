@@ -47,6 +47,12 @@
 | `35 · Siege overview` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=14-66> |
 | `36 · City fall` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=14-81> |
 
+### V5 approved 52-scene chronology
+
+| Frame | Node |
+| --- | --- |
+| `v5 · 52-screen chronology + Chapter 2→3 hinge` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=16-2> |
+
 ## Editable system
 
 - Six required pages are present.
@@ -60,9 +66,9 @@
   - `Archive Annotation`
 - Desktop, mobile, translation, selected, annotation, loading, error, and keyboard-focus states are represented.
 - The supplied cut-out, Codex page, and 1524 map are placed as actual image fills.
-- V1, V2, and V3 remain intact for comparison. V4 is the current implementation
-  source for the 41-scene count, enlarged display spacing, Spanish background,
-  interpreter-limit screen, lake blockade, siege mechanics, and city fall.
+- V1–V4 remain intact for comparison. V5 is the current implementation source
+  for the 52-scene count, beginner chronology, Chapter 2 → 3 visual hinge,
+  expanded Spanish background, and revised Tlaxcala / Cholula sequence.
 
 ## Implementation mapping
 

@@ -32,54 +32,65 @@ This is intentionally one public route. Deep links use stable section anchors.
 | `#watch` | Direct screening of the two-part Malinche video |
 | `#sources` | Source, evidence, image-credit, and privacy notes |
 
-## Forty-one-screen reading architecture
+## Fifty-two-screen reading architecture
 
 Every numbered scene is designed to occupy approximately one viewport on a typical device. Long passages can exceed one viewport when content integrity requires it.
 
-1. `00` — Cover: “一个女人，却活在三个名字里”
-2. `01` — Three names: Malintzin / Doña Marina / La Malinche
-3. `02` — Beginner primer: what she was, why she matters, what the site analyses
+1. `00` — Proportional cut-out hero and beginner profile table
+2. `01` — One person, three names
+3. `02` — Who she was and why she matters
 4. `03` — Reading contract: fact / interpretation / framing / metaphor
-5. `04` — A broken political world of city-states
-6. `05` — Aztlan, Nahua, Mexica, and the Triple Alliance
-7. `06` — Oluta at the imperial edge
-8. `07` — A lost birth name and the evidence of courtly speech
-9. `08` — Betrayed into slavery: two explanations held apart
-10. `09` — Xicalango and Potonchán: a forced route south
-11. `10` — Language learned as a means of survival
-12. `11` — Spanish arrival: battle, twenty women, reassignment, language
-13. `12` — Baptism and the name Marina
-14. `13` — The translation chain: Maya ↔ Nahuatl ↔ Spanish
-15. `14` — “Malinche” as a name born between two people
-16. `15` — Beginner question: why the Spaniards came
-17. `16` — Iberia and the 1492 political turn
-18. `17` — The Caribbean as a colonial training ground
-19. `18` — How people, ships, weapons, and alliances enlarged the expedition
-20. `19` — Veracruz, Totonac grievances, and alliance
-21. `20` — Tlaxcala: what the independent, surrounded polity was
-22. `21` — Tlaxcala: why resistance became negotiation and alliance
-23. `22` — Cholula: sacred city, route, and political position
-24. `23` — Cholula: massacre, competing accounts, and responsibility
-25. `24` — The causeway city of Tenochtitlan
-26. `25` — Moctezuma–Malinche–Cortés portrait encounter
-27. `26` — Gold, the sacred precinct, and the seizure of a ruler
-28. `27` — Why reception became occupation
-29. `28` — The Toxcatl festival massacre
-30. `29` — Moctezuma’s failed mediation and collapsing authority
-31. `30` — Interpreter power and the limit of command
-32. `31` — La Noche Triste: retreat through rain, mud, and lake water
-33. `32` — Beginner question: how the coalition returned and surrounded a lake city
-34. `33` — Smallpox, regrouping, and the coalition’s return
-35. `34` — Lake war and thirteen brigantines
-36. `35` — Water, food, roads, and time as siege weapons
-37. `36` — Continued resistance, final assault, and Cuauhtémoc’s capture
-38. `37` — Survivor: diplomacy, family, property, and uncertain death
-39. `38` — Malinchismo: the full-screen red rupture
-40. `39` — Feminist and Indigenous rereadings
-41. `40` — Who betrayed whom? Reader reflection
+5. `04` — Chapter 1 gate: how her world worked before her story
+6. `05` — City-states and multiple political centres
+7. `06` — Triple Alliance, tribute, and imperial pressure
+8. `07` — Gods, warfare, sacrifice, and slavery
+9. `08` — Olutla at the imperial edge
+10. `09` — Evidence for a possible elite childhood
+11. `10` — How a noble girl could be enslaved
+12. `11` — Olutla → Xicalango → Potonchán
+13. `12` — Language as a survival method
+14. `13` — Chapter 2 gate: strangers appear on the coast
+15. `14` — Potonchán’s defeat and the transfer of twenty women
+16. `15` — Baptism and the name Marina
+17. `16` — Why translation produced the position “Doña Marina”
+18. `17` — The Maya–Nahuatl–Spanish translation chain
+19. `18` — The birth of the name “Malinche”
+20. `19` — Public interpreter and privately unfree woman
+21. `20` — Totonac politics and the first coalition opening
+22. `21` — Learning Spanish and recognising the expedition’s ambitions
+23. `22` — Torn visual transition from her known world to Spain
+24. `23` — Atlantic navigation and European expansion
+25. `24` — Spanish political unification and conquistador identity
+26. `25` — Columbus and the 1492 crossing
+27. `26` — What a Caribbean colony was
+28. `27` — Cortés in Cuba
+29. `28` — The people, ships, weapons, and networks of the 1519 expedition
+30. `29` — Malintzin understands the stakes and decides how to act
+31. `30` — Veracruz and Cortés’s legal-political manoeuvre
+32. `31` — Tlaxcala as an independent, pressured polity
+33. `32` — Resistance, negotiation, and alliance
+34. `33` — Cholula as sacred city, trade centre, and political threshold
+35. `34` — The Cholula massacre and contested warning accounts
+36. `35` — The causeway city of Tenochtitlan
+37. `36` — Moctezuma–Malinche–Cortés portrait encounter
+38. `37` — Gold, the sacred precinct, and the seizure of a ruler
+39. `38` — Why reception became occupation
+40. `39` — The Toxcatl festival massacre
+41. `40` — Moctezuma’s failed mediation and collapsing authority
+42. `41` — Interpreter power and the limit of command
+43. `42` — La Noche Triste: retreat through rain, mud, and lake water
+44. `43` — How the coalition returned and surrounded a lake city
+45. `44` — Smallpox, regrouping, and the coalition’s return
+46. `45` — Lake war and thirteen brigantines
+47. `46` — Water, food, roads, and time as siege weapons
+48. `47` — Continued resistance, final assault, and Cuauhtémoc’s capture
+49. `48` — Survivor: diplomacy, family, property, and uncertain death
+50. `49` — Malinchismo: the full-screen red rupture
+51. `50` — Feminist and Indigenous rereadings
+52. `51` — Who betrayed whom? Reader reflection
 
-The direct two-part video theater sits between scenes `37` and `38` without
-changing the manuscript's forty-one numbered scenes.
+The direct two-part video theater sits between scenes `48` and `49` without
+changing the manuscript's fifty-two numbered scenes.
 
 ## Primary reading flow
 
