@@ -32,6 +32,142 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    date: "2026-07-28",
+    displayDate: "2026.07.28",
+    issueNo: "15",
+    theme: "谁在制造我们以为自然的观看、分类与中间地带？",
+    intro:
+      "今天的五个故事都把一个看似自然的结果重新放回生产过程：夜间巴黎如何被镜头与暗房构成，七台射电望远镜怎样依赖持续经费连成一件仪器，梦境如何改写而非照抄清醒经验，政治温和派为何会同时被两边认作外人，警方的性别判断又怎样进入搜查与逮捕。",
+    uniqueCount: 5,
+    topics: ["艺术人文", "社会科学", "女性主义"],
+    stories: [
+      {
+        category: "艺术人文 × 摄影 × 城市与观看史",
+        image: "/story-images/brassai-secret-paris.jpg",
+        imageAlt: "夜间街灯、咖啡馆窗格、墙面涂鸦与暗房接触印相叠合的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于阐释 Brassaï 的夜间巴黎、街头观察与暗房编辑，并非摄影作品复制、巴黎实景、人物肖像或展览视觉",
+        title: "夜间巴黎并不是黑夜自己写成的",
+        summary:
+          "Heide Museum of Modern Art 以 150 余张原版照片回看 Brassaï：所谓“秘密巴黎”并非城市自动显影，而是夜行、取景、长曝光、印相和出版共同制造的观看方式。",
+        happened:
+          "《Brassaï: Secret Paris》于 7 月 25 日在 Melbourne 开幕。展览以 1930 年代的巴黎夜景和城市人物为中心，同时纳入 Brassaï 与 Picasso 等先锋艺术家的交往、超现实主义实验及其持续拍摄的墙面涂鸦。",
+        importance:
+          "Brassaï 的照片常被当作巴黎夜生活的透明证据，但镜头选择、可接近的场所和暗房处理都会决定谁被看见、谁仍留在阴影里。把照片放回制作过程，既不取消它的诗意，也能避免把经过编排的城市想象误认成完整社会记录。",
+        creatorAngle:
+          "选择一个虚构街角，依次加入路灯位置、曝光时长、人物是否同意被看见、裁切和印刷版式；让同一地点生成五种“秘密巴黎”，显示纪实感如何由一连串决定产生。",
+        facts: [
+          "展期为 2026 年 7 月 25 日至 11 月 15 日，地点是 Melbourne 的 Heide Main Galleries",
+          "展览与 Brassaï 遗产管理方合作，汇集 150 余张原版照片，是其作品在澳大利亚迄今最全面的回顾之一",
+          "核心材料包括巴黎及其夜间人物、与 Picasso 等巴黎先锋艺术家的关系、超现实主义实验和墙面涂鸦摄影",
+          "Brassaï 出生于匈牙利，后来在法国工作；展览的策展人为 Emmanuelle de l’Ecotais、Lesley Harding 和 Philippe Ribeyrolles",
+        ],
+        sourceName: "Heide Museum of Modern Art",
+        sourceUrl: "https://www.heide.com.au/exhibitions/brassai/",
+        sourceDate: "展览开幕 2026-07-25；2026-07-28 核验",
+      },
+      {
+        category: "社会科学 × 天文学 × 科研经费与公共基础设施",
+        image: "/story-images/jodrell-bank-funding.jpg",
+        imageAlt: "大型射电碟形天线、七个联网台站、信号波纹与经费时间线构成的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释 Jodrell Bank、e-MERLIN 与科研资金链，并非天文台实景、观测数据、预算文件或机构标识",
+        title: "七台望远镜连成一件仪器，也可能被一条经费线拆开",
+        summary:
+          "英国 STFC 决定不再续资以 Jodrell Bank 为核心的 e-MERLIN；现有经费将在 2028 年 3 月结束，若找不到替代支持，这套国家射电天文网络将停止观测。",
+        happened:
+          "University of Manchester 于 7 月 27 日确认不续资决定，并表示将与政府、公共机构、产业和慈善资金方寻找出路。Jodrell Bank 游客中心仍开放，但科研网络与地标性的 Lovell Telescope 面临不同于场馆运营的资金危机。",
+        importance:
+          "一台射电望远镜的能力不只在巨大碟面，而在多台站同步、工程维护、数据处理和训练有素的人员。经费终止会把一件分布式科学仪器拆成彼此孤立的地点；这与此前简报讨论的人文学岗位缩减不同，是天文观测基础设施及长期数据能力的独立事件。",
+        creatorAngle:
+          "把一次射电观测画成七个节点的共同作品：信号到达、时钟同步、数据传输、相关处理和论文依次展开；然后移除一个经费节点，观察哪些能力不是简单减少七分之一，而是整体失效。",
+        facts: [
+          "e-MERLIN 是由 7 台射电望远镜组成的英国国家射电天文能力，核心设在 Jodrell Bank Observatory",
+          "STFC 决定不再续资，现有资金将在 2028 年 3 月结束；没有替代支持时观测将停止",
+          "Lovell Telescope 于 1957 年完成，当时是世界最大的射电望远镜，也是唯一能追踪 Sputnik 的设备",
+          "Jodrell Bank 同时是 UNESCO 世界遗产地，每年吸引超过 100,000 名访客；游客中心的运营与此次科研经费并非同一资金线",
+          "STFC 表示到 2030 年需节省 1.62 亿英镑；同期英国参与 Rubin Observatory 和 La Palma 观测的投入各削减 20%，BISON 太阳观测网络削减 40%",
+        ],
+        sourceName: "University of Manchester／The Guardian",
+        sourceUrl: "https://www.staffnet.manchester.ac.uk/news/display/?id=34217",
+        sourceDate: "大学回应 2026-07-27；资金影响分析 2026-07-28",
+      },
+      {
+        category: "社会科学 × 心理学 × 梦境与计算语言研究",
+        image: "/story-images/dream-language-model.jpg",
+        imageAlt: "梦境碎片、词语语义网络、睡眠波形与清醒思维轨迹叠合的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释梦境报告、清醒经验与自然语言处理，并非真实参与者、梦境再现、脑部扫描或研究图表",
+        title: "梦不会照抄白天，它会把现实重新剪辑",
+        summary:
+          "研究者以自然语言处理比较 3,700 余份梦境与清醒经验报告，发现梦的内容同时受到心智游移、睡眠质量、个人对梦的重视和 COVID-19 封锁等共同经历影响。",
+        happened:
+          "287 名 18 至 70 岁参与者连续两周记录梦与日常经验，并提供睡眠、人格、认知和心理资料。模型比较文本的语义结构，发现梦会保留熟悉地点与经验碎片，却经常把它们与不相关场景、视角和可能性重新组合。",
+        importance:
+          "这项研究没有证明梦存在固定密码，也不能从一段梦直接诊断人格。它的价值在于把“梦是白天回放”改成可检验的问题，并展示计算方法能扩大文本比较规模；与此同时，书写能力、记忆与参与者对梦的兴趣仍会影响报告本身。",
+        creatorAngle:
+          "把同一天的清醒记录切成地点、人物、情绪和未实现行动四类卡片，再与梦境文本的语义连接对照；明确标出哪些联系来自文本、哪些是研究者或观众的解释。",
+        facts: [
+          "研究分析 3,700 余份梦境与清醒经验描述，参与者共 287 人，年龄为 18 至 70 岁",
+          "参与者连续两周记录梦与日常经验，研究者同时收集睡眠习惯、人格、认知和心理特征",
+          "自然语言处理用于测量报告中的语义结构，其结果与独立人工评估者达到相近准确度",
+          "心智游移较多者报告的梦更碎片化、场景切换更快；更重视梦者的报告通常更具感官细节，但研究只显示关联、不能证明因果",
+          "COVID-19 封锁期报告包含更强情绪和更多限制、屏障、禁闭主题，随后这些模式逐渐减弱；论文 DOI 为 10.1038/s44271-026-00447-2",
+        ],
+        sourceName: "IMT School for Advanced Studies Lucca／Communications Psychology",
+        sourceUrl: "https://doi.org/10.1038/s44271-026-00447-2",
+        sourceDate: "研究报道 2026-07-27",
+      },
+      {
+        category: "社会科学 × 社会心理学 × 政治极化与群体边界",
+        image: "/story-images/moderate-outgroup-effect.jpg",
+        imageAlt: "两组相对的政治阵营把中央的桥与中间人物同时推向对面的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释“温和派作为外群体”效应，并非真实选民、政党宣传、实验界面或研究数据",
+        title: "当两边都把中间视为对面，妥协会先变成一种背叛",
+        summary:
+          "五项在线实验发现，政治立场较强、感到对方威胁并把议题道德化的人，更容易把温和政策或平均支持两方者归入“对面”。",
+        happened:
+          "超过 3,200 名美国参与者评估堕胎政策、以色列与巴勒斯坦议题，以及 2024 年美国总统选举中的假想立场。即使一项政策在形式上位于中间，两端参与者也常认为它在帮助对手。",
+        importance:
+          "极化不只制造左右两端的敌意，也会改变中间位置的社会含义：不明确谴责对手，会被理解为暗中支持对手。不过实验测量的是特定情境下的判断，不能把所有自称温和者当成同质群体，也不能把“中间”自动等同于更合理。",
+        creatorAngle:
+          "制作一条可移动的政策轴，同时显示政策位置、观察者立场、威胁感和道德化程度；让同一个中间点随着观察者改变颜色，呈现群体边界而非政策文本本身如何移动。",
+        facts: [
+          "研究包含 5 项在线实验，共有超过 3,200 名美国参与者",
+          "议题包括第一孕期堕胎政策、以色列与巴勒斯坦，以及 Donald Trump 与 Kamala Harris 在 2024 年总统选举中的选择",
+          "一项实验在 2024 年大选前 5 天进行，参与者评估一名同等支持 Trump 与 Harris 的假想人物",
+          "立场越极端、越感到对方带来威胁、越把议题视为道德问题，“温和派作为外群体”的效应越强",
+          "论文《Whoever Is Not With Me Is Against Me》于 2026 年 7 月 27 日在线发表于 Journal of Experimental Psychology: General",
+        ],
+        sourceName: "American Psychological Association／Journal of Experimental Psychology: General",
+        sourceUrl: "https://www.apa.org/pubs/journals/releases/xge-xge0001957.pdf",
+        sourceDate: "2026-07-27",
+      },
+      {
+        category: "女性主义 × 性别 × 警务裁量与数据治理",
+        image: "/story-images/trans-police-stops.jpg",
+        imageAlt: "停车线、警务决策节点、主观性别分类与不同概率路径叠合的编辑插图",
+        imageCredit: "编辑插图 · AI 生成，用于解释警员的性别感知如何进入搜查与逮捕数据，并非真实警务现场、跨性别者肖像、执法记录或统计图表",
+        title: "警方记录的是“看起来像谁”，裁量后果却落在真实的人身上",
+        summary:
+          "UCLA Williams Institute 分析加州 460 万次成年人警察拦停：被警员感知为跨性别者的人有 24%遭搜查、约 20%被逮捕，明显高于被感知为顺性别男性者的 14%和 10%。",
+        happened:
+          "研究使用 California Racial and Identity Profiling Act 数据。该制度要求警员为每次拦停记录其对当事人身份的主观判断；研究者控制年龄和种族后，比较车辆与行人拦停中的搜查、违禁品发现和逮捕。",
+        importance:
+          "数据并未测量当事人的自我认同，而是在测量警员如何读取外表并据此行动。被感知为跨性别者的搜查率更高，但违禁品发现率与其他群体相近，说明差异不能简单解释为搜查更“有效”；同时，行政分类本身也可能误认身份。",
+        creatorAngle:
+          "把一次拦停拆成“警员感知、是否搜查、是否发现违禁品、是否逮捕”四个节点，分别显示数据记录了什么、没有记录什么；让读者看见主观分类怎样在下一步变成制度后果。",
+        facts: [
+          "2023 年数据包含加州约 460 万次涉及成年人的车辆与行人拦停，其中 17,916 次涉及被感知为跨性别或性别不循规者",
+          "被感知为跨性别男性或女性者有 24%遭搜查；顺性别男性为 14%、顺性别女性为 8%、性别不循规者为 11%",
+          "2023 年共记录 576,735 次搜查；被感知为跨性别、性别不循规或顺性别男性者的违禁品发现率均约 27%，顺性别女性为 26%",
+          "被感知为跨性别男性者的逮捕率为 19%、跨性别女性为 20%；顺性别男性为 10%、顺性别女性为 7%、性别不循规者为 9%",
+          "数据来自 California Racial and Identity Profiling Act，记录的是警员的主观感知而非当事人的自我报告；分析控制了种族与年龄",
+        ],
+        sourceName: "Williams Institute at UCLA School of Law／University of California, Irvine",
+        sourceUrl: "https://williamsinstitute.law.ucla.edu/publications/ca-police-gender-stops/",
+        sourceDate: "2026-07-28",
+      },
+    ],
+  },
+  {
     date: "2026-07-27",
     displayDate: "2026.07.27",
     issueNo: "14",
