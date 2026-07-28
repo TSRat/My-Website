@@ -1,6 +1,6 @@
 # Hildegard 设计交接
 
-Status: Figma approved direction recorded · implementation in progress · 2026-07-28
+Status: review-ready in Draft PR #29 · 2026-07-28
 
 ## 设计源
 
@@ -32,3 +32,10 @@ Status: Figma approved direction recorded · implementation in progress · 2026-
 - Implementation: pending.
 - Five-viewport basic smoke: pending.
 - Antigravity extended QA: pending.
+
+## Review links
+
+- Exact implementation preview: <https://raw.githack.com/TSRat/My-Website/5bda9fc0fb93b378b664af15441fdc9490419136/HILDEGARD/index.html>
+- Draft PR: <https://github.com/TSRat/My-Website/pull/29>
+
+raw.githack may show a one-time external-content notice before opening the exact commit.

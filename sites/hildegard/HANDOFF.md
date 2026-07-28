@@ -49,15 +49,21 @@ Turn the Hildegard longform into a 20-page digital manuscript while preserving t
 
 ### Remaining before PR handoff
 
-- Run full Pages build and validation.
-- Verify the immutable branch preview on the exact pushed commit.
-- Record final commit, branch, preview and PR.
+- Creator review of the exact preview and Draft PR.
+- Antigravity extended multi-browser, keyboard and perceptual QA.
+- Merge only after explicit creator approval.
 
 ### Git state before publication
 
 - Branch: `codex/hildegard-interface-refactor`
 - Base: `3e4e753` (`origin/main` at task start)
-- Worktree: only Hildegard source, generated mirror and Hildegard design / handoff documents are intended for staging.
+- Implementation commit: `5bda9fc0fb93b378b664af15441fdc9490419136`
+- Exact preview: <https://raw.githack.com/TSRat/My-Website/5bda9fc0fb93b378b664af15441fdc9490419136/HILDEGARD/index.html>
+- Draft PR: <https://github.com/TSRat/My-Website/pull/29>
+- Figma: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=45-49>
+- Worktree after the implementation commit was clean; this handoff update is the only follow-up change.
+
+The exact remote preview was opened after raw.githack's one-time external-content notice and passed with 20 folios, 18px body copy, zero horizontal overflow, correct exact-commit script URLs, and zero console errors or warnings.
 
 ## 2026-07-27 · Creator-supplied replacements
 
