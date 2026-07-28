@@ -48,7 +48,21 @@
 
 - `codex/ivory-beginner-rebuild`
 - base: `3e4e753aad62920453398d41a766f9e625bd4d2e`
+- implementation commit: `87dfcf5`
 - merge: not authorized and not performed.
+
+### Delivery state
+
+- Pull Request: <https://github.com/TSRat/My-Website/pull/31>
+- Owner-only live preview:
+  <https://tsrat-ivory-migration-preview.tsrat.chatgpt.site>
+- Preview version 3 was built from implementation commit `87dfcf5` and passed a
+  live smoke check: 5 stories, 5 primary source links, 5 source registers,
+  fixed six-step order, and 0 broken images in the latest issue.
+- Figma:
+  [desktop home](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=46-50),
+  [desktop issue/story](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=46-51),
+  [mobile flow](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=46-52).
 
 ## 2026-07-25 · Unified maintenance package
 
