@@ -1,5 +1,26 @@
 # Hildegard content guide
 
+## 2026-07-28 · 20-page reading structure
+
+The approved refactor keeps the 00–08 argument intact while giving each chapter two reading leaves; chapter 05, Authority, receives three. The public page remains one HTML document.
+
+- `00` series portal
+- `01` 30-second primer
+- `02` epistolary prologue
+- `03–19` eight chapters in the original order
+- `A1` Watch, `A2` Sources, `A3` Data
+
+The full page map is recorded in `web/sites/hildegard/screen-outline.md`.
+
+Content categories remain explicit:
+
+- historical fact
+- scholarly interpretation
+- narrative framing
+- visual metaphor / modern reenactment
+
+The creator-supplied `Vision` stills and the modern Lingua Ignota transcription retain their modern-material captions. The local `Women Story/Hildegard/photo 23.03.17` folder was reviewed for visual reference only; none of its unverified files were added to the public site.
+
 - Last audited: 2026-07-21
 - Project: `时间的女儿 · 002`
 - Primary entry: `sites/hildegard/index.html`

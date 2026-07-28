@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Fira+Code:wght@400;500&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="./assets/hildegard-site.css?v=viriditas-v3">
+    <link rel="stylesheet" href="./assets/hildegard-site.css?v=illuminated-leaves-v1">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -31,8 +31,13 @@
     <a class="skip-link" href="#chapter-00">跳到正文</a>
 
     <header class="site-header" role="banner">
-      <a class="brand" href="../">TSRat · Website Archive</a>
-      <nav aria-label="章节导航">
+      <a class="brand" href="../" aria-label="返回 TSRat Website Archive">
+        <span>时间的女儿</span><b>002</b>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="chapter-nav">
+        <span>目录</span><i aria-hidden="true"></i>
+      </button>
+      <nav id="chapter-nav" aria-label="章节导航">
         <a href="#chapter-00">00 引子</a>
         <a href="#chapter-01">01 窄门</a>
         <a href="#chapter-02">02 传承</a>
@@ -42,18 +47,42 @@
         <a href="#chapter-06">06 语言</a>
         <a href="#chapter-07">07 斗争</a>
         <a href="#chapter-08">08 身后</a>
-        <a href="#watch">观看</a>
-        <a href="#sources">来源</a>
-        <a href="#data">Data</a>
       </nav>
+      <a class="header-counter" href="#screen-00" aria-label="当前阅读页">
+        <span data-current-page>00</span><i>/</i><span>19</span>
+      </a>
     </header>
 
+    <nav class="page-rail" aria-label="逐页导航">
+      <a href="#screen-00"><span>00</span><b>系列首屏</b></a>
+      <a href="#screen-01"><span>01</span><b>30 秒认识她</b></a>
+      <a href="#screen-02"><span>02</span><b>致皇帝的信</b></a>
+      <a href="#screen-03"><span>03</span><b>窄门 · 时代</b></a>
+      <a href="#screen-04"><span>04</span><b>窄门 · 修道院</b></a>
+      <a href="#screen-05"><span>05</span><b>传承 · 尤塔</b></a>
+      <a href="#screen-06"><span>06</span><b>传承 · 两条路</b></a>
+      <a href="#screen-07"><span>07</span><b>修炼 · 神启</b></a>
+      <a href="#screen-08"><span>08</span><b>修炼 · 学识</b></a>
+      <a href="#screen-09"><span>09</span><b>音乐 · 对照</b></a>
+      <a href="#screen-10"><span>10</span><b>音乐 · 美德</b></a>
+      <a href="#screen-11"><span>11</span><b>权威 · 姐妹</b></a>
+      <a href="#screen-12"><span>12</span><b>权威 · 独立</b></a>
+      <a href="#screen-13"><span>13</span><b>权威 · 网络</b></a>
+      <a href="#screen-14"><span>14</span><b>语言 · 字母</b></a>
+      <a href="#screen-15"><span>15</span><b>语言 · 解释</b></a>
+      <a href="#screen-16"><span>16</span><b>斗争 · 布道</b></a>
+      <a href="#screen-17"><span>17</span><b>斗争 · 禁令</b></a>
+      <a href="#screen-18"><span>18</span><b>身后 · 沉默</b></a>
+      <a href="#screen-19"><span>19</span><b>身后 · 重生</b></a>
+    </nav>
+
     <main id="main">
-      <!-- 00 Portal -->
-      <section class="chapter chapter--portal" id="chapter-00">
-        <div class="portal-grid">
-          <div class="reveal">
-            <p class="portal-eyebrow">TIME'S DAUGHTERS · 002 — 12 世纪 · 莱茵兰 · 本笃会</p>
+      <!-- 00 · Series portal -->
+      <section class="folio folio--portal" id="screen-00" data-screen="00" data-chapter="00" data-part="引子" data-title="系列首屏">
+        <span class="anchor-target" id="chapter-00" aria-hidden="true"></span>
+        <div class="folio-frame portal-grid">
+          <div class="portal-copy">
+            <p class="folio-rubric">TIME'S DAUGHTERS · 002 — 12 世纪 · 莱茵兰</p>
             <h1 class="portal-title">
               A Humble Rebel
               <span class="cn">谦卑的反叛者：宾根的希尔德加德</span>
@@ -61,19 +90,64 @@
             <p class="portal-tagline">
               1098 – 1179。她把自己称作"一个贫穷、未受过教育的小女子"，却让整个 12 世纪的欧洲——从教皇到皇帝——都不得不侧耳倾听。
             </p>
-            <div class="portal-decor" aria-hidden="true">
-              <img src="./assets/glyph-viriditas.svg" alt="" width="84" height="84">
-              <img src="./assets/glyph-cosmic-wheel.svg" alt="" width="84" height="84">
-            </div>
+            <dl class="identity-index">
+              <div><dt>Time</dt><dd>1098–1179</dd></div>
+              <div><dt>Place</dt><dd>莱茵兰</dd></div>
+              <div><dt>Role</dt><dd>女院长 · 神学写作者 · 作曲家</dd></div>
+            </dl>
+            <a class="primary-link" href="#screen-01">30 秒认识她 <span>→</span></a>
           </div>
-          <figure class="portal-quote reveal">
+          <figure class="portal-portrait">
+            <div class="image-field">
+              <img src="./assets/images/hildegard-eibingen-statue.jpg" alt="蓝天下的艾宾根希尔德加德现代纪念雕像。" width="1600" height="1201">
+              <img class="portal-wheel" src="./assets/glyph-cosmic-wheel.svg" alt="" width="240" height="240" aria-hidden="true">
+            </div>
+            <figcaption><b>Modern memorial</b>艾宾根现代纪念雕像；它不是希尔德加德的历史肖像。</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 01 · 30-second primer -->
+      <section class="folio folio--primer" id="screen-01" data-screen="01" data-chapter="00" data-part="30 秒" data-title="30 秒认识她">
+        <div class="folio-frame">
+          <header class="folio-heading">
+            <p class="folio-rubric">PRIMER · 30 SECONDS</p>
+            <h2><span class="illuminated-initial">30</span> 秒认识她</h2>
+            <p>先建立坐标，再进入争议。每条只回答一个问题。</p>
+          </header>
+          <dl class="fact-index">
+            <div><dt>1098–1179</dt><dd>她生活在 12 世纪的莱茵兰。</dd></div>
+            <div><dt>Magistra</dt><dd>女院长、神学写作者与公共发言者。</dd></div>
+            <div><dt>Scivias</dt><dd>她把异象组织成可传播的知识。</dd></div>
+            <div><dt>70+</dt><dd>现存圣歌数量；《美德典律》尤其重要。</dd></div>
+            <div><dt>Viriditas</dt><dd>生命的绿色活力，也是她的神学语言。</dd></div>
+            <div class="fact-index__tension"><dt>矛盾</dt><dd>她在性别秩序上越界，但在阶级问题上并不激进。</dd></div>
+          </dl>
+          <aside class="reading-key">
+            <b>阅读标记</b>
+            <span>历史事实</span><span>学术解释</span><span>叙事框架</span><span>视觉隐喻</span>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 02 · Epistolary prologue -->
+      <section class="folio folio--letter" id="screen-02" data-screen="02" data-chapter="00" data-part="书信引子" data-title="致皇帝的信">
+        <div class="folio-frame letter-composition">
+          <header class="folio-heading">
+            <p class="folio-rubric">1163 · AD FREDERICUM IMPERATOREM</p>
+            <h2><span class="illuminated-initial">一</span> 个“小女子”写给皇帝</h2>
+            <p>先从她最不谦卑的一刻开始，再退回塑造她的世界。</p>
+          </header>
+          <figure class="imperial-letter">
             <blockquote>
               "你这藐视我的不敬神者，必将为这恶行追悔莫及！君王啊，若想活命就侧耳倾听！否则我的利剑必将刺穿你！"
             </blockquote>
-            <figcaption>
-              1163 — 希尔德加德致神圣罗马帝国皇帝腓特烈一世（"红胡子"巴巴罗萨）
-            </figcaption>
+            <figcaption>1163 — 希尔德加德致神圣罗马帝国皇帝腓特烈一世（“红胡子”巴巴罗萨）</figcaption>
           </figure>
+          <aside class="marginal-note">
+            <span>叙事框架</span>
+            她的自我贬低与警告皇帝之间的反差，是理解其权威策略的入口；并不等于她在所有社会问题上都激进。
+          </aside>
         </div>
       </section>
 
@@ -664,12 +738,13 @@
             </p>
           </div>
           <div class="video-shell">
-            <iframe
-              src="https://player.bilibili.com/player.html?bvid=BV1VE4gzNEYJ&page=1&high_quality=1&danmaku=0"
-              title="谦卑的反叛者：宾根的希尔德加德｜TS鼠"
-              loading="lazy"
-              allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
-              allowfullscreen></iframe>
+            <button
+              class="video-placeholder"
+              type="button"
+              data-video-src="https://player.bilibili.com/player.html?bvid=BV1VE4gzNEYJ&page=1&high_quality=1&danmaku=0"
+              aria-label="载入哔哩哔哩视频播放器">
+              <span><b>载入视频播放器</b><small>点击后才连接哔哩哔哩</small></span>
+            </button>
             <div class="watch-links">
               <a href="https://www.bilibili.com/video/BV1VE4gzNEYJ/" target="_blank" rel="noreferrer">
                 <span>哔哩哔哩</span><b>在视频页观看与评论</b><i>↗</i>
@@ -828,7 +903,7 @@
       </div>
     </footer>
 
-    <script src="./assets/hildegard-refresh.js?v=viriditas-v3" defer></script>
+    <script src="./assets/hildegard-refresh.js?v=illuminated-leaves-v1" defer></script>
     <script src="./assets/site-analytics.js?v=six-stage-v1" defer></script>
   </body>
 </html>

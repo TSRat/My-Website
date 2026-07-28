@@ -1,5 +1,27 @@
 # Hildegard design guide — Viriditas Codex
 
+## 2026-07-28 · Viriditas Codex II — Illuminated Leaves
+
+The current redesign moves closer to illuminated manuscripts and religious art without becoming a medieval theme skin.
+
+- parchment fields stay flat and readable; there is no distressed texture
+- gold hairlines define folio frames and axes
+- rubric red marks page numbers, decorated initials and evidence categories
+- Viriditas green remains the main structural colour
+- deep Visio blue is reserved for vision, music and Lingua Ignota pages
+- marginalia, folio counters and devotional symmetry carry the manuscript language
+- no gothic-arch template, tarot imagery, glassmorphism, leather cover or purple “feminine” palette
+
+Reading scale is now 18–19px body, 20–22px lede and at least 14px for essential metadata. The mobile header is 60px and uses an accessible chapter drawer.
+
+Editable Figma page: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=45-49>
+
+Detailed direction and layout rules live in:
+
+- `web/sites/hildegard/visual-direction.md`
+- `web/sites/hildegard/typography-layout.md`
+- `sites/hildegard/design/figma-handoff.md`
+
 - Last audited: 2026-07-21
 - Primary stylesheet: `sites/hildegard/assets/hildegard-site.css`
 - Design tokens: `sites/hildegard/assets/hildegard-tokens.css`

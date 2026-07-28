@@ -1,5 +1,17 @@
 # Hildegard technical notes
 
+## 2026-07-28 · Progressive folio runtime
+
+`index.html` remains the readable source document. `assets/hildegard-refresh.js` progressively reorganizes chapters 01–08 into 17 folio sections, which combine with the three explicit opening folios for 20 stable `#screen-00` through `#screen-19` anchors.
+
+- With JavaScript: page rail, current-page counter, chapter subcounter, previous / next links and mobile menu are active.
+- Without JavaScript: the original eight-chapter source order, appendices, images and source table remain readable.
+- Initial deep links are realigned after fonts and layout settle so the sticky header does not cover the target.
+- The Bilibili iframe is not present until the reader activates the load button.
+- `prefers-reduced-motion` disables motion and smooth scrolling.
+
+The production source remains `sites/hildegard/`; run `npm run build:hildegard` to update `HILDEGARD/`.
+
 Last audited: 2026-07-25
 
 ## Deployment form

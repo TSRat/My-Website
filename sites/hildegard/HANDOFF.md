@@ -1,5 +1,64 @@
 # Hildegard handoff
 
+## 2026-07-28 · Illuminated Leaves interface refactor
+
+### Current target
+
+Turn the Hildegard longform into a 20-page digital manuscript while preserving the 00–08 narrative, evidence boundaries, public URL and static-source build.
+
+### Completed
+
+- Added a Daughters of Time series hero and a numbered 30-second primer.
+- Split every chapter into two reading leaves; Authority is split into three.
+- Added stable `#screen-00`–`#screen-19` anchors, page counters, chapter subcounters, page rail and previous / next navigation.
+- Reframed the interface around illuminated-manuscript and religious-art composition: parchment, gold hairlines, rubric red, decorated initials, marginalia and bounded Visio blue.
+- Raised body text to 18–19px and essential metadata to at least 14px.
+- Replaced the tall mobile chapter bar with a 60px accessible menu.
+- Changed the Bilibili embed to click-to-load.
+- Kept every existing chapter image and its provenance caption; unverified local Photo-folder material remains reference-only.
+- Added editable Figma foundations and four key screens without deleting older frames.
+
+### Important decisions
+
+- The site remains one HTML document; “pages” are stable deep-linked sections, not new routes.
+- `sites/hildegard/index.html` is still readable without JavaScript. JavaScript progressively creates the 20-page reading UI from the original eight chapters.
+- The modern memorial statue is used on the hero and explicitly labelled as a modern memorial, not a historical portrait.
+- Decorative SVG glyphs remain structural ornament only.
+
+### Modified source
+
+- `sites/hildegard/index.html`
+- `sites/hildegard/assets/hildegard-site.css`
+- `sites/hildegard/assets/hildegard-tokens.css`
+- `sites/hildegard/assets/hildegard-refresh.js`
+- `sites/hildegard/CONTENT.md`
+- `sites/hildegard/DESIGN.md`
+- `sites/hildegard/TECH.md`
+- `sites/hildegard/design/figma-handoff.md`
+- `web/sites/hildegard/*.md`
+- generated mirror `HILDEGARD/`
+
+### Verification so far
+
+- `node --check sites/hildegard/assets/hildegard-refresh.js` — passed.
+- `npm run build:hildegard` — passed.
+- `node --test tests/historical-sites-six-stage.test.mjs` — 2/2 passed.
+- Playwright basic smoke — 1440×900, 1024×768, 768×1024, 390×844 and 320×568.
+- Browser evidence — 20 folios, 18px body, zero horizontal overflow at all checked viewports, all 20 local images loaded, mobile menu opens and closes, deep link lands below the sticky header, video creates its iframe only after activation.
+- Antigravity extended QA — pending.
+
+### Remaining before PR handoff
+
+- Run full Pages build and validation.
+- Verify the immutable branch preview on the exact pushed commit.
+- Record final commit, branch, preview and PR.
+
+### Git state before publication
+
+- Branch: `codex/hildegard-interface-refactor`
+- Base: `3e4e753` (`origin/main` at task start)
+- Worktree: only Hildegard source, generated mirror and Hildegard design / handoff documents are intended for staging.
+
 ## 2026-07-27 · Creator-supplied replacements
 
 - 已将创作者新放入 `HILDEGARD/assets/` 的三张图复制到权威的 `sites/hildegard/assets/images/`，并替换第 02、05、06 章主图。

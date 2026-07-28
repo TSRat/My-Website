@@ -1,5 +1,25 @@
 # Figma handoff — Viriditas Codex
 
+## 2026-07-28 · Illuminated Leaves refactor
+
+- Editable redesign page: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=45-49>
+- Wrapper: `45:50`
+- Foundations: `45:51`
+- Desktop hero: `45:81`
+- Desktop 30-second primer: `45:165`
+- Desktop vision / knowledge composition: `45:193`
+- Mobile manuscript leaf: `45:213`
+- Product and screen specifications live in `web/sites/hildegard/`.
+- This addition is non-destructive: the earlier foundations and theme pages remain intact.
+- Public imagery is limited to assets whose provenance is already documented in the site. The local `Women Story/Hildegard/photo 23.03.17` folder remains reference-only until source and permission are confirmed.
+
+### Revised system decisions
+
+- Body type: 18–19px; lede 20–22px; essential metadata 14px minimum.
+- Motion: 180–420ms for reveals and navigation; no content waits on animation.
+- Visual language: parchment field, gold hairlines, rubric red, Viriditas green and bounded Visio blue.
+- Manuscript cues come from folio frames, marginalia, decorated initials and devotional axes—not faux leather, gothic arches or texture overlays.
+
 Last updated: 2026-07-21
 
 本文件用来把 `HILDEGARD/` 站点的视觉源在 Figma 与代码之间保持同步。任何后续 Figma 编辑，请保持这里列出的命名与结构，方便直接落回 `assets/hildegard-tokens.css` 与 `assets/glyph-*.svg`。
