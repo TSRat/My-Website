@@ -7,7 +7,7 @@
 - Use chapter names, not numbers, in the fixed right rail.
 - Preserve the simplified epistolary hierarchy, top-aligned comparison/marginalia layout and the creator-supplied Afterlife 2/2 avatar.
 
-Status: publication correction ready · Draft PR #29 · 2026-07-29
+Status: reading-chrome correction submitted · PR #33 · 2026-07-29
 
 ## 设计源
 

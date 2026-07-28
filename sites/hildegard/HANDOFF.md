@@ -29,12 +29,14 @@ Apply the creator's final hierarchy, alignment, numbering and imagery correction
 - Playwright mobile smoke at 390×844 — no horizontal overflow; the simplified title wraps cleanly and the replacement Afterlife image loads.
 - Structural audit — one global header counter; zero generated folio counters, pagers, subchapter indexes, chapter numerals or numbered plate captions.
 - Local mirror navigation — the Malinche destination returns HTTP 200.
-- Exact-commit preview check — pending push.
+- Exact-commit preview check — passed at 1440×900 and 390×844 on implementation commit `f0af0d8`; replacement image loads, the desktop comparison/marginalia offset is `0px`, and the document has zero horizontal overflow.
 
 ### Publication state
 
 - Branch: `codex/hildegard-reading-cleanup`.
-- Pull Request and exact-commit preview: pending.
+- Implementation commit: `f0af0d8`.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/33>.
+- Exact implementation preview: <https://raw.githack.com/TSRat/My-Website/f0af0d87029de5fb168823340d2faa266e42d270/HILDEGARD/index.html>.
 - Antigravity extended QA: pending.
 
 ## 2026-07-29 · Publication corrections
