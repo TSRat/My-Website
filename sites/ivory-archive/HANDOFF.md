@@ -1,5 +1,47 @@
 # IVORY ARCHIVE handoff
 
+## 2026-07-29 · Homepage title orphan fix
+
+### Current target
+
+避免首页大标题在窄桌面宽度只留下一个“闻”字，同时保留现有标题文字、
+字号、视觉层级和响应式布局。
+
+### Completed
+
+- 把标题末尾的“社会新闻”设为一个不可拆分的短语，并为标题启用平衡换行
+  与严格中文换行规则。
+- React 页面与 GitHub Pages 静态渲染器保持一致；新增 parity 测试，防止
+  两个渲染版本再次丢失不可拆分标记。
+- 排版规范补充此处的孤字处理决定，没有通过缩小整个标题或写死
+  viewport 专用换行来掩盖问题。
+
+### Verification
+
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed, 654 local references across 75 HTML/CSS
+  files.
+- `npm run build:ivory`: passed, Sites artifact valid.
+- `node --test tests/ivory-renderer-parity.test.mjs`: passed, 3/3.
+- `npm run lint`: 0 errors; 24 unchanged warnings from Enheduanna/Hypatia.
+- `git diff --check`: passed.
+- Local browser layout at 1440×900, 1024×768, 768×1024, 390×844 and
+  320×568: the final line contains 9, 6, 9, 6 and 6 Chinese characters
+  respectively; no one-character orphan or horizontal overflow.
+- Owner-only preview version 10 was built from code commit `b94d919` and
+  browser-smoke-checked at 1280×720: “社会新闻” remains together and the page
+  has no horizontal overflow.
+
+### Delivery state
+
+- Branch: `codex/ivory-beginner-rebuild`.
+- Code fix commit: `b94d919`.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/31>.
+- Owner-only preview:
+  <https://tsrat-ivory-migration-preview.tsrat.chatgpt.site>.
+- The creator explicitly authorized merging PR #31 after this title-orphan
+  fix.
+
 ## 2026-07-29 · Four-part zero-knowledge rewrite
 
 ### Current target
@@ -74,7 +116,8 @@
   and browser-smoke-checked on issue 15: all five stories show the four-part
   order; Analysis has no card background; every source link sits after and
   outside Analysis; the new Brassaï and police-analysis copy is present.
-- Merge remains unauthorized and has not been performed.
+- The creator explicitly authorized merging PR #31 after the homepage
+  title-orphan fix.
 - Worktree is clean after the delivery commit.
 
 ## 2026-07-29 · Three-section beginner rewrite
