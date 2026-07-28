@@ -1,6 +1,13 @@
 # Hildegard 设计交接
 
-Status: publication correction ready · Draft PR #29 · 2026-07-29
+## 2026-07-29 · Creator correction
+
+- Treat the implementation on `codex/hildegard-reading-cleanup` as the current reference for reading chrome.
+- Give every folio one page number in its own top-right corner; omit a sticky-header counter, subchapter numbers, plate numbers and bottom previous / next navigation.
+- Use chapter names, not numbers, in the fixed right rail.
+- Preserve the full-width supporting-column title, simplified epistolary hierarchy, top-aligned comparison/marginalia layout and the creator-supplied Afterlife 2/2 avatar.
+
+Status: reading-chrome correction submitted · PR #33 · 2026-07-29
 
 ## 设计源
 

@@ -1,5 +1,73 @@
 # Hildegard handoff
 
+## 2026-07-29 · Page-number clarification
+
+### Current target
+
+Correct the reading chrome to match the creator's clarification: every folio owns its page number in its own top-right corner, the right chapter rail keeps its Chinese labels, and the epistolary title uses the full supporting-column width.
+
+### Completed
+
+- Removed the sticky-header page counter.
+- Restored one compact `00 / 19` through `19 / 19` counter inside the top-right of every folio.
+- Kept the right rail unchanged as nine Chinese chapter names.
+- Removed the desktop `8ch` title cap and balanced the epistolary title across the full supporting column.
+- Bumped the public stylesheet and runtime cache key to `illuminated-leaves-v5`.
+
+### Verification
+
+- `node --check sites/hildegard/assets/hildegard-refresh.js` — passed.
+- `npm run build:hildegard` — passed; source and mirror match.
+- `git diff --check` — passed.
+- Targeted browser smoke at 1024×768 and 1440×900 — 20 folio counters, zero sticky-header counters, zero horizontal overflow.
+- The epistolary title renders on one line at 1024×768; the right rail remains the nine Chinese chapter names at 1440×900.
+- Antigravity owns extended QA.
+
+### Publication state
+
+- Branch: `codex/hildegard-reading-cleanup`.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/33>.
+- Updated exact-commit preview: pending push.
+
+## 2026-07-29 · Reading chrome and Afterlife correction
+
+### Current target
+
+Apply the creator's final hierarchy, alignment, numbering and imagery corrections, add Malinche to the Daughters of Time footer, and submit an exact-commit preview for review.
+
+### Completed
+
+- Simplified the dark epistolary prologue so the letter quotation is the dominant surface, with the title, introduction and Frederick I portrait grouped in one supporting column.
+- Top-aligned the comparison cards with their marginalia column.
+- Removed repeated folio, chapter, subchapter and plate numbers from the reading surface; only the global counter remains at the top right.
+- Removed the generated previous / next strip from every reading leaf.
+- Changed the fixed right rail and chapter menu to chapter names.
+- Replaced the Afterlife 2/2 image with the creator-supplied square Hildegard avatar and removed the repeated `08B` label.
+- Added the Malinche article to the footer's `Series · 时间的女儿` list.
+- Bumped the public stylesheet and runtime cache key to `illuminated-leaves-v4`.
+
+### Verification
+
+- `node --check sites/hildegard/assets/hildegard-refresh.js` — passed.
+- `npm run build:hildegard` — passed; source and `HILDEGARD/` mirror match.
+- `node --test tests/historical-sites-six-stage.test.mjs` — 2/2 passed.
+- `npm run build:pages` — passed; unrelated generated Next mirror changes were discarded.
+- `npm run validate:pages` — passed, 641 local references across 75 HTML/CSS files.
+- `git diff --check` — passed.
+- Playwright desktop smoke at 1440×900 — no horizontal overflow; the comparison cards and marginalia have the same computed top edge; the letter page has one clear quotation focus.
+- Playwright mobile smoke at 390×844 — no horizontal overflow; the simplified title wraps cleanly and the replacement Afterlife image loads.
+- Structural audit — one global header counter; zero generated folio counters, pagers, subchapter indexes, chapter numerals or numbered plate captions.
+- Local mirror navigation — the Malinche destination returns HTTP 200.
+- Exact-commit preview check — passed at 1440×900 and 390×844 on implementation commit `f0af0d8`; replacement image loads, the desktop comparison/marginalia offset is `0px`, and the document has zero horizontal overflow.
+
+### Publication state
+
+- Branch: `codex/hildegard-reading-cleanup`.
+- Implementation commit: `f0af0d8`.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/33>.
+- Exact implementation preview: <https://raw.githack.com/TSRat/My-Website/f0af0d87029de5fb168823340d2faa266e42d270/HILDEGARD/index.html>.
+- Antigravity extended QA: pending.
+
 ## 2026-07-29 · Publication corrections
 
 ### Current target
