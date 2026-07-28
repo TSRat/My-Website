@@ -1,5 +1,11 @@
 # Figma handoff — Viriditas Codex
 
+## 2026-07-29 · Publication correction
+
+- Creator correction restores page introductions directly below their titles and moves pull quotes to the end of each page body.
+- The shipped implementation adds the Frederick I engraving, redistributes Authority imagery across 2/3 and 3/3, and adds `Hildegardia barteri` to Afterlife 2/2.
+- The earlier intro positions in frames `45:193` and `45:213` are superseded by this creator correction; the implementation and PR screenshots are the current placement reference.
+
 ## 2026-07-29 · Creator review correction sync
 
 - Updated wrapper `45:50` in place and kept the same editable page URL.
@@ -19,7 +25,7 @@
 - Mobile manuscript leaf: `45:213`
 - Product and screen specifications live in `web/sites/hildegard/`.
 - This addition is non-destructive: the earlier foundations and theme pages remain intact.
-- Three traceable files from `Women Story/Hildegard/photo 23.03.17` are now used in the public site and source list.
+- Five traceable files from `Women Story/Hildegard/photo 23.03.17` are now used in the public site and source list.
 
 ### Revised system decisions
 

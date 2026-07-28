@@ -1,5 +1,42 @@
 # Hildegard handoff
 
+## 2026-07-29 · Publication corrections
+
+### Current target
+
+Apply the creator's final placement, contrast and imagery corrections, then publish Draft PR #29 to production.
+
+### Completed
+
+- Restored every chapter-page introduction directly below its title.
+- Moved each `.pull-quote` to the end of its page body.
+- Rebuilt the dark epistolary prologue with ivory body text, gold metadata and a Frederick I engraving from the creator's Photo folder.
+- Moved the `Vision` community still from Authority 1/3 to Authority 2/3.
+- Added the 1342 Rupertsberg indulgence document to Authority 3/3.
+- Added the creator-selected `Hildegardia barteri` photograph to Afterlife 2/2.
+- Bumped the public stylesheet and runtime cache key to `illuminated-leaves-v3`.
+
+### Verification so far
+
+- `node --check sites/hildegard/assets/hildegard-refresh.js` — passed.
+- `npm run build:hildegard` — passed.
+- `node --test tests/historical-sites-six-stage.test.mjs` — 2/2 passed.
+- `npm run build:pages` — passed; unrelated generated Next mirror changes were discarded.
+- `npm run validate:pages` — passed, 639 local references across 75 HTML/CSS files.
+- `git diff --check` — passed.
+- Browser structural audit — 17/17 chapter-page introductions are below their headings; all `.pull-quote` elements close their page bodies.
+- Browser imagery audit — Authority 1/3 has no chapter plate, 2/3 uses `hildegard-new-monastery.png`, 3/3 uses `hildegard-rupertsberg-charter.jpg`, and Afterlife 2/2 uses `hildegard-photo-hildegardia-barteri.jpg`.
+- Browser visual smoke — 1440×900 and 390×844 passed with zero horizontal overflow; all changed images loaded.
+- Dark prologue computed colours — gold rubric `rgb(217, 179, 102)` and ivory title, intro, marginal note and counter `rgb(241, 234, 213)`.
+- Antigravity extended QA — pending.
+
+### Publication state
+
+- Branch: `codex/hildegard-interface-refactor`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/29>.
+- Creator explicitly authorized direct publication in this task.
+- The exact-head preview, merge commit and production Pages run are recorded in the PR and final publication report.
+
 ## 2026-07-29 · Creator review corrections
 
 ### Current target

@@ -3,7 +3,7 @@
  * Digital folio structure for the Hildegard longform.
  */
 
-@import "./hildegard-tokens.css?v=illuminated-leaves-v2";
+@import "./hildegard-tokens.css?v=illuminated-leaves-v3";
 
 *,
 *::before,
@@ -359,26 +359,9 @@ main {
 }
 
 .folio-intro {
-  position: relative;
-  z-index: 1;
   max-width: var(--reading-max);
-  margin: 48px 0 0;
-  padding: 20px 0 0;
-  border-top: 1px solid color-mix(in srgb, var(--color-accent) 72%, transparent);
-}
-
-.folio-intro strong {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--color-alert);
-  font-family: var(--type-sans);
-  font-size: 14px;
-  letter-spacing: 0.1em;
-}
-
-.folio-intro p {
   margin: 0;
-  color: inherit;
+  color: var(--color-ink-soft);
   font-size: var(--size-lede);
   font-weight: 600;
   line-height: 1.72;
@@ -664,19 +647,74 @@ main {
   color: var(--color-dark-ink);
 }
 
+.folio--letter .folio-rubric,
+.folio--letter .folio-counter strong,
+.folio--letter .illuminated-initial,
+.folio--letter .marginal-note span,
+.folio--letter .imperial-portrait figcaption b {
+  color: var(--color-accent-soft);
+}
+
+.folio--letter .folio-counter,
+.folio--letter .folio-pager span,
+.folio--letter .marginal-note,
+.folio--letter .imperial-portrait figcaption {
+  color: var(--color-dark-ink);
+}
+
 .letter-composition {
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
-  gap: 54px 80px;
+  grid-template-rows: auto auto 1fr;
+  gap: 32px 80px;
 }
 
 .letter-composition .folio-heading {
+  grid-column: 1;
+  grid-row: 1;
   margin: 0;
+}
+
+.imperial-portrait {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 148px minmax(0, 1fr);
+  gap: 20px;
+  align-items: end;
+  margin: 0;
+}
+
+.imperial-portrait img {
+  width: 148px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--color-accent);
+  filter: saturate(0.78) contrast(1.04);
+}
+
+.imperial-portrait figcaption {
+  padding-bottom: 4px;
+  font-family: var(--type-sans);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.imperial-portrait figcaption b {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--type-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .imperial-letter {
   position: relative;
-  grid-row: span 2;
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  align-self: start;
   margin: 0;
   padding: clamp(36px, 5vw, 72px);
   color: var(--color-ink);
@@ -711,6 +749,8 @@ main {
 }
 
 .marginal-note {
+  grid-column: 1;
+  grid-row: 3;
   align-self: end;
   padding: 18px 0 0 28px;
   border-top: 1px solid var(--color-accent);
@@ -834,6 +874,11 @@ main {
   border: 1px solid var(--color-accent);
   padding: 10px;
   background: var(--color-page-alt);
+}
+
+.chapter-plate--contain img,
+.chapter-plate--document img {
+  object-fit: contain;
 }
 
 .chapter-plate figcaption em {
@@ -968,8 +1013,7 @@ main {
 
 .folio--vision .folio-rubric,
 .folio--vision .subchapter-index,
-.folio--vision .marginalia h3,
-.folio--vision .folio-intro strong {
+.folio--vision .marginalia h3 {
   color: var(--color-accent-soft);
 }
 
@@ -1078,20 +1122,15 @@ main {
     grid-row: 2;
   }
 
-  .folio-frame--with-aside > .folio-intro {
-    grid-column: 1;
-    grid-row: 3;
-  }
-
   .folio-frame--with-aside > .marginalia {
     grid-column: 2;
-    grid-row: 2 / span 2;
+    grid-row: 2;
     align-self: start;
   }
 
   .folio-frame--with-aside > .folio-pager {
     grid-column: 1 / -1;
-    grid-row: 4;
+    grid-row: 3;
     width: 100%;
   }
 }
@@ -1562,16 +1601,24 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .letter-composition {
+    grid-template-rows: auto;
+  }
+
+  .letter-composition .folio-heading,
+  .imperial-portrait,
+  .imperial-letter,
+  .marginal-note {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
   .chapter-body--media-split {
     grid-template-columns: 1fr;
   }
 
   .portal-portrait {
     width: min(100%, 620px);
-  }
-
-  .imperial-letter {
-    grid-row: auto;
   }
 
   .fact-index {
@@ -1691,6 +1738,16 @@ main {
 
   .letter-composition {
     gap: 42px;
+  }
+
+  .imperial-portrait {
+    grid-template-columns: 112px minmax(0, 1fr);
+    align-items: center;
+  }
+
+  .imperial-portrait img {
+    width: 112px;
+    height: 174px;
   }
 
   .imperial-letter {

@@ -15,13 +15,15 @@ The current redesign moves closer to illuminated manuscripts and religious art w
 ## 2026-07-29 · Creator review corrections
 
 - Every chapter leaf now uses one heading grammar: `章节 · 本页内容`.
-- The page introduction follows the body as a clearly labelled closing note.
+- The page introduction sits directly below the page title; the gold-hairline pull quote closes the page body.
 - The right rail contains nine chapter anchors, while page position remains in the header and pager.
 - Desktop marginalia occupies a real grid column and can no longer cross the pager.
 - Music page 1/2 uses a full media/text spread instead of leaving the right side empty.
 - Vision pages use ivory body text and gold labels on Visio night; the revised muted text token is `#D9D1BB`.
 - Standalone Viriditas and Coda interludes were removed.
-- The portal, music and language pages use three traceable images selected from the creator's Photo folder.
+- The portal, epistolary prologue, music, language and afterlife pages use five traceable images selected from the creator's Photo folder.
+- The epistolary prologue uses ivory and gold text on Viriditas green, with a Frederick I engraving balancing the letter panel.
+- Authority 1/3 is text-led; its `Vision` still moves to 2/3, while 3/3 opens with the Rupertsberg indulgence document.
 
 Reading scale is now 18–19px body, 20–22px lede and at least 14px for essential metadata. The mobile header is 60px and uses an accessible chapter drawer.
 

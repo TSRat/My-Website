@@ -44,9 +44,9 @@
       chapter: "05",
       variant: "manuscript",
       pages: [
-        { screen: "11", part: "1/3", title: "权威 · 姐妹与弱势", subtitle: "温情领导与自我贬低的修辞", take: [0, 1, 2] },
-        { screen: "12", part: "2/3", title: "权威 · 独立王国", subtitle: "从迪西博登贝格到鲁珀茨贝格", take: [3], aside: true },
-        { screen: "13", part: "3/3", title: "权威 · 通信欧洲", subtitle: "权力网络与阶级张力同时存在", take: [4, 5] }
+        { screen: "11", part: "1/3", title: "权威 · 姐妹与弱势", subtitle: "温情领导与自我贬低的修辞", take: [1, 2] },
+        { screen: "12", part: "2/3", title: "权威 · 独立王国", subtitle: "从迪西博登贝格到鲁珀茨贝格", take: [0, 3], aside: true },
+        { screen: "13", part: "3/3", title: "权威 · 通信欧洲", subtitle: "权力网络与阶级张力同时存在", take: [4, 5, 6] }
       ]
     },
     "chapter-06": {
@@ -92,18 +92,10 @@
   }
 
   function makeIntro(page, originalLede) {
-    const intro = document.createElement("aside");
+    const intro = document.createElement("p");
     intro.className = "folio-intro";
-    intro.setAttribute("aria-label", "本页引言");
-
-    const label = document.createElement("strong");
-    label.textContent = "本页引言";
-
-    const copy = document.createElement("p");
-    if (originalLede) copy.innerHTML = originalLede.innerHTML;
-    else copy.textContent = page.subtitle;
-
-    intro.append(label, copy);
+    if (originalLede) intro.innerHTML = originalLede.innerHTML;
+    else intro.textContent = page.subtitle;
     return intro;
   }
 
@@ -133,6 +125,7 @@
       if (index === 0 && glyph) folio.append(glyph);
 
       const generatedHeading = makeHeading(config, page);
+      generatedHeading.append(makeIntro(page, index === 0 ? lede : null));
       frame.append(generatedHeading);
       folio.setAttribute("aria-labelledby", `screen-${page.screen}-title`);
 
@@ -142,8 +135,12 @@
         const node = sourceNodes[sourceIndex];
         if (node) body.append(node);
       });
+
+      Array.from(body.querySelectorAll(".pull-quote")).forEach((quote) => {
+        body.append(quote);
+      });
+
       frame.append(body);
-      frame.append(makeIntro(page, index === 0 ? lede : null));
       if (page.aside && aside) frame.append(aside);
       folio.append(frame);
       fragments.append(folio);

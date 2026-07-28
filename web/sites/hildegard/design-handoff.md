@@ -1,6 +1,6 @@
 # Hildegard 设计交接
 
-Status: corrected after creator review · Draft PR #29 · 2026-07-29
+Status: publication correction ready · Draft PR #29 · 2026-07-29
 
 ## 设计源
 
@@ -28,14 +28,14 @@ Status: corrected after creator review · Draft PR #29 · 2026-07-29
 
 ## QA status
 
-- Figma composition: corrected in place for foundations, hero, desktop Vision and mobile manuscript frames.
-- Implementation: complete locally; exact-commit preview refresh pending.
+- Figma composition: existing foundations and key frames remain; the creator's restored title-level intro placement supersedes the earlier intro position in frames `45:193` and `45:213`.
+- Implementation: creator publication corrections complete locally; the PR description maintains the exact-head preview.
 - Five-viewport basic smoke: passed at 1440×900, 1024×768, 768×1024, 390×844 and 320×568.
 - Antigravity extended QA: pending.
 
 ## Review links
 
-- Exact implementation preview: <https://raw.githack.com/TSRat/My-Website/5bda9fc0fb93b378b664af15441fdc9490419136/HILDEGARD/index.html>
+- Exact implementation preview: see the current Draft PR description.
 - Draft PR: <https://github.com/TSRat/My-Website/pull/29>
 
 raw.githack may show a one-time external-content notice before opening the exact commit.
