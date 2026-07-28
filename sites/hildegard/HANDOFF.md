@@ -16,6 +16,7 @@ Correct the visible problems identified in the creator screenshot without changi
 - Unified all 17 chapter leaves under the `章节 · 本页内容` heading grammar.
 - Moved every chapter-leaf introduction below its body and labelled it `本页引言`.
 - Reduced the fixed right rail from 20 screen links to nine chapter links.
+- Made chapter highlighting follow a narrow viewport reading line, so long folios cannot leave the rail on the previous chapter.
 - Removed both standalone Interlude sections.
 - Rebuilt Music 1/2 as a media/text spread, so the right side carries the Gregorian/Hildegard comparison.
 - Moved desktop marginalia into a reserved grid column; pager overlap is now structurally impossible.
