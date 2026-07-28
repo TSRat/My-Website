@@ -447,6 +447,15 @@ main section {
   opacity: 0.96;
 }
 
+.malinche-portrait {
+  display: block;
+  width: 100%;
+  max-height: min(70vh, 720px);
+  object-fit: contain;
+  object-position: center bottom;
+  filter: grayscale(1) contrast(1.06);
+}
+
 /* 04 Worlds Bento */
 .worlds-section .grid-container {
   gap: 1rem;
@@ -718,6 +727,12 @@ main section {
   .featured-content {
     grid-template-columns: minmax(0, 1fr) !important;
     gap: 2rem !important;
+  }
+
+  .malinche-portrait {
+    width: min(82vw, 420px);
+    max-height: 58vh;
+    margin-inline: auto;
   }
 
   .featured-world .grid-container > div[style*="grid-column"] {

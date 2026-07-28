@@ -2654,7 +2654,7 @@ figure figcaption {
 
 .site-footer {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(360px, 1.4fr) auto;
   align-items: center;
   gap: 40px;
   padding: 44px max(var(--page-pad), calc((100vw - var(--content-max)) / 2));
@@ -2679,19 +2679,35 @@ figure figcaption {
   font-size: 11px;
 }
 
-.site-footer > div:nth-child(2) {
-  display: flex;
-  flex-direction: column;
+.footer-series {
+  display: grid;
+  gap: 10px;
 }
 
 .site-footer span {
   color: var(--lake-300);
   font-size: 10px;
+  letter-spacing: 0.14em;
 }
 
-.site-footer b {
+.footer-series-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.footer-series a {
   color: #fff;
+  border-bottom: 1px solid rgba(169, 212, 239, 0.44);
   font-family: var(--serif);
+  font-size: 12px;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.footer-series a[aria-current="page"] {
+  color: var(--lake-300);
+  border-bottom-color: var(--lake-300);
 }
 
 .back-to-top {

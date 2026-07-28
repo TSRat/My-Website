@@ -22,7 +22,7 @@ const readAtlasPage = (name) =>
 test("Living Atlas registry exposes only valid published sites", () => {
   const sites = getPublishedSites(livingAtlasContent);
 
-  assert.equal(sites.length, 9);
+  assert.equal(sites.length, 10);
   assert.equal(new Set(sites.map((site) => site.id)).size, sites.length);
   assert.equal(new Set(sites.map((site) => site.number)).size, sites.length);
 
@@ -232,4 +232,37 @@ test("Living Atlas Hypatia portrait uses a real alpha-backed asset", async () =>
     portrait.indexOf(Buffer.from("ALPH")) > -1,
     "WebP must contain an ALPH chunk",
   );
+});
+
+test("Living Atlas features all four Daughters of Time stories including Malinche", async () => {
+  const [english, chinese, styles, portrait] = await Promise.all([
+    readAtlasPage("index.html"),
+    readAtlasPage("zh.html"),
+    readAtlasPage("style.css"),
+    readFile(
+      new URL(
+        "../sites/la-malinche/assets/malinche-cutout.png",
+        import.meta.url,
+      ),
+    ),
+  ]);
+
+  for (const page of [english, chinese]) {
+    assert.equal((page.match(/class="carousel-slide"/g) ?? []).length, 4);
+    assert.match(page, /DAUGHTERS OF TIME \/ 003|时间的女儿 \/ 003/);
+    assert.match(page, /href="\.\.\/LA-MALINCHE\/"/);
+    assert.match(
+      page,
+      /class="malinche-portrait"\s+src="\.\.\/LA-MALINCHE\/assets\/malinche-cutout\.png"/,
+    );
+  }
+
+  assert.match(english, /She survived by translating; history translated her into betrayal\./);
+  assert.match(chinese, /她靠翻译活了下来，历史却把她翻译成了背叛。/);
+  assert.match(styles, /\.malinche-portrait\s*{[^}]*object-fit:\s*contain/s);
+  assert.deepEqual(
+    [...portrait.subarray(0, 8)],
+    [137, 80, 78, 71, 13, 10, 26, 10],
+  );
+  assert.equal(portrait[25], 6, "Malinche PNG must retain RGBA transparency");
 });

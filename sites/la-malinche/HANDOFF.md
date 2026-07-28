@@ -1,5 +1,16 @@
 # La Malinche handoff
 
+## 2026-07-28 · 时间的女儿系列入口同步
+
+- 在现有黑底 / 金字页脚中加入 `001–004` 系列导航，003 当前篇使用金色
+  下划线与 `aria-current="page"`。
+- 保留顶部与底部 TSRat 标识、52 屏正文和返回 The Living Atlas；
+  没有改动首屏人物图、视频或历史内容。
+- `npm run build:malinche`、组合 Pages 构建和资产校验均通过。
+- 浏览器在 `390 × 844` 下确认四期链接分两行排布、当前篇清楚、无横向
+  溢出。
+- Branch: `codex/sync-malinche-series`; Antigravity extended QA pending.
+
 - Project: `马琳切：谁背叛了背叛者？`
 - Series: `时间的女儿 · 003`
 - Branch: `codex/site-la-malinche`

@@ -1,5 +1,16 @@
 # Hypatia handoff
 
+## 2026-07-28 · 时间的女儿系列入口同步
+
+- 在既有湖蓝页脚内加入完整 `001–004` 系列导航，并以
+  `aria-current="page"` 标记希帕蒂娅。
+- 新增马琳切入口 `../LA-MALINCHE/`；没有改动正文、证据控件、章节、
+  图片或 `lake-v11 / interactive-v11` 关系。
+- 桌面页脚保留品牌、系列目录和返回顶部三段式；`390 × 844` 下单列堆叠，
+  四个链接完整显示且无横向溢出。
+- `npm run build:hypatia`、组合 Pages 构建和资产校验均通过。
+- Branch: `codex/sync-malinche-series`; Antigravity extended QA pending.
+
 ## 2026-07-25 · Unified maintenance package
 
 - Authoritative maintenance root: `sites/hypatia/`.

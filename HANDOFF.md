@@ -1,5 +1,46 @@
 # Repository handoff
 
+## 2026-07-28: Daughters of Time 003 cross-site sync
+
+### Current target
+
+Synchronize the published La Malinche story into the portfolio interfaces:
+Living Atlas Featured World plus the footer series navigation of all four
+`Daughters of Time` sites.
+
+### Completed
+
+- Living Atlas English / Chinese carousel now contains all four stories in
+  chronological series order.
+- Added the approved short Malinche line and reused the real transparent
+  cut-out at its intrinsic ratio.
+- Added identity-preserving cross-story navigation to Hypatia, Hildegard,
+  La Malinche, and Enheduanna.
+- Updated source packages, generated mirrors, targeted regression tests, and
+  every affected site handoff.
+- The Figma sources remain the existing Living Atlas content-system frame,
+  historical-site frame, and La Malinche V5; this was a small synchronization
+  of established components, not a new visual direction.
+
+### Verification
+
+- Targeted tests: Passed — 18/18.
+- Full repository tests after `npm run build`: Passed — 32/32.
+- Five site builds: Passed.
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed — 650 references across 76 HTML/CSS files.
+- `npm run validate:sites`: Passed — 11 packages.
+- `npm run lint`: Passed with 0 errors and 24 pre-existing warnings.
+- Browser basic smoke: Living Atlas `1440 × 900` and `390 × 844`; four site
+  footers at `390 × 844`; no broken primary assets or horizontal overflow.
+- Antigravity extended QA: pending.
+
+### Git state
+
+- Branch: `codex/sync-malinche-series`.
+- Commit / push / PR: pending at this handoff checkpoint.
+- The unrelated dirty main worktree remained untouched.
+
 ## 2026-07-28: La Malinche approved 52-screen chronology
 
 ### Current target

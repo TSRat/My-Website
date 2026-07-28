@@ -7,7 +7,9 @@
 
 - **01 Hero (世界观宣言)**: "NO SINGLE DISCIPLINE IS ENOUGH." 及四大类目标签（History, Feminism, Psychology, Design, Technology, Literature）。
 - **02 Now (当前焦点)**: 记录 TSRat 当前的写作、构建、工作和研究焦点。
-- **03 Featured World (重点特写)**: 提取一个正在深入探讨的专题，当前为 "004 / DAUGHTERS OF TIME" 中的 Hypatia。
+- **03 Featured World (重点特写)**: 以手动轮播呈现 `时间的女儿`
+  `001–004`：希帕蒂娅、希尔德加德、马琳切与恩赫杜安娜。每期保留人物名、
+  一句话、时间地点、入口和人物图，不把轮播改成泛化作品卡。
 - **04 Worlds (开放入口)**: 固定显示 Knowledge / Story / Media / Interaction（中文为知识 / 故事 / 媒体 / 交互）。这些词是创作者有意保留含混性的概念入口，不是作品类型目录；不得增加解释句、对应关系或穷尽式分类。
 - **05 Knowledge Atlas (知识库细分)**: 只细分 Knowledge 世界。底层收藏尚未整理完成时显示 `Mapping / 整理中`，不得使用没有来源的数量。
 - **07 Sites (已发布网站)**: 只收录 `status: published` 且有真实 URL 的独立网站；数量由注册表自动计算。

@@ -1,5 +1,61 @@
 # Handoff: The Living Atlas
 
+## 2026-07-28 · La Malinche Featured World sync
+
+### Current target
+
+把已经发布并登记的 `时间的女儿 · 003` 真正加入首页人物轮播，同时让四个
+人物专题的系列入口彼此完整可达。
+
+### Completed
+
+- 英文与中文 Featured World 从三张扩展到四张，顺序为
+  `001 → 002 → 003 → 004`。
+- 马琳切卡采用一句话：
+  `她靠翻译活了下来，历史却把她翻译成了背叛。`
+- 直接复用 `LA-MALINCHE/assets/malinche-cutout.png`，没有复制视频封面，
+  也没有给透明人物图强制正方形比例。
+- 四个专题站各自采用原有视觉语言补齐系列页脚；Living Atlas 本身的
+  Ivory、Ink、Stone、Cobalt 与 12 栏结构不变。
+
+### Responsibility and failure gate
+
+- Primary: Creative hub; secondary: information discovery.
+- Unacceptable failure: `003` 在注册表可见却无法从 Featured World 抵达，
+  人物图丢失透明度或比例，或跨站导航把四个专题的视觉身份压成同一模板。
+
+### Verification
+
+- Targeted source tests: Passed — 18/18.
+- Full repository tests after the application build: Passed — 32/32.
+- Five site builds: Passed.
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed — 650 local references across 76 HTML/CSS
+  files.
+- `npm run validate:sites`: Passed — 11 packages.
+- `npm run lint`: Passed with 0 errors and 24 pre-existing warnings in the
+  Enheduanna `<img>` elements and preserved Hypatia bundle.
+- Browser basic smoke: English desktop `1440 × 900` and Chinese
+  `390 × 844`; four slides, no broken image, no horizontal overflow.
+- Malinche image rendered at the same `1065 / 1476` ratio on desktop and
+  mobile.
+- Antigravity extended cross-browser, keyboard, and visual-regression QA:
+  pending.
+
+### Modified files
+
+- `sites/living-atlas/{index.html,zh.html,style.css,CONTENT.md,DESIGN.md,TECH.md,HANDOFF.md}`
+- generated `THE-LIVING-ATLAS/` mirror
+- cross-site footer sources and generated mirrors for Hypatia, Hildegard,
+  La Malinche, and Enheduanna
+- `tests/living-atlas-content-system.test.mjs`
+- `tests/daughters-of-time-navigation.test.mjs`
+
+### Git state
+
+- Branch: `codex/sync-malinche-series`.
+- Preview / PR: pending commit and push at this handoff checkpoint.
+
 ## 2026-07-25 · Unified maintenance package
 
 - Authoritative maintenance root: `sites/living-atlas/`.

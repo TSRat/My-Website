@@ -1,5 +1,15 @@
 # Hildegard handoff
 
+## 2026-07-28 · 时间的女儿系列入口同步
+
+- 在原有 Viriditas Codex 页脚系列清单中补入
+  `003 · 马琳切：谁背叛了背叛者？`。
+- 给 002 当前篇增加 `aria-current="page"`；不改变页面正文、图像、
+  章节结构、配色面积原则或现有页脚布局。
+- `npm run build:hildegard`、组合 Pages 构建和资产校验均通过；
+  `390 × 844` 下链接完整、无横向溢出。
+- Branch: `codex/sync-malinche-series`; Antigravity extended QA pending.
+
 ## 2026-07-27 · Creator-supplied replacements
 
 - 已将创作者新放入 `HILDEGARD/assets/` 的三张图复制到权威的 `sites/hildegard/assets/images/`，并替换第 02、05、06 章主图。

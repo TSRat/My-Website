@@ -779,8 +779,20 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-brand"><img src="./tsrat-logo.png" alt="TS鼠 Logo" /><b>时间的女儿 / DAUGHTERS OF TIME</b></div>
-        <p>写给那些留下名字的人，也写给所有替她们保存回音的无名者。</p>
+        <div className="footer-brand">
+          <img src="./tsrat-logo.png" alt="TS鼠 Logo" />
+          <b>时间的女儿 / DAUGHTERS OF TIME</b>
+          <p>写给那些留下名字的人，也写给所有替她们保存回音的无名者。</p>
+        </div>
+        <nav className="footer-series" aria-label="时间的女儿系列">
+          <span>系列目录</span>
+          <div className="footer-series-links">
+            <a href="../HYPATIA/">001 · 希帕蒂娅</a>
+            <a href="../HILDEGARD/">002 · 希尔德加德</a>
+            <a href="../LA-MALINCHE/">003 · 马琳切</a>
+            <a href="./" aria-current="page">004 · 恩赫杜安娜</a>
+          </div>
+        </nav>
         <a href="#top">返回顶部 ↑</a>
       </footer>
     </main>

@@ -1,5 +1,16 @@
 # Enheduanna handoff
 
+## 2026-07-28 · 时间的女儿系列入口同步
+
+- 在既有纸色 / 蓝红金 / 硬边框语言内增加 `001–004` 系列目录。
+- 004 当前篇使用蓝色实底和 `aria-current="page"`，其余三期保持可见硬线
+  单元；没有套用其他站点的圆角卡片或改动正文。
+- `npm run build:enheduanna` 成功生成新的 Vite 哈希 CSS / JS 与入口；
+  组合 Pages 构建和资产校验通过。
+- 浏览器在 `390 × 844` 下确认四个链接、TSRat 标识和返回顶部均完整，
+  页面无横向溢出。
+- Branch: `codex/sync-malinche-series`; Antigravity extended QA pending.
+
 ## 2026-07-25 · Unified maintenance package
 
 - Authoritative maintenance root: `sites/enheduanna/`.
