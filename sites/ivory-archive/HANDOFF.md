@@ -30,8 +30,15 @@
 ### Delivery state
 
 - Branch: `codex/ivory-beginner-rebuild`.
+- Implementation commit: `d0ed36f`.
 - Pull Request: <https://github.com/TSRat/My-Website/pull/31>.
-- Preview will be refreshed after the implementation commit.
+- Owner-only preview:
+  <https://tsrat-ivory-migration-preview.tsrat.chatgpt.site>.
+- Preview version 5 was built from `d0ed36f` and deployed successfully.
+- Live smoke on issue 14: 5 stories; every story has exactly 3 sections; 10
+  descriptive source links; Goldsworthy source URL and 250th-anniversary
+  explanation present; removed disclaimer copy absent; all lazy images loaded
+  after scrolling.
 - Merge remains unauthorized and has not been performed.
 
 ## 2026-07-28 · Beginner-first complete archive rebuild
