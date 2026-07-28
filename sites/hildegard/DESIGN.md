@@ -12,6 +12,17 @@ The current redesign moves closer to illuminated manuscripts and religious art w
 - marginalia, folio counters and devotional symmetry carry the manuscript language
 - no gothic-arch template, tarot imagery, glassmorphism, leather cover or purple “feminine” palette
 
+## 2026-07-29 · Creator review corrections
+
+- Every chapter leaf now uses one heading grammar: `章节 · 本页内容`.
+- The page introduction follows the body as a clearly labelled closing note.
+- The right rail contains nine chapter anchors, while page position remains in the header and pager.
+- Desktop marginalia occupies a real grid column and can no longer cross the pager.
+- Music page 1/2 uses a full media/text spread instead of leaving the right side empty.
+- Vision pages use ivory body text and gold labels on Visio night; the revised muted text token is `#D9D1BB`.
+- Standalone Viriditas and Coda interludes were removed.
+- The portal, music and language pages use three traceable images selected from the creator's Photo folder.
+
 Reading scale is now 18–19px body, 20–22px lede and at least 14px for essential metadata. The mobile header is 60px and uses an accessible chapter drawer.
 
 Editable Figma page: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=45-49>
@@ -51,7 +62,6 @@ Living Manuscript
 | Vision | 深底 + 同心圆 + 金细线，用于神启、音乐与语言 | `03 修炼`, `04 音乐`, `06 语言` |
 | Botanical | 深绿 + 放射结构 + 根系，用于 Viriditas 与当代回响 | `08 身后` |
 | Archive | 网格 + 档案卡，用于通信、著作、来源、时间轴 | `05 通信卡`, `08 二次生命卡组`, `07 时间轴` |
-| Interlude | 近乎空白 + 一行大字 + 一个圆，全站 ≤ 4 次 | Viriditas Interlude, Coda |
 
 ## Color tokens
 

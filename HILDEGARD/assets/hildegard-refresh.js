@@ -36,7 +36,7 @@
       chapter: "04",
       variant: "vision",
       pages: [
-        { screen: "09", part: "1/2", title: "音乐 · 灵魂的飞翔", subtitle: "与格里高利圣咏的对照", take: [0, 1] },
+        { screen: "09", part: "1/2", title: "音乐 · 灵魂的飞翔", subtitle: "与格里高利圣咏的对照", take: [0, 1], layout: "media-split" },
         { screen: "10", part: "2/2", title: "音乐 · 美德的共同体", subtitle: "《天启交响曲》与《美德典律》", take: [2], aside: true }
       ]
     },
@@ -75,9 +75,7 @@
     }
   };
 
-  function makeHeading(config, page, isFirst) {
-    if (isFirst) return null;
-
+  function makeHeading(config, page) {
     const header = document.createElement("header");
     header.className = "folio-heading";
 
@@ -89,11 +87,24 @@
     title.id = `screen-${page.screen}-title`;
     title.innerHTML = `<span class="illuminated-initial">${config.chapter}</span> ${page.title}`;
 
-    const subtitle = document.createElement("p");
-    subtitle.textContent = page.subtitle;
-
-    header.append(rubric, title, subtitle);
+    header.append(rubric, title);
     return header;
+  }
+
+  function makeIntro(page, originalLede) {
+    const intro = document.createElement("aside");
+    intro.className = "folio-intro";
+    intro.setAttribute("aria-label", "本页引言");
+
+    const label = document.createElement("strong");
+    label.textContent = "本页引言";
+
+    const copy = document.createElement("p");
+    if (originalLede) copy.innerHTML = originalLede.innerHTML;
+    else copy.textContent = page.subtitle;
+
+    intro.append(label, copy);
+    return intro;
   }
 
   function splitChapter(group, config) {
@@ -102,8 +113,6 @@
     if (!originalInner || !originalBody) return;
 
     const sourceNodes = Array.from(originalBody.children);
-    const meta = originalInner.querySelector(":scope > .chapter-meta");
-    const title = originalInner.querySelector(":scope > .chapter-title");
     const lede = originalInner.querySelector(":scope > .chapter-lede");
     const aside = originalInner.querySelector(":scope > .marginalia");
     const glyph = group.querySelector(":scope > .chapter-glyph");
@@ -119,30 +128,22 @@
       folio.dataset.title = page.title;
 
       const frame = document.createElement("div");
-      frame.className = "folio-frame";
+      frame.className = `folio-frame${page.aside ? " folio-frame--with-aside" : ""}`;
 
-      if (index === 0) {
-        if (glyph) folio.append(glyph);
-        if (meta) frame.append(meta);
-        if (title) {
-          title.id = `screen-${page.screen}-title`;
-          frame.append(title);
-          folio.setAttribute("aria-labelledby", title.id);
-        }
-        if (lede) frame.append(lede);
-      } else {
-        const generatedHeading = makeHeading(config, page, false);
-        frame.append(generatedHeading);
-        folio.setAttribute("aria-labelledby", `screen-${page.screen}-title`);
-      }
+      if (index === 0 && glyph) folio.append(glyph);
+
+      const generatedHeading = makeHeading(config, page);
+      frame.append(generatedHeading);
+      folio.setAttribute("aria-labelledby", `screen-${page.screen}-title`);
 
       const body = document.createElement("div");
-      body.className = "chapter-body";
+      body.className = `chapter-body${page.layout ? ` chapter-body--${page.layout}` : ""}`;
       page.take.forEach((sourceIndex) => {
         const node = sourceNodes[sourceIndex];
         if (node) body.append(node);
       });
       frame.append(body);
+      frame.append(makeIntro(page, index === 0 ? lede : null));
       if (page.aside && aside) frame.append(aside);
       folio.append(frame);
       fragments.append(folio);
@@ -261,11 +262,12 @@
       if (!visible) return;
 
       const current = visible.target.dataset.screen;
+      const currentChapter = visible.target.dataset.chapter;
       if (headerCurrent) headerCurrent.textContent = current;
       railLinks.forEach((link) => {
-        const active = link.getAttribute("href") === `#screen-${current}`;
+        const active = link.dataset.chapter === currentChapter;
         link.classList.toggle("is-active", active);
-        if (active) link.setAttribute("aria-current", "page");
+        if (active) link.setAttribute("aria-current", "location");
         else link.removeAttribute("aria-current");
       });
     }, { threshold: [0.18, 0.38, 0.62], rootMargin: "-18% 0px -52% 0px" });

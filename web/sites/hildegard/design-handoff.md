@@ -1,6 +1,6 @@
 # Hildegard 设计交接
 
-Status: review-ready in Draft PR #29 · 2026-07-28
+Status: corrected after creator review · Draft PR #29 · 2026-07-29
 
 ## 设计源
 
@@ -28,9 +28,9 @@ Status: review-ready in Draft PR #29 · 2026-07-28
 
 ## QA status
 
-- Figma composition: complete for foundations and four key screens.
-- Implementation: pending.
-- Five-viewport basic smoke: pending.
+- Figma composition: corrected in place for foundations, hero, desktop Vision and mobile manuscript frames.
+- Implementation: complete locally; exact-commit preview refresh pending.
+- Five-viewport basic smoke: passed at 1440×900, 1024×768, 768×1024, 390×844 and 320×568.
 - Antigravity extended QA: pending.
 
 ## Review links

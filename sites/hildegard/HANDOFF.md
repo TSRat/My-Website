@@ -1,5 +1,70 @@
 # Hildegard handoff
 
+## 2026-07-29 · Creator review corrections
+
+### Current target
+
+Correct the visible problems identified in the creator screenshot without changing the approved 20-folio learning order.
+
+### Completed
+
+- Used three traceable files from the creator's `Photo 23.03.17` folder:
+  - `hildegard-photo-scivias-cosmos.jpg` on the series hero;
+  - `hildegard-photo-kiedrich-kyriale.jpg` on Music 1/2;
+  - `hildegard-photo-litterae-ignotae.jpg` as historical evidence on Language 2/2.
+- Rewrote image captions as positive identification: work type, source and visual role.
+- Unified all 17 chapter leaves under the `章节 · 本页内容` heading grammar.
+- Moved every chapter-leaf introduction below its body and labelled it `本页引言`.
+- Reduced the fixed right rail from 20 screen links to nine chapter links.
+- Removed both standalone Interlude sections.
+- Rebuilt Music 1/2 as a media/text spread, so the right side carries the Gregorian/Hildegard comparison.
+- Moved desktop marginalia into a reserved grid column; pager overlap is now structurally impossible.
+- Raised Vision-page contrast: ivory headings/body, parchment-muted supporting text and gold labels.
+- Added balanced heading wrapping and a mobile block rule for Chinese subchapter labels.
+- Bumped stylesheet, token import and runtime cache keys to `illuminated-leaves-v2`.
+- Updated the existing Figma frames in place, including the creator-selected hero image.
+
+### Verification
+
+- `node --check sites/hildegard/assets/hildegard-refresh.js` — passed.
+- `npm run build:hildegard` — passed.
+- `node --test tests/historical-sites-six-stage.test.mjs` — 2/2 passed.
+- `npm run build:pages` — passed; unrelated generated mirror changes were discarded.
+- `npm run validate:pages` — passed, 636 local references across 75 HTML/CSS files.
+- `git diff --check` — passed.
+- Playwright five-viewpoint structural smoke — passed:
+  - 20 folios, nine chapter-rail links, zero Interludes;
+  - all chapter titles use `章节 · 内容`;
+  - all 17 post-body introductions occur before their pager;
+  - zero marginalia/pager overlaps and zero horizontal overflow;
+  - all three Photo-folder assets loaded at every checked viewport;
+  - Music 1/2 is two columns at 1440/1024 and reflows to one column at 768/390/320.
+- Visual screenshots inspected at 1440×900, 390×844 and 320×568.
+- Antigravity extended QA — pending.
+
+### Modified source
+
+- `sites/hildegard/index.html`
+- `sites/hildegard/assets/hildegard-refresh.js`
+- `sites/hildegard/assets/hildegard-site.css`
+- `sites/hildegard/assets/hildegard-tokens.css`
+- `sites/hildegard/assets/images/hildegard-photo-*.jpg`
+- `sites/hildegard/CONTENT.md`
+- `sites/hildegard/DESIGN.md`
+- `sites/hildegard/design/figma-handoff.md`
+- `web/sites/hildegard/product-spec.md`
+- `web/sites/hildegard/design-handoff.md`
+- generated mirror `HILDEGARD/`
+
+### Review state
+
+- Branch: `codex/hildegard-interface-refactor`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/29>.
+- Exact-commit website preview is maintained in the Draft PR description.
+- Figma: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=45-49>.
+- Antigravity extended QA remains pending.
+- Merge only after explicit creator approval.
+
 ## 2026-07-28 · Illuminated Leaves interface refactor
 
 ### Current target

@@ -1,5 +1,13 @@
 # Figma handoff — Viriditas Codex
 
+## 2026-07-29 · Creator review correction sync
+
+- Updated wrapper `45:50` in place and kept the same editable page URL.
+- Replaced the hero image fill in frame `45:81` with the creator-selected Photo-folder `Scivias` cosmos image.
+- Updated the foundations notes with chapter-level rail, uniform `章节 · 内容` headings, post-body introductions, grid-reserved marginalia, music spread and Interlude removal.
+- Moved the introduction below the argument in desktop Vision frame `45:193` and mobile manuscript frame `45:213`.
+- Updated Vision text guidance to ivory `#F1EAD5`, muted parchment `#D9D1BB` and gold labels.
+
 ## 2026-07-28 · Illuminated Leaves refactor
 
 - Editable redesign page: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=45-49>
@@ -11,7 +19,7 @@
 - Mobile manuscript leaf: `45:213`
 - Product and screen specifications live in `web/sites/hildegard/`.
 - This addition is non-destructive: the earlier foundations and theme pages remain intact.
-- Public imagery is limited to assets whose provenance is already documented in the site. The local `Women Story/Hildegard/photo 23.03.17` folder remains reference-only until source and permission are confirmed.
+- Three traceable files from `Women Story/Hildegard/photo 23.03.17` are now used in the public site and source list.
 
 ### Revised system decisions
 
