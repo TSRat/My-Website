@@ -31,8 +31,8 @@ Scale: `4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96`.
 ## Grid and anchors
 
 - Desktop issue header: 12 columns; metadata 2, title 6–7, index 3.
-- Story content: story-number anchor and one continuous three-section prose anchor.
-- Tablet: 8 columns; all three sections remain in one reading column.
+- Story content: story-number anchor and one continuous four-section prose anchor.
+- Tablet: 8 columns; all four sections remain in one reading column.
 - Mobile: 4 columns; all content follows the approved semantic order.
 - Repeated headings, summaries, source actions, and key-detail blocks share left
   anchors within 2 CSS px.
@@ -42,8 +42,8 @@ Scale: `4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96`.
 - Cards only for independently navigable issue/story objects.
 - Lists for story indexes and compact definitions.
 - Plain lists for key dates, numbers, people, and background.
-- A bordered source link closes the third section without creating a fourth
-  reading task.
+- A bordered source link follows the fourth section without creating another
+  explanatory chapter.
 
 ## Wrapping
 
@@ -58,7 +58,7 @@ Distinct templates:
 
 - home;
 - issue route;
-- representative three-section story;
+- representative four-section story;
 - no-results state.
 
 Viewports: `1440×900`, `1024×768`, `768×1024`, `390×844`, `320×568`, plus

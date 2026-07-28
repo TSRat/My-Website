@@ -24,6 +24,7 @@ export function ArchiveExplorer({ briefings }: { briefings: Briefing[] }) {
           story.title,
           story.category,
           story.summary,
+          story.background,
           story.happened,
           story.whyItMatters,
           ...story.facts,

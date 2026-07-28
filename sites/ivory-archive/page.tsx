@@ -35,11 +35,11 @@ export default function Home() {
 
           <div className="hero-copy">
             <p className="hero-kicker">每日思想简报 · Daily Thought Briefing</p>
-            <h1 id="hero-title">从“发生了什么”开始，读懂文化与社会新闻</h1>
+            <h1 id="hero-title">先认识人物与概念，再读懂文化与社会新闻</h1>
             <span className="title-stroke" />
             <p className="hero-deck">
-              15 期、75 则新闻都按同一条初学者路径重写：先说明发生了什么，
-              再解释为什么重要，最后列出最值得记住的具体细节。
+              15 期、75 则新闻都按同一条初学者路径重写：先补足背景，再说明事件，
+              接着列出具体细节，最后解释为什么值得关注。
             </p>
             <div className="hero-actions">
               <Link
@@ -198,17 +198,18 @@ export default function Home() {
         <section className="method-section page-frame" id="method" aria-labelledby="method-title">
           <div className="method-title-block">
             <p className="eyebrow">Editorial Method</p>
-              <h2 id="method-title">每篇只分三个部分</h2>
+              <h2 id="method-title">每篇都从零开始，分成四个部分</h2>
           </div>
           <div className="method-copy">
             <p>
-              不需要预先认识人物、机构或专业术语。每篇先把事情说清楚，
-              再解释它为什么值得关注，并把关键时间、数字和人物集中列出来。
+              标题和引言不算正文已经介绍过的信息。每篇都会重新说明人物、机构或概念，
+              再讲本次事件、具体细节和它为什么值得关注。
             </p>
             <ol>
-              <li><span>1</span><strong>发生了什么：</strong>用普通语言说明事件、时间和参与者。</li>
-              <li><span>2</span><strong>这件事为什么重要：</strong>直接说明它影响什么，避免抽象术语。</li>
-              <li><span>3</span><strong>记住这几个细节：</strong>集中查看关键日期、数字和背景，并直接打开原文。</li>
+              <li><span>1</span><strong>背景：</strong>第一次出现的人物、机构和概念都完整介绍。</li>
+              <li><span>2</span><strong>事件：</strong>用普通语言说明谁在什么时候、什么地点做了什么。</li>
+              <li><span>3</span><strong>细节：</strong>集中查看关键日期、数字、作品和过程。</li>
+              <li><span>4</span><strong>分析：</strong>解释具体影响，并在结尾提供唯一的原文链接。</li>
             </ol>
             <details>
               <summary>查看选题去重方法</summary>

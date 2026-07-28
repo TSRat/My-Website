@@ -85,17 +85,6 @@ export default async function BriefingPage({ params }: { params: Promise<{ date:
                   <span className="topic-tag">{story.category}</span>
                   <h2>{story.title}</h2>
                   <p>{story.summary}</p>
-                  <a
-                    className="source-link-primary"
-                    data-analytics-event="source_opened"
-                    data-analytics-target={`${briefing.date}:${index + 1}`}
-                    href={story.sourceUrl}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    查看原文：{story.title} <span aria-hidden="true">↗</span>
-                  </a>
-                  <span className="source-url">{story.sourceName} · {story.sourceDate}</span>
                 </div>
               </header>
 
@@ -112,33 +101,39 @@ export default async function BriefingPage({ params }: { params: Promise<{ date:
               </figure>
 
               <div className="story-learning-flow">
-                <section className="story-section happened-block">
-                  <p className="section-step">01 · What</p>
-                  <h3>发生了什么</h3>
-                  <p>{story.happened}</p>
+                <section className="story-section">
+                  <p className="section-step">01 · Background</p>
+                  <h3>背景</h3>
+                  <p>{story.background}</p>
                 </section>
 
-                <section className="story-section why-block">
-                  <p className="section-step">02 · Why</p>
-                  <h3>这件事为什么重要</h3>
-                  <p>{story.whyItMatters}</p>
+                <section className="story-section happened-block">
+                  <p className="section-step">02 · Event</p>
+                  <h3>事件</h3>
+                  <p>{story.happened}</p>
                 </section>
 
                 <section className="story-section background-block">
                   <p className="section-step">03 · Details</p>
-                  <h3>记住这几个细节</h3>
+                  <h3>细节</h3>
                   <ul>{story.facts.map((fact) => <li key={fact}>{fact}</li>)}</ul>
+                </section>
+
+                <section className="story-section why-block">
+                  <p className="section-step">04 · Analysis</p>
+                  <h3>分析</h3>
+                  <p>{story.whyItMatters}</p>
                   <aside className="story-source-register">
                     <a
                       data-analytics-event="source_opened"
-                      data-analytics-target={`${briefing.date}:${index + 1}:details`}
+                      data-analytics-target={`${briefing.date}:${index + 1}:analysis`}
                       href={story.sourceUrl}
                       rel="noreferrer"
                       target="_blank"
                     >
-                      查看原文：{story.title} <span aria-hidden="true">↗</span>
+                      {story.sourceName}｜{story.title} <span aria-hidden="true">↗</span>
                     </a>
-                    <small className="source-url">{story.sourceName} · {story.sourceDate} · 点开即可阅读</small>
+                    <small className="source-url">{story.sourceDate} · 点开即可阅读原文</small>
                   </aside>
                 </section>
               </div>

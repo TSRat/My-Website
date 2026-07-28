@@ -3,7 +3,7 @@
 ## Product job
 
 Help a reader with no prior subject knowledge understand any of 75 archived
-stories in three short sections and open the related article through a
+stories in four short sections and open the related article through one
 descriptive link.
 
 ## Success criteria
@@ -27,9 +27,11 @@ Issue additions:
 Story changes:
 
 - beginner-facing `title`;
-- `summary` and `happened` remain factual orientation;
-- `whyItMatters` gives one plain explanation of why the event matters;
-- `facts` provides the key dates, numbers, people, and background in one list;
+- `background` introduces every unfamiliar person, institution, work, or idea
+  without treating the title, summary, or issue intro as prior teaching;
+- `happened` states the event;
+- `facts` provides the key dates, numbers, works, places, and process in one list;
+- `whyItMatters` gives one concrete analysis of why the event matters;
 - `sourceName`, `sourceDate`, and `sourceUrl` support a descriptive article
   link without a separate source register.
 
@@ -40,8 +42,9 @@ depends on that contract.
 
 - Keep the existing public routes and legacy redirects.
 - Add a visible “阅读方法” destination to global navigation.
-- On issue routes, name each link “查看原文：<story title>” and make it directly
-  clickable.
+- Remove source links from story headers.
+- After analysis, expose exactly one directly clickable link named
+  `<source organization>｜<descriptive story title>`.
 - Add a five-line quick read before the long stories.
 - Add previous/next issue links derived from array position.
 

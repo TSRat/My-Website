@@ -2,8 +2,8 @@
 
 ## Thesis
 
-Keep the page feeling like a working paper archive while reducing every story
-to one continuous, easy-to-follow three-section reading flow.
+Keep the page feeling like a working paper archive while giving every story one
+continuous, easy-to-follow four-section reading flow.
 
 ## Inherited identity
 
@@ -16,9 +16,10 @@ to one continuous, easy-to-follow three-section reading flow.
 
 ## Explanatory form
 
-- “发生了什么” is continuous prose.
-- “这件事为什么重要” receives a light burgundy paper wash.
-- “记住这几个细节” uses a simple list followed by the descriptive source link.
+- “背景” is continuous prose and fully introduces the subject.
+- “事件” states who did what, where, and when.
+- “细节” uses a simple list for dates, numbers, works, and process.
+- “分析” receives a light burgundy paper wash and ends with the only source link.
 - The three-minute summary remains one sentence per story.
 
 ## Motion

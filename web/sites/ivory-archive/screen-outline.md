@@ -3,7 +3,8 @@
 ## Gate status
 
 - Original outline approved on 2026-07-28.
-- Creator revision approved by direct instruction on 2026-07-29.
+- Creator approved the four-part replacement outline on 2026-07-29 with the
+  wording “批准这个四段式逐屏大纲”.
 - Scope remains issues 01–15 and all 75 stories. Do not create issue 16.
 - `CODEX_CONTEXT_GATE: PASS`
 
@@ -11,8 +12,9 @@
 
 IVORY ARCHIVE is a Chinese five-story news briefing about art and the
 humanities, social science, and feminism. A reader does not need to know the
-people, institutions, works, or specialist terms in advance. Every story uses
-the same three-part order and ends with a directly clickable article link.
+  people, institutions, works, or specialist terms in advance. Every story uses
+the same Background / Event / Details / Analysis order and ends with one
+directly clickable article link.
 
 ## Audience and entry assumptions
 
@@ -36,10 +38,11 @@ the same three-part order and ends with a directly clickable article link.
 ## Beginner learning arc
 
 1. What is this archive?
-2. What happened in this story?
-3. Why is it worth knowing?
-4. Which dates, numbers, people, and background details should I remember?
-5. Where can I read the related article?
+2. Who or what is the person, institution, work, or concept?
+3. What happened in this story?
+4. Which dates, numbers, works, places, and process details should I remember?
+5. Why is it worth knowing?
+6. Where can I read the related article?
 
 ## Screen inventory
 
@@ -47,12 +50,12 @@ the same three-part order and ends with a directly clickable article link.
 
 | ID | Screen | Primary learning job |
 | --- | --- | --- |
-| H01 | Archive orientation | Identify the product, audience, and three-part reading model |
+| H01 | Archive orientation | Identify the product, audience, and four-part reading model |
 | H02 | Latest issue | Understand the newest date, theme, and five events |
 | H03 | Search and filter | Find an issue by person, event, subject, or source |
 | H04 | Fifteen-issue archive | Compare dates and representative themes |
 | H05 | Three editorial threads | Define humanities, social science, and feminism |
-| H06 | Reading method | Preview the three sections used in every story |
+| H06 | Reading method | Preview the four sections used in every story |
 | H07 | Data boundary | Explain which anonymous interactions are available |
 
 ### Shared issue route
@@ -62,7 +65,7 @@ the same three-part order and ends with a directly clickable article link.
 | Ixx-01 | Issue orientation | Recover the date, theme, and five-story relationship |
 | Ixx-02 | Three-minute summary | Read one plain sentence per story |
 | Ixx-03 | Story index | Choose a story without specialist vocabulary |
-| Ixx-S1–S5 | Story scene | Read what happened, why it matters, and key details |
+| Ixx-S1–S5 | Story scene | Learn the background, event, details, analysis, and original article |
 | Ixx-04 | Issue synthesis | Remember the connection among the five stories |
 | Ixx-05 | Previous/next issue | Continue through the archive |
 
@@ -70,16 +73,20 @@ the same three-part order and ends with a directly clickable article link.
 
 Every story uses exactly this order:
 
-1. plain headline and one-sentence summary;
-2. descriptive article link: `查看原文：<story title>`;
-3. **发生了什么** — one plain paragraph naming the event and participants;
-4. **这件事为什么重要** — one direct explanation without theory-heavy wording;
-5. **记住这几个细节** — a short list of dates, numbers, places, and background,
-   followed by the same descriptive article link.
+1. plain headline and one-sentence summary, with no source link;
+2. **背景** — fully introduce the unfamiliar person, institution, work, or
+   concept as though the reader has not read the headline or issue intro;
+3. **事件** — name who did what, where, and when;
+4. **细节** — list key dates, numbers, works, places, and process;
+5. **分析** — explain the concrete consequence or significance;
+6. one link after analysis, named
+   `<source organization>｜<descriptive story title>`.
 
-The page does not add “证据与边界”, “来源不能证明什么”, editorial-analysis
-labels, reflection exercises, source-type registers, or raw URLs as reading
-sections.
+The first body mention may not replace an unfamiliar name with “他”, “她”,
+“其”, “这位艺术家”, or “该研究者”. Pronouns and shortened names may be used only
+after the complete introduction. The page does not add “证据与边界”,
+“来源不能证明什么”, repeated source-authority reminders, reflection exercises,
+source-type registers, or raw URLs as reading sections.
 
 ## Approved issue themes
 
@@ -103,19 +110,21 @@ sections.
 
 ## Responsive and reading contract
 
-- Desktop and mobile preserve the same three-section order.
+- Desktop and mobile preserve the same four-section order.
 - Body text remains 19 px desktop and 18 px mobile.
 - Chinese prose remains approximately 25–40 full-width characters per line.
 - Key details use a plain list and never become a comparison table or exercise.
-- Article links are visible, keyboard focusable, descriptive without surrounding
-  context, and open the stored `sourceUrl`.
+- Each story has exactly one article link after analysis. It is visible,
+  keyboard focusable, descriptive without surrounding context, and opens the
+  stored `sourceUrl`.
 - At 200% zoom, ordinary prose remains one-axis reading.
 
 ## Comprehension audit
 
 - After 30 seconds: the visitor recognizes a Chinese five-story news archive
   written for newcomers.
-- After 3 minutes: the visitor can explain one event and why it matters.
+- After 3 minutes: the visitor can identify the subject, explain one event, and
+  say why it matters.
 - After 15 minutes: the visitor can summarize an issue, recall concrete details,
   and open any related article without searching for its link.
 
@@ -124,5 +133,5 @@ sections.
 - Preserve the 15 issue themes, 75 source URLs, source dates, images, credits,
   public routes, and five-story rhythm.
 - Keep React/Vinext and GitHub Pages renderers equivalent.
-- Search must include the three visible story sections and source names.
+- Search must include all four visible story sections and source names.
 - The isolated branch remains `codex/ivory-beginner-rebuild`.

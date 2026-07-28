@@ -5,6 +5,7 @@ export type BriefingStory = {
   imageCredit: string;
   title: string;
   summary: string;
+  background: string;
   happened: string;
   whyItMatters: string;
   facts: string[];
@@ -50,7 +51,8 @@ export const briefings: Briefing[] = [
         "image": "/story-images/brassai-secret-paris.jpg",
         "imageAlt": "夜间街灯、咖啡馆窗格、墙面涂鸦与暗房接触印相叠合的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释 Brassaï 的夜间巴黎、街头观察与暗房编辑，并非摄影作品复制、巴黎实景、人物肖像或展览视觉",
-        "title": "Brassaï 回顾展解释“夜间巴黎”是怎样被拍出来的",
+        "title": "墨尔本回顾 Brassaï：他如何把巴黎夜晚变成摄影经典",
+        "background": "Brassaï（1899—1984），本名 Gyula Halász，是一位出生于当时奥匈帝国、后来长期在法国工作的摄影师。他 1924 年迁居巴黎，约在 1930 年开始摄影，1933 年出版的摄影集《Paris de nuit》（《夜巴黎》）令他成名。Brassaï 常在夜间拍摄桥梁、雾、雨、湿路上的灯光，以及咖啡馆、舞厅和街头人物；这些黑白照片把巴黎夜生活变成了现代摄影的重要题材。",
         "summary": "Heide Museum of Modern Art 以 150 余张原版照片回看 Brassaï：所谓“秘密巴黎”并非城市自动显影，而是夜行、取景、长曝光、印相和出版共同制造的观看方式。",
         "happened": "《Brassaï: Secret Paris》于 7 月 25 日在 Melbourne 开幕。展览以 1930 年代的巴黎夜景和城市人物为中心，同时纳入 Brassaï 与 Picasso 等先锋艺术家的交往、超现实主义实验及其持续拍摄的墙面涂鸦。",
         "facts": [
@@ -70,6 +72,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "大型射电碟形天线、七个联网台站、信号波纹与经费时间线构成的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释 Jodrell Bank、e-MERLIN 与科研资金链，并非天文台实景、观测数据、预算文件或机构标识",
         "title": "英国停止续资 e-MERLIN，七台射电望远镜可能在 2028 年停运",
+        "background": "e-MERLIN 是英国的一套射电望远镜网络，由分布在不同地点的 7 台望远镜共同接收来自宇宙的无线电信号。多台设备同步工作后，能够得到比单台望远镜更清晰的结果。网络的核心位于 Jodrell Bank Observatory，其中最醒目的设备是 1957 年建成的 Lovell Telescope。",
         "summary": "英国 STFC 决定不再续资以 Jodrell Bank 为核心的 e-MERLIN；现有经费将在 2028 年 3 月结束，若找不到替代支持，这套国家射电天文网络将停止观测。",
         "happened": "University of Manchester 于 7 月 27 日确认不续资决定，并表示将与政府、公共机构、产业和慈善资金方寻找出路。Jodrell Bank 游客中心仍开放，但科研网络与地标性的 Lovell Telescope 面临不同于场馆运营的资金危机。",
         "facts": [
@@ -90,6 +93,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "梦境碎片、词语语义网络、睡眠波形与清醒思维轨迹叠合的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释梦境报告、清醒经验与自然语言处理，并非真实参与者、梦境再现、脑部扫描或研究图表",
         "title": "一项 3,700 份文本研究发现：梦会重组白天的经验",
+        "background": "梦境研究过去常依赖少量访谈或研究者逐篇阅读记录。这项研究改用自然语言处理，也就是让计算机比较大量文本中的词义和结构，同时把参与者写下的梦与白天经历放在一起分析。研究者想知道，梦是在重复现实，还是会把现实中的人物、地点和感受重新组合。",
         "summary": "研究者以自然语言处理比较 3,700 余份梦境与清醒经验报告，发现梦的内容同时受到心智游移、睡眠质量、个人对梦的重视和 COVID-19 封锁等共同经历影响。",
         "happened": "287 名 18 至 70 岁参与者连续两周记录梦与日常经验，并提供睡眠、人格、认知和心理资料。模型比较文本的语义结构，发现梦会保留熟悉地点与经验碎片，却经常把它们与不相关场景、视角和可能性重新组合。",
         "facts": [
@@ -110,6 +114,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "两组相对的政治阵营把中央的桥与中间人物同时推向对面的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释“温和派作为外群体”效应，并非真实选民、政党宣传、实验界面或研究数据",
         "title": "五项实验发现：政治两端都可能把温和派当成对手",
+        "background": "政治立场通常被画成一条从左到右的直线，温和派位于中间。但现实中的人不一定把中间立场看成中立；当一个议题被视为严重威胁或道德问题时，支持一端的人可能认为“不完全支持我”就等于支持对手。这组心理学实验专门检验这种判断。",
         "summary": "五项在线实验发现，政治立场较强、感到对方威胁并把议题道德化的人，更容易把温和政策或平均支持两方者归入“对面”。",
         "happened": "超过 3,200 名美国参与者评估堕胎政策、以色列与巴勒斯坦议题，以及 2024 年美国总统选举中的假想立场。即使一项政策在形式上位于中间，两端参与者也常认为它在帮助对手。",
         "facts": [
@@ -130,6 +135,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "停车线、警务决策节点、主观性别分类与不同概率路径叠合的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释警员的性别感知如何进入搜查与逮捕数据，并非真实警务现场、跨性别者肖像、执法记录或统计图表",
         "title": "加州 460 万次拦停数据显示：警员的性别判断会影响搜查与逮捕",
+        "background": "California Racial and Identity Profiling Act 是加州用于记录警察拦停情况的制度。警员每次拦停车辆或行人后，都要记录自己对当事人种族、年龄和性别等身份的判断。这里的性别记录不是当事人的自我认同，而是警员根据外表作出的主观判断。",
         "summary": "UCLA Williams Institute 分析加州 460 万次成年人警察拦停：被警员感知为跨性别者的人有 24%遭搜查、约 20%被逮捕，明显高于被感知为顺性别男性者的 14%和 10%。",
         "happened": "研究使用 California Racial and Identity Profiling Act 数据。该制度要求警员为每次拦停记录其对当事人身份的主观判断；研究者控制年龄和种族后，比较车辆与行人拦停中的搜查、违禁品发现和逮捕。",
         "facts": [
@@ -167,6 +173,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "五十面抽象旗帜、赭红土壤纹理与地图碎片组成的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释 Andy Goldsworthy《Red Flags》的材料、地理与国家象征，并非艺术作品复制、展览现场、美国国旗或历史地图",
         "title": "Andy Goldsworthy 用五十州土壤制作五十面红旗",
+        "background": "Andy Goldsworthy 是一位英国艺术家，以直接使用石头、树叶、冰、泥土等自然材料创作而闻名。他的作品经常会随天气和时间变化。《Red Flags》是一件由 50 面布旗组成的装置作品，旗帜的红色来自美国 50 个州分别采集的土壤。",
         "summary": "英国艺术家 Andy Goldsworthy 收集美国五十个州的土，把它们分别制成颜料，染在五十面布旗上。",
         "happened": "2026 年 7 月，FOR-SITE Foundation 在旧金山 Fort Mason 展出 Andy Goldsworthy 的《Red Flags》。这件作品由五十面红旗组成，每面旗帜都用美国一个州的土染色。这是作品第一次在美国西海岸展出。",
         "facts": [
@@ -187,6 +194,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "沙岩地貌、房屋平面、窗框与工作台叠合成创作环境的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释 Georgia O’Keeffe、Ghost Ranch 与创作环境，并非 O’Keeffe 作品、人物肖像、住宅照片或展览视觉",
         "title": "新展览把 Ghost Ranch 重新放回 O’Keeffe 的创作方法中",
+        "background": "Georgia O’Keeffe（1887—1986）是美国现代主义画家，以放大的花朵、动物骨骼和新墨西哥州沙漠景观著称。Ghost Ranch 是新墨西哥州北部的一片庄园，O’Keeffe 从 1934 年起长期在那里生活和工作。当地的山崖、荒漠、骨骼和她日常步行看到的景物，反复进入她的绘画。",
         "summary": "Courtauld 将以 Georgia O’Keeffe 的 Ghost Ranch 住宅与周边景观组织新展，把沙漠从传记布景改写为影响取景、采集、尺度和系列创作的工作条件。",
         "happened": "7 月 27 日公布的《Georgia O’Keeffe: Ghost Ranch》计划于 2027 年 10 月开幕。展览将呈现近二十余件相关作品，其中 18 件从未在英国展出，并把室内陈设、动物骨骼、步行与附近地貌纳入作品理解。",
         "facts": [
@@ -207,6 +215,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "元音声波、频谱轮廓、抽象口腔几何与听说双向路径组成的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释英语元音的时长、频谱与感知—发音联系，并非真实参与者、实验界面、声谱图或研究数据",
         "title": "研究发现：母语会改变人们分辨外语元音时依赖的线索",
+        "background": "人们分辨元音时会同时听声音持续多久，以及声音的频谱或音质。不同语言使用这些线索的方式不同，因此母语也可能影响一个人怎样听见和模仿外语发音。这项研究观察台湾华语母语者学习英语 beat、bit、bat 和 bet 等元音时，听觉判断与实际发音怎样相互联系。",
         "summary": "一项针对台湾华语英语学习者的实验发现，听辨与模仿的联系并非整体能力：beat–bit 主要依赖时长，bat–bet 则更依赖频谱与舌位形成的音质。",
         "happened": "25 名参与者先完成 490 次听觉分类，再完成 180 次语音模仿。研究者把元音的频谱与时长独立操纵，发现个体在听觉中给某条声学线索的权重，会预测其发音在同一维度上能拉开多大差异。",
         "facts": [
@@ -227,6 +236,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "细弱彗尾、轨道预测线、望远镜口径与偏离点叠成观测网络的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释 P/1998 SH2 的轨道偏差、微弱彗尾与多台望远镜协作，并非天文实拍、NASA 图示、雷达图或真实轨道数据",
         "title": "一颗被归为近地小行星的天体后来被确认是彗星",
+        "background": "小行星主要由岩石或金属构成，彗星则通常含有会在靠近太阳时受热喷出的冰和尘埃。两者在很远处可能都只像一个小光点，分类要靠长期测量轨道和寻找彗尾等活动迹象。1998 SH2 最初被当作近地小行星，后来它的实际位置开始偏离只受引力影响的预测轨道。",
         "summary": "1998 SH2 在预计位置上没有出现。NASA 团队从非引力轨道偏差推断微弱喷气，再由三台大型望远镜找到几乎不可见的彗尾，将其增列为 P/1998 SH2。",
         "happened": "这颗天体在 2025 年 8 月以约 300 万公里距离安全掠过地球，但 Deep Space Network 雷达没能按预报位置捕捉它。研究者重算 1998 年以来的测量，怀疑太阳加热冰物质造成喷气推力；随后 Hawaii 与 Chile 的望远镜共同确认微弱彗尾。",
         "facts": [
@@ -247,6 +257,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "血液样本、参考区间、器官清单与电子病历字段连接成个体化诊断路径的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释性别多元患者的检验参考区间、器官清单与电子病历，不代表真实患者、检验报告、医院界面或医疗建议",
         "title": "实验室发布指南：参考区间不能只按法律性别划分",
+        "background": "医学检验报告常用“参考区间”判断一个数值是否常见，例如血红蛋白、肌酐或激素水平。许多实验室系统会根据病历中的男性或女性标记自动选择区间，但性别肯定激素治疗、器官是否存在和接受过的手术都可能改变结果应该怎样解释。ADLM 是为检验医学专业人员制定标准和指引的美国机构。",
         "summary": "ADLM 发布美国首份广泛覆盖性别多元患者的检验医学与病理学指引，要求实验室把激素治疗、器官清单和信息系统能力纳入结果解释。",
         "happened": "指引聚焦稳定接受性别肯定激素治疗至少六个月的成年人，覆盖检验参考区间、输血、尸检、组织学和病理信息学五个领域。它建议电子病历记录器官是否存在及手术日期，并在证据不足时允许双重报告参考区间。",
         "facts": [
@@ -284,6 +295,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "热带植物纹样、织物褶皱、被遮蔽的纪念碑轮廓与跨洋地图层叠的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释 Joiri Minaya 对“热带”图像、纺织品与殖民纪念物的研究，并非艺术家作品复制、展览现场或历史地图",
         "title": "Henry Art Gallery 追问“热带风景”是怎样被制造出来的",
+        "background": "Joiri Minaya 是一位出生于纽约、在多米尼加共和国长大的跨媒介艺术家。她使用纺织、摄影和行为艺术，研究旅游广告、植物图案和殖民图像怎样把加勒比等热带地区塑造成供外来者消费的“异国天堂”。她还会用自己设计的花布包裹殖民纪念物，让纪念物暂时无法被照常观看。",
         "summary": "Henry Art Gallery 为 Joiri Minaya 开设个展，以 Aloha 衬衫、花卉弹力布和包裹殖民纪念物的纺织实践，拆解“热带”如何从加勒比延伸为全球消费图像。",
         "happened": "展览于 7 月 25 日在西雅图开幕。Minaya 出生于纽约、在多米尼加共和国长大；她把自己定位为表演者与“破坏者”，用纺织、摄影和遮蔽动作对抗把热带地区及居民简化为异国幻想的视觉传统。",
         "facts": [
@@ -303,6 +315,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "餐盘照片穿过识别框后变成缺失脂肪与热量的数字卡片的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释食物识别应用的测量误差，并非真实应用界面、产品标识、研究图表或医疗建议",
         "title": "研究测试四款拍照记热量应用，它们都低估了餐食能量",
+        "background": "拍照记热量应用会先从照片判断食物种类，再估计每种食物的份量，最后从营养数据库换算热量和脂肪。任何一步判断错误，最终数字都会偏差。NIH Clinical Center 的代谢厨房能够精确称量每种原料，因此可以用已知答案测试这些应用。",
         "summary": "NIH Clinical Center 团队用代谢厨房中精确称重的餐食测试四款照片识别应用：它们平均少算 250 至 345 千卡，并把脂肪低估约 30 克。",
         "happened": "研究者先拍摄 102 份标准化餐食，分别交给 MyFitnessPal、LoseIt!、CalAI 与 Appediet 识别，再与精确到 0.1 克的配方记录比较；随后又分析 200 多份餐食，初步发现高脂低碳餐更容易被低估。",
         "facts": [
@@ -322,6 +335,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "森林斑块、互助劳动的人形节点、休耕周期与卫星网格组成的共有资源治理编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释轮耕、互助规范与森林斑块模型，并非真实社群、遥感影像、农地地图或研究结果截图",
         "title": "亚马孙研究发现：邻里合作也能限制森林开垦",
+        "background": "轮耕是一种先清理并种植一小块土地、使用一段时间后让它休耕并恢复植被的农业方式。许多热带地区的家庭需要邻居互相帮助才能完成清理和播种，因此一户人家能够开垦多大面积，不只取决于个人意愿，也取决于社群是否愿意提供劳动。",
         "summary": "一项结合人类学、遥感与模型的研究分析逾 18,000 个森林斑块，发现轮耕社群可通过互助和撤回合作，约束过大的开垦请求并维持森林再生。",
         "happened": "研究团队比较中南美洲、撒哈拉以南非洲、南亚和东南亚的遥感图像，并建立劳动共享模型。在 Belize 的例子中，合理的两英亩农地容易获得邻里协作，二十英亩的过大请求则可能因无人相助而无法实现。",
         "facts": [
@@ -341,6 +355,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "两颗导航卫星、原子钟脉冲、地面控制站与手机定位网格连接成公共基础设施的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释 Galileo 卫星、地面控制与公共导航服务，并非卫星实拍、任务图示、ESA 标识或导航界面",
         "title": "两颗 Galileo 卫星投入服务，全球导航系统获得更多余量",
+        "background": "Galileo 是由欧盟建设的卫星导航系统，作用类似美国 GPS。手机或车辆接收多颗卫星发出的时间信号后，才能计算自身位置。系统要持续可用，不只需要轨道上的卫星，还需要原子钟、地面站、数据处理和安全认证；备用卫星可以在设备故障时维持服务。",
         "summary": "Galileo 的 SAT 33 与 SAT 34 完成在轨测试并进入服务。新增冗余不仅提高定位连续性，也显出卫星、原子钟、地面站、安全认证和产业供应链共同构成的欧洲公共基础设施。",
         "happened": "两颗卫星于去年 12 月由 Ariane 6 发射，经过约七天早期运行和数月调试，被送入 23,222 公里高的精确轨道。SAT 33 在 5 月获准服务，SAT 34 于 7 月 23 日获批，L14 任务至此完成部署。",
         "facts": [
@@ -360,6 +375,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "呼吸气流、胎盘轮廓、空气污染颗粒与连续照护节点交织的孕期哮喘编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释孕期哮喘控制、环境暴露与母胎照护，并非患者肖像、医学影像、胎儿照片或治疗建议",
         "title": "综述指出：孕期哮喘的主要风险来自疾病控制不足",
+        "background": "哮喘会使气道发炎和变窄，患者可能咳嗽、喘息或呼吸困难。怀孕期间，母体需要为胎儿提供氧气，因此持续失控的哮喘可能同时影响孕妇和胎盘。很多人担心孕期用药会伤害胎儿，但自行停用控制药物也可能让缺氧和炎症风险上升。",
         "summary": "Mount Sinai 团队综述最新证据：哮喘影响 8% 至 13% 的妊娠，真正推动早产、高血压性疾病和胎儿生长风险的主要因素，是持续失控而非诊断标签本身。",
         "happened": "发表于《American Journal of Obstetrics and Gynecology》的综述整合气道炎症、氧化应激、胎盘功能与母体低氧机制，并把病毒感染、空气污染、室内暴露、肥胖和睡眠呼吸暂停纳入管理框架。",
         "facts": [
@@ -396,6 +412,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "木版形状、诗歌行列、折页与印刷套色相互咬合的艺术家书编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释 Miró、Éluard 与印刷者的协作过程，并非《À toute épreuve》书页复制、展品照片或艺术家作品",
         "title": "Miró 用 233 块木版把诗与图像编成一本书",
+        "background": "Joan Miró 是西班牙现代艺术家，以简化的线条、符号和鲜明色彩闻名；Paul Éluard 是法国诗人，也是超现实主义运动的重要成员。《À toute épreuve》是两人合作的艺术家书，也就是文字、图像、纸张和装订共同构成作品，而不只是给诗歌配几幅插图。",
         "summary": "旧金山 Legion of Honor 今天开启《Miró: Proof Against All》，把 Joan Miró 与 Paul Éluard 的艺术家书《À toute épreuve》拆回木版、试印、折页与装订的协作过程。",
         "happened": "展览围绕 1958 年出版的《À toute épreuve》展开。Éluard 的诗与 Miró 的木版图形并不是两条平行轨道：图像穿过页边、改变留白和翻页节奏。馆方同时展示装订本与未装订本，让观众比较阅读顺序和单页印刷物的不同身份。",
         "facts": [
@@ -415,6 +432,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "扬声器、舞台线路、声波与档案票券形成多层音乐谱系的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释 MoMA PS1 Warm Up 的现场音乐谱系，并非演出现场、真实表演者、海报或 MoMA 标识",
         "title": "MoMA PS1 的 Warm Up 用连续演出保存纽约舞曲文化",
+        "background": "MoMA PS1 是纽约一所以当代艺术和实验项目闻名的美术馆。Warm Up 是该馆从 1998 年开始举办的夏季现场音乐系列，把电子舞曲、实验声音、建筑和现场社群放在同一空间。它不是一场单独演唱会，而是由连续数周节目共同呈现不同城市、厂牌和音乐传统。",
         "summary": "MoMA PS1 的 Warm Up 2026 以六个周五晚间串联 dub、techno、gabber、house、hyperpop 与声音艺术；26 组表演者让小众音乐史通过现场合作而非流媒体标签被重新听见。",
         "happened": "本季 Warm Up 于 7 月 24 日开始、持续至 8 月 28 日。节目既有 Wackies 厂牌相关演出，也有 SCRAAATCH 向声音艺术家 Yasunao Tone 致意、巴西制作人 Anderson do Paraíso 的美国首演，以及 Mabe Fratti 的三重奏。",
         "facts": [
@@ -434,6 +452,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "家庭调查网格连接电影院、舞台和展览空间的文化参与测量编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释家庭调查如何测量文化参与，并非 U.S. Census Bureau 官方信息图、调查界面或受访者照片",
         "title": "美国人口普查局首次用短期调查统计文化参与",
+        "background": "美国人口普查局除了十年一次的人口普查，也会用家庭调查了解就业、健康和日常生活。Household Trends and Outlook Pulse Survey 是一项约每两个月进行一次的实验性短期调查。2026 年的新一轮调查首次把看电影、现场演出和参观艺术展览等文化活动纳入统计。",
         "summary": "U.S. Census Bureau 发布新一轮 Household Trends and Outlook Pulse Survey 数据，把电影、现场音乐与戏剧、艺术展览等参与方式纳入约 13.6 万户家庭的实验性调查。",
         "happened": "调查于 2026 年 3 月 13 日至 30 日进行。官方信息图估计，在此前四周内，约 4,600 万成年人去电影院，约 5,000 万人现场观看音乐、舞蹈或戏剧，约 2,300 万人参观艺术展览。",
         "facts": [
@@ -453,6 +472,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "公寓楼、记忆筛查卡、交通路线与照护导航员连成支持网络的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释公共住房中的认知筛查与照护导航，并非真实居民、患者、筛查结果或 Rutgers 项目现场",
         "title": "Rutgers 项目帮助公共住房居民从失智筛查走到就医",
+        "background": "失智症会影响记忆、判断和日常生活，但一次认知筛查只能提示风险，不能代替完整诊断。公共住房居民还可能面对交通、预约和专科资源不足等困难。Rutgers 的项目因此把筛查和“社区脑健康导航”放在一起，由工作人员帮助居民完成后续就医步骤。",
         "summary": "Rutgers 在公共住房中开展认知筛查，并由社区脑健康导航员安排预约、车辆和回访。首半年 160 名受筛者中，约三分之二显示超出年龄预期的记忆下降。",
         "happened": "项目把筛查带进居民所在社区；当结果提示风险时，来自护理与公共卫生领域的导航员不只给出转诊单，还协助预约、安排交通、陪伴返家，并用居民能理解的方式解释下一步。",
         "facts": [
@@ -472,6 +492,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "女性身体轮廓、症状时间线、照护日程与社会支持节点交叠的长期新冠编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释长期新冠、压力与照护负担之间的关联，并非患者肖像、诊断图或因果关系证明",
         "title": "研究发现女性长期新冠患者的压力与症状有关，但不能把压力当作病因",
+        "background": "长期新冠是感染新冠病毒后持续数月或更久的一组症状，常见表现包括疲劳、呼吸困难、疼痛和注意力问题。女性既是长期新冠报告较多的群体，也常承担更多育儿和照护工作。这项研究关注身体症状、压力、孩子数量和社会支持是否同时出现。",
         "summary": "一项针对 2,500 名美国幼儿母亲的研究发现，高压力与长期新冠诊断、自我判断及更多症状相关；研究同时强调，横截面调查无法确定压力究竟是原因、放大因素还是疾病结果。",
         "happened": "研究者分析 2023 年 7 月的在线调查。近 10% 受访者认为自己患有尚未确诊的长期新冠，1.2% 报告正式诊断；高压力量表得分与更多长期症状相关，抚养超过两个孩子者报告的症状也更多。",
         "facts": [
@@ -508,6 +529,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "乐谱草稿、铅笔修改、索引卡、舞台光线与档案盒叠合的 Sondheim 创作档案编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释音乐剧创作过程与公共档案，并非 Sondheim 手稿复制、肖像或 Library of Congress 展品照片",
         "title": "美国国会图书馆公开 Sondheim 的草稿、删除和改写",
+        "background": "Stephen Sondheim（1930—2021）是美国音乐剧作词家和作曲家，代表作包括《Sweeney Todd》《Into the Woods》和《Sunday in the Park with George》。他的作品以复杂的歌词、人物心理和音乐结构著称。Sondheim Papers 是保存其手稿、草稿、录音和工作笔记的创作档案。",
         "summary": "Library of Congress 今天继续展出 Stephen Sondheim 创作档案。歌词、乐谱草稿、录音、笔记与剪贴簿让音乐剧不再只剩经典唱段，而成为可以逐页追踪的修改过程。",
         "happened": "Library of Congress 在 2025 年取得 Sondheim Papers，并已向研究者开放。7 月 24 日，Performing Arts Reading Room 的小型陈列展示《Into the Woods》《Sunday in the Park with George》《Merrily We Roll Along》《Sweeney Todd》和《A Little Night Music》等作品的歌词与音乐材料。",
         "facts": [
@@ -527,6 +549,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "流动色带、纸模型、悬挂座椅轮廓与空间网格组成的总体环境设计编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释 Verner Panton 的空间、色彩与设计过程，并非具体家具复制、展览现场或历史照片",
         "title": "Vitra 回顾 Panton 如何从家具设计走向整体空间",
+        "background": "Verner Panton（1926—1998）是丹麦设计师，以鲜艳色彩、塑料家具和包围身体的室内环境闻名。最知名的 Panton Chair 是一把用单片塑料形成的悬臂椅，但 Panton 并不只设计单件家具；他还把灯光、织物、墙面和座椅组合成可进入的整体空间。",
         "summary": "Vitra Design Museum 在 Verner Panton 百年诞辰展中，把名椅放回光、织物、化学材料、企业委托与未实现建筑组成的总体环境，纠正“六十年代造型大师”的单一标签。",
         "happened": "《Verner Panton: Form, Colour, Space》正在 Vitra Schaudepot 展出。展览从五十年代纸模型和原型，延伸到 1970 年 Visiona II 的可步入式 Fantasy Landscape 重构，并首次详细呈现大量未建成建筑方案及其设计过程。",
         "facts": [
@@ -546,6 +569,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "堆叠法规文件穿过扫描网格并转化为透明公共仪表板的政策淤泥编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释法规扫描、行政负担与公共数据，并非政府文件、AI 产品界面或新闻摄影",
         "title": "Stanford 用 AI 阅读州政府多年累积的报告要求",
+        "background": "美国州法会要求政府机构定期提交报告、维持委员会或收取特定费用。新要求不断增加后，过时条款未必会自动退出，工作人员可能花大量时间制作没人使用的报告。Stanford RegLab 是一个把法律、政策和技术结合起来研究行政制度的团队。",
         "summary": "Stanford RegLab 用 AI 扫描全美五亿词州法，寻找过时报告、委员会与费用。结果显示，行政负担不仅来自执行太慢，也来自法律长期累积而缺少退出机制。",
         "happened": "研究团队建立覆盖美国 50 州法规的语料库，并与地方和州政府验证识别工具。研究已推动 San Francisco 精简超过三分之一报告要求，也被 New York 的 regulatory reset 使用；论文将发表于《Yale Journal on Regulation》。",
         "facts": [
@@ -565,6 +589,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "牧场、豆类、果蔬、土地网格与区域经济箭头重新排列的全球食物系统编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释饮食转型、土地利用与农业经济情景，并非农场实景、统计图或研究结果截图",
         "title": "Nature 研究模拟更健康饮食将怎样改变农业与地区收入",
+        "background": "EAT–Lancet 饮食建议鼓励人们多吃蔬菜、水果、坚果和豆类，并减少部分红肉和高环境负担食物。全球如果真的这样改变饮食，农民种什么、养多少牲畜、使用多少土地和获得多少收入都会随之变化。这项研究用十套模型比较这些连锁影响。",
         "summary": "十个模型团队推演全球转向健康饮食、减少浪费与提高生产效率的后果：土地利用排放可大幅下降，但畜牧业、作物生产和地区收入会发生极不均衡的重排。",
         "happened": "发表于《Nature》的多模型分析模拟了接近 2025 EAT–Lancet 建议的食物系统转型。到 2050 年，全球农业用地可能比延续当前趋势少 6%，反刍动物数量比 2020 年少约四亿头；果蔬、坚果与豆类产值则明显增加。",
         "facts": [
@@ -584,6 +609,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "法院台阶、分散法律文件、交叉性网格与未闭合执行链组成的性别正义编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释国际刑法中的性别迫害、判决与执行缺口，并非法院照片、受害者影像或官方法律文件",
         "title": "性别迫害进入国际判决后，执行仍受资金短缺限制",
+        "background": "性别迫害是指因为一个人的性别、性别认同或被规定的性别角色而系统性剥夺其基本权利。国际刑事法院（ICC）负责审理种族灭绝罪、战争罪和危害人类罪等严重国际犯罪。Women’s Initiatives for Gender Justice 长期追踪国际法院是否真正调查和处理针对女性及性别群体的犯罪。",
         "summary": "Women’s Initiatives for Gender Justice 在中断八年后重启 Gender Report Card，把监测范围从 ICC 扩展到国际法院、区域人权法院、联合国机制与危害人类罪条约谈判。",
         "happened": "新版报告梳理 2025 年 1 月至 2026 年 5 月的进展：ICC 首次作出性别迫害定罪，Afghanistan 案逮捕令首次以性别迫害为主要指控；美洲人权法院也首次承认生殖暴力这一法律类别。",
         "facts": [
@@ -620,6 +646,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "马鞍、织物、乐谱、拱门与地图纸片跨越四百年叠合的 Tejano 历史编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释 Tejano 历史、物质文化与音乐传统，并非展品复制、历史地图或官方海报",
         "title": "Tejano 展览把美国历史起点推回建国以前",
+        "background": "Tejano 通常指在得克萨斯生活、具有墨西哥或西班牙文化背景的人及其历史。Tejano 社群的牧场、宗教、音乐、军事经历和政治生活，早于 1776 年美国建国，也跨越今天的美国与墨西哥边界。Briscoe Western Art Museum 位于得克萨斯州 San Antonio，主要收藏和讲述美国西部历史。",
         "summary": "Briscoe Western Art Museum 用一场双语展览追溯近四百年 Tejano 历史，把牧场、信仰、军旅、音乐与当代艺术放回“美国起源”的中心，而不是边缘附录。",
         "happened": "《Tejano Legacy: Another American Origin Story》于 7 月 23 日举行开幕活动、7 月 24 日向公众开放。展览从十六世纪延伸到今天，汇集美国与墨西哥的馆藏、私人收藏和当代委托作品；若干被墨西哥认定为文化与历史遗产的借展品首次在美国展出。",
         "facts": [
@@ -639,6 +666,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "沉浸式展厅、投影地球、展柜与票务门槛被拼贴成一台探索机器的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于讨论沉浸式博物馆、赞助与探索叙事，并非 National Geographic 场馆照片、品牌图像或展陈复制",
         "title": "National Geographic 用十万平方英尺把“探索”变成沉浸式产品",
+        "background": "National Geographic Society 是一家支持地理、自然、科学研究与影像传播的美国机构，也长期通过杂志和电视塑造公众对“探索”的想象。Museum of Exploration 是该机构在华盛顿总部新建的参观空间，观众通过投影、互动装置、摄影和探险装备了解其项目。",
         "summary": "华盛顿新开的 National Geographic Museum of Exploration 用投影、互动媒体和探险档案把“探索者”塑造成公众身份；与此同时，票价、赞助和机构自述也在决定谁能进入、谁被看见。",
         "happened": "新馆于 6 月 26 日开放，本周进入首轮集中评论。它在 National Geographic Society 总部提供 100,000 平方英尺互动空间，以 Photo Ark、探险装备、环境影像和沉浸式装置组织参观；馆方把门票收入直接描述为对全球 Explorer 项目的支持。",
         "facts": [
@@ -658,6 +686,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "倾斜的银河盘与香肠状恒星流、轨道线和模拟网格相交的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释银河并合与盘面翻转模型，并非 Gaia 观测图、真实天文照片或论文模拟截图",
         "title": "天文学家提出：银河系盘面翻转可能来自一次矮星系碰撞",
+        "background": "银河系的多数恒星位于扁平旋转的盘面中，太阳也在这里；盘面外还有分布稀疏、轨道较混乱的恒星晕。Gaia Sausage 是一座很早以前与银河系合并的矮星系留下的恒星群。天文学家可以用恒星现在的速度和轨道，反推这次碰撞怎样改变了早期银河系。",
         "summary": "Durham University 团队用 Gaia 观测约束超级计算机模拟，提出约一百亿年前的 Gaia Sausage 正面并合曾让银河盘翻转超过九十度，并解释恒星晕为何转得异常缓慢。",
         "happened": "研究者原本在追查银河盘恒星约每秒 220 公里、恒星晕仅约每秒 25 公里的旋转差异。模拟显示，质量接近 Gaia Sausage 的矮星系若正面撞入早期银河系，会在数亿年内重定向整个盘面，并留下缓慢旋转、偏心轨道明显的恒星晕。",
         "facts": [
@@ -677,6 +706,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "培养皿里的微型神经组织、分叉神经元与不同药物反应路径的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释患者来源脑类器官与药物反应差异，并非显微照片、患者组织或临床结果",
         "title": "患者细胞培育的“迷你脑”显示同一种药可能产生不同结果",
+        "background": "脑类器官是由人类干细胞在实验室中培养出的微小三维组织，能够模拟部分脑细胞的发育和活动，但不是一个完整的大脑。研究者可以把患者的血细胞重新编程为干细胞，再培养出带有该患者遗传特征的类器官，用来比较疾病和药物反应。",
         "summary": "Johns Hopkins 团队用患者血细胞培养数百个后脑类器官，发现阿尔茨海默病相关组织对常用抗抑郁药的分子反应并不一致；这是个体化研究工具的早期证据，不是已经可用的治疗预测。",
         "happened": "研究者把阿尔茨海默病患者与健康参与者的血细胞重编程为诱导多能干细胞，再培养为豌豆大小、能产生血清素神经元的后脑类器官。团队比较 escitalopram 治疗前后的蛋白质和细胞外囊泡，观察到疾病相关蛋白与药物反应的异质性。",
         "facts": [
@@ -696,6 +726,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "研究、监管、数据、人才与公众知识五个支柱由照护路径连接的女性健康制度编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释女性健康研究与照护基础设施，并非患者、医护人员、政府文件或组织标志",
         "title": "多家机构发布缩小女性健康差距的全国战略",
+        "background": "女性健康差距不只指女性是否进入临床试验，也包括哪些疾病得到研究、数据能否共享、研究成果是否进入诊疗，以及医生和患者能否获得可靠信息。ACOG 是美国妇产科医师的专业组织，Society for Women’s Health Research 与 Women First Research Coalition 则推动女性健康研究和政策。",
         "summary": "三家美国女性健康组织联合三十余个伙伴，要求国会十年投入 200 亿美元，把研究、监管、数据、人才与公众教育连接成一项国家策略。",
         "happened": "ACOG、Society for Women's Health Research 与 Women First Research Coalition 发布《National Strategy to Close the Women's Health Gap》。框架提出五项投资重点：研究创新、跨机构监管协调、数据与证据基础设施、临床和研究人才，以及公众健康素养。",
         "facts": [
@@ -732,6 +763,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "一本打开的书释放出纸片、星群与不确定光环，象征神的概念由诗性想象生成的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释神学、现象学与诗性想象的关系，并非宗教圣像、书封或作者肖像",
         "title": "《A Radical God》主张：诗歌不是描述神，而是在语言中创造神",
+        "background": "John D. Caputo 是美国哲学家和宗教思想研究者，长期研究解构主义、现象学与宗教。Theopoetics 可译为“神学诗学”，它关注诗歌、故事、祈祷和想象怎样构成人们对神的理解，而不是只用教义证明神是否存在。《A Radical God》是 Caputo 对这一问题的新书。",
         "summary": "John D. Caputo 七月新书《A Radical God》把 theopoetics 推到更激进的位置：诗性语言不是替一个既有的神换上修辞外衣，而是在想象中构成‘神’这个观念。",
         "happened": "Columbia University Press 于 2026 年 7 月出版《A Radical God: Theopoetics, Phenomenology, and the Future of Religion》。Caputo 先暂停有神论与无神论的裁决，再用现象学讨论宗教语言如何在诗、祈祷和实践中生成意义；全书从 theopoetics 进入 theopraxis，最后追问一种不依附教义正统的宗教未来。",
         "facts": [
@@ -751,6 +783,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "科罗拉多地形线、家庭档案、河流与工作室纸片交叠成一幅开放地图的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释地方身份、环境与当代艺术的关系，并非参展作品、展览现场或官方海报",
         "title": "28 位艺术家用一场展览重新讨论“科罗拉多”是什么",
+        "background": "科罗拉多于 1876 年成为美国一个州，2026 年是建州 150 周年。州形象常被落基山脉、滑雪和开拓史代表，但当地也包含原住民历史、不同家庭的迁徙经验、城市生活，以及干旱、山火和水资源争议。MCA Denver 是位于州府丹佛的当代艺术馆。",
         "summary": "MCA Denver 将在科罗拉多建州 150 周年之际推出《Colorado Currents》。展览没有把地方身份当成现成风景，而是让 28 位相关艺术家从历史、家庭遗产和水资源压力重新定义它。",
         "happened": "《Colorado Currents》将于 7 月 24 日开幕、展至 11 月 1 日。首席策展人 Miranda Lash 历时近两年走访工作室，尤其寻找此前没有在 MCA Denver 展出的创作者；展览以科罗拉多历史、地方与家庭遗产、自然三条线组织近期作品，并把干旱、山火与用水放进州身份叙事。",
         "facts": [
@@ -770,6 +803,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "日程方格在一张家庭餐桌周围忽然错位，而灯、餐盘和时钟保持稳定的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释日常可预测性与儿童心理健康筛查，并非儿童、家庭或临床研究对象照片",
         "title": "研究发现：不可预测的童年环境也可能影响成年心理健康",
+        "background": "Adverse Childhood Experiences（ACE）是用于询问虐待、忽视和家庭重大困难等童年逆境的常见筛查框架。但一个孩子即使没有经历这些明确事件，也可能长期面对照护者频繁更换、作息不断变化和无法预料的日常生活。这项研究把“不可预测性”作为另一组问题加入儿童健康资料。",
         "summary": "一项近三万名儿童的真实世界研究发现，在传统 ACE 创伤筛查之外加入 5 个‘日常不可预测性’问题，能更准确识别多类心理与行为风险；结果是关联证据，不是对父母的因果判决。",
         "happened": "Chapman University、UC Irvine 与 Rady Children's Health 团队分析儿科初级照护数据，将照护者更换、作息变动和难以预期的日常安排，与传统 Adverse Childhood Experiences 筛查并列。两种量表捕捉到不同经验，合用时对抑郁、焦虑、睡眠、行为与躯体症状的识别优于只用 ACE。",
         "facts": [
@@ -789,6 +823,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "水库水位线在地图上反复升降，露出化石足迹、遗址网格与五级风险色带的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释水位调度与文化、古生物资源保存风险，并非 USGS 原始地图或具体遗址定位",
         "title": "USGS 建模评估 Lake Powell 水位变化对遗址的风险",
+        "background": "Lake Powell 与 Lake Mead 是美国科罗拉多河上的大型水库，水位会随降雨、用水和大坝调度升降。岸线移动不仅影响供水和发电，也可能让原本浸没或覆盖的化石、足迹、考古遗址和历史器物暴露、风化或被侵蚀。USGS 是负责地质、水资源和自然风险研究的美国联邦机构。",
         "summary": "USGS 发布 Lake Powell 与 Lake Mead 的文化和古生物资源保存风险模型，把 2026—2060 年水位方案、岸线侵蚀与潜在遗址分布纳入同一空间分析。",
         "happened": "这份 7 月更新的数据集服务于美国两座水库的 Post-2026 运营环境影响评估。研究者分别估计化石、足迹、洞穴等古生物资源和考古遗址、历史土地使用、器物等文化资源可能位于何处，再把地形与水位变化造成的风化和侵蚀叠加，形成 1 至 5 级风险。",
         "facts": [
@@ -808,6 +843,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "十八世纪小说书页中的婚姻契约被剪开，男性放纵与女性后果落在不对称天平上的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释家庭小说、性道德与婚姻制度，并非历史手稿、书封或研究者肖像",
         "title": "一项文学研究追问：小说怎样把男性越界写成“天性”",
+        "background": "十八世纪末英国的家庭小说经常围绕恋爱、婚姻、财产和家庭名誉展开。“Rake”指风流、放纵并经常越过性规范的男性角色。文学研究者 Rachel Gevlin 想分析，小说怎样通过叙述角度、人物魅力和结局，让男性婚前或婚外性行为比女性的类似行为更容易获得原谅。",
         "summary": "Rachel Gevlin 获 AAUW 一年期研究资助，将撰写《Divorcing the Rake》，研究十八世纪末英国家庭小说怎样处理通奸、重婚和离婚，并自然化男女欲望的双重标准。",
         "happened": "Gevlin 的在研书稿将分析 Jane Austen 等作者笔下男性婚前与婚外性行为，以及婚姻破裂情节如何获得同情性解释。项目刚获得 5 万美元 American Postdoctoral Research Leave Fellowship；它提出了明确论点，但书尚未完成，因此不能把未来文本分析当成已经证实的普遍结论。",
         "facts": [
@@ -844,6 +880,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "古罗马颅骨、分层证据卡片与逐渐成形但不具真实人物特征的面孔相互叠合的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释考古证据、面部复原与虚构传记之间的边界，并非遗骨、展品或真实人物肖像",
         "title": "Aquincum 博物馆用遗骨复原三位古罗马人的面貌与生活",
+        "background": "Aquincum 是古罗马帝国在多瑙河附近的一座城市，遗址位于今天的匈牙利布达佩斯。考古学家可以从骨骼、牙齿、DNA 和墓葬物品推测死者的年龄、健康、来源和部分外貌。面部复原则把这些资料转化为可见的人脸，缺少的姓名和生平不能仅靠骨骼得知。",
         "summary": "布达佩斯 Aquincum Museum 用 DNA、颅骨形态和考古背景复原 16 名古罗马居民，同时为他们创造名字与人生。展览最有价值的不是‘看起来像真人’，而是暴露科学推断与叙事想象如何在同一张脸上相遇。",
         "happened": "《Once We Were Like You》正在 Aquincum Museum 展出。研究团队依据遗骨、DNA 和墓葬背景推断年龄、来源、伤病以及眼睛、头发和肤色等特征，并制作 16 个面部复原，其中 6 个是等身硅胶模型。策展团队也为人物命名、安排职业与个人经历，并明确承认这些传记是在历史基础上进行的叙事创作。",
         "facts": [
@@ -863,6 +900,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "象牙色与酒红色纸张构成的新博物馆翼楼穿过两座不同时代的旧建筑并连向山林的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释 Clark 新翼在旧馆、藏品与景观之间的连接，并非建筑效果图或建成照片",
         "title": "Clark Art Institute 公布连接旧馆、捐赠与山林的新翼设计",
+        "background": "Clark Art Institute 是位于美国马萨诸塞州 Williamstown 的美术馆和研究机构。Aso O. Tavitian 是一位收藏欧洲艺术的慈善家，他把 300 余件作品及建设资金留给 Clark。新翼需要同时安放这批收藏，并连接美术馆 1955 年和 1973 年建成的两座既有建筑。",
         "summary": "Selldorf Architects 公布 Clark Art Institute 的 Aso O. Tavitian Wing：12 间展厅把三百余件欧洲艺术收藏安置在两座不同时代的建筑之间。所谓‘无缝’，其实是材料、资金、动线与机构记忆的精密协商。",
         "happened": "Clark Art Institute 宣布建设专门陈列 Aso O. Tavitian Collection 的新翼，建筑由 Selldorf Architects 设计，景观由 Reed Hilderbrand 负责，计划 2028 年开放。新建筑连接 1955 年的主馆与 1973 年的 Manton Research Center，以石材、白橡木、青铜窗框和连续景观组织 12 间尺度不同的展厅。",
         "facts": [
@@ -882,6 +920,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "同一则新闻从报纸页面分流到短视频、社交网络和聊天机器人，来源标识沿途逐渐变小的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释新闻消费的平台化与来源可见度，并非 Reuters Institute 原始图表",
         "title": "2026 新闻报告显示：平台首次超过新闻网站成为主要入口",
+        "background": "Reuters Institute 每年发布《Digital News Report》，调查不同国家和地区的人怎样接触、信任和付费阅读新闻。过去很多人会直接打开电视新闻、报纸网站或新闻应用；现在越来越多人先在社交媒体、视频平台或 AI 聊天机器人中遇到新闻。",
         "summary": "Reuters Institute 的 48 个市场调查显示，社交媒体与视频网络以 54% 的使用率首次超过新闻机构网站和应用。变化不是某个平台突然获胜，而是新闻入口、信任和付费关系被第三方逐步重写。",
         "happened": "《Digital News Report 2026》记录全球新闻消费继续从电视、新闻网站和应用转向社交媒体、视频网络与 AI 聊天机器人。社交与视频网络成为 54% 受访者使用的新闻来源，新闻机构自有网站和应用为 51%，电视为 52%；另有 10% 的人每周用独立 AI 聊天机器人获取新闻。",
         "facts": [
@@ -901,6 +940,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "同一组人物经过不同分类表格后投射出不同工资、健康与教育统计结果的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释种族变量选择如何改变统计结论，并非论文原始图表或真实调查对象",
         "title": "研究证明：种族变量怎样编码会改变不平等结论",
+        "background": "社会调查中的“种族”不是由仪器直接测出的自然数值。研究者可以使用受访者自我认同、访问者的外部分类、早期筛选问卷或把多个回答合并后的变量。选择不同变量后，同一批人的工资、失业、抑郁或学校纪律差距可能得到不同结果。",
         "summary": "Sociological Science 的开放研究比较美国纵向调查中的多种种族测量，发现常用的筛选变量在五类结果中从未获得最佳模型拟合。种族不是数据库里天然存在的一栏，而是研究者必须解释的操作选择。",
         "happened": "Stanford 社会学者 Emma Williams-Baron 与 Aliya Saperstein 使用 1979 National Longitudinal Survey of Youth，比较自我认同、他人分类和筛选问卷等不同种族变量，并将其带入工资、薪金、失业、抑郁与学校纪律五类不平等分析。表现最好的变量会随性别、结果与拟合指标改变，没有一个通用金标准。",
         "facts": [
@@ -920,6 +960,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "一条十四年长的红色诊断时间线从月经日历穿过缺铁、转诊和血液检查，最终抵达诊断的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释女性出血性疾病的长期诊断延迟，并非患者、血样或临床结果图像",
         "title": "全球报告指出：女性出血性疾病平均可能晚诊十四年",
+        "background": "出血性疾病会让血液不容易正常凝固，患者可能经常出现淤青、鼻血、手术后出血或月经过多。月经出血常被当作个人差异或必须忍受的正常现象，因此女性和女孩的早期信号容易被忽视。The Lancet Haematology 委员会召集全球专家，评估这种延误及改进方法。",
         "summary": "The Lancet Haematology 委员会指出，女性与女孩的出血性疾病平均需 14 至 16 年才获诊断，男性约两年；多达三分之一女性经历的月经过多，往往是最早却最容易被正常化的信号。",
         "happened": "由 Cleveland Clinic 血液学家 Bethany Samuelson Bannow 领导的全球委员会发布女性血液健康路线图，涵盖出血、血栓、贫血、妊娠和产后并发症。报告要求把月经史与缺铁筛查纳入常规照护，建立更清晰的转诊和产后出血流程，并把女性纳入临床试验与指南设计。",
         "facts": [
@@ -956,6 +997,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "纸张、墨迹、上海街屋、迁徙飞鸟和打开的绘本围绕一位抽象创作者剪影的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释 Ed Young 的移民记忆与绘本创作，并非艺术家原作、书封或人物肖像复制",
         "title": "Ed Young 回顾展用六十年作品讲述迁徙与儿童视觉语言",
+        "background": "Ed Young（1931—2023）是出生于上海、后来移居美国的儿童书插画家和作者。他参与创作超过 100 本书，常用粉彩、墨、剪纸和拼贴，把中国童年、战争记忆、移民生活和家庭关系转化为儿童能够进入的图像。代表作包括《The House Baba Built》《Lon Po Po》和《Voices of the Heart》。",
         "summary": "Museum of Chinese in America 的首场美国回顾展以原稿、拼贴和出版物串联 Ed Young 的上海童年、赴港避乱、移居美国、收养女儿与太极实践，显示儿童书并不是缩小的成人艺术，而是记忆跨代传递的基础设施。",
         "happened": "《Ed Young’s Bright Worlds: Gesture and Feeling in 60 Years of Picture Books for Children》正在纽约 Museum of Chinese in America 展出。展览从《The House Baba Built》《Voices of the Heart》《My Mei Mei》和身后出版的《Bright World》等作品出发，呈现 Young 如何使用粉彩、剪纸、钢笔、墨和拼贴，把日本占领时期的上海童年、移民生活、家庭经验和身体练习转译为图像叙事。",
         "facts": [
@@ -975,6 +1017,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "餐桌、椅子、衣物、半开的门和家庭照片在彼此错位的房间之间漂浮的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释家庭空间的亲密、劳动与过渡状态，并非 Paul R. Jones Collection 藏品复制",
         "title": "学生策展把家庭空间和日常劳动变成艺术史问题",
+        "background": "Paul R. Jones Collection 是一批以非裔美国艺术家作品为重要组成部分的美国艺术收藏，部分馆藏由 University of Alabama 保存和研究。《The Domestic Liminal》是一项研究生策展项目。“Domestic”指家庭和日常生活，“liminal”指处在两个状态之间；展览用这些概念讨论家既可能是安全和亲密的地方，也可能包含劳动、压力与离开。",
         "summary": "University of Alabama 的研究生策展项目从 Paul R. Jones Collection 选出二十世纪作品，讨论家如何同时容纳亲密、劳动、安全、压迫、记忆和离开；策展过程本身也成为学生学习如何生产解释的现场。",
         "happened": "《The Domestic Liminal: The In-Betweenness of the Home》正在 Tuscaloosa 的 Paul R. Jones Museum 展出，7 月 20 日继续向公众免费开放。展览由 Lucy Curzon 博士的 Art History 580 二十世纪艺术研讨课策划，学生从馆藏中选择作品，以日常生活为线索重新组织二十世纪艺术与文化。",
         "facts": [
@@ -994,6 +1037,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "一座纸上城市被分成动员者、社区连接者、新闻旁观者和低参与者四种网络形态的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释 Pew 的四类公共参与模式，并非研究原始图表或精确比例地图",
         "title": "Pew 研究把美国人的新闻与公共参与分成多种群体",
+        "background": "公共参与不只包括投票，也包括志愿服务、参加宗教活动、关注新闻、联系官员和公开表达意见。Pew Research Center 想了解这些行为是否总在同一批人身上出现，因此使用聚类分析，把行为模式相近的受访者归到同一组，而不是先按党派划分。",
         "summary": "Pew-Knight Initiative 用 19 项行为指标将美国成年人归为动员者、连接者、旁观者与局外人四组，说明投票、志愿服务、宗教活动、新闻关注和公开表达并不会总是同步出现。",
         "happened": "Pew Research Center 7 月 16 日发布公共参与研究。研究者用聚类分析处理一项 5,393 人、多模式调查中的 19 项政治、公民、宗教和新闻行为，再以另一项 5,195 人调查比较四组人的知识与态度。结果中，动员者占 9%，连接者占 28%，旁观者与局外人各占 31%。",
         "facts": [
@@ -1013,6 +1057,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "空网球场被透明 DNA 链分隔，旁边出现棉签、隐私信封、准入闸门和分叉路径的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于呈现体育资格筛查的制度张力，并非运动员、检测过程或基因结果的真实图像",
         "title": "WTA 要求女子网球选手接受 SRY 基因资格筛查",
+        "background": "Women’s Tennis Association（WTA）管理国际女子职业网球巡回赛。SRY 是通常位于 Y 染色体上的一个基因，与胚胎性别发育过程有关，但人的染色体、基因、激素和身体特征并不总以完全相同的方式组合。WTA 把 SRY 筛查作为新的女子组参赛资格步骤。",
         "summary": "WTA 宣布以一次性 SRY 基因检测确认女子巡回赛资格，新规 7 月 21 日生效。争论因此从睾酮规则转向基因标记，同时把隐私、例外身体与制度申诉推到中心。",
         "happened": "WTA 更新女子巡回赛参赛政策，要求球员通过一次性 SRY 基因筛查；样本可由面颊拭子或血液取得。此前政策允许跨性别女性在声明女性身份并保持较低睾酮水平两年后参赛。WTA 表示筛查将在 2026 年开始，并承诺设置保密和球员沟通机制。",
         "facts": [
@@ -1032,6 +1077,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "由五年时间线组成的世界地图连接筛查、药物、放疗和癌症登记系统，并在部分地区留下数据空白的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释全球乳腺癌生存差距与数据缺口，并非精确地图、患者影像或临床结果",
         "title": "WHO 首次发布全球乳腺癌五年生存率比较",
+        "background": "乳腺癌五年净生存率表示患者确诊五年后仍然存活的比例，并尽量扣除其他死亡原因的影响。它会受到发现是否及时、能否得到手术、药物和放疗，以及癌症登记是否完整等因素影响。许多国家没有足够的登记数据，因此世界卫生组织需要结合已有数据和医疗条件建立估算模型。",
         "summary": "WHO 首次为全部 194 个成员国估计乳腺癌五年净生存率：全球中位数为 77.8%，非洲区域为 39.1%，美洲区域为 88.5%；差距同时暴露了诊断、治疗和癌症登记能力的不平等。",
         "happened": "WHO 发布 2017 至 2021 年确诊女性的全球乳腺癌五年生存估计，并在 Nature Medicine 发表模型结果。模型将 67 个拥有观测登记数据的成员国，与分期、药物可及性、放疗、乳腺摄影能力和成人死亡率等变量结合，为其余国家建立基线。",
         "facts": [
@@ -1068,6 +1114,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "罗马头盔、壁画碎片与器皿从生活空间进入现代展台的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释器物脱离原始语境后的博物馆化，并非卢浮宫展品复制",
         "title": "罗马器物展览追问：日常用品何时会被当成艺术",
+        "background": "古罗马器物原本可能是头盔、餐具、住宅装饰或宗教用品，它们首先服务于战斗、生活和仪式。进入现代博物馆后，器物常被从原来的房间、建筑或使用场景中取出，单独放在展柜里供人欣赏。这样的展示会让观众更关注造型之美，也可能忘记物品原来怎样被使用。",
         "summary": "尼姆罗马博物馆与卢浮宫合作的展览拒绝只谈形式之美：头盔、壁画、器皿和建筑构件首先属于战斗、家居、仪式与权力，然后才被现代展台重新命名为独立艺术品。",
         "happened": "《L’art romain du Louvre. Un monde d’images》正在法国尼姆 Musée de la Romanité 展出。策展路径将庞贝角斗士头盔等仍能显出用途的器物，与从完整装饰体系中切下、后来被独立装框的壁画碎片并置，追问现代收藏和审美分类如何改变我们观看罗马视觉文化的方式。展览是卢浮宫希腊、伊特鲁里亚与罗马古物部门整修期间的馆际合作项目。",
         "facts": [
@@ -1087,6 +1134,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "多名匿名女性共同在巨幅画布上工作、强调尺度与身体动作的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释女性抽象表现主义者的集体创作史，并非任何艺术家原作复制",
         "title": "Speed Art Museum 用三十多位女性重写抽象表现主义史",
+        "background": "抽象表现主义是二战后在美国兴起的艺术运动，以大尺幅、明显笔触、泼洒颜料和强调创作动作著称。艺术史过去常把 Jackson Pollock、Willem de Kooning 等男性当作核心人物，但 Lee Krasner、Joan Mitchell、Helen Frankenthaler 等女性同样参与了这场运动并发展出不同方法。",
         "summary": "Speed Art Museum 的群展把 Helen Frankenthaler、Joan Mitchell、Lee Krasner 等三十多位艺术家放回美国战后先锋运动中心，并坚持让观众以原作的完整尺度理解其身体性。",
         "happened": "《Abstract Expressionists: The Women》正在 Louisville 的 Speed Art Museum 展出，7 月 19 日继续安排专题导览与现场讨论。展览覆盖二战后至 1970 年代，呈现 Helen Frankenthaler、Joan Mitchell、Vivian Springford、Grace Hartigan、Lee Krasner、Pat Passlof 等三十多位艺术家，是 Kentucky 首个专门讨论抽象表现主义的展览。",
         "facts": [
@@ -1106,6 +1154,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "青少年在家操作生态修复游戏，注意目标、干扰和情绪路径环绕屏幕的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释 Eco-Rescue 临床试验设计，并非真实参与者、游戏界面或疗效证明",
         "title": "FIU 用生态修复游戏测试青少年焦虑训练",
+        "background": "焦虑会让人更容易被威胁吸引注意，也可能难以把注意力转回当前任务。Eco-Rescue 是一款让玩家同时追踪目标、处理突发变化和修复虚拟环境的游戏，设计者希望这些任务能练习注意控制。临床试验要把它与普通游戏和不玩游戏的情况比较，才能判断变化是否来自针对性训练。",
         "summary": "FIU 正在测试 Eco-Rescue 能否帮助 11 至 15 岁青少年练习注意力转换。研究尚无疗效结果；它最值得关注的恰恰是如何区分游戏的新鲜感、一般娱乐和针对性训练。",
         "happened": "Florida International University 的 Center for Children and Families 成为美国首个开展 Eco-Rescue 临床试验的站点。玩家扮演修复受损环境的飞行员，同时追踪移动目标、应对突发变化并管理多项任务。研究将参与者随机分入 Eco-Rescue、非注意力训练游戏和不玩游戏三组，六周后比较注意控制、情绪调节与焦虑症状。",
         "facts": [
@@ -1125,6 +1174,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "私人小型火箭从公共海岸发射场升空，下方展开科研、监管和供应链结构的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释私人轨道发射背后的公共基础设施，并非 Vikram-1 实拍或精确复原",
         "title": "印度首枚私人轨道火箭升空，但任务依赖公共基础设施",
+        "background": "Skyroot Aerospace 是一家印度私人航天公司，由曾在印度空间研究组织（ISRO）工作的工程师创办。Vikram-1 是该公司研制的小型运载火箭，目标是把卫星送入近地轨道。即使火箭由私人公司制造，发射仍需要国家发射场、空域管理、监管和长期培养的航天人才。",
         "summary": "Skyroot 的 Vikram-1 将载荷送入 450 公里轨道，使印度成为第三个拥有私人轨道发射能力的国家；但发射场、人才、监管和早期技术积累仍来自国家航天体系。",
         "happened": "7 月 18 日，Vikram-1 从 ISRO 的 Satish Dhawan Space Centre 发射，在约 15 分钟后把客户载荷和在轨实验送入 450 公里轨道。此次 Mission Aagaman 主要验证推进、航电、遥测、制导、导航与控制系统；Skyroot 表示仍需更多测试飞行，之后才会进入常规商业任务。",
         "facts": [
@@ -1144,6 +1194,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "美国纸质地图环绕母婴形成一座延伸十二个月的照护桥梁的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释产后 Medicaid 覆盖扩展，并非真实患者或精确政策地图",
         "title": "美国多数州把产后 Medicaid 覆盖从 60 天延长到一年",
+        "background": "Medicaid 是由美国联邦和州政府共同资助、主要服务低收入人群的医疗保险项目。符合条件的孕妇通常能在怀孕和分娩期间获得保障，但过去许多州会在产后约 60 天结束资格。产后抑郁、慢性病、避孕和分娩并发症的照护往往需要持续更久。",
         "summary": "KFF 7 月 15 日更新显示，49 个州和华盛顿特区已把 Medicaid 产后覆盖延长至 12 个月，只剩一个州没有采取扩展行动。",
         "happened": "美国 2021 年《American Rescue Plan Act》允许各州通过州计划修正，把原本通常只有 60 天的 Medicaid 产后资格延长到 12 个月；该选项 2022 年 4 月 1 日生效，并在 2023 年综合拨款法中永久化。KFF 最新追踪显示，截至 2026 年 7 月 15 日，49 州和 Washington, D.C. 已实施一年覆盖，Arkansas 成为唯一尚未扩展的州。",
         "facts": [
@@ -1180,6 +1231,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "杂志碎片、花朵、家用器具与朋克海报被切开重组的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释 Linder 的拼贴方法与朋克语境，并非艺术家原作复制",
         "title": "Linder 巡展回到 Blackpool，回顾朋克拼贴怎样重组大众图像",
+        "background": "Linder Sterling 是英国艺术家和音乐人，1970 年代活跃于曼彻斯特朋克场景。她最著名的创作方法是摄影蒙太奇：用手术刀剪开广告、时尚、家居和情色杂志中的图像，再把食物、机器和身体重新拼接。她也从事摄影、行为艺术和雕塑。",
         "summary": "横跨五十年的巡回回顾展今天抵达 Blackpool：从 1970 年代曼彻斯特朋克场景到新作，Linder 用剪切、错置与表演拆解身体如何被消费图像塑造。",
         "happened": "Hayward Gallery Touring 的《Linder: Danger Came Smiling》于 7 月 18 日在 Blackpool 的 Grundy Art Gallery 开幕，展至 10 月 3 日。展览覆盖 Linder 五十年的蒙太奇、摄影、行为与雕塑实践，从她身处 1970 年代曼彻斯特朋克场景时制作的早期拼贴，一直延伸到首次公开的新作。她常使用医用手术刀切割 glamour photography、食品、时尚与家居图像，把消费文化对身体的编码变成可见的接缝。",
         "facts": [
@@ -1199,6 +1251,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "原创的魔鬼与老人面具、舞蹈服饰和节庆节奏组成的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释 Michoacán 面具与 danza 传统，并非展品复制或现场摄影",
         "title": "Las Cruces 展览展示墨西哥面具如何持续进入当代生活",
+        "background": "墨西哥 Michoacán 等地的 danza 是结合舞蹈、音乐、服装和面具的社群表演传统。面具可以表现魔鬼、圣徒、老人，也会加入政治人物和媒体名人，因此不是只复制过去的固定样式。制作和表演者会用新材料、幽默和讽刺回应当代生活。",
         "summary": "Las Cruces Museum of Art 新展以 50 件历史和当代面具、5 套完整舞蹈服饰说明：Michoacán 的 danza 传统一直通过新材料、幽默与讽刺回应现实。",
         "happened": "《Dancing with Life: Mexican Masks》于 7 月 17 日在新墨西哥州 Las Cruces Museum of Art 开幕，展至 10 月 17 日。展览从 Northwest Museum of Arts and Culture 的收藏中选出 Michoacán 的历史与当代面具及完整 danza 服饰：形象既有 diablos、圣徒与慈祥老人，也包括媒体名人、政治人物、罪人和“假偶像”。策展人 Pavel Shlossberg 曾在 Tócuaro 与面具艺术家共同生活和学习，并以此反思博物馆如何描述墨西哥原住民面具实践。",
         "facts": [
@@ -1218,6 +1271,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "分散符号经过社会网络传播，在跨过阈值后形成共享模式的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释社会规范的阈值模型，并非实验数据图",
         "title": "研究发现：社会规范常在试探后跨过临界点",
+        "background": "社会规范是一个群体逐渐形成的共同做法，例如大家用同一个名称指某样东西。研究中的“命名游戏”让参与者各自给陌生面孔取名，只有两人选中同一个名字才得到奖励。Tolerance Principle 原本用于解释儿童何时把大量语言例子概括成稳定规则。",
         "summary": "PNAS 研究把儿童学习语法的 Tolerance Principle 用于成人协调实验：人们既不只是模仿，也不持续计算最优解，而是在证据越过阈值后稳定选择。",
         "happened": "CUNY Graduate Center、University of Pennsylvania 与 Stanford 的研究者重新分析社会网络中的“命名游戏”，并加入预注册的双人实验：参与者要为陌生面孔独立选择名称，匹配成功即可获得小额奖励。结果显示，参与者早期会概率性尝试多个选项；当累积经验达到 Tolerance Principle 所描述的阈值，选择会从探索突然转为稳定。该模型原本用于解释儿童如何从大量规则形式和少量例外中学会语法。",
         "facts": [
@@ -1237,6 +1291,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "同一政治提问穿过不同边界后，被部分人工智能对话框阻挡的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释模型拒答与跨境言论环境，并非真实产品界面或测试截图",
         "title": "Oversight Board 发现 AI 模型可能把一国禁忌带给别国用户",
+        "background": "商业大语言模型会根据训练资料、产品政策和安全规则决定是否回答请求。政治批评在不同国家受到的法律和社会限制不同，但同一个模型可能面向全球用户。Oversight Board 是一个研究网络平台内容治理和表达权利的独立机构，这次把相同类型的政治请求交给多款模型比较。",
         "summary": "Oversight Board 测试 10 个商业大模型发现：生成政治批评材料时，涉及限制性言论环境的拒答率为 34%，宽松环境为 14%。",
         "happened": "Oversight Board 7 月 16 日发布研究，通过位于澳大利亚的 IP 地址、主要在美国的商业接口，测试 10 个商业大模型对 10 个司法辖区政治批评请求的回应。模型面对 Cambodia、China、Saudi Arabia、Thailand、Turkey 等限制性环境时，生成批评传单或诗歌的平均拒答率为 34%；面对 Chile、Japan、Taiwan、UK、US 等较宽松环境时为 14%。有些拒答援引当地法律、安全或并不存在的一般政策。",
         "facts": [
@@ -1256,6 +1311,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "免疫细胞、卵巢滤泡与谨慎延伸的临床研究路径组成的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释一项早期生育研究，并非患者、药品包装或治疗现场影像",
         "title": "一项 10 人试验报告 3 个婴儿出生，但证据仍非常初步",
+        "background": "早发性卵巢功能不全是指卵巢在 40 岁前停止正常排卵和分泌激素，其中一部分病例可能与免疫系统错误攻击自身组织有关。Rituximab 是一种影响 B 细胞的免疫药物，最初用于血液癌症，也用于部分自身免疫疾病。研究者想知道它能否帮助特定患者重新对卵巢刺激产生反应。",
         "summary": "针对自身免疫性早发性卵巢功能不全的小型先导研究中，rituximab 治疗后 10 人有 6 人重新形成可取卵滤泡，3 人最终分娩；证据仍远不足以成为常规疗法。",
         "happened": "NEJM Evidence 报道的一项先导研究招募 10 名自身免疫性早发性卵巢功能不全患者。她们在 rituximab 治疗前接受卵巢刺激均无反应；治疗四至六个月后，6 人形成可取卵滤泡，5 人获得可冷冻或受精的成熟卵子。3 人随后接受胚胎移植，并均分娩健康婴儿。Rituximab 1997 年首先获批治疗血液癌症，也用于部分自身免疫疾病。",
         "facts": [
@@ -1292,6 +1348,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "古代航船沿胶片驶向巨幕，少量影院如灯塔分布在地图上的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释史诗改编与放映基础设施，并非电影剧照或新闻现场影像",
         "title": "《奥德赛》采用 IMAX 胶片，但只有少数影院能完整放映",
+        "background": "《奥德赛》是古希腊史诗，讲述奥德修斯在特洛伊战争后历经多年返回家园的旅程。Christopher Nolan 是以大规模实拍和胶片制作闻名的电影导演。70 毫米 IMAX 使用宽大的胶片和专用放映机，能够呈现很高的画面细节和特殊画幅，但只有少数影院保留完整设备。",
         "summary": "诺兰把荷马史诗拍成首部全片使用 IMAX 摄影机的叙事长片；但其首选的 70 毫米版本在美国只进入 25 家影院，技术雄心也制造了新的观看地理。",
         "happened": "Christopher Nolan 执导、Matt Damon 饰演奥德修斯的《The Odyssey》于 7 月 17 日上映。影片被 IMAX 称为首部全片使用 IMAX 摄影机拍摄的叙事长片，Nolan 首选 70 毫米 IMAX 放映；Axios 核验，美国目前只有 25 家运营中的影院具备这一放映条件。其他观众仍可在数字 IMAX、Dolby Cinema、普通 70 毫米、35 毫米及院线自有巨幕观看，但画幅、胶片质感和银幕比例并不相同。",
         "facts": [
@@ -1311,6 +1368,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "水彩纸、刺绣绷架与跳舞的抽象女性形象从工作室延伸到美术馆的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释水彩、母职与媒介等级，并非 Gladys Nilsson 原作复制",
         "title": "Gladys Nilsson 首次回顾展挑战“水彩是女性媒介”的偏见",
+        "background": "Gladys Nilsson 是美国芝加哥艺术家，也是 1960 年代艺术团体 Hairy Who 的成员。她的画面常把拥挤、扭曲的人物、幽默和鲜艳色彩组合在一起。怀孕期间，为避开油画溶剂松节油，她转而大量使用水彩，并把这种常被视为较轻或较私人化的材料发展成持续六十年的主要媒介。",
         "summary": "86 岁前夕，Nilsson 迎来首场生涯回顾展；约 115 件作品把母职中的材料选择、芝加哥地域标签与水彩的媒介等级放到同一条六十年时间线上。",
         "happened": "Crocker Art Museum 将于 7 月 19 日开幕《Gleefully Askew: A Gladys Nilsson Retrospective》，展至 11 月 29 日。这是 Nilsson 首场回顾展，汇集约 115 件水彩、绘画、素描与版画，覆盖六十余年。她 1962 年毕业于芝加哥艺术学院，后来成为 Hairy Who 成员；怀孕期间为避免松节油毒性，她把水彩作为主要媒介，却被批评界进一步归类为团体中最“女性化”的成员。",
         "facts": [
@@ -1330,6 +1388,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "智利山顶望远镜连续扫描夜空，图像数据流向分布式计算节点的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释时间域巡天与数据基础设施，并非天文实拍影像",
         "title": "Rubin 天文台开始为期十年的动态宇宙巡天",
+        "background": "Vera C. Rubin Observatory 是建在智利 Cerro Pachón 的大型天文台，以研究暗物质和星空随时间发生的变化为主要目标。Legacy Survey of Space and Time（LSST）不是只拍一次天空，而是连续十年反复拍摄南天，让研究者发现超新星、小行星和亮度变化的恒星。",
         "summary": "位于智利的 Rubin 天文台启动十年 LSST 巡天：每三至四夜覆盖可见南天，持续生成变化警报；真正的望远镜还包括跨机构计算与数据分发系统。",
         "happened": "Reuters 7 月 15 日报道，NSF–DOE Vera C. Rubin Observatory 开始执行为期十年的 Legacy Survey of Space and Time。位于 Cerro Pachón 的 8.4 米望远镜搭载 32 亿像素相机，计划每晚拍摄约 1,000 幅图像，并在三至四夜内覆盖整个可见南天。它由 NSF NOIRLab 与美国能源部 SLAC 国家加速器实验室联合运营，目标不是单次拍出最深图像，而是把超新星、近地小行星、变星和遥远星系的变化连接成时间序列。",
         "facts": [
@@ -1349,6 +1408,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "英国地图由校园档案拼成，空椅与断裂的学术阶梯向地域边缘扩散的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释学术岗位流失与地域冷点，并非校园新闻现场影像",
         "title": "英国人文学岗位减少近四千个，部分地区出现知识空缺",
+        "background": "SHAPE 是英国常用的学科合称，指社会科学、人文学科和艺术。大学中的早期职业岗位包括许多刚进入学术工作的讲师和研究人员，他们承担教学、研究和未来学科传承。British Academy 的地图追踪这些岗位在不同年份、地区和学科中的变化。",
         "summary": "British Academy 的新地图显示，早期 SHAPE 学者一年减少 6%，岗位与课程也向少数机构集中；大学削减预算正在改变谁能在家乡附近学习语言、经典与社会工作。",
         "happened": "British Academy 7 月 15 日发布 Mapping SHAPE Academic Staff 数据与地域分析，追踪 2012/13 至 2024/25 的英国高校人员变化。学院发现，2024/25 年早期职业阶段的 SHAPE 学者同比减少 6%，而高级和教授层级并未同步下降；英格兰东北部与东米德兰兹的早期人员一年降幅接近 20%。Guardian 对官方数据的补充分析显示，截至 2024 年 12 月的一年内，社会科学、人文与艺术合计减少近 4,000 个岗位。",
         "facts": [
@@ -1368,6 +1428,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "匿名选民把选票投入投票箱，避孕、孕产照护、生育治疗与隐私路径环绕其外的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释生育自由公投，并非投票现场或真实人物影像",
         "title": "爱达荷生育权公投取得投票资格",
+        "background": "美国州级投票倡议允许居民收集足够签名，把拟议法律直接交给选民表决。《Reproductive Freedom and Privacy Act》是爱达荷州的一项公民倡议，内容涵盖堕胎、避孕、生育治疗、医疗隐私和医疗人员的法律保护。它要建立州法律，而不是修改州宪法。",
         "summary": "州务卿确认《Reproductive Freedom and Privacy Act》进入 11 月 3 日选票；它把堕胎、避孕、生育治疗与隐私放入同一项成文法选择。",
         "happened": "爱达荷州务卿确认《Reproductive Freedom and Privacy Act》达到法定要求，将出现在 2026 年 11 月 3 日州级大选选票上。倡议不是修改州宪法，而是建立一项州法律：在胎儿具有存活能力前保障堕胎权，存活能力后在保护孕妇健康时允许医疗干预，并覆盖避孕、生育治疗、隐私与医疗提供者责任保护。发起方提交超过 100,000 个签名，高于所需的 70,725 个。",
         "facts": [
@@ -1404,6 +1465,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "十二幅田园壁画、女性巧克力工人与可可运输路线组成的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释壁画、劳动与可可供应链，并非作品复制或新闻现场影像",
         "title": "蒙克为巧克力工厂创作的壁画掩盖了怎样的劳动现实",
+        "background": "Edvard Munch（1863—1944）是挪威画家，代表作《呐喊》以强烈色彩和人物心理著称。1920 年代，奥斯陆 Freia 巧克力厂委托 Munch 为女工食堂创作 12 幅大型壁画。壁画描绘海滩、花园和休息场景，而不是巧克力生产过程。",
         "summary": "MUNCH 博物馆把 Freia 工厂女工食堂里的 12 幅壁画搬进展厅；田园场景背后，是工资差距、女性劳动与殖民可可供应链。",
         "happened": "奥斯陆 MUNCH 博物馆正在展出 Edvard Munch 受 Freia 巧克力厂委托创作的 12 幅壁画。作品 1922 年获委托、1923 年进入女工食堂，描绘采果、浇花、海滩与休憩；此次因原食堂翻修而外借至 2026 年 10 月 11 日。这是壁画首次在挪威的工厂之外公开展出，也是继 1968 年斯德哥尔摩展出后，整组作品第二次离开工厂。展览同时追溯 Freia 从南美、加勒比到英属殖民地黄金海岸（今加纳）的可可来源。",
         "facts": [
@@ -1423,6 +1485,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "拟人化纽约摩天楼、心理棋盘与废旧包装变成的生物组成的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释建筑拟人、游戏与材料再造，并非原作复制",
         "title": "Madelon Vriesendorp 用拟人建筑图像影响现代建筑理论",
+        "background": "Madelon Vriesendorp 是荷兰艺术家，也是建筑事务所 OMA 的四位共同创办人之一。她会把摩天楼和城市建筑画成人物，用欲望、幽默和戏剧关系解释抽象的建筑理论。她最著名的作品《Flagrant Délit》后来成为 Rem Koolhaas 著作《Delirious New York》的封面。",
         "summary": "Sir John Soane’s Museum 为 2025 年 Soane Medal 得主举办大型回顾展：从《Delirious New York》封面到废塑料雕塑，建筑思想被转换成角色、笑话和游戏。",
         "happened": "《Madelon Vriesendorp: Mind Games》于 7 月 15 日在伦敦 Sir John Soane’s Museum 开幕，展至 9 月 20 日。展览覆盖蚀刻、绘画、书封、首饰、纸上新作与雕塑，并设置可被观众重新排列的放大版 Mind Game。Vriesendorp 1975 年创作《Flagrant Délit》，让 Empire State 与 Chrysler 两座摩天楼成为被撞见的恋人；作品后来成为 1978 年《Delirious New York》的封面。她也是 1975 年 OMA 的四位共同创办人之一。",
         "facts": [
@@ -1442,6 +1505,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "韦布望远镜、智利地面望远镜、年轻恒星碎屑盘与三颗行星组成的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释多台仪器与档案数据的联合发现，并非天体实拍影像",
         "title": "两套观测设施共同确认一颗隐藏十一年的暗行星",
+        "background": "β Pictoris 是距离地球约 63 光年的年轻恒星，周围有碎屑盘和多颗已知行星。直接成像行星非常困难，因为恒星比行星明亮得多，行星的微弱光会被淹没。JWST 是太空望远镜，VLT 是位于智利的地面望远镜组，两者使用不同仪器观察同一系统。",
         "summary": "两个彼此独立的团队用 JWST 与 VLT 发现同一颗冷气态巨行星；真正的突破不只是新天体，而是光谱匹配、长期档案与地空协同。",
         "happened": "两个研究团队分别报告 β Pictoris 系统的第三颗确认行星 β Pic d。美国团队在 JWST/NIRSpec 积分视场光谱中偶然识别它，并以第二轮 NIRSpec 与 MIRI 数据确认；欧洲团队则用智利 VLT/ERIS 拍到它，再回查 JWST/NIRCam 与 VLT/SPHERE 的多时期档案，建立 11 年轨迹。两组结果于 7 月 15 日在《Astrophysical Journal Letters》公开；预印本已于 6 月 22 日发布。",
         "facts": [
@@ -1461,6 +1525,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "几内亚湾沿岸地图、降雨模型网格、雨量计与城市排水系统组成的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释气候归因与城市排水，并非洪灾现场影像",
         "title": "归因研究解释气候变暖如何加剧西非洪水",
+        "background": "气候归因研究会比较今天的真实气候与一个没有大量人为温室气体排放的模拟气候，估计全球变暖让某次极端天气变得多大程度更强或更常见。World Weather Attribution 是专门快速分析极端天气与气候变化关系的国际研究团队。",
         "summary": "World Weather Attribution 分析称，人为变暖让 6 月几内亚湾沿岸极端降雨约增至五倍可能；观测、模型和城市基础设施却给出不同尺度的答案。",
         "happened": "6 月 20 日起的 72 小时内，科特迪瓦、加纳、多哥与尼日利亚沿海人口稠密地区遭遇强降雨，部分城市不到一天超过 140 毫米。World Weather Attribution 比较历史观测与气候模型，集中分析最极端的三天：观测资料显示三日强降雨强度较记录初期增加约 23%，模型给出的变暖增幅约 4%；团队综合判断，此类事件在今日气候中约为工业化前的五倍可能。",
         "facts": [
@@ -1480,6 +1545,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "候选人队伍穿过狭窄入口进入澳大利亚议会，并与性别平衡刻度并置的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释候选人遴选与可胜选席位，并非真实议员或议会现场影像",
         "title": "澳大利亚自由党重新争论候选人性别配额",
+        "background": "澳大利亚自由党是该国主要中右翼政党。候选人大多先经过党内预选，再参加正式选举，因此女性能否进入议会也取决于谁能获得可胜选选区的提名。性别配额会要求一定比例的候选人或席位由女性获得，开放初选和候选人激励则是其他改革方式。",
         "summary": "一份党内讨论稿把女性配额、开放初选和可胜选席位干预摆上桌面；领袖反对配额，女性高层则要求不要在讨论开始时排除选项。",
         "happened": "澳大利亚自由党委员会向支持者散发改革讨论稿，提出更新老龄化党员基础、改善与女性、多元文化社群和年轻人的联系，并讨论在可胜选席位采取性别配额、开放初选、女性候选人激励或预选最低比例。党魁 Angus Taylor 7 月 16 日重申从未支持配额；副党魁 Jane Hume 表示草案仍在讨论，所有选项都会被考虑；影子内阁成员 Anne Ruston 则称，以往除配额外的方法未能改变众议院中的女性人数。",
         "facts": [
@@ -1516,6 +1582,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "中世纪刺绣卷从博物馆运输箱中展开，并以虚线跨越英吉利海峡的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释主题，并非实物复制或新闻现场影像",
         "title": "贝叶挂毯回到英格兰展出，胜利叙事也被重新解释",
+        "background": "贝叶挂毯是一件约 70 米长的中世纪刺绣作品，使用羊毛线在亚麻布上连续讲述 1066 年诺曼征服英格兰的故事。画面从王位争议、渡海和战斗一直讲到黑斯廷斯战役。作品很可能由诺曼赞助人委托、英格兰刺绣者制作，现由法国 Bayeux 收藏。",
         "summary": "近千年未回英格兰的贝叶挂毯已经抵达大英博物馆；它的运输工程，也把文物外交、保存技术与谁有权解释 1066 年重新摆到公众面前。",
         "happened": "7 月 10 日凌晨，70 米长的贝叶挂毯在气候控制箱与减震支架保护下，从法国经英吉利海峡隧道抵达大英博物馆。它将在 2026 年 9 月至 2027 年 7 月展出，这是这件约作于 1072—1077 年的刺绣近千年来首次回到英格兰。作品以羊毛线绣在亚麻布上，讲述黑斯廷斯战役及诺曼征服前后的事件；大英博物馆认为它很可能由诺曼赞助人委托、英格兰刺绣者制作。",
         "facts": [
@@ -1535,6 +1602,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "匿名表演者静坐舞台，观众手持剪刀靠近酒红色层叠布料的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释权力与同意，并非演出现场或真实人物影像",
         "title": "小野洋子《Cut Piece》再演，观众参与再次触碰同意边界",
+        "background": "小野洋子是日裔艺术家、音乐人和观念艺术先驱。《Cut Piece》是她 1964 年首次演出的行为作品：表演者静坐在台上，让观众依次用剪刀剪走衣服。作品把观众从旁观者变成行动者，也让每个人必须决定剪多少、何时停手以及怎样对待表演者的身体。",
         "summary": "The Broad 与 REDCAT 将在 7 月 18—19 日重演小野洋子的两件行为作品；当剪刀重新交到观众手中，1964 年的问题也被带进当代的同意政治。",
         "happened": "配合 The Broad 的《Yoko Ono: Music of the Mind》回顾展，艺术家 MPA 将于 7 月 18 日和 19 日在洛杉矶 REDCAT 两次演出《Cut Piece》。她会静坐台上，邀请观众剪走衣服碎片；两场分别穿着 Victor Barragán 与 Aliona Kononova 定制的服装。同场的《Sky Piece to Jesus Christ》由洛杉矶室内乐团六人组合演出：乐手被纱布逐渐缠绕，直到无法继续演奏。",
         "facts": [
@@ -1554,6 +1622,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "两座射电望远镜朝向银河中心分子云，四个发光节点组成分子结构的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释星际分子探测，并非望远镜实拍影像",
         "title": "天文学家首次在星际空间发现赤藓糖",
+        "background": "星际分子云是恒星形成前聚集气体和尘埃的寒冷区域。赤藓酮糖（erythrulose）是一种含 4 个碳原子的糖类分子，结构比此前在太空中发现的部分有机分子更复杂。射电望远镜不会直接拍到分子，而是根据分子在特定频率留下的光谱信号识别它。",
         "summary": "研究团队在银河中心分子云中报告四碳酮糖赤藓酮糖；这不是发现生命，而是把糖的化学前史向恒星形成之前又推进了一步。",
         "happened": "由 Izaskun Jiménez-Serra 等 57 名作者组成的团队，利用西班牙 Yebes 40 米和 IRAM 30 米射电望远镜的超灵敏宽带光谱巡天，在银河中心分子云 G+0.693-0.027 中识别出赤藓酮糖（erythrulose）。论文将其称为星际介质中首次观测到的糖；它是一种手性的四碳酮糖，信号丰度至少是尚未被探测到的同类三碳糖的 8 倍。论文已投稿 Nature Astronomy，目前应按预印本结论理解。",
         "facts": [
@@ -1573,6 +1642,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "夜间书桌、分为三个控制方案的手机、家庭餐桌与断开同伴连线的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释试验权衡，并非参与者或研究现场影像",
         "title": "英国试验限制青少年社交媒体一个月，睡眠改善但社交减少",
+        "background": "青少年社交媒体限制可以采用不同方式：限制每个应用每天使用多久、夜间关闭，或完全从设备中移除。三种方式对睡眠、专注和同伴联系的影响可能不同。英国政府支持的这项现实试验让家庭实际执行一个月，再比较参与者的体验。",
         "summary": "英国 309 个家庭参与政府支持的现实试验；三种限制都带来主观改善，但最强限制也造成最大的社交中断。",
         "happened": "一项英国政府支持的研究把 309 个有 13—17 岁青少年的家庭分入三种为期一个月的干预：每个社交应用每日限用 15 分钟、晚 9 点至早 7 点宵禁、或从设备中完全移除社交应用。三组参与者都报告睡眠、情绪、专注、学习时间和家庭互动改善；完全移除对专注的报告增益最大，夜间宵禁最易坚持且睡眠收益最稳定。",
         "facts": [
@@ -1592,6 +1662,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "女性援助工作者共同支撑脆弱帐篷，资金网络被剪断且服务队伍延长的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释照护基础设施，并非危机地区或真实人物影像",
         "title": "援助资金削减使至少一百万女性失去基本服务",
+        "background": "在人道危机和冲突地区，女性主导的当地组织常提供性暴力幸存者支持、医疗转介、安全空间和法律协助。它们通常比大型国际机构更接近社区，但也更依赖不稳定的援助资金。UN Women 是联合国负责推动性别平等和女性权利的机构。",
         "summary": "UN Women 调查 52 个危机国家的 855 个女性组织后警告：需求上升时，近九成机构已无法满足需要，四成可能在一年内关闭。",
         "happened": "UN Women 7 月 10 日公布的调查显示，自 2025 年 1 月以来，全球援助资金大幅收缩，至少 100 万名女性和女孩失去人道及其他关键支持。调查覆盖 52 个危机和冲突国家的 855 个女性主导或女性权利组织：84% 看到需求增加，近 90% 已无法满足现有需要，60% 服务人数比 2025 年 1 月前更少，40% 预计一年内暂时或永久关闭。",
         "facts": [
@@ -1628,6 +1699,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "土地上的身体空缺轮廓与胶片组成的 Ana Mendieta 主题编辑插图",
         "imageCredit": "编辑插图 · 用于阐释主题，并非现场新闻摄影",
         "title": "Tate 回顾 Ana Mendieta，不再只从她的死亡讲述她",
+        "background": "Ana Mendieta（1948—1985）是出生于古巴、后来在美国工作的艺术家。她以《Silueta》系列闻名：在泥土、沙地、草木、火或水中留下身体轮廓，再用摄影和影像保存短暂过程。她的作品经常讨论身体、土地、流亡和归属。",
         "summary": "Tate Modern 的英国首场大型 Ana Mendieta 展览开幕，把注意力重新放回她的身体、土地、流亡与影像实践。",
         "happened": "Tate Modern 于 7 月 15 日开启英国首个献给 Ana Mendieta 的大型展览，展期持续至 2027 年 1 月 17 日。展览把《Silueta》系列等代表作与重新修复的影像、早期绘画和较少展出的材料并置，使观众能够看见她如何在土壤、火、水、血与身体轮廓之间工作。",
         "facts": [
@@ -1646,6 +1718,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "历史住宅中的艺术家工作室与共享空间编辑插图",
         "imageCredit": "编辑插图 · 用于阐释主题，并非现场新闻摄影",
         "title": "Sarabande 在伦敦开设低租金艺术家工作室",
+        "background": "Sarabande Foundation 是英国时装设计师 Lee Alexander McQueen 于 2006 年创立的慈善机构，为艺术家和设计师提供奖学金、工作室和职业支持。伦敦工作空间价格高昂，刚起步的创作者即使有作品，也可能因为没有负担得起的制作地点而离开城市。",
         "summary": "Sarabande Foundation 在 Tottenham 开启新基地，把 14 间可负担工作室、展厅、咖啡馆与社区空间放进两栋历史建筑。",
         "happened": "由 Lee Alexander McQueen 于 2006 年创立的 Sarabande Foundation，在近十年的规划和修复后，于 7 月 1 日开放 Tottenham 新址。两栋 18 世纪早期 Queen Anne 联排住宅容纳了 14 间艺术家工作室、House of Bandits 画廊、咖啡馆及公共活动空间。工作室报价仅为每平方英尺 £1。",
         "facts": [
@@ -1665,6 +1738,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "匿名来访者接受经颅磁刺激治疗的科学编辑插图",
         "imageCredit": "编辑插图 · 用于解释机制，并非真实患者或治疗现场",
         "title": "TMS 正被研究用于更多精神健康问题",
+        "background": "经颅磁刺激（Transcranial Magnetic Stimulation，TMS）是一种不需要开刀的治疗方法。医生把线圈放在头皮外，用磁脉冲影响特定脑区的神经活动。TMS 已用于部分抑郁症、强迫症、戒烟和偏头痛治疗，研究者正在测试不同刺激位置和疗程能否帮助更多疾病。",
         "summary": "APA 追踪经颅磁刺激的新方向：成熟适应证正在扩大，研究者也在探索 PTSD 与进食障碍，但“有希望”不等于已经成为标准治疗。",
         "happened": "American Psychological Association 的 7–8 月专题梳理了经颅磁刺激（Transcranial Magnetic Stimulation, TMS）的最新进展。TMS 通过置于头皮外的线圈产生磁脉冲，非侵入性地调节特定脑区活动。目前它已用于成人及青少年抑郁、强迫症、戒烟和偏头痛等领域；研究者还在测试它对 PTSD、进食障碍及部分神经系统疾病的价值。",
         "facts": [
@@ -1683,6 +1757,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "Menopunkapalooza 舞台上的朋克音乐人",
         "imageCredit": "摄影：Holly Andres · 来源：The Guardian",
         "title": "更年期主题朋克节把照护议题带进公共文化",
+        "background": "围绝经期是月经停止前后激素和身体逐渐变化的一段时期，更年期通常指连续 12 个月没有月经后的阶段。潮热、睡眠变化、情绪波动和脑雾等症状可能影响工作与生活，但长期很少在公共文化中被公开讨论。Menopunkapalooza 把医疗信息和朋克演出放进同一场活动。",
         "summary": "Menopunkapalooza 把 Gen X 朋克、医疗专业人士和 750 名参与者放进同一场节日，让更年期从私密羞耻变成公共议题。",
         "happened": "6 月底，Portland 的 Crystal Ballroom 举办了为期两天的 Menopunkapalooza。约 750 名参与者、十余位 Pacific Northwest 朋克音乐人和医疗专业人士共同讨论围绝经期、更年期、性健康与激素替代治疗。现场不仅有演出和资源市集，还宣读了十点“激素正义权利法案”。",
         "facts": [
@@ -1701,6 +1776,7 @@ export const briefings: Briefing[] = [
         "imageAlt": "手机增强现实让五位女性形象出现在国家广场上空的编辑插图",
         "imageCredit": "编辑插图 · 用于阐释增强现实与公共记忆，并非项目现场画面",
         "title": "Smithsonian 让五位被忽视的女性重新进入国家广场叙事",
+        "background": "National Mall 是华盛顿特区集中分布纪念碑、博物馆和国家仪式空间的区域，但这里的永久纪念物很少以女性为主角。Smithsonian American Women’s History Museum 是正在建设中的美国国家级女性历史博物馆。Unhidden Heroines 是该馆使用增强现实制作的户外历史项目。",
         "summary": "Smithsonian 用地理定位与定制插画制作 Unhidden Heroines，让女性历史从馆内展柜进入 National Mall 的现实空间。",
         "happened": "Smithsonian American Women’s History Museum 于 6 月 18 日推出增强现实项目 Unhidden Heroines，持续至 12 月 31 日。访客在 National Mall 的特定地点触发内容，通过地理定位与定制插画，接触五位塑造美国历史却未被充分看见的女性。",
         "facts": [

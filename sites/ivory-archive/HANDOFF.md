@@ -1,5 +1,69 @@
 # IVORY ARCHIVE handoff
 
+## 2026-07-29 · Four-part zero-knowledge rewrite
+
+### Current target
+
+按创作者批准的逐屏大纲，把全部现有报道统一为“背景 / 事件 / 细节 /
+分析”四段式。读者默认从未听说过相关人物、机构、作品或专业领域；
+标题与导语不算正文已经介绍过，正文第一次出现时仍需写出完整名称和
+必要背景。常识性的“报道不代表权威立场”不再逐篇重复。
+
+### Completed
+
+- 为 15 期、75 则报道逐篇新增独立 `background`，先解释人物是谁、
+  机构做什么、概念是什么意思，避免以“他 / 她 / 其 / 这位 / 该”开头。
+- React 与 Pages 详情页统一为“背景 / 事件 / 细节 / 分析”；原有事实、
+  日期、图片与来源 URL 保留。
+- 标题下方的原文入口已删除；每则只在“分析”正文之后保留一个可点击
+  原文链接，链接名称由来源机构与报道标题组成。
+- Brassaï 条目补充本名、生卒年、迁居巴黎、摄影集《Paris de nuit》
+  及夜间摄影特点，并把标题改为更能概括人物与事件的名称。
+- 首页、归档搜索、页脚说明、静态渲染器、测试和产品 / 视觉 / 排版 /
+  Figma 交接文档已同步。
+- Figma 文件 `ey07N2cwgxCtNUjvm6Ixgt` 的首页 `46:50`、桌面期刊
+  `46:51` 和移动阅读流 `46:52` 已原位更新为四段式；唯一来源入口位于
+  Analysis 之后。
+
+### Verification
+
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed, 654 local references across 75 HTML/CSS
+  files.
+- `npm run build:ivory`: passed, Sites artifact valid.
+- `node --test tests/ivory-renderer-parity.test.mjs`: passed, 3/3.
+- `npm run lint`: 0 errors; 24 unchanged warnings from Enheduanna/Hypatia.
+- `git diff --check`: passed.
+- Content audit: 75/75 stories have non-empty backgrounds; none begins with a
+  contextless Chinese pronoun.
+- Browser smoke: 1440×900, 1024×768, 768×1024, 390×844 and 320×720 all show
+  five stories with exactly four sections and one external source link per
+  story; no header source link or horizontal overflow.
+- Figma desktop issue, mobile issue and homepage screenshots inspected.
+- Antigravity extended route, interaction, accessibility and visual-regression
+  QA: pending.
+
+### Modified files
+
+- Content and schema: `briefings.ts`, `CONTENT.md`.
+- React UI and search: issue route, homepage, archive explorer and site shell.
+- Static Pages renderer: `scripts/build-github-pages.mjs`.
+- Verification: `tests/ivory-renderer-parity.test.mjs`.
+- Product and design records: `DESIGN.md`, `TECH.md` and
+  `web/sites/ivory-archive/`.
+
+### Delivery state
+
+- Branch: `codex/ivory-beginner-rebuild`.
+- Latest commit: this four-part implementation and handoff update.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/31>.
+- Owner-only preview:
+  <https://tsrat-ivory-migration-preview.tsrat.chatgpt.site>.
+- The preview is redeployed from this branch head and smoke-checked before
+  final handoff.
+- Merge remains unauthorized and has not been performed.
+- Worktree is clean after the delivery commit.
+
 ## 2026-07-29 · Three-section beginner rewrite
 
 ### Current target

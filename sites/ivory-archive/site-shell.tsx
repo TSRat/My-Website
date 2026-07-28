@@ -27,7 +27,7 @@ export function SiteFooter() {
         <div className="footer-identity">
           <Image className="footer-logo" src="/tsrat-logo.png" alt="TS鼠 Logo" width={1104} height={293} unoptimized />
           <p className="footer-brand">TS鼠 · 每日思想简报</p>
-          <p>先说发生了什么，再解释为什么重要，让第一次接触的人也能读懂。</p>
+          <p>先介绍人物与概念，再讲事件、细节和影响，让第一次接触的人也能读懂。</p>
         </div>
         <div className="footer-links">
           <Link href="/#today">今日五则</Link>
