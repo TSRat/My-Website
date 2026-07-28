@@ -1,6 +1,6 @@
 # IVORY ARCHIVE technical notes
 
-Last audited: 2026-07-28
+Last audited: 2026-07-29
 
 ## Two rendered forms
 
@@ -115,5 +115,5 @@ npm run lint
 ## Remaining gaps
 
 - 动态版与 Pages 静态版使用两套 JSX/HTML/CSS 实现，内容来自同一数据，但 UI 可能产生差异。
-- `tests/ivory-renderer-parity.test.mjs` 检查 15 期/75 则新 schema、全部来源 URL、五类信息形式、资产、全部静态详情页、初学者结构、Data contract 与双渲染 parity；它不替代视觉回归。
+- `tests/ivory-renderer-parity.test.mjs` 检查 15 期/75 则三段 schema、全部来源 URL、资产、全部静态详情页、描述性可点击链接、Data contract 与双渲染 parity；它不替代视觉回归。
 - `IVORY-ARCHIVE/` 旧快照容易误导新 Agent；保留或归档策略需要创作者确认。

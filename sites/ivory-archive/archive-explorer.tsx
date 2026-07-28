@@ -26,6 +26,7 @@ export function ArchiveExplorer({ briefings }: { briefings: Briefing[] }) {
           story.summary,
           story.happened,
           story.whyItMatters,
+          ...story.facts,
           story.sourceName,
         ]),
       ].join(" ").toLowerCase();

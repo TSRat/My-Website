@@ -25,8 +25,6 @@ test("IVORY briefing source satisfies the shared content contract", async () => 
   const briefings = await readBriefings();
   const dates = new Set();
   const issueNumbers = new Set();
-  const informationForms = new Set(["timeline", "comparison", "process", "relationship", "evidence"]);
-
   assert.ok(briefings.length > 0);
 
   for (const briefing of briefings) {
@@ -51,14 +49,14 @@ test("IVORY briefing source satisfies the shared content contract", async () => 
       assert.ok(story.summary.trim());
       assert.ok(story.happened.trim());
       assert.ok(story.whyItMatters.trim());
-      assert.ok(story.analysis.trim());
-      assert.ok(story.reflection.trim());
-      assert.ok(story.evidenceBoundary.trim());
       assert.ok(story.sourceName.trim());
-      assert.ok(story.sourceType.trim());
       assert.ok(story.sourceDate.trim());
-      assert.ok(informationForms.has(story.informationForm), `invalid information form: ${story.informationForm}`);
-      assert.ok(story.facts.length >= 3, `${story.title} needs enough facts for context and evidence`);
+      assert.ok(!("analysis" in story));
+      assert.ok(!("reflection" in story));
+      assert.ok(!("evidenceBoundary" in story));
+      assert.ok(!("sourceType" in story));
+      assert.ok(!("informationForm" in story));
+      assert.ok(story.facts.length >= 3, `${story.title} needs at least three key details`);
       await access(join(root, "public", story.image));
     }
   }
@@ -110,18 +108,25 @@ test("dynamic and Pages home renderers expose the same current briefing data", a
     assert.ok(staticHtml.includes(briefing.theme), `Pages archive is missing ${briefing.date}`);
     assert.ok(issueHtml.includes(briefing.learningGoal), `Pages issue is missing learning goal: ${briefing.date}`);
     assert.ok(issueHtml.includes(briefing.connection), `Pages issue is missing connection: ${briefing.date}`);
+    assert.equal((issueHtml.match(/<h3>发生了什么<\/h3>/g) ?? []).length, 5);
+    assert.equal((issueHtml.match(/<h3>这件事为什么重要<\/h3>/g) ?? []).length, 5);
+    assert.equal((issueHtml.match(/<h3>记住这几个细节<\/h3>/g) ?? []).length, 5);
+    assert.doesNotMatch(issueHtml, /证据与边界|反思与练习|不是来源中的直接事实|这份来源不能单独证明什么/);
 
     for (const story of briefing.stories) {
       for (const value of [
         story.title,
+        story.happened,
         story.whyItMatters,
-        story.analysis,
-        story.reflection,
-        story.evidenceBoundary,
+        ...story.facts,
         story.sourceUrl,
       ]) {
         assert.ok(issueHtml.includes(value.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("'", "&#039;")), `Pages issue ${briefing.date} is missing ${value}`);
       }
+      assert.ok(
+        issueHtml.includes(`查看原文：${story.title}`),
+        `Pages issue ${briefing.date} needs a descriptive source link for ${story.title}`,
+      );
     }
   }
 });

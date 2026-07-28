@@ -58,29 +58,6 @@ const escapeHtml = (value = "") => String(value)
   .replaceAll("'", "&#039;");
 
 const storyImageName = (story) => story.image.split("/").at(-1);
-const informationFormLabels = {
-  timeline: "时间线",
-  comparison: "对照表",
-  process: "过程",
-  relationship: "关系",
-  evidence: "证据卡",
-};
-
-function informationForm(story) {
-  const facts = story.facts.slice(2).length ? story.facts.slice(2) : story.facts;
-  const label = informationFormLabels[story.informationForm];
-
-  if (story.informationForm === "comparison") {
-    return `<div class="information-form information-comparison"><p class="information-form-label">信息形式 · ${label}</p><div class="table-scroll" tabindex="0" role="region" aria-label="${escapeHtml(story.title)} 对照表"><table><thead><tr><th scope="col">对照项</th><th scope="col">来源中可以确认的内容</th></tr></thead><tbody>${facts.map((fact, index) => `<tr><th scope="row">${String(index + 1).padStart(2, "0")}</th><td>${escapeHtml(fact)}</td></tr>`).join("")}</tbody></table></div></div>`;
-  }
-
-  if (story.informationForm === "relationship") {
-    return `<div class="information-form information-relationship"><p class="information-form-label">信息形式 · ${label}</p><dl>${facts.map((fact, index) => `<div><dt>关系 ${index + 1}</dt><dd>${escapeHtml(fact)}</dd></div>`).join("")}</dl></div>`;
-  }
-
-  return `<div class="information-form information-${escapeHtml(story.informationForm)}"><p class="information-form-label">信息形式 · ${label}</p><ol>${facts.map((fact, index) => `<li><span>${story.informationForm === "timeline" ? `节点 ${index + 1}` : story.informationForm === "process" ? `步骤 ${index + 1}` : `证据 ${index + 1}`}</span><p>${escapeHtml(fact)}</p></li>`).join("")}</ol></div>`;
-}
-
 function staticSiteCard(site) {
   const art = site.cover
     ? `<div class="card-art" aria-hidden="true"><img src="${escapeHtml(site.slug)}/${escapeHtml(site.cover)}" alt=""></div>`
@@ -169,7 +146,7 @@ function shell({ title, description, prefix, body }) {
   <a class="skip-link" href="#content">跳到正文</a>
   <header class="site-header frame">
     <a class="brand" href="${prefix}index.html"><img class="brand-logo" src="${prefix}tsrat-logo.png" alt="TS鼠 Logo"><span class="brand-copy"><strong>思想简报档案馆</strong><em>Ivory Archive</em></span></a>
-    <nav aria-label="主要导航"><a href="${prefix}index.html#today">今日五则</a><a href="${prefix}index.html#archive">日刊档案</a><a href="${prefix}index.html#topics">主题范围</a><a href="${prefix}index.html#method">编辑方法</a><a href="${prefix}index.html#data" data-analytics-event="data_entry_opened" data-analytics-target="header">Data</a></nav>
+    <nav aria-label="主要导航"><a href="${prefix}index.html#today">今日五则</a><a href="${prefix}index.html#archive">日刊档案</a><a href="${prefix}index.html#topics">主题范围</a><a href="${prefix}index.html#method">阅读方法</a><a href="${prefix}index.html#data" data-analytics-event="data_entry_opened" data-analytics-target="header">Data</a></nav>
   </header>
   <main id="content">${body}</main>
   <footer><div class="frame footer-inner"><div class="footer-identity"><img class="footer-logo" src="${prefix}tsrat-logo.png" alt="TS鼠 Logo"><p>思想简报档案馆 · Ivory Archive</p></div><p>GitHub Pages 公开静态镜像</p></div></footer>
@@ -196,7 +173,7 @@ function homePage() {
   const body = `
     <section class="hero frame">
       <div class="hero-meta"><span>ISSUE ${escapeHtml(latest.issueNo)}</span><strong>${escapeHtml(latest.displayDate)}</strong><small>IVORY ARCHIVE</small></div>
-      <div class="hero-copy"><p class="eyebrow">每日思想简报 · Daily Thought Briefing</p><h1>从“发生了什么”开始，读懂文化与社会新闻</h1><p>15 期、75 则新闻都按同一条初学者路径重写：先说明事情，再补背景、解释原因，分开事实与分析，最后留下可以继续思考的问题。</p><a class="button" data-analytics-event="briefing_opened" data-analytics-target="${escapeHtml(latest.date)}" href="briefings/${latest.date}/index.html">阅读今日简报 →</a><span class="unique">✓ ${latest.uniqueCount}/${latest.stories.length} 与历史档案无实质重复</span></div>
+      <div class="hero-copy"><p class="eyebrow">每日思想简报 · Daily Thought Briefing</p><h1>从“发生了什么”开始，读懂文化与社会新闻</h1><p>15 期、75 则新闻都按同一条初学者路径重写：先说明发生了什么，再解释为什么重要，最后列出最值得记住的具体细节。</p><a class="button" data-analytics-event="briefing_opened" data-analytics-target="${escapeHtml(latest.date)}" href="briefings/${latest.date}/index.html">阅读今日简报 →</a><span class="unique">✓ ${latest.uniqueCount}/${latest.stories.length} 与历史档案无实质重复</span></div>
       <div class="hero-art"><img src="ivory-botanical-archive.png" alt="森林绿色植物标本风档案插图"><span>${escapeHtml(latest.displayDate)}<br>No.${escapeHtml(latest.issueNo)}</span></div>
     </section>
     <section class="section frame" id="today"><header class="section-title"><div><p class="eyebrow">Today's Index</p><h2>今日五则</h2></div><p>${escapeHtml(latest.theme)}</p></header>
@@ -211,7 +188,7 @@ function homePage() {
       <p class="data-note">事件契约已经就绪；只有在明确数据来源、会话定义、保留期限与使用目的之后，才会接入分析供应商。<a href="ivory-site-manifest.json">查看机器可读 manifest →</a></p>
     </div></section>`;
 
-  const method = `<section class="method-section frame" id="method"><div><p class="eyebrow">Editorial Method</p><h2>先分清事实、分析与反思</h2></div><div><p>每则内容都先给出可核对的<strong>原始来源</strong>，再把编辑解释明确标出。你不需要听说过人物、机构或专业术语，也能沿着固定顺序读完。</p><ol><li><span>1</span><strong>发生了什么：</strong>先用普通语言说明事件与参与者。</li><li><span>2</span><strong>为什么值得关注：</strong>解释它会改变谁、什么制度或哪种理解。</li><li><span>3</span><strong>证据与边界：</strong>列出来源能证明的内容，也说明不能证明什么。</li><li><span>4</span><strong>分析与反思：</strong>把编辑判断与事实分开，并给出继续追问的练习。</li></ol></div></section>`;
+  const method = `<section class="method-section frame" id="method"><div><p class="eyebrow">Reading Method</p><h2>每篇只分三个部分</h2></div><div><p>不需要预先认识人物、机构或专业术语。每篇先把事情说清楚，再解释它为什么值得关注，并把关键时间、数字和人物集中列出来。</p><ol><li><span>1</span><strong>发生了什么：</strong>用普通语言说明事件、时间和参与者。</li><li><span>2</span><strong>这件事为什么重要：</strong>直接说明它影响什么，避免抽象术语。</li><li><span>3</span><strong>记住这几个细节：</strong>集中查看关键日期、数字和背景，并直接打开原文。</li></ol></div></section>`;
 
   return shell({
     title: "首页",
@@ -226,16 +203,12 @@ function issuePage(briefing) {
   const quickRead = briefing.stories.map((story, storyIndex) => `<li><a href="#story-${storyIndex + 1}"><span>${String(storyIndex + 1).padStart(2, "0")}</span><strong>${escapeHtml(story.title)}</strong><p>${escapeHtml(story.summary)}</p></a></li>`).join("");
   const stories = briefing.stories.map((story, storyIndex) => `
     <article class="long-story" id="story-${storyIndex + 1}">
-      <header><span class="long-number">${String(storyIndex + 1).padStart(2, "0")}</span><div><span class="tag">${escapeHtml(story.category)}</span><h2>${escapeHtml(story.title)}</h2><p>${escapeHtml(story.summary)}</p><a class="source-link-primary" data-analytics-event="source_opened" data-analytics-target="${escapeHtml(`${briefing.date}:${storyIndex + 1}`)}" href="${escapeHtml(story.sourceUrl)}" target="_blank" rel="noreferrer">先看原始来源：${escapeHtml(story.sourceName)} ↗</a></div></header>
+      <header><span class="long-number">${String(storyIndex + 1).padStart(2, "0")}</span><div><span class="tag">${escapeHtml(story.category)}</span><h2>${escapeHtml(story.title)}</h2><p>${escapeHtml(story.summary)}</p><a class="source-link-primary" data-analytics-event="source_opened" data-analytics-target="${escapeHtml(`${briefing.date}:${storyIndex + 1}`)}" href="${escapeHtml(story.sourceUrl)}" target="_blank" rel="noreferrer">查看原文：${escapeHtml(story.title)} ↗</a><span class="source-url">${escapeHtml(story.sourceName)} · ${escapeHtml(story.sourceDate)}</span></div></header>
       <figure><img loading="lazy" src="../../story-images/${escapeHtml(storyImageName(story))}" alt="${escapeHtml(story.imageAlt)}"><figcaption>${escapeHtml(story.imageCredit)}</figcaption></figure>
       <div class="story-learning-flow">
         <section class="story-section happened-block"><p class="section-step">01 · What</p><h3>发生了什么</h3><p>${escapeHtml(story.happened)}</p></section>
-        <section class="story-section background-block"><p class="section-step">02 · Context</p><h3>先补上背景</h3><ul>${story.facts.slice(0, 2).map((fact) => `<li>${escapeHtml(fact)}</li>`).join("")}</ul></section>
-        <section class="story-section why-block"><p class="section-step">03 · Why</p><h3>为什么值得关注</h3><p>${escapeHtml(story.whyItMatters)}</p></section>
-        <section class="story-section evidence-block"><p class="section-step">04 · Evidence</p><h3>证据与边界</h3>${informationForm(story)}<p class="evidence-boundary"><strong>这份来源不能单独证明什么：</strong>${escapeHtml(story.evidenceBoundary)}</p></section>
-        <section class="story-section analysis-block"><p class="section-step">05 · Analysis</p><h3>分析</h3><p>${escapeHtml(story.analysis)}</p><p class="interpretation-note">这一段是 Ivory Archive 的编辑分析，不是来源中的直接事实。</p></section>
-        <section class="story-section reflection-block"><p class="section-step">06 · Reflect</p><h3>反思与练习</h3><p>${escapeHtml(story.reflection)}</p></section>
-        <aside class="story-source-register"><p class="eyebrow">Source Register</p><dl><div><dt>来源</dt><dd>${escapeHtml(story.sourceName)}</dd></div><div><dt>类型</dt><dd>${escapeHtml(story.sourceType)}</dd></div><div><dt>日期</dt><dd>${escapeHtml(story.sourceDate)}</dd></div></dl><a data-analytics-event="source_opened" data-analytics-target="${escapeHtml(`${briefing.date}:${storyIndex + 1}:register`)}" href="${escapeHtml(story.sourceUrl)}" target="_blank" rel="noreferrer">打开原始来源 ↗</a><small class="source-url">${escapeHtml(story.sourceUrl)}</small></aside>
+        <section class="story-section why-block"><p class="section-step">02 · Why</p><h3>这件事为什么重要</h3><p>${escapeHtml(story.whyItMatters)}</p></section>
+        <section class="story-section background-block"><p class="section-step">03 · Details</p><h3>记住这几个细节</h3><ul>${story.facts.map((fact) => `<li>${escapeHtml(fact)}</li>`).join("")}</ul><aside class="story-source-register"><a data-analytics-event="source_opened" data-analytics-target="${escapeHtml(`${briefing.date}:${storyIndex + 1}:details`)}" href="${escapeHtml(story.sourceUrl)}" target="_blank" rel="noreferrer">查看原文：${escapeHtml(story.title)} ↗</a><small class="source-url">${escapeHtml(story.sourceName)} · ${escapeHtml(story.sourceDate)} · 点开即可阅读</small></aside></section>
       </div>
       <a class="back-to-top" href="#content">回到本期顶部 ↑</a>
     </article>`).join("");

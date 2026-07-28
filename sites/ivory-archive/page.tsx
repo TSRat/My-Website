@@ -38,8 +38,8 @@ export default function Home() {
             <h1 id="hero-title">从“发生了什么”开始，读懂文化与社会新闻</h1>
             <span className="title-stroke" />
             <p className="hero-deck">
-              15 期、75 则新闻都按同一条初学者路径重写：先说明事情，再补背景、解释原因，
-              分开事实与分析，最后留下可以继续思考的问题。
+              15 期、75 则新闻都按同一条初学者路径重写：先说明发生了什么，
+              再解释为什么重要，最后列出最值得记住的具体细节。
             </p>
             <div className="hero-actions">
               <Link
@@ -198,18 +198,17 @@ export default function Home() {
         <section className="method-section page-frame" id="method" aria-labelledby="method-title">
           <div className="method-title-block">
             <p className="eyebrow">Editorial Method</p>
-              <h2 id="method-title">先分清事实、分析与反思</h2>
+              <h2 id="method-title">每篇只分三个部分</h2>
           </div>
           <div className="method-copy">
             <p>
-              每则内容都先给出可核对的<strong>原始来源</strong>，再把编辑解释明确标出。
-              你不需要听说过人物、机构或专业术语，也能沿着固定顺序读完。
+              不需要预先认识人物、机构或专业术语。每篇先把事情说清楚，
+              再解释它为什么值得关注，并把关键时间、数字和人物集中列出来。
             </p>
             <ol>
-              <li><span>1</span><strong>发生了什么：</strong>先用普通语言说明事件与参与者。</li>
-              <li><span>2</span><strong>为什么值得关注：</strong>解释它会改变谁、什么制度或哪种理解。</li>
-              <li><span>3</span><strong>证据与边界：</strong>列出来源能证明的内容，也说明不能证明什么。</li>
-              <li><span>4</span><strong>分析与反思：</strong>把编辑判断与事实分开，并给出继续追问的练习。</li>
+              <li><span>1</span><strong>发生了什么：</strong>用普通语言说明事件、时间和参与者。</li>
+              <li><span>2</span><strong>这件事为什么重要：</strong>直接说明它影响什么，避免抽象术语。</li>
+              <li><span>3</span><strong>记住这几个细节：</strong>集中查看关键日期、数字和背景，并直接打开原文。</li>
             </ol>
             <details>
               <summary>查看选题去重方法</summary>
@@ -229,8 +228,8 @@ export default function Home() {
               <h2>没学过这个领域，也应该能从第一页开始</h2>
             </div>
             <p>
-              这不是默认读者已经懂行的信息流。每期先给三分钟摘要，再用背景、证据、分析和反思逐层展开；
-              原始来源同时放在文章开头与结尾，方便随时核对。
+              这不是默认读者已经懂行的信息流。每期先给三分钟摘要，每篇只保留事情、重要性和关键细节；
+              原文链接使用内容名称，点一下就能直接打开。
             </p>
           </div>
         </section>

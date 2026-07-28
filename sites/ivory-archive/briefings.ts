@@ -7,11 +7,6 @@ export type BriefingStory = {
   summary: string;
   happened: string;
   whyItMatters: string;
-  analysis: string;
-  reflection: string;
-  evidenceBoundary: string;
-  sourceType: string;
-  informationForm: "timeline" | "comparison" | "process" | "relationship" | "evidence";
   facts: string[];
   sourceName: string;
   sourceUrl: string;
@@ -68,11 +63,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.heide.com.au/exhibitions/brassai/",
         "sourceDate": "展览开幕 2026-07-25；2026-07-28 核验",
         "whyItMatters": "Brassaï 的照片常被当作巴黎夜生活的透明证据，但镜头选择、可接近的场所和暗房处理都会决定谁被看见、谁仍留在阴影里。",
-        "analysis": "把照片放回制作过程，既不取消它的诗意，也能避免把经过编排的城市想象误认成完整社会记录。",
-        "reflection": "选择一个虚构街角，依次加入路灯位置、曝光时长、人物是否同意被看见、裁切和印刷版式；让同一地点生成五种“秘密巴黎”，显示纪实感如何由一连串决定产生。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "process"
       },
       {
         "category": "社会科学 × 天文学 × 科研经费与公共基础设施",
@@ -93,11 +83,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.staffnet.manchester.ac.uk/news/display/?id=34217",
         "sourceDate": "大学回应 2026-07-27；资金影响分析 2026-07-28",
         "whyItMatters": "一台射电望远镜的能力不只在巨大碟面，而在多台站同步、工程维护、数据处理和训练有素的人员。",
-        "analysis": "经费终止会把一件分布式科学仪器拆成彼此孤立的地点；这与此前简报讨论的人文学岗位缩减不同，是天文观测基础设施及长期数据能力的独立事件。",
-        "reflection": "把一次射电观测画成七个节点的共同作品：信号到达、时钟同步、数据传输、相关处理和论文依次展开；然后移除一个经费节点，观察哪些能力不是简单减少七分之一，而是整体失效。",
-        "evidenceBoundary": "来源能确认当时公开的政策、资格、资金、行政数据或法律进展；执行结果仍可能随地区、时间、申诉和后续决定变化。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "relationship"
       },
       {
         "category": "社会科学 × 心理学 × 梦境与计算语言研究",
@@ -117,12 +102,7 @@ export const briefings: Briefing[] = [
         "sourceName": "IMT School for Advanced Studies Lucca／Communications Psychology",
         "sourceUrl": "https://doi.org/10.1038/s44271-026-00447-2",
         "sourceDate": "研究报道 2026-07-27",
-        "whyItMatters": "这项研究没有证明梦存在固定密码，也不能从一段梦直接诊断人格。",
-        "analysis": "它的价值在于把“梦是白天回放”改成可检验的问题，并展示计算方法能扩大文本比较规模；与此同时，书写能力、记忆与参与者对梦的兴趣仍会影响报告本身。",
-        "reflection": "把同一天的清醒记录切成地点、人物、情绪和未实现行动四类卡片，再与梦境文本的语义连接对照；明确标出哪些联系来自文本、哪些是研究者或观众的解释。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "evidence"
+        "whyItMatters": "研究者把 3,700 多份梦境记录与参与者白天的经历放在一起比较，发现梦会重新组合近期经验。这让“梦和现实有什么关系”变成一个可以用大量文本研究的问题。",
       },
       {
         "category": "社会科学 × 社会心理学 × 政治极化与群体边界",
@@ -143,11 +123,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.apa.org/pubs/journals/releases/xge-xge0001957.pdf",
         "sourceDate": "2026-07-27",
         "whyItMatters": "极化不只制造左右两端的敌意，也会改变中间位置的社会含义：不明确谴责对手，会被理解为暗中支持对手。",
-        "analysis": "不过实验测量的是特定情境下的判断，不能把所有自称温和者当成同质群体，也不能把“中间”自动等同于更合理。",
-        "reflection": "制作一条可移动的政策轴，同时显示政策位置、观察者立场、威胁感和道德化程度；让同一个中间点随着观察者改变颜色，呈现群体边界而非政策文本本身如何移动。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "relationship"
       },
       {
         "category": "女性主义 × 性别 × 警务裁量与数据治理",
@@ -167,12 +142,7 @@ export const briefings: Briefing[] = [
         "sourceName": "Williams Institute at UCLA School of Law／University of California, Irvine",
         "sourceUrl": "https://williamsinstitute.law.ucla.edu/publications/ca-police-gender-stops/",
         "sourceDate": "2026-07-28",
-        "whyItMatters": "数据并未测量当事人的自我认同，而是在测量警员如何读取外表并据此行动。",
-        "analysis": "被感知为跨性别者的搜查率更高，但违禁品发现率与其他群体相近，说明差异不能简单解释为搜查更“有效”；同时，行政分类本身也可能误认身份。",
-        "reflection": "把一次拦停拆成“警员感知、是否搜查、是否发现违禁品、是否逮捕”四个节点，分别显示数据记录了什么、没有记录什么；让读者看见主观分类怎样在下一步变成制度后果。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "机构原始页面或专题资料",
-        "informationForm": "process"
+        "whyItMatters": "警员会先根据外表判断一个人的性别，再决定是否搜查或逮捕。研究显示，这种主观判断会进入执法记录，并影响当事人接下来遭遇什么。",
       }
     ],
     "learningGoal": "理解观察结果不是现实的直接复制，而是由工具、经费、研究设计和制度判断共同形成。",
@@ -197,24 +167,19 @@ export const briefings: Briefing[] = [
         "imageAlt": "五十面抽象旗帜、赭红土壤纹理与地图碎片组成的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于阐释 Andy Goldsworthy《Red Flags》的材料、地理与国家象征，并非艺术作品复制、展览现场、美国国旗或历史地图",
         "title": "Andy Goldsworthy 用五十州土壤制作五十面红旗",
-        "summary": "Andy Goldsworthy 的《Red Flags》把美国五十州的土分别研入五十面旗帜；每面都失去州徽，却保留来自具体土地的颜色与颗粒。",
-        "happened": "FOR-SITE Foundation 将这组 2020 年作品带到旧金山 Fort Mason，完成西海岸首展。五十面旗帜各为 5×8 英尺，分别以美国一个州的土壤染红；展览恰逢《独立宣言》签署 250 周年，另以红土作品补充 Goldsworthy 长期使用土地材料的线索。",
+        "summary": "英国艺术家 Andy Goldsworthy 收集美国五十个州的土，把它们分别制成颜料，染在五十面布旗上。",
+        "happened": "2026 年 7 月，FOR-SITE Foundation 在旧金山 Fort Mason 展出 Andy Goldsworthy 的《Red Flags》。这件作品由五十面红旗组成，每面旗帜都用美国一个州的土染色。这是作品第一次在美国西海岸展出。",
         "facts": [
           "展览于 2026 年 7 月 1 日至 30 日在 San Francisco 的 Fort Mason Gateway Pavilion 举行，免费开放",
           "装置由 50 面旗帜组成，每面尺寸为 5×8 英尺",
-          "每面旗帜分别以美国 50 个州之一采集的土壤染成红色，不使用各州通常的徽记",
-          "作品最初于 2020 年在 New York 的 Rockefeller Center 展出，此次为美国西海岸首展",
-          "旧金山展览与《独立宣言》签署 250 周年同年发生，并补充展示 Goldsworthy 以红土为材料的其他作品"
+          "每面旗帜都使用一个州采集的土染色，旗面上没有州徽或其他图案",
+          "作品最初于 2020 年在纽约 Rockefeller Center 展出；2026 年的旧金山展览是它的美国西海岸首展",
+          "2026 年正好是 1776 年《独立宣言》通过 250 周年，主办方因此把作品放进关于美国土地与国家历史的讨论中"
         ],
         "sourceName": "FOR-SITE Foundation",
         "sourceUrl": "https://www.for-site.org/andy-goldsworthy-red-flags",
         "sourceDate": "展期 2026-07-01 至 2026-07-30；2026-07-27 核验",
-        "whyItMatters": "旗帜通常把土地变成抽象边界，《Red Flags》反向把国家符号重新变回会掉粉、带色差的物质。",
-        "analysis": "五十面看似统一的红色仍来自五十处不同地质与采集关系，也让“统一”显出运输、劳动和策展所需的基础设施。",
-        "reflection": "制作一张从土样到旗面的材料履历：标出采集地、地质颜色、运输距离、染色与悬挂方式；然后隐去州名，测试观众还能依据哪些线索想象国家。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "机构原始页面或专题资料",
-        "informationForm": "process"
+        "whyItMatters": "普通旗帜靠颜色和图案代表一个国家或地区；这些旗帜却直接使用真实土壤。五十面旗看起来都呈红色，但细看会发现颜色和颗粒并不完全相同。作品让人从“国家符号”重新注意到组成国家的具体土地。",
       },
       {
         "category": "艺术人文 × 女性主义 × 艺术、建筑与批评史",
@@ -234,12 +199,7 @@ export const briefings: Briefing[] = [
         "sourceName": "The Guardian／The Courtauld Gallery",
         "sourceUrl": "https://www.theguardian.com/culture/2026/jul/27/new-exhibition-to-explore-how-georgia-okeeffes-desert-home-shaped-her-art",
         "sourceDate": "2026-07-27",
-        "whyItMatters": "O’Keeffe 长期被男性批评家用花朵、女性身体和孤绝天才的框架解释。",
-        "analysis": "把住宅视为工作基础设施，能同时看见她如何选择观看距离、积累自然物、控制生活节奏，也避免把女性艺术家的家只写成浪漫传记。",
-        "reflection": "以一幅虚构风景为中心，画出窗框、步行路线、采集物、工作台和储藏空间的来源关系；再比较“沙漠灵感”与“长期空间实践”两种叙事分别省略了什么。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "timeline"
+        "whyItMatters": "过去很多评论把 O’Keeffe 的作品简单解释成花朵、女性身体或孤独天才的表达。新展览把注意力转向她怎样利用住宅、沙漠景观和日常采集来安排创作。",
       },
       {
         "category": "社会科学 × 语言学 × 第二语言与声学测量",
@@ -260,11 +220,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://journals.sagepub.com/doi/10.1177/02676583261461946",
         "sourceDate": "论文在线发表 2026-07-19；机构解读 2026-07-25",
         "whyItMatters": "把口音只理解为“发音器官没练好”，会漏掉学习者实际听见了哪些差异。",
-        "analysis": "研究提示训练应针对具体音位和具体线索，而不是笼统要求“听得更准”；但样本只有 25 人，不能直接代表全部华语学习者。",
-        "reflection": "制作一个可以独立调整时长与音质的四词播放器，让 beat–bit 与 bat–bet 轮流越过分类边界；同时把听觉权重与发音结果画成两条对应轨迹。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "comparison"
       },
       {
         "category": "社会科学 × 天文学 × 观测分类与行星防御",
@@ -284,12 +239,7 @@ export const briefings: Briefing[] = [
         "sourceName": "NASA Jet Propulsion Laboratory",
         "sourceUrl": "https://www.nasa.gov/solar-system/comets/nasa-study-finds-near-earth-asteroid-is-actually-comet/",
         "sourceDate": "2026-07-16",
-        "whyItMatters": "“小行星”或“彗星”不是只凭外观一次决定的标签。",
-        "analysis": "长期位置测量、模型残差与跨台站复核会改变分类，也会改变行星防御如何预测轨道；一次未观测到的目标，有时不是设备失败，而是模型暴露了新物理过程。",
-        "reflection": "把故事做成一张误差逐步放大的侦测图：预报位置、雷达空白、历史测量、非引力残差、望远镜口径和最终彗尾依次出现，明确区分推断与直接影像证据。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "机构原始页面或专题资料",
-        "informationForm": "timeline"
+        "whyItMatters": "天文学家会根据多次观测到的位置、速度和活动迹象修改天体分类。分类改变后，研究者也要重新计算它的轨道以及它是否接近地球。",
       },
       {
         "category": "女性主义 × 性别与健康 × 实验室数据基础设施",
@@ -310,11 +260,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://myadlm.org/science-and-research/academy-guidance/gender-diversity",
         "sourceDate": "2026-07-01",
         "whyItMatters": "许多实验室系统仍用法律性别自动选择区间与筛查提醒，可能把个体生理压进错误的二元默认值。",
-        "analysis": "更精确的做法不是取消生物信息，而是把激素状态、实际器官、治疗史和临床情境分开记录；指引也承认现有前瞻研究仍然有限。",
-        "reflection": "把一张化验单拆成四层：法律字段、性别认同、激素状态和器官清单；让同一指标在不同信息组合下显示参考区间、证据强度与需要临床复核的位置。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "comparison"
       }
     ],
     "learningGoal": "看见名称、边界和参考标准如何被制作、检验，并在新证据出现后改变。",
@@ -351,11 +296,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://henryart.org/press/2026-spring-summer-exhibition-announcements",
         "sourceDate": "新闻稿 2026-04-15；展览开幕 2026-07-25",
         "whyItMatters": "棕榈、花朵和鲜艳布料看似中性装饰，却常把殖民历史、旅游经济与种族化身体压成可消费的愉悦背景。",
-        "analysis": "Minaya 的工作不是拒绝植物或色彩，而是让图案显出是谁设计、谁穿着、谁被观看，以及哪些历史被遮住。",
-        "reflection": "选择一枚常见“热带”花纹，追踪它从植物学图谱、殖民贸易、旅游海报到服装印花的四次转译；再设计一块可包裹纪念物的布，让遮蔽本身成为重新命名空间的动作。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "timeline"
       },
       {
         "category": "社会科学 × 传播与测量 × AI 消费工具",
@@ -375,11 +315,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.newswise.com/articles/photo-based-calorie-tracking-apps-may-underestimate-energy-in-meals",
         "sourceDate": "2026-07-25",
         "whyItMatters": "照片让记录饮食变得轻松，却也把食材识别、份量推断和营养数据库三层不确定性压成一个精确数字。",
-        "analysis": "误差若系统性偏向脂肪与特定饮食，会影响个人决策和基于应用数据的研究；不过这仍是会议摘要，尚未完成期刊同行评审。",
-        "reflection": "把同一餐盘拆成“相机看见的形状、模型猜测的食物、数据库匹配的份量、真实称重”四层，逐步显示误差在哪里累积，并让用户手动修改份量后观察数字如何变化。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "comparison"
       },
       {
         "category": "社会科学 × 人类学与地理 × 共有资源治理",
@@ -399,11 +334,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.newswise.com/articles/unwritten-social-rules-not-government-oversight-help-keep-forest-land-sustainable",
         "sourceDate": "2026-07-23",
         "whyItMatters": "“刀耕火种”常把差异巨大的实践都写成环境破坏，也让政策误以为只有外部监管能保护森林。",
-        "analysis": "研究提示社会规范可以成为治理机制，但它不是浪漫化社群的免检证：土地压力、权力差异和市场变化仍可能破坏休耕周期。",
-        "reflection": "制作一张可切换的斑块地图：改变请求面积、可用劳力、休耕年限和合作意愿，观察森林结构如何变化；同时标出模型没有测量的土地权、性别劳动与商品价格。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "官方数据、政策或制度文件",
-        "informationForm": "relationship"
       },
       {
         "category": "社会科学 × 天文学与空间技术 × 公共基础设施",
@@ -423,11 +353,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.esa.int/Applications/Satellite_navigation/Two_new_Galileo_satellites_enter_service",
         "sourceDate": "2026-07-24",
         "whyItMatters": "手机上的定位点看起来像设备自身功能，实际依赖长期公共投资、跨机构认证和持续地面维护。",
-        "analysis": "把“航天成就”只写成发射瞬间，会忽略真正决定可靠性的测试、备份、时钟与治理；系统自主性也必须与开放标准和国际互操作一起讨论。",
-        "reflection": "从一个手机定位点向后展开五层基础设施：卫星信号、原子钟、轨道控制、地面测试、安全认证；再模拟一颗卫星离线，观察冗余如何保护铁路、航运、金融授时与救援服务。",
-        "evidenceBoundary": "机构原始页面或专题资料能支持这里列出的事件、日期与公开材料；本站的比较和反思会单独标记，不能替代原始来源。",
-        "sourceType": "机构原始页面或专题资料",
-        "informationForm": "process"
       },
       {
         "category": "女性主义 × 健康与照护 × 孕期临床证据",
@@ -447,11 +372,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.newswise.com/articles/mount-sinai-researchers-synthesize-emerging-evidence-to-inform-management-of-pregnancy-specific-asthma-affecting-nearly-1-in-10-pregnancies",
         "sourceDate": "2026-07-24；期刊 2026 年 8 月号",
         "whyItMatters": "孕期常见的“少用药更安全”直觉可能让控制药物被自行停用，反而增加母体与胎儿风险。",
-        "analysis": "把差异归因于疾病控制，也能把责任从孕妇个人移向连续监测、环境暴露、可及药物与跨专科照护；具体治疗仍必须由临床医生个体化决定。",
-        "reflection": "绘制两条并行妊娠时间线：一条只记录“有哮喘”标签，另一条记录症状、肺功能、药物、空气暴露和随访，让风险从静态身份改为可以被观察和干预的过程。",
-        "evidenceBoundary": "研究论文或学术材料能支持这里列出的事件、日期与公开材料；本站的比较和反思会单独标记，不能替代原始来源。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "comparison"
       }
     ],
     "learningGoal": "理解自动化结果、公共系统和医学建议都依赖输入、维护、环境与人的判断。",
@@ -488,11 +408,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.famsf.org/exhibitions/miro-proof-against-all",
         "sourceDate": "展览开幕 2026-07-25；Apollo 预展发布 2026-07-17",
         "whyItMatters": "“配图”常暗示文字先完成、图像随后解释；这本书却把意义放在诗句、纸张、套色、木纹与翻页之间。",
-        "analysis": "它也提醒我们，现代主义杰作不是艺术家单独完成的神来之笔，而是诗人、画家、雕版与印刷劳动共同生产的物件。",
-        "reflection": "选择一首四段短诗，为每段设计不同的纸张尺寸、留白和翻页动作；先不画具象插图，只用木版形状改变读者的停顿。最后把诗人、艺术家、雕版者和印刷者的决定分别标出来。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "process"
       },
       {
         "category": "艺术人文 × 音乐 × 现场档案与策展",
@@ -512,11 +427,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://press.moma.org/exhibition/warm-up-2026/",
         "sourceDate": "节目日期 2026-07-24 至 2026-08-28；页面核验 2026-07-25",
         "whyItMatters": "音乐平台倾向把风格压缩成可推荐的标签，现场策展则能让厂牌、城市、代际与技术影响同时出现。",
-        "analysis": "博物馆因此不只是借音乐吸引观众，也在决定哪些地下谱系获得空间、制作条件和机构记忆。",
-        "reflection": "不要按风格名称做歌单，而是画一张六晚关系图：每位表演者连接其城市、厂牌、合作对象、设备和前辈，再让观众沿一条影响链听下去。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "timeline"
       },
       {
         "category": "社会科学 × 文化参与 × 调查与测量",
@@ -536,11 +446,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.census.gov/newsroom/press-releases/2026/htops-data-tables.html",
         "sourceDate": "2026-07-23",
         "whyItMatters": "把文化活动放进全国性家庭调查，能让交通、收入、时间和场馆分布成为公共政策问题，而不只是个人品味。",
-        "analysis": "但“过去四周是否到场”仍会遗漏家庭创作、线上观看、宗教仪式和非正式社区文化；测量边界会决定什么被算作文化生活。",
-        "reflection": "制作两张并列的文化地图：第一张严格使用调查问项，只显示可计数的到场行为；第二张补入家中阅读、线上观看、社区庆典和照护者无法外出的文化实践，比较统计制度留下的空白。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "官方数据、政策或制度文件",
-        "informationForm": "comparison"
       },
       {
         "category": "社会科学 × 老龄化 × 公共住房与照护基础设施",
@@ -560,11 +465,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.newswise.com/articles/how-rutgers-is-helping-to-tackle-the-rising-crisis-of-public-housing-residents-facing-dementia-alone",
         "sourceDate": "2026-07-24",
         "whyItMatters": "认知障碍服务常假定患者能识别症状、预约专科、找到车辆并记住医嘱，这恰好排除了最孤立的人。",
-        "analysis": "筛查工具只有接上交通、信任与持续沟通，才可能成为照护；不过目前数据来自早期项目，不能直接推算所有公共住房居民的患病率。",
-        "reflection": "把一张阳性筛查结果扩展成完整服务旅程：预约、交通、诊断、药物、回家解释和下一次随访。为每个节点标出最容易失联的位置，以及导航员实际补上的工作。",
-        "evidenceBoundary": "新闻报道或研究新闻稿能支持这里列出的事件、日期与公开材料；本站的比较和反思会单独标记，不能替代原始来源。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "process"
       },
       {
         "category": "女性主义 × 健康 × 长期新冠与照护劳动",
@@ -583,12 +483,7 @@ export const briefings: Briefing[] = [
         "sourceName": "Stony Brook University／Health Psychology",
         "sourceUrl": "https://www.newswise.com/articles/study-reveals-stress-a-significant-factor-in-women-experiencing-long-covid",
         "sourceDate": "2026-07-24；论文 DOI 10.1037/hea0001626",
-        "whyItMatters": "女性的症状长期容易被解释成焦虑或压力。",
-        "analysis": "关联研究若被简化，会再次把诊断缺口变成个人心理问题；更可靠的读法是同时追踪感染、照护负担、医疗可及性和症状如何互相影响，并承认因果方向尚未确定。",
-        "reflection": "画一张双向因果图，让感染后症状、睡眠、工作、育儿、压力、社会支持和就医分别可以互为原因与结果；用不同线型区分研究已观察到的关联与尚待验证的机制。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "comparison"
+        "whyItMatters": "女性长期新冠患者经常同时面对身体症状、照护压力和就医困难。把这些因素一起研究，有助于医疗人员更完整地理解患者需要什么支持。",
       }
     ],
     "learningGoal": "把文化与照护理解为需要人、场所、数据和制度持续支撑的公共网络。",
@@ -625,11 +520,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.loc.gov/item/event-419398/treasures-from-the-stephen-sondheim-collection/2026-07-24/",
         "sourceDate": "活动日期 2026-07-24；馆藏与研究指南资料更新至 2026-06",
         "whyItMatters": "成品舞台容易制造“灵感一次成形”的神话，档案却保存删除、替换、结构调整与合作痕迹。",
-        "analysis": "把私人工作纸变成公共研究资源，也会改变谁有资格解释一部作品：不再只有演出回忆和权威传记，还包括可以核对的创作证据。",
-        "reflection": "选择一首虚构音乐剧歌曲，制作三层创作剖面：第一版的韵脚、被划掉的动机、最终舞台顺序。重点不是模仿 Sondheim，而是让观众看到“修改”怎样同时改变语言、旋律和戏剧情境。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "机构原始页面或专题资料",
-        "informationForm": "timeline"
       },
       {
         "category": "艺术人文 × 设计 × 材料与生活空间",
@@ -649,11 +539,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.design-museum.de/en/exhibitions/detailpages/verner-panton-form-colour-space.html",
         "sourceDate": "展览开幕 2026-05-23；页面核验 2026-07-24",
         "whyItMatters": "Panton 的作品常被拆成可收藏的单件家具，但他的核心问题是空间怎样改变坐、躺、交往与感受。",
-        "analysis": "把 Bayer 等化工企业的委托重新放进叙事，还能看见“未来主义”如何依赖合成材料产业，而不只是设计师个人想象。",
-        "reflection": "从同一张室内平面出发，依次只改变家具、光线、色阶、声学与身体姿势，观察“空间功能”在哪一步开始变化；再把材料供应者和生产技术标进图中，让总体艺术也显出其工业链条。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "comparison"
       },
       {
         "category": "社会科学 × 政治制度 × AI 与行政能力",
@@ -673,11 +558,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://news.stanford.edu/stories/2026/07/how-ai-is-helping-states-cut-through-decades-of-red-tape",
         "sourceDate": "2026-07-23",
         "whyItMatters": "“删繁就简”听起来天然正确，但一份报告可能是没人阅读的遗留物，也可能是公众监督污染、预算或歧视的唯一窗口。",
-        "analysis": "AI 可以发现重复与成本，却不能单独判断公共价值；关键是为保留、合并和废止建立透明的人类复核程序。",
-        "reflection": "把十份假想政府报告放入一个决策台：显示法定目的、制作工时、提交率、阅读量、受影响群体和替代数据源。让观众尝试删减，再展示每次删除同时减少的负担与监督能力。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "process"
       },
       {
         "category": "社会科学 × 地理与食物系统 × 情景模型",
@@ -697,11 +577,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://doi.org/10.1038/s41586-026-10775-2",
         "sourceDate": "研究发布 2026-07-23",
         "whyItMatters": "“人人吃得更健康”不是一条只发生在营养标签上的路线，而会改变土地、贸易、劳动和地方财政。",
-        "analysis": "模型提示转型规模，也暴露一个重要假设：消费者被设定为无成本地改变偏好。真正的政策必须处理价格、文化、基础设施和受冲击生产者，而不能把模型情景当作自动到来的预测。",
-        "reflection": "把同一套饮食目标画成三张并列地图：土地与碳、农业产值、家庭可负担性。用美国、印度和欧洲三条不同路径说明全球平均数怎样遮蔽相反的地区结果。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "comparison"
       },
       {
         "category": "女性主义 × 国际法 × 性别迫害与制度执行",
@@ -721,11 +596,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://4genderjustice.org/gender-report-card-july-2026/",
         "sourceDate": "2026-07-13；2026-07-24核验",
         "whyItMatters": "把性别暴力命名为独立罪行，会改变调查证据、受保护群体与责任链条；但法律承认并不等于执行。",
-        "analysis": "报告同时指出逮捕、赔偿、法律援助和特别法庭资金不足，提醒我们不要把“首例判决”写成已经完成的胜利。",
-        "reflection": "制作一条从证词到赔偿的法律路径：记录、定性、起诉、逮捕、审判、判决、赔偿与执行。每一节点分别标出法律突破、负责机构、资金来源和可能断裂的位置。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "机构原始页面或专题资料",
-        "informationForm": "process"
       }
     ],
     "learningGoal": "区分创意或法律文本本身，与使它们能够被执行、体验或长期维持的制度条件。",
@@ -762,11 +632,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://briscoemuseum.org/tejanolegacy/",
         "sourceDate": "展览信息发布 2026-07-08；开幕活动 2026-07-23",
         "whyItMatters": "“美国西部”常被讲成英裔移民向空白土地推进的故事。",
-        "analysis": "马术、牧场、宗教、语言和音乐的物证显示，Tejano 社群并非后来加入，而是早已参与建造这些制度与文化。双语展签也不是翻译上的附加服务，而是在决定谁能以自己的语言成为历史主体。",
-        "reflection": "选取马鞍、圣像、军刀、唱片和当代作品各一件，不按年代而按它们跨越边界的路线排列：谁制作、谁使用、何时被国家或博物馆重新命名，以及它怎样从生活工具变成“美国遗产”。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "timeline"
       },
       {
         "category": "艺术人文 × 博物馆 × 媒介与制度",
@@ -786,11 +651,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://moe.nationalgeographic.org/en",
         "sourceDate": "开馆新闻稿 2026-03-26；评论 2026-07-23",
         "whyItMatters": "沉浸技术能把遥远环境变得可感，却也容易把殖民测绘、媒体所有权和赞助关系藏在“身临其境”的效果之后。",
-        "analysis": "真正值得观察的不是互动是否炫目，而是展览如何区分发现、记录、占有与保护，以及谁有资格被称为探索者。",
-        "reflection": "把一次参观拆成四条并行路线：观众看到的壮观影像、物件原来的采集路线、项目的资金来源，以及被拍摄社群的署名与反馈入口。比较每一层在沉浸界面里占了多少空间。",
-        "evidenceBoundary": "机构原始页面或专题资料能支持这里列出的事件、日期与公开材料；本站的比较和反思会单独标记，不能替代原始来源。",
-        "sourceType": "机构原始页面或专题资料",
-        "informationForm": "relationship"
       },
       {
         "category": "社会科学 × 天文学 × 模型与观测基础设施",
@@ -810,11 +670,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.theguardian.com/science/2026/jul/21/milky-way-disc-flip-collision-dwarf-galaxy-astronomers",
         "sourceDate": "2026-07-21",
         "whyItMatters": "天文学没有在银河系外架设摄像机回看历史，而是把恒星运动、化学组成和数值模拟拼成可检验的过去。",
-        "analysis": "这个结论因此不是一张“碰撞照片”，而是观测任务、超级计算机和模型选择共同生产的解释；新数据仍可能改变翻转幅度与时间线。",
-        "reflection": "制作一张“证据到叙事”的分层动画：先只显示 Gaia 测得的速度与轨道，再加入并合模拟，最后才出现翻转的银河盘；让观众清楚看到哪些是测量、哪些是模型推断。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "process"
       },
       {
         "category": "社会科学 × 心理与健康 × 科研方法",
@@ -834,11 +689,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.sciencedaily.com/releases/2026/07/260721000844.htm",
         "sourceDate": "2026-07-22",
         "whyItMatters": "精神和行为症状几乎影响所有阿尔茨海默病患者，但药物反应差异很大。",
-        "analysis": "类器官让研究者在不直接试错于患者的情况下比较亚群，却仍缺少真实脑中的免疫、血管和长期环境。最危险的误读，是把一个实验室模型提前包装成“替你选药”的临床服务。",
-        "reflection": "画出从血样、重编程、类器官、药物处理到囊泡分析的完整链条，并在每一步标出模型失去的现实条件。用多条不同颜色的反应路径替代单一“有效／无效”结论。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "process"
       },
       {
         "category": "女性主义 × 健康 × 研究与照护制度",
@@ -858,11 +708,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.endocrine.org/news-and-advocacy/news-room/2026/leading-womens-health-organizations-launch-national-strategy-to-close-the-womens-health-gap",
         "sourceDate": "2026-07-15；伙伴更新 2026-07-21",
         "whyItMatters": "1993 年法律要求 NIH 资助的临床研究纳入女性，解决了“谁被招募”的一部分，却没有自动修复研究主题、数据共享、成果转化与实际照护。",
-        "analysis": "新框架的价值在于把缺口写成制度链条；局限则是它目前仍是一份倡议，200 亿美元尚未成为拨款，也缺少逐项绩效指标。",
-        "reflection": "把“女性健康”画成五节点公共工程：每个节点列出负责机构、资金流、可检验产出与失败方式。另设一栏区分倡议金额、已授权资金和已实际支出，避免把政策主张当成预算事实。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "relationship"
       }
     ],
     "learningGoal": "理解探索需要场所、仪器、模型、资金和对研究对象的选择，而不只是个人好奇心。",
@@ -899,11 +744,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://cup.columbia.edu/book/a-radical-god/9780231566063/",
         "sourceDate": "2026-07（页面核验 2026-07-22）",
         "whyItMatters": "公共讨论常把宗教压缩成‘相信某个超自然存在’或‘拒绝这种相信’。",
-        "analysis": "Caputo 的框架把问题改写为：共同体用哪些隐喻、叙事与实践组织苦难、希望和责任。它不证明神存在，也没有自动解决宗教制度的权力问题，却为研究宗教、文学与政治想象如何相互塑造提供了第三条路径。",
-        "reflection": "选择同一句祈祷或神学命题，制作三栏文本：把神当作既有对象的陈述、暂停真假判断后的现象描述、以及把神视为诗性生成的版本。比较每一栏允许人们做什么，而不仅是它声称什么。",
-        "evidenceBoundary": "机构原始页面或专题资料能支持这里列出的事件、日期与公开材料；本站的比较和反思会单独标记，不能替代原始来源。",
-        "sourceType": "机构原始页面或专题资料",
-        "informationForm": "relationship"
       },
       {
         "category": "艺术人文 × 艺术 × 地理与地方身份",
@@ -923,11 +763,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://mcadenver.org/exhibitions/colorado-currents",
         "sourceDate": "展览信息核验 2026-07-22；报道 2026-07-15",
         "whyItMatters": "周年展很容易把复杂地域压缩成山景、开拓神话和统一的庆典口号。",
-        "analysis": "这一策展方法至少承认‘地方’由迁徙、原住民历史、家庭记忆、城市发展与资源分配共同形成。28 位艺术家仍不可能代表全州，但展览把代表性的缺口变成可以公开争论的问题。",
-        "reflection": "制作一张没有行政边界的州地图：用作品主题标出水、火、家庭迁徙、产业与被省略的历史，再在图外列出没有进入展览的地区和社群。让‘28’既是规模，也是一条清晰的代表性边界。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "relationship"
       },
       {
         "category": "社会科学 × 心理学 × 儿童与家庭",
@@ -947,11 +782,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://news.chapman.edu/2026/07/21/chapman-researcher-identifies-overlooked-childhood-risk-factor-for-mental-health/",
         "sourceDate": "2026-07-21",
         "whyItMatters": "创伤模型擅长询问‘发生了什么坏事’，却可能漏掉长期的不确定感。",
-        "analysis": "新量表为儿科筛查增加了一个维度，但也有风险：贫困、轮班工作、住房不稳和照护资源不足可能被错误地归咎于单个家庭。筛查只有连接到物质支持与可获得的服务，才不会变成新的标签。",
-        "reflection": "把同一个孩子的一周画成两层时间表：上层记录重大事件，下层记录谁来照护、何时吃饭、在哪里睡觉等可预测性。再叠加住房、工时和交通条件，避免把结构性不稳定改写成父母性格。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "comparison"
       },
       {
         "category": "社会科学 × 地理学 × 水资源与文化遗产",
@@ -971,11 +801,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.usgs.gov/data/modeled-preservation-risk-paleontological-and-cultural-resources-within-lake-powell-and-lake",
         "sourceDate": "2026-07-02（第 2 版，页面核验 2026-07-22）",
         "whyItMatters": "大坝调度通常以供水、水电和生态指标讨论，遗址保存容易变成附录。",
-        "analysis": "模型让这类损失进入方案比较，却不能把未知遗址变成精确坐标，也不能替代原住民社群与现场调查。地图最有价值之处，是让未来运营承认水位变化同时是一种文化治理。",
-        "reflection": "把同一段湖岸画成八种运营方案下的月度翻页动画，分别显示供水、发电、生态与遗址风险。对未实地确认的位置使用模糊纹理，避免把概率模型误呈现为藏宝图。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "官方数据、政策或制度文件",
-        "informationForm": "process"
       },
       {
         "category": "女性主义 × 文学 × 性别与婚姻史",
@@ -995,11 +820,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://news.vcu.edu/article/rachel-gevlin-earns-aauw-fellowship-to-support-book-on-sexual-mores-in-domestic-fiction",
         "sourceDate": "2026-07-21",
         "whyItMatters": "家庭小说不仅反映性道德，也通过人物魅力、叙事视角和结局分配训练读者判断谁的越界可被原谅。",
-        "analysis": "研究把‘男性欲望更自然’从生物常识还原为一种被反复讲述的文化脚本，同时提醒我们：出版和资助制度决定哪些尚未成书的问题获得研究时间。",
-        "reflection": "选择三种婚姻破裂情节，逐段标记叙述者替男性提供的理由、女性承担的后果和结局给予的惩罚。再把性别互换，只改代词和法律处境，观察同情机制在哪里失效。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "机构原始页面或专题资料",
-        "informationForm": "timeline"
       }
     ],
     "learningGoal": "识别概念、地方身份、心理风险、保护模型和文学类型怎样组织证据与判断。",
@@ -1036,11 +856,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://apnews.com/article/hungary-ancient-rome-museum-facial-reconstrucion-73d5ed287c5de882f9ca1e12cb345f89",
         "sourceDate": "2026-07-15（页面核验 2026-07-21）",
         "whyItMatters": "复原技术能让普通劳动者从帝王与战争构成的罗马史中重新出现，但逼真的面孔会提高观众对整个故事的信任，包括没有直接证据的部分。",
-        "analysis": "与此前‘罗马器物进入展台后如何变成艺术’不同，这里关注的是科学视觉化如何把概率推断转化为看似确定的人格，以及博物馆应怎样持续标记证据等级。",
-        "reflection": "为一个复原人物制作三层透明肖像：骨骼能够支持的事实、DNA 与统计模型给出的概率、策展人为建立共情而补写的传记。让每一层都能单独关闭，观众会看到‘像一个人’与‘知道这个人’之间仍有多远。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "evidence"
       },
       {
         "category": "艺术人文 × 建筑 × 博物馆制度",
@@ -1060,11 +875,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.selldorf.com/news/clark-art-institute-reveals-design-for-new-aso-o-tavitian-wing",
         "sourceDate": "2026-07-20",
         "whyItMatters": "博物馆扩建常被描述为纯粹的空间改善，但一座新翼同时固定了捐赠者的名字、收藏的地位、参观顺序和未来维护成本。",
-        "analysis": "与此前 Madelon Vriesendorp 讨论建筑图像和女性作者不同，本项关注真实制度如何通过材料与路径把一笔捐赠变成长期公共叙事；越是看起来无缝，越值得追问哪些谈判被藏进了墙体。",
-        "reflection": "把平面图画成一份‘机构剖面’：每个展厅同时标出作品年代、捐赠关系、旧建筑接口、景观视线与维护材料。让观众看到一条优雅动线背后，至少有五种不同时间尺度在协同。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "机构原始页面或专题资料",
-        "informationForm": "relationship"
       },
       {
         "category": "社会科学 × 传播学 × 新闻基础设施",
@@ -1084,11 +894,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2026/dnr-executive-summary",
         "sourceDate": "2026-06-16（页面核验 2026-07-21）",
         "whyItMatters": "这不是‘年轻人不读新闻’的简单故事，而是新闻仍被阅读，却越来越在新闻机构无法完整控制的界面里出现。",
-        "analysis": "平台决定标题长度、视频节奏、来源显示和点击出口，也分走受众数据与订阅机会。与昨日 Pew 的公民参与类型不同，本项关注的是分发基础设施本身如何改变信任：整体新闻信任降至 37%，社交新闻和聊天机器人答案的信任度更低。",
-        "reflection": "选择同一则报道，让它依次穿过新闻网站、短视频、信息流摘要和聊天机器人回答。逐站记录标题、署名、原始链接、上下文、广告和纠错入口还剩多少，把‘平台化’做成一张可见的损耗表。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "process"
       },
       {
         "category": "社会科学 × 社会学 × 测量与不平等",
@@ -1108,11 +913,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://sociologicalscience.com/articles-v13-32-825/",
         "sourceDate": "2026-07-09",
         "whyItMatters": "量化研究常把种族当作无需解释的控制变量，但分类方式会改变估计值、显著性乃至政策故事。",
-        "analysis": "研究并不是要求抛弃种族数据，而是要求公开变量如何生成、为何选择以及替代选择会不会得到不同结论。它也与本期古罗马面部复原形成呼应：分类工具不是现实的透明窗口，本身参与了现实的构造。",
-        "reflection": "用一个可切换的统计面板呈现同一研究问题：只改变种族变量，保留样本与结果不变，观察系数和排序怎样移动。每次切换都显示变量来自自我认同、调查员判断还是早期筛选，避免把分类来源藏在脚注。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "comparison"
       },
       {
         "category": "女性主义 × 健康 × 诊断偏差与照护",
@@ -1132,11 +932,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://newsroom.clevelandclinic.org/2026/07/13/new-global-report-outlines-strategies-to-improve-hematologic-care-for-women",
         "sourceDate": "2026-07-13",
         "whyItMatters": "‘很多女性都这样’常被当作无需检查的理由，但高发并不等于正常。",
-        "analysis": "月经过多被文化性地视为私人麻烦，会把潜在遗传性出血障碍变成长达十余年的缺铁、误诊和生活限制。与此前乳腺癌全球生存率的系统差距不同，本项聚焦症状进入医疗体系的第一道翻译：谁的疼痛和出血被记作临床数据，谁被要求适应。",
-        "reflection": "把诊断过程画成 14 年时间线：首次月经、反复缺铁、请假、急诊、妊娠或手术出血、转诊与最终检测。每个节点同时标记患者说了什么、病历记下什么、系统漏掉什么，再与委员会提出的 24 个月目标对照。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "机构原始页面或专题资料",
-        "informationForm": "timeline"
       }
     ],
     "learningGoal": "分清原始材料、测量或设计方法、研究者推断与公众最后看到的结论。",
@@ -1173,11 +968,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.mocanyc.org/event/ed-youngs-bright-worlds/",
         "sourceDate": "2026-05-14（展览开幕；页面核验 2026-07-20）",
         "whyItMatters": "绘本常被放在文学和美术的边缘，但它可能是一个人最早接触战争、迁徙、家庭差异与异文化的媒介。",
-        "analysis": "Young 的案例也打破了把移民艺术只理解为身份声明的习惯：个人经历进入书页后，会通过材料、翻页节奏和亲子共读变成可反复使用的家庭记忆。它与此前讨论艺术史经典补名不同，关注的是儿童视觉文化如何建立跨代共同语言。",
-        "reflection": "可选取同一段记忆，分别用文字段落、单幅画和三次翻页来表达，比较每种形式能保留什么。再把纸张、墨迹、剪切边缘和身体动作作为叙事证据，而不是只复述艺术家的生平。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "timeline"
       },
       {
         "category": "艺术人文 × 女性主义 × 家庭空间与策展",
@@ -1197,11 +987,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://calendar.ua.edu/event/the-domestic-liminal-exhibition",
         "sourceDate": "2026-05-01（展览开幕；2026-07-20 当日开放）",
         "whyItMatters": "‘家’经常被当作自然、私人而且没有政治性的空间，但照护、家务、代际关系、阶级和性别分工都在其中发生。",
-        "analysis": "把学生策展纳入讨论，还能揭示博物馆叙事并非天然存在：选哪件作品、让哪些物件相邻、怎样书写标签，都会决定观众把日常看成琐碎还是结构。",
-        "reflection": "以一张餐桌为中心画出不同时间层：做饭、照护、争吵、远程工作、空置与离家。随后用展签的口吻分别把它写成家具、劳动工具、情感遗址和权力空间，展示命名如何改变观看。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "relationship"
       },
       {
         "category": "社会科学 × 传播学 × 公民参与",
@@ -1221,11 +1006,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.pewresearch.org/journalism/2026/07/16/how-americans-are-engaged-with-news-politics-religion-and-civic-life/",
         "sourceDate": "2026-07-16",
         "whyItMatters": "把人简单分为‘关心政治’与‘不关心政治’，会漏掉大量实际差异：有人深度参与社区却避开党派政治，有人密切关注新闻但只在私人聊天中回应，也有人整体参与较少却仍然投票或参加宗教活动。",
-        "analysis": "分类能帮助传播者找到不同入口，但聚类不是人格诊断，而且调查期涵盖 2024 年大选，其模式未必在非选举年份保持不变。",
-        "reflection": "把四种类型写成四条‘同一天’的时间线：同一则新闻如何分别变成联系议员、社区捐助、私聊转发或完全绕过。随后标出调查没有测到的照护劳动、非正式互助和无法投票者，提醒读者模型的边界。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "comparison"
       },
       {
         "category": "女性主义 × 性别 × 体育制度与数据隐私",
@@ -1245,11 +1025,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.reuters.com/sports/tennis/womens-tour-mandates-gene-test-eligibility-2026-07-20/",
         "sourceDate": "2026-07-20",
         "whyItMatters": "规则试图用一个可操作的统一门槛结束各项目长期分裂的资格制度，但可操作性并不等于没有代价。",
-        "analysis": "基因信息一旦成为职业准入凭证，检测保管、异常结果、复核与申诉就不再只是医学细节，而是劳动权和数据治理问题。报道同时指出，目前职业网坛各级别没有已知的跨性别女性球员，因此政策的象征范围远大于当前直接影响人数。",
-        "reflection": "不要只制作支持／反对二选一辩论；可以画出一张完整资格流程：谁采样、谁读取、谁保存、异常结果由谁解释、运动员如何申诉。把制度最容易被一句‘检测即可’省略的环节全部放回来。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "process"
       },
       {
         "category": "女性主义 × 健康 × 全球医疗与数据基础设施",
@@ -1269,11 +1044,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.who.int/news/item/08-07-2026-first-global-breast-cancer-survival-estimates-show-wide-regional-and-income-disparities",
         "sourceDate": "2026-07-08（页面核验 2026-07-20）",
         "whyItMatters": "生存率常被讲成个人抗争故事，但国家间差异更多反映早期发现、及时确诊、复合治疗与连续照护能否连接起来。",
-        "analysis": "与此同时，估计值的完整世界地图可能制造一种数据已经齐全的错觉：194 个国家中只有 67 个拥有观测生存数据，36 个脆弱或受冲突影响的国家中更只有两个。数据基础设施本身就是医疗能力的一部分。",
-        "reflection": "制作两张叠图：第一张呈现五年生存率，第二张只显示哪些地方真正有癌症登记观测。让颜色最确定的区域与信息最稀薄的区域分开，避免把模型估计画成同等坚实的事实。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "comparison"
       }
     ],
     "learningGoal": "看见分类标准如何影响文化记忆、公共参与、体育资格和医疗结果。",
@@ -1310,11 +1080,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://museedelaromanite.fr/en/temporary-exhibition",
         "sourceDate": "2026-06-11（展览开幕；页面核验 2026-07-19）",
         "whyItMatters": "博物馆并非只是保存过去，也会通过切割、装框、命名和排序生产一种新的过去。",
-        "analysis": "当实用器物只剩下‘杰作’身份，劳动、宗教、阶层和空间关系会被审美遮住。与此前贝叶挂毯的跨国借展不同，这里关注的不是所有权，而是展示技术如何改变物件的本体论身份。",
-        "reflection": "可做一组‘展台前／展台后’双联画：左侧还原器物在战斗、宴饮、住宅和祭祀中的关系，右侧标出支架、标签、聚光灯与白墙如何把它转译成艺术。让展陈装置本身成为叙事角色。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "timeline"
       },
       {
         "category": "艺术人文 × 女性主义 × 艺术史",
@@ -1334,11 +1099,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.speedmuseum.org/exhibitions/abstract-expressionists-the-women/",
         "sourceDate": "2026-01-15（展览公告；活动页面核验 2026-07-19）",
         "whyItMatters": "这不是把几位女性补进既有英雄名单，而是改变运动的基本叙述单位：从 Pollock 或 de Kooning 的个人神话，转向跨画室、画廊、教学与友谊网络的集体形成。",
-        "analysis": "与昨日 Gladys Nilsson 的媒介和母职偏见不同，本项追问的是一整场艺术运动为何被压缩成少数男性姓名，以及巨幅原作的尺度如何反驳‘女性创作较小、较私人’的预设。",
-        "reflection": "可把传统艺术史时间线改成一张‘同时发生图’：同一年横向排列不同城市、画室、展览与教学关系，再把画布实际尺寸换算成人体比例，显示被叙事删掉的不只是姓名，也是创作的物理强度。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "comparison"
       },
       {
         "category": "社会科学 × 心理学 × 游戏与临床研究",
@@ -1358,11 +1118,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://news.fiu.edu/2026/fiu-researchers-test-video-game-as-anxiety-treatment-for-teens",
         "sourceDate": "2026-07-17",
         "whyItMatters": "数字心理干预最容易出现的叙事错误，是把‘青少年愿意玩’直接等同于‘具有临床效果’。",
-        "analysis": "三组设计试图把针对性机制与屏幕时间、期待效应和参与感分开。它也提醒我们，可及性不只意味着把治疗装进手机；家庭设备、持续时间、隐私、退出率和真正需要传统治疗的人如何转介，同样决定技术是否公平。",
-        "reflection": "可画一张‘同一名玩家的三条时间线’，分别标出针对性训练、普通游戏与无游戏条件；把研究尚未回答的问题留在终点，而不是先制作成功故事。重点解释为什么对照组比炫目的游戏画面更重要。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "comparison"
       },
       {
         "category": "社会科学 × 天文学 × 科研制度与基础设施",
@@ -1382,11 +1137,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.reuters.com/science/indias-skyroot-launches-vikram-1-first-private-orbital-rocket-mission-2026-07-18/",
         "sourceDate": "2026-07-18",
         "whyItMatters": "‘私人航天’并不意味着国家退场，而是国家角色从唯一运营者转向基础设施提供者、监管者、采购者和人才训练场。",
-        "analysis": "两位创始人都曾在 ISRO 工作，火箭也从国家发射中心起飞。与此前 Rubin 天文台的数据公共性不同，这里要追问公共能力如何被转换为商业市场，以及风险和收益由谁承担。",
-        "reflection": "可把火箭剖成五层：企业硬件、ISRO 发射场、公共科研人才、2020 年后的监管开放和全球小卫星客户。让‘私人’一词在每一层被重新限定，避免只写成创业英雄史。",
-        "evidenceBoundary": "新闻报道或研究新闻稿能支持这里列出的事件、日期与公开材料；本站的比较和反思会单独标记，不能替代原始来源。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "relationship"
       },
       {
         "category": "女性主义 × 健康 × 照护政策",
@@ -1406,11 +1156,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.kff.org/medicaid/medicaid-postpartum-coverage-extension-tracker/",
         "sourceDate": "2026-07-15",
         "whyItMatters": "分娩后的身体恢复、抑郁筛查、慢性病管理和避孕需求不会在第 60 天结束。",
-        "analysis": "把覆盖延长到一年，是把照护从一次分娩账单重新理解为连续过程。但地图上的‘已实施’仍不能自动保证医生可得、交通、语言服务或实际参保连续性；下一步应从法律通过转向使用质量。",
-        "reflection": "可以把产后一年画成十二格照护日历，把 60 天断崖放在第三格之前，再标出心理健康、心血管风险、哺乳支持和慢性病复诊可能出现的月份。最后对比‘法律覆盖’与‘真正看得到医生’两条曲线。",
-        "evidenceBoundary": "来源能确认当时公开的政策、资格、资金、行政数据或法律进展；执行结果仍可能随地区、时间、申诉和后续决定变化。",
-        "sourceType": "官方数据、政策或制度文件",
-        "informationForm": "timeline"
       }
     ],
     "learningGoal": "追踪对象或制度在用途、环境或叙事改变之后，哪些意义被保留、放大或遮蔽。",
@@ -1446,12 +1191,7 @@ export const briefings: Briefing[] = [
         "sourceName": "Hayward Gallery Touring · Southbank Centre",
         "sourceUrl": "https://www.southbankcentre.co.uk/whats-on/linder-danger-came-smiling-on-tour/",
         "sourceDate": "2026-07-18（Blackpool 开幕日期）",
-        "whyItMatters": "这不是又一次把女性艺术家写成“被重新发现”的回顾展。",
-        "analysis": "Linder 的关键在于：她没有逃离大众图像，而是用大众图像自身的材料制造干扰。纸质杂志正在消失、生成图像正在增加时，“切开”仍提醒我们，图像不是透明事实，而是可以识别来源、暴露权力并重新组合的设计对象。它与此前对深度伪造的技术批判不同：这里关注的是观众如何通过手工接缝恢复对图像的主动阅读。",
-        "reflection": "可从一把医用手术刀切入，做一条“拼贴的政治技术史”：将 1970 年代杂志剪贴、朋克唱片封套、数字蒙太奇与生成式图像并列，比较每种媒介如何留下或抹平接缝。不要复制具体作品，而应把“看见切口”作为视觉叙事原则。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "process"
+        "whyItMatters": "Linder 直接剪开广告、时尚杂志和情色图像，再重新拼接。她的作品让观众看见大众媒体怎样塑造女性身体，也展示人们可以怎样重新使用这些图像。",
       },
       {
         "category": "艺术人文 × 宗教与文化史 × 人类学",
@@ -1471,11 +1211,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://lascruces.gov/dancing-with-life-mexican-masks-opens-at-the-museum-of-art/",
         "sourceDate": "2026-07-06（新闻稿；展览 2026-07-17 开幕）",
         "whyItMatters": "民俗展览容易把传统放进“即将消失”的玻璃柜，但这些面具恰恰证明传统的生命来自变化。",
-        "analysis": "宗教节庆、政治讽刺、流行文化与材料替换并非污染了某个纯粹原型，而是 danza 持续工作的方式。真正需要追问的是：博物馆如何在保存物件的同时，承认制作它们的社群仍在改变其意义。",
-        "reflection": "可制作一张“面具的社会角色表”，不按年代而按功能排列：敬畏、嘲讽、纪念、反转权威与制造共同体。再用同一角色在不同时代换上不同材料和面孔，展示传统不是固定造型，而是一套继续回应现实的语法。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "comparison"
       },
       {
         "category": "社会科学 × 语言学 × 社会心理学",
@@ -1495,11 +1230,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.pnas.org/doi/10.1073/pnas.2508061123",
         "sourceDate": "2026-04-22（论文；CUNY 解读 2026-04-28）",
         "whyItMatters": "这给“社会规范如何形成”提供了比从众或理性优化更具体的机制：在阈值之前，异议与新选项仍能进入；越过阈值后，零星反例可能只被当作例外。",
-        "analysis": "它有助于解释工作习惯、组织文化和公共行为为何有时长期不动、又在临界点后迅速翻转。但实验简化了身份、地位、惩罚与权力，不能把一个参数直接当成现实社会的万能定律。",
-        "reflection": "可以用“从 walked 到办公室潜规则”做双线叙事：一边展示儿童如何接受 -ed 规则并容忍 went，另一边展示群体如何从多个名字收敛到一个约定。最后加入权力变量，追问谁有资格提供足够多的‘例子’来推动别人越过阈值。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "process"
       },
       {
         "category": "社会科学 × 传播学 × 科技与社会",
@@ -1519,11 +1249,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.oversightboard.com/news/are-llms-stifling-political-speech-an-assessment-of-how-ai-models-protect-free-expression/",
         "sourceDate": "2026-07-16",
         "whyItMatters": "模型不必受到某国政府的实时指令，也可能从训练材料、产品政策和风险规避中学习该国的禁忌，再把它输出给身处另一地的用户。",
-        "analysis": "这使内容治理从平台删帖提前到生成阶段，而且用户常看不到拒答规则来自哪里。与历史基线中的算法性厌女和深度伪造不同，本项关注的是政治表达在司法辖区之间的非透明迁移，以及多语言、多地区审计为何必须成为模型评估的一部分。",
-        "reflection": "可用“同一个请求旅行十次”的形式，把用户位置、接口基础设施、谈论对象所在国和模型拒答理由分成四层。不要只排行哪个模型更自由，而要展示法律、训练环境与产品政策如何在一次看似私人的对话里叠加。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "官方数据、政策或制度文件",
-        "informationForm": "relationship"
       },
       {
         "category": "女性主义 × 健康 × 生育与照护",
@@ -1543,11 +1268,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/old-cancer-drug-may-help-restore-fertility-certain-women-2026-07-01/",
         "sourceDate": "2026-07-01",
         "whyItMatters": "生育研究很容易把少数成功病例写成“恢复生育力”的奇迹，但这里最重要的信息恰恰是分母：样本只有 10 人、对象限定为自身免疫机制、需要激素刺激与辅助生殖，且尚需更大试验确认安全性。",
-        "analysis": "它同时提示，女性健康并非总是需要从零发明药物；重新理解现有免疫疗法也可能打开路径，但希望必须与风险、费用、适用人群和长期随访一起叙述。",
-        "reflection": "可用一张“从 10 到 6、5、3”的研究漏斗讲完整证据链，并在每一步标出条件：免疫分型、药物治疗、卵巢刺激、取卵、胚胎移植和一年等待期。这样既不抹杀参与者获得的真实结果，也不会把先导试验包装成普遍承诺。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "evidence"
       }
     ],
     "learningGoal": "识别规则不只存在于法律文本，也存在于文化形式、群体预期、算法和临床判断。",
@@ -1584,11 +1304,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.axios.com/2026/07/17/odyssey-imax-christopher-nolan",
         "sourceDate": "2026-07-17",
         "whyItMatters": "古代口传史诗被包装成全球同步的商业事件，看似把经典交给大众；真正决定观众看到哪个版本的，却是几十年前形成的放映网络、设备维护和地域分布。",
-        "analysis": "影片的航海叙事于是多了一层现实反讽：为了抵达导演所谓的“完整版本”，观众也可能需要跨城旅行。与前期贝叶挂毯的文物运输不同，这里的问题不是谁保管原物，而是谁拥有解释影像的硬件。",
-        "reflection": "可以制作一张“同一部电影的多种身体”：从 65 毫米摄影底片、70 毫米放映拷贝、1.43:1 银幕到数字巨幕，逐层说明每次转换保留和丢失了什么；再把 25 家美国影院画成一张稀疏航海图，讨论文化平权是否也包括放映基础设施。",
-        "evidenceBoundary": "新闻报道或研究新闻稿能支持这里列出的事件、日期与公开材料；本站的比较和反思会单独标记，不能替代原始来源。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "comparison"
       },
       {
         "category": "艺术人文 × 女性主义 × 艺术史",
@@ -1607,12 +1322,7 @@ export const briefings: Briefing[] = [
         "sourceName": "Crocker Art Museum",
         "sourceUrl": "https://www.crockerart.org/press/gleefully-askew-a-gladys-nilsson-retrospective",
         "sourceDate": "2026-02-18（新闻稿；展览 2026-07-19 开幕）",
-        "whyItMatters": "Nilsson 的故事不是泛泛的“被遗忘女艺术家再发现”。",
-        "analysis": "它精确揭示艺术等级如何由材料、照护条件和地理中心共同生产：水彩因便于在育儿环境中使用而成为策略，却又被当成不够宏大；在 Sacramento 的长期工作，则常被“芝加哥艺术家”标签遮蔽。回顾展把这些限制重新读作形式实验的发动机，也与此前 Mendieta 的机构回顾、Yoko Ono 的行为艺术重演形成不同判断。",
-        "reflection": "可从一瓶被避开的松节油开始，追踪怀孕、工作室安全、水彩、刺绣绷架和纸上大尺幅如何组成一套“照护条件下的形式发明”。再比较艺术史为何更容易记住团体名称，而忽略成员在迁居后形成的独立路径。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "timeline"
+        "whyItMatters": "Nilsson 长期使用水彩，因为这种材料适合她在照顾孩子时继续工作；艺术界却曾把水彩看成较小、较女性化的媒介。回顾展让这种偏见和她的实际创作条件同时被看见。",
       },
       {
         "category": "社会科学 × 天文学 × 科研基础设施",
@@ -1632,11 +1342,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.reuters.com/science/chiles-rubin-observatory-begins-decade-long-mission-film-universe-2026-07-15/",
         "sourceDate": "2026-07-15",
         "whyItMatters": "这与前期 β Pictoris d 的“多仪器重查档案”不同：Rubin 把建立档案本身变成十年公共任务。",
-        "analysis": "发现速度将取决于相机之外的实时管线、警报代理、开放规则与后续望远镜能否承接海量瞬变。天文学因此也是制度研究：谁资助长期观测，谁能及时获得数据，哪些地区承担设备与能源成本，都会塑造最终被命名的宇宙。",
-        "reflection": "可以把 Rubin 画成三层机器：山顶的光学设备、地下与跨洋的数据管线、全球研究者和后续望远镜组成的响应网络。用“一颗突然变亮的星在 60 秒内如何变成公共警报”为叙事，解释现代发现为什么常由基础设施集体署名。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "process"
       },
       {
         "category": "社会科学 × 教育与知识制度",
@@ -1656,11 +1361,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.thebritishacademy.ac.uk/news/loss-of-academic-staff-threatens-strategically-vital-skills-for-uk/",
         "sourceDate": "2026-07-15",
         "whyItMatters": "裁员不是把每门课平均缩小一点，而会在地图上留下不可逆的空白。",
-        "analysis": "学生因生活成本更倾向就近入学时，某地没有神学、古典学或低门槛语言学位，就会把地域差异转化为阶层差异；早期岗位先消失，还会切断下一代教师和研究者的入口。这里的核心不是为所有旧系科免责，而是把“市场需求”拆成谁有能力迁居、哪些技能被工业政策承认、以及知识基础设施需要多长周期才能重建。",
-        "reflection": "可制作一张“知识的铁路停运图”：把课程、早期岗位和地区入口视为站点，标出人员下降与学科集中如何让一些路线只剩高选择性大学可达。再追问：当一个地区最后一门语言或古典学课程关闭，损失能否用全国总招生数字衡量？",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "comparison"
       },
       {
         "category": "女性主义 × 健康与政治制度",
@@ -1680,11 +1380,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://voteidaho.gov/initiatives-amendments/",
         "sourceDate": "2026-07-13（资格确认；页面核验 2026-07-17）",
         "whyItMatters": "这一倡议把通常被切割讨论的服务重新放回“生育自主”连续体：避孕、IVF、流产与复杂妊娠照护并不是彼此孤立的文化议题，而共享隐私、临床判断和提供者法律风险。",
-        "analysis": "它也显示，在严格禁令州，直接民主既可能成为立法僵局的出口，也会把高度专业的医疗边界压缩进一张赞成/反对选票。与前期政党性别配额不同，这里争夺的是身体与临床决定的法律归属。",
-        "reflection": "可以把公投文本拆成一棵“医疗决定树”：不同孕期、健康风险、避孕与生育治疗分别进入哪条法律路径；旁边再画出签名门槛、18 个立法选区分布要求和最终投票，说明身体自主如何被转换成程序性数字。",
-        "evidenceBoundary": "来源能确认当时公开的政策、资格、资金、行政数据或法律进展；执行结果仍可能随地区、时间、申诉和后续决定变化。",
-        "sourceType": "官方数据、政策或制度文件",
-        "informationForm": "timeline"
       }
     ],
     "learningGoal": "理解图像、研究、知识传承和政治选择都需要具体的设备、机构、人员和程序。",
@@ -1721,11 +1416,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.theguardian.com/culture/2026/jul/15/edvard-munch-and-the-chocolate-factory-the-bitter-truth-behind-the-freia-frieze",
         "sourceDate": "2026-07-15",
         "whyItMatters": "壁画被称为面向工人的公共艺术，但它没有描绘女工的生产、收入或居住条件，而是替她们安排了一套“应当理解”的田园生活。",
-        "analysis": "Freia 的福利制度在当时有进步面向，作品价格与女工微薄收入之间的落差却已在 1923 年遭劳工报纸批评。把美术史与供应链、性别分工并置后，公共艺术不再只是善意装饰，而成为谁有权替劳动者想象幸福的问题。",
-        "reflection": "可以制作一张“壁画之外的巧克力”双层地图：上层逐幅分析 12 个田园场景，下层追踪食堂里的女工、80,000 挪威克朗的委托费与跨大西洋可可路线。重点不是给蒙克补一项道德判决，而是比较画面里被安排的闲暇和生产链里真实存在的劳动。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "comparison"
       },
       {
         "category": "艺术人文 × 设计与建筑",
@@ -1745,11 +1435,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.soane.org/exhibitions/madelon-vriesendorp-mind-games",
         "sourceDate": "2026-07-15（开幕日期）",
         "whyItMatters": "建筑理论常以图纸、术语和大师姓名出现，Vriesendorp 的贡献在于把抽象观点变成可记忆的角色关系：城市不再是理性机器，而是欲望、拥挤、幽默和失控的舞台。",
-        "analysis": "新作又把牛奶瓶、蛋盒等包装材料转化为天鹅、怪兽与独裁者，显示她的设计方法不是固定的后现代风格，而是一种不断重命名日常物件的观看训练。",
-        "reflection": "可做一期“谁替建筑理论画表情包”：以《Flagrant Délit》、OMA 早期未建项目和可互动 Mind Game 为三站，解释图像如何让艰深理论进入公共记忆。结尾再把 1970 年代的摩天楼欲望，与今天用废包装造生物的材料政治对照。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "relationship"
       },
       {
         "category": "社会科学 × 天文学",
@@ -1769,11 +1454,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://arxiv.org/abs/2606.23789",
         "sourceDate": "2026-07-15（期刊发布；预印本 2026-06-22）",
         "whyItMatters": "它与前一期“星际糖”不是同一问题：后者讨论分子在恒星形成前的化学，这里讨论的是一颗行星如何被测量系统从强烈星光和碎屑盘中分离出来。",
-        "analysis": "β Pic d 约比系统内另外两颗行星暗 100 倍，说明发现能力不仅来自更大的镜面，也来自光谱模板、跨仪器校准、长期保存的数据和愿意重查旧档案的研究文化。",
-        "reflection": "可以把它做成一场“同一颗行星的两份侦探报告”：左线追踪 JWST 如何用甲烷、一氧化碳和水的光谱指纹找到目标，右线追踪 VLT 如何从 11 年档案拼出轨道。用两组独立证据相遇的时刻，解释可重复发现比单张震撼图像更重要。",
-        "evidenceBoundary": "来源提供论文或预印本材料；它能说明研究者的方法与当前结果，但不代表结论已经经过全部后续复核，也不能自动推导出生命、治疗或政策结论。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "timeline"
       },
       {
         "category": "社会科学 × 地理学",
@@ -1792,12 +1472,7 @@ export const briefings: Briefing[] = [
         "sourceName": "World Weather Attribution（The Guardian 报道与数据核验）",
         "sourceUrl": "https://www.theguardian.com/world/2026/jul/16/how-global-heating-supercharged-floods-west-africa-displacing-thousands",
         "sourceDate": "2026-07-16",
-        "whyItMatters": "“五倍可能”并不意味着气候模型能精确复制每个被淹街区。",
-        "analysis": "研究者明确指出，全球南方的热带降水仍是模型薄弱区；与此同时，排水能力、湿地损失、非正规住区和预警覆盖决定同一场雨造成多大伤亡。归因科学的价值，是把“百年一遇”从宿命语言改写为可以讨论排放责任、城市投资和国际气候正义的制度问题。",
-        "reflection": "可制作一张“同一场雨的三种地图”：天气图回答雨落在哪里，排水图回答水为何留在城市，责任图回答谁有资源适应。把观测的 23%、模型的 4% 和综合概率约五倍并列，解释不同数字并非互相否定，而是来自不同证据路径。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "process"
+        "whyItMatters": "研究估计，全球变暖让这类极端降雨更容易发生；城市排水、湿地减少、住房位置和预警系统，则会决定同一场雨最终造成多大损失。",
       },
       {
         "category": "女性主义 × 政治社会学",
@@ -1817,11 +1492,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.theguardian.com/australia-news/2026/jul/16/liberal-party-gender-quotas-angus-taylor-response",
         "sourceDate": "2026-07-16",
         "whyItMatters": "争论的关键不是“女性是否够优秀”，而是谁定义进入候选池、获得资源和分配可胜选席位的程序。",
-        "analysis": "2025 年大选后，女性已占澳大利亚议会近半，但自由党在众议院 28 席中只有 6 名女性；全国接近性别平衡，不能自动消除单一政党内部的入口瓶颈。“择优”如果只评价终点人物，却不检查候选人被放在哪些席位，就会隐藏制度本身的选择。",
-        "reflection": "可画一条“从党员到议员”的漏斗：党员构成、提名、预选、资源投入、席位安全度和当选逐层比较。再把配额、开放初选、候选人激励三种工具放入漏斗，问它们分别改变哪一层，而不是把整场讨论压缩成支持或反对配额。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "官方数据、政策或制度文件",
-        "informationForm": "comparison"
       }
     ],
     "learningGoal": "把视觉结果和统计结论重新连接到委托关系、观测工具、模型与权力结构。",
@@ -1857,12 +1527,7 @@ export const briefings: Briefing[] = [
         "sourceName": "British Museum（抵达细节补充：The Guardian）",
         "sourceUrl": "https://www.britishmuseum.org/exhibitions/bayeux-tapestry",
         "sourceDate": "2026-07-10（到馆日期）",
-        "whyItMatters": "这不只是“名作回家”。",
-        "analysis": "挂毯本身是一套高度有效的政治传播：它把征服、誓言、战争和王权连成可移动的图像叙事；而今天的跨国借展，又把保存风险、外交关系和公共解释权绑在一起。运输箱、湿度控制和保险不是幕后琐事，而是决定公众能否看见历史的基础设施。更重要的是，称它为“挂毯”已成为习惯，但技术上它是刺绣——连名称都在塑造观看方式。",
-        "reflection": "可做一期“1066 年的长卷新闻”：把贝叶挂毯当作一条 70 米的视觉报道，逐段拆解它如何选择英雄、敌人和因果，再以本次 11 小时秘密运输为第二条时间线，呈现古代宣传与现代文物治理如何在同一件物品上相遇。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "timeline"
+        "whyItMatters": "贝叶挂毯讲述 1066 年诺曼征服英格兰的故事，本身也是一套替胜利者组织历史的图像。它回到英格兰展出时，人们重新讨论的不只是文物借展，还有谁在讲述这场战争。",
       },
       {
         "category": "艺术人文 × 女性主义",
@@ -1882,11 +1547,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.thebroad.org/yoko-onos-sky-piece-jesus-christ-cut-piece-sold-out",
         "sourceDate": "2026-07-18（首场活动日期）",
         "whyItMatters": "《Cut Piece》最早于 1964 年在京都演出，它把“观看”从安全距离变成必须承担后果的行动。",
-        "analysis": "今天重演它，意义不在复刻一个经典画面，而在观察观众是否会因 60 多年的女性主义、行为艺术史与同意话语而改变行为。MPA 让两位受战争与国家暴力经验影响的设计师制作“最好的衣服”，也把被剪毁的价值、身份和地缘政治带回作品。",
-        "reflection": "可以用“同一份指令，六十年后还会得到同一种观众吗？”为结构，对照 1964 年小野洋子与 2026 年 MPA 的现场条件。重点记录规则、服装、观众迟疑和机构安全边界，而不是再次消费被剪开的身体。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "relationship"
       },
       {
         "category": "社会科学 × 天文学",
@@ -1906,11 +1566,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://arxiv.org/abs/2606.03313",
         "sourceDate": "2026-06-02",
         "whyItMatters": "糖不仅提供能量，也是核酸骨架和多种生物结构的组成部分。",
-        "analysis": "陨石与小行星样本里已经发现核糖、葡萄糖等单糖，但此前没有糖在星际介质中被直接识别。模型显示，赤藓酮糖可由更简单的二碳醛和醇在星际尘埃表面形成；这意味着部分前生物化学可能在行星诞生前就已启动。不过，光谱识别与化学模型不能被写成“外星生命证据”。",
-        "reflection": "可做一条“从无线电谱线到生命原料”的推理链：先展示望远镜如何识别分子的指纹，再区分“检测到糖”“证明糖能进入行星”“证明生命存在”这三个完全不同的命题，顺带解释为何公共传播常把前生物化学夸大成生命发现。",
-        "evidenceBoundary": "来源提供论文或预印本材料；它能说明研究者的方法与当前结果，但不代表结论已经经过全部后续复核，也不能自动推导出生命、治疗或政策结论。",
-        "sourceType": "研究论文或学术材料",
-        "informationForm": "process"
       },
       {
         "category": "社会科学 × 心理学与传播学",
@@ -1930,11 +1585,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.reuters.com/legal/litigation/uk-teens-report-sleep-wellbeing-gains-under-social-media-restrictions-study-2026-07-14/",
         "sourceDate": "2026-07-14",
         "whyItMatters": "结果比“禁或不禁”更复杂：完全移除同时带来最明显的社交断裂，尤其当 Snapchat 等平台已成为同伴联系基础设施时；15 分钟上限合规率最低，也常在对话中途切断交流。",
-        "analysis": "更要紧的是，这是一项短期家庭试验，改善来自参与者报告，不能直接等同于长期因果或全国政策效果。政策设计必须同时衡量睡眠、注意力、孤立风险、绕过方式与年龄自主权。",
-        "reflection": "可把三种方案画成一张“干预—收益—代价”矩阵：不是只问屏幕时间降了多少，而是分别追踪睡眠、专注、家庭互动、同伴联系和可执行性。结尾再讨论：当社交平台已成为公共广场，单个家庭退出的成本为何会高于集体规则。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "comparison"
       },
       {
         "category": "女性主义 × 社会科学",
@@ -1954,11 +1604,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.reuters.com/world/americas/one-million-women-lose-aid-access-due-funding-cuts-un-women-says-2026-07-10/",
         "sourceDate": "2026-07-10",
         "whyItMatters": "女性组织常能进入国际机构到不了、也不会长期停留的社区；它们提供性暴力幸存者支持、医疗转介、安全空间和法律协助。",
-        "analysis": "因此削减资金并非按比例缩小服务，而可能让整个地方转介网络断裂。调查还显示 65% 的机构依靠无薪员工维持，超过四分之三已裁撤岗位，半数建立等候名单或直接拒绝求助者——照护被转移成女性工作者的无偿劳动。",
-        "reflection": "可从“援助削减如何变成无偿照护”切入，画出一美元从捐助国预算到地方热线、避难所、翻译与个案管理的路径，再标出每个断点会让谁接手。这样能把宏观财政决定与一线女性组织的时间、身体和风险连接起来。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "process"
       }
     ],
     "learningGoal": "把文化事件和社会政策放进资源流动中，理解被看见、被限制和获得照护之间的关系。",
@@ -1994,11 +1639,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.tate.org.uk/whats-on/tate-modern/ana-mendieta",
         "sourceDate": "2026-07-13",
         "whyItMatters": "Mendieta 长期被夹在两种叙事中：一边是“女性主义身体艺术家”的简化标签，另一边是 1985 年坠楼死亡及 Carl Andre 审判留下的巨大阴影。",
-        "analysis": "大型机构回顾展的意义，不是抹掉死亡政治，而是让作品重新拥有自己的时间线：古巴流亡经验、对前哥伦布文化的兴趣、短暂影像的保存，以及她如何拒绝把身体当成稳定的雕塑对象。",
-        "reflection": "可以制作一期“当女性艺术家的死亡压过她的作品”专题：比较 Mendieta、Francesca Woodman 与 Sylvia Plath 的身后叙事，追问纪念、猎奇和重新评价之间的界线。画面上可从她留下的空缺轮廓切入，而不是重复坠楼案的戏剧化视觉。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "timeline"
       },
       {
         "category": "艺术人文 × 社会科学",
@@ -2018,11 +1658,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.vogue.com/article/sarabande-foundation-opens-its-new-home-in-tottenham",
         "sourceDate": "2026-07-13",
         "whyItMatters": "艺术生态最常被讲成天赋、灵感和市场价格，但创作者能否留下，首先取决于租金、工作空间和稳定时间。",
-        "analysis": "Sarabande 没有把新址放在伦敦中心，而是“跟随艺术家”来到 Tottenham；这既可能为社区提供文化基础设施，也必须警惕艺术机构成为下一轮绅士化的先导。关键差异在于：空间是否真的长期低价、是否向本地居民开放、艺术家是否拥有决定权。",
-        "reflection": "可从“艺术家不是被灵感饿死，而是被房租赶走”切入，比较 London、Berlin 与中国一线城市的工作室迁移。把每平方英尺 £1 与周边商业租金并排呈现，会比泛泛谈“支持青年艺术家”更有冲击力。",
-        "evidenceBoundary": "来源能确认展览、作品、机构说明与公开日期；策展选择和本站的结构性解读属于解释，不等同于作品本身或唯一的艺术史结论。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "comparison"
       },
       {
         "category": "社会科学",
@@ -2040,12 +1675,7 @@ export const briefings: Briefing[] = [
         "sourceName": "APA Monitor on Psychology",
         "sourceUrl": "https://www.apa.org/monitor/2026/07-08/brain-stimulation-mental-illness-treatment",
         "sourceDate": "2026-07-01",
-        "whyItMatters": "TMS 展示了心理治疗、药物和神经调控之间的边界正在重新组合。",
-        "analysis": "但新技术最容易被“精准刺激大脑”的语言神化。疗效不仅取决于设备，还取决于靶点选择、刺激参数、患者差异、是否与心理治疗结合，以及保险能否覆盖。研究阶段的适应证不能被提前包装成确定疗法。",
-        "reflection": "可做一期“磁场如何成为精神科治疗工具”的机制型视频：先用线圈—磁场—皮层电流的三步动画解释 TMS，再把“已获批”“临床使用”“研究中”分成三栏，避免把实验结果写成医疗承诺。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "机构原始页面或专题资料",
-        "informationForm": "process"
+        "whyItMatters": "TMS 用磁场刺激大脑特定区域，不需要开刀。它已经用于部分抑郁症治疗，研究者现在正测试它能否帮助更多精神健康问题，以及怎样与药物和心理治疗配合。",
       },
       {
         "category": "女性主义 × 社会科学",
@@ -2064,11 +1694,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://www.theguardian.com/music/2026/jul/07/menopunkapalooza-menopause-festival",
         "sourceDate": "2026-07-07",
         "whyItMatters": "Riot grrrl 曾把性别暴力和舞台排斥带进朋克现场；三十年后，同一代人开始谈衰老、疼痛、脑雾与被误诊。",
-        "analysis": "这里真正新颖的不是“朋克也会老”，而是健康知识传播换了场所：诊室里的单向说明，被音乐、幽默、同伴证词和集体组织改写。它也提醒我们，女性健康的知识缺口并非个人不会搜索，而是医学教育与研究长期没有把她们当作标准主体。",
-        "reflection": "可做“Riot grrrl 的第二人生”：从 1990 年代的“girls to the front”讲到 2026 年的“hormones are healthcare”，呈现女性主义运动如何随一代人的身体变化而改变议题，而不是把中年写成青春政治的退场。",
-        "evidenceBoundary": "来源能支持这里列出的研究设计、样本、数据或报告结论；结果仍受样本、测量方法、时间范围和相关与因果区别限制，不能直接推广到所有人。",
-        "sourceType": "新闻报道或研究新闻稿",
-        "informationForm": "timeline"
       },
       {
         "category": "女性主义 × 艺术人文",
@@ -2087,11 +1712,6 @@ export const briefings: Briefing[] = [
         "sourceUrl": "https://womenshistory.si.edu/unhidden-heroines",
         "sourceDate": "2026-06-18",
         "whyItMatters": "增强现实并不会自动让历史更平等，但它能改变“纪念碑必须是什么”的想象：不必等待昂贵、永久且高度政治化的石材雕像，也能把缺席者放回国家叙事中心。",
-        "analysis": "同时，数字纪念也有脆弱性——软件、设备与项目期限结束后，人物是否会再次消失？因此技术体验必须与开放档案、教育资源和长期保存结合。",
-        "reflection": "可从“没有纪念碑的人，能否先拥有一个数字幽灵”切入，比较实体雕像、AR 纪念和社交媒体历史项目。重点不只是技术酷不酷，而是谁选出这五个人、内容能保存多久、离开 Washington 后公众还能否访问。",
-        "evidenceBoundary": "博物馆、展览或文化机构原始页面能支持这里列出的事件、日期与公开材料；本站的比较和反思会单独标记，不能替代原始来源。",
-        "sourceType": "博物馆、展览或文化机构原始页面",
-        "informationForm": "comparison"
       }
     ],
     "learningGoal": "理解作品、身体经验和人物贡献能否被保存，取决于文化空间、医疗资源和公共叙事。",

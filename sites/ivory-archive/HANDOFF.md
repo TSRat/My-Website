@@ -1,5 +1,39 @@
 # IVORY ARCHIVE handoff
 
+## 2026-07-29 · Three-section beginner rewrite
+
+### Current target
+
+根据创作者反馈，删除把日刊写成证据审查或批判性思维练习的结构，让每篇只保留三段普通语言说明，并让来源链接用内容名称直接打开。
+
+### Completed
+
+- 全部 75 篇移除 `analysis`、`reflection`、`evidenceBoundary`、`sourceType` 和 `informationForm` 字段。
+- React 与 Pages 详情页统一为“发生了什么 / 这件事为什么重要 / 记住这几个细节”。
+- 删除页面上的“先补上背景”“证据与边界”“来源不能单独证明什么”“分析”“不是来源中的直接事实”“反思与练习”和独立来源登记。
+- 每则来源链接改为“查看原文：<故事标题>”，直接指向原 `sourceUrl`；机构和日期作为辅助文字保留，不显示裸网址。
+- 重写 Goldsworthy《Red Flags》示例，明确说明 2026 年是 1776 年《独立宣言》通过 250 周年，并用普通语言解释土壤旗帜。
+- 进一步重写梦境研究、警务性别判断、O’Keeffe、彗星分类、长期新冠、Linder、Nilsson、西非洪水、贝叶挂毯和 TMS 等过度抽象或免责声明式的重要性说明。
+- Figma 桌面 `46:51` 与移动 `46:52` 原位更新为三段式；旧证据、分析、反思 frame 已隐藏。
+
+### Verification
+
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed, 654 local references across 75 HTML/CSS files.
+- `npm run build:ivory`: passed, Sites artifact valid.
+- `node --test tests/ivory-renderer-parity.test.mjs`: passed, 3/3.
+- `npm run lint`: 0 errors; 24 unchanged warnings from Enheduanna/Hypatia.
+- `git diff --check`: passed.
+- Browser at 390×844: 5 stories; each story has exactly 3 sections; 10 descriptive source links; no horizontal overflow; removed disclaimer copy absent.
+- Figma desktop and 390 px mobile screenshots inspected; three-section order is visible.
+
+### Delivery state
+
+- Branch: `codex/ivory-beginner-rebuild`.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/31>.
+- Preview will be refreshed after the implementation commit.
+- Merge remains unauthorized and has not been performed.
+
 ## 2026-07-28 · Beginner-first complete archive rebuild
 
 ### Current target

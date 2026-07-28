@@ -3,8 +3,8 @@
 ## Product job
 
 Help a reader with no prior subject knowledge understand any of 75 archived
-stories, distinguish sourced fact from editorial interpretation, and reach the
-original source without losing the archive’s cross-disciplinary point of view.
+stories in three short sections and open the related article through a
+descriptive link.
 
 ## Success criteria
 
@@ -13,7 +13,7 @@ original source without losing the archive’s cross-disciplinary point of view.
 - Every issue has a concrete theme and a plain three-minute summary.
 - Every story follows one stable learning order.
 - Search covers themes, titles, categories, summaries, and story background.
-- All 75 stories expose a source URL near the top and in the source rail.
+- All 75 stories expose a directly clickable source link named for its subject.
 - No fact, qualification, feminist analysis, image credit, or public URL is
   silently removed.
 
@@ -28,13 +28,10 @@ Story changes:
 
 - beginner-facing `title`;
 - `summary` and `happened` remain factual orientation;
-- `whyItMatters` replaces the old importance label without changing its
-  evidentiary certainty;
-- `evidenceBoundary` describes what the source type can and cannot establish;
-- `analysis` makes the archive’s interpretation explicit;
-- `reflection` preserves the existing creator prompt as optional inquiry;
-- `sourceType` distinguishes reporting, research, policy, institutional,
-  exhibition, and primary-document sources.
+- `whyItMatters` gives one plain explanation of why the event matters;
+- `facts` provides the key dates, numbers, people, and background in one list;
+- `sourceName`, `sourceDate`, and `sourceUrl` support a descriptive article
+  link without a separate source register.
 
 The data remains a directly evaluable literal because the Pages generator
 depends on that contract.
@@ -42,17 +39,16 @@ depends on that contract.
 ## Navigation and direct entry
 
 - Keep the existing public routes and legacy redirects.
-- Add a visible “编辑方法” destination to global navigation.
-- On issue routes, place the primary source directly after each story lead.
+- Add a visible “阅读方法” destination to global navigation.
+- On issue routes, name each link “查看原文：<story title>” and make it directly
+  clickable.
 - Add a five-line quick read before the long stories.
 - Add previous/next issue links derived from array position.
 
 ## Corrections and unavailable sources
 
-Source access control is not equivalent to a dead source. If a link is
-temporarily inaccessible, retain the citation and show an honest access note.
-Future factual corrections should add a dated correction record rather than
-silently changing the claim.
+Future factual corrections should update the article text and source date
+without adding boilerplate disclaimers to every story.
 
 ## Analytics
 
@@ -68,5 +64,5 @@ Provider remains `none`. Implemented provider-neutral signals:
 `comparison_viewed` remain future candidates; they are not claimed as current
 signals.
 
-Do not collect raw search text, identity, responses to reflection prompts,
-dwell time as a learning proxy, cookies, or persistent storage.
+Do not collect raw search text, identity, dwell time as a learning proxy,
+cookies, or persistent storage.

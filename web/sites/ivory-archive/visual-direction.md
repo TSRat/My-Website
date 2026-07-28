@@ -2,32 +2,24 @@
 
 ## Thesis
 
-Keep the page feeling like a working paper archive whose annotations help a
-reader build understanding. Information forms should resemble timelines,
-source registers, field notes, comparison sheets, and relationship diagrams,
-not dashboard widgets.
+Keep the page feeling like a working paper archive while reducing every story
+to one continuous, easy-to-follow three-section reading flow.
 
 ## Inherited identity
 
 - ivory paper field;
-- burgundy issue numbers, navigation, and editorial interpretation;
-- forest-green facts, evidence, and source actions;
+- burgundy issue numbers, navigation, and section markers;
+- forest-green source actions;
 - serif titles and sustained reading;
 - sans-serif labels and metadata;
 - small radii, hairline rules, stamps, indexes, and restrained image treatment.
 
-## Explanatory forms
+## Explanatory form
 
-- Timeline: only when order, duration, or change matters.
-- Comparison table: repeated attributes that must be compared.
-- Process diagram: causal or production sequence.
-- Relationship diagram: actors, infrastructure, dependence, or power.
-- Evidence layers: separate observation, inference, interpretation, and
-  uncertainty.
-- Summary strip: one sentence per story; never a substitute for orientation.
-
-Each visual form has a semantic heading, accessible text equivalent, and
-non-color cue. Decoration never carries required meaning.
+- “发生了什么” is continuous prose.
+- “这件事为什么重要” receives a light burgundy paper wash.
+- “记住这几个细节” uses a simple list followed by the descriptive source link.
+- The three-minute summary remains one sentence per story.
 
 ## Motion
 
