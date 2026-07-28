@@ -23,6 +23,10 @@
 - no source link in the story header;
 - exactly one descriptive source link after analysis, named with the source
   institution and article subject instead of a raw URL;
+- analysis continues on the same paper surface as the other sections, without
+  a rose fill or card border;
+- desktop source frame `49:131` and mobile source frame `50:146` are plain-text
+  links outside the Analysis section, without a surrounding card;
 - long Chinese titles and mixed Chinese/English proper names;
 - Noto Serif SC editorial typography with Inter/Fira Code metadata;
 - ivory, burgundy, forest, paper, rose, and hairline color system.
@@ -32,7 +36,7 @@
 Figma desktop and 390 px mobile screenshots were inspected after the 2026-07-29
 four-part revision. Existing nodes were mutated in place. The desktop and mobile
 frames show the same four-section order, introduce Brassaï before the event,
-remove the header link, and place the sole source link after analysis. Old
-evidence and reflection frames remain hidden. Interactive error states remain
-implemented and verified in code/browser rather than duplicated as extra Figma
-frames.
+remove the header link, keep Analysis unboxed, and place the sole source link
+after Analysis as a separate text line. Old evidence and reflection frames
+remain hidden. Interactive error states remain implemented and verified in
+code/browser rather than duplicated as extra Figma frames.

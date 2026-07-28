@@ -209,7 +209,8 @@ function issuePage(briefing) {
         <section class="story-section"><p class="section-step">01 · Background</p><h3>背景</h3><p>${escapeHtml(story.background)}</p></section>
         <section class="story-section happened-block"><p class="section-step">02 · Event</p><h3>事件</h3><p>${escapeHtml(story.happened)}</p></section>
         <section class="story-section background-block"><p class="section-step">03 · Details</p><h3>细节</h3><ul>${story.facts.map((fact) => `<li>${escapeHtml(fact)}</li>`).join("")}</ul></section>
-        <section class="story-section why-block"><p class="section-step">04 · Analysis</p><h3>分析</h3><p>${escapeHtml(story.whyItMatters)}</p><aside class="story-source-register"><a data-analytics-event="source_opened" data-analytics-target="${escapeHtml(`${briefing.date}:${storyIndex + 1}:analysis`)}" href="${escapeHtml(story.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(story.sourceName)}｜${escapeHtml(story.title)} ↗</a><small class="source-url">${escapeHtml(story.sourceDate)} · 点开即可阅读原文</small></aside></section>
+        <section class="story-section analysis-block"><p class="section-step">04 · Analysis</p><h3>分析</h3><p>${escapeHtml(story.whyItMatters)}</p></section>
+        <aside class="story-source-link"><a data-analytics-event="source_opened" data-analytics-target="${escapeHtml(`${briefing.date}:${storyIndex + 1}:analysis`)}" href="${escapeHtml(story.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(story.sourceName)}｜${escapeHtml(story.title)} ↗</a><small class="source-url">${escapeHtml(story.sourceDate)} · 点开即可阅读原文</small></aside>
       </div>
       <a class="back-to-top" href="#content">回到本期顶部 ↑</a>
     </article>`).join("");

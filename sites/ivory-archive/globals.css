@@ -442,7 +442,7 @@ body { font-size: 18px; }
 }
 .background-block ul { padding-left: 24px; }
 .background-block li + li { margin-top: 12px; }
-.why-block { background: rgba(124,40,56,.045); padding-inline: 32px; }
+.analysis-block { padding-bottom: 30px; }
 .evidence-block::before,
 .reflection-block::before { background: var(--forest); }
 .reflection-block {
@@ -522,17 +522,19 @@ body { font-size: 18px; }
   font-size: 14px;
   line-height: 1.6;
 }
-.story-source-register {
-  margin-top: 42px;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  padding: 30px;
+.story-source-link {
+  max-width: 780px;
+  margin: 0 0 42px;
+  font-size: 15px;
 }
-.story-source-register dl { margin: 0; }
-.story-source-register dl > div { display: grid; grid-template-columns: 90px 1fr; gap: 20px; padding: 12px 0; border-top: 1px dotted var(--warm-gray); }
-.story-source-register dt { color: var(--muted); font-size: 14px; }
-.story-source-register dd { margin: 0; font-size: 16px; line-height: 1.7; }
-.story-source-register > a { display: inline-block; margin-top: 18px; color: var(--forest); font-weight: 700; }
+.story-source-link > a {
+  display: inline;
+  border-bottom: 1px solid currentColor;
+  color: var(--forest);
+  font-weight: 700;
+  line-height: 1.8;
+}
+.story-source-link > a:hover { color: var(--burgundy); }
 .source-url { display: block; margin-top: 12px; color: var(--muted); overflow-wrap: anywhere; line-height: 1.6; }
 
 .issue-synthesis { padding-block: 80px; border-block: 1px solid var(--burgundy); text-align: center; }
@@ -570,14 +572,13 @@ body { font-size: 18px; }
   .story-section h3 { font-size: 27px; }
   .story-section > p:not(.section-step):not(.evidence-boundary):not(.interpretation-note),
   .story-section > ul { font-size: 18px; line-height: 1.9; }
-  .why-block { margin-inline: -18px; padding-inline: 18px; }
+  .analysis-block { padding-bottom: 26px; }
   .reflection-block { padding: 28px 20px; }
   .information-form li,
   .information-relationship dl > div { grid-template-columns: 1fr; gap: 6px; }
   .information-timeline li,
   .information-process li { padding-left: 24px; }
-  .story-source-register { padding: 24px 20px; }
-  .story-source-register dl > div { grid-template-columns: 66px 1fr; gap: 12px; }
+  .story-source-link { margin-bottom: 36px; }
   .issue-navigation { display: block; padding-bottom: 72px; }
   .issue-navigation a { margin-top: 32px; }
   .issue-navigation a:last-child { text-align: left; }
@@ -591,6 +592,5 @@ body { font-size: 18px; }
   .briefing-title-column h1 { font-size: 34px; }
   .long-story-header h2 { font-size: 28px; }
   .long-story-image { height: 210px; }
-  .story-source-register dl > div { display: block; }
-  .story-source-register dd { margin-top: 4px; }
+  .story-source-link { font-size: 14px; }
 }

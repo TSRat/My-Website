@@ -25,6 +25,7 @@ test("IVORY briefing source satisfies the shared content contract", async () => 
   const briefings = await readBriefings();
   const dates = new Set();
   const issueNumbers = new Set();
+  let storyCount = 0;
   assert.ok(briefings.length > 0);
 
   for (const briefing of briefings) {
@@ -41,6 +42,7 @@ test("IVORY briefing source satisfies the shared content contract", async () => 
     issueNumbers.add(briefing.issueNo);
 
     for (const story of briefing.stories) {
+      storyCount += 1;
       assert.match(story.sourceUrl, /^https?:\/\//);
       assert.match(story.image, /^\/story-images\/[^/]+$/);
       assert.ok(story.imageAlt.trim());
@@ -50,7 +52,16 @@ test("IVORY briefing source satisfies the shared content contract", async () => 
       assert.ok(story.background.trim());
       assert.doesNotMatch(story.background, /^(他|她|其|这位|该)/);
       assert.ok(story.happened.trim());
+      assert.ok(
+        (story.happened.match(/[。！？.!?]/g) ?? []).length >= 2,
+        `${story.title} needs a readable event summary with at least two complete sentences`,
+      );
       assert.ok(story.whyItMatters.trim());
+      assert.ok(
+        story.whyItMatters.length >= 70
+          && (story.whyItMatters.match(/[。！？.!?]/g) ?? []).length >= 2,
+        `${story.title} needs an analysis that derives a conclusion and then extends it`,
+      );
       assert.ok(story.sourceName.trim());
       assert.ok(story.sourceDate.trim());
       assert.ok(!("analysis" in story));
@@ -59,9 +70,32 @@ test("IVORY briefing source satisfies the shared content contract", async () => 
       assert.ok(!("sourceType" in story));
       assert.ok(!("informationForm" in story));
       assert.ok(story.facts.length >= 3, `${story.title} needs at least three key details`);
+      for (const fact of story.facts) {
+        assert.match(
+          fact,
+          /[。！？.!?]$/,
+          `${story.title} has a detail without terminal punctuation: ${fact}`,
+        );
+        assert.doesNotMatch(
+          fact,
+          /；/,
+          `${story.title} must split unrelated detail statements into separate bullets`,
+        );
+      }
       await access(join(root, "public", story.image));
     }
   }
+  assert.equal(storyCount, 75, "the beginner-readable contract must cover all 75 stories");
+
+  const stories = briefings.flatMap((briefing) => briefing.stories);
+  const policeStudy = stories.find((story) => story.title.includes("460 万次拦停"));
+  assert.match(policeStudy.happened, /24%.*20%/);
+  assert.match(policeStudy.whyItMatters, /违禁品.*几乎相同/);
+
+  const dreamStudy = stories.find((story) => story.title.includes("3,700 份文本"));
+  assert.ok(dreamStudy.facts.some((fact) => fact.includes("COVID-19")));
+  assert.ok(dreamStudy.facts.some((fact) => fact.includes("DOI")));
+  assert.ok(!dreamStudy.facts.some((fact) => fact.includes("COVID-19") && fact.includes("DOI")));
 });
 
 test("dynamic and Pages home renderers expose the same current briefing data", async () => {
@@ -114,8 +148,10 @@ test("dynamic and Pages home renderers expose the same current briefing data", a
     assert.equal((issueHtml.match(/<h3>事件<\/h3>/g) ?? []).length, 5);
     assert.equal((issueHtml.match(/<h3>细节<\/h3>/g) ?? []).length, 5);
     assert.equal((issueHtml.match(/<h3>分析<\/h3>/g) ?? []).length, 5);
+    assert.equal((issueHtml.match(/class="story-source-link"/g) ?? []).length, 5);
     assert.doesNotMatch(issueHtml, /<h3>发生了什么<\/h3>|<h3>这件事为什么重要<\/h3>|<h3>记住这几个细节<\/h3>/);
     assert.doesNotMatch(issueHtml, /source-link-primary/);
+    assert.doesNotMatch(issueHtml, /why-block|story-source-register/);
     assert.doesNotMatch(issueHtml, /证据与边界|反思与练习|不是来源中的直接事实|这份来源不能单独证明什么/);
 
     for (const story of briefing.stories) {
@@ -146,6 +182,11 @@ test("dynamic and Pages home renderers expose the same current briefing data", a
       assert.ok(
         issueHtml.indexOf(sourceHref) > issueHtml.indexOf(encodedAnalysis),
         `Pages issue ${briefing.date} must place the source after analysis for ${story.title}`,
+      );
+      const analysisClose = issueHtml.indexOf("</section>", issueHtml.indexOf(encodedAnalysis));
+      assert.ok(
+        analysisClose > issueHtml.indexOf(encodedAnalysis) && analysisClose < issueHtml.indexOf(sourceHref),
+        `Pages issue ${briefing.date} must keep the source outside the analysis section for ${story.title}`,
       );
     }
   }

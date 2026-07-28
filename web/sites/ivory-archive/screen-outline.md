@@ -76,10 +76,15 @@ Every story uses exactly this order:
 1. plain headline and one-sentence summary, with no source link;
 2. **背景** — fully introduce the unfamiliar person, institution, work, or
    concept as though the reader has not read the headline or issue intro;
-3. **事件** — name who did what, where, and when;
-4. **细节** — list key dates, numbers, works, places, and process;
-5. **分析** — explain the concrete consequence or significance;
-6. one link after analysis, named
+3. **事件** — name who did what, where, and when, and include the main effect
+   or research result instead of stopping at “a study was conducted”;
+4. **细节** — use punctuated bullet points for the method, sample, dates,
+   numbers, works, places, findings, and process; unrelated facts belong in
+   separate bullets rather than one semicolon-linked sentence;
+5. **分析** — first derive a conclusion from the preceding evidence or
+   comparison, then extend it to the larger consequence in at least one more
+   complete sentence;
+6. one plain link after and visually outside the analysis section, named
    `<source organization>｜<descriptive story title>`.
 
 The first body mention may not replace an unfamiliar name with “他”, “她”,

@@ -119,23 +119,23 @@ export default async function BriefingPage({ params }: { params: Promise<{ date:
                   <ul>{story.facts.map((fact) => <li key={fact}>{fact}</li>)}</ul>
                 </section>
 
-                <section className="story-section why-block">
+                <section className="story-section analysis-block">
                   <p className="section-step">04 · Analysis</p>
                   <h3>分析</h3>
                   <p>{story.whyItMatters}</p>
-                  <aside className="story-source-register">
-                    <a
-                      data-analytics-event="source_opened"
-                      data-analytics-target={`${briefing.date}:${index + 1}:analysis`}
-                      href={story.sourceUrl}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      {story.sourceName}｜{story.title} <span aria-hidden="true">↗</span>
-                    </a>
-                    <small className="source-url">{story.sourceDate} · 点开即可阅读原文</small>
-                  </aside>
                 </section>
+                <aside className="story-source-link">
+                  <a
+                    data-analytics-event="source_opened"
+                    data-analytics-target={`${briefing.date}:${index + 1}:analysis`}
+                    href={story.sourceUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    {story.sourceName}｜{story.title} <span aria-hidden="true">↗</span>
+                  </a>
+                  <small className="source-url">{story.sourceDate} · 点开即可阅读原文</small>
+                </aside>
               </div>
               <a className="back-to-top" href="#briefing-content">回到本期顶部 ↑</a>
             </article>

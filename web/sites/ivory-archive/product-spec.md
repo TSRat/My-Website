@@ -29,9 +29,11 @@ Story changes:
 - beginner-facing `title`;
 - `background` introduces every unfamiliar person, institution, work, or idea
   without treating the title, summary, or issue intro as prior teaching;
-- `happened` states the event;
-- `facts` provides the key dates, numbers, works, places, and process in one list;
-- `whyItMatters` gives one concrete analysis of why the event matters;
+- `happened` states the event and its main effect or research result;
+- `facts` provides methods, samples, dates, numbers, works, findings, places,
+  and process as punctuated bullets, with unrelated facts split apart;
+- `whyItMatters` first derives a conclusion from those details and then extends
+  the conclusion to a wider consequence in a second complete sentence;
 - `sourceName`, `sourceDate`, and `sourceUrl` support a descriptive article
   link without a separate source register.
 
@@ -43,7 +45,8 @@ depends on that contract.
 - Keep the existing public routes and legacy redirects.
 - Add a visible “阅读方法” destination to global navigation.
 - Remove source links from story headers.
-- After analysis, expose exactly one directly clickable link named
+- After and visually outside analysis, expose exactly one directly clickable
+  plain link named
   `<source organization>｜<descriptive story title>`.
 - Add a five-line quick read before the long stories.
 - Add previous/next issue links derived from array position.

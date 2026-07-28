@@ -13,10 +13,17 @@
 
 - 为 15 期、75 则报道逐篇新增独立 `background`，先解释人物是谁、
   机构做什么、概念是什么意思，避免以“他 / 她 / 其 / 这位 / 该”开头。
+- 全部 75 则报道重新执行同一内容合同，而不是只修正警务与梦境两个
+  示例：`事件` 必须概括事件效果或研究主要结果；`细节` 的 320 条信息
+  全部改为带句末标点的项目符号，不用分号硬连无关事实；`分析` 必须先
+  从细节中的数字、比较、作品或方法推出结论，再用下一句说明更大影响。
+- 其中 39 则原本只有一句判断或缺少细节回扣的分析已逐篇重写；测试现在
+  强制核验全部 75 则事件与分析，而不是只对两个示例作断言。
 - React 与 Pages 详情页统一为“背景 / 事件 / 细节 / 分析”；原有事实、
   日期、图片与来源 URL 保留。
 - 标题下方的原文入口已删除；每则只在“分析”正文之后保留一个可点击
-  原文链接，链接名称由来源机构与报道标题组成。
+  原文链接，链接名称由来源机构与报道标题组成。分析与来源链接不再置于
+  同一个红色卡片或边框容器中。
 - Brassaï 条目补充本名、生卒年、迁居巴黎、摄影集《Paris de nuit》
   及夜间摄影特点，并把标题改为更能概括人物与事件的名称。
 - 首页、归档搜索、页脚说明、静态渲染器、测试和产品 / 视觉 / 排版 /
@@ -34,11 +41,15 @@
 - `node --test tests/ivory-renderer-parity.test.mjs`: passed, 3/3.
 - `npm run lint`: 0 errors; 24 unchanged warnings from Enheduanna/Hypatia.
 - `git diff --check`: passed.
-- Content audit: 75/75 stories have non-empty backgrounds; none begins with a
-  contextless Chinese pronoun.
-- Browser smoke: 1440×900, 1024×768, 768×1024, 390×844 and 320×720 all show
-  five stories with exactly four sections and one external source link per
-  story; no header source link or horizontal overflow.
+- Content audit: 75/75 stories have non-empty backgrounds; all 75 event
+  summaries contain at least two complete sentences; all 75 analyses contain
+  at least two complete sentences and pass the evidence-to-conclusion rule;
+  all 320 detail bullets end in sentence punctuation and contain no Chinese
+  semicolon.
+- Browser smoke at 1280×720: five stories each show exactly `背景 / 事件 /
+  细节 / 分析`; all rendered detail bullets end in punctuation; each analysis
+  is transparent and followed by one source link outside the section; no
+  header source link or horizontal overflow.
 - Figma desktop issue, mobile issue and homepage screenshots inspected.
 - Antigravity extended route, interaction, accessibility and visual-regression
   QA: pending.
@@ -55,12 +66,12 @@
 ### Delivery state
 
 - Branch: `codex/ivory-beginner-rebuild`.
-- Latest commit: this four-part implementation and handoff update.
+- Latest commit: pending for this all-story content-contract correction.
 - Pull Request: <https://github.com/TSRat/My-Website/pull/31>.
 - Owner-only preview:
   <https://tsrat-ivory-migration-preview.tsrat.chatgpt.site>.
-- The preview is redeployed from this branch head and smoke-checked before
-  final handoff.
+- The current owner-only preview still points to the preceding branch version;
+  redeploy from the correction commit before final handoff.
 - Merge remains unauthorized and has not been performed.
 - Worktree is clean after the delivery commit.
 
