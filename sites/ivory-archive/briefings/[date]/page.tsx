@@ -1,8 +1,67 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { BriefingStory } from "../../briefings";
 import { briefings } from "../../briefings";
 import { SiteFooter, SiteHeader } from "../../site-shell";
+
+const formLabels: Record<BriefingStory["informationForm"], string> = {
+  timeline: "时间线",
+  comparison: "对照表",
+  process: "过程",
+  relationship: "关系",
+  evidence: "证据卡",
+};
+
+function InformationForm({ story }: { story: BriefingStory }) {
+  const items = story.facts.slice(2);
+  const facts = items.length ? items : story.facts;
+
+  if (story.informationForm === "comparison") {
+    return (
+      <div className="information-form information-comparison">
+        <p className="information-form-label">信息形式 · {formLabels[story.informationForm]}</p>
+        <div className="table-scroll" tabIndex={0} role="region" aria-label={`${story.title} 对照表`}>
+          <table>
+            <thead><tr><th scope="col">对照项</th><th scope="col">来源中可以确认的内容</th></tr></thead>
+            <tbody>
+              {facts.map((fact, index) => (
+                <tr key={fact}><th scope="row">{String(index + 1).padStart(2, "0")}</th><td>{fact}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    );
+  }
+
+  if (story.informationForm === "relationship") {
+    return (
+      <div className="information-form information-relationship">
+        <p className="information-form-label">信息形式 · {formLabels[story.informationForm]}</p>
+        <dl>
+          {facts.map((fact, index) => (
+            <div key={fact}><dt>关系 {index + 1}</dt><dd>{fact}</dd></div>
+          ))}
+        </dl>
+      </div>
+    );
+  }
+
+  return (
+    <div className={`information-form information-${story.informationForm}`}>
+      <p className="information-form-label">信息形式 · {formLabels[story.informationForm]}</p>
+      <ol>
+        {facts.map((fact, index) => (
+          <li key={fact}>
+            <span>{story.informationForm === "timeline" ? `节点 ${index + 1}` : story.informationForm === "process" ? `步骤 ${index + 1}` : `证据 ${index + 1}`}</span>
+            <p>{fact}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
 
 export function generateStaticParams() {
   return briefings.map((briefing) => ({ date: briefing.date }));
@@ -10,9 +69,13 @@ export function generateStaticParams() {
 
 export default async function BriefingPage({ params }: { params: Promise<{ date: string }> }) {
   const { date } = await params;
-  const briefing = briefings.find((item) => item.date === date);
+  const briefingIndex = briefings.findIndex((item) => item.date === date);
+  const briefing = briefings[briefingIndex];
 
   if (!briefing) notFound();
+
+  const newer = briefingIndex > 0 ? briefings[briefingIndex - 1] : null;
+  const older = briefingIndex < briefings.length - 1 ? briefings[briefingIndex + 1] : null;
 
   return (
     <div className="site-shell briefing-page">
@@ -28,7 +91,7 @@ export default async function BriefingPage({ params }: { params: Promise<{ date:
             <div className="mini-stamp">IVORY<br />ARCHIVE</div>
           </div>
           <div className="briefing-title-column">
-            <p className="hero-kicker">今日主题</p>
+            <p className="hero-kicker">本期要理解的事</p>
             <h1>{briefing.theme}</h1>
             <p>{briefing.intro}</p>
             <div className="briefing-topic-row">
@@ -49,6 +112,29 @@ export default async function BriefingPage({ params }: { params: Promise<{ date:
           </aside>
         </header>
 
+        <section className="issue-quick-read page-frame" aria-labelledby="quick-read-title">
+          <div>
+            <p className="eyebrow">3-Minute Brief</p>
+            <h2 id="quick-read-title">先用三分钟掌握本期</h2>
+            <p>{briefing.learningGoal}</p>
+          </div>
+          <ol>
+            {briefing.stories.map((story, index) => (
+              <li key={story.title}>
+                <a href={`#story-${index + 1}`}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{story.title}</strong>
+                  <p>{story.summary}</p>
+                </a>
+              </li>
+            ))}
+          </ol>
+          <aside>
+            <p className="eyebrow">五则怎样连在一起</p>
+            <p>{briefing.connection}</p>
+          </aside>
+        </section>
+
         <div className="briefing-stories page-frame">
           {briefing.stories.map((story, index) => (
             <article className="long-story" id={`story-${index + 1}`} key={story.title}>
@@ -58,6 +144,16 @@ export default async function BriefingPage({ params }: { params: Promise<{ date:
                   <span className="topic-tag">{story.category}</span>
                   <h2>{story.title}</h2>
                   <p>{story.summary}</p>
+                  <a
+                    className="source-link-primary"
+                    data-analytics-event="source_opened"
+                    data-analytics-target={`${briefing.date}:${index + 1}`}
+                    href={story.sourceUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    先看原始来源：{story.sourceName} <span aria-hidden="true">↗</span>
+                  </a>
                 </div>
               </header>
 
@@ -68,33 +164,67 @@ export default async function BriefingPage({ params }: { params: Promise<{ date:
                   fill
                   sizes="(max-width: 760px) 100vw, 1060px"
                   unoptimized
-                  loading="eager"
+                  loading="lazy"
                 />
                 <figcaption>{story.imageCredit}</figcaption>
               </figure>
 
-              <div className="story-content-grid">
-                <div className="story-prose">
-                  <section>
-                    <h3>发生了什么</h3>
-                    <p>{story.happened}</p>
-                  </section>
-                  <section>
-                    <h3>为什么重要</h3>
-                    <p>{story.importance}</p>
-                  </section>
-                  <section className="creator-angle">
-                    <h3>可创作角度</h3>
-                    <p>{story.creatorAngle}</p>
-                  </section>
-                </div>
-                <aside className="fact-file">
-                  <p className="eyebrow">Fact File</p>
-                  <ul>{story.facts.map((fact) => <li key={fact}>{fact}</li>)}</ul>
-                  <a href={story.sourceUrl} rel="noreferrer" target="_blank">
-                    查看来源：{story.sourceName} <span aria-hidden="true">↗</span>
+              <div className="story-learning-flow">
+                <section className="story-section happened-block">
+                  <p className="section-step">01 · What</p>
+                  <h3>发生了什么</h3>
+                  <p>{story.happened}</p>
+                </section>
+
+                <section className="story-section background-block">
+                  <p className="section-step">02 · Context</p>
+                  <h3>先补上背景</h3>
+                  <ul>{story.facts.slice(0, 2).map((fact) => <li key={fact}>{fact}</li>)}</ul>
+                </section>
+
+                <section className="story-section why-block">
+                  <p className="section-step">03 · Why</p>
+                  <h3>为什么值得关注</h3>
+                  <p>{story.whyItMatters}</p>
+                </section>
+
+                <section className="story-section evidence-block">
+                  <p className="section-step">04 · Evidence</p>
+                  <h3>证据与边界</h3>
+                  <InformationForm story={story} />
+                  <p className="evidence-boundary"><strong>这份来源不能单独证明什么：</strong>{story.evidenceBoundary}</p>
+                </section>
+
+                <section className="story-section analysis-block">
+                  <p className="section-step">05 · Analysis</p>
+                  <h3>分析</h3>
+                  <p>{story.analysis}</p>
+                  <p className="interpretation-note">这一段是 Ivory Archive 的编辑分析，不是来源中的直接事实。</p>
+                </section>
+
+                <section className="story-section reflection-block">
+                  <p className="section-step">06 · Reflect</p>
+                  <h3>反思与练习</h3>
+                  <p>{story.reflection}</p>
+                </section>
+
+                <aside className="story-source-register" aria-label={`${story.title} 来源登记`}>
+                  <p className="eyebrow">Source Register</p>
+                  <dl>
+                    <div><dt>来源</dt><dd>{story.sourceName}</dd></div>
+                    <div><dt>类型</dt><dd>{story.sourceType}</dd></div>
+                    <div><dt>日期</dt><dd>{story.sourceDate}</dd></div>
+                  </dl>
+                  <a
+                    data-analytics-event="source_opened"
+                    data-analytics-target={`${briefing.date}:${index + 1}:register`}
+                    href={story.sourceUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    打开原始来源 <span aria-hidden="true">↗</span>
                   </a>
-                  <small>{story.sourceDate}</small>
+                  <small className="source-url">{story.sourceUrl}</small>
                 </aside>
               </div>
               <a className="back-to-top" href="#briefing-content">回到本期顶部 ↑</a>
@@ -102,14 +232,20 @@ export default async function BriefingPage({ params }: { params: Promise<{ date:
           ))}
         </div>
 
-        <section className="issue-end page-frame">
-          <p className="eyebrow">End of Issue No. {briefing.issueNo}</p>
-          <h2>今天先读到这里，明天再为档案增加五条新线索。</h2>
-          <div>
-            <Link className="button button-primary" href="/#archive">返回全部日刊</Link>
-            <Link className="button button-secondary" href="/#method">查看去重方法</Link>
-          </div>
+        <section className="issue-synthesis page-frame">
+          <p className="eyebrow">Issue Synthesis</p>
+          <h2>读完五则之后，记住这一条连接</h2>
+          <p>{briefing.connection}</p>
         </section>
+
+        <nav className="issue-navigation page-frame" aria-label="前后期刊">
+          {older ? (
+            <Link href={`/briefings/${older.date}`}><span>← 上一期</span><strong>第 {older.issueNo} 期 · {older.theme}</strong></Link>
+          ) : <span />}
+          {newer ? (
+            <Link href={`/briefings/${newer.date}`}><span>下一期 →</span><strong>第 {newer.issueNo} 期 · {newer.theme}</strong></Link>
+          ) : <Link href="/#archive"><span>已到最新一期</span><strong>返回全部日刊</strong></Link>}
+        </nav>
       </main>
       <SiteFooter />
     </div>

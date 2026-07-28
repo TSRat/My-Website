@@ -25,6 +25,7 @@ test("IVORY briefing source satisfies the shared content contract", async () => 
   const briefings = await readBriefings();
   const dates = new Set();
   const issueNumbers = new Set();
+  const informationForms = new Set(["timeline", "comparison", "process", "relationship", "evidence"]);
 
   assert.ok(briefings.length > 0);
 
@@ -32,6 +33,10 @@ test("IVORY briefing source satisfies the shared content contract", async () => 
     assert.match(briefing.date, /^\d{4}-\d{2}-\d{2}$/);
     assert.equal(briefing.stories.length, 5, `${briefing.date} must contain exactly five stories`);
     assert.equal(briefing.uniqueCount, briefing.stories.length);
+    assert.ok(briefing.theme.trim());
+    assert.ok(briefing.intro.trim());
+    assert.ok(briefing.learningGoal.trim());
+    assert.ok(briefing.connection.trim());
     assert.ok(!dates.has(briefing.date), `duplicate date: ${briefing.date}`);
     assert.ok(!issueNumbers.has(briefing.issueNo), `duplicate issue number: ${briefing.issueNo}`);
     dates.add(briefing.date);
@@ -42,6 +47,18 @@ test("IVORY briefing source satisfies the shared content contract", async () => 
       assert.match(story.image, /^\/story-images\/[^/]+$/);
       assert.ok(story.imageAlt.trim());
       assert.ok(story.imageCredit.trim());
+      assert.ok(story.title.trim());
+      assert.ok(story.summary.trim());
+      assert.ok(story.happened.trim());
+      assert.ok(story.whyItMatters.trim());
+      assert.ok(story.analysis.trim());
+      assert.ok(story.reflection.trim());
+      assert.ok(story.evidenceBoundary.trim());
+      assert.ok(story.sourceName.trim());
+      assert.ok(story.sourceType.trim());
+      assert.ok(story.sourceDate.trim());
+      assert.ok(informationForms.has(story.informationForm), `invalid information form: ${story.informationForm}`);
+      assert.ok(story.facts.length >= 3, `${story.title} needs enough facts for context and evidence`);
       await access(join(root, "public", story.image));
     }
   }
@@ -86,9 +103,26 @@ test("dynamic and Pages home renderers expose the same current briefing data", a
   }
 
   for (const briefing of briefings) {
-    await access(join(root, "docs/IVORY-ARCHIVE/briefings", briefing.date, "index.html"));
+    const issuePath = join(root, "docs/IVORY-ARCHIVE/briefings", briefing.date, "index.html");
+    await access(issuePath);
+    const issueHtml = await readFile(issuePath, "utf8");
     assert.ok(dynamicHtml.includes(briefing.theme), `dynamic archive is missing ${briefing.date}`);
     assert.ok(staticHtml.includes(briefing.theme), `Pages archive is missing ${briefing.date}`);
+    assert.ok(issueHtml.includes(briefing.learningGoal), `Pages issue is missing learning goal: ${briefing.date}`);
+    assert.ok(issueHtml.includes(briefing.connection), `Pages issue is missing connection: ${briefing.date}`);
+
+    for (const story of briefing.stories) {
+      for (const value of [
+        story.title,
+        story.whyItMatters,
+        story.analysis,
+        story.reflection,
+        story.evidenceBoundary,
+        story.sourceUrl,
+      ]) {
+        assert.ok(issueHtml.includes(value.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("'", "&#039;")), `Pages issue ${briefing.date} is missing ${value}`);
+      }
+    }
   }
 });
 
@@ -104,5 +138,6 @@ test("IVORY analytics manifest stays provider-neutral and privacy-safe", async (
   assert.equal(manifest.analytics.persistentStorage, false);
   assert.equal(manifest.analytics.identity, false);
   assert.equal(manifest.analytics.rawSearchText, false);
+  assert.ok(manifest.analytics.events.includes("source_opened"));
   assert.doesNotMatch(adapter, /\b(fetch|XMLHttpRequest|localStorage|sessionStorage|document\.cookie)\b/);
 });

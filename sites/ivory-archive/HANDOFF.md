@@ -1,5 +1,55 @@
 # IVORY ARCHIVE handoff
 
+## 2026-07-28 · Beginner-first complete archive rebuild
+
+### Current target
+
+重写全部现有期刊，让从未听说过事件、也没有学过相关领域的读者能按“事情、背景、原因、证据、分析、反思”完全理解，并保留每则原始新闻或原始资料链接。
+
+### Completed
+
+- 第 01—15 期全部改为更具代表性的主题名称；仍为 15 期、75 则，不虚构不存在的第 16 期。
+- 75 则标题改为先说清具体事件；原有事实、限定语、来源、日期、图片和 credit 保留。
+- 每期新增学习目标、五则连接和三分钟摘要。
+- 每则新增 `whyItMatters`、`analysis`、`reflection`、`evidenceBoundary`、`sourceType` 与 `informationForm`。
+- React 与 Pages 静态渲染器同步为固定初学者顺序，并提供时间线、对照表、过程、关系和证据卡。
+- 原始来源链接同时位于故事导语后与来源登记，`source_opened` 保持 provider-neutral。
+- Figma 新增 `06 · Beginner Reading System`：桌面首页 `46:50`、桌面期刊/故事 `46:51`、390px 移动流 `46:52`。
+
+### Important decisions
+
+- 内容属于结构调整与表达优化；不删除女性主义立场、制度分析、争议、限定语或来源。
+- `analysis` 明确标为编辑解释；`evidenceBoundary` 明确来源不能单独证明什么。
+- 关键背景不折叠；移动端阅读顺序固定。
+- 旧 `IVORY-ARCHIVE/` 快照仍不是来源，本次不手改或删除。
+
+### Verification
+
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed, 654 local references across 75 HTML/CSS files.
+- `npm run build:ivory`: passed, including Sites artifact validation.
+- `node --test tests/ivory-renderer-parity.test.mjs`: passed, 3/3.
+- `npm run lint`: 0 errors; 24 warnings belong to unchanged Enheduanna/Hypatia files.
+- `git diff --check`: passed.
+- Figma screenshots: desktop home, corrected desktop issue, and 390px mobile inspected.
+- Browser layout gate: 1440×900, 1024×768, 768×1024, 390×844 and 320×568 inspected for home/detail containment; source entry and narrow reading flow visible.
+- Source audit: all 75 source URLs remain present; 58 responded successfully in the automated pass and 17 returned access-controlled 401/403 responses rather than confirmed dead links.
+- Antigravity extended route/interaction/accessibility comparison: pending.
+
+### Modified areas
+
+- content and schema: `briefings.ts`, `CONTENT.md`;
+- React renderer: home, archive explorer, issue route, shell, stylesheet;
+- Pages renderer: generator and stylesheet;
+- privacy-safe analytics manifest/adapter and renderer parity tests;
+- product, screen outline, visual, typography, and Figma handoff documents.
+
+### Current branch
+
+- `codex/ivory-beginner-rebuild`
+- base: `3e4e753aad62920453398d41a766f9e625bd4d2e`
+- merge: not authorized and not performed.
+
 ## 2026-07-25 · Unified maintenance package
 
 - Authoritative maintenance root: `sites/ivory-archive/`.

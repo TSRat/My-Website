@@ -35,10 +35,11 @@ export default function Home() {
 
           <div className="hero-copy">
             <p className="hero-kicker">每日思想简报 · Daily Thought Briefing</p>
-            <h1 id="hero-title">把今天的文化新闻，变成明天的思考素材</h1>
+            <h1 id="hero-title">从“发生了什么”开始，读懂文化与社会新闻</h1>
             <span className="title-stroke" />
             <p className="hero-deck">
-              每天 5 个值得停留的故事，沿着艺术人文、社会科学与女性主义三条线索展开。
+              15 期、75 则新闻都按同一条初学者路径重写：先说明事情，再补背景、解释原因，
+              分开事实与分析，最后留下可以继续思考的问题。
             </p>
             <div className="hero-actions">
               <Link
@@ -197,22 +198,25 @@ export default function Home() {
         <section className="method-section page-frame" id="method" aria-labelledby="method-title">
           <div className="method-title-block">
             <p className="eyebrow">Editorial Method</p>
-            <h2 id="method-title">“不重复”不只是标题不同</h2>
+              <h2 id="method-title">先分清事实、分析与反思</h2>
           </div>
           <div className="method-copy">
             <p>
-              每天发布前，候选内容会与历期的<strong>人物、作品、事件、核心判断和创作角度</strong>逐项比较。
-              同一事件只有出现实质性进展，并能提出新的问题时，才会再次进入简报。
+              每则内容都先给出可核对的<strong>原始来源</strong>，再把编辑解释明确标出。
+              你不需要听说过人物、机构或专业术语，也能沿着固定顺序读完。
             </p>
             <ol>
-              <li><span>1</span>生成 5 条候选内容并核验来源。</li>
-              <li><span>2</span>逐条与全部历史日刊进行语义比对。</li>
-              <li><span>3</span>替换实质重复项，再重新检查一次。</li>
-              <li><span>4</span>发布独立日刊页，并把入口写回首页。</li>
+              <li><span>1</span><strong>发生了什么：</strong>先用普通语言说明事件与参与者。</li>
+              <li><span>2</span><strong>为什么值得关注：</strong>解释它会改变谁、什么制度或哪种理解。</li>
+              <li><span>3</span><strong>证据与边界：</strong>列出来源能证明的内容，也说明不能证明什么。</li>
+              <li><span>4</span><strong>分析与反思：</strong>把编辑判断与事实分开，并给出继续追问的练习。</li>
             </ol>
             <details>
-              <summary>查看首期已登记的历史基线</summary>
-              <p>{knownHistoryTopics.join("；")}。这些主题不会仅靠改写标题再次出现。</p>
+              <summary>查看选题去重方法</summary>
+              <p>
+                发布前会比较历期的人物、作品、事件、核心判断和创作角度。
+                历史基线包括：{knownHistoryTopics.join("；")}。同一事件只有出现实质进展并提出新问题时才会再次进入简报。
+              </p>
             </details>
           </div>
         </section>
@@ -222,11 +226,11 @@ export default function Home() {
             <p className="about-mark" aria-hidden="true">TS鼠</p>
             <div>
               <p className="eyebrow">About This Archive</p>
-              <h2>给好奇心一处可反复回来的房间</h2>
+              <h2>没学过这个领域，也应该能从第一页开始</h2>
             </div>
             <p>
-              这不是信息流，也不是把五条新闻压缩成五个结论。它保留事实、结构与冲突，
-              再为内容创作留下一个可继续追问的入口。
+              这不是默认读者已经懂行的信息流。每期先给三分钟摘要，再用背景、证据、分析和反思逐层展开；
+              原始来源同时放在文章开头与结尾，方便随时核对。
             </p>
           </div>
         </section>
