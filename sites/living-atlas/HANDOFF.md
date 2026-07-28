@@ -1,5 +1,24 @@
 # Handoff: The Living Atlas
 
+## 2026-07-29 · Featured World 人物图尺度回退
+
+### Current target
+
+撤销 PR #30 中把四张人物图强制撑满正方形右栏的处理，恢复克制的人物图
+尺度，同时继续保持马琳切原始比例。
+
+### Correction
+
+- 删除 `.featured-portrait` 的 `width: 100%` 与 `aspect-ratio: 1 / 1`。
+- 四张图改为自然宽高、`object-fit: contain`，桌面最大 `300px`、移动端
+  最大 `240px`，不再填满整个右栏。
+- 本次只修改 Living Atlas 的人物图尺寸规则、对应文档、测试与生成镜像。
+- `npm run build:living-atlas` 与 10 项 Living Atlas 测试通过；
+  本地浏览器中方形人物图为 `300 × 300px`，马琳切为 `216 × 300px`，
+  两者均为 `aspect-ratio: auto`。
+- Branch: `codex/fix-living-atlas-portrait-scale`; Antigravity extended QA
+  pending.
+
 ## 2026-07-29 · Featured World 统一画框
 
 ### Current target

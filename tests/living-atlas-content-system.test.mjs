@@ -266,8 +266,9 @@ test("Living Atlas features all four Daughters of Time stories including Malinch
   assert.match(chinese, /她靠翻译活了下来，历史却把她翻译成了背叛。/);
   assert.match(
     styles,
-    /\.featured-portrait\s*{[^}]*aspect-ratio:\s*1\s*\/\s*1[^}]*object-fit:\s*contain/s,
+    /\.featured-portrait\s*{[^}]*max-width:\s*min\(100%,\s*18\.75rem\)[^}]*max-height:\s*18\.75rem[^}]*object-fit:\s*contain/s,
   );
+  assert.doesNotMatch(styles, /\.featured-portrait\s*{[^}]*aspect-ratio:/s);
   assert.doesNotMatch(styles, /\.malinche-portrait\s*{[^}]*max-height:/s);
   assert.deepEqual(
     [...portrait.subarray(0, 8)],

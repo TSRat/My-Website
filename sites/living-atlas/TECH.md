@@ -22,9 +22,10 @@ Primary files:
   `hypatia-sketch-transparent.webp` and real-page thumbnails for the two
   migrated philosophy guides; it also contains the creator-provided
   `who-are-you-the-who.mp3` background track
-- All four Featured World images use the shared `1:1`
-  `.featured-portrait` frame with `object-fit: contain`, so carousel geometry
-  stays consistent without distorting or cropping the source art.
+- All four Featured World images share the same bounded
+  `.featured-portrait` treatment: `300px` maximum on desktop and `240px` on
+  mobile, with `object-fit: contain`. Images keep their natural aspect ratios
+  and are not enlarged to fill the whole right column.
 - The `003` Featured World slide reuses
   `../LA-MALINCHE/assets/malinche-cutout.png` from the generated sibling
   mirror. The source asset remains authoritative in
