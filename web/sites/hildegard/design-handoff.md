@@ -1,9 +1,13 @@
 # Hildegard 设计交接
 
+## 2026-07-29 · Header counter restoration
+
+- The sticky header again shows the synchronized current page at top-right; each folio keeps its own top-right page number.
+
 ## 2026-07-29 · Creator correction
 
 - Treat the implementation on `codex/hildegard-reading-cleanup` as the current reference for reading chrome.
-- Give every folio one page number in its own top-right corner; omit a sticky-header counter, subchapter numbers, plate numbers and bottom previous / next navigation.
+- Give every folio one page number in its own top-right corner; omit subchapter numbers, plate numbers and bottom previous / next navigation. The later header-counter restoration above adds the synchronized sticky-header counter.
 - Use chapter names, not numbers, in the fixed right rail.
 - Preserve the full-width supporting-column title, simplified epistolary hierarchy, top-aligned comparison/marginalia layout and the creator-supplied Afterlife 2/2 avatar.
 

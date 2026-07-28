@@ -16,7 +16,7 @@ The current redesign moves closer to illuminated manuscripts and religious art w
 
 - Every chapter leaf now uses one heading grammar: `章节 · 本页内容`.
 - The page introduction sits directly below the page title; the gold-hairline pull quote closes the page body.
-- The right rail contains nine chapter-name anchors. Every folio carries its own reading-position number at the folio's top-right; the sticky site header and bottom edge contain no page counter or previous / next strip.
+- The right rail contains nine chapter-name anchors. Every folio carries its own reading-position number at the folio's top-right, and the sticky header repeats the current position for persistent orientation; the bottom edge contains no previous / next strip.
 - Desktop marginalia occupies a real grid column and aligns to the top of its paired content.
 - Music page 1/2 uses a full media/text spread instead of leaving the right side empty.
 - Vision pages use ivory body text and gold labels on Visio night; the revised muted text token is `#D9D1BB`.

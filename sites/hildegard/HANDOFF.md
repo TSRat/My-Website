@@ -1,5 +1,13 @@
 # Hildegard handoff
 
+## 2026-07-29 · Header counter restoration
+
+- Restored the synchronized current-page counter at the top-right of the sticky header.
+- Kept the page-owned counter in the top-right of every folio.
+- Kept the right chapter rail in Chinese and left the bottom previous / next strip removed.
+- Bumped the public stylesheet and runtime cache key to `illuminated-leaves-v6`.
+- Creator requested direct publication without additional QA.
+
 ## 2026-07-29 · Page-number clarification
 
 ### Current target
