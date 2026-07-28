@@ -3,7 +3,7 @@
  * Digital folio structure for the Hildegard longform.
  */
 
-@import "./hildegard-tokens.css?v=illuminated-leaves-v4";
+@import "./hildegard-tokens.css?v=illuminated-leaves-v5";
 
 *,
 *::before,
@@ -195,20 +195,6 @@ a:hover {
 .site-header nav a:hover::after,
 .site-header nav a:focus-visible::after {
   transform: scaleX(1);
-}
-
-.header-counter {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 5px;
-  color: var(--color-accent-soft) !important;
-  font-family: var(--type-mono);
-  font-size: 14px;
-}
-
-.header-counter i {
-  opacity: 0.55;
-  font-style: normal;
 }
 
 .nav-toggle {
@@ -641,9 +627,9 @@ main {
 
 .letter-composition {
   display: grid;
-  grid-template-columns: minmax(300px, 0.78fr) minmax(420px, 1.22fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   grid-template-rows: auto auto 1fr;
-  gap: 28px clamp(48px, 5vw, 72px);
+  gap: 28px clamp(40px, 4vw, 64px);
 }
 
 .letter-composition .folio-heading {
@@ -653,10 +639,11 @@ main {
 }
 
 .letter-composition .folio-heading h2 {
-  max-width: 8ch;
+  max-width: none;
   margin-bottom: 18px;
-  font-size: clamp(3rem, 4.8vw, 4.6rem);
+  font-size: clamp(2.75rem, 4vw, 4rem);
   line-height: 1.06;
+  text-wrap: balance;
 }
 
 .letter-composition .folio-heading > p:last-child {
@@ -1516,7 +1503,7 @@ main {
 
 @media (max-width: 900px) {
   .site-header {
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: auto 1fr;
   }
 
   .nav-toggle {
@@ -1579,10 +1566,6 @@ main {
     opacity: 1;
     pointer-events: auto;
     transform: none;
-  }
-
-  .header-counter {
-    justify-self: end;
   }
 
   .portal-grid,
@@ -1841,10 +1824,6 @@ main {
 
   .brand span {
     letter-spacing: 0.02em;
-  }
-
-  .header-counter {
-    font-size: 12px;
   }
 
   .folio,

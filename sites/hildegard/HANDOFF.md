@@ -1,5 +1,34 @@
 # Hildegard handoff
 
+## 2026-07-29 · Page-number clarification
+
+### Current target
+
+Correct the reading chrome to match the creator's clarification: every folio owns its page number in its own top-right corner, the right chapter rail keeps its Chinese labels, and the epistolary title uses the full supporting-column width.
+
+### Completed
+
+- Removed the sticky-header page counter.
+- Restored one compact `00 / 19` through `19 / 19` counter inside the top-right of every folio.
+- Kept the right rail unchanged as nine Chinese chapter names.
+- Removed the desktop `8ch` title cap and balanced the epistolary title across the full supporting column.
+- Bumped the public stylesheet and runtime cache key to `illuminated-leaves-v5`.
+
+### Verification
+
+- `node --check sites/hildegard/assets/hildegard-refresh.js` — passed.
+- `npm run build:hildegard` — passed; source and mirror match.
+- `git diff --check` — passed.
+- Targeted browser smoke at 1024×768 and 1440×900 — 20 folio counters, zero sticky-header counters, zero horizontal overflow.
+- The epistolary title renders on one line at 1024×768; the right rail remains the nine Chinese chapter names at 1440×900.
+- Antigravity owns extended QA.
+
+### Publication state
+
+- Branch: `codex/hildegard-reading-cleanup`.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/33>.
+- Updated exact-commit preview: pending push.
+
 ## 2026-07-29 · Reading chrome and Afterlife correction
 
 ### Current target

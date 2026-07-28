@@ -2,9 +2,9 @@
 
 ## 2026-07-29 · Reading-chrome correction
 
-- The shipped implementation is the current reference for this corrective pass: page-level numbering is removed everywhere except the top-right global counter, and the bottom previous / next strip is removed.
+- The shipped implementation is the current reference for this corrective pass: each folio owns one top-right page number, while the sticky header and bottom edge carry no page number or previous / next strip.
 - The fixed rail now presents chapter names only.
-- The epistolary prologue has one dominant quotation panel; the title, introduction and Frederick portrait form a quieter supporting column.
+- The epistolary prologue has one dominant quotation panel; the title uses the full supporting-column width, with the introduction and Frederick portrait below.
 - The comparison cards align to the top of their marginalia column.
 - Afterlife 2/2 uses the creator-supplied square Hildegard avatar. The earlier plant image in the Figma frame is superseded.
 
