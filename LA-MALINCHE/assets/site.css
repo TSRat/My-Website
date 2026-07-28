@@ -984,6 +984,9 @@ p { line-height: 1.85; }
 .site-footer p { margin: 0; color: var(--gold); font-size: .68rem; letter-spacing: .12em; }
 .site-footer strong { font-family: var(--serif); }
 .site-footer a { justify-self: end; font-size: .72rem; }
+.footer-series { display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem .8rem; margin-top: .65rem; }
+.footer-series a { justify-self: auto; border-bottom: 1px solid rgba(232, 215, 173, .36); padding-bottom: .2rem; color: var(--bone); text-decoration: none; }
+.footer-series a[aria-current="page"] { color: var(--gold); border-bottom-color: var(--gold); }
 
 /* reveal is additive: the page remains legible before and without JS */
 [data-reveal] { opacity: 1; transform: none; }
@@ -1226,6 +1229,7 @@ p { line-height: 1.85; }
   .site-footer { grid-template-columns: 1fr; gap: 1rem; text-align: center; }
   .footer-logo { justify-self: center; width: 9rem; }
   .site-footer a { justify-self: center; }
+  .footer-series { justify-content: center; }
 }
 
 @media (max-width: 560px) {

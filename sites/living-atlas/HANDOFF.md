@@ -1,5 +1,95 @@
 # Handoff: The Living Atlas
 
+## 2026-07-29 · Featured World 统一画框
+
+### Current target
+
+修复马琳切轮播图比其他三期更高的问题，同时保留透明人物图的原始比例。
+
+### Cause and correction
+
+- 前一版给希帕蒂娅、希尔德加德和恩赫杜安娜各自写了 `1:1` 画框，却给
+  马琳切单独设置 `1065 / 1476` 纵向高度和桌面 / 移动最大高度，所以人物
+  本身没有变形，轮播卡片的占位高度却不一致。
+- 现在四期全部使用共享 `.featured-portrait` 方形画框；画框统一高度，
+  图片内容继续 `object-fit: contain`。马琳切仍保留原始比例、透明背景和
+  底部对齐，没有拉伸或裁切。
+
+### Verification and delivery
+
+- 桌面 `1440 × 900`：希帕蒂娅和马琳切画框均为
+  `389.67 × 389.67px`。
+- 移动 `390 × 844`：马琳切画框为 `335 × 335px`，页面
+  `scrollWidth 375 ≤ innerWidth 390`。
+- 中英文四期均使用共享 class；透明图完整加载。
+- Targeted tests: passed — 13/13；Living Atlas build、Pages build、
+  650-reference Pages validation 和 11-site structure validation 均通过。
+- Branch: `codex/sync-malinche-series`; implementation: `333063b`;
+  PR: <https://github.com/TSRat/My-Website/pull/30>.
+- Exact preview:
+  <https://raw.githack.com/TSRat/My-Website/333063b/THE-LIVING-ATLAS/zh.html>.
+- Antigravity extended QA pending; merge not authorized.
+
+## 2026-07-28 · La Malinche Featured World sync
+
+### Current target
+
+把已经发布并登记的 `时间的女儿 · 003` 真正加入首页人物轮播，同时让四个
+人物专题的系列入口彼此完整可达。
+
+### Completed
+
+- 英文与中文 Featured World 从三张扩展到四张，顺序为
+  `001 → 002 → 003 → 004`。
+- 马琳切卡采用一句话：
+  `她靠翻译活了下来，历史却把她翻译成了背叛。`
+- 直接复用 `LA-MALINCHE/assets/malinche-cutout.png`，没有复制视频封面，
+  也没有给透明人物图强制正方形比例。
+- 四个专题站各自采用原有视觉语言补齐系列页脚；Living Atlas 本身的
+  Ivory、Ink、Stone、Cobalt 与 12 栏结构不变。
+
+### Responsibility and failure gate
+
+- Primary: Creative hub; secondary: information discovery.
+- Unacceptable failure: `003` 在注册表可见却无法从 Featured World 抵达，
+  人物图丢失透明度或比例，或跨站导航把四个专题的视觉身份压成同一模板。
+
+### Verification
+
+- Targeted source tests: Passed — 18/18.
+- Full repository tests after the application build: Passed — 32/32.
+- Five site builds: Passed.
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed — 650 local references across 76 HTML/CSS
+  files.
+- `npm run validate:sites`: Passed — 11 packages.
+- `npm run lint`: Passed with 0 errors and 24 pre-existing warnings in the
+  Enheduanna `<img>` elements and preserved Hypatia bundle.
+- Browser basic smoke: English desktop `1440 × 900` and Chinese
+  `390 × 844`; four slides, no broken image, no horizontal overflow.
+- Malinche image rendered at the same `1065 / 1476` ratio on desktop and
+  mobile.
+- Antigravity extended cross-browser, keyboard, and visual-regression QA:
+  pending.
+
+### Modified files
+
+- `sites/living-atlas/{index.html,zh.html,style.css,CONTENT.md,DESIGN.md,TECH.md,HANDOFF.md}`
+- generated `THE-LIVING-ATLAS/` mirror
+- cross-site footer sources and generated mirrors for Hypatia, Hildegard,
+  La Malinche, and Enheduanna
+- `tests/living-atlas-content-system.test.mjs`
+- `tests/daughters-of-time-navigation.test.mjs`
+
+### Git state
+
+- Branch: `codex/sync-malinche-series`.
+- Implementation commit: `c6de2ba4fced321ebf26fd9cd57c89616149ec0e`.
+- Exact Living Atlas preview:
+  <https://raw.githack.com/TSRat/My-Website/c6de2ba4fced321ebf26fd9cd57c89616149ec0e/THE-LIVING-ATLAS/zh.html>.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/30>.
+- Merge: not authorized and not performed.
+
 ## 2026-07-25 · Unified maintenance package
 
 - Authoritative maintenance root: `sites/living-atlas/`.

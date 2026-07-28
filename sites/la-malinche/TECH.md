@@ -65,8 +65,9 @@ The shared direct-static builder copies deployable source into `.site-build/la-m
 - Automated layout smoke counts all 52 scenes, checks image load state and
   document overflow, and flags display / copy collisions and one- or
   two-character display-title endings.
-- The two legacy cover WebPs remain in the source archive but are not referenced
-  by HTML, CSS, configuration, or the Living Atlas.
+- `cover-green.webp` is referenced only by `site.config.json` for the generated
+  parent Website Archive card. It is not referenced by La Malinche HTML / CSS
+  or the Living Atlas carousel. `cover-red.webp` remains unreferenced.
 - The two Malinche Bilibili videos are embedded with the official player; neither
   iframe autoplays.
 

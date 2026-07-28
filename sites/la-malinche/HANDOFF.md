@@ -1,5 +1,33 @@
 # La Malinche handoff
 
+## 2026-07-29 · Website Archive 封面
+
+- 按创作者本次明确要求，根网站档案馆中的 La Malinche 卡片改用
+  `assets/cover-green.webp`，即素材库
+  `Women Story/Malinche/封面2.png` 的现有优化版本。
+- 该封面只用于父级 Website Archive 卡片；La Malinche 正文与 Living
+  Atlas Featured World 继续使用透明 `malinche-cutout.png`。
+- `site.config.json` 是总入口卡片的权威来源；`docs/` 仍由 Pages 构建
+  生成，没有手工维护。
+- Source / maintenance tests 13/13、Malinche build、完整 Pages build、
+  650-reference asset validation 和 11-site validation 均通过。
+- 浏览器确认总入口实际加载 `LA-MALINCHE/assets/cover-green.webp`
+  （自然尺寸 `2560 × 1440`），卡片内使用既有 `object-fit: cover`。
+- Branch: `codex/sync-malinche-series`; implementation: `333063b`;
+  PR: <https://github.com/TSRat/My-Website/pull/30>.
+- Antigravity extended QA pending; merge not authorized.
+
+## 2026-07-28 · 时间的女儿系列入口同步
+
+- 在现有黑底 / 金字页脚中加入 `001–004` 系列导航，003 当前篇使用金色
+  下划线与 `aria-current="page"`。
+- 保留顶部与底部 TSRat 标识、52 屏正文和返回 The Living Atlas；
+  没有改动首屏人物图、视频或历史内容。
+- `npm run build:malinche`、组合 Pages 构建和资产校验均通过。
+- 浏览器在 `390 × 844` 下确认四期链接分两行排布、当前篇清楚、无横向
+  溢出。
+- Branch: `codex/sync-malinche-series`; Antigravity extended QA pending.
+
 - Project: `马琳切：谁背叛了背叛者？`
 - Series: `时间的女儿 · 003`
 - Branch: `codex/site-la-malinche`

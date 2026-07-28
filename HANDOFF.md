@@ -1,5 +1,102 @@
 # Repository handoff
 
+## 2026-07-29: Malinche archive cover and carousel-frame correction
+
+### Current target
+
+Use the creator's formal Malinche cover on the parent Website Archive card and
+make the La Malinche Featured World slide occupy the same image frame as the
+other three `Daughters of Time` entries.
+
+### Completed
+
+- The La Malinche root card now reads `assets/cover-green.webp`, the existing
+  optimized derivative of `Women Story/Malinche/封面2.png`.
+- The cover is limited to the parent Website Archive card. The Malinche article
+  and Living Atlas carousel continue to use the transparent cut-out.
+- Living Atlas English and Chinese now place all four portraits in one shared
+  square `.featured-portrait` frame with `object-fit: contain`.
+- Removed Malinche-only desktop and mobile maximum-height rules. The source
+  figure keeps its `1065 × 1476` proportion and bottom alignment without
+  stretching or cropping.
+- Updated source, generated Living Atlas mirror, asset documentation, and
+  targeted tests. The full Pages build's unrelated Next.js mirror churn was
+  removed from the review scope.
+
+### Verification
+
+- Targeted source / maintenance tests: passed — 13/13.
+- `npm run build:living-atlas`: passed.
+- `npm run build:malinche`: passed.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed — 650 local references across 76 HTML/CSS
+  files.
+- `npm run validate:sites`: passed — 11 packages.
+- Browser basic smoke:
+  - root archive loaded the `2560 × 1440` green cover in the Malinche card;
+  - Living Atlas desktop measured Hypatia and Malinche at the same
+    `389.67 × 389.67px` frame;
+  - Living Atlas `390 × 844` measured Malinche at `335 × 335px`;
+  - the transparent figure remained `contain`, and no horizontal overflow was
+    found.
+- Antigravity extended cross-browser and visual-regression QA: pending.
+
+### Git state
+
+- Branch: `codex/sync-malinche-series`.
+- Implementation commit: `333063b`.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/30>.
+- Exact Living Atlas preview:
+  <https://raw.githack.com/TSRat/My-Website/333063b/THE-LIVING-ATLAS/zh.html>.
+- The generated root archive was smoke-checked locally; it has no independently
+  committed `docs/` preview because `docs/` is the ignored Pages artifact.
+- Merge: not authorized and not performed.
+
+## 2026-07-28: Daughters of Time 003 cross-site sync
+
+### Current target
+
+Synchronize the published La Malinche story into the portfolio interfaces:
+Living Atlas Featured World plus the footer series navigation of all four
+`Daughters of Time` sites.
+
+### Completed
+
+- Living Atlas English / Chinese carousel now contains all four stories in
+  chronological series order.
+- Added the approved short Malinche line and reused the real transparent
+  cut-out at its intrinsic ratio.
+- Added identity-preserving cross-story navigation to Hypatia, Hildegard,
+  La Malinche, and Enheduanna.
+- Updated source packages, generated mirrors, targeted regression tests, and
+  every affected site handoff.
+- The Figma sources remain the existing Living Atlas content-system frame,
+  historical-site frame, and La Malinche V5; this was a small synchronization
+  of established components, not a new visual direction.
+
+### Verification
+
+- Targeted tests: Passed — 18/18.
+- Full repository tests after `npm run build`: Passed — 32/32.
+- Five site builds: Passed.
+- `npm run build:pages`: Passed.
+- `npm run validate:pages`: Passed — 650 references across 76 HTML/CSS files.
+- `npm run validate:sites`: Passed — 11 packages.
+- `npm run lint`: Passed with 0 errors and 24 pre-existing warnings.
+- Browser basic smoke: Living Atlas `1440 × 900` and `390 × 844`; four site
+  footers at `390 × 844`; no broken primary assets or horizontal overflow.
+- Antigravity extended QA: pending.
+
+### Git state
+
+- Branch: `codex/sync-malinche-series`.
+- Implementation commit: `c6de2ba4fced321ebf26fd9cd57c89616149ec0e`.
+- Exact Living Atlas preview:
+  <https://raw.githack.com/TSRat/My-Website/c6de2ba4fced321ebf26fd9cd57c89616149ec0e/THE-LIVING-ATLAS/zh.html>.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/30>.
+- Merge: not authorized and not performed.
+- The unrelated dirty main worktree remained untouched.
+
 ## 2026-07-28: La Malinche approved 52-screen chronology
 
 ### Current target

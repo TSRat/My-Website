@@ -441,10 +441,23 @@ main section {
   margin-top: 2rem;
 }
 
+.featured-portrait {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  object-position: center;
+}
+
 .hypatia-portrait {
   mix-blend-mode: multiply;
   filter: grayscale(1) contrast(1.32) brightness(1.06);
   opacity: 0.96;
+}
+
+.malinche-portrait {
+  object-position: center bottom;
+  filter: grayscale(1) contrast(1.06);
 }
 
 /* 04 Worlds Bento */

@@ -123,9 +123,13 @@ The ending must remain morally double:
   the repository, displayed in the fixed header and closing footer.
 - `assets/maps/*.webp`: WebP derivatives of the supplied `Own Map` files from
   `Women Story/Malinche`.
-- `assets/cover-green.webp` and `assets/cover-red.webp`: retained as source
-  archive files but intentionally unreferenced by the page. Video-cover imagery
-  appears only inside the two direct Bilibili players.
+- `assets/cover-green.webp`: web-optimized derivative of the creator's
+  `Women Story/Malinche/封面2.png`. By the creator's 2026-07-29 direction it is
+  used only as the La Malinche card image on the parent Website Archive; the
+  La Malinche page and Living Atlas Featured World do not reuse it.
+- `assets/cover-red.webp`: retained as an unreferenced source-archive
+  derivative. Video-cover imagery otherwise remains confined to the two direct
+  Bilibili players.
 - `assets/archive/codex-azcatitlan.webp`: `Codex azcatitlan222.jpg`, Gallica /
   Wikimedia Commons, Public Domain.
 - `assets/archive/malinche-tlaxcala.webp`: `Malinche Tlaxcala.jpg`, late
