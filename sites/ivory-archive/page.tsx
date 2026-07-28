@@ -35,7 +35,9 @@ export default function Home() {
 
           <div className="hero-copy">
             <p className="hero-kicker">每日思想简报 · Daily Thought Briefing</p>
-            <h1 id="hero-title">先认识人物与概念，再读懂文化与社会新闻</h1>
+            <h1 id="hero-title">
+              先认识人物与概念，再读懂文化与<span className="no-break">社会新闻</span>
+            </h1>
             <span className="title-stroke" />
             <p className="hero-deck">
               15 期、75 则新闻都按同一条初学者路径重写：先补足背景，再说明事件，

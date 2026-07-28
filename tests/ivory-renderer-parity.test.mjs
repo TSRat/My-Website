@@ -102,6 +102,9 @@ test("dynamic and Pages home renderers expose the same current briefing data", a
   const briefings = await readBriefings();
   const latest = briefings[0];
   const staticHtml = await readFile(join(root, "docs/IVORY-ARCHIVE/index.html"), "utf8");
+  const dynamicHomeSource = await readFile(join(root, "sites/ivory-archive/page.tsx"), "utf8");
+  const dynamicCss = await readFile(join(root, "sites/ivory-archive/globals.css"), "utf8");
+  const staticCss = await readFile(join(root, "scripts/github-pages.css"), "utf8");
 
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("ivory-parity", `${process.pid}-${Date.now()}`);
@@ -125,6 +128,10 @@ test("dynamic and Pages home renderers expose the same current briefing data", a
   assert.match(staticHtml, /id="data"/);
   assert.match(staticHtml, /ivory-site-manifest\.json/);
   assert.match(staticHtml, /ivory-analytics\.js/);
+  assert.match(dynamicHomeSource, /className="no-break">社会新闻<\/span>/);
+  assert.match(staticHtml, /class="no-break">社会新闻<\/span>/);
+  assert.match(dynamicCss, /\.no-break\s*\{\s*white-space:\s*nowrap/);
+  assert.match(staticCss, /\.no-break\{white-space:nowrap\}/);
 
   for (const value of [
     latest.displayDate,

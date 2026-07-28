@@ -50,7 +50,9 @@ Scale: `4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96`.
 High-visibility Chinese text uses balanced/pretty wrapping and strict line
 breaking. One- or two-character final lines fail on H1–H3, card titles,
 captions, and CTA labels. Short protected phrases may use a scoped no-break
-span only after verification at 320 px.
+span only after verification at 320 px. The homepage H1 keeps the final
+four-character phrase `社会新闻` together so the last character cannot become
+an isolated line.
 
 ## QA matrix
 
