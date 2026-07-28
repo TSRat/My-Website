@@ -49,6 +49,11 @@ test("La Malinche keeps the 52-screen beginner-first editorial and evidence cont
   assert.match(html, /moctezuma-mendoza\.webp/);
   assert.match(html, /cortes-weiditz\.webp/);
   assert.match(html, /cholula-pyramid\.webp/);
+  assert.match(html, /triple-alliance-map-zh\.svg/);
+  assert.match(html, /codex-borbonicus-calendar\.webp/);
+  assert.match(html, /cantino-planisphere\.webp/);
+  assert.match(html, /columbus-landing\.webp/);
+  assert.match(html, /alliance-route/);
   assert.equal((html.match(/assets\/tsrat-logo\.png/g) ?? []).length, 2);
   assert.match(html, /中部美洲 · 城邦林立/);
   assert.match(html, /三国同盟 · 贡赋圈/);
@@ -66,6 +71,7 @@ test("La Malinche keeps the 52-screen beginner-first editorial and evidence cont
   assert.match(html, /水、粮食、道路与时间/);
   assert.match(html, /瓜乌特莫克被俘/);
   assert.doesNotMatch(`${html}\n${js}`, /波通昌/);
+  assert.doesNotMatch(html, /页面从中部美洲|接下来补上她刚刚听懂的背景/);
   assert.doesNotMatch(`${html}\n${css}\n${configText}\n${registry}`, /cover-(?:green|red)\.webp/);
   assert.doesNotMatch(html, /创作者提供|创作者解释性地图|并非十六世纪|不是马琳切的历史肖像/);
   assert.match(css, /prefers-reduced-motion/);
@@ -91,6 +97,10 @@ test("La Malinche source assets and generated mirror are complete", async () => 
     "sites/la-malinche/assets/archive/tlaxcala-map.webp",
     "sites/la-malinche/assets/archive/moctezuma-mendoza.webp",
     "sites/la-malinche/assets/archive/cortes-weiditz.webp",
+    "sites/la-malinche/assets/archive/triple-alliance-map-zh.svg",
+    "sites/la-malinche/assets/archive/codex-borbonicus-calendar.webp",
+    "sites/la-malinche/assets/archive/cantino-planisphere.webp",
+    "sites/la-malinche/assets/archive/columbus-landing.webp",
     "sites/la-malinche/assets/creator/isabella-castile.webp",
     "sites/la-malinche/assets/creator/ferdinand-aragon.webp",
     "sites/la-malinche/assets/creator/scuttle-fleet.webp",

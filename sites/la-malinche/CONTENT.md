@@ -150,6 +150,21 @@ The ending must remain morally double:
   is not labelled as a realist portrait.
 - `assets/archive/cortes-weiditz.webp`: Christoph Weiditz’s 1529 depiction of
   Hernán Cortés, Wikimedia Commons, Public Domain.
+- `assets/archive/triple-alliance-map-zh.svg`: simplified-Chinese map of the
+  Triple Alliance tributary provinces and neighboring polities around 1519,
+  derived by Y814756748 from Sémhur’s sourced map, Wikimedia Commons,
+  CC BY-SA 4.0. It replaces the creator route graphic that did not depict the
+  Triple Alliance.
+- `assets/archive/codex-borbonicus-calendar.webp`: WebP derivative of page 13
+  of the Codex Borbonicus, a sixteenth-century sacred-calendar image,
+  Wikimedia Commons, Public Domain.
+- `assets/archive/cantino-planisphere.webp`: resized WebP derivative of the
+  1502 Cantino planisphere by an anonymous Portuguese cartographer,
+  Biblioteca Estense Universitaria / Wikimedia Commons, Public Domain.
+- `assets/archive/columbus-landing.webp`: resized WebP derivative of John
+  Vanderlyn’s 1847 painting `Landing of Columbus`, Wikimedia Commons, Public
+  Domain. Its caption explicitly identifies it as a nineteenth-century
+  historical imagining rather than an eyewitness record.
 - `assets/creator/isabella-castile.webp`,
   `assets/creator/ferdinand-aragon.webp`,
   `assets/creator/reconquista-painting.webp`, and

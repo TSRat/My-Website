@@ -18,7 +18,7 @@ change with the historical argument.
 - Tlaxcala and Cholula each use two deliberately different screens: context
   first, event and evidence second.
 - The Spanish background uses three different structures: an Iberian portrait /
-  history-painting field, Atlantic-navigation typography, a colony-system
+  history-painting field, a full-height 1502 sea chart, a colony-system
   explanation, and a four-part expedition ledger.
 - Chapter 2 ends in the reader's existing jade / ochre world. A torn horizontal
   seam then introduces the Spanish chapter's red, navy, cream, and gold system;
@@ -33,6 +33,10 @@ change with the historical argument.
 - The Moctezuma–Malinche–Cortés encounter is a portrait triptych, not oversized
   decorative names behind a narrow text box.
 - Translation is represented by opposing language fields and a stable gold seam.
+- The religion scene is an image-and-ledger composition rather than a right-side
+  four-card grid; the Tlaxcala alliance scene is a continuous route ending in a
+  full-width outcome field. These two structures prevent empty space from being
+  filled with undersized card copy.
 - Route maps use a dark console; the 1524 map becomes a full-screen atlas table.
 - The `Malinchismo` section becomes fully red after the black video theater.
 - Video-cover imagery is confined to the embedded players.
