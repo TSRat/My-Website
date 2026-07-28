@@ -66,12 +66,14 @@
 ### Delivery state
 
 - Branch: `codex/ivory-beginner-rebuild`.
-- Latest commit: pending for this all-story content-contract correction.
+- Content correction commit: `fed79a1`.
 - Pull Request: <https://github.com/TSRat/My-Website/pull/31>.
 - Owner-only preview:
   <https://tsrat-ivory-migration-preview.tsrat.chatgpt.site>.
-- The current owner-only preview still points to the preceding branch version;
-  redeploy from the correction commit before final handoff.
+- Owner-only Sites version 8 was built from `fed79a1`, deployed successfully,
+  and browser-smoke-checked on issue 15: all five stories show the four-part
+  order; Analysis has no card background; every source link sits after and
+  outside Analysis; the new Brassaï and police-analysis copy is present.
 - Merge remains unauthorized and has not been performed.
 - Worktree is clean after the delivery commit.
 
