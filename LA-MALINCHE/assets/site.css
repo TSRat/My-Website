@@ -13,6 +13,7 @@
   --line: rgba(17, 16, 13, 0.3);
   --display-gap: clamp(2.35rem, 4vw, 4.75rem);
   --copy-gap: clamp(1.45rem, 2.4vw, 2.7rem);
+  --scene-caption-size: clamp(1rem, 1.2vw, 1.16rem);
   --scene-pad: clamp(7.5rem, 10vw, 10.5rem);
   --sans: "Noto Sans SC", "PingFang SC", sans-serif;
   --serif: "Noto Serif SC", "Songti SC", serif;
@@ -131,7 +132,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   align-items: center;
   gap: .8rem;
   margin: 0 0 1.5rem;
-  font-size: .7rem;
+  font-size: var(--scene-caption-size);
   font-weight: 700;
   letter-spacing: .15em;
   text-transform: uppercase;
@@ -417,7 +418,7 @@ p { line-height: 1.85; }
 .route-console { min-height: 108svh; background: #1b342f; color: var(--bone); }
 .route-copy { position: absolute; z-index: 2; top: 13%; left: 5%; width: 34%; }
 .route-copy h3 { color: var(--gold); font-size: clamp(2.3rem, 3.6vw, 3.7rem); }
-.route-copy p { font-size: .9rem; }
+.route-copy p:not(.eyebrow) { font-size: .9rem; }
 .map-chooser { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 2rem; }
 .map-chooser button { border: 1px solid var(--bone); background: transparent; color: inherit; cursor: pointer; padding: .65rem .8rem; font-size: .7rem; }
 .map-chooser button[aria-pressed="true"] { background: var(--gold); color: var(--ink); }
@@ -533,7 +534,7 @@ p { line-height: 1.85; }
 .threshold-rip { position: absolute; z-index: 1; left: calc(44% - 45px); top: 0; width: 90px; height: 100%; background: var(--bone); clip-path: polygon(45% 0, 83% 8%, 42% 19%, 75% 31%, 34% 45%, 73% 58%, 39% 70%, 79% 84%, 45% 100%, 0 100%, 0 0); }
 .threshold-spain { align-self: center; padding: 8rem 7vw 7rem 9vw; }
 .threshold-spain h2 { color: var(--gold); font-size: clamp(3.2rem, 5vw, 5.6rem); }
-.threshold-spain p { max-width: 760px; font-size: clamp(1.02rem, 1.3vw, 1.2rem); line-height: 1.9; }
+.threshold-spain p:not(.eyebrow) { max-width: 760px; font-size: clamp(1.02rem, 1.3vw, 1.2rem); line-height: 1.9; }
 
 /* 23–30 — Spanish archive chapter */
 .navigation-age { display: grid; grid-template-columns: 56% 44%; min-height: 108svh; background: var(--blue); color: var(--bone); }
@@ -547,7 +548,7 @@ p { line-height: 1.85; }
 .navigation-chart figcaption { position: absolute; inset: auto 1rem 1rem; max-width: calc(100% - 2rem); padding: .55rem .75rem; background: rgba(17,16,13,.88); }
 .navigation-copy { position: relative; z-index: 1; align-self: center; padding: 8rem 5vw 7rem; }
 .navigation-copy h2 { color: var(--gold); font-size: clamp(3.5rem, 4.8vw, 5.6rem); }
-.navigation-copy > p:not(.navigation-terms) { max-width: 680px; font-size: clamp(1rem, 1.2vw, 1.16rem); line-height: 1.85; }
+.navigation-copy > p:not(.navigation-terms, .eyebrow) { max-width: 680px; font-size: clamp(1rem, 1.2vw, 1.16rem); line-height: 1.85; }
 .navigation-terms { display: grid; gap: 0; margin: var(--display-gap) 0 0; border-top: 1px solid rgba(244,236,220,.55); }
 .navigation-terms span { display: grid; grid-template-columns: 110px 1fr; gap: 1.2rem; padding: 1.2rem 0; border-bottom: 1px solid rgba(244,236,220,.35); }
 .navigation-terms b { color: var(--gold); font-family: var(--serif); font-size: 1.25rem; }

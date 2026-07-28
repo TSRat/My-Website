@@ -45,6 +45,9 @@ change with the historical argument.
 - Display headings use authored line breaks at wide viewports. No line may be
   left with only one or two Chinese characters; display-to-body spacing is
   governed by `--display-gap` and `--copy-gap`.
+- Every numbered scene caption uses the responsive size established by `23 ·
+  十五世纪 · 欧洲走向远洋`; scene-specific paragraph rules must not shrink or
+  enlarge that shared hierarchy.
 - Evidence labels stay adjacent to claims.
 
 ## Components

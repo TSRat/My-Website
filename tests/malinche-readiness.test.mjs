@@ -74,6 +74,10 @@ test("La Malinche keeps the 52-screen beginner-first editorial and evidence cont
   assert.doesNotMatch(html, /页面从中部美洲|接下来补上她刚刚听懂的背景/);
   assert.doesNotMatch(`${html}\n${css}\n${configText}\n${registry}`, /cover-(?:green|red)\.webp/);
   assert.doesNotMatch(html, /创作者提供|创作者解释性地图|并非十六世纪|不是马琳切的历史肖像/);
+  assert.match(css, /--scene-caption-size:\s*clamp\(1rem,\s*1\.2vw,\s*1\.16rem\)/);
+  assert.match(css, /\.route-copy p:not\(\.eyebrow\)/);
+  assert.match(css, /\.threshold-spain p:not\(\.eyebrow\)/);
+  assert.match(css, /\.navigation-copy > p:not\(\.navigation-terms,\s*\.eyebrow\)/);
   assert.match(css, /prefers-reduced-motion/);
   assert.match(css, /:focus-visible/);
   assert.match(js, /aria-pressed/);
