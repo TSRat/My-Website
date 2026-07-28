@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Creative Site to PR"
+  short_description: "Build a memorable creative site from an approved storyboard"
+  default_prompt: "Use $build-creative-site-to-pr to approve a creative experience storyboard for initial production, or apply the bounded creator-correction loop to an approved site while preserving asset roles and checking shared-component consumers, then deliver the scoped source, mirror, preview, and pull request."

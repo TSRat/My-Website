@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Information Site to PR"
+  short_description: "Build a plain-language site from an approved outline"
+  default_prompt: "Use $build-information-site-to-pr to approve a beginner outline for initial production, or apply the bounded creator-correction loop while preserving terminology, narrative horizon, asset roles, and shared-component scope, then deliver readable source, synchronized mirror, preview, and pull request."

@@ -1,5 +1,58 @@
 # Repository handoff
 
+## 2026-07-29: Website skill suite correction lessons
+
+### Current target
+
+Carry the creator's five-skill website workflow split into a clean branch and
+encode the reusable lessons from the La Malinche build and its correction
+passes without collapsing Creative, Information, Service, Beginner Audit, and
+Portfolio Normalization into one generic process.
+
+### Completed
+
+- Replaced the former general `build-new-site-to-pr` package with the creator's
+  three responsibility-specific build skills plus `audit-beginner-content`.
+- Preserved `normalize-web-portfolio` as the cross-site migration workflow and
+  connected major rebuilds to the relevant responsibility-specific skill.
+- Added explicit asset-role and reuse-restriction ledgers. Hero art, archive
+  covers, video posters, directly displayed video, maps, evidence imagery,
+  portraits, logos, and motifs are no longer assumed interchangeable.
+- Added a public-copy boundary that keeps palette notes, screen counts, layout
+  rationales, asset plans, and other production narration out of visitor-facing
+  content.
+- Added four-level media inspection: intrinsic asset, wrapper, rendered media
+  box, and visible content after fitting, positioning, clipping, or masking.
+- Added shared-consumer inventories before modifying selectors, tokens,
+  components, registries, generators, or templates, with target-specific rules
+  preferred for target-specific defects.
+- Added Information and Beginner Audit rules for terminology consistency,
+  narrative viewpoint, prerequisite chronology, meaningful whitespace, and
+  promoting essential events or explanations out of metadata-sized text.
+- Added Creative guidance for controlled screen-to-screen variation while
+  retaining a coherent authored system, and Service guidance for checking
+  shared corrections across every affected route and state.
+- Updated all five `agents/openai.yaml` prompts to expose the new checks.
+
+### Verification
+
+- Skill structural validation: passed for all five packages with the
+  `skill-creator` `quick_validate.py` script. `PyYAML` was installed only in
+  `/private/tmp/codex-skill-validator` for the validator and did not change
+  repository dependencies.
+- Repository diff checks: passed — `git diff --check`; final staged scope and
+  status recorded in the Pull Request.
+- Website build, browser smoke, and Preview: not applicable because this change
+  modifies only repository-local skill documentation and metadata.
+
+### Git state
+
+- Branch: `codex/refresh-website-skills`.
+- Base: `03dfa90` (`origin/main` at branch creation).
+- The unrelated dirty `codex/zhangyong-content-rebuild` worktree was not
+  modified, stashed, or included.
+- Commit, push, and Pull Request: pending.
+
 ## 2026-07-29: Malinche archive cover and carousel-frame correction
 
 ### Current target
