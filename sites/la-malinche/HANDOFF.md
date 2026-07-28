@@ -6,7 +6,7 @@
 - Figma V5: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=16-2>
 - Pull Request: <https://github.com/TSRat/My-Website/pull/28>
 - Verified exact-implementation preview:
-  <https://raw.githack.com/TSRat/My-Website/6ebda79f398f50c303506a7dab652740a6ddec1d/LA-MALINCHE/index.html>
+  <https://raw.githack.com/TSRat/My-Website/b18a62d/LA-MALINCHE/index.html>
 
 ## Current goal
 
@@ -15,7 +15,9 @@ the established visual rebuild. Preserve Malintzin's available perspective
 through Chapter 2, make the Chapter 2 → 3 shift unmistakable, expand the Spanish
 background, and give Tlaxcala and Cholula enough independent explanation. The
 current revision specifically replaces undersized card copy, an incorrect map,
-visible production notes, and repeated right-side four-card compositions.
+visible production notes, repeated right-side four-card compositions, and the
+inconsistent scene-caption sizes that were overriding the hierarchy established
+by `23 · 十五世纪 · 欧洲走向远洋`.
 
 ## Completed
 
@@ -54,6 +56,10 @@ visible production notes, and repeated right-side four-card compositions.
   qualified 1847 history painting.
 - Rebuilt `32` as a continuous conflict-to-alliance route with a full-width
   outcome field; the prior right-side four-card matrix no longer exists.
+- Standardized all 50 visible `.eyebrow` captions to the responsive type size
+  established by scene `23`: `18.56px / 34.336px` at the checked
+  `1782 × 864` viewport and `16px / 29.6px` at `390 × 844`. Scene-specific
+  paragraph selectors no longer shrink `11` or enlarge `22`.
 
 ## Important decisions
 
@@ -68,6 +74,9 @@ visible production notes, and repeated right-side four-card compositions.
 - Large empty fields now carry either a primary visual, monumental type, or
   readable explanatory copy. Small card typography is not used as a substitute
   for information hierarchy on `07`, `17`, `23`, or `32`.
+- Scene captions share one responsive size token; their number boxes, labels,
+  spacing, and letter spacing retain the scene-23 hierarchy throughout the
+  editorial sequence.
 - No video-cover reuse, autoplay, external analytics, persistence, deployment
   architecture change, automatic merge, or content-position rewrite.
 
@@ -106,6 +115,11 @@ visible production notes, and repeated right-side four-card compositions.
 - Current Chrome `390 × 844` smoke covered `07` and `32`; all seven revised
   scenes (`06`, `07`, `17`, `22`, `23`, `25`, `32`) stayed within the 375 px
   layout viewport.
+- Current exact-preview browser smoke measured all 50 visible captions:
+  desktop returned one `18.56px` size and one `34.336px` line height; mobile
+  returned one `16px` size and one `29.6px` line height. No caption overflow,
+  document-level overflow, or broken loaded image was found. The longest `47`
+  caption wraps to two lines on mobile.
 - The exact implementation preview above is the recorded visual target; the
   following handoff-only commit does not alter the published mirror.
 - Antigravity extended multi-browser, keyboard, full-route, and visual
@@ -126,9 +140,13 @@ visible production notes, and repeated right-side four-card compositions.
 - 52-screen implementation: `697dd53878cfd93ee59211558ed2c255f85f9718`
 - Visual hierarchy and evidence revision:
   `6ebda79f398f50c303506a7dab652740a6ddec1d`.
-- Merge: not authorized and not performed.
+- Scene-caption hierarchy revision:
+  `b18a62d`.
+- Merge: explicitly authorized by the creator for PR #28 on 2026-07-28; no
+  additional confirmation is required for this delivery.
 
 ## Next step
 
-Review the exact-commit preview and PR #28. Run Antigravity extended QA if a
+Merge PR #28 and verify the existing Pages workflow and live
+`/My-Website/LA-MALINCHE/` page. Antigravity extended QA remains optional if a
 comprehensive overlay, keyboard, multi-browser, and full-route audit is desired.
