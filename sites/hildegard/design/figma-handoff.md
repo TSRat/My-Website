@@ -1,5 +1,13 @@
 # Figma handoff — Viriditas Codex
 
+## 2026-07-29 · Reading-chrome correction
+
+- The shipped implementation is the current reference for this corrective pass: page-level numbering is removed everywhere except the top-right global counter, and the bottom previous / next strip is removed.
+- The fixed rail now presents chapter names only.
+- The epistolary prologue has one dominant quotation panel; the title, introduction and Frederick portrait form a quieter supporting column.
+- The comparison cards align to the top of their marginalia column.
+- Afterlife 2/2 uses the creator-supplied square Hildegard avatar. The earlier plant image in the Figma frame is superseded.
+
 ## 2026-07-29 · Publication correction
 
 - Creator correction restores page introductions directly below their titles and moves pull quotes to the end of each page body.

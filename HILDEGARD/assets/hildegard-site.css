@@ -3,7 +3,7 @@
  * Digital folio structure for the Hildegard longform.
  */
 
-@import "./hildegard-tokens.css?v=illuminated-leaves-v3";
+@import "./hildegard-tokens.css?v=illuminated-leaves-v4";
 
 *,
 *::before,
@@ -224,51 +224,28 @@ a:hover {
   position: fixed;
   z-index: 30;
   top: 50%;
-  right: 16px;
+  right: 10px;
   display: grid;
   gap: 6px;
   transform: translateY(-50%);
 }
 
 .page-rail a {
-  position: relative;
-  display: grid;
+  display: inline-grid;
   place-items: center;
-  width: 34px;
-  height: 28px;
+  min-width: 52px;
+  min-height: 28px;
+  padding: 4px 9px;
   color: var(--color-muted);
   background: color-mix(in srgb, var(--color-page) 86%, transparent);
   border: 1px solid transparent;
   text-decoration: none;
-  font-family: var(--type-mono);
-  font-size: 10px;
+  font-family: var(--type-sans);
+  font-size: 12px;
 }
 
 .page-rail a b {
-  position: absolute;
-  top: 50%;
-  right: 38px;
-  width: max-content;
-  max-width: 190px;
-  padding: 5px 8px;
-  color: var(--color-dark-ink);
-  background: var(--color-primary);
-  border: 1px solid var(--color-accent);
-  font-family: var(--type-sans);
-  font-size: 12px;
   font-weight: 500;
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(8px, -50%);
-  transition:
-    opacity var(--motion-fast) var(--ease-organic),
-    transform var(--motion-fast) var(--ease-organic);
-}
-
-.page-rail a:hover b,
-.page-rail a:focus-visible b {
-  opacity: 1;
-  transform: translate(0, -50%);
 }
 
 .page-rail a.is-active {
@@ -664,9 +641,9 @@ main {
 
 .letter-composition {
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
+  grid-template-columns: minmax(300px, 0.78fr) minmax(420px, 1.22fr);
   grid-template-rows: auto auto 1fr;
-  gap: 32px 80px;
+  gap: 28px clamp(48px, 5vw, 72px);
 }
 
 .letter-composition .folio-heading {
@@ -675,19 +652,34 @@ main {
   margin: 0;
 }
 
+.letter-composition .folio-heading h2 {
+  max-width: 8ch;
+  margin-bottom: 18px;
+  font-size: clamp(3rem, 4.8vw, 4.6rem);
+  line-height: 1.06;
+}
+
+.letter-composition .folio-heading > p:last-child {
+  max-width: 27ch;
+  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+  line-height: 1.7;
+}
+
 .imperial-portrait {
   grid-column: 1;
   grid-row: 2;
   display: grid;
-  grid-template-columns: 148px minmax(0, 1fr);
-  gap: 20px;
-  align-items: end;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
   margin: 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-accent);
 }
 
 .imperial-portrait img {
-  width: 148px;
-  height: 220px;
+  width: 160px;
+  height: 232px;
   object-fit: cover;
   object-position: center top;
   border: 1px solid var(--color-accent);
@@ -716,27 +708,21 @@ main {
   grid-row: 1 / span 3;
   align-self: start;
   margin: 0;
-  padding: clamp(36px, 5vw, 72px);
+  padding: clamp(44px, 5vw, 68px);
   color: var(--color-ink);
   background: var(--color-page);
   border: 1px solid var(--color-accent);
-  box-shadow: 14px 14px 0 color-mix(in srgb, var(--color-dark-page) 44%, transparent);
+  box-shadow: 10px 10px 0 color-mix(in srgb, var(--color-dark-page) 38%, transparent);
 }
 
 .imperial-letter::before {
-  position: absolute;
-  top: 24px;
-  left: 28px;
-  color: var(--color-alert);
-  content: "ℌ";
-  font-family: var(--type-display);
-  font-size: 56px;
+  content: none;
 }
 
 .imperial-letter blockquote {
   margin: 0;
-  font-size: clamp(1.7rem, 3vw, 2.7rem);
-  line-height: 1.62;
+  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+  line-height: 1.58;
 }
 
 .imperial-letter figcaption {
@@ -751,10 +737,10 @@ main {
 .marginal-note {
   grid-column: 1;
   grid-row: 3;
-  align-self: end;
-  padding: 18px 0 0 28px;
+  align-self: start;
+  padding: 18px 0 0;
   border-top: 1px solid var(--color-accent);
-  border-left: 3px solid var(--color-alert);
+  border-left: 0;
   color: var(--color-dark-muted);
   font-size: 15px;
   line-height: 1.7;
@@ -891,10 +877,7 @@ main {
 }
 
 .subchapter-header {
-  display: grid;
-  grid-template-columns: 92px 1fr;
-  gap: 18px;
-  align-items: baseline;
+  display: block;
   margin-bottom: 22px;
   padding-top: 18px;
   border-top: 1px solid var(--color-accent);
@@ -1066,6 +1049,13 @@ main {
   margin: 32px 0;
 }
 
+.folio-frame--with-aside > .chapter-body > .pair:first-child {
+  margin-top: 0;
+}
+
+#screen-19 .chapter-plate {
+  width: min(100%, 640px);
+}
 .pair-card,
 .letter,
 .archive-card {
@@ -1713,6 +1703,12 @@ main {
   .folio-heading h2,
   .chapter-title {
     font-size: clamp(2.25rem, 11vw, 2.75rem);
+  }
+
+  .letter-composition .folio-heading h2 {
+    max-width: none;
+    font-size: clamp(2.6rem, 12vw, 3.1rem);
+    text-wrap: balance;
   }
 
   .chapter-title .cn {

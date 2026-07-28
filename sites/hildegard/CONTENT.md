@@ -19,7 +19,7 @@ Content categories remain explicit:
 - narrative framing
 - visual metaphor / modern reenactment
 
-The creator-supplied `Vision` stills and the modern Lingua Ignota transcription retain precise positive captions. Five traceable images from `Women Story/Hildegard/photo 23.03.17` now appear in the portal, epistolary prologue, music, language and afterlife pages.
+The creator-supplied `Vision` stills and the modern Lingua Ignota transcription retain precise positive captions. Creator-selected images from `Women Story/Hildegard/photo 23.03.17` appear in the portal, epistolary prologue, music, language and afterlife pages; Afterlife 2/2 uses the supplied square Hildegard avatar.
 
 - Last audited: 2026-07-21
 - Project: `时间的女儿 · 002`

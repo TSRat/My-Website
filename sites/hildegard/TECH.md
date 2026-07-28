@@ -4,7 +4,7 @@
 
 `index.html` remains the readable source document. `assets/hildegard-refresh.js` progressively reorganizes chapters 01–08 into 17 folio sections, which combine with the three explicit opening folios for 20 stable `#screen-00` through `#screen-19` anchors.
 
-- With JavaScript: page rail, current-page counter, chapter subcounter, previous / next links and mobile menu are active.
+- With JavaScript: the chapter-name rail, single top-right current-page counter and mobile menu are active. Chapter leaves do not inject repeated folio labels or previous / next controls.
 - Without JavaScript: the original eight-chapter source order, appendices, images and source table remain readable.
 - Initial deep links are realigned after fonts and layout settle so the sticky header does not cover the target.
 - The Bilibili iframe is not present until the reader activates the load button.

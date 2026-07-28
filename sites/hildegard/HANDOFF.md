@@ -1,5 +1,42 @@
 # Hildegard handoff
 
+## 2026-07-29 · Reading chrome and Afterlife correction
+
+### Current target
+
+Apply the creator's final hierarchy, alignment, numbering and imagery corrections, add Malinche to the Daughters of Time footer, and submit an exact-commit preview for review.
+
+### Completed
+
+- Simplified the dark epistolary prologue so the letter quotation is the dominant surface, with the title, introduction and Frederick I portrait grouped in one supporting column.
+- Top-aligned the comparison cards with their marginalia column.
+- Removed repeated folio, chapter, subchapter and plate numbers from the reading surface; only the global counter remains at the top right.
+- Removed the generated previous / next strip from every reading leaf.
+- Changed the fixed right rail and chapter menu to chapter names.
+- Replaced the Afterlife 2/2 image with the creator-supplied square Hildegard avatar and removed the repeated `08B` label.
+- Added the Malinche article to the footer's `Series · 时间的女儿` list.
+- Bumped the public stylesheet and runtime cache key to `illuminated-leaves-v4`.
+
+### Verification
+
+- `node --check sites/hildegard/assets/hildegard-refresh.js` — passed.
+- `npm run build:hildegard` — passed; source and `HILDEGARD/` mirror match.
+- `node --test tests/historical-sites-six-stage.test.mjs` — 2/2 passed.
+- `npm run build:pages` — passed; unrelated generated Next mirror changes were discarded.
+- `npm run validate:pages` — passed, 641 local references across 75 HTML/CSS files.
+- `git diff --check` — passed.
+- Playwright desktop smoke at 1440×900 — no horizontal overflow; the comparison cards and marginalia have the same computed top edge; the letter page has one clear quotation focus.
+- Playwright mobile smoke at 390×844 — no horizontal overflow; the simplified title wraps cleanly and the replacement Afterlife image loads.
+- Structural audit — one global header counter; zero generated folio counters, pagers, subchapter indexes, chapter numerals or numbered plate captions.
+- Local mirror navigation — the Malinche destination returns HTTP 200.
+- Exact-commit preview check — pending push.
+
+### Publication state
+
+- Branch: `codex/hildegard-reading-cleanup`.
+- Pull Request and exact-commit preview: pending.
+- Antigravity extended QA: pending.
+
 ## 2026-07-29 · Publication corrections
 
 ### Current target

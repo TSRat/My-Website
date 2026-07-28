@@ -75,19 +75,15 @@
     }
   };
 
-  function makeHeading(config, page) {
+  function makeHeading(page) {
     const header = document.createElement("header");
     header.className = "folio-heading";
 
-    const rubric = document.createElement("p");
-    rubric.className = "folio-rubric";
-    rubric.textContent = `${config.chapter} · ${page.part} · FOL. ${page.screen}`;
-
     const title = document.createElement("h2");
     title.id = `screen-${page.screen}-title`;
-    title.innerHTML = `<span class="illuminated-initial">${config.chapter}</span> ${page.title}`;
+    title.textContent = page.title;
 
-    header.append(rubric, title);
+    header.append(title);
     return header;
   }
 
@@ -124,7 +120,7 @@
 
       if (index === 0 && glyph) folio.append(glyph);
 
-      const generatedHeading = makeHeading(config, page);
+      const generatedHeading = makeHeading(page);
       generatedHeading.append(makeIntro(page, index === 0 ? lede : null));
       frame.append(generatedHeading);
       folio.setAttribute("aria-labelledby", `screen-${page.screen}-title`);
@@ -166,48 +162,6 @@
   const railLinks = Array.from(document.querySelectorAll(".page-rail a"));
   const headerCurrent = document.querySelector("[data-current-page]");
   const headerCounter = headerCurrent?.closest(".header-counter");
-
-  folios.forEach((folio, index) => {
-    const number = folio.dataset.screen;
-    const counter = document.createElement("div");
-    counter.className = "folio-counter";
-    counter.setAttribute("aria-label", `第 ${Number(number) + 1} 页，共 20 页`);
-    counter.innerHTML = `<strong>${number}</strong><span>/ 19</span><span>·</span><span>${folio.dataset.chapter} · ${folio.dataset.part}</span>`;
-    folio.querySelector(".folio-frame")?.prepend(counter);
-
-    const pager = document.createElement("nav");
-    pager.className = "folio-pager";
-    pager.setAttribute("aria-label", "前后页导航");
-
-    const previous = folios[index - 1];
-    const next = folios[index + 1];
-    if (previous) {
-      const previousLink = document.createElement("a");
-      previousLink.href = `#${previous.id}`;
-      previousLink.textContent = `← ${previous.dataset.screen} ${previous.dataset.title || previous.dataset.part}`;
-      pager.append(previousLink);
-    } else {
-      pager.append(document.createElement("i"));
-    }
-
-    const location = document.createElement("span");
-    location.textContent = `${number} / 19`;
-    pager.append(location);
-
-    if (next) {
-      const nextLink = document.createElement("a");
-      nextLink.href = `#${next.id}`;
-      nextLink.textContent = `${next.dataset.screen} ${next.dataset.title || next.dataset.part} →`;
-      pager.append(nextLink);
-    } else {
-      const appendixLink = document.createElement("a");
-      appendixLink.href = "#watch";
-      appendixLink.textContent = "A1 观看 →";
-      pager.append(appendixLink);
-    }
-
-    folio.querySelector(".folio-frame")?.append(pager);
-  });
 
   const navToggle = document.querySelector(".nav-toggle");
   const chapterNav = document.getElementById("chapter-nav");
