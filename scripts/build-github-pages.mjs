@@ -58,7 +58,6 @@ const escapeHtml = (value = "") => String(value)
   .replaceAll("'", "&#039;");
 
 const storyImageName = (story) => story.image.split("/").at(-1);
-
 function staticSiteCard(site) {
   const art = site.cover
     ? `<div class="card-art" aria-hidden="true"><img src="${escapeHtml(site.slug)}/${escapeHtml(site.cover)}" alt=""></div>`
@@ -147,7 +146,7 @@ function shell({ title, description, prefix, body }) {
   <a class="skip-link" href="#content">跳到正文</a>
   <header class="site-header frame">
     <a class="brand" href="${prefix}index.html"><img class="brand-logo" src="${prefix}tsrat-logo.png" alt="TS鼠 Logo"><span class="brand-copy"><strong>思想简报档案馆</strong><em>Ivory Archive</em></span></a>
-    <nav aria-label="主要导航"><a href="${prefix}index.html#today">今日五则</a><a href="${prefix}index.html#archive">日刊档案</a><a href="${prefix}index.html#topics">主题范围</a><a href="${prefix}index.html#data" data-analytics-event="data_entry_opened" data-analytics-target="header">Data</a></nav>
+    <nav aria-label="主要导航"><a href="${prefix}index.html#today">今日五则</a><a href="${prefix}index.html#archive">日刊档案</a><a href="${prefix}index.html#topics">主题范围</a><a href="${prefix}index.html#method">阅读方法</a><a href="${prefix}index.html#data" data-analytics-event="data_entry_opened" data-analytics-target="header">Data</a></nav>
   </header>
   <main id="content">${body}</main>
   <footer><div class="frame footer-inner"><div class="footer-identity"><img class="footer-logo" src="${prefix}tsrat-logo.png" alt="TS鼠 Logo"><p>思想简报档案馆 · Ivory Archive</p></div><p>GitHub Pages 公开静态镜像</p></div></footer>
@@ -160,13 +159,13 @@ function shell({ title, description, prefix, body }) {
 function homePage() {
   const latest = briefings[0];
   const cards = latest.stories.map((story, index) => `
-    <a class="story-card" data-analytics-event="briefing_opened" data-analytics-target="${escapeHtml(`${latest.date}#story-${index + 1}`)}" data-category="${escapeHtml(story.category)}" data-search="${escapeHtml(`${story.title} ${story.summary} ${story.category}`.toLowerCase())}" href="briefings/${latest.date}/index.html#story-${index + 1}">
+    <a class="story-card" data-analytics-event="briefing_opened" data-analytics-target="${escapeHtml(`${latest.date}#story-${index + 1}`)}" data-category="${escapeHtml(story.category)}" data-search="${escapeHtml(`${story.title} ${story.summary} ${story.background} ${story.category}`.toLowerCase())}" href="briefings/${latest.date}/index.html#story-${index + 1}">
       <img src="story-images/${escapeHtml(storyImageName(story))}" alt="${escapeHtml(story.imageAlt)}">
       <div class="card-copy"><span class="number">${String(index + 1).padStart(2, "0")}</span><span class="tag">${escapeHtml(story.category)}</span><h3>${escapeHtml(story.title)}</h3><p>${escapeHtml(story.summary)}</p></div>
     </a>`).join("");
 
   const archive = briefings.map((briefing) => `
-    <a class="archive-entry" data-analytics-event="briefing_opened" data-analytics-target="${escapeHtml(briefing.date)}" data-topics="${escapeHtml(briefing.topics.join(" "))}" data-search="${escapeHtml(`${briefing.theme} ${briefing.stories.map((story) => story.title).join(" ")}`.toLowerCase())}" href="briefings/${briefing.date}/index.html">
+    <a class="archive-entry" data-analytics-event="briefing_opened" data-analytics-target="${escapeHtml(briefing.date)}" data-topics="${escapeHtml(briefing.topics.join(" "))}" data-search="${escapeHtml(`${briefing.theme} ${briefing.intro} ${briefing.learningGoal} ${briefing.connection} ${briefing.stories.flatMap((story) => [story.title, story.summary, story.background, story.happened, story.whyItMatters, story.sourceName]).join(" ")}`.toLowerCase())}" href="briefings/${briefing.date}/index.html">
       <div><span>${escapeHtml(briefing.displayDate)}</span><strong>第 ${escapeHtml(briefing.issueNo)} 期</strong></div>
       <div><h3>${escapeHtml(briefing.theme)}</h3><p>${briefing.topics.map((topic) => `<span>${escapeHtml(topic)}</span>`).join("")}</p></div><b>→</b>
     </a>`).join("");
@@ -174,11 +173,11 @@ function homePage() {
   const body = `
     <section class="hero frame">
       <div class="hero-meta"><span>ISSUE ${escapeHtml(latest.issueNo)}</span><strong>${escapeHtml(latest.displayDate)}</strong><small>IVORY ARCHIVE</small></div>
-      <div class="hero-copy"><p class="eyebrow">每日思想简报 · Daily Thought Briefing</p><h1>把今天的文化新闻，变成明天的思考素材</h1><p>每天 5 个值得停留的故事，沿着艺术人文、社会科学与女性主义三条线索展开。</p><a class="button" data-analytics-event="briefing_opened" data-analytics-target="${escapeHtml(latest.date)}" href="briefings/${latest.date}/index.html">阅读今日简报 →</a><span class="unique">✓ ${latest.uniqueCount}/${latest.stories.length} 与历史档案无实质重复</span></div>
+      <div class="hero-copy"><p class="eyebrow">每日思想简报 · Daily Thought Briefing</p><h1>先认识人物与概念，再读懂文化与<span class="no-break">社会新闻</span></h1><p>15 期、75 则新闻都按同一条初学者路径重写：先补足背景，再说明事件，接着列出具体细节，最后解释为什么值得关注。</p><a class="button" data-analytics-event="briefing_opened" data-analytics-target="${escapeHtml(latest.date)}" href="briefings/${latest.date}/index.html">阅读今日简报 →</a><span class="unique">✓ ${latest.uniqueCount}/${latest.stories.length} 与历史档案无实质重复</span></div>
       <div class="hero-art"><img src="ivory-botanical-archive.png" alt="森林绿色植物标本风档案插图"><span>${escapeHtml(latest.displayDate)}<br>No.${escapeHtml(latest.issueNo)}</span></div>
     </section>
     <section class="section frame" id="today"><header class="section-title"><div><p class="eyebrow">Today's Index</p><h2>今日五则</h2></div><p>${escapeHtml(latest.theme)}</p></header>
-      <div class="toolbar"><button class="active" data-analytics-event="filter_applied" data-analytics-target="全部" data-filter="全部">全部</button>${scopes.map((scope) => `<button data-analytics-event="filter_applied" data-analytics-target="${escapeHtml(scope.name)}" data-filter="${escapeHtml(scope.name)}">${escapeHtml(scope.name)}</button>`).join("")}<label><span>搜索</span><input id="story-search" data-analytics-event="search_performed" data-analytics-target="archive-search" type="search" placeholder="人物、作品或议题"></label></div>
+      <div class="toolbar"><button class="active" data-analytics-event="filter_applied" data-analytics-target="全部" data-filter="全部">全部</button>${scopes.map((scope) => `<button data-analytics-event="filter_applied" data-analytics-target="${escapeHtml(scope.name)}" data-filter="${escapeHtml(scope.name)}">${escapeHtml(scope.name)}</button>`).join("")}<label><span>搜索</span><input id="story-search" data-analytics-event="search_performed" data-analytics-target="archive-search" type="search" placeholder="人物、事件、术语或来源"></label></div>
       <div class="story-grid">${cards}</div>
     </section>
     <section class="archive" id="archive"><div class="frame"><header class="section-title light"><div><p class="eyebrow">Daily Archive</p><h2>日刊档案</h2></div><p>每一期都是独立入口，也回到同一张不断生长的知识地图。</p></header><div class="archive-list">${archive}</div></div></section>
@@ -189,24 +188,34 @@ function homePage() {
       <p class="data-note">事件契约已经就绪；只有在明确数据来源、会话定义、保留期限与使用目的之后，才会接入分析供应商。<a href="ivory-site-manifest.json">查看机器可读 manifest →</a></p>
     </div></section>`;
 
+  const method = `<section class="method-section frame" id="method"><div><p class="eyebrow">Reading Method</p><h2>每篇都从零开始，分成四个部分</h2></div><div><p>标题和引言不算正文已经介绍过的信息。每篇都会重新说明人物、机构或概念，再讲本次事件、具体细节和它为什么值得关注。</p><ol><li><span>1</span><strong>背景：</strong>第一次出现的人物、机构和概念都完整介绍。</li><li><span>2</span><strong>事件：</strong>用普通语言说明谁在什么时候、什么地点做了什么。</li><li><span>3</span><strong>细节：</strong>集中查看关键日期、数字、作品和过程。</li><li><span>4</span><strong>分析：</strong>解释具体影响，并在结尾提供唯一的原文链接。</li></ol></div></section>`;
+
   return shell({
     title: "首页",
     description: "每日五则中文思想简报：艺术人文、社会科学与女性主义。",
     prefix: "",
-    body,
+    body: body + method,
   });
 }
 
 function issuePage(briefing) {
   const index = briefing.stories.map((story, storyIndex) => `<li><a href="#story-${storyIndex + 1}"><span>${String(storyIndex + 1).padStart(2, "0")}</span>${escapeHtml(story.title)}</a></li>`).join("");
+  const quickRead = briefing.stories.map((story, storyIndex) => `<li><a href="#story-${storyIndex + 1}"><span>${String(storyIndex + 1).padStart(2, "0")}</span><strong>${escapeHtml(story.title)}</strong><p>${escapeHtml(story.summary)}</p></a></li>`).join("");
   const stories = briefing.stories.map((story, storyIndex) => `
     <article class="long-story" id="story-${storyIndex + 1}">
       <header><span class="long-number">${String(storyIndex + 1).padStart(2, "0")}</span><div><span class="tag">${escapeHtml(story.category)}</span><h2>${escapeHtml(story.title)}</h2><p>${escapeHtml(story.summary)}</p></div></header>
-      <figure><img src="../../story-images/${escapeHtml(storyImageName(story))}" alt="${escapeHtml(story.imageAlt)}"><figcaption>${escapeHtml(story.imageCredit)}</figcaption></figure>
-      <div class="story-columns"><div class="story-prose"><section><h3>发生了什么</h3><p>${escapeHtml(story.happened)}</p></section><section><h3>为什么重要</h3><p>${escapeHtml(story.importance)}</p></section><section class="creator"><h3>可创作角度</h3><p>${escapeHtml(story.creatorAngle)}</p></section></div><aside><p class="eyebrow">Fact File</p><ul>${story.facts.map((fact) => `<li>${escapeHtml(fact)}</li>`).join("")}</ul><a href="${escapeHtml(story.sourceUrl)}" target="_blank" rel="noreferrer">查看来源：${escapeHtml(story.sourceName)} ↗</a><small>${escapeHtml(story.sourceDate)}</small></aside></div>
+      <figure><img loading="lazy" src="../../story-images/${escapeHtml(storyImageName(story))}" alt="${escapeHtml(story.imageAlt)}"><figcaption>${escapeHtml(story.imageCredit)}</figcaption></figure>
+      <div class="story-learning-flow">
+        <section class="story-section"><p class="section-step">01 · Background</p><h3>背景</h3><p>${escapeHtml(story.background)}</p></section>
+        <section class="story-section happened-block"><p class="section-step">02 · Event</p><h3>事件</h3><p>${escapeHtml(story.happened)}</p></section>
+        <section class="story-section background-block"><p class="section-step">03 · Details</p><h3>细节</h3><ul>${story.facts.map((fact) => `<li>${escapeHtml(fact)}</li>`).join("")}</ul></section>
+        <section class="story-section analysis-block"><p class="section-step">04 · Analysis</p><h3>分析</h3><p>${escapeHtml(story.whyItMatters)}</p></section>
+        <aside class="story-source-link"><a data-analytics-event="source_opened" data-analytics-target="${escapeHtml(`${briefing.date}:${storyIndex + 1}:analysis`)}" href="${escapeHtml(story.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(story.sourceName)}｜${escapeHtml(story.title)} ↗</a><small class="source-url">${escapeHtml(story.sourceDate)} · 点开即可阅读原文</small></aside>
+      </div>
+      <a class="back-to-top" href="#content">回到本期顶部 ↑</a>
     </article>`).join("");
 
-  const body = `<section class="issue-hero frame"><div class="issue-meta"><a href="../../index.html#archive">← 返回日刊档案</a><strong>NO. ${escapeHtml(briefing.issueNo)}</strong><span>${escapeHtml(briefing.displayDate)}</span></div><div><p class="eyebrow">今日主题</p><h1>${escapeHtml(briefing.theme)}</h1><p>${escapeHtml(briefing.intro)}</p><div class="issue-tags">${briefing.topics.map((topic) => `<span>${escapeHtml(topic)}</span>`).join("")}</div></div><aside class="issue-index"><p class="eyebrow">In This Issue</p><ol>${index}</ol></aside></section><div class="frame stories">${stories}</div>`;
+  const body = `<section class="issue-hero frame"><div class="issue-meta"><a href="../../index.html#archive">← 返回日刊档案</a><strong>NO. ${escapeHtml(briefing.issueNo)}</strong><span>${escapeHtml(briefing.displayDate)}</span></div><div><p class="eyebrow">本期要理解的事</p><h1>${escapeHtml(briefing.theme)}</h1><p>${escapeHtml(briefing.intro)}</p><div class="issue-tags">${briefing.topics.map((topic) => `<span>${escapeHtml(topic)}</span>`).join("")}</div></div><aside class="issue-index"><p class="eyebrow">In This Issue</p><ol>${index}</ol></aside></section><section class="issue-quick-read frame"><div><p class="eyebrow">3-Minute Brief</p><h2>先用三分钟掌握本期</h2><p>${escapeHtml(briefing.learningGoal)}</p></div><ol>${quickRead}</ol><aside><p class="eyebrow">五则怎样连在一起</p><p>${escapeHtml(briefing.connection)}</p></aside></section><div class="frame stories">${stories}</div><section class="issue-synthesis frame"><p class="eyebrow">Issue Synthesis</p><h2>读完五则之后，记住这一条连接</h2><p>${escapeHtml(briefing.connection)}</p></section>`;
   return shell({ title: `${briefing.displayDate} · 第 ${briefing.issueNo} 期`, description: briefing.intro, prefix: "../../", body });
 }
 

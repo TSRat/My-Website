@@ -1,5 +1,230 @@
 # IVORY ARCHIVE handoff
 
+## 2026-07-29 · Homepage title orphan fix
+
+### Current target
+
+避免首页大标题在窄桌面宽度只留下一个“闻”字，同时保留现有标题文字、
+字号、视觉层级和响应式布局。
+
+### Completed
+
+- 把标题末尾的“社会新闻”设为一个不可拆分的短语，并为标题启用平衡换行
+  与严格中文换行规则。
+- React 页面与 GitHub Pages 静态渲染器保持一致；新增 parity 测试，防止
+  两个渲染版本再次丢失不可拆分标记。
+- 排版规范补充此处的孤字处理决定，没有通过缩小整个标题或写死
+  viewport 专用换行来掩盖问题。
+
+### Verification
+
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed, 654 local references across 75 HTML/CSS
+  files.
+- `npm run build:ivory`: passed, Sites artifact valid.
+- `node --test tests/ivory-renderer-parity.test.mjs`: passed, 3/3.
+- `npm run lint`: 0 errors; 24 unchanged warnings from Enheduanna/Hypatia.
+- `git diff --check`: passed.
+- Local browser layout at 1440×900, 1024×768, 768×1024, 390×844 and
+  320×568: the final line contains 9, 6, 9, 6 and 6 Chinese characters
+  respectively; no one-character orphan or horizontal overflow.
+- Owner-only preview version 10 was built from code commit `b94d919` and
+  browser-smoke-checked at 1280×720: “社会新闻” remains together and the page
+  has no horizontal overflow.
+
+### Delivery state
+
+- Branch: `codex/ivory-beginner-rebuild`.
+- Code fix commit: `b94d919`.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/31>.
+- Owner-only preview:
+  <https://tsrat-ivory-migration-preview.tsrat.chatgpt.site>.
+- The creator explicitly authorized merging PR #31 after this title-orphan
+  fix.
+
+## 2026-07-29 · Four-part zero-knowledge rewrite
+
+### Current target
+
+按创作者批准的逐屏大纲，把全部现有报道统一为“背景 / 事件 / 细节 /
+分析”四段式。读者默认从未听说过相关人物、机构、作品或专业领域；
+标题与导语不算正文已经介绍过，正文第一次出现时仍需写出完整名称和
+必要背景。常识性的“报道不代表权威立场”不再逐篇重复。
+
+### Completed
+
+- 为 15 期、75 则报道逐篇新增独立 `background`，先解释人物是谁、
+  机构做什么、概念是什么意思，避免以“他 / 她 / 其 / 这位 / 该”开头。
+- 全部 75 则报道重新执行同一内容合同，而不是只修正警务与梦境两个
+  示例：`事件` 必须概括事件效果或研究主要结果；`细节` 的 320 条信息
+  全部改为带句末标点的项目符号，不用分号硬连无关事实；`分析` 必须先
+  从细节中的数字、比较、作品或方法推出结论，再用下一句说明更大影响。
+- 其中 39 则原本只有一句判断或缺少细节回扣的分析已逐篇重写；测试现在
+  强制核验全部 75 则事件与分析，而不是只对两个示例作断言。
+- React 与 Pages 详情页统一为“背景 / 事件 / 细节 / 分析”；原有事实、
+  日期、图片与来源 URL 保留。
+- 标题下方的原文入口已删除；每则只在“分析”正文之后保留一个可点击
+  原文链接，链接名称由来源机构与报道标题组成。分析与来源链接不再置于
+  同一个红色卡片或边框容器中。
+- Brassaï 条目补充本名、生卒年、迁居巴黎、摄影集《Paris de nuit》
+  及夜间摄影特点，并把标题改为更能概括人物与事件的名称。
+- 首页、归档搜索、页脚说明、静态渲染器、测试和产品 / 视觉 / 排版 /
+  Figma 交接文档已同步。
+- Figma 文件 `ey07N2cwgxCtNUjvm6Ixgt` 的首页 `46:50`、桌面期刊
+  `46:51` 和移动阅读流 `46:52` 已原位更新为四段式；唯一来源入口位于
+  Analysis 之后。
+
+### Verification
+
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed, 654 local references across 75 HTML/CSS
+  files.
+- `npm run build:ivory`: passed, Sites artifact valid.
+- `node --test tests/ivory-renderer-parity.test.mjs`: passed, 3/3.
+- `npm run lint`: 0 errors; 24 unchanged warnings from Enheduanna/Hypatia.
+- `git diff --check`: passed.
+- Content audit: 75/75 stories have non-empty backgrounds; all 75 event
+  summaries contain at least two complete sentences; all 75 analyses contain
+  at least two complete sentences and pass the evidence-to-conclusion rule;
+  all 320 detail bullets end in sentence punctuation and contain no Chinese
+  semicolon.
+- Browser smoke at 1280×720: five stories each show exactly `背景 / 事件 /
+  细节 / 分析`; all rendered detail bullets end in punctuation; each analysis
+  is transparent and followed by one source link outside the section; no
+  header source link or horizontal overflow.
+- Figma desktop issue, mobile issue and homepage screenshots inspected.
+- Antigravity extended route, interaction, accessibility and visual-regression
+  QA: pending.
+
+### Modified files
+
+- Content and schema: `briefings.ts`, `CONTENT.md`.
+- React UI and search: issue route, homepage, archive explorer and site shell.
+- Static Pages renderer: `scripts/build-github-pages.mjs`.
+- Verification: `tests/ivory-renderer-parity.test.mjs`.
+- Product and design records: `DESIGN.md`, `TECH.md` and
+  `web/sites/ivory-archive/`.
+
+### Delivery state
+
+- Branch: `codex/ivory-beginner-rebuild`.
+- Content correction commit: `fed79a1`.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/31>.
+- Owner-only preview:
+  <https://tsrat-ivory-migration-preview.tsrat.chatgpt.site>.
+- Owner-only Sites version 8 was built from `fed79a1`, deployed successfully,
+  and browser-smoke-checked on issue 15: all five stories show the four-part
+  order; Analysis has no card background; every source link sits after and
+  outside Analysis; the new Brassaï and police-analysis copy is present.
+- The creator explicitly authorized merging PR #31 after the homepage
+  title-orphan fix.
+- Worktree is clean after the delivery commit.
+
+## 2026-07-29 · Three-section beginner rewrite
+
+### Current target
+
+根据创作者反馈，删除把日刊写成证据审查或批判性思维练习的结构，让每篇只保留三段普通语言说明，并让来源链接用内容名称直接打开。
+
+### Completed
+
+- 全部 75 篇移除 `analysis`、`reflection`、`evidenceBoundary`、`sourceType` 和 `informationForm` 字段。
+- React 与 Pages 详情页统一为“发生了什么 / 这件事为什么重要 / 记住这几个细节”。
+- 删除页面上的“先补上背景”“证据与边界”“来源不能单独证明什么”“分析”“不是来源中的直接事实”“反思与练习”和独立来源登记。
+- 每则来源链接改为“查看原文：<故事标题>”，直接指向原 `sourceUrl`；机构和日期作为辅助文字保留，不显示裸网址。
+- 重写 Goldsworthy《Red Flags》示例，明确说明 2026 年是 1776 年《独立宣言》通过 250 周年，并用普通语言解释土壤旗帜。
+- 进一步重写梦境研究、警务性别判断、O’Keeffe、彗星分类、长期新冠、Linder、Nilsson、西非洪水、贝叶挂毯和 TMS 等过度抽象或免责声明式的重要性说明。
+- Figma 桌面 `46:51` 与移动 `46:52` 原位更新为三段式；旧证据、分析、反思 frame 已隐藏。
+
+### Verification
+
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed, 654 local references across 75 HTML/CSS files.
+- `npm run build:ivory`: passed, Sites artifact valid.
+- `node --test tests/ivory-renderer-parity.test.mjs`: passed, 3/3.
+- `npm run lint`: 0 errors; 24 unchanged warnings from Enheduanna/Hypatia.
+- `git diff --check`: passed.
+- Browser at 390×844: 5 stories; each story has exactly 3 sections; 10 descriptive source links; no horizontal overflow; removed disclaimer copy absent.
+- Figma desktop and 390 px mobile screenshots inspected; three-section order is visible.
+
+### Delivery state
+
+- Branch: `codex/ivory-beginner-rebuild`.
+- Implementation commit: `d0ed36f`.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/31>.
+- Owner-only preview:
+  <https://tsrat-ivory-migration-preview.tsrat.chatgpt.site>.
+- Preview version 5 was built from `d0ed36f` and deployed successfully.
+- Live smoke on issue 14: 5 stories; every story has exactly 3 sections; 10
+  descriptive source links; Goldsworthy source URL and 250th-anniversary
+  explanation present; removed disclaimer copy absent; all lazy images loaded
+  after scrolling.
+- Merge remains unauthorized and has not been performed.
+
+## 2026-07-28 · Beginner-first complete archive rebuild
+
+### Current target
+
+重写全部现有期刊，让从未听说过事件、也没有学过相关领域的读者能按“事情、背景、原因、证据、分析、反思”完全理解，并保留每则原始新闻或原始资料链接。
+
+### Completed
+
+- 第 01—15 期全部改为更具代表性的主题名称；仍为 15 期、75 则，不虚构不存在的第 16 期。
+- 75 则标题改为先说清具体事件；原有事实、限定语、来源、日期、图片和 credit 保留。
+- 每期新增学习目标、五则连接和三分钟摘要。
+- 每则新增 `whyItMatters`、`analysis`、`reflection`、`evidenceBoundary`、`sourceType` 与 `informationForm`。
+- React 与 Pages 静态渲染器同步为固定初学者顺序，并提供时间线、对照表、过程、关系和证据卡。
+- 原始来源链接同时位于故事导语后与来源登记，`source_opened` 保持 provider-neutral。
+- Figma 新增 `06 · Beginner Reading System`：桌面首页 `46:50`、桌面期刊/故事 `46:51`、390px 移动流 `46:52`。
+
+### Important decisions
+
+- 内容属于结构调整与表达优化；不删除女性主义立场、制度分析、争议、限定语或来源。
+- `analysis` 明确标为编辑解释；`evidenceBoundary` 明确来源不能单独证明什么。
+- 关键背景不折叠；移动端阅读顺序固定。
+- 旧 `IVORY-ARCHIVE/` 快照仍不是来源，本次不手改或删除。
+
+### Verification
+
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed, 654 local references across 75 HTML/CSS files.
+- `npm run build:ivory`: passed, including Sites artifact validation.
+- `node --test tests/ivory-renderer-parity.test.mjs`: passed, 3/3.
+- `npm run lint`: 0 errors; 24 warnings belong to unchanged Enheduanna/Hypatia files.
+- `git diff --check`: passed.
+- Figma screenshots: desktop home, corrected desktop issue, and 390px mobile inspected.
+- Browser layout gate: 1440×900, 1024×768, 768×1024, 390×844 and 320×568 inspected for home/detail containment; source entry and narrow reading flow visible.
+- Source audit: all 75 source URLs remain present; 58 responded successfully in the automated pass and 17 returned access-controlled 401/403 responses rather than confirmed dead links.
+- Antigravity extended route/interaction/accessibility comparison: pending.
+
+### Modified areas
+
+- content and schema: `briefings.ts`, `CONTENT.md`;
+- React renderer: home, archive explorer, issue route, shell, stylesheet;
+- Pages renderer: generator and stylesheet;
+- privacy-safe analytics manifest/adapter and renderer parity tests;
+- product, screen outline, visual, typography, and Figma handoff documents.
+
+### Current branch
+
+- `codex/ivory-beginner-rebuild`
+- base: `3e4e753aad62920453398d41a766f9e625bd4d2e`
+- implementation commit: `87dfcf5`
+- merge: not authorized and not performed.
+
+### Delivery state
+
+- Pull Request: <https://github.com/TSRat/My-Website/pull/31>
+- Owner-only live preview:
+  <https://tsrat-ivory-migration-preview.tsrat.chatgpt.site>
+- Preview version 3 was built from implementation commit `87dfcf5` and passed a
+  live smoke check: 5 stories, 5 primary source links, 5 source registers,
+  fixed six-step order, and 0 broken images in the latest issue.
+- Figma:
+  [desktop home](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=46-50),
+  [desktop issue/story](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=46-51),
+  [mobile flow](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=46-52).
+
 ## 2026-07-25 · Unified maintenance package
 
 - Authoritative maintenance root: `sites/ivory-archive/`.
