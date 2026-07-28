@@ -1,5 +1,173 @@
 # Hildegard handoff
 
+## 2026-07-29 · Publication corrections
+
+### Current target
+
+Apply the creator's final placement, contrast and imagery corrections, then publish Draft PR #29 to production.
+
+### Completed
+
+- Restored every chapter-page introduction directly below its title.
+- Moved each `.pull-quote` to the end of its page body.
+- Rebuilt the dark epistolary prologue with ivory body text, gold metadata and a Frederick I engraving from the creator's Photo folder.
+- Moved the `Vision` community still from Authority 1/3 to Authority 2/3.
+- Added the 1342 Rupertsberg indulgence document to Authority 3/3.
+- Added the creator-selected `Hildegardia barteri` photograph to Afterlife 2/2.
+- Bumped the public stylesheet and runtime cache key to `illuminated-leaves-v3`.
+
+### Verification so far
+
+- `node --check sites/hildegard/assets/hildegard-refresh.js` — passed.
+- `npm run build:hildegard` — passed.
+- `node --test tests/historical-sites-six-stage.test.mjs` — 2/2 passed.
+- `npm run build:pages` — passed; unrelated generated Next mirror changes were discarded.
+- `npm run validate:pages` — passed, 639 local references across 75 HTML/CSS files.
+- `git diff --check` — passed.
+- Browser structural audit — 17/17 chapter-page introductions are below their headings; all `.pull-quote` elements close their page bodies.
+- Browser imagery audit — Authority 1/3 has no chapter plate, 2/3 uses `hildegard-new-monastery.png`, 3/3 uses `hildegard-rupertsberg-charter.jpg`, and Afterlife 2/2 uses `hildegard-photo-hildegardia-barteri.jpg`.
+- Browser visual smoke — 1440×900 and 390×844 passed with zero horizontal overflow; all changed images loaded.
+- Dark prologue computed colours — gold rubric `rgb(217, 179, 102)` and ivory title, intro, marginal note and counter `rgb(241, 234, 213)`.
+- Antigravity extended QA — pending.
+
+### Publication state
+
+- Branch: `codex/hildegard-interface-refactor`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/29>.
+- Creator explicitly authorized direct publication in this task.
+- The exact-head preview, merge commit and production Pages run are recorded in the PR and final publication report.
+
+## 2026-07-29 · Creator review corrections
+
+### Current target
+
+Correct the visible problems identified in the creator screenshot without changing the approved 20-folio learning order.
+
+### Completed
+
+- Used three traceable files from the creator's `Photo 23.03.17` folder:
+  - `hildegard-photo-scivias-cosmos.jpg` on the series hero;
+  - `hildegard-photo-kiedrich-kyriale.jpg` on Music 1/2;
+  - `hildegard-photo-litterae-ignotae.jpg` as historical evidence on Language 2/2.
+- Rewrote image captions as positive identification: work type, source and visual role.
+- Unified all 17 chapter leaves under the `章节 · 本页内容` heading grammar.
+- Moved every chapter-leaf introduction below its body and labelled it `本页引言`.
+- Reduced the fixed right rail from 20 screen links to nine chapter links.
+- Made chapter highlighting follow a narrow viewport reading line, so long folios cannot leave the rail on the previous chapter.
+- Removed both standalone Interlude sections.
+- Rebuilt Music 1/2 as a media/text spread, so the right side carries the Gregorian/Hildegard comparison.
+- Moved desktop marginalia into a reserved grid column; pager overlap is now structurally impossible.
+- Raised Vision-page contrast: ivory headings/body, parchment-muted supporting text and gold labels.
+- Added balanced heading wrapping and a mobile block rule for Chinese subchapter labels.
+- Bumped stylesheet, token import and runtime cache keys to `illuminated-leaves-v2`.
+- Updated the existing Figma frames in place, including the creator-selected hero image.
+
+### Verification
+
+- `node --check sites/hildegard/assets/hildegard-refresh.js` — passed.
+- `npm run build:hildegard` — passed.
+- `node --test tests/historical-sites-six-stage.test.mjs` — 2/2 passed.
+- `npm run build:pages` — passed; unrelated generated mirror changes were discarded.
+- `npm run validate:pages` — passed, 636 local references across 75 HTML/CSS files.
+- `git diff --check` — passed.
+- Playwright five-viewpoint structural smoke — passed:
+  - 20 folios, nine chapter-rail links, zero Interludes;
+  - all chapter titles use `章节 · 内容`;
+  - all 17 post-body introductions occur before their pager;
+  - zero marginalia/pager overlaps and zero horizontal overflow;
+  - all three Photo-folder assets loaded at every checked viewport;
+  - Music 1/2 is two columns at 1440/1024 and reflows to one column at 768/390/320.
+- Visual screenshots inspected at 1440×900, 390×844 and 320×568.
+- Antigravity extended QA — pending.
+
+### Modified source
+
+- `sites/hildegard/index.html`
+- `sites/hildegard/assets/hildegard-refresh.js`
+- `sites/hildegard/assets/hildegard-site.css`
+- `sites/hildegard/assets/hildegard-tokens.css`
+- `sites/hildegard/assets/images/hildegard-photo-*.jpg`
+- `sites/hildegard/CONTENT.md`
+- `sites/hildegard/DESIGN.md`
+- `sites/hildegard/design/figma-handoff.md`
+- `web/sites/hildegard/product-spec.md`
+- `web/sites/hildegard/design-handoff.md`
+- generated mirror `HILDEGARD/`
+
+### Review state
+
+- Branch: `codex/hildegard-interface-refactor`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/29>.
+- Exact-commit website preview is maintained in the Draft PR description.
+- Figma: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=45-49>.
+- Antigravity extended QA remains pending.
+- Merge only after explicit creator approval.
+
+## 2026-07-28 · Illuminated Leaves interface refactor
+
+### Current target
+
+Turn the Hildegard longform into a 20-page digital manuscript while preserving the 00–08 narrative, evidence boundaries, public URL and static-source build.
+
+### Completed
+
+- Added a Daughters of Time series hero and a numbered 30-second primer.
+- Split every chapter into two reading leaves; Authority is split into three.
+- Added stable `#screen-00`–`#screen-19` anchors, page counters, chapter subcounters, page rail and previous / next navigation.
+- Reframed the interface around illuminated-manuscript and religious-art composition: parchment, gold hairlines, rubric red, decorated initials, marginalia and bounded Visio blue.
+- Raised body text to 18–19px and essential metadata to at least 14px.
+- Replaced the tall mobile chapter bar with a 60px accessible menu.
+- Changed the Bilibili embed to click-to-load.
+- Kept every existing chapter image and its provenance caption; unverified local Photo-folder material remains reference-only.
+- Added editable Figma foundations and four key screens without deleting older frames.
+
+### Important decisions
+
+- The site remains one HTML document; “pages” are stable deep-linked sections, not new routes.
+- `sites/hildegard/index.html` is still readable without JavaScript. JavaScript progressively creates the 20-page reading UI from the original eight chapters.
+- The modern memorial statue is used on the hero and explicitly labelled as a modern memorial, not a historical portrait.
+- Decorative SVG glyphs remain structural ornament only.
+
+### Modified source
+
+- `sites/hildegard/index.html`
+- `sites/hildegard/assets/hildegard-site.css`
+- `sites/hildegard/assets/hildegard-tokens.css`
+- `sites/hildegard/assets/hildegard-refresh.js`
+- `sites/hildegard/CONTENT.md`
+- `sites/hildegard/DESIGN.md`
+- `sites/hildegard/TECH.md`
+- `sites/hildegard/design/figma-handoff.md`
+- `web/sites/hildegard/*.md`
+- generated mirror `HILDEGARD/`
+
+### Verification so far
+
+- `node --check sites/hildegard/assets/hildegard-refresh.js` — passed.
+- `npm run build:hildegard` — passed.
+- `node --test tests/historical-sites-six-stage.test.mjs` — 2/2 passed.
+- Playwright basic smoke — 1440×900, 1024×768, 768×1024, 390×844 and 320×568.
+- Browser evidence — 20 folios, 18px body, zero horizontal overflow at all checked viewports, all 20 local images loaded, mobile menu opens and closes, deep link lands below the sticky header, video creates its iframe only after activation.
+- Antigravity extended QA — pending.
+
+### Remaining before PR handoff
+
+- Creator review of the exact preview and Draft PR.
+- Antigravity extended multi-browser, keyboard and perceptual QA.
+- Merge only after explicit creator approval.
+
+### Git state before publication
+
+- Branch: `codex/hildegard-interface-refactor`
+- Base: `3e4e753` (`origin/main` at task start)
+- Implementation commit: `5bda9fc0fb93b378b664af15441fdc9490419136`
+- Exact preview: <https://raw.githack.com/TSRat/My-Website/5bda9fc0fb93b378b664af15441fdc9490419136/HILDEGARD/index.html>
+- Draft PR: <https://github.com/TSRat/My-Website/pull/29>
+- Figma: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=45-49>
+- Worktree after the implementation commit was clean; this handoff update is the only follow-up change.
+
+The exact remote preview was opened after raw.githack's one-time external-content notice and passed with 20 folios, 18px body copy, zero horizontal overflow, correct exact-commit script URLs, and zero console errors or warnings.
+
 ## 2026-07-27 · Creator-supplied replacements
 
 - 已将创作者新放入 `HILDEGARD/assets/` 的三张图复制到权威的 `sites/hildegard/assets/images/`，并替换第 02、05、06 章主图。

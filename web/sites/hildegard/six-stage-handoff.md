@@ -1,5 +1,19 @@
 # Hildegard six-stage handoff
 
+## 2026-07-28 · Interface refactor
+
+- Product / UX: approved 20-page outline saved in `screen-outline.md`; supporting spec in `product-spec.md`.
+- Visual: Illuminated Leaves direction saved in `visual-direction.md`.
+- Figma: editable foundations and key screens added at <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=45-49>.
+- Prototype: production HTML is the interactive prototype; 20 stable deep links and chapter-level navigation are implemented.
+- Engineering: source and generated mirror are synchronized through `npm run build:hildegard`.
+- Data: the existing provider-neutral manifest and appendix are preserved.
+
+Basic browser smoke covers 1440×900, 1024×768, 768×1024, 390×844 and 320×568. Antigravity extended route, keyboard, multi-browser and perceptual QA remains pending.
+
+- Exact preview: <https://raw.githack.com/TSRat/My-Website/5bda9fc0fb93b378b664af15441fdc9490419136/HILDEGARD/index.html>
+- Draft PR: <https://github.com/TSRat/My-Website/pull/29>
+
 - Site: `HILDEGARD`
 - Classification: `PRESERVE`
 - Figma: [Remaining Sites · Six-Stage Migration v1](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=27-2)
