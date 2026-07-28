@@ -1,5 +1,40 @@
 # Hildegard design guide — Viriditas Codex
 
+## 2026-07-28 · Viriditas Codex II — Illuminated Leaves
+
+The current redesign moves closer to illuminated manuscripts and religious art without becoming a medieval theme skin.
+
+- parchment fields stay flat and readable; there is no distressed texture
+- gold hairlines define folio frames and axes
+- rubric red marks page numbers, decorated initials and evidence categories
+- Viriditas green remains the main structural colour
+- deep Visio blue is reserved for vision, music and Lingua Ignota pages
+- marginalia, folio counters and devotional symmetry carry the manuscript language
+- no gothic-arch template, tarot imagery, glassmorphism, leather cover or purple “feminine” palette
+
+## 2026-07-29 · Creator review corrections
+
+- Every chapter leaf now uses one heading grammar: `章节 · 本页内容`.
+- The page introduction sits directly below the page title; the gold-hairline pull quote closes the page body.
+- The right rail contains nine chapter anchors, while page position remains in the header and pager.
+- Desktop marginalia occupies a real grid column and can no longer cross the pager.
+- Music page 1/2 uses a full media/text spread instead of leaving the right side empty.
+- Vision pages use ivory body text and gold labels on Visio night; the revised muted text token is `#D9D1BB`.
+- Standalone Viriditas and Coda interludes were removed.
+- The portal, epistolary prologue, music, language and afterlife pages use five traceable images selected from the creator's Photo folder.
+- The epistolary prologue uses ivory and gold text on Viriditas green, with a Frederick I engraving balancing the letter panel.
+- Authority 1/3 is text-led; its `Vision` still moves to 2/3, while 3/3 opens with the Rupertsberg indulgence document.
+
+Reading scale is now 18–19px body, 20–22px lede and at least 14px for essential metadata. The mobile header is 60px and uses an accessible chapter drawer.
+
+Editable Figma page: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=45-49>
+
+Detailed direction and layout rules live in:
+
+- `web/sites/hildegard/visual-direction.md`
+- `web/sites/hildegard/typography-layout.md`
+- `sites/hildegard/design/figma-handoff.md`
+
 - Last audited: 2026-07-21
 - Primary stylesheet: `sites/hildegard/assets/hildegard-site.css`
 - Design tokens: `sites/hildegard/assets/hildegard-tokens.css`
@@ -29,7 +64,6 @@ Living Manuscript
 | Vision | 深底 + 同心圆 + 金细线，用于神启、音乐与语言 | `03 修炼`, `04 音乐`, `06 语言` |
 | Botanical | 深绿 + 放射结构 + 根系，用于 Viriditas 与当代回响 | `08 身后` |
 | Archive | 网格 + 档案卡，用于通信、著作、来源、时间轴 | `05 通信卡`, `08 二次生命卡组`, `07 时间轴` |
-| Interlude | 近乎空白 + 一行大字 + 一个圆，全站 ≤ 4 次 | Viriditas Interlude, Coda |
 
 ## Color tokens
 

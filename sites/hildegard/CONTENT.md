@@ -1,5 +1,26 @@
 # Hildegard content guide
 
+## 2026-07-28 · 20-page reading structure
+
+The approved refactor keeps the 00–08 argument intact while giving each chapter two reading leaves; chapter 05, Authority, receives three. The public page remains one HTML document.
+
+- `00` series portal
+- `01` 30-second primer
+- `02` epistolary prologue
+- `03–19` eight chapters in the original order
+- `A1` Watch, `A2` Sources, `A3` Data
+
+The full page map is recorded in `web/sites/hildegard/screen-outline.md`.
+
+Content categories remain explicit:
+
+- historical fact
+- scholarly interpretation
+- narrative framing
+- visual metaphor / modern reenactment
+
+The creator-supplied `Vision` stills and the modern Lingua Ignota transcription retain precise positive captions. Five traceable images from `Women Story/Hildegard/photo 23.03.17` now appear in the portal, epistolary prologue, music, language and afterlife pages.
+
 - Last audited: 2026-07-21
 - Project: `时间的女儿 · 002`
 - Primary entry: `sites/hildegard/index.html`
@@ -46,13 +67,13 @@
 2. `01 窄门（Manuscript）`：1098 出生 / 八岁入迪西博登贝格；时代地图（卡诺莎、教权 vs 皇权、女性两条被封死的路）。
 3. `02 传承（Manuscript）`：尤塔·冯·斯蓬海姆；苦修 vs 姐妹情谊+学识两条道路的对照。
 4. `03 修炼（Vision）`：神启路径与学识路径双列；Viriditas 概念在此正式出现。
-5. Interlude：`"以过度苦修摧残身体之人，常行于愤怒中。"`
-6. `04 音乐（Vision）`：格里高利圣咏 vs 希尔德加德对照；《天启交响曲》、《美德典律》。
-7. `05 权威（Manuscript）`：温情领导、"弱势"策略、独立王国（1150）；通信卡（尤金三世 / 埃莉诺 / 亨利二世 / 腓特烈一世）；Editorial note 保留"性别观进步 vs 阶级观保守"张力。
-8. `06 语言（Vision · Lingua Ignota）`：23 字母表示意 + 三种学界解读 + 芭芭拉·纽曼的社区密语假说 + 沃尔马的追问。
-9. `07 斗争（Manuscript）`：清洁派、1160 起四次巡回布道、拒绝迁尸案、禁令、"禁止歌颂上帝，就是魔鬼的胜利"、1179.09.17 离世时间轴。
-10. `08 身后（Botanical）`：沉默八百年、1243 文件失踪；Viriditas 当代回响、朱迪·芝加哥《晚宴》、Sequentia / Lingua Ignota / Hildegard von Blingin'；1998 900 周年、2012 等效封圣 + 教会圣师。
-11. Coda Interlude：`"她的一生，如同一座在高墙之内建立起来的丰饶花园。"`
+5. `04 音乐（Vision）`：格里高利圣咏 vs 希尔德加德对照；《天启交响曲》、《美德典律》。
+6. `05 权威（Manuscript）`：温情领导、"弱势"策略、独立王国（1150）；通信卡（尤金三世 / 埃莉诺 / 亨利二世 / 腓特烈一世）；Editorial note 保留"性别观进步 vs 阶级观保守"张力。
+7. `06 语言（Vision · Lingua Ignota）`：23 字母表示意 + 三种学界解读 + 芭芭拉·纽曼的社区密语假说 + 沃尔马的追问。
+8. `07 斗争（Manuscript）`：清洁派、1160 起四次巡回布道、拒绝迁尸案、禁令、"禁止歌颂上帝，就是魔鬼的胜利"、1179.09.17 离世时间轴。
+9. `08 身后（Botanical）`：沉默八百年、1243 文件失踪；Viriditas 当代回响、朱迪·芝加哥《晚宴》、Sequentia / Lingua Ignota / Hildegard von Blingin'；1998 900 周年、2012 等效封圣 + 教会圣师。
+
+独立 Interlude 已移除；Viriditas 与结语都回到相关章节正文中，避免脱离上下文的装饰页。
 
 ## Editorial boundaries
 
@@ -98,7 +119,7 @@
 
 ## 图像来源（2026-07-27）
 
-- 第 02、05、06 章使用创作者提供的《Vision》剧照（尤塔与希尔德加德、修道院场景）及未知之语字母表现代转录示意；caption 明确标注它们是现代视觉材料，不是历史现场记录或原始字形。
+- 第 02、05、06 章使用创作者提供的电影《Vision》剧照（尤塔与希尔德加德、修道院场景）及未知之语字母表现代转录示意；caption 直接说明作品类型与画面内容。
 - 其余五张章节主图来自 Wikimedia Commons 的 Public Domain 或 CC0 图像；每张都在页面的“图像与图形说明”中链接到其文件页，并在 caption 中区分手稿、后世纪念图像与当代遗址。
 - 五枚小型 glyph 仍是原创 SVG，仅作为无障碍隐藏的版式装饰和视觉隐喻；不承担史料或章节配图功能。
 
