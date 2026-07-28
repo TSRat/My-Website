@@ -38,7 +38,11 @@ Living Atlas Featured World plus the footer series navigation of all four
 ### Git state
 
 - Branch: `codex/sync-malinche-series`.
-- Commit / push / PR: pending at this handoff checkpoint.
+- Implementation commit: `c6de2ba4fced321ebf26fd9cd57c89616149ec0e`.
+- Exact Living Atlas preview:
+  <https://raw.githack.com/TSRat/My-Website/c6de2ba4fced321ebf26fd9cd57c89616149ec0e/THE-LIVING-ATLAS/zh.html>.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/30>.
+- Merge: not authorized and not performed.
 - The unrelated dirty main worktree remained untouched.
 
 ## 2026-07-28: La Malinche approved 52-screen chronology
