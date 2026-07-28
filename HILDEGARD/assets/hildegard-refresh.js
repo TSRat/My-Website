@@ -160,6 +160,8 @@
 
   const folios = Array.from(document.querySelectorAll(".folio[data-screen]"));
   const railLinks = Array.from(document.querySelectorAll(".page-rail a"));
+  const headerCurrent = document.querySelector("[data-current-page]");
+  const headerCounter = headerCurrent?.closest(".header-counter");
 
   folios.forEach((folio) => {
     const number = folio.dataset.screen;
@@ -222,6 +224,8 @@
 
       const current = visible.target.dataset.screen;
       const currentChapter = visible.target.dataset.chapter;
+      if (headerCurrent) headerCurrent.textContent = current;
+      if (headerCounter) headerCounter.href = `#screen-${current}`;
       railLinks.forEach((link) => {
         const active = link.dataset.chapter === currentChapter;
         link.classList.toggle("is-active", active);

@@ -3,7 +3,7 @@
  * Digital folio structure for the Hildegard longform.
  */
 
-@import "./hildegard-tokens.css?v=illuminated-leaves-v5";
+@import "./hildegard-tokens.css?v=illuminated-leaves-v6";
 
 *,
 *::before,
@@ -195,6 +195,21 @@ a:hover {
 .site-header nav a:hover::after,
 .site-header nav a:focus-visible::after {
   transform: scaleX(1);
+}
+
+.header-counter {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  justify-self: end;
+  color: var(--color-accent-soft) !important;
+  font-family: var(--type-mono);
+  font-size: 14px;
+}
+
+.header-counter i {
+  opacity: 0.55;
+  font-style: normal;
 }
 
 .nav-toggle {
@@ -1503,7 +1518,7 @@ main {
 
 @media (max-width: 900px) {
   .site-header {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto auto 1fr;
   }
 
   .nav-toggle {
@@ -1566,6 +1581,10 @@ main {
     opacity: 1;
     pointer-events: auto;
     transform: none;
+  }
+
+  .header-counter {
+    justify-self: end;
   }
 
   .portal-grid,
@@ -1824,6 +1843,10 @@ main {
 
   .brand span {
     letter-spacing: 0.02em;
+  }
+
+  .header-counter {
+    font-size: 12px;
   }
 
   .folio,

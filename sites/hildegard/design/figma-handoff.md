@@ -1,8 +1,12 @@
 # Figma handoff — Viriditas Codex
 
+## 2026-07-29 · Header counter restoration
+
+- Restore the synchronized current-page counter in the sticky header's top-right while retaining each folio's own top-right number.
+
 ## 2026-07-29 · Reading-chrome correction
 
-- The shipped implementation is the current reference for this corrective pass: each folio owns one top-right page number, while the sticky header and bottom edge carry no page number or previous / next strip.
+- At this corrective stage each folio owned one top-right page number and the bottom previous / next strip was removed; the later header-counter restoration above supersedes the former sticky-header rule.
 - The fixed rail now presents chapter names only.
 - The epistolary prologue has one dominant quotation panel; the title uses the full supporting-column width, with the introduction and Frederick portrait below.
 - The comparison cards align to the top of their marginalia column.
