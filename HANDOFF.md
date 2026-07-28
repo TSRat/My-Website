@@ -1,5 +1,116 @@
 # Repository handoff
 
+## 2026-07-28: La Malinche approved 52-screen chronology
+
+### Current target
+
+Continue the existing La Malinche rebuild from the approved screen plan:
+preserve Malintzin's perspective through Chapter 2, introduce Spain through a
+visible narrative hinge, and explain Veracruz, Tlaxcala, and Cholula for readers
+with no prior Mesoamerican-history knowledge.
+
+### Completed
+
+- Expanded `时间的女儿 · 003` to 52 consecutive numbered scenes (`00`–`51`).
+- Added the approved Chapter 1 / 2 historical foundations, the torn Chapter
+  2 → 3 transition, the expanded Spanish background, and the revised
+  Veracruz–Tlaxcala–Cholula sequence.
+- Added a credited modern Cholula archaeological photograph and retained a
+  separate evidence-qualified massacre scene.
+- Corrected mobile title containment, especially “一个人，三个名字。”, while
+  preserving the proportional hero cut-out and the top / bottom TSRat marks.
+- Updated Figma V5:
+  <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=16-2>.
+
+### Verification
+
+- `npm run build:malinche`: passed.
+- `node --check sites/la-malinche/assets/site.js`: passed.
+- `node --test tests/malinche-readiness.test.mjs`: passed — 2/2.
+- `npm run validate:sites`: passed — 11 packages.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed — 560 local references across 67 HTML/CSS
+  files.
+- Chrome desktop and `390 × 844` device-metrics smoke passed for the changed
+  sequence; no title overflow or document-level horizontal overflow remained.
+- Exact-commit preview confirmed 52 scenes, the Cholula asset, hero ratio, and
+  both TSRat marks.
+- Antigravity extended route, keyboard, multi-browser, and visual QA: pending.
+
+### Delivery state
+
+- Branch: `codex/site-la-malinche`.
+- Implementation: `697dd53878cfd93ee59211558ed2c255f85f9718`.
+- Exact implementation preview:
+  <https://raw.githack.com/TSRat/My-Website/697dd53878cfd93ee59211558ed2c255f85f9718/LA-MALINCHE/index.html>.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/28>.
+- Merge: not authorized and not performed.
+
+### Remaining
+
+- Confirm authorization before reusing project-library images outside this
+  site.
+- Review PR #28; run Antigravity extended QA if comprehensive overlay,
+  keyboard, multi-browser, and full-route comparison is desired.
+
+## 2026-07-27: La Malinche Spain and siege expansion
+
+### Current target
+
+Respond to creator browser review by adding beginner-readable Spanish context,
+expanding the occupation and siege narrative, prioritizing selected
+`Women Story/Malinche/photo` imagery, and fixing spacing / alignment defects
+without flattening the site's varied visual language.
+
+### Completed
+
+- Expanded `时间的女儿 · 003` from 33 to 41 numbered scenes.
+- Added three Spanish-background scenes and eight event-linked Chapter 5 / 6
+  scenes covering occupation, Toxcatl, failed mediation, retreat, smallpox,
+  lake control, siege mechanics, resistance, and the city's fall.
+- Added thirteen optimized project-library visuals / motifs with explicit
+  later-depiction, film-still, reconstruction, or authorization qualifications.
+- Corrected display spacing, image proportions, reveal-transform alignment, and
+  the last two-character mobile title ending.
+- Preserved the two direct video players and did not reuse video-cover imagery.
+- Reused the existing TSRat identity mark in the top navigation and footer.
+- Added a non-destructive editable Figma V4 key-screen catalogue:
+  <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=14-2>.
+
+### Verification
+
+- `node --check sites/la-malinche/assets/site.js`: passed.
+- `node --test tests/malinche-readiness.test.mjs`: passed — 2/2.
+- `npm run build:malinche`: passed.
+- `npm run validate:sites`: passed — 11 packages.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed — 557 local references across 67 HTML/CSS files.
+- `npm run lint`: passed with 0 errors and 24 existing warnings in Enheduanna
+  and the committed Hypatia bundle.
+- Codex in-app browser layout smoke passed at `1782 × 864` and `390 × 844`:
+  41 scenes, no document overflow, no broken images after lazy-load traversal,
+  no visible title / copy collision, and preserved hero ratio.
+- Chrome / Computer Use follow-up confirmed the TSRat mark in the fixed header
+  and closing footer at `1800 × 928`; both loaded at their natural ratio with
+  zero document overflow.
+- Antigravity extended route, keyboard, multi-browser, and visual QA: pending.
+
+### Delivery state
+
+- Branch: `codex/site-la-malinche`.
+- Implementation: `0da661b`.
+- Exact implementation preview:
+  <https://raw.githack.com/TSRat/My-Website/0da661b/LA-MALINCHE/index.html>.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/26>.
+- Merge: not authorized and not performed.
+
+### Remaining
+
+- Confirm authorization before reusing selected project-library images outside
+  this site.
+- Review PR #26; run Antigravity extended QA if comprehensive overlay,
+  keyboard, and multi-browser comparison is desired.
+
 ## 2026-07-27: La Malinche beginner-first narrative expansion
 
 ### Current target

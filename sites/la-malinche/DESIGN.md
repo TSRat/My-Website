@@ -4,7 +4,7 @@
 
 `Cut-out Poster × Mutable Archive × Translation Seam × Survivor Red`
 
-This site is distinct from the other `时间的女儿` projects. Its thirty-three numbered
+This site is distinct from the other `时间的女儿` projects. Its fifty-two numbered
 scenes deliberately alternate composition rather than repeating a two-column
 card template. Image scale, color field, density, direction, and type hierarchy
 change with the historical argument.
@@ -17,10 +17,26 @@ change with the historical argument.
   `是什么 / 为什么重要 / 本站分析什么`.
 - Tlaxcala and Cholula each use two deliberately different screens: context
   first, event and evidence second.
+- The Spanish background uses three different structures: an Iberian portrait /
+  history-painting field, a full-height 1502 sea chart, a colony-system
+  explanation, and a four-part expedition ledger.
+- Chapter 2 ends in the reader's existing jade / ochre world. A torn horizontal
+  seam then introduces the Spanish chapter's red, navy, cream, and gold system;
+  this is the major visual hinge of the first half.
+- The revised chronology gives city-states, tribute, ritual, enslavement,
+  Potonchán, Doña Marina, Totonac politics, and Malintzin's Spanish-language
+  learning their own structures rather than compressing them into small labels.
+- Chapters 5 and 6 form a visual sequence rather than one siege summary:
+  festival image, failed mediation, interpreter limit, rain retreat, epidemic
+  split, lake blockade, siege matrix, and final capture.
 - Full archival walls at the Codex, Tlaxcala, Cholula, and Tenochtitlan moments.
 - The Moctezuma–Malinche–Cortés encounter is a portrait triptych, not oversized
   decorative names behind a narrow text box.
 - Translation is represented by opposing language fields and a stable gold seam.
+- The religion scene is an image-and-ledger composition rather than a right-side
+  four-card grid; the Tlaxcala alliance scene is a continuous route ending in a
+  full-width outcome field. These two structures prevent empty space from being
+  filled with undersized card copy.
 - Route maps use a dark console; the 1524 map becomes a full-screen atlas table.
 - The `Malinchismo` section becomes fully red after the black video theater.
 - Video-cover imagery is confined to the embedded players.
@@ -29,6 +45,9 @@ change with the historical argument.
 - Display headings use authored line breaks at wide viewports. No line may be
   left with only one or two Chinese characters; display-to-body spacing is
   governed by `--display-gap` and `--copy-gap`.
+- Every numbered scene caption uses the responsive size established by `23 ·
+  十五世纪 · 欧洲走向远洋`; scene-specific paragraph rules must not shrink or
+  enlarge that shared hierarchy.
 - Evidence labels stay adjacent to claims.
 
 ## Components
@@ -47,7 +66,12 @@ change with the historical argument.
 - Desktop uses a sticky progress rail and full split compositions.
 - Tablet removes the fixed rail and reduces monumental type.
 - Mobile stacks the name panels, uses the compact chapter menu, and keeps both translation positions around the central seam.
+- The 01 title scales down at `560px` and below so “一个人，三个名字。” remains a
+  single complete line without clipping.
 - Maps preserve aspect ratio and stay within the viewport.
+- Image-led mobile scenes retain the image’s intrinsic ratio and place captions
+  next to their corresponding image rather than separating them into a generic
+  gallery.
 
 ## Motion and accessibility
 
@@ -59,4 +83,7 @@ change with the historical argument.
 
 ## Figma
 
-Design source: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-13>
+Design source: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=16-2>
+
+V5 records the approved 52-scene chronology and the Chapter 2 → 3 transition.
+Earlier V1–V4 frames remain available for comparison.

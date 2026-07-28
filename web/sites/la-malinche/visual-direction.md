@@ -68,17 +68,26 @@ folder:
 
 They are credited as creator artwork or creator-made explanatory maps. They are not described as historical portraits, archaeological records, or contemporary maps.
 
-No additional AI image was generated. The v3 implementation supplements the
+No additional AI image was generated. The v4 implementation supplements the
 creator assets with locally stored public-domain / CC0 material: a British
 Library landing manuscript, a high-resolution Tlaxcala map, the Codex Mendoza
 Moctezuma image, and the 1529 Weiditz depiction of Cortés. Every later depiction
 is labelled by date and is not described as an eyewitness photograph or realist
 portrait.
 
+The expanded Spain and siege sequences prioritize selected material already
+present in `Women Story/Malinche/photo`: ruler portraits, later history
+paintings, colonial image narration, film stills, and digital city
+reconstructions. Each receives a visible media-type caption; none is presented
+as a transparent window onto the sixteenth century. Authorization status needs
+confirmation before reuse outside this project.
+
 ## Texture and shape
 
 - Sharp corners and hard one-pixel rules.
-- A low-opacity codex tile repeats behind selected archive scenes.
+- A low-opacity sun motif appears once in the expedition ledger; it is a
+  contemporary decorative reference, not a claim that Mesoamerica had one
+  undifferentiated visual language.
 - Lake and route lines use layered CSS/SVG-like geometry.
 - Paper is built from flat color and subtle grain, not photorealistic parchment.
 - No glassmorphism, generic gradient cards, or ornamental “ancient” UI.

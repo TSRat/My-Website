@@ -22,6 +22,8 @@ Public path:
 - `assets/analytics.js`
 - `assets/maps/*.webp`
 - `assets/archive/*.webp`
+- `assets/creator/*.{webp,svg}`
+- `assets/tsrat-logo.png`
 - `assets/malinche-cutout.png`
 - `site-manifest.json`
 - `site.config.json`
@@ -49,12 +51,20 @@ The shared direct-static builder copies deployable source into `.site-build/la-m
   `Women Story/Malinche` remain unmodified.
 - The hero PNG is a background-removed derivative of the supplied monochrome
   illustration.
-- Eight large public-domain / CC0 archive images are stored locally as WebP to avoid
-  fragile hotlinks. Visible captions and `CONTENT.md` retain source provenance.
+- Thirteen public-domain / CC-licensed archive images are stored locally as
+  optimized WebP or SVG to avoid fragile hotlinks. Visible captions and
+  `CONTENT.md` retain source provenance.
+- Thirteen selected project-library visuals are stored under `assets/creator/`
+  as optimized WebP / SVG. Later depictions, film stills, and digital
+  reconstructions are distinguished in captions; their authorization status is
+  recorded as needing confirmation.
 - The hero cut-out uses its intrinsic `1065 / 1476` ratio with `object-fit:
   contain`; browser QA checks the rendered ratio against the natural ratio.
 - Desktop typography QA includes a `1782 × 864` viewport matching the creator
   screenshot, plus `1440 × 900`, `1024 × 768`, and `390 × 844`.
+- Automated layout smoke counts all 52 scenes, checks image load state and
+  document overflow, and flags display / copy collisions and one- or
+  two-character display-title endings.
 - The two legacy cover WebPs remain in the source archive but are not referenced
   by HTML, CSS, configuration, or the Living Atlas.
 - The two Malinche Bilibili videos are embedded with the official player; neither

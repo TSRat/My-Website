@@ -25,10 +25,26 @@ The opening now answers three questions before presenting the interpretation:
 2. Why did multilingual mediation matter in the 1519 campaign?
 3. Why is participation not identical to military or colonial decision power?
 
+The 52-scene order now stays inside Malintzin's available world through the end
+of Chapter 2. It explains enslavement, Potonchán, baptism, translation, the
+birth of “Malinche,” the Totonac encounter, and her gradual recognition of
+Spanish intentions before making a visibly disruptive transition to Chapter 3.
+
+Chapter 3 then gives a first-time reader independent pieces of Spanish
+background before returning to the campaign: Atlantic navigation, the
+political unification of Spain and conquistador identity, Columbus's crossing,
+the Caribbean colonial system, Cortés in Cuba, and the 1519 expedition.
+
 Tlaxcala and Cholula each receive two scenes. The first establishes the polity,
 place, and political context; the second explains the event, Malinche’s role,
 and the evidence boundary. Do not collapse either pair back into a verdict-only
 screen.
+
+Chapters 5 and 6 now read as an event chain rather than a single conclusion:
+reception becomes occupation; the Toxcatl festival becomes a massacre;
+Moctezuma’s mediation fails; the coalition retreats; smallpox and regrouping
+change the field; brigantines close the lake; water, food, roads, and time become
+siege weapons; the city falls after continued resistance.
 
 ## Eight manuscript chapters
 
@@ -72,7 +88,11 @@ screen.
 
 - The supplied black-and-white figure becomes a transparent cut-out in the poster-like hero.
 - Own Map assets explain the manuscript’s geography.
-- CSS codex pattern, lake strata, broken rules, and red strike-throughs are modern interpretive graphics.
+- The low-opacity sun motif, lake strata, broken rules, and red strike-throughs
+  are modern interpretive graphics, not evidence of a single timeless
+  “Mesoamerican style.”
+- Film stills and digital reconstructions are atmosphere and spatial aids. They
+  are labelled as visual reconstructions rather than event records.
 
 ## Required qualifications
 
@@ -99,6 +119,8 @@ The ending must remain morally double:
 - `assets/malinche-cutout.png`: background-removed derivative of the supplied
   black-and-white Malinche illustration. The monochrome line and halftone texture
   are retained.
+- `assets/tsrat-logo.png`: existing transparent TSRat identity mark reused from
+  the repository, displayed in the fixed header and closing footer.
 - `assets/maps/*.webp`: WebP derivatives of the supplied `Own Map` files from
   `Women Story/Malinche`.
 - `assets/cover-green.webp` and `assets/cover-red.webp`: retained as source
@@ -112,6 +134,11 @@ The ending must remain morally double:
   Mexico, 1524.jpg`, Newberry Library / Wikimedia Commons, Public Domain.
 - `assets/archive/cholula-1877.webp`: Félix Parra, `Episodios de la conquista:
   La matanza de Cholula` (1877), Wikimedia Commons, Public Domain.
+- `assets/archive/cholula-pyramid.webp`: modern photograph of the Great Pyramid
+  of Cholula archaeological zone and the church above it, by
+  `carvallo.pedro`, Wikimedia Commons, CC BY-SA 3.0. The downloaded source was
+  resized to a 2200 × 1650 WebP derivative; the visible caption identifies it
+  as a modern archaeological view rather than a 1519 event image.
 - `assets/archive/cortes-landing-bl.webp`: sixteenth-century European manuscript
   depiction of Cortés landing in 1519, British Library Add MS 37177,
   Wikimedia Commons, CC0. It is labelled as a later depiction rather than an
@@ -123,5 +150,48 @@ The ending must remain morally double:
   is not labelled as a realist portrait.
 - `assets/archive/cortes-weiditz.webp`: Christoph Weiditz’s 1529 depiction of
   Hernán Cortés, Wikimedia Commons, Public Domain.
+- `assets/archive/triple-alliance-map-zh.svg`: simplified-Chinese map of the
+  Triple Alliance tributary provinces and neighboring polities around 1519,
+  derived by Y814756748 from Sémhur’s sourced map, Wikimedia Commons,
+  CC BY-SA 4.0. It replaces the creator route graphic that did not depict the
+  Triple Alliance.
+- `assets/archive/codex-borbonicus-calendar.webp`: WebP derivative of page 13
+  of the Codex Borbonicus, a sixteenth-century sacred-calendar image,
+  Wikimedia Commons, Public Domain.
+- `assets/archive/cantino-planisphere.webp`: resized WebP derivative of the
+  1502 Cantino planisphere by an anonymous Portuguese cartographer,
+  Biblioteca Estense Universitaria / Wikimedia Commons, Public Domain.
+- `assets/archive/columbus-landing.webp`: resized WebP derivative of John
+  Vanderlyn’s 1847 painting `Landing of Columbus`, Wikimedia Commons, Public
+  Domain. Its caption explicitly identifies it as a nineteenth-century
+  historical imagining rather than an eyewitness record.
+- `assets/creator/isabella-castile.webp`,
+  `assets/creator/ferdinand-aragon.webp`,
+  `assets/creator/reconquista-painting.webp`, and
+  `assets/creator/scuttle-fleet.webp`: optimized derivatives selected from
+  `Women Story/Malinche/photo/Aztec 2/` to establish the Iberian and Atlantic
+  background. They are visibly labelled as later portraits or history
+  paintings; authorization status needs confirmation before reuse outside this
+  project.
+- `assets/creator/temple-massacre-codex.webp`,
+  `assets/creator/moctezuma-pleads.webp`, and
+  `assets/creator/cuauhtemoc-capture.webp`: optimized derivatives from the same
+  project library. They support the Toxcatl massacre, failed mediation, and
+  capture scenes, with captions distinguishing colonial / later depiction from
+  event evidence. Authorization status needs confirmation.
+- `assets/creator/malinche-interior-still.webp` and
+  `assets/creator/lake-canoe-still.webp`: cropped, optimized film stills from
+  the project library, used only as labelled visual reconstructions.
+  Authorization status needs confirmation.
+- `assets/creator/tenochtitlan-rain-reconstruction.webp` and
+  `assets/creator/tenochtitlan-aerial-reconstruction.webp`: optimized digital
+  reconstruction imagery from the project library, labelled as reconstruction,
+  not historical documentation. Authorization status needs confirmation.
+- `assets/creator/smallpox-codex.webp`: optimized project-library image used as
+  a qualified visual narration of epidemic disease. Authorization status needs
+  confirmation.
+- `assets/creator/aztec-sun-motif.svg`: project-library vector used at low
+  opacity as a decorative motif; it does not authenticate the site as a single
+  historical Indigenous visual system. Authorization status needs confirmation.
 
 Source-page links are included in the visible source room.

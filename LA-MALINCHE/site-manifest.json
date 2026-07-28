@@ -10,7 +10,7 @@
     {
       "path": "./",
       "title": "马琳切：谁背叛了背叛者？",
-      "description": "一部关于翻译、征服、幸存与历史记忆的三十三屏互动叙事。"
+      "description": "一部为初学者设计、关于翻译、征服、幸存与历史记忆的五十二屏互动叙事。"
     }
   ],
   "analytics": {
@@ -23,7 +23,7 @@
     "type": "creator-manuscript",
     "title": "马琳切：谁背叛了背叛者？",
     "chapters": 8,
-    "screens": 33
+    "screens": 52
   },
-  "designSource": "https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-13"
+  "designSource": "https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=16-2"
 }

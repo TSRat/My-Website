@@ -3,117 +3,150 @@
 - Project: `马琳切：谁背叛了背叛者？`
 - Series: `时间的女儿 · 003`
 - Branch: `codex/site-la-malinche`
-- Figma v3: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=12-13>
-- Pull Request: <https://github.com/TSRat/My-Website/pull/26>
-- Verified implementation preview:
-  <https://raw.githack.com/TSRat/My-Website/e629f30/LA-MALINCHE/index.html>
+- Figma V5: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=16-2>
+- Pull Request: <https://github.com/TSRat/My-Website/pull/28>
+- Verified exact-implementation preview:
+  <https://raw.githack.com/TSRat/My-Website/b18a62d/LA-MALINCHE/index.html>
 
 ## Current goal
 
-Refine the differentiated historical editorial for a first-time reader. Explain
-who and what the reader is encountering before presenting the argument, give
-the Spanish landing, Tlaxcala, and Cholula enough narrative space, and correct
-hero proportion, display-title wrapping, spacing, and alignment defects found
-in browser review.
+Deliver the creator-approved 52-screen beginner chronology without restarting
+the established visual rebuild. Preserve Malintzin's available perspective
+through Chapter 2, make the Chapter 2 → 3 shift unmistakable, expand the Spanish
+background, and give Tlaxcala and Cholula enough independent explanation. The
+current revision specifically replaces undersized card copy, an incorrect map,
+visible production notes, repeated right-side four-card compositions, and the
+inconsistent scene-caption sizes that were overriding the hierarchy established
+by `23 · 十五世纪 · 欧洲走向远洋`.
 
 ## Completed
 
-- Expanded the site from 30 to 33 numbered scenes while preserving all eight
-  manuscript chapter anchors and the supplied argument.
-- Added an early `她是谁 / 为什么重要 / 这篇要问什么` primer.
-- Made `1519 · 西班牙人登陆` a standalone full-height scene that explains
-  the defeat of `波顿查恩`, the transfer of twenty women, Malinche's second
-  transfer, and why language changed her position.
-- Split Tlaxcala into two scenes:
-  1. what the independent polity was and why it resisted both the Triple
-     Alliance and an unknown armed force;
-  2. how weeks of fighting, translation, shared interest, and negotiation
-     produced an alliance without reducing it to friendship.
-- Split Cholula into two scenes:
-  1. what made it a major sacred and route center;
-  2. what is known about the massacre, why the surviving stories conflict, and
-     why a later warning story does not transfer command responsibility.
-- Added visibly captioned, locally optimized public-domain images for the
-  landing, a large Tlaxcala map, Moctezuma II, and Cortés.
-- Kept later depictions explicitly separate from historical likeness or现场记录.
-- Corrected every production occurrence of `波通昌` to `波顿查恩`.
-- Preserved the transparent monochrome hero and fixed its intrinsic ratio with
-  `object-fit: contain`.
-- Added authored display lines and shared display-to-copy spacing tokens to
-  prevent one- or two-character title orphans and collisions.
-- Kept the two Bilibili videos directly playable and left legacy video-cover
-  files unreferenced outside the players.
-- Updated the editable Figma source non-destructively with a v3 beginner-first
-  sequence; v1 and v2 remain available for comparison.
+- Expanded the approved reading sequence from 41 to 52 consecutive scenes
+  (`00`–`51`) while preserving all eight chapter anchors and both direct video
+  players.
+- Rebuilt `00` as a proportional cut-out profile, kept “一个人，三个名字。” on
+  one line at desktop and mobile, and made `02` a first-time-reader identity /
+  stakes introduction.
+- Gave city-states, the Triple Alliance and tribute, religion / sacrifice /
+  slavery, Olutla, noble-origin evidence, and enslavement their own Chapter 1
+  scenes.
+- Rebuilt Chapter 2 around Potonchán, the twenty transferred women, baptism,
+  Doña Marina, the translation chain, the birth of “Malinche,” possible abuse,
+  Totonac politics, and her gradual understanding of Spanish aims.
+- Added a strong jade-to-red torn transition before the new Spanish chapter,
+  then explained navigation, political unification, conquistador identity,
+  Columbus, the Caribbean colonial system, Cortés in Cuba, and the 1519
+  expedition.
+- Reordered Veracruz, Tlaxcala, and Cholula as context → event → evidence.
+  Cholula now has a dedicated modern archaeological photograph and a separate
+  massacre / contested-warning scene.
+- Replaced every `奥卢塔` occurrence with `奥卢特拉`, retained both TSRat logos,
+  and removed conclusion-first `不是……而是……` phrasing from the rebuilt
+  `00`–`34` sequence.
+- Updated source, generated mirror, registry, manifests, test, product spec,
+  design handoff, and Figma V5 reference.
+- Replaced the creator route graphic on `06` with a sourced Chinese map of the
+  Triple Alliance tributary provinces and neighboring polities.
+- Rebuilt `07` as a large Codex Borbonicus image plus a three-line ritual /
+  warfare / enslavement ledger; rebuilt `17` with substantially larger language
+  fields and explanatory copy.
+- Removed the production-direction sentence from `22` and replaced it with
+  reader-facing historical context.
+- Rebuilt `23` around the 1502 Cantino planisphere and `25` around a visibly
+  qualified 1847 history painting.
+- Rebuilt `32` as a continuous conflict-to-alliance route with a full-width
+  outcome field; the prior right-side four-card matrix no longer exists.
+- Standardized all 50 visible `.eyebrow` captions to the responsive type size
+  established by scene `23`: `18.56px / 34.336px` at the checked
+  `1782 × 864` viewport and `16px / 29.6px` at `390 × 844`. Scene-specific
+  paragraph selectors no longer shrink `11` or enlarge `22`.
 
 ## Important decisions
 
-- Beginner context now precedes interpretation: identity and stakes first,
-  event sequence second, the creator's analysis third.
-- Tlaxcala's alliance is framed as political negotiation under shared pressure,
-  not as uncomplicated loyalty.
-- Cholula's evidentiary conflict remains visible. The site does not turn one
-  contested account into certainty or shift military command to the
-  interpreter.
-- Image scale, background color, alignment, and scene structure vary with the
-  argument while shared spacing and grid rules keep the page coherent.
-- Video-cover imagery is allowed only inside the direct embedded players.
-- No external analytics provider, persistence, autoplay, automatic merge, or
-  deployment-architecture change.
+- The reader does not receive Spain's full backstory before Malintzin could
+  plausibly recognise the expedition's identities and aims.
+- Historical fact, scholarly interpretation, narrative framing, and visual
+  metaphor remain explicitly separated.
+- The Cholula photograph is a modern archaeological view, not a 1519 record;
+  the massacre image remains a later history painting.
+- Image scale, background color, alignment, and density vary by historical
+  function; shared spacing rules prevent that variation from becoming disorder.
+- Large empty fields now carry either a primary visual, monumental type, or
+  readable explanatory copy. Small card typography is not used as a substitute
+  for information hierarchy on `07`, `17`, `23`, or `32`.
+- Scene captions share one responsive size token; their number boxes, labels,
+  spacing, and letter spacing retain the scene-23 hierarchy throughout the
+  editorial sequence.
+- No video-cover reuse, autoplay, external analytics, persistence, deployment
+  architecture change, automatic merge, or content-position rewrite.
 
 ## Modified files
 
 - `sites/la-malinche/index.html`, `assets/site.css`, `assets/site.js`
-- four new files under `sites/la-malinche/assets/archive/`
+- `sites/la-malinche/assets/archive/cholula-pyramid.webp`
+- `sites/la-malinche/assets/archive/{triple-alliance-map-zh.svg,codex-borbonicus-calendar.webp,cantino-planisphere.webp,columbus-landing.webp}`
 - `sites/la-malinche/{CONTENT,DESIGN,TECH,HANDOFF}.md`
 - `sites/la-malinche/site.config.json`, `site-manifest.json`
 - generated `LA-MALINCHE/` mirror
-- `README.md`, root `HANDOFF.md`, `web/portfolio-audit.md`
-- `web/sites/la-malinche/{product-spec,visual-direction,design-handoff}.md`
+- `README.md`
+- `web/sites/la-malinche/{product-spec,design-handoff}.md`
 - `tests/malinche-readiness.test.mjs`
 
 ## Validation
 
+- `npm run build:malinche`: passed.
 - `node --check sites/la-malinche/assets/site.js`: passed.
 - `node --test tests/malinche-readiness.test.mjs`: passed — 2/2.
-- `npm run build:malinche`: passed.
-- `npm run validate:sites`: passed — 11 packages.
+- `npm run validate:sites`: passed — 11 maintenance packages.
 - `npm run build:pages`: passed.
-- `npm run validate:pages`: passed — 541 local references across 67 HTML/CSS files.
-- `npm run lint`: passed with 0 errors and 24 pre-existing warnings in
-  Enheduanna and the committed Hypatia bundle.
-- Dynamic local browser layout audit passed at `1782 × 864`, `1440 × 900`,
-  `1024 × 768`, and `390 × 844`: 33 scenes, no horizontal overflow, no
-  detected display-title orphans, and preserved hero aspect ratio.
-- Visual smoke inspected the hero, landing, both Tlaxcala scenes, both Cholula
-  scenes, and the Moctezuma / Malinche / Cortés encounter on desktop and mobile.
-- Exact implementation-commit smoke passed at desktop and mobile widths:
-  33 scenes, corrected wording, no horizontal overflow or display-title
-  orphans, preserved hero ratio, and all four new archive images loaded at
-  their natural dimensions.
-- Antigravity extended multi-browser, keyboard, and visual-regression QA:
-  pending.
+- `npm run validate:pages`: passed — 563 local references across 67 HTML/CSS
+  files.
+- `git diff --check` and staged diff check: passed.
+- Chrome desktop visual smoke covered `00`, `01`, `05`, `13`, `16`, `22`,
+  `30`, `33`, and `34`; 52 scenes rendered with no document-level horizontal
+  overflow and the hero retained its `1065 / 1476` ratio.
+- Chrome `390 × 844` device-metrics smoke covered the hero, three-name table,
+  Chapter 2 → 3 transition, and Cholula. No display title overflow remained;
+  the document width stayed within the viewport.
+- Current Chrome desktop smoke at `1782 × 864` covered `06`, `07`, `17`, `22`,
+  `23`, `25`, and `32`. The new images loaded at their recorded natural
+  dimensions; `17` rendered a 112 px title; `32` had no overflow and maintained
+  a 40 px horizontal gap before the outcome paragraph.
+- Current Chrome `390 × 844` smoke covered `07` and `32`; all seven revised
+  scenes (`06`, `07`, `17`, `22`, `23`, `25`, `32`) stayed within the 375 px
+  layout viewport.
+- Current exact-preview browser smoke measured all 50 visible captions:
+  desktop returned one `18.56px` size and one `34.336px` line height; mobile
+  returned one `16px` size and one `29.6px` line height. No caption overflow,
+  document-level overflow, or broken loaded image was found. The longest `47`
+  caption wraps to two lines on mobile.
+- The exact implementation preview above is the recorded visual target; the
+  following handoff-only commit does not alter the published mirror.
+- Antigravity extended multi-browser, keyboard, full-route, and visual
+  regression QA: pending.
 
 ## Known issues
 
-- External scholarly bibliography remains limited to the manuscript and
-  visible image-source records; broader claim expansion needs a separate source
-  review.
-- Google-hosted fonts fall back to installed Chinese serif/sans fonts if the
-  service is unavailable.
-- Bilibili embeds require network access and may behave differently behind
-  regional or privacy restrictions.
-
-## Pending
-
-- Review the exact-commit preview and PR #26.
-- Run Antigravity extended QA if comprehensive multi-browser, keyboard, and
-  visual comparison is desired.
+- Authorization status for selected `Women Story/Malinche/photo` images still
+  needs confirmation before reuse outside this project.
+- Broader historical bibliography expansion requires a separate scholarly
+  source review; the creator manuscript remains the primary content source.
+- Google-hosted fonts may fall back to installed Chinese serif / sans fonts.
+- Bilibili embeds depend on regional and privacy-network conditions.
 
 ## Git state
 
 - Branch: `codex/site-la-malinche`
-- Pre-refinement head: `b7d21fb`
-- Refinement implementation: `e629f30`
-- Current worktree: this verified-preview handoff update only.
-- Merge: not authorized and not performed.
+- 52-screen implementation: `697dd53878cfd93ee59211558ed2c255f85f9718`
+- Visual hierarchy and evidence revision:
+  `6ebda79f398f50c303506a7dab652740a6ddec1d`.
+- Scene-caption hierarchy revision:
+  `b18a62d`.
+- Merge: explicitly authorized by the creator for PR #28 on 2026-07-28; no
+  additional confirmation is required for this delivery.
+
+## Next step
+
+Merge PR #28 and verify the existing Pages workflow and live
+`/My-Website/LA-MALINCHE/` page. Antigravity extended QA remains optional if a
+comprehensive overlay, keyboard, multi-browser, and full-route audit is desired.
