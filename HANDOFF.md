@@ -1,5 +1,57 @@
 # Repository handoff
 
+## 2026-07-29: Malinche archive cover and carousel-frame correction
+
+### Current target
+
+Use the creator's formal Malinche cover on the parent Website Archive card and
+make the La Malinche Featured World slide occupy the same image frame as the
+other three `Daughters of Time` entries.
+
+### Completed
+
+- The La Malinche root card now reads `assets/cover-green.webp`, the existing
+  optimized derivative of `Women Story/Malinche/封面2.png`.
+- The cover is limited to the parent Website Archive card. The Malinche article
+  and Living Atlas carousel continue to use the transparent cut-out.
+- Living Atlas English and Chinese now place all four portraits in one shared
+  square `.featured-portrait` frame with `object-fit: contain`.
+- Removed Malinche-only desktop and mobile maximum-height rules. The source
+  figure keeps its `1065 × 1476` proportion and bottom alignment without
+  stretching or cropping.
+- Updated source, generated Living Atlas mirror, asset documentation, and
+  targeted tests. The full Pages build's unrelated Next.js mirror churn was
+  removed from the review scope.
+
+### Verification
+
+- Targeted source / maintenance tests: passed — 13/13.
+- `npm run build:living-atlas`: passed.
+- `npm run build:malinche`: passed.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed — 650 local references across 76 HTML/CSS
+  files.
+- `npm run validate:sites`: passed — 11 packages.
+- Browser basic smoke:
+  - root archive loaded the `2560 × 1440` green cover in the Malinche card;
+  - Living Atlas desktop measured Hypatia and Malinche at the same
+    `389.67 × 389.67px` frame;
+  - Living Atlas `390 × 844` measured Malinche at `335 × 335px`;
+  - the transparent figure remained `contain`, and no horizontal overflow was
+    found.
+- Antigravity extended cross-browser and visual-regression QA: pending.
+
+### Git state
+
+- Branch: `codex/sync-malinche-series`.
+- Implementation commit: `333063b`.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/30>.
+- Exact Living Atlas preview:
+  <https://raw.githack.com/TSRat/My-Website/333063b/THE-LIVING-ATLAS/zh.html>.
+- The generated root archive was smoke-checked locally; it has no independently
+  committed `docs/` preview because `docs/` is the ignored Pages artifact.
+- Merge: not authorized and not performed.
+
 ## 2026-07-28: Daughters of Time 003 cross-site sync
 
 ### Current target
