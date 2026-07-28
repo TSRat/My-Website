@@ -441,6 +441,14 @@ main section {
   margin-top: 2rem;
 }
 
+.featured-portrait {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  object-position: center;
+}
+
 .hypatia-portrait {
   mix-blend-mode: multiply;
   filter: grayscale(1) contrast(1.32) brightness(1.06);
@@ -448,10 +456,6 @@ main section {
 }
 
 .malinche-portrait {
-  display: block;
-  width: 100%;
-  max-height: min(70vh, 720px);
-  object-fit: contain;
   object-position: center bottom;
   filter: grayscale(1) contrast(1.06);
 }
@@ -727,12 +731,6 @@ main section {
   .featured-content {
     grid-template-columns: minmax(0, 1fr) !important;
     gap: 2rem !important;
-  }
-
-  .malinche-portrait {
-    width: min(82vw, 420px);
-    max-height: 58vh;
-    margin-inline: auto;
   }
 
   .featured-world .grid-container > div[style*="grid-column"] {

@@ -219,7 +219,7 @@ test("Living Atlas Hypatia portrait uses a real alpha-backed asset", async () =>
   for (const page of [english, chinese]) {
     assert.match(
       page,
-      /class="hypatia-portrait" src="assets\/hypatia-sketch-transparent\.webp"/,
+      /class="featured-portrait hypatia-portrait" src="assets\/hypatia-sketch-transparent\.webp"/,
     );
     assert.doesNotMatch(page, /assets\/hypatia-sketch\.jpg/);
   }
@@ -253,13 +253,22 @@ test("Living Atlas features all four Daughters of Time stories including Malinch
     assert.match(page, /href="\.\.\/LA-MALINCHE\/"/);
     assert.match(
       page,
-      /class="malinche-portrait"\s+src="\.\.\/LA-MALINCHE\/assets\/malinche-cutout\.png"/,
+      /class="featured-portrait malinche-portrait"\s+src="\.\.\/LA-MALINCHE\/assets\/malinche-cutout\.png"/,
+    );
+    assert.equal(
+      (page.match(/class="featured-portrait(?: [^"]+)?"/g) ?? []).length,
+      4,
+      "all four portraits must use the same carousel frame",
     );
   }
 
   assert.match(english, /She survived by translating; history translated her into betrayal\./);
   assert.match(chinese, /她靠翻译活了下来，历史却把她翻译成了背叛。/);
-  assert.match(styles, /\.malinche-portrait\s*{[^}]*object-fit:\s*contain/s);
+  assert.match(
+    styles,
+    /\.featured-portrait\s*{[^}]*aspect-ratio:\s*1\s*\/\s*1[^}]*object-fit:\s*contain/s,
+  );
+  assert.doesNotMatch(styles, /\.malinche-portrait\s*{[^}]*max-height:/s);
   assert.deepEqual(
     [...portrait.subarray(0, 8)],
     [137, 80, 78, 71, 13, 10, 26, 10],

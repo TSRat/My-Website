@@ -72,7 +72,7 @@ test("La Malinche keeps the 52-screen beginner-first editorial and evidence cont
   assert.match(html, /瓜乌特莫克被俘/);
   assert.doesNotMatch(`${html}\n${js}`, /波通昌/);
   assert.doesNotMatch(html, /页面从中部美洲|接下来补上她刚刚听懂的背景/);
-  assert.doesNotMatch(`${html}\n${css}\n${configText}\n${registry}`, /cover-(?:green|red)\.webp/);
+  assert.doesNotMatch(`${html}\n${css}\n${js}\n${registry}`, /cover-(?:green|red)\.webp/);
   assert.doesNotMatch(html, /创作者提供|创作者解释性地图|并非十六世纪|不是马琳切的历史肖像/);
   assert.match(css, /--scene-caption-size:\s*clamp\(1rem,\s*1\.2vw,\s*1\.16rem\)/);
   assert.match(css, /\.route-copy p:not\(\.eyebrow\)/);
@@ -83,6 +83,7 @@ test("La Malinche keeps the 52-screen beginner-first editorial and evidence cont
   assert.match(js, /aria-pressed/);
   assert.equal(manifest.series, "时间的女儿 · 003");
   assert.equal(config.hub.eyebrow, "DAUGHTERS OF TIME · 003");
+  assert.equal(config.hub.cover, "assets/cover-green.webp");
   assert.equal(manifest.contentSource.screens, 52);
   assert.equal(manifest.analytics.provider, "none");
   assert.equal(manifest.analytics.persistence, false);
