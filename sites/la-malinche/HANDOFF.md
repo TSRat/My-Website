@@ -6,14 +6,16 @@
 - Figma V5: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=16-2>
 - Pull Request: <https://github.com/TSRat/My-Website/pull/28>
 - Verified exact-implementation preview:
-  <https://raw.githack.com/TSRat/My-Website/697dd53878cfd93ee59211558ed2c255f85f9718/LA-MALINCHE/index.html>
+  <https://raw.githack.com/TSRat/My-Website/6ebda79f398f50c303506a7dab652740a6ddec1d/LA-MALINCHE/index.html>
 
 ## Current goal
 
 Deliver the creator-approved 52-screen beginner chronology without restarting
 the established visual rebuild. Preserve Malintzin's available perspective
 through Chapter 2, make the Chapter 2 → 3 shift unmistakable, expand the Spanish
-background, and give Tlaxcala and Cholula enough independent explanation.
+background, and give Tlaxcala and Cholula enough independent explanation. The
+current revision specifically replaces undersized card copy, an incorrect map,
+visible production notes, and repeated right-side four-card compositions.
 
 ## Completed
 
@@ -41,6 +43,17 @@ background, and give Tlaxcala and Cholula enough independent explanation.
   `00`–`34` sequence.
 - Updated source, generated mirror, registry, manifests, test, product spec,
   design handoff, and Figma V5 reference.
+- Replaced the creator route graphic on `06` with a sourced Chinese map of the
+  Triple Alliance tributary provinces and neighboring polities.
+- Rebuilt `07` as a large Codex Borbonicus image plus a three-line ritual /
+  warfare / enslavement ledger; rebuilt `17` with substantially larger language
+  fields and explanatory copy.
+- Removed the production-direction sentence from `22` and replaced it with
+  reader-facing historical context.
+- Rebuilt `23` around the 1502 Cantino planisphere and `25` around a visibly
+  qualified 1847 history painting.
+- Rebuilt `32` as a continuous conflict-to-alliance route with a full-width
+  outcome field; the prior right-side four-card matrix no longer exists.
 
 ## Important decisions
 
@@ -52,6 +65,9 @@ background, and give Tlaxcala and Cholula enough independent explanation.
   the massacre image remains a later history painting.
 - Image scale, background color, alignment, and density vary by historical
   function; shared spacing rules prevent that variation from becoming disorder.
+- Large empty fields now carry either a primary visual, monumental type, or
+  readable explanatory copy. Small card typography is not used as a substitute
+  for information hierarchy on `07`, `17`, `23`, or `32`.
 - No video-cover reuse, autoplay, external analytics, persistence, deployment
   architecture change, automatic merge, or content-position rewrite.
 
@@ -59,6 +75,7 @@ background, and give Tlaxcala and Cholula enough independent explanation.
 
 - `sites/la-malinche/index.html`, `assets/site.css`, `assets/site.js`
 - `sites/la-malinche/assets/archive/cholula-pyramid.webp`
+- `sites/la-malinche/assets/archive/{triple-alliance-map-zh.svg,codex-borbonicus-calendar.webp,cantino-planisphere.webp,columbus-landing.webp}`
 - `sites/la-malinche/{CONTENT,DESIGN,TECH,HANDOFF}.md`
 - `sites/la-malinche/site.config.json`, `site-manifest.json`
 - generated `LA-MALINCHE/` mirror
@@ -73,7 +90,7 @@ background, and give Tlaxcala and Cholula enough independent explanation.
 - `node --test tests/malinche-readiness.test.mjs`: passed — 2/2.
 - `npm run validate:sites`: passed — 11 maintenance packages.
 - `npm run build:pages`: passed.
-- `npm run validate:pages`: passed — 560 local references across 67 HTML/CSS
+- `npm run validate:pages`: passed — 563 local references across 67 HTML/CSS
   files.
 - `git diff --check` and staged diff check: passed.
 - Chrome desktop visual smoke covered `00`, `01`, `05`, `13`, `16`, `22`,
@@ -82,8 +99,15 @@ background, and give Tlaxcala and Cholula enough independent explanation.
 - Chrome `390 × 844` device-metrics smoke covered the hero, three-name table,
   Chapter 2 → 3 transition, and Cholula. No display title overflow remained;
   the document width stayed within the viewport.
-- Exact-commit preview smoke confirmed 52 scenes, the new 2200 × 1650 Cholula
-  image, proportional hero, and both natural-ratio TSRat marks.
+- Current Chrome desktop smoke at `1782 × 864` covered `06`, `07`, `17`, `22`,
+  `23`, `25`, and `32`. The new images loaded at their recorded natural
+  dimensions; `17` rendered a 112 px title; `32` had no overflow and maintained
+  a 40 px horizontal gap before the outcome paragraph.
+- Current Chrome `390 × 844` smoke covered `07` and `32`; all seven revised
+  scenes (`06`, `07`, `17`, `22`, `23`, `25`, `32`) stayed within the 375 px
+  layout viewport.
+- The exact implementation preview above is the recorded visual target; the
+  following handoff-only commit does not alter the published mirror.
 - Antigravity extended multi-browser, keyboard, full-route, and visual
   regression QA: pending.
 
@@ -100,7 +124,8 @@ background, and give Tlaxcala and Cholula enough independent explanation.
 
 - Branch: `codex/site-la-malinche`
 - 52-screen implementation: `697dd53878cfd93ee59211558ed2c255f85f9718`
-- Verified handoff record: `f6e80a5e26c4640b7ab52f514f4cdf21ab37f1fc`.
+- Visual hierarchy and evidence revision:
+  `6ebda79f398f50c303506a7dab652740a6ddec1d`.
 - Merge: not authorized and not performed.
 
 ## Next step
