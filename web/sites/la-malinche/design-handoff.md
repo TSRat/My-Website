@@ -53,6 +53,14 @@
 | --- | --- |
 | `v5 · 52-screen chronology + Chapter 2→3 hinge` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=16-2> |
 
+### V6 last four chapters
+
+| Frame | Node |
+| --- | --- |
+| `v6 · 35–69 last-four-chapter catalogue` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=17-2> |
+| `Chapter 8 · Afterlives` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=22-2> |
+| `Implementation contracts` | <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=22-61> |
+
 ## Editable system
 
 - Six required pages are present.
@@ -66,9 +74,10 @@
   - `Archive Annotation`
 - Desktop, mobile, translation, selected, annotation, loading, error, and keyboard-focus states are represented.
 - The supplied cut-out, Codex page, and 1524 map are placed as actual image fills.
-- V1–V4 remain intact for comparison. V5 is the current implementation source
-  for the 52-scene count, beginner chronology, Chapter 2 → 3 visual hinge,
-  expanded Spanish background, and revised Tlaxcala / Cholula sequence.
+- V1–V5 remain intact for comparison. V5 remains authoritative for scenes
+  `00–34`; V6 is the implementation source for the expanded `35–69` sequence,
+  the video position between `60` and `61`, the four evidence labels, and the
+  20–24px desktop reading-size contract.
 
 ## Implementation mapping
 

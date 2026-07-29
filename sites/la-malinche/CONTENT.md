@@ -25,7 +25,7 @@ The opening now answers three questions before presenting the interpretation:
 2. Why did multilingual mediation matter in the 1519 campaign?
 3. Why is participation not identical to military or colonial decision power?
 
-The 52-scene order now stays inside Malintzin's available world through the end
+The 70-scene order now stays inside Malintzin's available world through the end
 of Chapter 2. It explains enslavement, Potonchán, baptism, translation, the
 birth of “Malinche,” the Totonac encounter, and her gradual recognition of
 Spanish intentions before making a visibly disruptive transition to Chapter 3.
@@ -40,11 +40,16 @@ place, and political context; the second explains the event, Malinche’s role,
 and the evidence boundary. Do not collapse either pair back into a verdict-only
 screen.
 
-Chapters 5 and 6 now read as an event chain rather than a single conclusion:
-reception becomes occupation; the Toxcatl festival becomes a massacre;
-Moctezuma’s mediation fails; the coalition retreats; smallpox and regrouping
-change the field; brigantines close the lake; water, food, roads, and time become
-siege weapons; the city falls after continued resistance.
+Chapters 5 and 6 now use eighteen scenes to teach the event chain before
+interpreting it: the city’s lake infrastructure; the first meeting; gifts and
+hostage rule; the Narváez / Alvarado split; the Toxcatl massacre; Moctezuma’s
+failed mediation and disputed death; the rain retreat; smallpox; coalition
+rebuilding; brigantines; blockade; resistance; negotiation; and the city’s
+fall. Chapter 7 uses seven scenes for colonial Mexico City, Martín, continuing
+translation, Coyoacán, marriage, Honduras, Olutla, and the thinning record.
+Chapter 8 uses nine scenes to separate early records from the 1826 nationalist
+novel, `malinchismo`, feminist rereading, public monuments, and the final
+responsibility ledger.
 
 ## Eight manuscript chapters
 
@@ -169,6 +174,14 @@ The ending must remain morally double:
   Vanderlyn’s 1847 painting `Landing of Columbus`, Wikimedia Commons, Public
   Domain. Its caption explicitly identifies it as a nineteenth-century
   historical imagining rather than an eyewitness record.
+- `assets/archive/malinche-statue-1982.jpg`: resized photograph by Javier
+  Delgado Rosas / Nanahuatzin of the Malinche figure in Julián Martínez and
+  M. Maldonado’s 1982 `Monumento al Mestizaje`, Wikimedia Commons, released
+  into the Public Domain. The scene identifies it as a modern monument.
+- `assets/archive/malinche-mural-tlaxcala.jpg`: resized photograph by Wolfgang
+  Sauber of the Malinche mural in Tlaxcala’s Palacio de Gobierno, 2008,
+  Wikimedia Commons, CC BY-SA 3.0. The visible caption includes attribution
+  and does not present the mural as a sixteenth-century likeness.
 - `assets/creator/isabella-castile.webp`,
   `assets/creator/ferdinand-aragon.webp`,
   `assets/creator/reconquista-painting.webp`, and

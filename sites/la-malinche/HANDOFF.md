@@ -1,5 +1,68 @@
 # La Malinche handoff
 
+## 2026-07-29 · 后四章 35–69 屏重构
+
+### 当前目标
+
+保留既有 `00–34` 初学者叙事与视频播放器，把第五至第八章扩展为
+`35–69` 的连续解释链，并保持原稿的限定语、责任分层与双重结论。
+
+### 已完成
+
+- 全站由 52 屏扩展为 70 屏；第五章从 `35` 开始，第六章从 `44`
+  开始，第七章从 `54` 开始，第八章从 `61` 开始。
+- 视频剧场保留在 `60` 与 `61` 之间，站内没有在播放器以外使用视频
+  封面。
+- 第五章补齐湖城结构、三方会面、礼物、拘押、两个战场、节庆屠杀、
+  蒙特苏马死亡分歧与悲痛之夜。
+- 第六章补齐天花、联盟、十三艘双桅帆船、封锁、围城压力、抵抗、
+  谈判、城市陷落与 1522 年全球背景。
+- 第七章补齐殖民墨西哥城、马丁、持续翻译、科约阿坎、婚姻与洪都拉斯、
+  奥卢特拉重逢记录和晚年档案变薄。
+- 第八章补齐早期记录、1826 年小说、民族母亲寓言、`malinchismo`、
+  女性主义重读、时代错置、公共纪念物和最终责任账。
+- 新增 1982 年混血纪念碑中的马琳切雕像照片（Public Domain）与
+  特拉斯卡拉政府宫壁画照片（CC BY-SA 3.0）。
+- Figma V6：
+  <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=17-2>。
+
+### 重要决定
+
+- 原稿继续是内容权威；Figma V5 保留 `00–34`，V6 只负责 `35–69`。
+- 桌面正文目标为 20–24px、题注 16–18px、标题 56–92px；每屏通过
+  图像比例、色场、时间轴、档案、地图或法律账簿形成不同结构。
+- 页面明确区分史实、学术解释、叙事框架与视觉隐喻；后世图像不作为
+  十六世纪现场记录。
+
+### 修改文件
+
+- `sites/la-malinche/` 权威源码、文档、清单和两张新增档案图
+- `web/sites/la-malinche/product-spec.md` 与 `design-handoff.md`
+- `tests/malinche-readiness.test.mjs`
+- `README.md`、根 `HANDOFF.md` 与 `LA-MALINCHE/` 生成镜像
+
+### 验证与交付状态
+
+- `npm run build:malinche`：通过。
+- `node --check sites/la-malinche/assets/site.js`：通过。
+- `node --test tests/malinche-readiness.test.mjs`：通过，2/2。
+- `npm run validate:sites`：通过，11 个站点包。
+- `npm run build:pages`：通过。
+- `npm run validate:pages`：通过，703 个本地引用、78 个 HTML/CSS 文件。
+- 内置浏览器桌面 smoke：70 屏、无横向溢出；`35`、`44`、`61`、
+  `68`、`69` 已直接检查；两张新增公共图像按自然尺寸加载。
+- 390×844 的独立 Chrome 截图受当前运行环境黑屏限制，未形成可用视觉
+  证据；响应式 CSS 已保留，但窄屏人工复核仍列入 Antigravity 范围。
+- `build:pages` 对两个无关的 Next.js 静态镜像产生了哈希构建变动；这些
+  文件不属于本任务，不会暂存或进入 PR。
+- PR 与精确提交预览在交付提交后补齐。
+- Antigravity 多设备 / 多浏览器 / 视觉回归 QA：待后续扩展检查。
+
+### 当前分支与下一步
+
+- Branch: `codex/malinche-last-four-chapters`
+- 下一步：提交、推送、创建 PR，并打开精确提交预览。
+
 ## 2026-07-29 · Website Archive 封面
 
 - 按创作者本次明确要求，根网站档案馆中的 La Malinche 卡片改用
