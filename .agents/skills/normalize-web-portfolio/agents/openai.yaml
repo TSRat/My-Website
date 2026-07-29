@@ -1,4 +1,4 @@
 interface:
   display_name: "Normalize Web Portfolio"
-  short_description: "Standardize sites with scoped QA and Antigravity handoff"
-  default_prompt: "Use $normalize-web-portfolio to modernize the website portfolio, run basic submission checks, and hand comprehensive browser and visual regression QA to Antigravity."
+  short_description: "Modernize sites by creative, service, or information duty"
+  default_prompt: "Use $normalize-web-portfolio to classify each site, preserve identity and asset roles, inventory shared consumers, modernize infrastructure, verify complete collection and renderer parity, and apply literal creator corrections with cache-resistant preview and production QA."

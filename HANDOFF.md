@@ -1,5 +1,105 @@
 # Repository handoff
 
+## 2026-07-29: IVORY ARCHIVE lessons added to five website skills
+
+### Current target
+
+Add the reusable lessons from IVORY ARCHIVE's 75-item beginner rewrite,
+dual-renderer delivery, Chinese title-orphan correction, preview iteration,
+authorized merge, and production verification to the existing five-skill
+website suite. Preserve the prior La Malinche and Hildegard correction rules;
+do not force IVORY's four-part editorial structure onto unrelated sites.
+
+### Completed
+
+- Added independent body-introduction rules: titles, decks, metadata, listing
+  cards, and previous screens do not excuse an unexplained first body mention.
+- Added a supported four-part Information contract for recurring briefings:
+  Background introduces entities, Event summarizes what happened and the main
+  result, Details supplies punctuated method/data/findings, and Analysis derives
+  a conclusion from those details before widening it.
+- Added single source-link placement contracts, separation of source navigation
+  from analysis styling, and checks against duplicate title/bottom links.
+- Added collection-wide contracts across the suite. Creator examples reveal
+  defects but do not bound the repair; every affected record and public
+  renderer/mirror must pass schema, section-role, punctuation, source,
+  asset/route, and parity checks as applicable.
+- Added cache-resistant preview and production QA: use a harmless cache key or
+  equivalent hard reload, wait for fonts, and inspect final DOM, computed
+  styles, assets, overflow, and the requested result. Deployment status and old
+  screenshots are not evidence that the current commit is live.
+- Updated all five `agents/openai.yaml` prompts to expose the new collection,
+  renderer-parity, and deployed-state checks.
+
+### Verification
+
+- Skill Creator `quick_validate.py`: all five packages passed.
+- Five `agents/openai.yaml` files parsed successfully.
+- `git diff --check`: passed for the scoped skill and handoff files.
+- Website build, browser smoke, and deployment: not applicable to this
+  skill-only documentation change.
+
+### Git state
+
+- Branch: `codex/refresh-website-skills`.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/35>.
+- The dirty `codex/zhangyong-content-rebuild` worktree retains its own
+  uncommitted skill copies and unrelated site/generated files; all of those
+  site/generated files remain outside this PR.
+
+## 2026-07-29: Website skill suite correction lessons
+
+### Current target
+
+Carry the creator's five-skill website workflow split into a clean branch and
+encode the reusable lessons from the La Malinche build and its correction
+passes without collapsing Creative, Information, Service, Beginner Audit, and
+Portfolio Normalization into one generic process.
+
+### Completed
+
+- Replaced the former general `build-new-site-to-pr` package with the creator's
+  three responsibility-specific build skills plus `audit-beginner-content`.
+- Preserved `normalize-web-portfolio` as the cross-site migration workflow and
+  connected major rebuilds to the relevant responsibility-specific skill.
+- Added explicit asset-role and reuse-restriction ledgers. Hero art, archive
+  covers, video posters, directly displayed video, maps, evidence imagery,
+  portraits, logos, and motifs are no longer assumed interchangeable.
+- Added a public-copy boundary that keeps palette notes, screen counts, layout
+  rationales, asset plans, and other production narration out of visitor-facing
+  content.
+- Added four-level media inspection: intrinsic asset, wrapper, rendered media
+  box, and visible content after fitting, positioning, clipping, or masking.
+- Added shared-consumer inventories before modifying selectors, tokens,
+  components, registries, generators, or templates, with target-specific rules
+  preferred for target-specific defects.
+- Added Information and Beginner Audit rules for terminology consistency,
+  narrative viewpoint, prerequisite chronology, meaningful whitespace, and
+  promoting essential events or explanations out of metadata-sized text.
+- Added Creative guidance for controlled screen-to-screen variation while
+  retaining a coherent authored system, and Service guidance for checking
+  shared corrections across every affected route and state.
+- Updated all five `agents/openai.yaml` prompts to expose the new checks.
+
+### Verification
+
+- Skill structural validation: passed for all five packages with the
+  `skill-creator` `quick_validate.py` script. `PyYAML` was installed only in
+  `/private/tmp/codex-skill-validator` for the validator and did not change
+  repository dependencies.
+- Repository diff checks: passed — `git diff --check`; final staged scope and
+  status recorded in the Pull Request.
+- Website build, browser smoke, and Preview: not applicable because this change
+  modifies only repository-local skill documentation and metadata.
+
+### Git state
+
+- Branch: `codex/refresh-website-skills`.
+- Base: `03dfa90` (`origin/main` at branch creation).
+- The unrelated dirty `codex/zhangyong-content-rebuild` worktree was not
+  modified, stashed, or included.
+- Commit, push, and Pull Request: pending.
+
 ## 2026-07-29: Malinche archive cover and carousel-frame correction
 
 ### Current target
