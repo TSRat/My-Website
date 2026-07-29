@@ -33,6 +33,11 @@ Any mandatory gate scoring `0` produces `FAIL` regardless of the total.
 
 Check the title, subtitle, opening, first image, and first major heading.
 
+Then check the first meaningful body occurrence independently. A title, deck,
+metadata row, listing card, or previous screen may orient the reader, but it
+does not excuse an unexplained surname, pronoun, acronym, institution, study,
+work, or concept in the body of a direct-entry unit.
+
 Require:
 
 - a concrete subject, not only an abstract theme;
@@ -229,6 +234,16 @@ Structure must follow understanding, not visual symmetry.
 Reject a mechanical `Context / Why / Evidence / Analysis / Reflect` sequence
 when object introduction or process is missing.
 
+For an approved repeated structure, verify the content under each heading does
+that heading's job. In a Background / Event / Details / Analysis briefing:
+
+- Background introduces unfamiliar entities and prerequisites;
+- Event states what happened plus the main effect or result;
+- Details supplies concrete method, material, dates, data, or findings;
+- Analysis derives a conclusion from those details before widening it.
+
+Fail headings that merely relabel duplicated prose.
+
 ### Cards
 
 Each card must contain a useful conclusion, not only:
@@ -326,6 +341,7 @@ Prefer:
 Review:
 
 - long merged sentences containing definition, mechanism, result, and meaning;
+- unrelated facts joined with a semicolon merely to save space;
 - abstract verbs such as "reflects," "constructs," or "embodies" without the
   concrete observation;
 - pronouns without a clear referent;
@@ -391,6 +407,14 @@ expected output, undo, and destructive-risk warnings.
 
 Judge it in context. It need not contain the whole lesson, but it must complete
 its assigned job and must not be the only location of essential orientation.
+
+### Repeated collection
+
+Record the total number of entries and public renderers. Use manual samples for
+qualitative judgment, then require full-record checks for section presence and
+roles, first body introductions, punctuation, source-link count/placement,
+assets, routes, and renderer parity. Do not generalize from the creator's named
+examples to the remaining corpus.
 
 ## 12. Scoring worksheet
 

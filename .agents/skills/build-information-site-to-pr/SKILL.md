@@ -90,12 +90,18 @@ Require:
 - descriptive, directly clickable source links instead of raw URLs or generic
   "source" labels;
 - direct-entry orientation;
+- title and deck text do not discharge the first body introduction: the first
+  meaningful body mention still gives the complete unfamiliar name and role
+  before a pronoun or shortened label;
 - live reading-size floors;
 - correct use of cards, lists, tables, maps, timelines, charts, or diagrams;
 - images, captions, cards, and interactions that each perform a named
   explanatory job rather than supplying atmosphere or labels alone;
 - comprehension audits after 30 seconds, 3 minutes, and 15 minutes;
-- content, asset, localization, and data dependencies.
+- content, asset, localization, and data dependencies;
+- for repeated collections, the total record count, section-role contract,
+  source-link placement contract, and every public renderer or committed
+  mirror that must remain equivalent.
 
 Record:
 
@@ -192,6 +198,12 @@ a new branch and PR for the next correction. Modify the authoritative source,
 run its rebuild command, synchronize any committed publish mirror, and bump
 static cache keys when the delivery path requires it.
 
+When feedback applies to an archive, issue, news set, course, glossary, or
+other repeated collection, repair the complete collection rather than the
+named examples. Inventory all entries, define machine-checkable section,
+punctuation, source-link, and entity-introduction contracts, and compare every
+public renderer or generated mirror against the authoritative content.
+
 Explicit "publish directly" or "merge now" from the repository owner authorizes
 merging the scoped PR; it is not automatic merge authority for later work. If
 the owner also says not to run more checks or assigns extended QA to
@@ -206,6 +218,10 @@ design, technical, source, and handoff notes without rewriting historical
 records. A merge only triggers publication. Call production live only after the
 deployment workflow succeeds; when the owner explicitly declines waiting or
 verification, report "deployment triggered, unverified" instead.
+Use a harmless cache-busting query or equivalent hard reload when the host may
+serve stale HTML or CSS. Inspect the final DOM and computed styles; do not
+accept deployment status or a cached screenshot as proof of the current
+commit.
 
 ## Working Branch Gate
 
@@ -231,8 +247,10 @@ Define:
 - route and chapter map, search, filter, index, glossary, and related content;
 - content model, reading path, direct-entry recovery, and progress/location;
 - source, citation, update, correction, and uncertainty behavior.
-- a three-part What / How / Why structure for short entries unless the content
-  genuinely requires another form.
+- the fewest clear section roles for short entries: usually What / How / Why,
+  or an approved Background / Event / Details / Analysis contract when a
+  recurring briefing needs separate orientation, headline result, supporting
+  evidence, and derived meaning.
 
 After the branch gate, save the approved outline to
 `<site-doc-root>/<slug>/screen-outline.md` and create `product-spec.md`.
@@ -282,9 +300,9 @@ CODEX_CARD_COMPOSITION_GATE: PASS | FAIL
 Run direct-entry, headline-specificity, entity-introduction, terminology,
 three-second, ten-second, one-minute, thumbnail, deletion, overflow, alignment,
 Chinese orphan, 100% zoom, and 200% reflow checks. Also run the boundary-note,
-three-part structure, sentence paraphrase, attribution, clickable-link,
-object-and-process, container, numerical-origin, and learning-task checks from
-the content-writing reference.
+section-role, sentence paraphrase, attribution, clickable-link, object-and-
+process, container, numerical-origin, collection-coverage, and learning-task
+checks from the content-writing reference.
 
 ### 5. Engineering, preview, and PR
 
@@ -294,6 +312,11 @@ separate from presentation when it materially improves maintenance.
 
 Run the smallest relevant build, tests, lint, content/source validation, and
 real-browser smoke checks. Deploy and verify the exact review commit.
+
+For structured collections, test every record rather than only fixtures named
+in the task. Assert required sections, complete first body introductions,
+punctuated details, source count/placement, and equivalence between dynamic,
+static, server, client, and generated-mirror renderers as applicable.
 
 Create a Pull Request with:
 
@@ -324,6 +347,10 @@ Require:
 - [ ] dedicated clean branch from a verified base
 - [ ] documented sources, terms, uncertainty, and corrections
 - [ ] short entries use no more than three major explanatory parts by default
+- [ ] an approved four-part recurring briefing uses distinct Background /
+      Event / Details / Analysis roles rather than duplicating content
+- [ ] title, deck, metadata, and listing text are not used to excuse an
+      incomplete first body introduction
 - [ ] no repeated claim-level disclaimers; any needed evidence boundary appears
       once after the main explanation and is proportionate to the real issue
 - [ ] every sentence is paraphrasable by a newcomer
@@ -343,6 +370,8 @@ Require:
       levels
 - [ ] source links are direct, descriptively named anchors whose final targets
       were opened successfully; no bare URL is used as reader-facing copy
+- [ ] repeated collections pass full-record section, punctuation, source-link,
+      entity-introduction, and renderer-parity checks
 - [ ] Figma desktop/mobile system with realistic content
 - [ ] clear direct-entry orientation and information architecture
 - [ ] readable live typography and correct information containers
@@ -355,6 +384,7 @@ Require:
 - [ ] relevant build, tests, lint, source checks, and browser smoke
 - [ ] privacy-aware analytics specification
 - [ ] verified live preview
+- [ ] cache-resistant DOM/style smoke confirms the exact review commit
 - [ ] Pull Request with Figma and preview links
 - [ ] authoritative project registry updated
 

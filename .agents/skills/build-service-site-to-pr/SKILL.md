@@ -121,6 +121,11 @@ Before editing:
    field help, validation, warning, result, quote/testimonial, caption, link, or
    state-changing action.
 
+Do not use the page title, hero promise, previous step, or summary card as a
+substitute for the first complete explanation inside a direct-entry step,
+result, error, or recovery state. Name the service object, unfamiliar term,
+calculation, actor, and consequence again where that state must stand alone.
+
 For creator-provided folders, maintain an asset placement ledger with filename,
 approved screen/state, task or trust job, reuse restriction, alt/caption, source
 status, and shipped path. Do not silently substitute, relocate, crop, remove,
@@ -157,6 +162,11 @@ Keep iterative corrections on the same open PR. After merge, use a new branch
 and PR. Modify the authoritative source, rebuild any committed publish mirror,
 and bump static cache keys when required.
 
+For repeated forms, records, results, dashboards, or state families, inventory
+the complete set. Manually inspect representative paths, then run schema,
+validation, link, and renderer/client-parity checks across every applicable
+state. Do not infer complete task coverage from one happy-path example.
+
 Explicit "publish directly" or "merge now" from the repository owner authorizes
 merging the scoped PR; it does not waive safety checks for destructive,
 financial, medical, legal, privacy, authentication, authorization, or data-loss
@@ -171,6 +181,10 @@ technical, policy, and handoff notes without rewriting historical records.
 A merge only triggers publication. Call production live only after the
 deployment workflow succeeds; when the owner explicitly declines waiting or
 verification, report "deployment triggered, unverified" instead.
+When the host may cache HTML, CSS, schemas, or client bundles, use a harmless
+cache key or equivalent hard reload and inspect the live DOM, computed state,
+and requested result. A successful deployment record does not prove that the
+current task interface reached the user.
 
 ## Working Branch Gate
 
@@ -317,6 +331,8 @@ Require:
 - [ ] primary task is easy to find and complete
 - [ ] a first-time user understands what the service does, what it requires,
       how the main result is produced, and what happens next
+- [ ] direct-entry steps, results, errors, and recovery states introduce the
+      required object and consequence without relying on titles or prior steps
 - [ ] consequential numbers and decisions expose the necessary intermediate
       steps, examples, or calculation rules
 - [ ] creator assets keep their approved roles and reuse restrictions
@@ -331,6 +347,8 @@ Require:
 - [ ] descriptive semantic links with no bare or inert reader-facing URLs
 - [ ] every changed destination was clicked in the deployed preview and reached
       the intended page or documented expected external state
+- [ ] repeated records and state families pass full schema, validation, and
+      renderer/client-parity coverage rather than happy-path sampling
 - [ ] `CODEX_TASK_GATE: PASS`
 - [ ] `CODEX_STATE_GATE: PASS`
 - [ ] `CODEX_SAFETY_GATE: PASS`
@@ -338,6 +356,7 @@ Require:
 - [ ] relevant build, tests, lint, accessibility, and browser checks
 - [ ] privacy-aware analytics specification
 - [ ] verified live preview
+- [ ] cache-resistant live DOM/state smoke confirms the exact review commit
 - [ ] Pull Request with Figma and preview links
 - [ ] authoritative project registry updated
 

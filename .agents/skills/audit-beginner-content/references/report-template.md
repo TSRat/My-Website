@@ -63,6 +63,12 @@ Mark any sentence the current content does not support as `MISSING`.
 <Specific facts, examples, wording, evidence levels, visual devices, or
 interactions that should not be lost during revision.>
 
+## Collection coverage
+
+<When repeated content exists: total records, manually inspected examples,
+automated full-record contracts, public renderers/mirrors compared, and any
+uninspected remainder. Omit for a single independent artifact.>
+
 ## Recommended repair order
 
 1. <P0/P1 mental-model or safety repair>

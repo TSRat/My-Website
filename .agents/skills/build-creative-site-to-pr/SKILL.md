@@ -122,6 +122,11 @@ Before editing:
 5. classify copy before moving it: identity line, introduction, body, quote,
    caption, credit, or marginal note.
 
+For a direct-entry project, chapter, scene, or work card, do not treat the
+site title, hero, listing deck, or previous scene as the unit's first
+introduction. Name the unfamiliar person, work, place, institution, or concept
+inside the unit before switching to pronouns or shortened labels.
+
 For creator-provided folders, maintain an asset placement ledger: filename,
 approved scene, visual job, reuse restriction, alt/caption, source or creator
 status, and shipped path. Use every explicitly requested asset or report the
@@ -168,6 +173,11 @@ new branch and PR for the next correction. Modify the authoritative source,
 rebuild its committed publish mirror, and bump static cache keys when the
 existing delivery path requires it.
 
+For collection-wide changes, inventory every project, scene, chapter, or card.
+Manually inspect representative rendered units, then use content-contract,
+asset-coverage, and renderer-parity tests across the full collection. Do not
+approve a systemic rewrite after checking only the examples named in feedback.
+
 Explicit "publish directly" or "merge now" from the repository owner authorizes
 merging the scoped PR; it is not automatic merge authority for later work. If
 the owner also says not to run more checks or assigns extended QA to
@@ -182,6 +192,10 @@ technical, content, and handoff notes without rewriting historical records.
 A merge only triggers publication. Call production live only after the
 deployment workflow succeeds; when the owner explicitly declines waiting or
 verification, report "deployment triggered, unverified" instead.
+When preview or production can cache HTML or CSS, reload with a harmless cache
+key and inspect the final DOM, computed styles, assets, and requested visual
+result. Deployment status or an old screenshot is not proof that the current
+commit is visible.
 
 ## Working Branch Gate
 
@@ -331,6 +345,10 @@ Require:
       newcomer can describe at least one concrete example
 - [ ] major media, captions, cards, and interactions have a content purpose and
       do not demand untaught specialist knowledge
+- [ ] every direct-entry repeated unit introduces unfamiliar entities without
+      relying on its title, deck, listing card, or previous scene
+- [ ] collection-wide changes have full content/asset/renderer coverage rather
+      than example-only verification
 - [ ] creator assets keep their approved roles and reuse restrictions
 - [ ] no visitor-facing copy exposes internal design or implementation notes
 - [ ] shared component changes were checked against every affected peer
@@ -349,6 +367,7 @@ Require:
 - [ ] relevant build, test, lint, and browser smoke checks
 - [ ] analytics and privacy specification
 - [ ] verified live preview
+- [ ] cache-resistant DOM/asset smoke confirms the exact review commit
 - [ ] Pull Request with Figma and preview links
 - [ ] authoritative project registry updated
 

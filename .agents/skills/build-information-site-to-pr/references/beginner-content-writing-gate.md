@@ -4,7 +4,7 @@
 
 1. Core rule
 2. Consolidate evidence boundaries
-3. Use three parts for short entries
+3. Choose three or four clear roles for short entries
 4. Write sentences a newcomer can paraphrase
 5. Explain dates, causes, and relationships
 6. Integrate sources without interrupting reading
@@ -90,10 +90,11 @@ Within the main explanation:
 
 Do not turn one necessary qualifier into a general disclaimer paragraph.
 
-## 3. Use three parts for short entries
+## 3. Choose three or four clear roles for short entries
 
-For a short exhibition, artwork, event, news item, object, or concept, default
-to no more than three major explanatory parts:
+For a short exhibition, artwork, event, news item, object, or concept, use the
+fewest major explanatory parts that give every section one distinct job.
+Default to three when the material fits:
 
 ### 1. What is it?
 
@@ -125,7 +126,48 @@ Sources and, when genuinely useful, one consolidated evidence-boundary note may
 follow the three parts. Do not count either as another major explanatory
 chapter.
 
-Use more than three sections only when the material genuinely requires a longer
+For a recurring news, research, exhibition, or archive briefing, four parts may
+be clearer when background, the headline event/result, supporting specifics,
+and analysis must remain separate:
+
+### 1. Background
+
+- introduce every unfamiliar person, institution, work, study, law, or concept
+  needed for this item;
+- give the complete name and the role that matters here;
+- do not assume the title, deck, listing card, or previous item already taught
+  the reader who or what it is.
+
+### 2. Event
+
+- state what happened;
+- include the main effect, outcome, finding, or comparison result, not only the
+  fact that an exhibition opened or a study was conducted;
+- keep this as the item's headline result rather than repeating all details.
+
+### 3. Details
+
+- give the method, material, dates, participants, measurements, examples, and
+  specific findings that support the event summary;
+- use bullets when several details are parallel;
+- end every bullet with sentence punctuation;
+- split unrelated facts into separate bullets or sentences instead of joining
+  them with a semicolon.
+
+### 4. Analysis
+
+- begin from details already shown;
+- state the conclusion those details support;
+- then explain the wider meaning, consequence, or question;
+- do not introduce a new unsupported verdict or merely restate the event.
+
+Place the one descriptive original-source link after the approved final
+explanatory section unless the information architecture gives another explicit
+job to an earlier link. Do not duplicate the same source link below the title
+and again at the bottom. Keep the source link visually separate from the
+analysis container so the reader can distinguish explanation from navigation.
+
+Use more than four sections only when the material genuinely requires a longer
 journey. Do not split one short idea into "Context," "Why," "Evidence,"
 "Analysis," and "Boundary" merely to make the page look methodical.
 
@@ -175,6 +217,11 @@ Require each sentence to make clear:
 - why the sentence follows the previous one.
 
 Prefer one main job per sentence.
+
+The title, subtitle, deck, metadata, and listing card do not count as the first
+body introduction. When an unfamiliar entity first appears in the body, write
+its complete name and the role relevant to the item before using `他`, `她`,
+`其`, `该机构`, a surname alone, or another shortened reference.
 
 Replace:
 
@@ -238,6 +285,10 @@ Do not:
 Maintain an internal research record when needed. If a real limitation belongs
 on the page, summarize it once after the main explanation according to Section
 2 rather than spreading it through the reading experience.
+
+For repeated entries, define one source-link contract: count, location,
+label pattern, direct target, and whether external-link indication is used.
+Apply it consistently to every entry and every renderer.
 
 ## 7. Name and implement clickable links
 
@@ -349,7 +400,25 @@ For short entries:
 
 - count major explanatory headings;
 - combine artificial Context, Why, Evidence, Analysis, and Boundary fragments;
-- preserve only the clearest three-part learning sequence.
+- preserve the clearest three-part learning sequence, or the approved four-part
+  briefing contract when all four roles are genuinely distinct.
+
+### Section-role and first-body-mention scan
+
+For each repeated entry:
+
+- confirm Background introduces unfamiliar entities;
+- confirm Event includes the headline effect or result;
+- confirm Details contains concrete support and every bullet ends with
+  punctuation;
+- confirm Analysis derives from the details before widening the conclusion;
+- confirm unrelated facts are not glued together with semicolons;
+- confirm the first body mention is complete even when the title or deck already
+  names the entity;
+- confirm the source-link count and placement match the approved contract.
+
+Run these checks across the complete collection. A repaired example does not
+prove that the remaining records or another renderer are correct.
 
 ### Paraphrase test
 
@@ -434,4 +503,25 @@ CODEX_PLAIN_LANGUAGE_GATE: PASS | FAIL
 meaningful dispute, uncertainty, missing record, reconstruction, or
 interpretive limit needs explanation. Keep it brief unless that issue is itself
 important content.>
+```
+
+For an approved recurring four-part briefing, use:
+
+```markdown
+# <Concrete, representative title>
+
+## Background
+<Complete first body introduction of unfamiliar entities and necessary context.>
+
+## Event
+<What happened plus the main effect, outcome, or result.>
+
+## Details
+- <Method, material, date, data point, or finding.>
+- <A separate supporting fact with sentence punctuation.>
+
+## Analysis
+<Conclusion derived from the details, followed by the wider implication.>
+
+[<Organization｜descriptive original page name>](<direct URL>)
 ```

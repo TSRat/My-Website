@@ -1,4 +1,4 @@
 interface:
   display_name: "Normalize Web Portfolio"
   short_description: "Modernize sites by creative, service, or information duty"
-  default_prompt: "Use $normalize-web-portfolio to classify each existing site, preserve its identity and asset roles, inventory shared-component consumers before changes, modernize shared infrastructure, and apply screenshot-based creator corrections literally with scoped Codex QA and explicit Antigravity handoff."
+  default_prompt: "Use $normalize-web-portfolio to classify each site, preserve identity and asset roles, inventory shared consumers, modernize infrastructure, verify complete collection and renderer parity, and apply literal creator corrections with cache-resistant preview and production QA."

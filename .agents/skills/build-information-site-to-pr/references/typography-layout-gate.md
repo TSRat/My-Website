@@ -546,6 +546,21 @@ Use character-range geometry, screenshot inspection, or both to identify the
 number of Chinese characters on the final rendered line. Exempt code, tables,
 deliberate vertical writing, and other documented special layouts.
 
+After preview deployment, repeat the relevant checks with a harmless
+cache-busting query parameter or equivalent hard reload when the host may cache
+HTML or CSS. Inspect:
+
+- the final DOM contains the expected structured no-break span or equivalent;
+- the computed `white-space`, `text-wrap`, and `line-break` values are current;
+- fonts are loaded before measuring lines;
+- the protected phrase stays on one line without horizontal overflow;
+- the requested commit, not a previously cached build, is being rendered.
+
+Do not accept deployment status, an old screenshot, or unverified visible text
+as proof that the current markup and styles shipped. After an authorized merge,
+wait for the production workflow and repeat the smoke on the public URL before
+reporting the change live.
+
 Fail the Codex gate when:
 
 - a required template or viewport was not checked;

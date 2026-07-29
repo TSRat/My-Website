@@ -44,6 +44,32 @@ ordering, disclosure, links, or cards work.
 State any surface you could not inspect. Do not infer a rendered or interactive
 pass from source alone.
 
+## Audit repeated collections and independent reading units
+
+When the artifact contains repeated stories, cards, chapters, records, steps,
+or states:
+
+- record the total item count, template types, and every renderer or committed
+  mirror that readers can encounter;
+- treat the title, deck, metadata, previous card, and preceding screen as
+  orientation, not as a substitute for the first complete body introduction;
+- require the first meaningful body mention of an unfamiliar person,
+  institution, work, study, service, or concept to name it and explain its role
+  before using a pronoun or shortened reference;
+- define the job of each repeated section and fail content placed under the
+  wrong heading—for example, background introduces the subject, event states
+  what happened and the main result, details give method/data/examples, and
+  analysis derives a conclusion from those details;
+- define one source-link placement contract and flag duplicate title-level and
+  closing links unless both perform distinct reader jobs;
+- distinguish manual sampling from full coverage. Use representative rendered
+  pages for qualitative judgment, then apply schema, punctuation, link, and
+  renderer-parity checks to the complete collection before calling a systemic
+  rewrite complete.
+
+Do not infer that the remaining collection is correct because the examples
+named by the creator were repaired.
+
 ## Audit creator feedback literally
 
 When the audit is triggered by screenshots or creator comments, build a visible
@@ -115,6 +141,10 @@ Unless the user specifies another audience, assume:
 Do not treat the reader as an expert. Do not treat them as incapable of common
 sense.
 
+Judge each direct-entry reading unit independently. A reader who opens one
+article, result panel, or story should not need to remember an identity or
+definition that appeared only in a listing card, title, deck, or previous item.
+
 Before scoring, write a short internal prerequisite map:
 
 1. What can this reader reasonably know already?
@@ -153,9 +183,10 @@ Use every gate in `references/audit-rubric.md`:
 - numbers, comparisons, and directional results;
 - facts, interpretations, editorial analysis, and causality;
 - disputes, limitations, and disclaimer restraint;
-- structure, cards, tables, visuals, and captions;
+- section-role integrity, structure, cards, tables, visuals, and captions;
 - operations, interactions, and exercise difficulty;
 - language, multilingual behavior, and clickable links;
+- repeated-collection coverage and source/renderer parity;
 - final recall and application.
 
 Score each dimension from 0 to 2:

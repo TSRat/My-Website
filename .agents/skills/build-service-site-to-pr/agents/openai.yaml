@@ -1,4 +1,4 @@
 interface:
   display_name: "Build Service Site to PR"
   short_description: "Build a safe service site around a complete user task"
-  default_prompt: "Use $build-service-site-to-pr to approve the task-and-state blueprint for initial production, or apply the bounded creator-correction loop without weakening safety, changing asset roles, or overlooking shared states, then deliver preview and pull request."
+  default_prompt: "Use $build-service-site-to-pr to approve the task-and-state blueprint or apply the bounded correction loop, preserve safety and asset roles, verify every affected state and renderer, then deliver a cache-checked preview and pull request."

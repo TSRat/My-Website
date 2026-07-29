@@ -1,5 +1,52 @@
 # Repository handoff
 
+## 2026-07-29: IVORY ARCHIVE lessons added to five website skills
+
+### Current target
+
+Add the reusable lessons from IVORY ARCHIVE's 75-item beginner rewrite,
+dual-renderer delivery, Chinese title-orphan correction, preview iteration,
+authorized merge, and production verification to the existing five-skill
+website suite. Preserve the prior La Malinche and Hildegard correction rules;
+do not force IVORY's four-part editorial structure onto unrelated sites.
+
+### Completed
+
+- Added independent body-introduction rules: titles, decks, metadata, listing
+  cards, and previous screens do not excuse an unexplained first body mention.
+- Added a supported four-part Information contract for recurring briefings:
+  Background introduces entities, Event summarizes what happened and the main
+  result, Details supplies punctuated method/data/findings, and Analysis derives
+  a conclusion from those details before widening it.
+- Added single source-link placement contracts, separation of source navigation
+  from analysis styling, and checks against duplicate title/bottom links.
+- Added collection-wide contracts across the suite. Creator examples reveal
+  defects but do not bound the repair; every affected record and public
+  renderer/mirror must pass schema, section-role, punctuation, source,
+  asset/route, and parity checks as applicable.
+- Added cache-resistant preview and production QA: use a harmless cache key or
+  equivalent hard reload, wait for fonts, and inspect final DOM, computed
+  styles, assets, overflow, and the requested result. Deployment status and old
+  screenshots are not evidence that the current commit is live.
+- Updated all five `agents/openai.yaml` prompts to expose the new collection,
+  renderer-parity, and deployed-state checks.
+
+### Verification
+
+- Skill Creator `quick_validate.py`: all five packages passed.
+- Five `agents/openai.yaml` files parsed successfully.
+- `git diff --check`: passed for the scoped skill and handoff files.
+- Website build, browser smoke, and deployment: not applicable to this
+  skill-only documentation change.
+
+### Git state
+
+- Branch: `codex/refresh-website-skills`.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/35>.
+- The dirty `codex/zhangyong-content-rebuild` worktree retains its own
+  uncommitted skill copies and unrelated site/generated files; all of those
+  site/generated files remain outside this PR.
+
 ## 2026-07-29: Website skill suite correction lessons
 
 ### Current target

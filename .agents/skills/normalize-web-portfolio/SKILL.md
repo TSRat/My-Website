@@ -327,6 +327,10 @@ Record:
 - whether prerequisite concepts, processes, numerical origins, concrete
   results, and examples restore the intermediate steps omitted by specialist
   sources;
+- whether titles, decks, metadata, listing cards, or previous entries are being
+  used to excuse an incomplete first body introduction in direct-entry units;
+- for repeated collections, whether Background / Event / Details / Analysis or
+  another approved section contract gives every heading a distinct job;
 - direct-entry context, chapter/location, search, index, and related content;
 - terminology, sources, evidence, uncertainty, and correction behavior;
 - typography, reading measure, citations, maps, timelines, charts, diagrams,
@@ -476,7 +480,10 @@ Repair:
   dispute, uncertainty, missing record, reconstruction, or interpretive limit
   genuinely helps the reader;
 - short entries split into unnecessary Context, Why, Evidence, Analysis, and
-  Boundary sections instead of a clear three-part explanation;
+  Boundary sections instead of the fewest clear roles; allow an approved
+  Background / Event / Details / Analysis structure when each part separately
+  supplies orientation, headline result, supporting specifics, and derived
+  meaning;
 - raw, generic, inert, broken, redirected-to-the-wrong-page, or non-clickable
   source references; replace them with descriptive semantic links and verify
   every changed target by clicking it in the deployed preview;
@@ -512,6 +519,24 @@ When migration changes text containers, fonts, content, or responsive layout:
 
 Do not rewrite all existing line breaks merely to impose a new typographic
 system. Fix only regressions and explicitly approved defects.
+
+## Collection and renderer parity
+
+When a site publishes repeated stories, cards, chapters, records, or states:
+
+- inventory the complete collection and every public renderer or committed
+  mirror before changing the schema;
+- define machine-checkable contracts for required sections, first body
+  introductions, punctuation, source-link count/placement, assets, and routes;
+- manually inspect representative units, then run the contracts against every
+  record; creator examples reveal defects but do not bound the repair;
+- compare authoritative source content with dynamic, static, server, client,
+  and generated-mirror output as applicable;
+- fail the migration when one renderer silently drops structure, styling,
+  links, or accessibility semantics.
+
+Do not call a corpus-wide rewrite complete from a small fixture set or a single
+successful page.
 
 ---
 
@@ -590,6 +615,10 @@ sequence of creator decisions. A merge only triggers publication. Call
 production live only after the deployment workflow succeeds; when the creator
 explicitly declines waiting or verification, report "deployment triggered,
 unverified" instead.
+For cached hosts, repeat the preview and production smoke with a harmless cache
+key or equivalent hard reload. Inspect the final DOM, computed styles, primary
+assets, and requested change; deployment status and a cached screenshot are
+insufficient.
 
 ## Codex minimum before submission
 
@@ -857,6 +886,11 @@ Verify only what the change touches:
 - requested behavior and primary image loading
 - one related responsive state when layout changed
 
+For collection-wide, schema, or renderer changes, "what the change touches"
+includes every affected record and renderer. Use automated content-contract
+and parity checks for full coverage, with representative browser inspection
+for qualitative reading and layout.
+
 Use a real browser for this smoke check. Assign major-route sweeps, console/network analysis, full responsive matrices, keyboard interaction, and link integrity crawling to Antigravity.
 
 ---
@@ -1021,11 +1055,15 @@ This skill is not complete until:
 18. Changed public-facing routes establish the object or task before abstract
     meaning, retain the necessary intermediate steps, and use media, containers,
     and interactions for a concrete explanatory or task purpose.
-19. Creator assets retain their approved roles and reuse restrictions; public
+19. Repeated collections pass full-record section, entity-introduction,
+    punctuation, source-link, asset, route, and renderer-parity contracts.
+20. Preview and post-merge production checks bypass stale caches and confirm the
+    requested DOM, computed styles, assets, and layout on the deployed commit.
+21. Creator assets retain their approved roles and reuse restrictions; public
     copy contains no accidental production notes.
-20. Every shared selector, token, component, registry, generator, or template
+22. Every shared selector, token, component, registry, generator, or template
     change has a documented consumer inventory and peer check.
-21. Media-affecting migrations distinguish intrinsic, wrapper, rendered-box,
+23. Media-affecting migrations distinguish intrinsic, wrapper, rendered-box,
     and visible-content geometry rather than judging only outer frame size.
 
 Final response must summarize:
