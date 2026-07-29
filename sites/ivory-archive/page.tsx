@@ -40,8 +40,8 @@ export default function Home() {
             </h1>
             <span className="title-stroke" />
             <p className="hero-deck">
-              15 期、75 则新闻都按同一条初学者路径重写：先补足背景，再说明事件，
-              接着列出具体细节，最后解释为什么值得关注。
+              {briefings.length} 期、{briefings.reduce((count, issue) => count + issue.stories.length, 0)} 则新闻都按同一条初学者路径重写：
+              先补足背景，再说明事件，接着列出具体细节，最后解释为什么值得关注。
             </p>
             <div className="hero-actions">
               <Link

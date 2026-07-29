@@ -1,5 +1,66 @@
 # IVORY ARCHIVE handoff
 
+## 2026-07-29 · Issue 16 daily publication
+
+### Current target
+
+发布第 16 期，并在不回退 2026-07-29 合并的初学者四段式改版前提下，
+把五则新故事、五张编辑插图和动态档案计数同步到 GitHub Pages。
+
+### Completed
+
+- 新增 2026-07-29 第 16 期，共 5 则：Ferdinando Sarmi 时装档案、
+  Jenna Gribbon 个展、癌症研究信任、Global Flourishing Study 开放
+  数据与住院哺乳支持。
+- 每则保持“背景 / 事件 / 细节 / 分析”合同；事实、来源日期与编辑分析
+  分开，横截面或观察性结果没有写成因果关系。
+- 新增 5 张 1672×941 的 sRGB 渐进式 JPEG 编辑插图，并在 credit 中
+  明确说明不是新闻摄影、真实人物、研究图表或机构资料图。
+- 首页的期数与故事数改为从 `briefings` 自动计算，避免后续日刊继续
+  手工修改固定的“15 期、75 则”。
+- parity 测试改为按每期 5 则动态核验总故事数，不再把 75 写死。
+
+### Important decisions
+
+- 远程 `main` 已包含创作者批准并合并的初学者四段式改版，因此本期按
+  当前 `background / happened / facts / whyItMatters` schema 接入，
+  没有用较旧 Sites 工作副本覆盖仓库中的新设计。
+- 第 16 期与此前 75 则及两个历史基线按人物、事件、核心判断与内容转化
+  角度进行语义比较，结果为 5/5 无实质重复。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `sites/ivory-archive/page.tsx`
+- `scripts/build-github-pages.mjs`
+- `tests/ivory-renderer-parity.test.mjs`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/TECH.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下 5 张第 16 期图片
+
+### Verification
+
+- `npm run build:pages`: passed，生成完整多站点 artifact。
+- `npm run validate:pages`: passed，检查 78 个 HTML/CSS 文件中的 692 个
+  本地引用。
+- `npm run build:ivory`: passed，Sites artifact 验证通过。
+- `node --test tests/ivory-renderer-parity.test.mjs`: passed，3/3。
+- `npm run lint`: 0 errors；24 个 warning 来自未修改的 Enheduanna 与
+  Hypatia 文件。
+- `git diff --check`: passed。
+- 静态 smoke：总入口显示 2026.07.29、16 期、80 则；首页与日刊均包含
+  5 张新图引用；日刊生成 5 篇四段式故事。
+- 五张图片均为 1672×941、sRGB、渐进式 JPEG。
+
+### Delivery state
+
+- Base branch: `main`.
+- Base commit: `76a335285a4945b3f33bd7366fc9b857bbc8911c`.
+- Delivery commit: 本节所在提交。
+- Pages deployment: 推送 `main` 后由现有 GitHub Actions artifact workflow
+  发布。
+
 ## 2026-07-29 · Homepage title orphan fix
 
 ### Current target

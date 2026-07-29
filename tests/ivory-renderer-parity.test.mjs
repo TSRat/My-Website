@@ -85,7 +85,11 @@ test("IVORY briefing source satisfies the shared content contract", async () => 
       await access(join(root, "public", story.image));
     }
   }
-  assert.equal(storyCount, 75, "the beginner-readable contract must cover all 75 stories");
+  assert.equal(
+    storyCount,
+    briefings.length * 5,
+    "the beginner-readable contract must cover five stories in every issue",
+  );
 
   const stories = briefings.flatMap((briefing) => briefing.stories);
   const policeStudy = stories.find((story) => story.title.includes("460 万次拦停"));
