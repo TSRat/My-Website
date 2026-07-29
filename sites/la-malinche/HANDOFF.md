@@ -55,13 +55,17 @@
   证据；响应式 CSS 已保留，但窄屏人工复核仍列入 Antigravity 范围。
 - `build:pages` 对两个无关的 Next.js 静态镜像产生了哈希构建变动；这些
   文件不属于本任务，不会暂存或进入 PR。
-- PR 与精确提交预览在交付提交后补齐。
+- Implementation commit: `58eb1cc`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/36>.
+- Exact implementation preview:
+  <https://raw.githack.com/TSRat/My-Website/58eb1cc/LA-MALINCHE/index.html>.
 - Antigravity 多设备 / 多浏览器 / 视觉回归 QA：待后续扩展检查。
 
 ### 当前分支与下一步
 
 - Branch: `codex/malinche-last-four-chapters`
-- 下一步：提交、推送、创建 PR，并打开精确提交预览。
+- 下一步：在 Draft PR 中完成窄屏与跨浏览器扩展 QA；合并需要创作者
+  单独明确授权。
 
 ## 2026-07-29 · Website Archive 封面
 

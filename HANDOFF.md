@@ -29,8 +29,10 @@ deployment architecture.
   remains pending rather than being reported as passed.
 - The full Pages build regenerated unrelated Next.js mirror hashes; those
   changes are deliberately excluded from the scoped Malinche commit and PR.
-- Commit, PR, and exact-commit preview are recorded in the project handoff after
-  delivery.
+- Implementation commit: `58eb1cc`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/36>.
+- Exact implementation preview:
+  <https://raw.githack.com/TSRat/My-Website/58eb1cc/LA-MALINCHE/index.html>.
 - Antigravity extended QA remains pending.
 
 ## 2026-07-29: Malinche archive cover and carousel-frame correction
