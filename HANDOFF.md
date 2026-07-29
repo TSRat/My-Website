@@ -1,5 +1,40 @@
 # Repository handoff
 
+## 2026-07-29: Malinche 70-screen last-four-chapter rebuild
+
+### Current target
+
+Expand only La Malinche scenes `35–69` while preserving scenes `00–34`, the
+existing public path, direct video theater, portfolio surfaces, and Pages
+deployment architecture.
+
+### Completed
+
+- The authoritative source now contains 70 scenes and four expanded final
+  chapters covering Tenochtitlan, the siege, Malinche’s colonial afterlife, and
+  the later construction of the traitor image.
+- The generated `LA-MALINCHE/` mirror, project manifest, registry note, product
+  specification, Figma handoff, and targeted readiness test are synchronized.
+- Figma V6:
+  <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=17-2>.
+
+### Delivery state
+
+- Branch: `codex/malinche-last-four-chapters`.
+- `build:malinche`, targeted readiness tests, 11-site validation, full Pages
+  build, and 703-reference Pages validation passed.
+- Desktop browser smoke passed for the rebuilt chapter gates, image-led
+  monuments scene, and final responsibility ledger. The automated narrow
+  screenshot was black in the current Chrome environment, so narrow visual QA
+  remains pending rather than being reported as passed.
+- The full Pages build regenerated unrelated Next.js mirror hashes; those
+  changes are deliberately excluded from the scoped Malinche commit and PR.
+- Implementation commit: `58eb1cc`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/36>.
+- Exact implementation preview:
+  <https://raw.githack.com/TSRat/My-Website/58eb1cc/LA-MALINCHE/index.html>.
+- Antigravity extended QA remains pending.
+
 ## 2026-07-29: Malinche archive cover and carousel-frame correction
 
 ### Current target

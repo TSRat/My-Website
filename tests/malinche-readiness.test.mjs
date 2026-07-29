@@ -5,7 +5,7 @@ import test from "node:test";
 const repoFile = (path) => new URL(`../${path}`, import.meta.url);
 const readText = async (path) => readFile(repoFile(path), "utf8");
 
-test("La Malinche keeps the 52-screen beginner-first editorial and evidence contract", async () => {
+test("La Malinche keeps the 70-screen beginner-first editorial and evidence contract", async () => {
   const [html, css, js, manifestText, configText, registry] = await Promise.all([
     readText("sites/la-malinche/index.html"),
     readText("sites/la-malinche/assets/site.css"),
@@ -17,7 +17,7 @@ test("La Malinche keeps the 52-screen beginner-first editorial and evidence cont
   const manifest = JSON.parse(manifestText);
   const config = JSON.parse(configText);
 
-  assert.equal((html.match(/data-screen="/g) ?? []).length, 52);
+  assert.equal((html.match(/data-screen="/g) ?? []).length, 70);
   for (const chapter of [
     "before",
     "translator",
@@ -66,10 +66,21 @@ test("La Malinche keeps the 52-screen beginner-first editorial and evidence cont
   assert.match(html, /韦拉克鲁斯 · 法律上的脱离/);
   assert.match(html, /为什么能不断变大/);
   assert.match(html, /托斯卡特尔节/);
-  assert.match(html, /翻译者的边界/);
+  assert.match(html, /蒙特苏马被扣作人质/);
+  assert.match(html, /纳尔瓦埃斯来逮捕科尔特斯/);
   assert.match(html, /十三艘双桅帆船/);
-  assert.match(html, /水、粮食、道路与时间/);
-  assert.match(html, /瓜乌特莫克被俘/);
+  assert.match(html, /围城一步步收紧/);
+  assert.match(html, /瓜乌特莫克[\s\S]{0,80}被俘/);
+  assert.match(html, /废墟上建起一座殖民首都/);
+  assert.match(html, /她回到奥卢特拉/);
+  assert.match(html, /她何时被写成“叛徒”/);
+  assert.match(html, /1826 · 墨西哥独立之后/);
+  assert.match(html, /Malinchismo：一个后世造出的词/);
+  assert.match(html, /女性主义者重新阅读她/);
+  assert.match(html, /纪念她，也争夺她的形象/);
+  assert.match(html, /替征服者承担罪责/);
+  assert.match(html, /malinche-statue-1982\.jpg/);
+  assert.match(html, /malinche-mural-tlaxcala\.jpg/);
   assert.doesNotMatch(`${html}\n${js}`, /波通昌/);
   assert.doesNotMatch(html, /页面从中部美洲|接下来补上她刚刚听懂的背景/);
   assert.doesNotMatch(`${html}\n${css}\n${js}\n${registry}`, /cover-(?:green|red)\.webp/);
@@ -84,7 +95,7 @@ test("La Malinche keeps the 52-screen beginner-first editorial and evidence cont
   assert.equal(manifest.series, "时间的女儿 · 003");
   assert.equal(config.hub.eyebrow, "DAUGHTERS OF TIME · 003");
   assert.equal(config.hub.cover, "assets/cover-green.webp");
-  assert.equal(manifest.contentSource.screens, 52);
+  assert.equal(manifest.contentSource.screens, 70);
   assert.equal(manifest.analytics.provider, "none");
   assert.equal(manifest.analytics.persistence, false);
 });
@@ -106,6 +117,8 @@ test("La Malinche source assets and generated mirror are complete", async () => 
     "sites/la-malinche/assets/archive/codex-borbonicus-calendar.webp",
     "sites/la-malinche/assets/archive/cantino-planisphere.webp",
     "sites/la-malinche/assets/archive/columbus-landing.webp",
+    "sites/la-malinche/assets/archive/malinche-statue-1982.jpg",
+    "sites/la-malinche/assets/archive/malinche-mural-tlaxcala.jpg",
     "sites/la-malinche/assets/creator/isabella-castile.webp",
     "sites/la-malinche/assets/creator/ferdinand-aragon.webp",
     "sites/la-malinche/assets/creator/scuttle-fleet.webp",

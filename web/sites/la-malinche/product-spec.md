@@ -32,7 +32,7 @@ This is intentionally one public route. Deep links use stable section anchors.
 | `#watch` | Direct screening of the two-part Malinche video |
 | `#sources` | Source, evidence, image-credit, and privacy notes |
 
-## Fifty-two-screen reading architecture
+## Seventy-screen reading architecture
 
 Every numbered scene is designed to occupy approximately one viewport on a typical device. Long passages can exceed one viewport when content integrity requires it.
 
@@ -71,26 +71,44 @@ Every numbered scene is designed to occupy approximately one viewport on a typic
 33. `32` — Resistance, negotiation, and alliance
 34. `33` — Cholula as sacred city, trade centre, and political threshold
 35. `34` — The Cholula massacre and contested warning accounts
-36. `35` — The causeway city of Tenochtitlan
-37. `36` — Moctezuma–Malinche–Cortés portrait encounter
-38. `37` — Gold, the sacred precinct, and the seizure of a ruler
-39. `38` — Why reception became occupation
-40. `39` — The Toxcatl festival massacre
-41. `40` — Moctezuma’s failed mediation and collapsing authority
-42. `41` — Interpreter power and the limit of command
-43. `42` — La Noche Triste: retreat through rain, mud, and lake water
-44. `43` — How the coalition returned and surrounded a lake city
-45. `44` — Smallpox, regrouping, and the coalition’s return
-46. `45` — Lake war and thirteen brigantines
-47. `46` — Water, food, roads, and time as siege weapons
-48. `47` — Continued resistance, final assault, and Cuauhtémoc’s capture
-49. `48` — Survivor: diplomacy, family, property, and uncertain death
-50. `49` — Malinchismo: the full-screen red rupture
-51. `50` — Feminist and Indigenous rereadings
-52. `51` — Who betrayed whom? Reader reflection
+36. `35` — Mountain pass and first view of the lake city
+37. `36` — Causeways, canoes, and aqueducts
+38. `37` — Moctezuma–Malinche–Cortés portrait encounter
+39. `38` — Gold, gifts, and incompatible political meanings
+40. `39` — Moctezuma held as a hostage ruler
+41. `40` — Narváez on the coast and Alvarado in the city
+42. `41` — The Toxcatl festival massacre
+43. `42` — Moctezuma’s failed mediation and conflicting death accounts
+44. `43` — La Noche Triste: retreat through rain, mud, and lake water
+45. `44` — Why the defeated coalition returned
+46. `45` — Smallpox enters the city
+47. `46` — A larger Indigenous-Spanish coalition
+48. `47` — Thirteen brigantines are moved and rebuilt
+49. `48` — The lake becomes a blockade
+50. `49` — Water, food, roads, disease, fire, and time as siege weapons
+51. `50` — Continued resistance under Cuauhtémoc
+52. `51` — Translation and failed surrender negotiations
+53. `52` — 13 August 1521: the city falls
+54. `53` — 1522: Victoria returns to Spain
+55. `54` — A colonial capital built on the ruined city
+56. `55` — Martín is born
+57. `56` — Translation work continues after the war
+58. `57` — Coyoacán and an unstable position near colonial power
+59. `58` — Marriage, land, and the Honduras expedition
+60. `59` — Return to Olutla and the later reunion account
+61. `60` — Martín goes to Spain and Malinche’s record thins
+62. `61` — When was she first written as a traitor?
+63. `62` — Three early archives, three different positions
+64. `63` — The 1826 novel `Xicoténcatl`
+65. `64` — Three later mother figures
+66. `65` — The political anatomy of `malinchismo`
+67. `66` — Feminist rereadings reopen the archive
+68. `67` — The anachronism of modern national loyalty
+69. `68` — Monument and mural afterlives
+70. `69` — Double ledger of consequence and responsibility
 
-The direct two-part video theater sits between scenes `48` and `49` without
-changing the manuscript's fifty-two numbered scenes.
+The direct two-part video theater sits between scenes `60` and `61` without
+changing the manuscript's seventy numbered scenes.
 
 ## Primary reading flow
 
