@@ -1,5 +1,52 @@
 # IVORY ARCHIVE handoff
 
+## 2026-07-30 · Issue 17 daily publication
+
+### Current target
+
+发布第 17 期，在保留初学者“背景 / 事件 / 细节 / 分析”四段式和多站点
+GitHub Pages 构建边界的前提下，同步五则新故事、五张编辑插图与动态计数。
+
+### Completed
+
+- 新增 2026-07-30 第 17 期：Burgenland 罗马陶窑、Jennifer Angus
+  昆虫装置、公共福利悬崖、刚果民主共和国钴供应链中的伴生铀，以及
+  子宫内膜异位症、多囊卵巢综合征和子宫肌瘤诊断差异。
+- 每则使用独立的背景、事件、带句号细节和分析；观察性调查、模型估计与
+  双变量关联没有写成因果关系。
+- 与此前 80 则日刊及两个历史基线按人物、作品、事件、核心判断和内容
+  转化角度逐项比较，结果为 5/5 无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充考古现场、艺术家作品、真实
+  家庭、矿场供应链、患者或官方统计图。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 17 期图片
+
+### Verification
+
+- `npm run build:pages`: passed，生成完整多站点 artifact。
+- `npm run validate:pages`: passed，检查 80 个 HTML/CSS 文件中的 725 个
+  本地引用。
+- `npm run build:ivory`: passed，Sites artifact 验证通过。
+- `node --test tests/ivory-renderer-parity.test.mjs`: passed，3/3。
+- `npm run lint`: 0 errors；24 个 warning 来自未修改的 Enheduanna 与
+  Hypatia 文件。
+- `git diff --check`: passed。
+- 五张图片均为 1672×941、sRGB、渐进式 JPEG。
+- 静态页面已生成 2026-07-30 日刊及 5 篇“背景 / 事件 / 细节 / 分析”
+  故事；公开端状态在 Actions 部署完成后另行核验。
+
+### Delivery state
+
+- Base branch: `main`.
+- Base commit: `bfc1bd18ec585bdef65e2e8811aface738f9e645`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或恢复
+  `gh-pages` 分支。
+
 ## 2026-07-29 · Issue 16 daily publication
 
 ### Current target
