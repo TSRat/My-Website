@@ -21,7 +21,10 @@ Primary files:
 - `assets/`: local site imagery, including the feathered alpha-backed
   `hypatia-sketch-transparent.webp` and real-page thumbnails for the two
   migrated philosophy guides; it also contains the creator-provided
-  `who-are-you-the-who.mp3` background track
+  `who-are-you-the-who.mp3` background track and the creator-provided
+  `malinche-cover-vol-1.webp` used only by the La Malinche Sites row; this
+  960 × 540 WebP is a load-optimized derivative of the creator's 3840 × 2160
+  `Women Story/Malinche/封面7.png`
 - All four Featured World images share the same bounded
   `.featured-portrait` treatment: `300px` maximum on desktop and `240px` on
   mobile, with `object-fit: contain`. Images keep their natural aspect ratios
@@ -101,7 +104,7 @@ Browser QA must cover:
 
 ## Known limitations
 
-- Small Red Book and WeChat links are represented as non-clickable planned states until the creator provides URLs.
+- Small Red Book is a live external profile link in both desktop and mobile navigation. The former WeChat public-account placeholder has been removed rather than left as a planned state.
 - The knowledge taxonomy is intentionally marked as mapping in progress; article-level records and real counts do not exist yet.
 - The shared runtime currently lives inside `sites/living-atlas/`. Publishing a repository-level `shared/web-core/` requires a separately authorized Pages build-map change.
 - Full-page screenshots are not accepted from the current browser backend because sticky/reveal composition can repeat or omit regions. Use matching section or anchor captures.

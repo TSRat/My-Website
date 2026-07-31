@@ -86,10 +86,10 @@ export const livingAtlasContent = {
         zh: "时间的女儿 · 003",
       },
       href: "../LA-MALINCHE/",
-      thumbnail: "../LA-MALINCHE/assets/malinche-cutout.png",
+      thumbnail: "assets/malinche-cover-vol-1.webp",
       thumbnailAlt: {
-        en: "La Malinche editorial website cover",
-        zh: "马琳切历史编辑网站封面",
+        en: "Creator-made La Malinche cover reading Who Betrayed the Betrayer?",
+        zh: "创作者制作的《拉·马琳切：谁背叛了背叛者？》封面",
       },
       updatedAt: "2026-07-27",
     },

@@ -99,6 +99,39 @@ test("Living Atlas language pages use the shared data hooks without fake links",
   assert.doesNotMatch(chinese, /这里只收录已经发布且可以抵达的内容/);
 });
 
+test("Living Atlas links Small Red Book and removes the WeChat placeholder", async () => {
+  const pages = await Promise.all([
+    readAtlasPage("index.html"),
+    readAtlasPage("zh.html"),
+  ]);
+  const smallRedBookHref =
+    'href="https://www.xiaohongshu.com/user/profile/62cd1c110000000002003151?xsec_token=AB2CPd7NdsVBu3SoGZi-pET-6mVfCuhYq9-jD7L-PtPeI=&amp;xsec_source=pc_search"';
+
+  for (const page of pages) {
+    assert.equal(page.split(smallRedBookHref).length - 1, 2);
+    assert.match(page, /target="_blank" rel="noopener noreferrer"/);
+    assert.doesNotMatch(page, /公众号/);
+  }
+});
+
+test("Living Atlas uses the creator-provided La Malinche cover", async () => {
+  const malinche = livingAtlasContent.sites.find((site) => site.id === "la-malinche");
+  const cover = await readFile(
+    new URL(
+      "../sites/living-atlas/assets/malinche-cover-vol-1.webp",
+      import.meta.url,
+    ),
+  );
+
+  assert.equal(malinche.thumbnail, "assets/malinche-cover-vol-1.webp");
+  assert.match(malinche.thumbnailAlt.en, /Creator-made La Malinche cover/);
+  assert.match(malinche.thumbnailAlt.zh, /创作者制作/);
+  assert.ok(cover.byteLength > 100_000);
+  assert.ok(cover.byteLength < 500_000);
+  assert.equal(cover.subarray(0, 4).toString("ascii"), "RIFF");
+  assert.equal(cover.subarray(8, 12).toString("ascii"), "WEBP");
+});
+
 test("Living Atlas background music is manual, bilingual, and locally bundled", async () => {
   const [english, chinese, script, styles, audio] = await Promise.all([
     readAtlasPage("index.html"),

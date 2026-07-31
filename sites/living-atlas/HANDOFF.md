@@ -1,5 +1,66 @@
 # Handoff: The Living Atlas
 
+## 2026-07-31 · 小红书入口与马琳切封面
+
+### 当前目标
+
+在不改变 Living Atlas 既有导航结构与站点列表样式的前提下，启用创作者
+提供的小红书个人主页链接、移除公众号占位入口，并把 `07 Sites` 中的马琳切
+缩略图换成 `Women Story/Malinche` 文件夹内的创作者封面。
+
+### 已完成与重要决定
+
+- 英文与中文页面的桌面导航、移动目录均加入同一个小红书外链；使用语义化
+  `<a>`、新标签页和 `noopener noreferrer`。
+- 公众号入口从桌面与移动导航中完全移除，不保留 planned 状态。
+- 马琳切 Sites 卡片改用创作者文件 `封面7.png`（3840 × 2160），等比
+  生成 960 × 540、约 235 KB 的 WebP，并以 URL-safe 名称
+  `assets/malinche-cover-vol-1.webp` 收入权威源码；画面内容未改动。
+- `content-registry.js` 继续作为 Sites 唯一数据源；封面替代文本明确它是
+  创作者制作的项目封面，不把现代视觉当作历史肖像。
+- Featured World 轮播仍使用透明人物图，本次没有改动轮播、其他站点卡片、
+  Worlds 含混性、音频或视觉系统。
+- 为 HTML 入口和 registry import 更新 cache key，避免部署后继续读取旧注册表。
+- Figma `TSRat Content System · v1`（node `18:2`）仍是布局与组件来源；
+  本次实现暂时覆盖其中的小红书 planned 状态与马琳切卡片媒体，未改动布局。
+
+### 修改文件
+
+- `sites/living-atlas/{index.html,zh.html,atlas.js,content-registry.js,CONTENT.md,TECH.md,HANDOFF.md}`
+- `sites/living-atlas/assets/malinche-cover-vol-1.webp`
+- `tests/living-atlas-content-system.test.mjs`
+- `THE-LIVING-ATLAS/`（由 `npm run build:living-atlas` 生成）
+
+### 工作状态与下一步
+
+- Branch: `codex/living-atlas-social-malinche-cover`，base: `origin/main` at `4900075`。
+- Delivery commit: 本节随交付 commit 一起提交；最终 hash 与 PR / Preview URL 见用户交付报告。
+- 未提交修改：交付 commit 后应为零；如有变化须在最终报告中如实说明。
+- Antigravity 扩展多浏览器、全路线、键盘与视觉回归 QA：Pending。
+
+### 验证
+
+- `node --check sites/living-atlas/{atlas.js,content-registry.js}`：Passed。
+- `node --test tests/living-atlas-content-system.test.mjs`：Passed — 12/12。
+- `npm run build:living-atlas`：Passed，权威源码与 `THE-LIVING-ATLAS/`
+  镜像中的封面哈希一致。
+- `npm run build:pages`：Passed；构建产生的两个无关 Next.js 镜像差异已
+  从本分支恢复，不纳入交付。
+- `npm run validate:pages`：Passed — 747 local references across 82
+  HTML/CSS files。
+- Local browser smoke：英文桌面 `1440 × 900` 与中文移动端 `390 × 844`
+  通过；小红书链接可见，公众号文字计数为 0，WebP 为 960 × 540 且完整
+  加载。桌面 `scrollWidth 1425 ≤ 1440`，移动端 `375 ≤ 390`。
+- 首次隔离 worktree 构建因缺少本地 `node_modules` 未执行；随后只复用主
+  工作区现有依赖（未安装、未升级）并成功重跑全部上述构建。
+- Exact remote Preview 与小红书外部目标点击检查：push 后执行；结果见最终
+  用户交付报告。Antigravity extended QA：Pending。
+
+### 已知问题
+
+- 小红书 URL 含平台提供的 `xsec_token`；已按创作者给出的完整地址保留，
+  后续若平台令牌失效，需要用新的个人主页分享地址替换。
+
 ## 2026-07-29 · Featured World 人物图尺度回退
 
 ### Current target
