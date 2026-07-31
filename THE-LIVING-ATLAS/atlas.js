@@ -1,4 +1,4 @@
-import { livingAtlasContent } from "./content-registry.js";
+import { livingAtlasContent } from "./content-registry.js?v=social-malinche-20260731-1";
 import { analytics } from "./analytics.js";
 import {
   createSearchEntries,
