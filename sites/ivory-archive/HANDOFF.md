@@ -1,5 +1,51 @@
 # IVORY ARCHIVE handoff
 
+## 2026-07-31 · Issue 18 daily publication
+
+### Current target
+
+发布第 18 期，并把五则新故事、五张编辑插图与动态计数同步到 Sites 和
+GitHub Pages，同时保持初学者“背景 / 事件 / 细节 / 分析”四段式。
+
+### Completed
+
+- 新增 2026-07-31 第 18 期：Baton Rouge 三地点奴隶制记忆展览、
+  inverse seminar、ICE 逮捕对象与地点变化、BRCA 检测后的家族史风险，
+  以及 VLT/SPHERE 对参宿四伴星候选的直接成像。
+- 每则先解释人物、制度或研究对象，再分开记录最新进展、带句号的细节与
+  编辑分析；行政记录、观察性队列和候选天体均保留具体证据边界。
+- 与此前 85 则日刊及两个历史基线按人物、作品、事件、核心判断和内容
+  转化角度逐项比较，结果为 5/5 无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充参展作品、学者、执法现场、
+  患者、基因检测结果或天文观测图。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 18 期图片
+
+### Verification
+
+- `npm run build:pages`: passed，生成完整多站点 artifact。
+- `npm run validate:pages`: passed，检查 82 个 HTML/CSS 文件中的 747 个
+  本地引用。
+- `npm run build:ivory`: passed，Sites artifact 验证通过。
+- `node --test tests/ivory-renderer-parity.test.mjs`: passed，3/3。
+- `npm run lint`: 0 errors；24 个 warning 来自未修改的 Enheduanna 与
+  Hypatia 文件。
+- `git diff --check`: passed。
+- 五张图片均为 1672×941、sRGB、渐进式 JPEG；公开端状态在 Actions
+  部署完成后另行核验。
+
+### Delivery state
+
+- Base branch: `main`.
+- Base commit: `079b24e9e242c7bd398fe4f13f20282f3383c1eb`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
 ## 2026-07-30 · Issue 17 daily publication
 
 ### Current target

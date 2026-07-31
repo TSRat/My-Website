@@ -34,6 +34,133 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    "date": "2026-07-31",
+    "displayDate": "2026.07.31",
+    "issueNo": "18",
+    "theme": "正式记录之外：记忆、过程与分类边界",
+    "intro": "本期从分布在三座机构的奴隶制记忆展览、反向科学研讨会、移民执法对象、BRCA 检测结果和参宿四伴星出发，追问正式记录为何总会删去一部分现实。",
+    "learningGoal": "学会区分展览场地、论文、执法分类、基因检测与天文图像所记录的内容，以及仍需由路线、口述、家族史和后续观测补回的证据。",
+    "connection": "五则故事共同说明：一份看似完整的记录并不等于完整现实。谁选择场地、谁整理过程、如何划分类别、保留哪些背景，都会改变我们最终看见的对象。",
+    "uniqueCount": 5,
+    "topics": [
+      "艺术人文",
+      "社会科学",
+      "女性主义"
+    ],
+    "stories": [
+      {
+        "category": "艺术人文 × 摄影与电影 × 奴隶制记忆",
+        "image": "/story-images/distributed-memory-exhibition.jpg",
+        "imageAlt": "三座抽象文化机构由步行路线、相册框、织物层和河岸轮廓连接的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释多地点展览与历史记忆的关系，并非参展作品复制、真实场馆、奴隶制现场、历史照片或展览纪录",
+        "title": "同一场展览分布在三处，场地本身也开始讲述奴隶制记忆",
+        "summary": "《Free as They Want to Be》是一场以摄影、电影和当代艺术讨论奴隶制记忆、自由与非洲离散经验的巡展。它在 Baton Rouge 被分配到一所历史悠久的黑人大学、一座曾发生民权抗议的旧泳池建筑和一座糖业史博物馆。",
+        "background": "这场展览由摄影史学者 Deborah Willis 与艺术史学者 Cheryl Finley 共同策划，汇集 Bisa Butler、Carrie Mae Weems、Dawoud Bey、Hank Willis Thomas 等二十位艺术家的作品。它不只回看奴隶制，也关注家庭相册、土地、历史地点和公共纪念如何保存或改写黑人生活。",
+        "happened": "Southern University 与两家地方机构宣布，巡展将于 8 月 1 日至 23 日在 Baton Rouge 三地免费展出。当地版本没有把作品集中在一个白盒子里，而是让原有策展论题分别进入 HBCU 校园、民权抗议旧址和记录 Louisiana 糖业历史的博物馆。",
+        "facts": [
+          "展览在 Southern University 的 Frank Hayden Hall Visual Art Gallery、Baton Rouge Gallery 和 West Baton Rouge Museum 三地同时展出。",
+          "Baton Rouge Gallery 位于一座旧泳池建筑中，这里曾发生 1963 年 Baton Rouge Swim-In 民权抗议。",
+          "Southern University 是一所历史悠久的黑人大学，校园所在的河岸地区受到种植园历史塑造。",
+          "West Baton Rouge Museum 从殖民时期至今追踪 Louisiana 糖业历史。",
+          "当地艺术家 John Alleyne、Malaika Favorite、Randell Henry 和 John Isiah Walton 的作品将补入巡展，为 Baton Rouge 版本增加地方视角。",
+          "展览最初为 2022 年 Cincinnati 的 FotoFocus Biennial 在 National Underground Railroad Freedom Center 策划，此后在美国巡展。"
+        ],
+        "sourceName": "Southern University／West Baton Rouge Museum／《Free as They Want to Be》展览公告",
+        "sourceUrl": "https://www.subr.edu/news/southern-university-partners-with-local-art-galleries-for-multisite-exhibition-featuring-renowned-american-artists",
+        "sourceDate": "Southern University 公告 2026-07-30；展览开幕 2026-08-01",
+        "whyItMatters": "三处场地分别携带大学、民权抗议和糖业的历史，因此作品移动并不只是扩大观众，而会改变每件作品邻接的制度与记忆。分析这场展览时，可以把路线、建筑旧用途、地方艺术家和巡展原作画在同一张地图上，继续追问：作品进入不同地点后，哪些历史被放大，哪些仍留在场馆之外？"
+      },
+      {
+        "category": "社会科学 × 科学传播 × 隐性知识与学术制度",
+        "image": "/story-images/inverse-seminar.jpg",
+        "imageAlt": "年轻报告者把论文反向呈现给资深研究者，周围浮现失败实验、分岔路径和档案节点的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释反向研讨会和论文遗漏的研究过程，并非真实学者、研讨会、实验记录或论文页面",
+        "title": "让年轻研究者把论文讲回给作者，失败与偶然才重新进入科学史",
+        "summary": "“反向研讨会”是一种把传统学术报告倒过来的形式：年轻研究者阅读资深科学家的论文并向作者复述，作者不准备演讲，只负责补充论文没有写下的失败、争论、偶然发现与合作关系。",
+        "background": "科学论文通常把研究整理成从问题到结果的清晰路线，但真实工作会经历失败实验、临时会面、人员变化和未发表项目。这些隐性知识影响后来者如何理解一个领域，却很少进入正式文献。",
+        "happened": "University of Pittsburgh 团队在《Nature Physics》发表这一形式，并上线开放网站。团队在物理学中连续 27 个月举办七场反向研讨会；每场录像获得可引用的 DOI，使口述过程能够像论文一样被后续研究指向。",
+        "facts": [
+          "反向研讨会由年轻研究者选择并讲解资深科学家的论文。受邀作者通常远程参加，事先不知道会讲哪篇文章。",
+          "团队在 27 个月中举行七场活动，形式源于 2020 年以后线上研讨会暴露的参与不足问题。",
+          "一场案例回看 Michael Crommie 团队 2010 年的应变石墨烯论文。Crommie 说明发现最初是偶然出现，随后经历数月困惑。",
+          "他还谈到两个各持续约两年却从未发表的失败项目。正式文献中没有这些工作的记录。",
+          "配套网站面向所有学科开放。每场录像分配可引用 DOI。Crommie 场次时长为 92 分钟。",
+          "目前证据来自七场物理学实践和参与者经验，还不能说明这一形式在所有学科都能产生相同效果。"
+        ],
+        "sourceName": "Nature Physics／University of Pittsburgh／What physics papers don’t tell you",
+        "sourceUrl": "https://www.nature.com/articles/s41567-026-03380-7",
+        "sourceDate": "论文与开放网站发布 2026-07-31",
+        "whyItMatters": "可引用录像能保存论文删去的过程，但它仍由记忆、提问者选择和资深作者的叙述共同形成，并不是未经筛选的事实仓库。可以继续比较同一项研究的论文、实验记录和反向研讨会，把偶然、失败、贡献者与最终结论分层标注，追踪口述补回了什么，又新遗漏了什么。"
+      },
+      {
+        "category": "社会科学 × 移民与执法 × 行政数据",
+        "image": "/story-images/ice-arrest-priorities.jpg",
+        "imageAlt": "执法数据路线从拘押节点分岔到机场、学校、工作场所和社区空间，数量柱上升而前科占比收窄的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释移民逮捕地点与对象构成变化，并非真实执法现场、移民、警员、政府地图或官方统计图",
+        "title": "逮捕数量翻升时，有前科者所占比例反而降到三分之一",
+        "summary": "美国 Immigration and Customs Enforcement 负责联邦移民执法。对 2015 年 10 月至 2026 年 3 月约 160 万次 ICE 逮捕的分析发现，第二届 Trump 政府前 14 个月的日均逮捕数增加，但有刑事定罪记录者只占 34%。",
+        "background": "ICE 可以在监狱等羁押场所接收已被其他执法机构拘留的人，也可以在工作场所、机场、学校附近及其他社区空间实施逮捕。“是否有刑事定罪”与“是否违反移民法”是不同分类；行政逮捕本身也不等于刑事定罪。",
+        "happened": "University of Colorado Boulder 研究者在《PNAS》发布跨三届政府的逮捕记录分析。结果显示，执法规模扩大与对象构成、地点同时变化：第二届 Trump 政府前 14 个月日均逮捕达到 952 人，社区逮捕接近全部逮捕的一半。",
+        "facts": [
+          "研究分析约 160 万次 ICE 逮捕，时间覆盖 2015 年 10 月至 2026 年 3 月。",
+          "第二届 Trump 政府前 14 个月日均逮捕 952 人，比 Biden 政府最后一年高 214%。",
+          "同期有刑事定罪记录者占 34%。Biden 政府最后一年为 52%，Trump 第一任期第一年为 70%，Obama 政府最后一年为 79%。",
+          "第二届 Trump 政府就职前，社区逮捕约占 17%。之后上升至接近一半。",
+          "Denver 所在执法区在第二届任期初的总逮捕数上升 220%，社区逮捕上升 269%。",
+          "研究比较的是行政记录中的逮捕、地点和既往定罪，不能据此判断每个被捕者的移民案件最终结果。"
+        ],
+        "sourceName": "Proceedings of the National Academy of Sciences／University of Colorado Boulder",
+        "sourceUrl": "https://doi.org/10.1073/pnas.2618096123",
+        "sourceDate": "论文发布 2026-07-27；大学解读 2026-07-31",
+        "whyItMatters": "日均数量、前科比例和社区逮捕占比必须一起阅读：只公布总逮捕数，会遮住执法从羁押场所向日常空间移动，也会把行政违法与刑事定罪混为一谈。可以继续制作同一时期的三层图，把规模、对象构成和地点分开，再追踪不同执法区的案件结局与社区服务使用是否随之变化。"
+      },
+      {
+        "category": "女性主义 × 遗传与健康 × 风险沟通",
+        "image": "/story-images/brca-family-history.jpg",
+        "imageAlt": "基因检测结果卡、家族关系树、筛查时间线和多条风险路径组成的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 BRCA 检测、家族史与乳腺癌风险沟通，并非真实患者、家族、基因序列、病历或医学影像",
+        "title": "BRCA 阴性不一定回到平均风险，检测结果还需要家族史解释",
+        "summary": "BRCA1 和 BRCA2 是与遗传性乳腺癌、卵巢癌风险有关的基因。Ontario 近 1.6 万名接受检测者的队列显示，普通“阴性”者到 80 岁的乳腺癌累计风险约为 26%，高于匹配一般人群的 12%；真正排除家族已知突变的“预测阴性”者接近一般水平。",
+        "background": "“BRCA 阴性”可能指不同情形：有人没有检出已知致病变异，但家族中并没有一个可供对照的明确突变；另一些人则针对家族已经确认的突变检测并确定自己没有携带。两种结果的遗传解释并不相同。",
+        "happened": "Cedars-Sinai 与加拿大研究团队在《JAMA Network Open》发布近人群基础队列研究。团队分别估算阳性、普通阴性、意义不明变异和预测阴性者的乳腺癌及卵巢癌累计风险，并检验一级亲属癌症史如何改变风险。",
+        "facts": [
+          "队列纳入 2007 至 2016 年在 Ontario 接受 BRCA1 或 BRCA2 检测的 15,986 人，并随访至 2024 年 9 月。",
+          "乳腺癌分析包括 6,966 名受检者和 34,830 名按 1 比 5 匹配的一般人群。卵巢癌分析包括 13,276 名受检者和 66,380 名匹配者。",
+          "到 80 岁，BRCA1 与 BRCA2 致病变异携带者的乳腺癌累计风险分别约为 62% 和 66%。一般人群为 12%。",
+          "普通阴性者的乳腺癌累计风险约为 26%，意义不明变异者约为 31%。预测阴性者约为 13%。",
+          "在致病变异携带者中，一级亲属的乳腺癌或卵巢癌数量越多，估计乳腺癌风险越高。",
+          "这是基于行政数据库的观察性队列。受检者原本就因个人或家族史被转介，不能把普通阴性组的估计直接套用到所有女性。"
+        ],
+        "sourceName": "JAMA Network Open／Cedars-Sinai／BRCA 检测后癌症风险队列",
+        "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2852275",
+        "sourceDate": "论文在线发布 2026-07-30；doi:10.1001/jamanetworkopen.2026.26334",
+        "whyItMatters": "普通阴性与预测阴性的差距说明，一张报告上的同一个“未检出”可能对应不同背景风险。把结果解释成简单的安全或危险，会让家族史、转介原因和筛查选择从对话中消失。可以继续把检测前概率、结果类别、家族关系与后续筛查画成决策路径，比较风险数字如何随证据改变，而不是只比较阳性和阴性。"
+      },
+      {
+        "category": "社会科学 × 天文学 × 观测技术与证据",
+        "image": "/story-images/betelgeuse-companion.jpg",
+        "imageAlt": "红色超巨星的强光被仪器遮去，一颗微弱蓝白伴星在处理后的多层观测图中显现的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释参宿四伴星候选与遮光成像技术，并非 ESO 观测图、真实天体照片、数据产品或星空实景",
+        "title": "为寻找系外行星设计的遮光技术，照出了参宿四旁的微弱伴星",
+        "summary": "参宿四是 Orion 星座中肉眼可见的红超巨星，亮度会周期变化。ESO 的 Very Large Telescope 用 SPHERE 仪器直接记录到一颗微弱光源，为参宿四拥有伴星提供迄今最清楚的图像证据。",
+        "background": "天文学家约一个世纪来怀疑参宿四的部分亮度变化可能与伴星有关，但主星极亮、周围物质复杂，微弱光源很难分离。SPHERE 原本主要为直接成像系外行星开发，会抑制亮星光并用多波段和后处理寻找邻近暗源。",
+        "happened": "研究团队依据 2024 年轨道预测，在候选伴星与参宿四视角距离最大时用 VLT 观测，并在数月处理后得到两个独立算法均能识别的信号。论文把它称为 Betelgeuse B 候选体；要正式确认两星受引力束缚，仍需一年后在主星另一侧再次观测。",
+        "facts": [
+          "观测于 2024 年 12 月 6 日在 Chile 的 VLT 上完成，使用 SPHERE-ZIMPOL 极端自适应光学直接成像。",
+          "PACO ASDI 与主成分分析两种处理方法分别以 6.1σ 和 5.1σ 检出同一候选源。",
+          "候选源与参宿四的视角距离约为 52.32 毫角秒。",
+          "若两颗星同龄，伴星估计为 2.6 至 3.1 个太阳质量的年轻主序星，高于此前约一个太阳质量的预测。",
+          "SPHERE 与后处理技术主要为寻找系外行星开发，这次被用于一颗大质量演化恒星周围。",
+          "团队计划约一年后在预测轨道另一侧复观。在第二历元之前，论文仍将它称为候选伴星。"
+        ],
+        "sourceName": "European Southern Observatory／Astronomy & Astrophysics／VLT-SPHERE 参宿四伴星研究",
+        "sourceUrl": "https://www.eso.org/public/news/eso2611/",
+        "sourceDate": "ESO 新闻稿与论文在线发布 2026-07-28",
+        "whyItMatters": "这次结果不仅来自更大的望远镜，也来自等待正确轨道位置、抑制主星光和比较两套算法；证据链因此是时间、仪器与计算的共同产物。可以继续把原始亮星、遮光、差分处理、候选信号和下一次复观排成五层，清楚区分已经直接看见的光源与仍待确认的引力关系。"
+      }
+    ]
+  },
+  {
     "date": "2026-07-30",
     "displayDate": "2026.07.30",
     "issueNo": "17",
