@@ -1,5 +1,52 @@
 # IVORY ARCHIVE handoff
 
+## 2026-08-01 · Issue 19 daily publication
+
+### Current target
+
+发布第 19 期，把五则新故事和五张编辑插图同步到 Sites 与 GitHub Pages，
+并保持多站点 Actions artifact 架构与初学者四段式内容合同。
+
+### Completed
+
+- 新增 2026-08-01 第 19 期：Gwen John 四十年来首场大型回顾展、
+  de Young 法老展的日常器物叙事、美国数据中心的城市集中与燃煤电网
+  遗产、月球冰地震探测模型，以及南非 Opti-DOR HIV 随机试验。
+- 每则先介绍陌生人物、制度或研究对象，再分开记录事件、带句号细节和
+  分析；模型推断、随机比较、来源解释和编辑判断没有混写。
+- 与此前 90 则日刊及两个历史基线按人物、作品、事件、核心判断和内容
+  转化角度逐项比较，结果为 5/5 无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充艺术品、古代文物、数据中心、
+  科学仪器、月球探测结果、患者或临床资料。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 19 期图片
+
+### Verification
+
+- `npm run build:pages`: passed，生成完整多站点 artifact，并确认总入口、
+  IVORY 首页、2026-08-01 日刊、旧日刊跳转和五张故事图片均存在。
+- `npm run validate:pages`: passed，检查 84 个 HTML/CSS 文件中的 769 个
+  本地引用。
+- `npm run build:ivory`: passed，Sites artifact 验证通过。
+- `node --test tests/ivory-renderer-parity.test.mjs`: passed，3/3。
+- `npm run lint`: 0 errors；24 个 warning 来自未修改的 Enheduanna 与
+  Hypatia 文件。
+- `git diff --check`: passed。
+- 五张图片均为 1672×941、sRGB、渐进式 JPEG；首页卡片与当日日刊正文
+  均引用全部图片。公开端状态在 Actions 部署完成后另行核验。
+
+### Delivery state
+
+- Base branch: `main`.
+- Base commit: `c09a0f8a25a745cac80fd422e8db8431da9af9b0`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
 ## 2026-07-31 · Issue 18 daily publication
 
 ### Current target

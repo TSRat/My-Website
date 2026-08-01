@@ -34,6 +34,133 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    "date": "2026-08-01",
+    "displayDate": "2026.08.01",
+    "issueNo": "19",
+    "theme": "看见基础设施：作品、城市、探测与照护怎样获得条件",
+    "intro": "本期从一位长期被“安静”概括的画家、法老展中的日常器物、城市里的数据中心、月球冰探测模型和南非 HIV 随机试验出发，追问结果背后需要哪些空间、能源、仪器与治疗选择。",
+    "learningGoal": "学会把展览、数字基础设施、天文探测与临床试验拆成可核验的条件链，并区分直接观察、模型推断、随机比较和编辑分析。",
+    "connection": "五则故事共同说明：我们看见的作品、数据和治疗结果都不是孤立对象。它们依赖馆藏合作、电网遗产、实验设施、测量方法与可获得的药物选择。",
+    "uniqueCount": 5,
+    "topics": [
+      "艺术人文",
+      "社会科学",
+      "女性主义"
+    ],
+    "stories": [
+      {
+        "category": "艺术人文 × 女性主义 × 绘画与艺术史",
+        "image": "/story-images/gwen-john-retrospective.jpg",
+        "imageAlt": "安静画室里重复出现的抽象坐姿、纸上习作与色彩变化组成的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 Gwen John 的系列创作与纸上实验，并非艺术家肖像、作品复制、展览现场或历史照片",
+        "title": "四十年后，Gwen John 的大型回顾展把“安静”还原成一种工作方法",
+        "summary": "Gwen John 是一位生于威尔士、长期在法国生活的现代主义画家，以人物、室内和反复变化的系列作品著称。爱丁堡 Modern Two 开幕的《Strange Beauties》是四十多年来首场关于她的大型回顾展。",
+        "background": "Gwen John（1876—1939）在 London 的 Slade School of Art 接受训练，属于最早获得正式艺术教育的一代女性，1904 年迁居法国。她经常重复同一构图，通过色调、形式和技法的细微变化推进作品，也留下大量素描与水彩。",
+        "happened": "National Galleries of Scotland 于 8 月 1 日开放《Gwen John: Strange Beauties》，以她诞辰 150 周年为线索，从 Wales 早年一直展到 Meudon 晚期创作。展览把油画与少见纸上作品并置，其中多件素描和水彩首次公开展出，使重复、户外写生和抽象化实验进入对她的整体理解。",
+        "facts": [
+          "展览在 Edinburgh 的 Modern Two 举行，展期为 2026 年 8 月 1 日至 2027 年 1 月 4 日。",
+          "这是四十多年来首场关于 Gwen John 的大型回顾展。",
+          "展览从她在 Wales 和 Slade 的早期学习，延伸到受宗教、法国现代主义及 Meudon 环境影响的晚期作品。",
+          "少见的素描和水彩中有多件首次公开展出。",
+          "相关纸上作品显示她进行户外写生、抽象化人物试验，并使用比著名油画更明亮的色彩。",
+          "项目由 Amgueddfa Cymru 联合 National Galleries of Scotland、Yale Center for British Art 与 National Museum of Women in the Arts 组织。"
+        ],
+        "sourceName": "National Galleries of Scotland／Gwen John: Strange Beauties",
+        "sourceUrl": "https://www.nationalgalleries.org/exhibition/gwen-john-strange-beauties",
+        "sourceDate": "展览开幕 2026-08-01；页面于 2026-08-01 核验",
+        "whyItMatters": "首次公开的纸上作品与反复构图说明，John 画面里的克制不是缺少行动，而是长期比较色调、姿势与技法的结果。可以把同一题材的油画、素描和水彩排成变化序列，继续追问：艺术史把女性创作者称为“安静”时，究竟描述了画面，还是遮住了她的实验劳动？"
+      },
+      {
+        "category": "艺术人文 × 历史与考古 × 展览叙事",
+        "image": "/story-images/pharaohs-everyday-life.jpg",
+        "imageAlt": "抽象展柜从花岗岩巨像轮廓逐渐过渡到首饰、化妆品、工具和家具的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释法老权力叙事与日常器物的并置，并非古埃及文物复制、考古现场、展览照片或历史重建",
+        "title": "从花岗岩巨像走到化妆品，法老展把权力旁边的日常生活也放进来",
+        "summary": "《Treasures of the Pharaohs》是 de Young Museum 举办的古埃及展览，以 130 件作品跨越约三千年历史。展览从法老的王权与宗教位置出发，再转向家族、官员、工匠和日常生活。",
+        "background": "古埃及的法老同时处在政治、宗教和视觉文化的中心，但今天保存下来的物件并不只属于国王。墓葬中的首饰、化妆品、工具和家具也能说明普通生活如何被理想化地带入来世，不过它们不能直接等同于所有人的完整日常。",
+        "happened": "Fine Arts Museums of San Francisco 于 8 月 1 日在 de Young 开放《Treasures of the Pharaohs》。展览把来自 Cairo 的 Egyptian Museum 与 Luxor Museum 的大型雕像、金饰和日常器物放进同一条参观路线，使观众从社会等级顶端逐步看到服务王室者的劳动、信仰与物质生活。",
+        "facts": [
+          "展期为 2026 年 8 月 1 日至 2027 年 1 月 31 日。",
+          "展览包含 130 件来自 Egyptian Museum in Cairo 与 Luxor Museum 的文物。",
+          "展品跨越约三千年历史，尺度从巨型花岗岩雕像到精细金饰。",
+          "叙事从法老、王室成员和高级官员，延伸到神祇、宗教、死亡与来世观念。",
+          "首饰、化妆品、工具和家具等墓葬物品，被用来讨论服务法老者的日常生活及其理想化呈现。",
+          "旧金山是这场国际巡展的首个美国展出城市。"
+        ],
+        "sourceName": "Fine Arts Museums of San Francisco／Treasures of the Pharaohs",
+        "sourceUrl": "https://www.famsf.org/exhibitions/treasures-pharaohs",
+        "sourceDate": "展览开幕 2026-08-01；馆方资料于 2026-08-01 核验",
+        "whyItMatters": "把巨像、金饰与工具放在同一路线里，会让“古埃及”从少数统治者的辉煌扩展成材料、手艺和服务关系共同组成的社会。可以为每件器物标出材料来源、制作者、使用者、墓葬语境与现代出借路径，再比较展览如何分配国王、工匠和普通生活的可见度。"
+      },
+      {
+        "category": "社会科学 × 地理与城市研究 × AI 基础设施",
+        "image": "/story-images/urban-data-centers.jpg",
+        "imageAlt": "城市街区、服务器机房、退役燃煤电厂与输电线路叠合成基础设施剖面的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释数据中心的城市分布与电网遗产，并非真实设施、城市地图、公司资产或研究图表",
+        "title": "所谓“云端”有 97.5% 落在城市及其近郊",
+        "summary": "数据中心是存放服务器并为网络和 AI 服务提供计算的实体设施。NYU 研究定位美国本土 4,283 座数据中心，发现 97.5% 位于都会或小型都市统计区，推翻了它们主要藏在偏远乡村的常见想象。",
+        "background": "数据中心需要持续供电、快速网络、冷却用水和专业劳动力，因此选址会把数字服务与地方电网、土地和环境政策连接起来。美国的都会与小型都市统计区不仅包括市中心，也包括与核心城市紧密相连的周边地区。",
+        "happened": "NYU Tandon 团队在《Nature Cities》发表全国选址分析。结果显示，数据中心跟随现有供电和网络基础设施集中到城市，退役燃煤电厂留下的输电连接也会吸引新项目；位于联邦 Energy Community 指定区的城市，正在建设的数据中心出现概率约为其他城市的两倍。",
+        "facts": [
+          "研究覆盖美国本土 4,283 座数据中心。",
+          "其中 97.5% 位于 metropolitan 或 micropolitan statistical areas。其余约 2.5% 平均只离最近的城市边缘 8.5 英里。",
+          "Washington、Chicago、Dallas–Fort Worth、New York 与 Phoenix 五个都会区合计接近全国三分之一。Washington 地区有 610 座，占 14.2%。",
+          "地方发电能力是选址模型中最强的单一预测因素。退役燃煤电厂留下的线路和并网条件可被新数据中心利用。",
+          "位于 Energy Community 指定区的城市，正在开发的数据中心出现概率约为其他城市的两倍。",
+          "模型估算单座设施的年度碳排放会随地方电力结构大幅变化。Montana 或 North Dakota 的典型值超过 35 万吨，Vermont、New Hampshire 或 Arkansas 的平均值低于 3,000 吨。"
+        ],
+        "sourceName": "NYU Tandon School of Engineering／Nature Cities 数据中心选址研究",
+        "sourceUrl": "https://engineering.nyu.edu/news/inside-urban-machine-where-americas-data-centers-actually-live",
+        "sourceDate": "大学解读与论文发布 2026-07-31；DOI 10.1038/s44284-026-00487-z",
+        "whyItMatters": "4,283 个地点、97.5% 的城市集中度和燃煤电网遗产共同说明，数字服务的成本并没有漂浮在无人的“云”里，而是落在居民共用的电力、土地与环境系统中。可以把一座数据中心与退役电厂、输电线、水源、社区和地方许可画在同一张图上，继续追踪谁获得税收与就业，谁承担拥堵、用水和排放。"
+      },
+      {
+        "category": "社会科学 × 天文学 × 月球探测基础设施",
+        "image": "/story-images/lunar-ice-seismology.jpg",
+        "imageAlt": "月球南极剖面中的冰层、钻头产生的地震波与实验室真空腔相互对应的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释月球冰的地震探测模型，并非真实月面、探测器、冰层分布、实验数据或观测影像",
+        "title": "月球钻头发出的震动，可能比它本身钻得更深",
+        "summary": "月球极区的地下冰可能为长期探测提供水，但表面以下的分布仍不清楚。Berkeley Lab 团队用模拟月壤、低温真空实验和计算模型，提出通过地震波区分干燥岩石与含冰岩层的方法。",
+        "background": "地震学通过波在不同材料中的传播速度和形态推断地下结构。月球的低温与高真空会让岩石和冰表现得不同于地球，因此地面实验必须先建立可供月面仪器解释信号的物理基线。",
+        "happened": "研究者在《Science Advances》报告首次使用 FROST 低温真空腔的结果，并把 X 射线微断层扫描、冰稳定性模型与地震模拟连接起来。模拟显示不同类型的月球冰沉积可能产生可区分的地震特征，未来可用月球车钻头产生的震动和车载传感器检验。",
+        "facts": [
+          "FROST 是一座约 15 英寸高的低温真空腔，连接 Berkeley Lab Advanced Light Source 的 X 射线束线。",
+          "实验使用由 NASA Johnson Space Center 调制、尽量接近真实月壤的地球岩石。",
+          "团队比较干燥与含冰模拟月壤在月球式低温真空中的微观弯曲和变形。",
+          "组合模型目前描述月面以下约 800 米范围，并预测不同冰沉积会留下不同地震信号。",
+          "计划中的 VIPER 月球车钻头会产生震动，导航加速度计可尝试测量短频地震波。其他仪器主要直接探测上部约一米的冰。",
+          "这些结果仍需真实月面实验验证，模型目前提供的是可检验假说，而不是已经发现的地下冰矿图。"
+        ],
+        "sourceName": "Lawrence Berkeley National Laboratory／月球冰地震探测研究",
+        "sourceUrl": "https://newscenter.lbl.gov/2026/07/31/ice-ice-maybe-new-ways-to-search-for-frozen-water-on-the-moon/",
+        "sourceDate": "研究解读与 Science Advances 论文发布 2026-07-31",
+        "whyItMatters": "15 英寸实验腔、800 米模型深度与未来月球车的钻头和传感器构成一条从实验室到月面的证据链，说明“找水”先要解决怎样解释间接信号。可以把上部一米的直接探测和更深处的地震推断分层显示，继续比较每种方法能看见什么、需要什么校准，以及谁决定冰被用于科学、生命支持还是资源开发。"
+      },
+      {
+        "category": "女性主义 × 健康与照护 × HIV 治疗选择",
+        "image": "/story-images/opti-dor-hiv-trial.jpg",
+        "imageAlt": "两条匿名治疗路径并列显示病毒抑制、体重变化、服药坚持与随访节点的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 Opti-DOR 随机试验的治疗权衡，并非真实患者、药片、临床现场、病历或研究图表",
+        "title": "病毒控制相近时，少增两公斤也会改变治疗选择",
+        "summary": "Opti-DOR 是一项在南非比较两种每日口服 HIV 初始治疗的随机试验。600 名参与者接受 doravirine 或常用的 dolutegravir 方案 48 周，两组病毒抑制相近，但前者的体重和体脂增幅较小。",
+        "background": "抗逆转录病毒治疗可以把 HIV 病毒量压到很低并长期维持健康。Dolutegravir 方案疗效强、耐药屏障较高，已在许多国家成为一线选择，但治疗相关体重增加在黑人群体和女性中尤其受到关注，因为它可能叠加既有的代谢健康风险。",
+        "happened": "University of the Witwatersrand 与 Africa Health Research Institute 团队在 JAMA 发布 Opti-DOR 结果。Doravirine 组合在 48 周病毒抑制上达到预设的非劣效标准，同时中位体重增加 3.0 公斤，对照方案为 5.0 公斤；研究者因此主张把它作为有体重增加风险者的针对性选择，而不是全面替代 dolutegravir。",
+        "facts": [
+          "试验在 Johannesburg 城市站点与 KwaZulu-Natal 的 Somkhele 乡村站点共纳入 600 人，并按 1:1 随机分组。",
+          "参与者中约 69% 出生时指定为女性，超过 99% 被记录为 Black African，年龄中位数为 34 岁。",
+          "48 周时，doravirine 组有 89.0% 达到每毫升低于 50 copies 的病毒抑制，对照组为 90.7%，差异符合非劣效标准。",
+          "中位体重增加分别为 3.0 公斤与 5.0 公斤。体重增加至少 5% 的比例分别为 41.1% 与 56.8%。",
+          "总体脂肪比例的中位增幅分别为 1.5 与 2.2 个百分点。",
+          "Doravirine 组有七名参与者出现耐药相关结果。研究者强调服药坚持和有针对性的选择，未建议用它全面替代 dolutegravir。"
+        ],
+        "sourceName": "JAMA／Opti-DOR randomized clinical trial",
+        "sourceUrl": "https://jamanetwork.com/journals/jama/fullarticle/2852404",
+        "sourceDate": "在线发表 2026-07-31；DOI 10.1001/jama.2026.14762",
+        "whyItMatters": "病毒抑制率相近、体重中位增幅相差 2 公斤，以及至少增加 5% 体重者相差 15.7 个百分点，说明疗效之外的长期负担也应进入共同决策。48 周试验尚未证明较少增重会直接减少多年后的糖尿病或心血管事件，可以继续追踪性别、既有代谢风险、耐药、药价和供应稳定性怎样共同决定谁真正拥有选择。"
+      }
+    ]
+  },
+  {
     "date": "2026-07-31",
     "displayDate": "2026.07.31",
     "issueNo": "18",
