@@ -1,6 +1,6 @@
 # IVORY ARCHIVE content guide
 
-- Last audited: 2026-07-31
+- Last audited: 2026-08-02
 Primary data file: `sites/ivory-archive/briefings.ts`
 
 ## Project theme
@@ -53,18 +53,18 @@ IVORY ARCHIVE 是一份中文思想简报与长期阅读档案。它把当天值
 
 ## Current archive state
 
-截至 2026-08-01：
+截至 2026-08-02：
 
-- 第 01—19 期
-- 日期为 2026-07-14 至 2026-08-01
-- 每期 5 则，共 95 则
+- 第 01—20 期
+- 日期为 2026-07-14 至 2026-08-02
+- 每期 5 则，共 100 则
 - `briefings` 数组按最新一期在前排列
 
-当前最新一期为第 19 期：
+当前最新一期为第 20 期：
 
-> 看见基础设施：作品、城市、探测与照护怎样获得条件
+> 把入口拆开：开放、承载、说服、观测与照护的真实门槛
 
-全部 19 个期刊主题都使用能代表五则共同问题的陈述式主题。
+全部 20 个期刊主题都使用能代表五则共同问题的陈述式主题。
 
 ## Editorial principles
 

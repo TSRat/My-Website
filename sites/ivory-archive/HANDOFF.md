@@ -1,5 +1,53 @@
 # IVORY ARCHIVE handoff
 
+## 2026-08-02 · Issue 20 daily publication
+
+### Current target
+
+发布第 20 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-02 第 20 期：Textile Center 非评审纤维艺术展、濑户内
+  艺术节十年岛屿研究、西班牙气候政策支持实验、NASA 2026 年日全食
+  飞机与气球计划，以及儿童肿瘤临床试验中的医生把关。
+- 每则先解释陌生人物、制度或研究对象，再分开记录事件、带句号细节和
+  分析；调查关联、实验结果、未来观测计划和单中心质性证据没有混写。
+- 与此前 95 则日刊及两个历史基线按人物、作品、事件、核心判断和内容
+  转化角度逐项比较。艺术家书候选因与第 12 期 Miró 条目实质重复被
+  剔除，最终五则均无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充参展作品、真实地图、官方
+  统计图、NASA 观测图、患儿、家长、医生或临床材料。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 20 期图片
+
+### Verification
+
+- `npm run build:pages`: passed，生成完整多站点 artifact，并确认总入口、
+  IVORY 首页、2026-08-02 日刊、旧日刊跳转和五张故事图片均存在。
+- `npm run validate:pages`: passed，检查 86 个 HTML/CSS 文件中的 791 个
+  本地引用。
+- `npm run build:ivory`: passed，Sites artifact 验证通过。
+- `node --test tests/ivory-renderer-parity.test.mjs`: passed，3/3。
+- `npm run lint`: 0 errors；24 个 warning 来自未修改的 Enheduanna 与
+  Hypatia 文件。
+- `git diff --check`: passed。
+- 五张图片均为 1672×941、sRGB、渐进式 JPEG；首页卡片与当日日刊正文
+  均引用全部图片。公开端状态在部署完成后另行核验。
+
+### Delivery state
+
+- Base branch: `main`.
+- Base commit: `3ebe9aabecf0dcf4a1369ef31d22ad31a9cd1126`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
 ## 2026-08-01 · Issue 19 daily publication
 
 ### Current target
