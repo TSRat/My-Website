@@ -39,6 +39,7 @@
 - 三大学科使用方形细边框入口；Books / Topics / Concepts / Outputs 使用规则线分区，只作为内部筛选。
 - Knowledge Record 桌面版采用编号、标题摘要、类型日期、语义状态和跳转符号五区结构；移动版按同一 DOM 顺序纵向排列。
 - 只有 `Published` 显示 Cobalt 边框与 `↗`；`Mapping / Planned` 用文字说明不可点击，差异不能只依靠颜色。
+- Knowledge 页左上角品牌入口只显示本地 TSRat Logo，不重复显示名字；链接仍返回对应语言的 Living Atlas 首页，并用可访问名称说明目标。
 - Figma 设计源：组件集 `63:160`、桌面总览 `65:55`、移动学科页 `68:89`，均位于 `Knowledge Library · Living Atlas` 页面 `62:49`。
 
 ## 响应式人物图像
