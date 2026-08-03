@@ -18,6 +18,9 @@ Primary files:
 - `web-core.js`: reusable localization, filtering, sorting, rendering, index, search, and mobile-menu primitives
 - `analytics.js`: provider-neutral, no-storage event adapter and Living Atlas event vocabulary
 - `atlas.js`: Living Atlas adapter plus carousel behavior
+- `knowledge/knowledge-registry.js`: curated public knowledge records and the three-discipline contract
+- `knowledge/knowledge.js`: bilingual record rendering, client-side filtering, and privacy-safe knowledge events
+- `knowledge/knowledge.css`: Knowledge-specific editorial layout and responsive record component
 - `assets/`: local site imagery, including the feathered alpha-backed
   `hypatia-sketch-transparent.webp` and real-page thumbnails for the two
   migrated philosophy guides; it also contains the creator-provided
@@ -40,6 +43,10 @@ Figma:
 
 - Content-system frame: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=18-2>
 - Data / analytics frame: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=19-2>
+- Knowledge Library page: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=62-49>
+- Knowledge Record component set: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=63-160>
+- Knowledge desktop portal: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=65-55>
+- Knowledge mobile discipline screen: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=68-89>
 
 The shared site builder performs:
 
@@ -61,6 +68,7 @@ public URL.
 - Worlds, Knowledge, Now, Sites, Latest, Data, and Index use the shared bilingual content and navigation contracts.
 - Analytics remains no-op until `analytics.setProvider(...)` receives an explicitly approved provider; no browser storage or external request is used by default.
 - Both language variants share `content-registry.js`, `web-core.js`, `style.css`, and `atlas.js`; behavior changes must be verified in both.
+- Knowledge routes share one public registry and one renderer. Eight static HTML shells provide route-specific copy and `<noscript>` access; JavaScript enhances them with filtering rather than defining the only readable content.
 - Background audio uses a native `<audio>` element with `preload="none"` and
   `loop`. `atlas.js` starts playback only after the visible bilingual control is
   activated, sets the playback volume to `0.35`, reflects state through
@@ -105,7 +113,7 @@ Browser QA must cover:
 ## Known limitations
 
 - Small Red Book is a live external profile link in both desktop and mobile navigation. The former WeChat public-account placeholder has been removed rather than left as a planned state.
-- The knowledge taxonomy is intentionally marked as mapping in progress; article-level records and real counts do not exist yet.
+- The Knowledge route now exposes a curated public registry. Social Sciences and Natural Sciences & Technology intentionally begin with Mapping / Planned records rather than fake article destinations.
 - The shared runtime currently lives inside `sites/living-atlas/`. Publishing a repository-level `shared/web-core/` requires a separately authorized Pages build-map change.
 - Full-page screenshots are not accepted from the current browser backend because sticky/reveal composition can repeat or omit regions. Use matching section or anchor captures.
 - The Featured World Hypatia portrait must keep a real, softly feathered alpha channel. Keep the shared `.hypatia-portrait` multiply treatment; do not replace `hypatia-sketch-transparent.webp` with the legacy opaque `hypatia-sketch.jpg` and rely on browser blend-mode compositing alone.
