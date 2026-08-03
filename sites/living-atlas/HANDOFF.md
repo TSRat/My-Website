@@ -729,3 +729,34 @@ Logo，不再重复显示 `TSRat` 名字。返回目标、右侧导航、页面�
   <https://raw.githack.com/TSRat/My-Website/3a2535218ed7cbaf520ead7a9ed33e83cdfa3006/THE-LIVING-ATLAS/knowledge/>。
 - Draft PR: <https://github.com/TSRat/My-Website/pull/39>；未合并。
 - Antigravity extended QA: Pending。
+
+## 2026-08-04 · English Knowledge locale correction
+
+### 当前目标与决定
+
+按创作者截图反馈，四个英文 Knowledge 路由的正文、标题与栏目标签只保留
+英文；中文只保留在 `中 / EN` 语言切换入口中。四个中文路由、三大学科结构、
+记录、导航目标与视觉系统不变。创作者已明确授权修改后直接发布。
+
+### 实现与验证范围
+
+- 英文总览移除 `KNOWLEDGE / 知识` 与
+  `PUBLICATION BOUNDARY / 公开边界` 中的中文部分。
+- 三个英文学科页移除 H1 中的中文学科名，并把
+  `START HERE / 从这里开始` 改为 `START HERE`。
+- 新增全路由回归契约：四个英文路由移除语言切换器后不得包含中文字符；
+  `中 / EN` 切换器必须继续存在并指向中文页面。
+- `sites/living-atlas/` 源码与 `THE-LIVING-ATLAS/` 发布镜像已同步。
+- Figma 桌面总览 `65:55` 与移动学科页 `68:89` 继续作为布局基线；本次代码
+  暂时覆盖其中英文路由的双语文字节点，下次 Figma 同步应删除这些中文文字。
+- Branch: `codex/living-atlas-english-only-labels`；base:
+  `origin/main` at `21fceb8`；implementation commit:
+  `7b7416cdcf03d6c54c15063054cd6b8d2420dcdc`。
+- Targeted tests: Passed — 19 / 19；`npm run build:living-atlas`: Passed。
+- 一次性精确提交验证副本中的 `npm run build:pages`: Passed；
+  `npm run validate:pages`: Passed — 914 local references across 97 HTML/CSS files。
+- Local browser smoke: Passed — 英文总览桌面与三个英文学科页（含
+  `390 × 844`）移除切换器后均为 0 个中文字符；长标题未裁切，0 横向溢出，
+  0 console errors。
+- Exact-commit Preview、PR、合并、Pages 部署与正式站复核由本次直接发布流程记录。
+- Antigravity extended QA: Pending。
