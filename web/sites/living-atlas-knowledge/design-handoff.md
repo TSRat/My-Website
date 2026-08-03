@@ -1,6 +1,6 @@
 # Living Atlas 知识库设计交接
 
-Status: implementation complete · basic smoke passed · 2026-08-04
+Status: implementation complete · exact preview passed · Draft PR #38 · 2026-08-04
 
 ## 设计源
 
@@ -35,6 +35,7 @@ Status: implementation complete · basic smoke passed · 2026-08-04
 - Figma：组件集 2 viewport × 3 states，桌面与移动截图检查通过。
 - 代码：八个双语路由、三学科入口、搜索与筛选、无脚本后备已实现。
 - 浏览器基本检查：英文总览搜索和 Topics 筛选通过；中文人文学科页 390px 无横向溢出；Mapping 链接数为 0；首页仅 Knowledge World 可点击且三学科行指向真实路由。
-- Pages：`build:pages` 与 `validate:pages` 通过；最终提交后需用 exact-commit URL 再做一次未合并预览检查。
+- Pages：`build:pages` 与 `validate:pages` 通过；实现提交的 exact-commit 未合并预览检查通过。
 - Antigravity 扩展 QA：pending。
-- exact-commit preview URL 与 Draft PR URL：待推送后补入 PR 与最终交接。
+- Exact implementation preview：<https://raw.githack.com/TSRat/My-Website/2ab946adab0477eca20c360962acbe560360fa55/THE-LIVING-ATLAS/knowledge/>。
+- Draft PR：<https://github.com/TSRat/My-Website/pull/38>；未合并。

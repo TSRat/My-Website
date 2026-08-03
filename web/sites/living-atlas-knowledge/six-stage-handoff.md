@@ -1,6 +1,6 @@
 # Living Atlas 知识库六阶段交接
 
-Status: implementation complete · preview pending push · 2026-08-04
+Status: implementation complete · exact preview passed · Draft PR #38 · 2026-08-04
 
 ## 1. Product / UX
 
@@ -34,7 +34,8 @@ Status: implementation complete · preview pending push · 2026-08-04
 - 公开注册表：`sites/living-atlas/knowledge/knowledge-registry.js`
 - 八个 HTML 路由支持直接访问和 `<noscript>` 后备。
 - 本地构建、定向测试、Pages artifact、引用验证和浏览器基本检查已通过。
-- exact-commit Preview 与 Draft PR 在推送后补齐；不自动合并。
+- Exact implementation Preview：<https://raw.githack.com/TSRat/My-Website/2ab946adab0477eca20c360962acbe560360fa55/THE-LIVING-ATLAS/knowledge/>；已通过基本检查。
+- Draft PR：<https://github.com/TSRat/My-Website/pull/38>；不自动合并。
 
 ## 6. Data / analytics
 

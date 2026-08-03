@@ -681,7 +681,8 @@
 
 ### 验证与交付状态
 
-- Branch: `codex/living-atlas-knowledge`；任务开始基线：`3e36dd0`。
+- Branch: `codex/living-atlas-knowledge`；任务开始基线：`3e36dd0`；
+  implementation commit: `2ab946adab0477eca20c360962acbe560360fa55`。
 - `node --test tests/living-atlas-content-system.test.mjs tests/living-atlas-knowledge.test.mjs`:
   Passed — 18 / 18。
 - `npm run build:living-atlas`: Passed；源码与 `THE-LIVING-ATLAS/` 镜像同步。
@@ -690,9 +691,13 @@
 - Local browser smoke: Passed — 英文总览搜索与 Topics 筛选；中文人文学科
   `390 × 844` 无横向溢出；6 个 published 链接与 0 个 mapping 链接；首页
   仅 Knowledge World 可点击，三个学科入口均指向真实路由；本地 favicon 可加载。
-- Exact-commit Preview 与 Draft PR：推送后补入本节及六阶段交接。
+- Exact implementation Preview: Passed —
+  <https://raw.githack.com/TSRat/My-Website/2ab946adab0477eca20c360962acbe560360fa55/THE-LIVING-ATLAS/knowledge/>。
+  raw.githack 可能先显示外部内容确认页；选择 `Open the page`。
+- Draft PR: <https://github.com/TSRat/My-Website/pull/38>。
+- Merge: not performed；仍需创作者明确授权。
 
 ### 下一步
 
-推送专用分支，验证 exact-commit 未合并预览，创建 Draft PR；随后由创作者审阅，
-再交给 Antigravity 做扩展 QA。只有收到明确合并授权后才可 merge。
+由创作者审阅 Draft PR，并交给 Antigravity 做扩展 QA。只有收到明确合并授权后
+才可 merge。
