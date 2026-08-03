@@ -634,3 +634,65 @@
 - Draft PR: <https://github.com/TSRat/My-Website/pull/23>.
 - Merge: not performed; creator review and explicit merge authorization are
   still required.
+
+## 2026-08-04 · Curated Knowledge Library
+
+### 当前目标
+
+在 Living Atlas 首页建立 `Knowledge / 知识` 入口；线上继续使用且只使用
+人文与艺术、社会科学、自然科学与技术三大学科，同时把私人 Obsidian
+知识库中适合公开的导览结构整合为公开阅读层。
+
+### 已完成
+
+- 新增双语知识库总览与三个学科页，共八个可直接访问路由。
+- 页内整合 `Start Here`、`Knowledge Map`、`Featured`、`Books`、
+  `Topics`、`Concepts`、`Outputs` 和 `Recently Updated`。
+- 新增 10 条人工白名单记录；6 条 `published` 记录链接到现有公开站点，
+  4 条 `mapping / planned` 记录不生成假链接。
+- 首页只把 Knowledge World 变成链接；其余 Worlds 保持原有含混与非链接状态。
+- 三个学科行均链接到真实双语路由；搜索与四类筛选在浏览器端工作。
+- 新增 provider-neutral 分析契约，不记录搜索词原文、私人路径、tokenized URL、
+  cookie、持久标识或 Obsidian 文件元数据。
+- 新页面不新增远程字体请求；沿用已有 Living Atlas 字体后备与视觉变量。
+- Figma 新增响应式 Knowledge Record 组件和桌面 / 移动组合：
+  <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=62-49>。
+
+### 重要决定与已知问题
+
+- Obsidian 仍是私人编辑源；网站是人工白名单发布层，不暴露私人文件夹编号、
+  文件系统路径、草稿关系或同步状态。
+- `mapping` 与 `planned` 是诚实状态，不渲染 `<a>`，避免制造不存在的公开内容。
+- `npm run build:pages` 会重算两个无关 Next.js 哲学镜像。仓库保护规则阻止
+  整目录恢复；这些构建噪声未纳入暂存或提交，并会作为工作树残留明确报告。
+- Antigravity 全路线、多设备、多浏览器、键盘与视觉回归扩展 QA：Pending。
+- Merge 未授权；Draft PR 不得自动合并。
+
+### 修改文件
+
+- `sites/living-atlas/knowledge/`
+- `sites/living-atlas/{index.html,zh.html,content-registry.js,web-core.js,style.css}`
+- `sites/living-atlas/{analytics.js,atlas.js,site-manifest.json,site.config.json}`
+- `sites/living-atlas/{CONTENT.md,DESIGN.md,TECH.md,HANDOFF.md}`
+- `THE-LIVING-ATLAS/` 对应发布镜像
+- `tests/living-atlas-content-system.test.mjs`
+- `tests/living-atlas-knowledge.test.mjs`
+- `web/sites/living-atlas-knowledge/`
+
+### 验证与交付状态
+
+- Branch: `codex/living-atlas-knowledge`；任务开始基线：`3e36dd0`。
+- `node --test tests/living-atlas-content-system.test.mjs tests/living-atlas-knowledge.test.mjs`:
+  Passed — 18 / 18。
+- `npm run build:living-atlas`: Passed；源码与 `THE-LIVING-ATLAS/` 镜像同步。
+- `npm run build:pages`: Passed。
+- `npm run validate:pages`: Passed — 914 local references across 97 HTML/CSS files。
+- Local browser smoke: Passed — 英文总览搜索与 Topics 筛选；中文人文学科
+  `390 × 844` 无横向溢出；6 个 published 链接与 0 个 mapping 链接；首页
+  仅 Knowledge World 可点击，三个学科入口均指向真实路由；本地 favicon 可加载。
+- Exact-commit Preview 与 Draft PR：推送后补入本节及六阶段交接。
+
+### 下一步
+
+推送专用分支，验证 exact-commit 未合并预览，创建 Draft PR；随后由创作者审阅，
+再交给 Antigravity 做扩展 QA。只有收到明确合并授权后才可 merge。

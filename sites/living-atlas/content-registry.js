@@ -6,7 +6,7 @@ export const livingAtlasContent = {
       id: "knowledge",
       number: "01",
       title: { en: "Knowledge", zh: "知识" },
-      href: "#knowledge",
+      href: { en: "knowledge/", zh: "knowledge/zh.html" },
       image: "assets/knowledge.jpeg",
       imageAlt: { en: "Knowledge", zh: "知识" },
     },
@@ -39,17 +39,29 @@ export const livingAtlasContent = {
     {
       id: "humanities-arts",
       title: { en: "Humanities & Arts", zh: "人文与艺术" },
-      status: "mapping",
+      href: {
+        en: "knowledge/humanities-arts/",
+        zh: "knowledge/humanities-arts/zh.html",
+      },
+      status: "published",
     },
     {
       id: "social-sciences",
       title: { en: "Social Sciences", zh: "社会科学" },
-      status: "mapping",
+      href: {
+        en: "knowledge/social-sciences/",
+        zh: "knowledge/social-sciences/zh.html",
+      },
+      status: "published",
     },
     {
       id: "science-technology",
       title: { en: "Natural Sciences & Technology", zh: "自然科学与技术" },
-      status: "mapping",
+      href: {
+        en: "knowledge/science-technology/",
+        zh: "knowledge/science-technology/zh.html",
+      },
+      status: "published",
     },
   ],
   focus: [
@@ -230,6 +242,15 @@ export const livingAtlasContent = {
     },
   ],
   updates: [
+    {
+      id: "living-atlas-knowledge-library",
+      date: "2026-08-04",
+      title: {
+        en: "Living Atlas opened its curated knowledge library",
+        zh: "Living Atlas 上线策展式知识库",
+      },
+      href: "knowledge/",
+    },
     {
       id: "la-malinche-published",
       date: "2026-07-27",

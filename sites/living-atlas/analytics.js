@@ -5,6 +5,10 @@ export const ANALYTICS_EVENTS = Object.freeze([
   "search_result_opened",
   "published_site_opened",
   "data_section_opened",
+  "knowledge_open",
+  "knowledge_filter",
+  "knowledge_search",
+  "knowledge_entry_open",
 ]);
 
 const eventProperties = {
@@ -12,6 +16,15 @@ const eventProperties = {
   search_result_opened: new Set(["content_type"]),
   published_site_opened: new Set(["content_type"]),
   data_section_opened: new Set(["content_type"]),
+  knowledge_open: new Set(["language", "discipline"]),
+  knowledge_filter: new Set(["language", "discipline", "type"]),
+  knowledge_search: new Set(["language", "discipline", "has_results"]),
+  knowledge_entry_open: new Set([
+    "language",
+    "discipline",
+    "entry_id",
+    "type",
+  ]),
 };
 
 const normalizeValue = (value) => {

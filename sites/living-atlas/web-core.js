@@ -52,9 +52,19 @@ export const renderWorlds = (registry, locale, container) => {
   container.replaceChildren();
 
   registry.worlds.forEach((world) => {
-    const article = document.createElement("article");
+    const href = localize(world.href, locale);
+    const isKnowledgePortal = world.id === "knowledge" && href;
+    const article = document.createElement(isKnowledgePortal ? "a" : "article");
     article.className = "bento-box world-box-large";
     article.id = `world-${world.id}`;
+    if (isKnowledgePortal) {
+      article.href = href;
+      article.classList.add("world-box-link");
+      article.setAttribute(
+        "aria-label",
+        locale === "zh" ? "进入知识库" : "Open the knowledge library",
+      );
+    }
 
     const imageWrapper = document.createElement("div");
     imageWrapper.className = "image-wrapper";
@@ -76,12 +86,18 @@ export const renderKnowledge = (registry, locale, container) => {
   registry.knowledge.forEach((category) => {
     const item = document.createElement("li");
     item.id = `knowledge-${category.id}`;
+    const href = localize(category.href, locale);
+    const content = document.createElement(href ? "a" : "div");
+    if (href) content.href = href;
     const title = appendLocalizedText(document.createElement("span"), category.title, locale);
     const status = createMetadata(
-      locale === "zh" ? "整理中" : category.status === "mapping" ? "Mapping" : category.status,
+      category.status === "published"
+        ? locale === "zh" ? "进入 ↗" : "Open ↗"
+        : locale === "zh" ? "整理中" : category.status === "mapping" ? "Mapping" : category.status,
     );
     status.classList.add("content-state");
-    item.append(title, status);
+    content.append(title, status);
+    item.append(content);
     container.append(item);
   });
 };
@@ -186,13 +202,13 @@ export const buildIndexEntries = (registry, locale) => {
   const worlds = registry.worlds.map((world) => ({
     id: world.id,
     title: world.title,
-    href: `#world-${world.id}`,
+    href: localize(world.href, locale) || `#world-${world.id}`,
     type: "world",
   }));
   const knowledge = registry.knowledge.map((category) => ({
     id: category.id,
     title: category.title,
-    href: `#knowledge-${category.id}`,
+    href: localize(category.href, locale) || `#knowledge-${category.id}`,
     type: "knowledge",
   }));
   const sites = getPublishedSites(registry).map((site) => ({

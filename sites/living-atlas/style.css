@@ -489,6 +489,14 @@ main section {
   background-color: rgba(0, 71, 171, 0.05); /* Cobalt tinted */
 }
 
+.world-box-link {
+  border: 1px solid transparent;
+}
+
+.world-box-link:hover {
+  border-color: var(--c-cobalt);
+}
+
 .world-box {
   grid-column: span 4;
 }
@@ -531,13 +539,18 @@ main section {
   gap: 2rem;
 }
 
-.knowledge-list li {
+.knowledge-list li > a,
+.knowledge-list li > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(167, 162, 154, 0.3);
-  padding-bottom: 1rem;
+  padding: 0 0 1rem;
   font-size: var(--text-h3);
+}
+
+.knowledge-list li > a:hover {
+  border-bottom-color: var(--c-cobalt);
 }
 
 .knowledge-list .count {

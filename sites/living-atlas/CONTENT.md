@@ -11,7 +11,7 @@
   `001–004`：希帕蒂娅、希尔德加德、马琳切与恩赫杜安娜。每期保留人物名、
   一句话、时间地点、入口和人物图，不把轮播改成泛化作品卡。
 - **04 Worlds (开放入口)**: 固定显示 Knowledge / Story / Media / Interaction（中文为知识 / 故事 / 媒体 / 交互）。这些词是创作者有意保留含混性的概念入口，不是作品类型目录；不得增加解释句、对应关系或穷尽式分类。
-- **05 Knowledge Atlas (知识库细分)**: 只细分 Knowledge 世界。底层收藏尚未整理完成时显示 `Mapping / 整理中`，不得使用没有来源的数量。
+- **05 Knowledge Atlas (知识库细分)**: 只细分 Knowledge 世界。首页三行分别进入人文与艺术、社会科学、自然科学与技术学科页；不把 Books / Topics / Concepts / Outputs 提升为一级学科。
 - **07 Sites (已发布网站)**: 只收录 `status: published` 且有真实 URL 的独立网站；数量由注册表自动计算。
 - **08 Latest (最近更新)**: 从带日期的更新记录自动排序和渲染。
 - **09 Data / Signals (数据入口)**: 保留可见的数据与测量入口；provider 未连接时显示诚实空状态，不展示假数字或假图表。
@@ -25,6 +25,14 @@
 - `analytics.js` 提供 provider-neutral 事件信封；默认 no-op，不存储或发送数据。
 - `index.html` 与 `zh.html` 只保留共同的语义容器和各自的界面文案。
 - 未来可以把注册表替换为 Markdown + Frontmatter、CMS 或 API，但必须保持稳定 `id`、发布状态和链接规则。
+
+## 知识库公开层
+
+- `knowledge/knowledge-registry.js` 是公开知识条目的唯一数据源，初始收录 10 条 allowlist 记录。
+- 公开一级结构固定为三大学科；`Start Here`、`Knowledge Map`、`Featured`、四种内容身份与 `Recently Updated` 是页面内部组织方式。
+- `published` 记录必须有真实目的地；`mapping / planned` 记录必须没有 `href`，只显示状态和摘要。
+- 私人 Obsidian 仍是研究来源，不是线上运行时依赖。私人日志、系统目录、缓存、本地路径、临时 URL 与令牌化链接不得进入公开注册表。
+- 八个公开路由包括双语总览与三个学科的中英文页面；每页保留 `<noscript>` 后备记录。
 
 完整跨站契约见 `../../web/content-system.md`、`../../web/analytics-standard.md`
 和 `../../web/templates/site-starter/`。

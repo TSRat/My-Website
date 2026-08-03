@@ -62,7 +62,10 @@ test("Living Atlas index contains only navigable destinations", () => {
     entries.forEach((entry) => {
       assert.ok(entry.id);
       assert.notEqual(entry.href, "#");
-      assert.match(entry.href, /^(#[-a-z0-9]+|\.\.\/[A-Z-]+\/)$/);
+      assert.match(
+        entry.href,
+        /^(#[-a-z0-9]+|\.\.\/[A-Z-]+\/|knowledge\/(?:zh\.html|[-a-z]+\/(?:zh\.html)?)?)$/,
+      );
       assert.ok(entry.label);
     });
   }
