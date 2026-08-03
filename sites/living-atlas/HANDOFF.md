@@ -701,3 +701,31 @@
 
 由创作者审阅 Draft PR，并交给 Antigravity 做扩展 QA。只有收到明确合并授权后
 才可 merge。
+
+## 2026-08-04 · Knowledge header logo-only correction
+
+### 当前目标与决定
+
+按创作者反馈，把知识库八个中英文路由左上角的品牌入口统一为仅显示 TSRat
+Logo，不再重复显示 `TSRat` 名字。返回目标、右侧导航、页面内容、路由与视觉
+系统均保持不变。
+
+### 实现与验证范围
+
+- 八个路由删除可见 `<span>TSRat</span>`，保留本地 Logo。
+- 英文链接使用 `Back to The Living Atlas`，中文链接使用
+  `返回 The Living Atlas` 作为可访问名称；空 `alt` 避免重复朗读。
+- 回归测试锁定所有知识库路由都包含可访问品牌链接且不再包含名字节点。
+- Figma 桌面 `65:55` 与移动 `68:89` 继续作为布局基线；本次代码在左上角
+  品牌节点上暂时覆盖其中的文字版本，后续 Figma 同步应删除该文字。
+- Branch: `codex/living-atlas-logo-only`；base: `origin/main` at `7b5176f`。
+- Implementation commit: `3a2535218ed7cbaf520ead7a9ed33e83cdfa3006`。
+- Targeted tests: Passed — 18 / 18；`npm run build:living-atlas`: Passed。
+- 一次性验证副本中的 `npm run build:pages`: Passed；
+  `npm run validate:pages`: Passed — 914 local references across 97 HTML/CSS files。
+- Local browser smoke: Passed — 英文桌面与中文 `390 × 844` 均只有 Logo，
+  返回目标与可访问名称正确，Logo 加载，0 横向溢出，0 console errors。
+- Exact implementation Preview: Passed —
+  <https://raw.githack.com/TSRat/My-Website/3a2535218ed7cbaf520ead7a9ed33e83cdfa3006/THE-LIVING-ATLAS/knowledge/>。
+- Draft PR: <https://github.com/TSRat/My-Website/pull/39>；未合并。
+- Antigravity extended QA: Pending。
