@@ -1,5 +1,50 @@
 # IVORY ARCHIVE handoff
 
+## 2026-08-03 · Issue 21 daily publication
+
+### Current target
+
+发布第 21 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-03 第 21 期：Christian Petersen 的金属工艺履历、
+  Virginia 选举日期整合报告、睡眠基础模型与传统 AHI 摘要的差异、
+  星系边缘潮汐撕裂事件，以及护士主导的重症意外拔管质量改进。
+- 每则先解释陌生人物、制度或研究对象，再分开记录事件、带句号细节和
+  分析；历史材料、前后比较、回顾性模型关联、跨台站观测与单中心质量
+  改进没有被写成已证明的单一因果关系。
+- 与此前 100 则日刊及两个历史基线按人物、作品、事件、核心判断和内容
+  转化角度逐项比较，最终五则均无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充艺术家作品、选票与选民、
+  患者与临床波形、NASA 观测或真实重症病房。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 21 期图片
+
+### Verification
+
+- `npm run build:pages` 通过；总入口、`IVORY-ARCHIVE/`、2026-08-03
+  日刊、旧日刊跳转与五张图片均生成。
+- `npm run validate:pages` 通过，共验证 88 个 HTML/CSS 文件中的 813 个
+  本地引用。
+- `npm run build:ivory` 与 3 项 renderer parity / 内容合同测试通过。
+- `npm run lint` 通过（0 errors；24 条均为既有其他站点警告）。
+- 静态总入口已核对 `2026.08.03`、`21 期`、`105 则`；首页卡片与日刊
+  正文均引用全部五张第 21 期图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- Base commit: `82af48c7437db70c8e48c7d30597298645d419a1`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
 ## 2026-08-02 · Issue 20 daily publication
 
 ### Current target
