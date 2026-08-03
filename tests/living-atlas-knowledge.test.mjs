@@ -14,6 +14,9 @@ import {
 const readKnowledgeFile = (name) =>
   readFile(new URL(`../sites/living-atlas/knowledge/${name}`, import.meta.url), "utf8");
 
+const stripLanguageSwitcher = (page) =>
+  page.replace(/<a class="knowledge-nav__language"[^>]*>[\s\S]*?<\/a>/g, "");
+
 test("Knowledge library keeps three public disciplines and four internal types", () => {
   assert.deepEqual(
     knowledgeLibrary.disciplines.map(({ id }) => id),
@@ -85,6 +88,21 @@ test("Knowledge provides eight bilingual routes with no-script access", async ()
     assert.doesNotMatch(page, /<span>TSRat<\/span>/);
     assert.doesNotMatch(page, /fonts\.googleapis|fonts\.gstatic|preconnect/);
     assert.doesNotMatch(page, /href=["']#["']/);
+  }
+});
+
+test("English Knowledge routes reserve Chinese text for the language switcher", async () => {
+  const routes = [
+    "index.html",
+    "humanities-arts/index.html",
+    "social-sciences/index.html",
+    "science-technology/index.html",
+  ];
+
+  for (const route of routes) {
+    const page = await readKnowledgeFile(route);
+    assert.match(page, /class="knowledge-nav__language"[^>]*lang="zh-CN"[^>]*>中 \/ EN<\/a>/);
+    assert.doesNotMatch(stripLanguageSwitcher(page), /[\u3400-\u9fff]/);
   }
 });
 
