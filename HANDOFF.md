@@ -1674,7 +1674,8 @@ is a browser-chrome asset correction only; site layouts and content are unchange
 - Branch: `codex/living-atlas-favicon-surfaces`; base: `origin/main` at
   `208b85d`; implementation commit:
   `586b542c9629896dd9e28c20b98202840d8f25fc`.
-- Draft PR: <https://github.com/TSRat/My-Website/pull/41>.
+- PR: <https://github.com/TSRat/My-Website/pull/41>; merged as
+  `eca27d1ae72958079e4a624678a84b7150f8174b`.
 
 ### Verification and remaining work
 
@@ -1687,5 +1688,10 @@ is a browser-chrome asset correction only; site layouts and content are unchange
   <https://raw.githack.com/TSRat/My-Website/586b542c9629896dd9e28c20b98202840d8f25fc/>
   and
   <https://raw.githack.com/TSRat/My-Website/586b542c9629896dd9e28c20b98202840d8f25fc/THE-LIVING-ATLAS/knowledge/>.
-- Antigravity extended QA remains pending. Merge and production publication are
-  not authorized in this correction turn.
+- GitHub Pages run
+  <https://github.com/TSRat/My-Website/actions/runs/30918123313> passed every build,
+  asset-validation, mirror-validation, upload, and deploy step.
+- Cache-resistant production browser smoke passed for the Website Archive,
+  Knowledge portal, and a nested discipline route: each resolved the shared
+  Living Atlas SVG with HTTP 200 and `image/svg+xml`; no console errors.
+- Production publication is complete. Antigravity extended QA remains pending.

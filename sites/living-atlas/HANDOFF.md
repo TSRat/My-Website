@@ -787,10 +787,16 @@ Logo，不再重复显示 `TSRat` 名字。返回目标、右侧导航、页面�
   <https://raw.githack.com/TSRat/My-Website/586b542c9629896dd9e28c20b98202840d8f25fc/THE-LIVING-ATLAS/knowledge/>
   与
   <https://raw.githack.com/TSRat/My-Website/586b542c9629896dd9e28c20b98202840d8f25fc/>。
-- Draft PR: <https://github.com/TSRat/My-Website/pull/41>；未合并、未发布到生产。
+- PR: <https://github.com/TSRat/My-Website/pull/41>；已通过 merge commit
+  `eca27d1ae72958079e4a624678a84b7150f8174b` 合并。
+- GitHub Pages run
+  <https://github.com/TSRat/My-Website/actions/runs/30918123313>: Passed — build、
+  本地资源校验、Hypatia 镜像校验与 Pages 部署全部成功。
+- Production smoke: Passed — Website Archive、Knowledge 总览与两层学科页均解析到
+  `THE-LIVING-ATLAS/favicon.svg?v=20260804-1`；禁用缓存请求返回 HTTP 200、
+  `image/svg+xml`，品牌色匹配，0 console errors。
 - Antigravity extended QA: Pending。
 
 ### 下一步
 
-创作者可通过 Draft PR 和两个精确提交预览确认浏览器标签图标；收到新的明确合并
-授权后再发布到正式站。
+正式站已发布。后续只需由 Antigravity 完成扩展多浏览器与视觉回归 QA。
