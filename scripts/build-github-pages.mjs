@@ -88,7 +88,7 @@ function hubPage() {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="TSRat 的公开静态网站总入口。">
   <title>TSRat · Website Archive</title>
-  <link rel="icon" href="${siteSlug}/favicon.svg">
+  <link rel="icon" href="THE-LIVING-ATLAS/favicon.svg?v=20260804-1" type="image/svg+xml">
   <link rel="stylesheet" href="hub.css">
 </head>
 <body>

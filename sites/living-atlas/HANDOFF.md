@@ -760,3 +760,37 @@ Logo，不再重复显示 `TSRat` 名字。返回目标、右侧导航、页面�
   0 console errors。
 - Exact-commit Preview、PR、合并、Pages 部署与正式站复核由本次直接发布流程记录。
 - Antigravity extended QA: Pending。
+
+## 2026-08-04 · Shared branded favicon correction
+
+### 当前目标与决定
+
+把最新版 Living Atlas 方形 SVG favicon 统一用于知识库分页与网页导航页。该图标
+使用 Living Atlas 的钴蓝、象牙白与橙色识别色；页面版式、正文、导航和 Figma
+设计不变，因此本次不新增 Figma 画板。
+
+### 已完成与验证
+
+- 八个 Knowledge 中英文路由全部改用 `favicon.svg?v=20260804-1`，并保留正确的
+  相对路径和 `image/svg+xml` 类型。
+- `sites/living-atlas/` 权威源码与 `THE-LIVING-ATLAS/` 发布镜像已同步；首页中英
+  路由也统一使用同一缓存键。
+- 回归测试覆盖八个 Knowledge 路由、Living Atlas 首页与 Website Archive 生成器。
+- Branch: `codex/living-atlas-favicon-surfaces`；base: `origin/main` at `208b85d`；
+  implementation commit: `586b542c9629896dd9e28c20b98202840d8f25fc`。
+- Targeted tests: Passed — 20 / 20；`npm run build:living-atlas`: Passed。
+- 一次性精确提交验证副本中的 `npm run build:pages`: Passed；
+  `npm run validate:pages`: Passed — 936 local references across 99 HTML/CSS files。
+- Local browser smoke: Passed — Knowledge 与 Website Archive 均请求同一个 SVG，
+  HTTP 200、`image/svg+xml`、品牌色匹配、0 console errors。
+- Exact implementation previews:
+  <https://raw.githack.com/TSRat/My-Website/586b542c9629896dd9e28c20b98202840d8f25fc/THE-LIVING-ATLAS/knowledge/>
+  与
+  <https://raw.githack.com/TSRat/My-Website/586b542c9629896dd9e28c20b98202840d8f25fc/>。
+- Draft PR: <https://github.com/TSRat/My-Website/pull/41>；未合并、未发布到生产。
+- Antigravity extended QA: Pending。
+
+### 下一步
+
+创作者可通过 Draft PR 和两个精确提交预览确认浏览器标签图标；收到新的明确合并
+授权后再发布到正式站。

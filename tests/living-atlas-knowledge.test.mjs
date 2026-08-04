@@ -78,7 +78,12 @@ test("Knowledge provides eight bilingual routes with no-script access", async ()
 
   for (const [route, locale] of routes) {
     const page = await readKnowledgeFile(route);
+    const faviconPrefix = route.includes("/") ? "../../" : "../";
     assert.match(page, new RegExp(`<html lang="${locale}">`));
+    assert.match(
+      page,
+      new RegExp(`<link rel="icon" href="${faviconPrefix}favicon\\.svg\\?v=20260804-1" type="image/svg\\+xml">`),
+    );
     assert.match(page, /data-record-list/);
     assert.match(page, /data-knowledge-search/);
     assert.match(page, /data-knowledge-filter="all"/);
@@ -89,6 +94,22 @@ test("Knowledge provides eight bilingual routes with no-script access", async ()
     assert.doesNotMatch(page, /fonts\.googleapis|fonts\.gstatic|preconnect/);
     assert.doesNotMatch(page, /href=["']#["']/);
   }
+});
+
+test("Living Atlas and Website Archive share the current branded favicon", async () => {
+  const [englishHome, chineseHome, websiteArchive, pagesBuilder] = await Promise.all([
+    readFile(new URL("../sites/living-atlas/index.html", import.meta.url), "utf8"),
+    readFile(new URL("../sites/living-atlas/zh.html", import.meta.url), "utf8"),
+    readFile(new URL("../index.html", import.meta.url), "utf8"),
+    readFile(new URL("../scripts/build-github-pages.mjs", import.meta.url), "utf8"),
+  ]);
+  const livingAtlasFavicon = /href="favicon\.svg\?v=20260804-1" type="image\/svg\+xml"/;
+  const archiveFavicon = /href="THE-LIVING-ATLAS\/favicon\.svg\?v=20260804-1" type="image\/svg\+xml"/;
+
+  assert.match(englishHome, livingAtlasFavicon);
+  assert.match(chineseHome, livingAtlasFavicon);
+  assert.match(websiteArchive, archiveFavicon);
+  assert.match(pagesBuilder, archiveFavicon);
 });
 
 test("English Knowledge routes reserve Chinese text for the language switcher", async () => {

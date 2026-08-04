@@ -1654,3 +1654,38 @@ the parent Website Archive from both Living Atlas language variants.
   <https://htmlpreview.github.io/?https://gist.githubusercontent.com/TSRat/0bf430d6576faa8f7708da3bb4f7b7ab/raw/4dcc04246de17dfd7c89671f2b70992fb959bdee/website-archive-preview.html>.
 - Draft PR: <https://github.com/TSRat/My-Website/pull/22>.
 - Merge: not performed; automatic merge remains prohibited.
+
+## 2026-08-04: Website Archive and Knowledge shared favicon
+
+### Current target and decision
+
+Use the latest Living Atlas square SVG favicon for both the public Website
+Archive navigation page and every bilingual Living Atlas Knowledge route. This
+is a browser-chrome asset correction only; site layouts and content are unchanged.
+
+### Completed
+
+- Updated the Pages hub generator and committed root `index.html` baseline to
+  reference `THE-LIVING-ATLAS/favicon.svg?v=20260804-1`.
+- Updated all eight authoritative Knowledge routes and regenerated the
+  `THE-LIVING-ATLAS/` mirror.
+- Added regression coverage for route depth, MIME declaration, cache key, and
+  shared hub/Living Atlas identity.
+- Branch: `codex/living-atlas-favicon-surfaces`; base: `origin/main` at
+  `208b85d`; implementation commit:
+  `586b542c9629896dd9e28c20b98202840d8f25fc`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/41>.
+
+### Verification and remaining work
+
+- Targeted tests: passed, 20/20; `npm run build:living-atlas`: passed.
+- Exact implementation commit `npm run build:pages`: passed;
+  `npm run validate:pages`: passed, 936 references across 99 HTML/CSS files.
+- Local browser smoke: both surfaces fetched the branded SVG with HTTP 200 and
+  `image/svg+xml`; no console errors.
+- Exact implementation previews:
+  <https://raw.githack.com/TSRat/My-Website/586b542c9629896dd9e28c20b98202840d8f25fc/>
+  and
+  <https://raw.githack.com/TSRat/My-Website/586b542c9629896dd9e28c20b98202840d8f25fc/THE-LIVING-ATLAS/knowledge/>.
+- Antigravity extended QA remains pending. Merge and production publication are
+  not authorized in this correction turn.
