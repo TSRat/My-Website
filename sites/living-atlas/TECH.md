@@ -38,6 +38,7 @@ Primary files:
   `sites/la-malinche/assets/malinche-cutout.png`; do not duplicate or
   independently edit it inside Living Atlas.
 - `tsrat-logo.png`: local navigation logo
+- `favicon.svg`: current square Living Atlas browser icon; all Living Atlas routes and the generated Website Archive hub reference it with the `20260804-1` cache key
 
 Figma:
 
