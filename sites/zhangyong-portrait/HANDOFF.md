@@ -137,6 +137,12 @@ Earlier content and alternate-route delivery:
   counter, visible narrow scrollbar, localized dates and zero-script boundary
   are present without body overflow.
 - Hidden-entry and return-path navigation: passed.
+- Exact-commit remote smoke at 390×844: passed for both routes; the original
+  navigation is visible, the red navigation scrolls within its own container,
+  all local images load, and the page-level overflow remains zero.
+
+Earlier route-delivery verification:
+
 - `node --check` for `site.js`, `content-registry.js` and
   `site-manifest.js`: passed.
 - `npm run validate:sites`: passed for all 10 maintenance packages.
@@ -166,27 +172,29 @@ Earlier content and alternate-route delivery:
 | Product / UX | Strongly recommended | Yes | Hidden-entry flow, parody disclosure and return path documented | — |
 | Figma | Mandatory | Yes | Editable red-parody frame, variables, component, desktop/mobile screens | — |
 | Browser | Mandatory | Yes | Desktop/mobile smoke, entry/return flow, anchors, details and image checks passed | Antigravity extended QA remains pending |
-| GitHub | Mandatory | Yes | Commit `07ccc63`, pushed branch and Draft PR #27 | — |
-| Preview | Mandatory | Yes | Exact-commit original and alternate routes smoke-tested | — |
+| GitHub | Mandatory | Yes | Implementation commit `8a67756`, pushed branch and ready PR #43 | — |
+| Preview | Mandatory | Yes | Both `8a67756` exact-commit routes smoke-tested at 390×844 | — |
 | Creative Production | Strongly recommended | No | — | Existing Zhang Yong imagery and researched portal references fully define the art direction |
 | Data / Analytics | Strongly recommended | No | Provider-none contract and fictional-counter boundary documented locally | No real metric or provider is being designed; invoking analytics would risk legitimizing a fictional count |
 | Visualization | Strongly recommended | No | — | Two-route flow is simpler as a short product-spec sequence |
 
 ## Git and delivery
 
-- Branch: `codex/zhangyong-red-parody`
-- Base: `origin/main` at `86467f7`
-- Implementation commit: `07ccc63`
+- Branch: `codex/zhangyong-guideline-fixes`
+- Base: `origin/main` at `c994e35`
+- Implementation commit: `8a67756`
 - Preview:
-  <https://raw.githack.com/TSRat/My-Website/07ccc632fe04c044a84863ee3ed61698f3e92927/ZHANGYONG-PORTRAIT/red.html>
+  <https://raw.githack.com/TSRat/My-Website/8a677569384e255804efdaef9a1369a6ffdaa15c/ZHANGYONG-PORTRAIT/red.html>
 - Original route preview:
-  <https://raw.githack.com/TSRat/My-Website/07ccc632fe04c044a84863ee3ed61698f3e92927/ZHANGYONG-PORTRAIT/index.html>
-- Pull Request: <https://github.com/TSRat/My-Website/pull/27> (Draft)
+  <https://raw.githack.com/TSRat/My-Website/8a677569384e255804efdaef9a1369a6ffdaa15c/ZHANGYONG-PORTRAIT/index.html>
+- Pull Request: <https://github.com/TSRat/My-Website/pull/43> (ready; merge explicitly
+  authorized by the creator)
 - Figma:
   <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=43-39>
 - Antigravity QA: pending
 
 ## Next step
 
-Review the hidden-entry discoverability and parody tone in the exact-commit
-preview, then run Antigravity extended QA before marking the PR ready.
+Merge PR #43, verify the Pages workflow and both production routes, then hand
+the merged result to Antigravity for extended route, keyboard, network and
+perceptual comparison.
