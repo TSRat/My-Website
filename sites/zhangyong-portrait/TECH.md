@@ -36,6 +36,12 @@ Core content and navigation work without JavaScript. JavaScript only annotates
 the implementation, marks the active primary-nav destination and prepares
 provider-neutral events.
 
+Both routes declare a surface-matched browser theme color, preload only the
+local fonts needed for first paint, and give every local image intrinsic
+dimensions. The leading image on each route uses high fetch priority. Hash
+targets account for direct navigation, and interactive links use touch-safe
+activation without removing keyboard focus behavior.
+
 The alternate route is plain HTML/CSS. Its `2,135,227+` counter is hard-coded
 display copy, not a measurement system or persistence mechanism.
 

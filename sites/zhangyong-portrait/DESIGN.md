@@ -36,6 +36,10 @@ art direction:
 The friendship orbit may show Underhail and velna as distinct satellite nodes.
 Their positions and colors communicate two relationship modes, not a ranking.
 
+The primary navigation remains visible and horizontally scrollable at narrow
+viewports. Interface metadata uses a 10px minimum and strengthened contrast so
+the preserved dense visual language does not make supporting text illegible.
+
 ## Figma reference
 
 - Shared foundations:
@@ -69,6 +73,10 @@ focusable entry point.
 
 The parody always uses explicit non-official labels and omits real emblems,
 seals and government identifiers.
+
+Its compact masthead index is a label, not a simulated search control. Narrow
+navigation keeps a visible scrollbar, and link hover/focus states remain
+available across notice, bulletin and policy surfaces.
 
 ## QA baseline
 

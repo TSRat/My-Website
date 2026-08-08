@@ -2,12 +2,27 @@
 
 ## Current target
 
-Add a discreet, accessible entry from the preserved portrait to a separate
-red public-portal parody that promotes the fictional “Zhang Yong spirit”
-without impersonating a real party or government body.
+Resolve the Web Interface Guidelines audit findings on both maintained routes
+without changing the portrait's established visual identity or weakening the
+red alternate's explicit non-official parody boundary.
 
 ## Completed
 
+- Added surface-matched browser theme colors and local first-paint font
+  preloads to both routes.
+- Added verified intrinsic dimensions to every local image and high fetch
+  priority to each route's leading image.
+- Restored the original route's chapter navigation at narrow viewports with a
+  contained, touch-safe layout and visible scrollbar styling where needed.
+- Added dark color-scheme metadata, hash-target offsets, touch interaction
+  behavior and stronger small-metadata legibility while preserving the dense
+  cyber-diary composition.
+- Replaced the red masthead's simulated search label with an honest column
+  index, removed the false current-page state, localized visible dates and
+  added balanced headings plus consistent link hover/focus states.
+- Kept the red alternate script-free and retained the visible non-official
+  disclosure and fictional-counter label.
+- Added source-level regression assertions for these interface contracts.
 - Preserved the weather-observatory hero, palette, typography, image roles,
   section rhythm and responsive breakpoints.
 - Replaced the former timeline with a visibly labeled practical-life creative
@@ -78,6 +93,20 @@ without impersonating a real party or government body.
 
 ## Changed files
 
+Current guideline-remediation round:
+
+- `sites/zhangyong-portrait/index.html`
+- `sites/zhangyong-portrait/platform.css`
+- `sites/zhangyong-portrait/red.html`
+- `sites/zhangyong-portrait/red.css`
+- `sites/zhangyong-portrait/DESIGN.md`
+- `sites/zhangyong-portrait/TECH.md`
+- `sites/zhangyong-portrait/HANDOFF.md`
+- matching generated files under `ZHANGYONG-PORTRAIT/`
+- `tests/living-atlas-static-sites.test.mjs`
+
+Earlier content and alternate-route delivery:
+
 - `sites/zhangyong-portrait/index.html`
 - `sites/zhangyong-portrait/red.html`
 - `sites/zhangyong-portrait/red.css`
@@ -95,6 +124,19 @@ without impersonating a real party or government body.
 
 ## Commands and results
 
+- `node --test tests/living-atlas-static-sites.test.mjs`: passed, 5/5.
+- `npm run validate:sites`: passed for all 11 maintenance packages.
+- `npm run build:zhangyong`: passed; source and public mirror match.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed, 961 references across 101 HTML/CSS files.
+- `git diff --check`: passed.
+- Local original-route smoke at 1440×900 and 390×844: passed; navigation is
+  visible, body overflow is zero, all metadata is at least 10px and all seven
+  local image instances load after lazy-load activation.
+- Local red-route smoke at 1440×900 and 390×844: passed; disclosure, fictional
+  counter, visible narrow scrollbar, localized dates and zero-script boundary
+  are present without body overflow.
+- Hidden-entry and return-path navigation: passed.
 - `node --check` for `site.js`, `content-registry.js` and
   `site-manifest.js`: passed.
 - `npm run validate:sites`: passed for all 10 maintenance packages.
