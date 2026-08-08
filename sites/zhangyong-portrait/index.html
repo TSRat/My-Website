@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08070a">
     <meta
       name="description"
       content="张勇的生活切片：围绕自我命名、身体力量、实用主义、照料、食物与阅读的开放人物档案。"
     >
     <title>张勇｜不是一种答案，是一种天气</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="./fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/geist-mono.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./fonts.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./platform.css">
@@ -21,7 +24,7 @@
 <a class="brand" href="#top" aria-label="张勇乐园首页">张勇乐园<span class="brand-pulse" aria-hidden="true">
 </span>
 </a>
-<nav class="nav-links">
+<nav class="nav-links" aria-label="章节导航">
 <a href="#timeline">实用账本</a>
 <a href="#favored">深夜觅食</a>
 <a href="#bawanglong">霸王龙</a>
@@ -58,14 +61,14 @@
 <p>我对你好是因为我兔品很好</p>
 <p>不是因为你很牛</p>
 <span>兔子广播 / 01</span>
-<img src="./assets/rabbit-bread.jpg" alt="一只与面包合为一体的兔子" width="118" height="118" loading="lazy" decoding="async"/>
+<img src="./assets/rabbit-bread.jpg" alt="一只与面包合为一体的兔子" width="1062" height="940" loading="lazy" decoding="async"/>
 </div>
 <figure class="photo-window bird-window">
 <figcaption>/ BIRD_0321.JPG / 01 <i aria-hidden="true">
 </i>
 </figcaption>
 <div class="image-wrap">
-<img src="./assets/bawanglong.jpg" alt="站在屏幕边缘、正在梳理羽毛的白紫色小鸟霸王龙" loading="eager" decoding="async" sizes="(max-width: 800px) 92vw, 43vw" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+<img src="./assets/bawanglong.jpg" alt="站在屏幕边缘、正在梳理羽毛的白紫色小鸟霸王龙" width="1280" height="1480" loading="eager" fetchpriority="high" decoding="async" sizes="(max-width: 800px) 92vw, 43vw" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
 </div>
 </figure>
 <figure class="photo-window food-window">
@@ -73,7 +76,7 @@
 </i>
 </figcaption>
 <div class="image-wrap">
-<img src="./assets/spicy-pork.jpg" alt="一份热乎的青椒辣椒炒肉盖饭" loading="lazy" decoding="async" sizes="(max-width: 800px) 48vw, 18vw" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+<img src="./assets/spicy-pork.jpg" alt="一份热乎的青椒辣椒炒肉盖饭" width="1280" height="1706" loading="lazy" decoding="async" sizes="(max-width: 800px) 48vw, 18vw" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
 </div>
 </figure>
 <div class="care-card">
@@ -374,11 +377,11 @@
 <section id="bawanglong" class="section pet-section">
 <div class="pet-visual">
 <div class="pet-image-frame">
-<img src="./assets/bawanglong.jpg" alt="白紫色小鸟霸王龙近距离站在屏幕边缘" loading="lazy" decoding="async" sizes="(max-width: 800px) 100vw, 56vw" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+<img src="./assets/bawanglong.jpg" alt="白紫色小鸟霸王龙近距离站在屏幕边缘" width="1280" height="1480" loading="lazy" decoding="async" sizes="(max-width: 800px) 100vw, 56vw" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
 <span>/ SUBJECT: 霸王龙</span>
 </div>
 <div class="pet-sticker">
-<img src="./assets/rabbit-squish.png" alt="被生活压扁的兔子梗图" loading="lazy" decoding="async" sizes="180px" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+<img src="./assets/rabbit-squish.png" alt="被生活压扁的兔子梗图" width="946" height="2048" loading="lazy" decoding="async" sizes="180px" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
 <span>被生活压扁 / 07</span>
 </div>
 </div>
@@ -512,10 +515,10 @@
 </div>
 <div class="rabbit-gallery">
 <figure class="rabbit-large">
-<img src="./assets/rabbit-bread.jpg" alt="像面包和土豆一样圆的兔子" loading="lazy" decoding="async" sizes="(max-width: 800px) 88vw, 34vw" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+<img src="./assets/rabbit-bread.jpg" alt="像面包和土豆一样圆的兔子" width="1062" height="940" loading="lazy" decoding="async" sizes="(max-width: 800px) 88vw, 34vw" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
 </figure>
 <figure class="rabbit-meme">
-<img src="./assets/rabbit-quote.png" alt="写着兔品很好、不因别人很牛而示好的兔子梗图" loading="lazy" decoding="async" sizes="(max-width: 800px) 44vw, 18vw" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+<img src="./assets/rabbit-quote.png" alt="写着兔品很好、不因别人很牛而示好的兔子梗图" width="946" height="2048" loading="lazy" decoding="async" sizes="(max-width: 800px) 44vw, 18vw" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
 </figure>
 <span class="rabbit-label">RABBIT COMPOSITION / 70·20·10</span>
 </div>
