@@ -16,8 +16,20 @@ export function ArchiveExplorer({ briefings }: { briefings: Briefing[] }) {
       const matchesFilter = activeFilter === "全部" || briefing.topics.includes(activeFilter);
       const searchable = [
         briefing.theme,
+        briefing.intro,
+        briefing.learningGoal,
+        briefing.connection,
         briefing.displayDate,
-        ...briefing.stories.flatMap((story) => [story.title, story.category, story.summary]),
+        ...briefing.stories.flatMap((story) => [
+          story.title,
+          story.category,
+          story.summary,
+          story.background,
+          story.happened,
+          story.whyItMatters,
+          ...story.facts,
+          story.sourceName,
+        ]),
       ].join(" ").toLowerCase();
       return matchesFilter && (!normalized || searchable.includes(normalized));
     });
@@ -41,13 +53,13 @@ export function ArchiveExplorer({ briefings }: { briefings: Briefing[] }) {
           ))}
         </div>
         <label className="archive-search">
-          <span className="sr-only">搜索日刊标题或关键词</span>
+          <span className="sr-only">搜索日刊、新闻内容或来源</span>
           <span aria-hidden="true">⌕</span>
           <input
             onChange={(event) => setQuery(event.target.value)}
             data-analytics-event="search_performed"
             data-analytics-target="archive-search"
-            placeholder="搜索人物、作品或议题"
+            placeholder="搜索人物、事件、术语或来源"
             type="search"
             value={query}
           />

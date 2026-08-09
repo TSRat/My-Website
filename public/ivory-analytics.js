@@ -8,6 +8,7 @@
     "search_performed",
     "filter_applied",
     "briefing_opened",
+    "source_opened",
     "data_entry_opened",
   ]);
 

@@ -1446,6 +1446,20 @@ main {
   margin: 0 auto;
 }
 
+.portfolio-home-link {
+  display: inline-block;
+  margin-bottom: 28px;
+}
+
+.portfolio-home-logo {
+  width: clamp(120px, 12vw, 170px);
+  height: auto;
+}
+
+.portfolio-home-logo--light {
+  filter: brightness(0) invert(1);
+}
+
 .site-footer h3 {
   color: var(--color-accent-soft);
   font-family: var(--type-display);

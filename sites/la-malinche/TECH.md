@@ -21,7 +21,7 @@ Public path:
 - `assets/site.js`
 - `assets/analytics.js`
 - `assets/maps/*.webp`
-- `assets/archive/*.webp`
+- `assets/archive/*.{webp,svg,jpg}`
 - `assets/creator/*.{webp,svg}`
 - `assets/tsrat-logo.png`
 - `assets/malinche-cutout.png`
@@ -51,8 +51,8 @@ The shared direct-static builder copies deployable source into `.site-build/la-m
   `Women Story/Malinche` remain unmodified.
 - The hero PNG is a background-removed derivative of the supplied monochrome
   illustration.
-- Thirteen public-domain / CC-licensed archive images are stored locally as
-  optimized WebP or SVG to avoid fragile hotlinks. Visible captions and
+- Fifteen public-domain / CC-licensed archive images are stored locally as
+  optimized WebP, SVG, or resized JPEG to avoid fragile hotlinks. Visible captions and
   `CONTENT.md` retain source provenance.
 - Thirteen selected project-library visuals are stored under `assets/creator/`
   as optimized WebP / SVG. Later depictions, film stills, and digital
@@ -62,7 +62,7 @@ The shared direct-static builder copies deployable source into `.site-build/la-m
   contain`; browser QA checks the rendered ratio against the natural ratio.
 - Desktop typography QA includes a `1782 × 864` viewport matching the creator
   screenshot, plus `1440 × 900`, `1024 × 768`, and `390 × 844`.
-- Automated layout smoke counts all 52 scenes, checks image load state and
+- Automated layout smoke counts all 70 scenes, checks image load state and
   document overflow, and flags display / copy collisions and one- or
   two-character display-title endings.
 - `cover-green.webp` is referenced only by `site.config.json` for the generated

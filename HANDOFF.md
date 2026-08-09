@@ -100,6 +100,115 @@ Portfolio Normalization into one generic process.
   modified, stashed, or included.
 - Commit, push, and Pull Request: pending.
 
+## 2026-08-09: Portfolio-wide TSRat logo navigation
+
+### Current target
+
+Ensure the public Website Archive and every website in the 11-project registry
+show the creator's TSRat logo in their header or footer and make that logo a
+link to The Living Atlas. Logos on dark footer surfaces must render as white
+silhouettes without changing each site's existing identity, routes, navigation,
+or deployment architecture.
+
+### Completed
+
+- Audited the root Website Archive and all 11 registered website packages,
+  including the English and Chinese Living Atlas homepages and both public
+  Zhang Yong routes.
+- Added the linked logo to the root Website Archive footer as well as every
+  registered website.
+- Made the existing Living Atlas header logos self-link to the Living Atlas
+  homepage.
+- Wrapped the existing footer logos in Ivory Archive, Enheduanna, La Malinche,
+  and Hypatia with Living Atlas links.
+- Added restrained footer logo links to Hildegard, both Sartre guides,
+  Melromarc Sisters, both Zhang Yong routes, and Two Swans.
+- Reused each site's existing local logo when available. Sites without a local
+  copy reference `../THE-LIVING-ATLAS/tsrat-logo.png`, avoiding duplicated
+  binaries and preserving the public subdirectory architecture.
+- Applied `brightness(0) invert(1)` only on dark surfaces. Living Atlas,
+  Enheduanna, and the light Sartre footer retain the original logo colors.
+- Added `tests/portfolio-logo-navigation.test.mjs` to protect all registered
+  surfaces, the generated Ivory renderer, link targets, and dark-surface
+  silhouette behavior.
+
+### Verification
+
+- `node --test tests/portfolio-logo-navigation.test.mjs`: passed, 2/2.
+- `npm run build:pages`: passed; refreshed the 10 committed static mirrors and
+  generated Ivory Archive in the Pages artifact.
+- `npm run validate:pages`: passed; 1006 local references across 103 HTML/CSS
+  files.
+- Targeted portfolio and maintenance tests: passed, 3/3.
+- Browser basic smoke passed on all 14 audited public surfaces at `1800 × 933`
+  and `390 × 844`: every logo loaded, remained within the viewport, had a
+  Living Atlas destination, and used the white filter where required.
+- Antigravity extended visual, accessibility, interaction, and cross-browser QA:
+  pending.
+
+### Important decisions
+
+- This is a bounded correction to existing accepted interfaces, not a redesign;
+  no Figma or new Antigravity creative package is required for Codex Stage 2.
+- Header logos that already serve as in-page home controls were preserved unless
+  the footer could satisfy the new cross-site navigation requirement.
+- The root Website Archive remains the registry shell rather than a twelfth
+  project, but it is included as a public surface under the creator's literal
+  “all websites” request.
+
+### Files and Git state
+
+- Authoritative source: the affected `sites/*` entrypoints and styles,
+  `scripts/build-github-pages.mjs`, and
+  `tests/portfolio-logo-navigation.test.mjs`.
+- Generated mirrors: `ENHEDUANNA/`, `EXISTENTIALISM-HUMANISM-GUIDE/`,
+  `HILDEGARD/`, `HYPATIA/`, `LA-MALINCHE/`,
+  `MALTY-MELTY-CHILDHOOD/`, `MELROMARC-SISTERS/`,
+  `SARTRE-NAUSEA-GUIDE/`, `THE-LIVING-ATLAS/`, and
+  `ZHANGYONG-PORTRAIT/`.
+- Branch: `codex/portfolio-logo-navigation` from `origin/main` at `c3f0f15`.
+- At the time of this handoff entry, the scoped implementation and generated
+  mirrors are pending their task commit; no unrelated dirty-worktree changes
+  are present in the isolated worktree.
+- Next step: commit, push, create a draft PR, open the exact-commit preview, and
+  hand the preview to Antigravity for Stage 3 validation. Merge still requires
+  explicit creator authorization.
+
+## 2026-07-29: Malinche 70-screen last-four-chapter rebuild
+
+### Current target
+
+Expand only La Malinche scenes `35–69` while preserving scenes `00–34`, the
+existing public path, direct video theater, portfolio surfaces, and Pages
+deployment architecture.
+
+### Completed
+
+- The authoritative source now contains 70 scenes and four expanded final
+  chapters covering Tenochtitlan, the siege, Malinche’s colonial afterlife, and
+  the later construction of the traitor image.
+- The generated `LA-MALINCHE/` mirror, project manifest, registry note, product
+  specification, Figma handoff, and targeted readiness test are synchronized.
+- Figma V6:
+  <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=17-2>.
+
+### Delivery state
+
+- Branch: `codex/malinche-last-four-chapters`.
+- `build:malinche`, targeted readiness tests, 11-site validation, full Pages
+  build, and 703-reference Pages validation passed.
+- Desktop browser smoke passed for the rebuilt chapter gates, image-led
+  monuments scene, and final responsibility ledger. The automated narrow
+  screenshot was black in the current Chrome environment, so narrow visual QA
+  remains pending rather than being reported as passed.
+- The full Pages build regenerated unrelated Next.js mirror hashes; those
+  changes are deliberately excluded from the scoped Malinche commit and PR.
+- Implementation commit: `58eb1cc`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/36>.
+- Exact implementation preview:
+  <https://raw.githack.com/TSRat/My-Website/58eb1cc/LA-MALINCHE/index.html>.
+- Antigravity extended QA remains pending.
+
 ## 2026-07-29: Malinche archive cover and carousel-frame correction
 
 ### Current target
@@ -1719,3 +1828,44 @@ the parent Website Archive from both Living Atlas language variants.
   <https://htmlpreview.github.io/?https://gist.githubusercontent.com/TSRat/0bf430d6576faa8f7708da3bb4f7b7ab/raw/4dcc04246de17dfd7c89671f2b70992fb959bdee/website-archive-preview.html>.
 - Draft PR: <https://github.com/TSRat/My-Website/pull/22>.
 - Merge: not performed; automatic merge remains prohibited.
+
+## 2026-08-04: Website Archive and Knowledge shared favicon
+
+### Current target and decision
+
+Use the latest Living Atlas square SVG favicon for both the public Website
+Archive navigation page and every bilingual Living Atlas Knowledge route. This
+is a browser-chrome asset correction only; site layouts and content are unchanged.
+
+### Completed
+
+- Updated the Pages hub generator and committed root `index.html` baseline to
+  reference `THE-LIVING-ATLAS/favicon.svg?v=20260804-1`.
+- Updated all eight authoritative Knowledge routes and regenerated the
+  `THE-LIVING-ATLAS/` mirror.
+- Added regression coverage for route depth, MIME declaration, cache key, and
+  shared hub/Living Atlas identity.
+- Branch: `codex/living-atlas-favicon-surfaces`; base: `origin/main` at
+  `208b85d`; implementation commit:
+  `586b542c9629896dd9e28c20b98202840d8f25fc`.
+- PR: <https://github.com/TSRat/My-Website/pull/41>; merged as
+  `eca27d1ae72958079e4a624678a84b7150f8174b`.
+
+### Verification and remaining work
+
+- Targeted tests: passed, 20/20; `npm run build:living-atlas`: passed.
+- Exact implementation commit `npm run build:pages`: passed;
+  `npm run validate:pages`: passed, 936 references across 99 HTML/CSS files.
+- Local browser smoke: both surfaces fetched the branded SVG with HTTP 200 and
+  `image/svg+xml`; no console errors.
+- Exact implementation previews:
+  <https://raw.githack.com/TSRat/My-Website/586b542c9629896dd9e28c20b98202840d8f25fc/>
+  and
+  <https://raw.githack.com/TSRat/My-Website/586b542c9629896dd9e28c20b98202840d8f25fc/THE-LIVING-ATLAS/knowledge/>.
+- GitHub Pages run
+  <https://github.com/TSRat/My-Website/actions/runs/30918123313> passed every build,
+  asset-validation, mirror-validation, upload, and deploy step.
+- Cache-resistant production browser smoke passed for the Website Archive,
+  Knowledge portal, and a nested discipline route: each resolved the shared
+  Living Atlas SVG with HTTP 200 and `image/svg+xml`; no console errors.
+- Production publication is complete. Antigravity extended QA remains pending.

@@ -33,6 +33,16 @@
 - Worlds 是四个有意保持含混的概念入口；卡片只显示图像、编号和 Knowledge / Story / Media / Interaction 标题，不增加解释或作品分类。
 - Index 只显示当前真实可达内容，因此不会使用 `#` 占位链接；视觉上只保留标签和索引，不增加说明段落。
 
+## Knowledge / 田野索引
+
+- Knowledge 子页延续 Ivory、Ink、Stone、Cobalt 与非对称编辑网格，不引入玻璃拟态、渐变或通用圆角卡片。
+- 三大学科使用方形细边框入口；Books / Topics / Concepts / Outputs 使用规则线分区，只作为内部筛选。
+- Knowledge Record 桌面版采用编号、标题摘要、类型日期、语义状态和跳转符号五区结构；移动版按同一 DOM 顺序纵向排列。
+- 只有 `Published` 显示 Cobalt 边框与 `↗`；`Mapping / Planned` 用文字说明不可点击，差异不能只依靠颜色。
+- Knowledge 页左上角品牌入口只显示本地 TSRat Logo，不重复显示名字；链接仍返回对应语言的 Living Atlas 首页，并用可访问名称说明目标。
+- Knowledge 英文路由的正文、标题与栏目标签只使用英文；中文只保留在 `中 / EN` 语言切换入口中。中文路由继续使用已确认的双语标题语言。
+- Figma 设计源：组件集 `63:160`、桌面总览 `65:55`、移动学科页 `68:89`，均位于 `Knowledge Library · Living Atlas` 页面 `62:49`。
+
 ## 响应式人物图像
 
 - Featured World 的 Hypatia 肖像使用 `assets/hypatia-sketch-transparent.webp`，文件本身带 Alpha 通道；移动端和平板端不能只依赖 `mix-blend-mode` 模拟透明。

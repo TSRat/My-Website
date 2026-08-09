@@ -334,6 +334,9 @@ export default function Home() {
       </section>
 
       <footer>
+        <a className="portfolio-home-link" href="../THE-LIVING-ATLAS/" aria-label="前往 The Living Atlas 主页">
+          <img className="portfolio-home-logo portfolio-home-logo--light" src="../THE-LIVING-ATLAS/tsrat-logo.png" alt="TSRat Logo" />
+        </a>
         <div className="footer-mark">M <i /> M</div>
         <p>献给一对在不同命运里，不断被重新书写的姐妹。</p>
         <div className="footer-links"><a href="#top">回到开头 ↑</a><span>NON-COMMERCIAL FAN ARCHIVE</span><span>2026 · STORY PROJECT</span></div>

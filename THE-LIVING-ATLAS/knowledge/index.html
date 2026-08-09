@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knowledge · The Living Atlas</title>
+  <meta name="description" content="A curated public knowledge library arranged across Humanities & Arts, Social Sciences, and Natural Sciences & Technology.">
+  <link rel="icon" href="../favicon.svg?v=20260804-1" type="image/svg+xml">
+  <link rel="stylesheet" href="knowledge.css?v=knowledge-library-20260804-1">
+</head>
+<body class="knowledge-page" data-page="portal">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="knowledge-shell">
+    <nav class="knowledge-nav" aria-label="Knowledge navigation">
+      <a class="knowledge-nav__brand" href="../index.html" aria-label="Back to The Living Atlas"><img src="../tsrat-logo.png" alt=""></a>
+      <div class="knowledge-nav__links">
+        <a href="../index.html">Living Atlas</a><a href="#disciplines">Disciplines</a><a href="#records">Records</a>
+        <a class="knowledge-nav__language" href="zh.html" lang="zh-CN">中 / EN</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="knowledge-main" tabindex="-1">
+    <section>
+      <div class="knowledge-shell knowledge-hero">
+        <div class="knowledge-hero__copy">
+          <p class="knowledge-kicker">KNOWLEDGE · CURATED PUBLIC INDEX</p>
+          <h1>Knowledge, arranged for reading.</h1>
+          <p class="knowledge-hero__lede">Three disciplines remain the public map. Books, Topics, Concepts, and Outputs help you move within each field — without exposing the private notebook behind it.</p>
+        </div>
+        <aside class="knowledge-hero__aside">PUBLICATION MODEL<br>ALLOWLIST ONLY<br>PRIVATE SOURCE / PUBLIC LAYER</aside>
+      </div>
+    </section>
+
+    <section id="disciplines"><div class="knowledge-shell">
+      <div class="knowledge-section-head"><p class="knowledge-section-label">01 / DISCIPLINES</p><div><h2>Three fields, one public map</h2><p>The public structure stays stable even as individual records move from planning to publication.</p></div></div>
+      <div class="knowledge-disciplines" data-discipline-list></div>
+    </div></section>
+
+    <section id="start-here"><div class="knowledge-shell">
+      <div class="knowledge-section-head"><p class="knowledge-section-label">02 / START HERE</p><div><h2>Choose a first path</h2><p>Each route begins with orientation before asking you to interpret.</p></div></div>
+      <div class="knowledge-start-here" data-start-here-list></div>
+    </div></section>
+
+    <section id="knowledge-map"><div class="knowledge-shell">
+      <div class="knowledge-section-head"><p class="knowledge-section-label">03 / KNOWLEDGE MAP</p><div><h2>Four identities inside every field</h2><p>These are filters, not new top-level subjects and not a copy of the private folder structure.</p></div></div>
+      <div class="knowledge-type-map" data-type-map></div>
+    </div></section>
+
+    <section id="featured"><div class="knowledge-shell">
+      <div class="knowledge-section-head"><p class="knowledge-section-label">04 / FEATURED</p><div><h2>Selected entry points</h2><p>Published destinations and transparent works in progress appear together, but never behave the same way.</p></div></div>
+      <div class="knowledge-record-list" data-featured-list></div>
+    </div></section>
+
+    <section id="records"><div class="knowledge-shell">
+      <div class="knowledge-section-head"><p class="knowledge-section-label">05 / PUBLIC RECORDS</p><div><h2>Browse the curated layer</h2><p>Search stays in your browser. The query itself is not sent to an analytics provider.</p></div></div>
+      <div class="knowledge-controls" data-knowledge-controls>
+        <div class="knowledge-search"><label for="knowledge-search">Search titles and summaries</label><input id="knowledge-search" type="search" data-knowledge-search autocomplete="off" placeholder="Try “Hypatia” or “Transformer”"></div>
+        <div class="knowledge-filters" aria-label="Filter by record type">
+          <button type="button" class="is-active" aria-pressed="true" data-knowledge-filter="all">All</button><button type="button" aria-pressed="false" data-knowledge-filter="book">Books</button><button type="button" aria-pressed="false" data-knowledge-filter="topic">Topics</button><button type="button" aria-pressed="false" data-knowledge-filter="concept">Concepts</button><button type="button" aria-pressed="false" data-knowledge-filter="output">Outputs</button>
+        </div>
+      </div>
+      <p class="knowledge-results-count" data-knowledge-results aria-live="polite"></p>
+      <div class="knowledge-record-list" data-record-list></div>
+      <p class="knowledge-empty" data-knowledge-empty hidden>No records match this search and filter.</p>
+      <noscript><div class="knowledge-noscript"><p>JavaScript is off. All public records remain available:</p><ul>
+        <li><a href="../../HYPATIA/">Hypatia — Published output</a></li><li><a href="../../HILDEGARD/">Hildegard — Published output</a></li><li><a href="../../LA-MALINCHE/">La Malinche — Published output</a></li><li><a href="../../ENHEDUANNA/">Enheduanna — Published output</a></li><li><a href="../../SARTRE-NAUSEA-GUIDE/">Sartre · Nausea Guide — Published output</a></li><li><a href="../../EXISTENTIALISM-HUMANISM-GUIDE/">Existentialism Is a Humanism — Published output</a></li><li>Women's History: Ancient Volume — Mapping</li><li>Football Rules Primer — Mapping</li><li>Transformer — Mapping</li><li>AI Documentation — Planned</li>
+      </ul></div></noscript>
+    </div></section>
+
+    <section id="recently-updated"><div class="knowledge-shell">
+      <div class="knowledge-section-head"><p class="knowledge-section-label">06 / RECENTLY UPDATED</p><div><h2>Public record changes</h2><p>Dates belong to this publication layer; private file modification times are not exposed.</p></div></div>
+      <div class="knowledge-latest" data-knowledge-latest></div>
+    </div></section>
+
+    <section id="publication"><div class="knowledge-shell"><div class="knowledge-publication-note">
+      <p class="knowledge-section-label">PUBLICATION BOUNDARY</p><h2>A curated layer, not a private-vault mirror</h2><p>Only allowlisted, reviewed records appear here. Private journals, system folders, caches, local paths, temporary URLs, and tokenized links remain outside the public site.</p>
+    </div></div></section>
+  </main>
+  <footer class="knowledge-shell knowledge-footer"><a href="../index.html">← The Living Atlas</a><span>Knowledge library · 2026</span></footer>
+  <script type="module" src="knowledge.js?v=knowledge-library-20260804-1"></script>
+</body>
+</html>

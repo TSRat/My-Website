@@ -556,6 +556,9 @@ export default function Home() {
       </section>
 
       <footer className="site-footer">
+        <a className="portfolio-home-link" href="../THE-LIVING-ATLAS/" aria-label="前往 The Living Atlas 主页">
+          <img className="portfolio-home-logo portfolio-home-logo--light" src="../THE-LIVING-ATLAS/tsrat-logo.png" alt="TSRat Logo" />
+        </a>
         <span>《存在主义是一种人道主义》初学者导读</span>
         <span>根据五章阅读笔记整理</span>
       </footer>

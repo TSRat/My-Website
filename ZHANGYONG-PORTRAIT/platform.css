@@ -1,9 +1,77 @@
+.site-shell {
+  color-scheme: dark;
+}
+
+a,
+button,
+summary {
+  -webkit-tap-highlight-color: rgb(110 247 200 / 24%);
+  touch-action: manipulation;
+}
+
+:where(main[id], section[id]) {
+  scroll-margin-top: 24px;
+}
+
+.brand:hover,
+.brand:focus-visible {
+  color: var(--paper);
+}
+
 .nav-links a[aria-current="location"] {
   color: var(--mint);
 }
 
 .nav-links a[aria-current="location"]::after {
   width: 24px;
+}
+
+.card-index,
+.card-meta,
+.chat-card > span,
+.hero-coordinates,
+.live-mark,
+.timeline-date > span,
+.timeline-date small,
+.timeline-note,
+.method-card > span,
+.favored-name > span,
+.favored-legend,
+.pet-image-frame > span,
+.pet-sticker span,
+.zhangyong-node span,
+.underhail-node span,
+.zhangyong-node small,
+.underhail-node small,
+.relationship-notes article > span,
+.culture-list span,
+.rabbit-label,
+.data-provider,
+.relationship-source-note,
+footer {
+  font-size: 10px;
+}
+
+.card-index,
+.card-meta,
+.care-card small,
+.care-data dt,
+.data-empty-state dt,
+.hero-coordinates,
+.timeline-content li,
+.timeline-date > span,
+.timeline-date small,
+.timeline-note,
+.favored-rank,
+.favored-name > span,
+.favored-legend,
+.zhangyong-node span,
+.underhail-node span,
+.zhangyong-node small,
+.underhail-node small,
+.relationship-source-note,
+footer {
+  color: rgb(242 238 232 / 66%);
 }
 
 .velna-node {
@@ -25,9 +93,9 @@
 }
 
 .velna-node span {
-  color: rgb(242 238 232 / 35%);
+  color: rgb(242 238 232 / 66%);
   font-family: var(--font-mono);
-  font-size: 7px;
+  font-size: 10px;
   letter-spacing: 0.12em;
 }
 
@@ -39,8 +107,8 @@
 }
 
 .velna-node small {
-  color: rgb(242 238 232 / 42%);
-  font-size: 9px;
+  color: rgb(242 238 232 / 66%);
+  font-size: 10px;
   margin-top: 8px;
 }
 
@@ -57,9 +125,9 @@
 
 .relationship-source-note {
   border-top: 1px solid var(--line);
-  color: rgb(242 238 232 / 46%);
+  color: rgb(242 238 232 / 66%);
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.08em;
   line-height: 1.8;
   margin: 48px auto 0;
@@ -95,7 +163,7 @@
   border: 1px solid rgb(255 229 182 / 40%);
   color: #fff1d0;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.08em;
   opacity: 0;
   padding: 7px 9px;
@@ -160,7 +228,7 @@
 .data-provider {
   color: var(--mint);
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.14em;
   margin: 0;
 }
@@ -187,7 +255,7 @@
 }
 
 .data-empty-state dt {
-  color: rgb(242 238 232 / 40%);
+  color: rgb(242 238 232 / 66%);
   font-size: 10px;
 }
 
@@ -199,6 +267,41 @@
 }
 
 @media (width <= 900px) {
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .live-mark {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 24px;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-color: var(--mint) rgb(242 238 232 / 10%);
+    scrollbar-width: thin;
+    width: 100%;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .nav-links::-webkit-scrollbar-thumb {
+    background: var(--mint);
+  }
+
+  .nav-links a {
+    flex: 0 0 auto;
+    padding: 14px 0 16px;
+  }
+
   .orbit-map {
     height: 580px;
     min-height: 580px;
@@ -227,7 +330,11 @@
   }
 
   .velna-node small {
-    font-size: 7px;
+    font-size: 10px;
+  }
+
+  .nav-links {
+    gap: 20px;
   }
 
   .orbit-caption {

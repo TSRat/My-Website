@@ -4,7 +4,7 @@
 
 `Cut-out Poster × Mutable Archive × Translation Seam × Survivor Red`
 
-This site is distinct from the other `时间的女儿` projects. Its fifty-two numbered
+This site is distinct from the other `时间的女儿` projects. Its seventy numbered
 scenes deliberately alternate composition rather than repeating a two-column
 card template. Image scale, color field, density, direction, and type hierarchy
 change with the historical argument.
@@ -26,9 +26,15 @@ change with the historical argument.
 - The revised chronology gives city-states, tribute, ritual, enslavement,
   Potonchán, Doña Marina, Totonac politics, and Malintzin's Spanish-language
   learning their own structures rather than compressing them into small labels.
-- Chapters 5 and 6 form a visual sequence rather than one siege summary:
-  festival image, failed mediation, interpreter limit, rain retreat, epidemic
-  split, lake blockade, siege matrix, and final capture.
+- Chapters 5 and 6 form an eighteen-screen visual sequence rather than one
+  siege summary: lake-city atlas, causeway infrastructure, political encounter,
+  hostage rule, split fronts, festival massacre, failed mediation, rain retreat,
+  epidemic, coalition, brigantines, blockade, siege pressures, resistance,
+  negotiation, fall, and the 1522 global coda.
+- Chapter 7 adopts colonial paper, legal ledgers, route documents, and fading
+  archive lines. Chapter 8 shifts to red / black public memory and gives
+  records, fiction, `malinchismo`, feminist rereading, monuments, and the final
+  responsibility ledger different structures.
 - Full archival walls at the Codex, Tlaxcala, Cholula, and Tenochtitlan moments.
 - The Moctezuma–Malinche–Cortés encounter is a portrait triptych, not oversized
   decorative names behind a narrow text box.
@@ -83,7 +89,9 @@ change with the historical argument.
 
 ## Figma
 
-Design source: <https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=16-2>
+Design source for scenes `35–69`:
+<https://www.figma.com/design/oSIKdvkSLayRe2BBAyuDoi?node-id=17-2>
 
-V5 records the approved 52-scene chronology and the Chapter 2 → 3 transition.
-Earlier V1–V4 frames remain available for comparison.
+V5 records scenes `00–34` and the Chapter 2 → 3 transition. V6 records the
+approved last-four-chapter catalogue, evidence labels, media rules, and
+typographic contract. Earlier V1–V4 frames remain available for comparison.

@@ -16,6 +16,8 @@
   "capabilities": {
     "bilingualPages": true,
     "search": true,
+    "knowledgeLibrary": true,
+    "knowledgeFilters": true,
     "publishedSiteIndex": true,
     "carousel": true,
     "dataEntry": true
@@ -31,7 +33,11 @@
       "search_performed",
       "search_result_opened",
       "published_site_opened",
-      "data_section_opened"
+      "data_section_opened",
+      "knowledge_open",
+      "knowledge_filter",
+      "knowledge_search",
+      "knowledge_entry_open"
     ]
   }
 }

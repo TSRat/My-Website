@@ -1,4 +1,4 @@
-import { livingAtlasContent } from "./content-registry.js";
+import { livingAtlasContent } from "./content-registry.js?v=knowledge-library-20260804-1";
 import { analytics } from "./analytics.js";
 import {
   createSearchEntries,

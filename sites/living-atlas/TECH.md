@@ -18,10 +18,16 @@ Primary files:
 - `web-core.js`: reusable localization, filtering, sorting, rendering, index, search, and mobile-menu primitives
 - `analytics.js`: provider-neutral, no-storage event adapter and Living Atlas event vocabulary
 - `atlas.js`: Living Atlas adapter plus carousel behavior
+- `knowledge/knowledge-registry.js`: curated public knowledge records and the three-discipline contract
+- `knowledge/knowledge.js`: bilingual record rendering, client-side filtering, and privacy-safe knowledge events
+- `knowledge/knowledge.css`: Knowledge-specific editorial layout and responsive record component
 - `assets/`: local site imagery, including the feathered alpha-backed
   `hypatia-sketch-transparent.webp` and real-page thumbnails for the two
   migrated philosophy guides; it also contains the creator-provided
-  `who-are-you-the-who.mp3` background track
+  `who-are-you-the-who.mp3` background track and the creator-provided
+  `malinche-cover-vol-1.webp` used only by the La Malinche Sites row; this
+  960 × 540 WebP is a load-optimized derivative of the creator's 3840 × 2160
+  `Women Story/Malinche/封面7.png`
 - All four Featured World images share the same bounded
   `.featured-portrait` treatment: `300px` maximum on desktop and `240px` on
   mobile, with `object-fit: contain`. Images keep their natural aspect ratios
@@ -32,11 +38,16 @@ Primary files:
   `sites/la-malinche/assets/malinche-cutout.png`; do not duplicate or
   independently edit it inside Living Atlas.
 - `tsrat-logo.png`: local navigation logo
+- `favicon.svg`: current square Living Atlas browser icon; all Living Atlas routes and the generated Website Archive hub reference it with the `20260804-1` cache key
 
 Figma:
 
 - Content-system frame: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=18-2>
 - Data / analytics frame: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=19-2>
+- Knowledge Library page: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=62-49>
+- Knowledge Record component set: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=63-160>
+- Knowledge desktop portal: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=65-55>
+- Knowledge mobile discipline screen: <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=68-89>
 
 The shared site builder performs:
 
@@ -58,6 +69,7 @@ public URL.
 - Worlds, Knowledge, Now, Sites, Latest, Data, and Index use the shared bilingual content and navigation contracts.
 - Analytics remains no-op until `analytics.setProvider(...)` receives an explicitly approved provider; no browser storage or external request is used by default.
 - Both language variants share `content-registry.js`, `web-core.js`, `style.css`, and `atlas.js`; behavior changes must be verified in both.
+- Knowledge routes share one public registry and one renderer. Eight static HTML shells provide route-specific copy and `<noscript>` access; JavaScript enhances them with filtering rather than defining the only readable content.
 - Background audio uses a native `<audio>` element with `preload="none"` and
   `loop`. `atlas.js` starts playback only after the visible bilingual control is
   activated, sets the playback volume to `0.35`, reflects state through
@@ -101,8 +113,8 @@ Browser QA must cover:
 
 ## Known limitations
 
-- Small Red Book and WeChat links are represented as non-clickable planned states until the creator provides URLs.
-- The knowledge taxonomy is intentionally marked as mapping in progress; article-level records and real counts do not exist yet.
+- Small Red Book is a live external profile link in both desktop and mobile navigation. The former WeChat public-account placeholder has been removed rather than left as a planned state.
+- The Knowledge route now exposes a curated public registry. Social Sciences and Natural Sciences & Technology intentionally begin with Mapping / Planned records rather than fake article destinations.
 - The shared runtime currently lives inside `sites/living-atlas/`. Publishing a repository-level `shared/web-core/` requires a separately authorized Pages build-map change.
 - Full-page screenshots are not accepted from the current browser backend because sticky/reveal composition can repeat or omit regions. Use matching section or anchor captures.
 - The Featured World Hypatia portrait must keep a real, softly feathered alpha channel. Keep the shared `.hypatia-portrait` multiply treatment; do not replace `hypatia-sketch-transparent.webp` with the legacy opaque `hypatia-sketch.jpg` and rely on browser blend-mode compositing alone.

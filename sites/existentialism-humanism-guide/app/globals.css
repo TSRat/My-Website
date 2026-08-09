@@ -958,6 +958,10 @@ a {
   letter-spacing: 0.06em;
 }
 
+.portfolio-home-link { display: inline-flex; align-items: center; }
+.portfolio-home-logo { width: 120px; height: auto; }
+.portfolio-home-logo--light { filter: brightness(0) invert(1); }
+
 @keyframes reveal-up {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }

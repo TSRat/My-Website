@@ -1,5 +1,66 @@
 # Handoff: The Living Atlas
 
+## 2026-07-31 · 小红书入口与马琳切封面
+
+### 当前目标
+
+在不改变 Living Atlas 既有导航结构与站点列表样式的前提下，启用创作者
+提供的小红书个人主页链接、移除公众号占位入口，并把 `07 Sites` 中的马琳切
+缩略图换成 `Women Story/Malinche` 文件夹内的创作者封面。
+
+### 已完成与重要决定
+
+- 英文与中文页面的桌面导航、移动目录均加入同一个小红书外链；使用语义化
+  `<a>`、新标签页和 `noopener noreferrer`。
+- 公众号入口从桌面与移动导航中完全移除，不保留 planned 状态。
+- 马琳切 Sites 卡片改用创作者文件 `封面7.png`（3840 × 2160），等比
+  生成 960 × 540、约 235 KB 的 WebP，并以 URL-safe 名称
+  `assets/malinche-cover-vol-1.webp` 收入权威源码；画面内容未改动。
+- `content-registry.js` 继续作为 Sites 唯一数据源；封面替代文本明确它是
+  创作者制作的项目封面，不把现代视觉当作历史肖像。
+- Featured World 轮播仍使用透明人物图，本次没有改动轮播、其他站点卡片、
+  Worlds 含混性、音频或视觉系统。
+- 为 HTML 入口和 registry import 更新 cache key，避免部署后继续读取旧注册表。
+- Figma `TSRat Content System · v1`（node `18:2`）仍是布局与组件来源；
+  本次实现暂时覆盖其中的小红书 planned 状态与马琳切卡片媒体，未改动布局。
+
+### 修改文件
+
+- `sites/living-atlas/{index.html,zh.html,atlas.js,content-registry.js,CONTENT.md,TECH.md,HANDOFF.md}`
+- `sites/living-atlas/assets/malinche-cover-vol-1.webp`
+- `tests/living-atlas-content-system.test.mjs`
+- `THE-LIVING-ATLAS/`（由 `npm run build:living-atlas` 生成）
+
+### 工作状态与下一步
+
+- Branch: `codex/living-atlas-social-malinche-cover`，base: `origin/main` at `4900075`。
+- Delivery commit: 本节随交付 commit 一起提交；最终 hash 与 PR / Preview URL 见用户交付报告。
+- 未提交修改：交付 commit 后应为零；如有变化须在最终报告中如实说明。
+- Antigravity 扩展多浏览器、全路线、键盘与视觉回归 QA：Pending。
+
+### 验证
+
+- `node --check sites/living-atlas/{atlas.js,content-registry.js}`：Passed。
+- `node --test tests/living-atlas-content-system.test.mjs`：Passed — 12/12。
+- `npm run build:living-atlas`：Passed，权威源码与 `THE-LIVING-ATLAS/`
+  镜像中的封面哈希一致。
+- `npm run build:pages`：Passed；构建产生的两个无关 Next.js 镜像差异已
+  从本分支恢复，不纳入交付。
+- `npm run validate:pages`：Passed — 747 local references across 82
+  HTML/CSS files。
+- Local browser smoke：英文桌面 `1440 × 900` 与中文移动端 `390 × 844`
+  通过；小红书链接可见，公众号文字计数为 0，WebP 为 960 × 540 且完整
+  加载。桌面 `scrollWidth 1425 ≤ 1440`，移动端 `375 ≤ 390`。
+- 首次隔离 worktree 构建因缺少本地 `node_modules` 未执行；随后只复用主
+  工作区现有依赖（未安装、未升级）并成功重跑全部上述构建。
+- Exact remote Preview 与小红书外部目标点击检查：push 后执行；结果见最终
+  用户交付报告。Antigravity extended QA：Pending。
+
+### 已知问题
+
+- 小红书 URL 含平台提供的 `xsec_token`；已按创作者给出的完整地址保留，
+  后续若平台令牌失效，需要用新的个人主页分享地址替换。
+
 ## 2026-07-29 · Featured World 人物图尺度回退
 
 ### Current target
@@ -573,3 +634,169 @@
 - Draft PR: <https://github.com/TSRat/My-Website/pull/23>.
 - Merge: not performed; creator review and explicit merge authorization are
   still required.
+
+## 2026-08-04 · Curated Knowledge Library
+
+### 当前目标
+
+在 Living Atlas 首页建立 `Knowledge / 知识` 入口；线上继续使用且只使用
+人文与艺术、社会科学、自然科学与技术三大学科，同时把私人 Obsidian
+知识库中适合公开的导览结构整合为公开阅读层。
+
+### 已完成
+
+- 新增双语知识库总览与三个学科页，共八个可直接访问路由。
+- 页内整合 `Start Here`、`Knowledge Map`、`Featured`、`Books`、
+  `Topics`、`Concepts`、`Outputs` 和 `Recently Updated`。
+- 新增 10 条人工白名单记录；6 条 `published` 记录链接到现有公开站点，
+  4 条 `mapping / planned` 记录不生成假链接。
+- 首页只把 Knowledge World 变成链接；其余 Worlds 保持原有含混与非链接状态。
+- 三个学科行均链接到真实双语路由；搜索与四类筛选在浏览器端工作。
+- 新增 provider-neutral 分析契约，不记录搜索词原文、私人路径、tokenized URL、
+  cookie、持久标识或 Obsidian 文件元数据。
+- 新页面不新增远程字体请求；沿用已有 Living Atlas 字体后备与视觉变量。
+- Figma 新增响应式 Knowledge Record 组件和桌面 / 移动组合：
+  <https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt?node-id=62-49>。
+
+### 重要决定与已知问题
+
+- Obsidian 仍是私人编辑源；网站是人工白名单发布层，不暴露私人文件夹编号、
+  文件系统路径、草稿关系或同步状态。
+- `mapping` 与 `planned` 是诚实状态，不渲染 `<a>`，避免制造不存在的公开内容。
+- `npm run build:pages` 会重算两个无关 Next.js 哲学镜像。仓库保护规则阻止
+  整目录恢复；这些构建噪声未纳入暂存或提交，并会作为工作树残留明确报告。
+- Antigravity 全路线、多设备、多浏览器、键盘与视觉回归扩展 QA：Pending。
+- Merge 未授权；Draft PR 不得自动合并。
+
+### 修改文件
+
+- `sites/living-atlas/knowledge/`
+- `sites/living-atlas/{index.html,zh.html,content-registry.js,web-core.js,style.css}`
+- `sites/living-atlas/{analytics.js,atlas.js,site-manifest.json,site.config.json}`
+- `sites/living-atlas/{CONTENT.md,DESIGN.md,TECH.md,HANDOFF.md}`
+- `THE-LIVING-ATLAS/` 对应发布镜像
+- `tests/living-atlas-content-system.test.mjs`
+- `tests/living-atlas-knowledge.test.mjs`
+- `web/sites/living-atlas-knowledge/`
+
+### 验证与交付状态
+
+- Branch: `codex/living-atlas-knowledge`；任务开始基线：`3e36dd0`；
+  implementation commit: `2ab946adab0477eca20c360962acbe560360fa55`。
+- `node --test tests/living-atlas-content-system.test.mjs tests/living-atlas-knowledge.test.mjs`:
+  Passed — 18 / 18。
+- `npm run build:living-atlas`: Passed；源码与 `THE-LIVING-ATLAS/` 镜像同步。
+- `npm run build:pages`: Passed。
+- `npm run validate:pages`: Passed — 914 local references across 97 HTML/CSS files。
+- Local browser smoke: Passed — 英文总览搜索与 Topics 筛选；中文人文学科
+  `390 × 844` 无横向溢出；6 个 published 链接与 0 个 mapping 链接；首页
+  仅 Knowledge World 可点击，三个学科入口均指向真实路由；本地 favicon 可加载。
+- Exact implementation Preview: Passed —
+  <https://raw.githack.com/TSRat/My-Website/2ab946adab0477eca20c360962acbe560360fa55/THE-LIVING-ATLAS/knowledge/>。
+  raw.githack 可能先显示外部内容确认页；选择 `Open the page`。
+- Draft PR: <https://github.com/TSRat/My-Website/pull/38>。
+- Merge: not performed；仍需创作者明确授权。
+
+### 下一步
+
+由创作者审阅 Draft PR，并交给 Antigravity 做扩展 QA。只有收到明确合并授权后
+才可 merge。
+
+## 2026-08-04 · Knowledge header logo-only correction
+
+### 当前目标与决定
+
+按创作者反馈，把知识库八个中英文路由左上角的品牌入口统一为仅显示 TSRat
+Logo，不再重复显示 `TSRat` 名字。返回目标、右侧导航、页面内容、路由与视觉
+系统均保持不变。
+
+### 实现与验证范围
+
+- 八个路由删除可见 `<span>TSRat</span>`，保留本地 Logo。
+- 英文链接使用 `Back to The Living Atlas`，中文链接使用
+  `返回 The Living Atlas` 作为可访问名称；空 `alt` 避免重复朗读。
+- 回归测试锁定所有知识库路由都包含可访问品牌链接且不再包含名字节点。
+- Figma 桌面 `65:55` 与移动 `68:89` 继续作为布局基线；本次代码在左上角
+  品牌节点上暂时覆盖其中的文字版本，后续 Figma 同步应删除该文字。
+- Branch: `codex/living-atlas-logo-only`；base: `origin/main` at `7b5176f`。
+- Implementation commit: `3a2535218ed7cbaf520ead7a9ed33e83cdfa3006`。
+- Targeted tests: Passed — 18 / 18；`npm run build:living-atlas`: Passed。
+- 一次性验证副本中的 `npm run build:pages`: Passed；
+  `npm run validate:pages`: Passed — 914 local references across 97 HTML/CSS files。
+- Local browser smoke: Passed — 英文桌面与中文 `390 × 844` 均只有 Logo，
+  返回目标与可访问名称正确，Logo 加载，0 横向溢出，0 console errors。
+- Exact implementation Preview: Passed —
+  <https://raw.githack.com/TSRat/My-Website/3a2535218ed7cbaf520ead7a9ed33e83cdfa3006/THE-LIVING-ATLAS/knowledge/>。
+- Draft PR: <https://github.com/TSRat/My-Website/pull/39>；未合并。
+- Antigravity extended QA: Pending。
+
+## 2026-08-04 · English Knowledge locale correction
+
+### 当前目标与决定
+
+按创作者截图反馈，四个英文 Knowledge 路由的正文、标题与栏目标签只保留
+英文；中文只保留在 `中 / EN` 语言切换入口中。四个中文路由、三大学科结构、
+记录、导航目标与视觉系统不变。创作者已明确授权修改后直接发布。
+
+### 实现与验证范围
+
+- 英文总览移除 `KNOWLEDGE / 知识` 与
+  `PUBLICATION BOUNDARY / 公开边界` 中的中文部分。
+- 三个英文学科页移除 H1 中的中文学科名，并把
+  `START HERE / 从这里开始` 改为 `START HERE`。
+- 新增全路由回归契约：四个英文路由移除语言切换器后不得包含中文字符；
+  `中 / EN` 切换器必须继续存在并指向中文页面。
+- `sites/living-atlas/` 源码与 `THE-LIVING-ATLAS/` 发布镜像已同步。
+- Figma 桌面总览 `65:55` 与移动学科页 `68:89` 继续作为布局基线；本次代码
+  暂时覆盖其中英文路由的双语文字节点，下次 Figma 同步应删除这些中文文字。
+- Branch: `codex/living-atlas-english-only-labels`；base:
+  `origin/main` at `21fceb8`；implementation commit:
+  `7b7416cdcf03d6c54c15063054cd6b8d2420dcdc`。
+- Targeted tests: Passed — 19 / 19；`npm run build:living-atlas`: Passed。
+- 一次性精确提交验证副本中的 `npm run build:pages`: Passed；
+  `npm run validate:pages`: Passed — 914 local references across 97 HTML/CSS files。
+- Local browser smoke: Passed — 英文总览桌面与三个英文学科页（含
+  `390 × 844`）移除切换器后均为 0 个中文字符；长标题未裁切，0 横向溢出，
+  0 console errors。
+- Exact-commit Preview、PR、合并、Pages 部署与正式站复核由本次直接发布流程记录。
+- Antigravity extended QA: Pending。
+
+## 2026-08-04 · Shared branded favicon correction
+
+### 当前目标与决定
+
+把最新版 Living Atlas 方形 SVG favicon 统一用于知识库分页与网页导航页。该图标
+使用 Living Atlas 的钴蓝、象牙白与橙色识别色；页面版式、正文、导航和 Figma
+设计不变，因此本次不新增 Figma 画板。
+
+### 已完成与验证
+
+- 八个 Knowledge 中英文路由全部改用 `favicon.svg?v=20260804-1`，并保留正确的
+  相对路径和 `image/svg+xml` 类型。
+- `sites/living-atlas/` 权威源码与 `THE-LIVING-ATLAS/` 发布镜像已同步；首页中英
+  路由也统一使用同一缓存键。
+- 回归测试覆盖八个 Knowledge 路由、Living Atlas 首页与 Website Archive 生成器。
+- Branch: `codex/living-atlas-favicon-surfaces`；base: `origin/main` at `208b85d`；
+  implementation commit: `586b542c9629896dd9e28c20b98202840d8f25fc`。
+- Targeted tests: Passed — 20 / 20；`npm run build:living-atlas`: Passed。
+- 一次性精确提交验证副本中的 `npm run build:pages`: Passed；
+  `npm run validate:pages`: Passed — 936 local references across 99 HTML/CSS files。
+- Local browser smoke: Passed — Knowledge 与 Website Archive 均请求同一个 SVG，
+  HTTP 200、`image/svg+xml`、品牌色匹配、0 console errors。
+- Exact implementation previews:
+  <https://raw.githack.com/TSRat/My-Website/586b542c9629896dd9e28c20b98202840d8f25fc/THE-LIVING-ATLAS/knowledge/>
+  与
+  <https://raw.githack.com/TSRat/My-Website/586b542c9629896dd9e28c20b98202840d8f25fc/>。
+- PR: <https://github.com/TSRat/My-Website/pull/41>；已通过 merge commit
+  `eca27d1ae72958079e4a624678a84b7150f8174b` 合并。
+- GitHub Pages run
+  <https://github.com/TSRat/My-Website/actions/runs/30918123313>: Passed — build、
+  本地资源校验、Hypatia 镜像校验与 Pages 部署全部成功。
+- Production smoke: Passed — Website Archive、Knowledge 总览与两层学科页均解析到
+  `THE-LIVING-ATLAS/favicon.svg?v=20260804-1`；禁用缓存请求返回 HTTP 200、
+  `image/svg+xml`，品牌色匹配，0 console errors。
+- Antigravity extended QA: Pending。
+
+### 下一步
+
+正式站已发布。后续只需由 Antigravity 完成扩展多浏览器与视觉回归 QA。

@@ -63,10 +63,21 @@ test("the Zhang Yong portrait keeps stable sections and a no-provider data entry
 });
 
 test("the Zhang Yong red alternate stays explicitly fictional and untracked", async () => {
-  const [mainHtml, redHtml] = await Promise.all([
+  const [mainHtml, redHtml, platformCss, redCss] = await Promise.all([
     readRepoFile("sites/zhangyong-portrait/index.html"),
     readRepoFile("sites/zhangyong-portrait/red.html"),
+    readRepoFile("sites/zhangyong-portrait/platform.css"),
+    readRepoFile("sites/zhangyong-portrait/red.css"),
   ]);
+
+  const assertIntrinsicImageSizes = (html, route) => {
+    const imageTags = html.match(/<img\b[^>]*>/gu) ?? [];
+    assert.ok(imageTags.length > 0, `${route} should include local imagery`);
+    for (const imageTag of imageTags) {
+      assert.match(imageTag, /\bwidth="\d+"/u, `${route}: ${imageTag}`);
+      assert.match(imageTag, /\bheight="\d+"/u, `${route}: ${imageTag}`);
+    }
+  };
 
   assert.equal(
     zhangYongContent.alternateRoutes[0]?.path,
@@ -78,6 +89,25 @@ test("the Zhang Yong red alternate stays explicitly fictional and untracked", as
   assert.match(redHtml, /非官方网站/u);
   assert.match(redHtml, /2,135,227\+/u);
   assert.match(redHtml, /戏仿设定值 · 非真实统计/u);
+  assert.match(mainHtml, /name="theme-color" content="#08070a"/u);
+  assert.match(redHtml, /name="theme-color" content="#f8f2e8"/u);
+  assert.match(mainHtml, /rel="preload" href="\.\/fonts\/geist\.woff2"/u);
+  assert.match(redHtml, /rel="preload" href="\.\/fonts\/geist-mono\.woff2"/u);
+  assert.match(mainHtml, /<nav class="nav-links" aria-label="章节导航">/u);
+  assert.match(mainHtml, /fetchpriority="high"/u);
+  assert.match(redHtml, /fetchpriority="high"/u);
+  assertIntrinsicImageSizes(mainHtml, "original route");
+  assertIntrinsicImageSizes(redHtml, "red route");
+  assert.match(redHtml, /栏目索引/u);
+  assert.doesNotMatch(redHtml, /站内检索/u);
+  assert.doesNotMatch(redHtml, /aria-current="page"/u);
+  assert.match(redHtml, /2026 年 7 月 27 日/u);
+  assert.match(platformCss, /color-scheme:\s*dark/u);
+  assert.match(platformCss, /touch-action:\s*manipulation/u);
+  assert.match(platformCss, /\.nav-links\s*\{[^}]*display:\s*flex[^}]*overflow-x:\s*auto/su);
+  assert.match(redCss, /touch-action:\s*manipulation/u);
+  assert.match(redCss, /text-wrap:\s*balance/u);
+  assert.match(redCss, /scrollbar-width:\s*thin/u);
   assert.doesNotMatch(redHtml, /<script\b/u);
   assert.doesNotMatch(redHtml, /政府网站标识码|京ICP备|中华人民共和国中央人民政府/u);
 });
