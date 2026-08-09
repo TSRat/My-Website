@@ -149,7 +149,7 @@ function shell({ title, description, prefix, body }) {
     <nav aria-label="主要导航"><a href="${prefix}index.html#today">今日五则</a><a href="${prefix}index.html#archive">日刊档案</a><a href="${prefix}index.html#topics">主题范围</a><a href="${prefix}index.html#method">阅读方法</a><a href="${prefix}index.html#data" data-analytics-event="data_entry_opened" data-analytics-target="header">Data</a></nav>
   </header>
   <main id="content">${body}</main>
-  <footer><div class="frame footer-inner"><div class="footer-identity"><img class="footer-logo" src="${prefix}tsrat-logo.png" alt="TS鼠 Logo"><p>思想简报档案馆 · Ivory Archive</p></div><p>GitHub Pages 公开静态镜像</p></div></footer>
+  <footer><div class="frame footer-inner"><div class="footer-identity"><a class="portfolio-home-link" href="${prefix}../THE-LIVING-ATLAS/" aria-label="前往 The Living Atlas 主页"><img class="footer-logo portfolio-home-logo portfolio-home-logo--light" src="${prefix}tsrat-logo.png" alt="TSRat Logo" style="filter:brightness(0) invert(1)"></a><p>思想简报档案馆 · Ivory Archive</p></div><p>GitHub Pages 公开静态镜像</p></div></footer>
   <script src="${prefix}site.js" defer></script>
   <script src="${prefix}ivory-analytics.js" defer></script>
 </body>

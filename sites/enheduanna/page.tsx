@@ -780,7 +780,9 @@ export default function Home() {
 
       <footer>
         <div className="footer-brand">
-          <img src="./tsrat-logo.png" alt="TS鼠 Logo" />
+          <a className="portfolio-home-link" href="../THE-LIVING-ATLAS/" aria-label="前往 The Living Atlas 主页">
+            <img className="portfolio-home-logo" src="./tsrat-logo.png" alt="TSRat Logo" />
+          </a>
           <b>时间的女儿 / DAUGHTERS OF TIME</b>
           <p>写给那些留下名字的人，也写给所有替她们保存回音的无名者。</p>
         </div>

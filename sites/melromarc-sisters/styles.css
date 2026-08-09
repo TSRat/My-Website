@@ -1404,6 +1404,17 @@ footer {
   background: #070d1b;
   padding: 90px clamp(24px, 6vw, 90px) 34px;
 }
+.portfolio-home-link {
+  display: inline-flex;
+  margin-bottom: 34px;
+}
+.portfolio-home-logo {
+  width: 150px;
+  height: auto;
+}
+.portfolio-home-logo--light {
+  filter: brightness(0) invert(1);
+}
 .footer-mark {
   color: #d3c2a6;
   justify-content: center;

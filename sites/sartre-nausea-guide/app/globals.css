@@ -1506,17 +1506,20 @@ footer {
   min-height: 150px;
   padding: 38px 48px;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr auto;
   gap: 10px;
   align-items: center;
   border-top: 1px solid var(--line);
 }
 
+.portfolio-home-link { display: inline-flex; align-items: center; }
+.portfolio-home-logo { width: 132px; height: auto; }
+
 footer > div { display: flex; flex-direction: column; gap: 5px; }
 footer > div b { font-family: var(--serif); font-size: 21px; }
 footer > div span, footer p { color: var(--muted); font-size: 12px; }
 footer button { min-height: 44px; border: 0; background: transparent; color: var(--wine); cursor: pointer; font-weight: 700; }
-footer p { grid-column: 1 / 3; margin: 0; font-family: Georgia, serif; letter-spacing: .1em; }
+footer p { grid-column: 2 / 4; margin: 0; font-family: Georgia, serif; letter-spacing: .1em; }
 
 .modal-backdrop {
   position: fixed;

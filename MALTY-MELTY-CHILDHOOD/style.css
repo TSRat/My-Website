@@ -699,10 +699,24 @@ footer {
   display: grid;
   font-size: 0.72rem;
   gap: 12px 36px;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto auto 1fr auto;
   letter-spacing: 0.08em;
   min-height: 120px;
   padding: 24px 6.2vw;
+}
+
+.portfolio-home-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.portfolio-home-logo {
+  width: 116px;
+  height: auto;
+}
+
+.portfolio-home-logo--light {
+  filter: brightness(0) invert(1);
 }
 
 footer p {

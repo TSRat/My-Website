@@ -220,6 +220,8 @@ button, input { font: inherit; }
 .footer-grid { display: grid; grid-template-columns: 1fr auto auto; gap: 70px; align-items: end; }
 .footer-brand { margin: 0 0 10px; font-family: var(--serif); font-size: 22px; }
 .footer-logo { width: 160px; height: auto; margin-bottom: 18px; object-fit: contain; }
+.portfolio-home-link { display: inline-flex; }
+.portfolio-home-logo--light { filter: brightness(0) invert(1); }
 .footer-grid > div > p:last-child { margin: 0; color: rgba(251,248,240,.55); font-size: 12px; }
 .footer-links { display: flex; gap: 26px; font-size: 12px; }
 .footer-links a:hover { color: #d9b8ad; }
