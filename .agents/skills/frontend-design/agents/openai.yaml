@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Design"
+  short_description: "制作已批准的前端方案，并支持用户授权的小修快速合并"
+  default_prompt: "使用 $frontend-design 在不改变已批准创意的前提下完成前端制作和初步检查；默认交回完整验证，我明确授权时可对当前小修 MR/PR 使用快速合并通道。"

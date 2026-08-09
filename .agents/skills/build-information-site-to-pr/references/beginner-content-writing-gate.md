@@ -1,5 +1,13 @@
 # Beginner Content Writing Gate
 
+## Phase ownership
+
+Use this reference in Codex Stage 2 to implement and preliminarily inspect the
+content structure already approved by Antigravity Stage 1. Do not use it to
+originate or approve the website's learning sequence or editorial concept.
+Treat all `CODEX_*_GATE` results as preliminary evidence for Antigravity Stage
+3, not complete content validation.
+
 ## Contents
 
 1. Core rule
@@ -477,7 +485,7 @@ Verify:
 Record:
 
 ```text
-CODEX_PLAIN_LANGUAGE_GATE: PASS | FAIL
+CODEX_PRELIM_PLAIN_LANGUAGE_GATE: PASS | FAIL
 ```
 
 ## 10. Copy template

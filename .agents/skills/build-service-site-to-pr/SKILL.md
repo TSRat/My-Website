@@ -1,6 +1,6 @@
 ---
 name: build-service-site-to-pr
-description: "Build or substantially revise a production-quality service website whose primary responsibility is to help users complete a concrete task accurately, safely, and confidently. Use for commerce, booking, banking, healthcare appointments, government services, SaaS, AI tools, forms, uploads, dashboards, accounts, multi-step workflows, and creator-directed screenshot correction passes after an Antigravity direction or approved task blueprint already exists. Require approval of a complete task-and-state blueprint before initial production writes, then complete the six-stage website workflow, Figma, implementation, preview, and pull request; use the bounded correction loop for later local feedback."
+description: "Implement or substantially revise a service website during Codex Stage 2 after Antigravity has supplied an approved creative and task/state package. Use for commerce, booking, banking, healthcare appointments, government services, SaaS, AI tools, forms, uploads, dashboards, accounts, multi-step workflows, and bounded corrections returned by Antigravity. Codex adds feasibility, builds the actual framework and production implementation, runs preliminary checks, commits and pushes the work, and creates a preview-backed draft MR/PR before Antigravity Stage 3 complete validation; do not originate Stage 1 task/visual direction or claim final QA."
 ---
 
 # Build Service Site to PR
@@ -15,8 +15,17 @@ Build a website whose unacceptable failure is:
 Brand expression may enrich the service, but never place promotion, atmosphere,
 or novelty before the primary task entry.
 
+## Mandatory three-stage ownership
+
+Read and obey `antigravity-codex-web-workflow`. This skill executes only Codex Stage 2.
+
+- Require the approved Antigravity creative and task/state package before production writes.
+- Add feasibility, implementation structure, production code, and preliminary checks without changing approved task logic or consequences.
+- Return the implementation to Antigravity for Stage 3 complete validation.
+- Never call Codex happy-path tests, browser smoke, builds, or safety samples complete QA.
+
 Read [references/service-task-flow-gate.md](references/service-task-flow-gate.md)
-completely before producing the approval blueprint or implementation.
+completely before verifying the Antigravity package or implementing it.
 
 Never modify `main` directly. Never merge automatically.
 
@@ -59,10 +68,10 @@ Resolve:
 If core rules, safety behavior, or Antigravity direction are unavailable, report
 `STATUS: BLOCKED`. Do not invent production policy or fake backend behavior.
 
-## Task-and-State Blueprint Approval Gate
+## Antigravity Task Package Intake Gate
 
-Before branch creation, Figma production, or repository writes, present a
-complete task-and-state blueprint in chat.
+Before branch creation or repository writes, verify that the approved
+Antigravity package contains a complete task-and-state blueprint.
 
 Cover:
 
@@ -87,16 +96,18 @@ Cover:
 Report:
 
 ```text
-STATUS: WAITING_FOR_TASK_BLUEPRINT_APPROVAL
+ANTIGRAVITY_PHASE_1: MISSING | CHANGES_REQUIRED
+CODEX_PHASE_2: BLOCKED
+STATUS: WAITING_FOR_ANTIGRAVITY_CREATIVE_PACKAGE
 ```
 
 Do not create a branch or write repository files while waiting. A happy-path
-wireframe is not approval of all states. Revise the blueprint and request
-approval again when task logic or consequences change.
+wireframe is not a complete package. Report missing, contradictory, unsafe, or
+infeasible states to Antigravity; do not author replacement task logic.
 
-After approval, make the blueprint the task source of truth. Material changes
-to required inputs, decisions, consequences, permissions, or recovery require
-renewed approval.
+Make the approved blueprint the task source of truth. Material changes to
+required inputs, decisions, consequences, permissions, or recovery must return
+to Antigravity Stage 1.
 
 ## Creator correction loop
 
@@ -127,36 +138,16 @@ result, error, or recovery state. Name the service object, unfamiliar term,
 calculation, actor, and consequence again where that state must stand alone.
 
 For creator-provided folders, maintain an asset placement ledger with filename,
-approved screen/state, task or trust job, reuse restriction, alt/caption, source
-status, and shipped path. Do not silently substitute, relocate, crop, remove,
-or reuse another asset. Treat hero art, service-card covers, video posters,
-directly displayed video media, diagrams, evidence images, trust marks, and
-decorative motifs as distinct roles unless the creator explicitly approves
-reuse. Prefer positive identification and useful task context over obvious
+approved screen/state, task or trust job, alt/caption, source status, and
+shipped path. Do not silently substitute, relocate, crop, or remove another
+asset. Prefer positive identification and useful task context over obvious
 disclaimers.
-
-Do not publish internal production narration as service copy. Notes about
-changing colors, adding a later section, replacing an image, counting screens,
-or explaining the layout belong in design, technical, or handoff records.
-Instructions shown to users must help them understand or complete the task.
 
 For layout corrections, remove accidental constraints before adding new ones.
 Use the available grid and inspect the feedback viewport and state. Check action
 hierarchy, contrast, overlap, peer alignment, empty-space purpose, error
 placement, and one- or two-character labels. Do not repair a single screenshot
 with arbitrary width caps, manual breaks, or reduced essential text.
-
-Before changing a shared selector, token, component, field schema, registry, or
-generator, enumerate every consumer, route, and relevant state. Inspect the
-named target plus all affected peers, including loading, error, empty,
-permission-denied, and success states. A local logo, card, control, or media
-correction must not silently resize peers or alter validation and action
-semantics elsewhere; prefer a target-specific rule when the defect is local.
-
-For media, inspect intrinsic dimensions and alpha, wrapper geometry, the
-rendered media box, and the visible content after fitting, positioning,
-clipping, or masking. A uniform component frame does not guarantee an
-appropriate visible scale or trustworthy presentation.
 
 Keep iterative corrections on the same open PR. After merge, use a new branch
 and PR. Modify the authoritative source, rebuild any committed publish mirror,
@@ -167,12 +158,14 @@ the complete set. Manually inspect representative paths, then run schema,
 validation, link, and renderer/client-parity checks across every applicable
 state. Do not infer complete task coverage from one happy-path example.
 
-Explicit "publish directly" or "merge now" from the repository owner authorizes
-merging the scoped PR; it does not waive safety checks for destructive,
-financial, medical, legal, privacy, authentication, authorization, or data-loss
-behavior. If the owner says not to run additional visual checks or assigns
-extended QA to Antigravity, stop discretionary visual QA loops, report what was
-not run, and never call it passed. High-risk task validation remains mandatory.
+Explicit "publish directly", "merge now", or equivalent instruction from the
+repository owner authorizes merging the current scoped PR even when
+Antigravity Stage 3 is pending. It does not waive mandatory checks for
+destructive, financial, medical, legal, privacy, authentication, authorization,
+payment, or data-loss behavior. Run those checks plus the proportional minimum
+Codex checks, report everything else skipped, and use
+`ANTIGRAVITY_PHASE_3: SKIPPED_BY_USER`. Never relabel skipped Antigravity
+validation as passed or reuse the authority later.
 
 Keep design and delivery records truthful during fast corrections. Update Figma
 in the same pass or name the exact frame that the implementation temporarily
@@ -202,9 +195,9 @@ Stop repository writes if branch or worktree ownership is uncertain.
 
 ## Execute the six stages
 
-### 1. Product / UX
+### 1. Feasibility and implementation interpretation
 
-Define the task contract:
+Translate the approved Antigravity task contract into an implementable model:
 
 - who is acting, what they want, and what counts as success;
 - minimum steps and decision points;
@@ -216,7 +209,8 @@ Define the task contract:
 - progressive disclosure without hiding prices, risks, or required inputs;
 - recovery, support, and post-completion follow-up.
 
-Create `<site-doc-root>/<slug>/task-spec.md` and a state matrix.
+Create `<site-doc-root>/<slug>/task-spec.md` and a state matrix as implementation
+records. Do not use them to redesign task logic or consequences.
 
 ### 2. Visual exploration and production
 
@@ -232,9 +226,10 @@ Translate Antigravity into a trustworthy interface system:
 
 Create `<site-doc-root>/<slug>/visual-direction.md`.
 
-### 3. Figma design system
+### 3. Creative-source implementation mapping
 
-Create editable Figma foundations, components, and variants for:
+Use Antigravity's Figma or equivalent creative artifact as the source of truth.
+When explicitly authorized, annotate or map it for implementation across:
 
 - inputs, buttons, navigation, tables, filters, search, dialogs, and feedback;
 - every relevant state in the approved matrix;
@@ -242,12 +237,15 @@ Create editable Figma foundations, components, and variants for:
 - representative validation, error, empty, loading, and recovery flows;
 - keyboard/focus, reduced-motion, and localization behavior.
 
-Record the Figma URL and frames in
-`<site-doc-root>/<slug>/design-handoff.md`.
+Record the authoritative creative URL, frames, and implementation mapping in
+`<site-doc-root>/<slug>/design-handoff.md`. Do not invent a substitute creative
+source when Antigravity has not supplied one.
 
-### 4. Prototype and design QA
+### 4. Prototype and preliminary Codex checks
 
-Prototype the complete primary task, not only the ideal screen.
+Prototype the complete primary task, not only the ideal screen. Sample the
+approved state matrix to catch obvious implementation defects; Antigravity
+Stage 3 owns complete validation.
 
 Test:
 
@@ -282,13 +280,13 @@ Run link-integrity QA:
 Record:
 
 ```text
-CODEX_TASK_GATE: PASS | FAIL
-CODEX_STATE_GATE: PASS | FAIL
-CODEX_SAFETY_GATE: PASS | FAIL
-CODEX_PUBLIC_TASK_UNDERSTANDING_GATE: PASS | FAIL
+CODEX_PRELIM_TASK_GATE: PASS | FAIL
+CODEX_PRELIM_STATE_GATE: PASS | FAIL
+CODEX_PRELIM_SAFETY_GATE: PASS | FAIL
+CODEX_PRELIM_PUBLIC_TASK_UNDERSTANDING_GATE: PASS | FAIL
 ```
 
-### 5. Engineering, preview, and PR
+### 5. Engineering, preview, draft PR, and Antigravity handoff
 
 Use an architecture appropriate to real APIs, authentication, data, and risk.
 Do not simulate a production success when persistence or authorization is
@@ -298,15 +296,16 @@ Add tests proportional to consequences. High-risk actions require stronger
 validation, idempotency, authorization, audit, and rollback behavior.
 
 Run relevant builds, tests, lint, accessibility checks, and real-browser task
-smoke checks. Deploy and verify the exact review commit.
+smoke checks. Deploy the exact review commit and run a bounded technical smoke
+check; do not treat it as Antigravity Stage 3 validation.
 
-Create a Pull Request with:
+Create a draft Pull Request with:
 
 - task blueprint, state matrix, and Figma;
 - preview URL and tested accounts/data boundaries;
 - success and failure validation evidence;
 - privacy/security assumptions;
-- Codex results and Antigravity extended QA status.
+- Codex preliminary results and explicit `ANTIGRAVITY_PHASE_3: PENDING` status.
 
 ### 6. Data / Analytics
 
@@ -321,13 +320,13 @@ Never log secrets, full form values, health/financial identifiers, payment
 details, or direct personal contact data. Document consent, retention, access,
 and deletion expectations.
 
-## Completion gate
+## Codex Stage 2 handoff gate
 
 Require:
 
-- [ ] approved task-and-state blueprint
+- [ ] approved Antigravity creative and task/state package
 - [ ] dedicated clean branch from a verified base
-- [ ] complete Figma task flow and state variants
+- [ ] Antigravity creative source mapped to the implemented task flow and state variants
 - [ ] primary task is easy to find and complete
 - [ ] a first-time user understands what the service does, what it requires,
       how the main result is produced, and what happens next
@@ -335,12 +334,6 @@ Require:
       required object and consequence without relying on titles or prior steps
 - [ ] consequential numbers and decisions expose the necessary intermediate
       steps, examples, or calculation rules
-- [ ] creator assets keep their approved roles and reuse restrictions
-- [ ] no user-facing copy exposes internal design or implementation notes
-- [ ] shared component changes were checked across every affected route and
-      state
-- [ ] media was checked at intrinsic, wrapper, rendered-box, and visible-content
-      levels
 - [ ] validation, feedback, recovery, and support are clear
 - [ ] destructive or high-risk consequences are explicit and protected
 - [ ] keyboard, mobile, localization, and slow/failure states work
@@ -349,16 +342,29 @@ Require:
       the intended page or documented expected external state
 - [ ] repeated records and state families pass full schema, validation, and
       renderer/client-parity coverage rather than happy-path sampling
-- [ ] `CODEX_TASK_GATE: PASS`
-- [ ] `CODEX_STATE_GATE: PASS`
-- [ ] `CODEX_SAFETY_GATE: PASS`
-- [ ] `CODEX_PUBLIC_TASK_UNDERSTANDING_GATE: PASS`
+- [ ] `CODEX_PRELIM_TASK_GATE: PASS`
+- [ ] `CODEX_PRELIM_STATE_GATE: PASS`
+- [ ] `CODEX_PRELIM_SAFETY_GATE: PASS`
+- [ ] `CODEX_PRELIM_PUBLIC_TASK_UNDERSTANDING_GATE: PASS`
 - [ ] relevant build, tests, lint, accessibility, and browser checks
 - [ ] privacy-aware analytics specification
 - [ ] verified live preview
 - [ ] cache-resistant live DOM/state smoke confirms the exact review commit
-- [ ] Pull Request with Figma and preview links
+- [ ] draft Pull Request and preview prepared for Antigravity Stage 3
+- [ ] the exact review commit is pushed and present in both the draft MR/PR and preview
 - [ ] authoritative project registry updated
 
-If a mandatory item fails, report `STATUS: BLOCKED` with the exact next action.
-Never report completion without both a verified preview URL and PR URL.
+If a mandatory Stage 2 item fails, report `CODEX_PHASE_2: BLOCKED` with the exact
+next action. Otherwise report:
+
+```text
+ANTIGRAVITY_PHASE_1: APPROVED
+CODEX_PHASE_2: MR_READY_FOR_ANTIGRAVITY_VALIDATION
+ANTIGRAVITY_PHASE_3: PENDING | PASS | FAIL | SKIPPED_BY_USER
+```
+
+Never report the website fully validated, production ready, or complete until
+Antigravity has performed Stage 3 and returned its result.
+Keep Antigravity corrections on the same open MR/PR and normally request a new
+Stage 3 pass for the updated review commit. Merge immediately when the user
+explicitly authorizes the current scoped MR/PR; record skipped Stage 3 honestly.

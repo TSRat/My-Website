@@ -1,4 +1,4 @@
 interface:
   display_name: "Normalize Web Portfolio"
-  short_description: "Modernize sites by creative, service, or information duty"
-  default_prompt: "Use $normalize-web-portfolio to classify each site, preserve identity and asset roles, inventory shared consumers, modernize infrastructure, verify complete collection and renderer parity, and apply literal creator corrections with cache-resistant preview and production QA."
+  short_description: "按批准方案维护网站作品集并支持授权的低风险小修快速合并"
+  default_prompt: "Use $normalize-web-portfolio to implement the approved portfolio directions, preserve each site's responsibility and identity, and run preliminary Codex checks; default to Antigravity Stage 3, but use the scoped fast-merge path when I explicitly authorize it."

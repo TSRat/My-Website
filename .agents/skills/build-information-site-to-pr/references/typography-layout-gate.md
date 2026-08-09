@@ -1,5 +1,12 @@
 # Information Site Typography and Layout Discipline Gate
 
+## Phase ownership
+
+Use this reference in Codex Stage 2 to translate Antigravity's approved
+typography and layout direction into implementable rules and to run preliminary
+checks. Do not create a replacement visual direction. Antigravity Stage 3 owns
+complete layout, viewport, accessibility, and visual-regression validation.
+
 ## Contents
 
 1. Required specification
@@ -10,8 +17,8 @@
 6. Chinese line breaking and orphan control
 7. Figma requirements
 8. Production implementation rules
-9. Codex blocking layout QA
-10. Antigravity extended QA
+9. Codex preliminary layout checks
+10. Antigravity Stage 3 complete validation
 11. Evidence and status
 
 ## Required specification
@@ -38,7 +45,7 @@ Record:
 - information-container decisions and their semantic rationale;
 - card anatomy, grouping, color meaning, and content-to-area rationale;
 - intentional exceptions;
-- the Codex QA route/template and viewport matrix.
+- the Codex preliminary checks route/template and viewport matrix.
 
 Site-specific values may differ. The mandatory requirement is to define and
 reuse a coherent system instead of assigning values section by section.
@@ -187,7 +194,7 @@ At every required viewport:
 Record:
 
 ```text
-CODEX_READING_SCALE_GATE: PASS | FAIL
+CODEX_PRELIM_READING_SCALE_GATE: PASS | FAIL
 ```
 
 ## Information containers and card composition
@@ -356,7 +363,7 @@ Run:
 Record:
 
 ```text
-CODEX_CARD_COMPOSITION_GATE: PASS | FAIL
+CODEX_PRELIM_CARD_COMPOSITION_GATE: PASS | FAIL
 ```
 
 Pass only when the chosen information forms, content volume, card geometry,
@@ -576,7 +583,7 @@ Fail the Codex gate when:
 - card color, size, or grouping creates unexplained meaning;
 - screenshots or the QA record are missing.
 
-## Antigravity extended QA
+## Antigravity Stage 3 complete validation
 
 After the Codex gate passes, hand Antigravity:
 
@@ -613,9 +620,9 @@ or unapproved.
 Record separately:
 
 ```text
-CODEX_LAYOUT_GATE: PASS | FAIL
-CODEX_READING_SCALE_GATE: PASS | FAIL
-CODEX_CARD_COMPOSITION_GATE: PASS | FAIL
+CODEX_PRELIM_LAYOUT_GATE: PASS | FAIL
+CODEX_PRELIM_READING_SCALE_GATE: PASS | FAIL
+CODEX_PRELIM_CARD_COMPOSITION_GATE: PASS | FAIL
 ANTIGRAVITY_QA: PENDING | PASS | FAIL
 ```
 

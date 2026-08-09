@@ -1,6 +1,6 @@
 ---
 name: build-information-site-to-pr
-description: "Build or substantially revise a production-quality information website whose primary responsibility is to help visitors find, understand, compare, and organize knowledge. Use for editorial sites, news, blogs, archives, museums, courses, documentation, research, history, biography, literature, cultural topics, knowledge bases, and creator-directed screenshot correction passes after an Antigravity direction or approved information structure already exists. Require approval of a complete zero-knowledge screen outline before initial production writes, then complete the six-stage website workflow, Figma, readable implementation, preview, and pull request; use the bounded correction loop for later local feedback."
+description: "Implement or substantially revise an information website during Codex Stage 2 after Antigravity has supplied an approved creative and zero-knowledge information package. Use for editorial sites, news, blogs, archives, museums, courses, documentation, research, history, biography, literature, cultural topics, knowledge bases, and bounded corrections returned by Antigravity. Codex adds feasibility, builds the actual framework and readable implementation, runs preliminary checks, commits and pushes the work, and creates a preview-backed draft MR/PR before Antigravity Stage 3 complete validation; do not originate Stage 1 information/visual direction or claim final QA."
 ---
 
 # Build Information Site to PR
@@ -15,6 +15,15 @@ Build a website whose unacceptable failure is:
 Visual language may be poetic, historical, regional, cultural, or highly
 distinctive. It must not place editorial drama before the information needed to
 understand it.
+
+## Mandatory three-stage ownership
+
+Read and obey `antigravity-codex-web-workflow`. This skill executes only Codex Stage 2.
+
+- Require the approved Antigravity creative and zero-knowledge information package before production writes.
+- Add feasibility, implementation structure, production code, and preliminary checks without changing the approved learning order or visual direction.
+- Return the implementation to Antigravity for Stage 3 complete validation.
+- Never call Codex comprehension samples, browser smoke, builds, or link checks complete QA.
 
 Read all three references completely:
 
@@ -61,14 +70,14 @@ Resolve:
 If Antigravity output or essential content sources cannot be read, report
 `STATUS: BLOCKED`. Do not invent facts, sources, or a generic visual system.
 
-## Beginner Screen Outline Approval Gate
+## Antigravity Information Package Intake Gate
 
-Before creating a branch, Figma production file, asset, or repository content,
-follow the complete beginner-screen reference.
+Before creating a branch, asset, or repository content, use the complete
+beginner-screen reference to verify the approved Antigravity package.
 
-Present every route, meaningful screen, scroll scene, modal, information state,
-responsive variation, and language variation from the perspective of a visitor
-with no prior subject knowledge.
+Confirm that it covers every route, meaningful screen, scroll scene, modal,
+information state, responsive variation, and language variation from the
+perspective of a visitor with no prior subject knowledge.
 
 Require:
 
@@ -106,18 +115,18 @@ Require:
 Record:
 
 ```text
-CODEX_CONTEXT_GATE: PASS
-CODEX_PLAIN_LANGUAGE_GATE: PASS
-CODEX_PUBLIC_UNDERSTANDING_GATE: PASS
-STATUS: WAITING_FOR_OUTLINE_APPROVAL
+ANTIGRAVITY_PHASE_1: MISSING | CHANGES_REQUIRED
+CODEX_PHASE_2: BLOCKED
+STATUS: WAITING_FOR_ANTIGRAVITY_CREATIVE_PACKAGE
 ```
 
-Do not create a branch or write repository files while waiting. Earlier approval
-of the Antigravity direction is not approval of the screen outline.
+Do not create a branch or write repository files while waiting. Report missing,
+contradictory, or infeasible content and structure to Antigravity; do not author
+a replacement outline or visual direction.
 
-After explicit approval, make the outline the structural source of truth.
+Make the approved Antigravity outline the structural source of truth.
 Material changes to routes, learning order, screen purpose, subject explanation,
-or evidence require renewed approval.
+or evidence must return to Antigravity Stage 1.
 
 ## Creator correction loop
 
@@ -143,31 +152,14 @@ Before editing:
    pull quote, source note, caption, or marginalia.
 
 For creator-provided folders, maintain an asset placement ledger: filename,
-approved chapter/page, explanatory job, reuse restriction, alt/caption, source
-or creator status, and shipped path. A request to use the folder is not complete
-until every explicitly requested file is mapped or a real blocker is recorded.
-Do not substitute, relocate, crop, remove, or reuse other imagery without
-authorization. Treat hero art, archive-card covers, video posters, directly
-displayed video media, maps, evidence images, portraits, and decorative motifs
-as distinct roles unless the creator explicitly approves reuse. Write positive
-captions that identify the work and why it appears. Avoid obvious lectures
-about what an image is not; distinguish film still, illustration,
-reconstruction, later artwork, or historical object only when it prevents a
-plausible evidentiary misunderstanding.
-
-Maintain a terminology ledger for names, transliterations, dates, places,
-translations, and key terms. Apply it consistently to headings, body copy,
-captions, maps, navigation, alt text, metadata, and committed mirrors. When the
-story follows a historical person's limited viewpoint, also record the
-approved narrative horizon. Do not reveal later geopolitical or cross-ocean
-context before the intended turning point merely because the author or designer
-already knows it.
-
-Do not publish internal production narration as editorial copy. Notes about
-changing the palette, introducing the next chapter, adding background,
-replacing an image, counting screens, or explaining the layout belong in
-design, technical, or handoff records unless the production process is itself
-the subject.
+approved chapter/page, explanatory job, alt/caption, source or creator status,
+and shipped path. A request to use the folder is not complete until every
+explicitly requested file is mapped or a real blocker is recorded. Do not
+substitute, relocate, crop, or remove other imagery without authorization.
+Write positive captions that identify the work and why it appears. Avoid
+obvious lectures about what an image is not; distinguish film still,
+illustration, reconstruction, later artwork, or historical object only when it
+prevents a plausible evidentiary misunderstanding.
 
 For editorial layout corrections, remove accidental constraints before adding
 new ones. Use the available grid, inspect the creator's screenshot viewport,
@@ -175,23 +167,6 @@ and check hierarchy, contrast, overlap, peer alignment, blank-space purpose,
 reading measure, and one- or two-character headline lines. Do not manufacture a
 wrap with an arbitrary `max-width`, manual `<br>`, or screenshot-only font
 size.
-
-Large empty space is acceptable only when it supports orientation, pacing, or
-evidence. If an essential definition, event, causal step, or transition remains
-tiny while most of the screen is unused, promote it in the hierarchy or give it
-an independent screen. Do not bury the sentence that makes the next section
-understandable in metadata-sized copy.
-
-Inspect media geometry at four levels: intrinsic dimensions and alpha, wrapper
-or stage geometry, the rendered media box, and the visible content after
-`object-fit`, `object-position`, clipping, or masking. A matching outer frame
-does not prove that maps, portraits, and covers have the right visible scale.
-
-Before changing a shared selector, token, component, registry, or generator,
-enumerate all consumers and inspect the requested target plus every affected
-peer. A local portrait, logo, carousel, card, or figure correction must not
-silently enlarge or reposition the others; prefer a target-specific rule when
-only one item is defective.
 
 Keep iterative corrections on the same open PR. After that PR is merged, create
 a new branch and PR for the next correction. Modify the authoritative source,
@@ -204,12 +179,12 @@ named examples. Inventory all entries, define machine-checkable section,
 punctuation, source-link, and entity-introduction contracts, and compare every
 public renderer or generated mirror against the authoritative content.
 
-Explicit "publish directly" or "merge now" from the repository owner authorizes
-merging the scoped PR; it is not automatic merge authority for later work. If
-the owner also says not to run more checks or assigns extended QA to
-Antigravity, stop discretionary QA loops. Still produce the deployable
-source/mirror artifact, keep the commit scoped, and report skipped preview or
-QA honestly. Never relabel unrun QA as passed.
+Explicit "publish directly", "merge now", or equivalent instruction from the
+repository owner authorizes merging the current scoped PR even when
+Antigravity Stage 3 is pending. Run the proportional minimum Codex checks,
+produce the deployable source/mirror artifact, keep the commit scoped, report
+skipped checks honestly, and use `ANTIGRAVITY_PHASE_3: SKIPPED_BY_USER`. Never
+relabel skipped Antigravity validation as passed or reuse the authority later.
 
 Keep design and delivery records truthful during fast corrections. Update Figma
 in the same pass or name the exact frame that the implementation temporarily
@@ -239,9 +214,9 @@ Stop repository writes if branch or worktree ownership is uncertain.
 
 ## Execute the six stages
 
-### 1. Product / UX
+### 1. Feasibility and implementation interpretation
 
-Define:
+Translate the approved Antigravity package into an implementable contract:
 
 - audience, question, comprehension outcome, and lookup success;
 - route and chapter map, search, filter, index, glossary, and related content;
@@ -252,8 +227,9 @@ Define:
   recurring briefing needs separate orientation, headline result, supporting
   evidence, and derived meaning.
 
-After the branch gate, save the approved outline to
-`<site-doc-root>/<slug>/screen-outline.md` and create `product-spec.md`.
+After the branch gate, save the approved Antigravity outline to
+`<site-doc-root>/<slug>/screen-outline.md` and create `product-spec.md` as an
+implementation record. Do not use either file to redesign the learning order.
 
 ### 2. Visual exploration and production
 
@@ -268,9 +244,10 @@ Translate Antigravity into an explanatory visual system:
 Create `<site-doc-root>/<slug>/visual-direction.md` and
 `typography-layout.md`.
 
-### 3. Figma design system
+### 3. Creative-source implementation mapping
 
-Create editable foundations, components, and key screens for:
+Use Antigravity's Figma or equivalent creative artifact as the source of truth.
+When explicitly authorized, annotate or map it for implementation across:
 
 - desktop, tablet where material, and mobile;
 - article, chapter, index, search, filter, glossary, media, citation, and
@@ -278,23 +255,25 @@ Create editable foundations, components, and key screens for:
 - loading, empty, unavailable, error, expanded, and translated states;
 - typography, spacing, grid, wrapping, and long/short content variants.
 
-Record Figma URL and frames in
-`<site-doc-root>/<slug>/design-handoff.md`.
+Record the authoritative creative URL, frames, and implementation mapping in
+`<site-doc-root>/<slug>/design-handoff.md`. Do not invent a substitute creative
+source when Antigravity has not supplied one.
 
-### 4. Prototype and design QA
+### 4. Prototype and preliminary Codex checks
 
-Use realistic content and real fonts. Verify every distinct template and
-required viewport against both references.
+Use realistic content and real fonts. Sample representative templates and
+required viewports against both references to catch obvious implementation
+defects; Antigravity Stage 3 owns complete coverage.
 
 Record:
 
 ```text
-CODEX_CONTEXT_GATE: PASS | FAIL
-CODEX_PLAIN_LANGUAGE_GATE: PASS | FAIL
-CODEX_PUBLIC_UNDERSTANDING_GATE: PASS | FAIL
-CODEX_LAYOUT_GATE: PASS | FAIL
-CODEX_READING_SCALE_GATE: PASS | FAIL
-CODEX_CARD_COMPOSITION_GATE: PASS | FAIL
+CODEX_PRELIM_CONTEXT_GATE: PASS | FAIL
+CODEX_PRELIM_PLAIN_LANGUAGE_GATE: PASS | FAIL
+CODEX_PRELIM_PUBLIC_UNDERSTANDING_GATE: PASS | FAIL
+CODEX_PRELIM_LAYOUT_GATE: PASS | FAIL
+CODEX_PRELIM_READING_SCALE_GATE: PASS | FAIL
+CODEX_PRELIM_CARD_COMPOSITION_GATE: PASS | FAIL
 ```
 
 Run direct-entry, headline-specificity, entity-introduction, terminology,
@@ -304,26 +283,27 @@ section-role, sentence paraphrase, attribution, clickable-link, object-and-
 process, container, numerical-origin, collection-coverage, and learning-task
 checks from the content-writing reference.
 
-### 5. Engineering, preview, and PR
+### 5. Engineering, preview, draft PR, and Antigravity handoff
 
 Choose the simplest maintainable architecture for the content and interaction.
 Preserve repository URL and deployment conventions. Keep content and data
 separate from presentation when it materially improves maintenance.
 
 Run the smallest relevant build, tests, lint, content/source validation, and
-real-browser smoke checks. Deploy and verify the exact review commit.
+real-browser smoke checks. Deploy the exact review commit and run a bounded
+technical smoke check; do not treat it as Antigravity Stage 3 validation.
 
 For structured collections, test every record rather than only fixtures named
 in the task. Assert required sections, complete first body introductions,
 punctuated details, source count/placement, and equivalence between dynamic,
 static, server, client, and generated-mirror renderers as applicable.
 
-Create a Pull Request with:
+Create a draft Pull Request with:
 
 - approved outline, Figma, and preview links;
 - clearly named, directly clickable source links;
 - typography, comprehension, and container QA evidence;
-- Codex results and Antigravity extended QA status.
+- Codex preliminary results and explicit `ANTIGRAVITY_PHASE_3: PENDING` status.
 
 ### 6. Data / Analytics
 
@@ -339,11 +319,11 @@ Define privacy-aware events such as:
 Do not treat page views or dwell time alone as learning. Define useful outcome
 signals and state what is intentionally not tracked.
 
-## Completion gate
+## Codex Stage 2 handoff gate
 
 Require:
 
-- [ ] approved zero-knowledge screen outline
+- [ ] approved Antigravity creative and zero-knowledge information package
 - [ ] dedicated clean branch from a verified base
 - [ ] documented sources, terms, uncertainty, and corrections
 - [ ] short entries use no more than three major explanatory parts by default
@@ -359,34 +339,38 @@ Require:
       steps needed to understand how they were produced
 - [ ] cards, images, captions, diagrams, and interactions perform a specific
       explanatory job
-- [ ] names, terms, dates, places, translations, and narrative viewpoint are
-      consistent across copy, media, metadata, and mirrors
-- [ ] creator assets keep their approved roles and reuse restrictions
-- [ ] no reader-facing copy exposes internal design or implementation notes
-- [ ] essential definitions, events, causes, and transitions are not buried in
-      metadata-sized text beside unexplained empty space
-- [ ] shared component changes were checked against every affected peer
-- [ ] media was checked at intrinsic, wrapper, rendered-box, and visible-content
-      levels
 - [ ] source links are direct, descriptively named anchors whose final targets
       were opened successfully; no bare URL is used as reader-facing copy
 - [ ] repeated collections pass full-record section, punctuation, source-link,
       entity-introduction, and renderer-parity checks
-- [ ] Figma desktop/mobile system with realistic content
+- [ ] Antigravity creative source mapped to desktop/mobile implementation with realistic content
 - [ ] clear direct-entry orientation and information architecture
 - [ ] readable live typography and correct information containers
-- [ ] `CODEX_CONTEXT_GATE: PASS`
-- [ ] `CODEX_PLAIN_LANGUAGE_GATE: PASS`
-- [ ] `CODEX_PUBLIC_UNDERSTANDING_GATE: PASS`
-- [ ] `CODEX_LAYOUT_GATE: PASS`
-- [ ] `CODEX_READING_SCALE_GATE: PASS`
-- [ ] `CODEX_CARD_COMPOSITION_GATE: PASS`
+- [ ] `CODEX_PRELIM_CONTEXT_GATE: PASS`
+- [ ] `CODEX_PRELIM_PLAIN_LANGUAGE_GATE: PASS`
+- [ ] `CODEX_PRELIM_PUBLIC_UNDERSTANDING_GATE: PASS`
+- [ ] `CODEX_PRELIM_LAYOUT_GATE: PASS`
+- [ ] `CODEX_PRELIM_READING_SCALE_GATE: PASS`
+- [ ] `CODEX_PRELIM_CARD_COMPOSITION_GATE: PASS`
 - [ ] relevant build, tests, lint, source checks, and browser smoke
 - [ ] privacy-aware analytics specification
 - [ ] verified live preview
 - [ ] cache-resistant DOM/style smoke confirms the exact review commit
-- [ ] Pull Request with Figma and preview links
+- [ ] draft Pull Request and preview prepared for Antigravity Stage 3
+- [ ] the exact review commit is pushed and present in both the draft MR/PR and preview
 - [ ] authoritative project registry updated
 
-If a mandatory item fails, report `STATUS: BLOCKED` with the exact next action.
-Never report completion without both a verified preview URL and PR URL.
+If a mandatory Stage 2 item fails, report `CODEX_PHASE_2: BLOCKED` with the exact
+next action. Otherwise report:
+
+```text
+ANTIGRAVITY_PHASE_1: APPROVED
+CODEX_PHASE_2: MR_READY_FOR_ANTIGRAVITY_VALIDATION
+ANTIGRAVITY_PHASE_3: PENDING | PASS | FAIL | SKIPPED_BY_USER
+```
+
+Never report the website fully validated, production ready, or complete until
+Antigravity has performed Stage 3 and returned its result.
+Keep Antigravity corrections on the same open MR/PR and normally request a new
+Stage 3 pass for the updated review commit. Merge immediately when the user
+explicitly authorizes the current scoped MR/PR; record skipped Stage 3 honestly.

@@ -1,4 +1,4 @@
 interface:
   display_name: "Build Creative Site to PR"
-  short_description: "Build a memorable creative site from an approved storyboard"
-  default_prompt: "Use $build-creative-site-to-pr to approve a creative storyboard or apply the bounded correction loop, preserve asset roles, check shared consumers, verify complete repeated-content and renderer coverage, then deliver a cache-checked preview and pull request."
+  short_description: "制作已批准的创意网站并支持授权后快速合并低风险小修"
+  default_prompt: "Use $build-creative-site-to-pr to implement the approved creative package, run preliminary Codex checks, and prepare the preview and draft PR; default to Antigravity Stage 3, but use the scoped fast-merge path when I explicitly authorize it."

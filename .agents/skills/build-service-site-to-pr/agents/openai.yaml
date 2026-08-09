@@ -1,4 +1,4 @@
 interface:
   display_name: "Build Service Site to PR"
-  short_description: "Build a safe service site around a complete user task"
-  default_prompt: "Use $build-service-site-to-pr to approve the task-and-state blueprint or apply the bounded correction loop, preserve safety and asset roles, verify every affected state and renderer, then deliver a cache-checked preview and pull request."
+  short_description: "制作已批准的服务网站并支持授权后快速合并低风险小修"
+  default_prompt: "Use $build-service-site-to-pr to implement the approved task package, run required safety and preliminary checks, and prepare the preview and draft PR; default to Antigravity Stage 3, but use the scoped fast-merge path when I explicitly authorize it."

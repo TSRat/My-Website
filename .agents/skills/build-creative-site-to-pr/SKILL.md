@@ -1,6 +1,6 @@
 ---
 name: build-creative-site-to-pr
-description: "Build or substantially revise a production-quality creative website whose primary responsibility is to create a memorable impression, express an author or brand identity, present work, or deliver an artistic digital experience. Use for portfolios, artists, films, music, fashion, exhibitions, campaign microsites, personal brands, experimental narratives, and creator-directed screenshot correction passes after an Antigravity direction or approved experience already exists. Require approval of a complete experience storyboard before initial production writes, then complete the six-stage website workflow, Figma, implementation, preview, and pull request; use the bounded correction loop for later local feedback."
+description: "Implement or substantially revise a creative website during Codex Stage 2 after Antigravity has supplied an approved creative package. Use for portfolios, artists, films, music, fashion, exhibitions, campaign microsites, personal brands, experimental narratives, and bounded corrections returned by Antigravity. Preserve memorable identity while Codex adds feasibility, builds the actual framework and production implementation, runs preliminary checks, commits and pushes the work, and creates a preview-backed draft MR/PR before Antigravity Stage 3 complete validation; do not originate Stage 1 creative direction or claim final QA."
 ---
 
 # Build Creative Site to PR
@@ -19,8 +19,17 @@ Creative freedom is broad, but never use it to hide:
 - how to continue;
 - the primary action, contact, or destination.
 
+## Mandatory three-stage ownership
+
+Read and obey `antigravity-codex-web-workflow`. This skill executes only Codex Stage 2.
+
+- Require the approved Antigravity creative package before production writes.
+- Add feasibility, implementation structure, production code, and preliminary checks without reopening the creative direction.
+- Return the implementation to Antigravity for Stage 3 complete validation.
+- Never call Codex smoke checks, screenshots, builds, or link samples complete QA.
+
 Read [references/creative-experience-gate.md](references/creative-experience-gate.md)
-completely before producing the approval storyboard or final design.
+completely before verifying the Antigravity package or implementing it.
 
 Never modify `main` directly. Never merge automatically.
 
@@ -64,10 +73,10 @@ Resolve:
 If the Antigravity visual system is unavailable or unreadable, report
 `STATUS: BLOCKED`. Do not invent a generic visual direction.
 
-## Experience Storyboard Approval Gate
+## Antigravity Experience Package Intake Gate
 
-Before creating a branch, Figma production file, asset, or repository content,
-present a complete experience storyboard in chat.
+Before creating a branch, asset, or repository content, verify that the approved
+Antigravity package contains a complete experience storyboard.
 
 Cover every route and meaningful screen, scene, transition, interaction, media
 state, language variation, and direct-entry state. Include:
@@ -90,16 +99,16 @@ state, language variation, and direct-entry state. Include:
 Report:
 
 ```text
-STATUS: WAITING_FOR_EXPERIENCE_APPROVAL
+STATUS: WAITING_FOR_ANTIGRAVITY_CREATIVE_PACKAGE
 ```
 
-Do not create a branch or write repository files while waiting. Earlier concept
-selection is not storyboard approval. Revise and ask again when the user changes
-the experience.
+Do not create a branch or write repository files while waiting. Report missing,
+contradictory, or infeasible inputs to Antigravity; do not author a replacement
+storyboard or choose a new visual direction.
 
-After explicit approval, record it and treat the storyboard as the experience
-source of truth. Material changes to identity, scene order, signature moments,
-navigation, or primary action require renewed approval.
+Treat the approved package as the experience source of truth. Material changes
+to identity, scene order, signature moments, navigation, or primary action must
+return to Antigravity Stage 1.
 
 ## Creator correction loop
 
@@ -128,45 +137,19 @@ introduction. Name the unfamiliar person, work, place, institution, or concept
 inside the unit before switching to pronouns or shortened labels.
 
 For creator-provided folders, maintain an asset placement ledger: filename,
-approved scene, visual job, reuse restriction, alt/caption, source or creator
-status, and shipped path. Use every explicitly requested asset or report the
-exact unresolved mapping. Do not substitute, relocate, crop, remove, or reuse
-another image without authorization. Treat hero art, archive-card covers, video
-posters, directly displayed video media, maps, evidence images, portraits, and
-decorative motifs as distinct roles unless the creator explicitly approves
-reuse. Write positive captions that identify the work and its role. Avoid
-patronizing disclaimers about obvious image status; distinguish a film still,
-modern illustration, reconstruction, or historical object only when a viewer
-could plausibly mistake its evidentiary role.
-
-Do not publish internal production narration as visitor-facing copy. Notes such
-as "the page now turns from green to red", "next we add the background",
-"replace this image", screen counts, layout rationales, and asset plans belong
-in design, technical, or handoff records unless making the work is itself the
-subject.
+approved scene, visual job, alt/caption, source or creator status, and shipped
+path. Use every explicitly requested asset or report the exact unresolved
+mapping. Do not substitute, relocate, crop, or remove another image without
+authorization. Write positive captions that identify the work and its role.
+Avoid patronizing disclaimers about obvious image status; distinguish a film
+still, modern illustration, reconstruction, or historical object only when a
+viewer could plausibly mistake its evidentiary role.
 
 For layout corrections, remove accidental constraints before adding new ones.
 Use the available grid, inspect the feedback viewport, and check hierarchy,
 contrast, overlap, peer alignment, blank-space purpose, and one- or
 two-character headline lines. Do not force wrapping with an arbitrary
 `max-width`, manual `<br>`, or screenshot-only font size.
-
-Inspect media geometry at four levels: intrinsic dimensions and alpha, wrapper
-or stage geometry, the rendered media box, and the visible content after
-`object-fit`, `object-position`, clipping, or masking. A consistent frame height
-does not mean every portrait or cover should have the same visible scale.
-
-Before changing a shared selector, token, component, registry, or generator,
-enumerate all consumers and inspect the requested target plus every affected
-peer. A local portrait, logo, carousel, card, or figure correction must not
-silently enlarge or move the rest. Use target-specific rules when the defect is
-target-specific.
-
-Create rhythm through controlled variation rather than cloned screens or random
-novelty. Image scale, color field, density, orientation, and layout family may
-change between scenes when each change serves a narrative beat. Keep the
-typographic system, alignment logic, navigation behavior, and identity motifs
-coherent enough that the experience still feels intentionally authored.
 
 Keep iterative corrections on the same open PR. After that PR is merged, use a
 new branch and PR for the next correction. Modify the authoritative source,
@@ -178,12 +161,12 @@ Manually inspect representative rendered units, then use content-contract,
 asset-coverage, and renderer-parity tests across the full collection. Do not
 approve a systemic rewrite after checking only the examples named in feedback.
 
-Explicit "publish directly" or "merge now" from the repository owner authorizes
-merging the scoped PR; it is not automatic merge authority for later work. If
-the owner also says not to run more checks or assigns extended QA to
-Antigravity, stop discretionary QA loops. Still produce the deployable
-source/mirror artifact, keep the commit scoped, and report skipped preview or
-QA honestly. Never relabel unrun QA as passed.
+Explicit "publish directly", "merge now", or equivalent instruction from the
+repository owner authorizes merging the current scoped PR even when
+Antigravity Stage 3 is pending. Run the proportional minimum Codex checks,
+produce the deployable source/mirror artifact, keep the commit scoped, report
+skipped checks honestly, and use `ANTIGRAVITY_PHASE_3: SKIPPED_BY_USER`. Never
+relabel skipped Antigravity validation as passed or reuse the authority later.
 
 Keep design and delivery records truthful during fast corrections. Update Figma
 in the same pass or name the exact frame that the implementation temporarily
@@ -213,9 +196,9 @@ Stop repository writes if the base, branch, or worktree ownership is uncertain.
 
 ## Execute the six stages
 
-### 1. Product / UX
+### 1. Feasibility and implementation interpretation
 
-Define:
+Translate the approved Antigravity package into an implementable contract:
 
 - visitor, impression, desired memory, and next action;
 - a public entry contract that names who or what the site represents and shows
@@ -226,7 +209,8 @@ Define:
 - contact, follow, view-work, buy, book, or subscribe exits when relevant;
 - secondary information and service requirements.
 
-Create `<site-doc-root>/<slug>/product-spec.md`.
+Create `<site-doc-root>/<slug>/product-spec.md` as an implementation record. Do
+not use it to replace or revise the approved creative package.
 
 ### 2. Visual exploration and production
 
@@ -246,9 +230,10 @@ Translate Antigravity into an implementable visual grammar:
 
 Create `<site-doc-root>/<slug>/visual-direction.md`.
 
-### 3. Figma design system
+### 3. Creative-source implementation mapping
 
-Create an editable Figma source of truth containing:
+Use Antigravity's Figma or equivalent creative artifact as the source of truth.
+When explicitly authorized, annotate or map it for implementation with:
 
 - foundations and semantic tokens;
 - creative grammar and site-specific motifs;
@@ -257,9 +242,11 @@ Create an editable Figma source of truth containing:
 - interaction, transition, reduced-motion, loading, and fallback states;
 - a handoff page with frame names and implementation notes.
 
-Record the Figma URL in `<site-doc-root>/<slug>/design-handoff.md`.
+Record the authoritative creative URL and implementation mapping in
+`<site-doc-root>/<slug>/design-handoff.md`. Do not invent a substitute creative
+source when Antigravity has not supplied one.
 
-### 4. Prototype and design QA
+### 4. Prototype and preliminary Codex checks
 
 Prototype the core experience with real media and realistic copy.
 
@@ -293,31 +280,32 @@ Run link-integrity QA:
 - document any expected authentication, app handoff, download, or unavailable
   external destination instead of claiming it was verified.
 
-Record:
+Record these as preliminary Codex results only:
 
 ```text
-CODEX_IDENTITY_GATE: PASS | FAIL
-CODEX_EXPERIENCE_GATE: PASS | FAIL
-CODEX_CREATIVE_USABILITY_GATE: PASS | FAIL
-CODEX_PUBLIC_LEGIBILITY_GATE: PASS | FAIL
+CODEX_PRELIM_IDENTITY_GATE: PASS | FAIL
+CODEX_PRELIM_EXPERIENCE_GATE: PASS | FAIL
+CODEX_PRELIM_CREATIVE_USABILITY_GATE: PASS | FAIL
+CODEX_PRELIM_PUBLIC_LEGIBILITY_GATE: PASS | FAIL
 ```
 
-### 5. Engineering, preview, and PR
+### 5. Engineering, preview, draft PR, and Antigravity handoff
 
 Choose the simplest architecture that supports the approved media, motion, and
 interaction. Preserve repository URLs and deployment conventions.
 
 Run the smallest relevant build, test, lint, and real-browser smoke checks.
-Deploy a live preview of the exact review commit and verify it.
+Deploy a live preview of the exact review commit and run a bounded technical
+smoke check. Do not treat it as Antigravity Stage 3 validation.
 
-Commit only scoped files, push the feature branch, and create a Pull Request
+Commit only scoped files, push the feature branch, and create a draft Pull Request
 containing:
 
 - storyboard and Figma links;
 - preview URL;
 - impression contract and signature moments;
 - media rights and performance notes;
-- Codex QA results and Antigravity extended QA status.
+- Codex preliminary results and explicit `ANTIGRAVITY_PHASE_3: PENDING` status.
 
 ### 6. Data / Analytics
 
@@ -333,13 +321,13 @@ funnel. Prefer provider-neutral events such as:
 Do not use dwell time alone as proof of emotional impact. Document consent,
 privacy, and what is intentionally not tracked.
 
-## Completion gate
+## Codex Stage 2 handoff gate
 
 Require:
 
-- [ ] approved experience storyboard and recorded approval
+- [ ] approved Antigravity creative package and recorded source
 - [ ] dedicated clean branch from a verified base
-- [ ] Figma source with desktop, mobile, motion, and fallback states
+- [ ] Antigravity creative source mapped to desktop, mobile, motion, and fallback implementation
 - [ ] recognizable identity and available work
 - [ ] the represented object or work appears before abstract symbolism, and a
       newcomer can describe at least one concrete example
@@ -349,27 +337,35 @@ Require:
       relying on its title, deck, listing card, or previous scene
 - [ ] collection-wide changes have full content/asset/renderer coverage rather
       than example-only verification
-- [ ] creator assets keep their approved roles and reuse restrictions
-- [ ] no visitor-facing copy exposes internal design or implementation notes
-- [ ] shared component changes were checked against every affected peer
-- [ ] media was checked at intrinsic, wrapper, rendered-box, and visible-content
-      levels
 - [ ] clear navigation and primary action
 - [ ] purposeful, performant, accessible motion and media
 - [ ] readable typography without screenshot-first shrinking
 - [ ] descriptive semantic links with no bare or inert reader-facing URLs
 - [ ] every changed destination was clicked in the deployed preview and reached
       the intended page or has a documented expected external state
-- [ ] `CODEX_IDENTITY_GATE: PASS`
-- [ ] `CODEX_EXPERIENCE_GATE: PASS`
-- [ ] `CODEX_CREATIVE_USABILITY_GATE: PASS`
-- [ ] `CODEX_PUBLIC_LEGIBILITY_GATE: PASS`
+- [ ] `CODEX_PRELIM_IDENTITY_GATE: PASS`
+- [ ] `CODEX_PRELIM_EXPERIENCE_GATE: PASS`
+- [ ] `CODEX_PRELIM_CREATIVE_USABILITY_GATE: PASS`
+- [ ] `CODEX_PRELIM_PUBLIC_LEGIBILITY_GATE: PASS`
 - [ ] relevant build, test, lint, and browser smoke checks
 - [ ] analytics and privacy specification
 - [ ] verified live preview
 - [ ] cache-resistant DOM/asset smoke confirms the exact review commit
-- [ ] Pull Request with Figma and preview links
+- [ ] draft Pull Request and preview prepared for Antigravity Stage 3
+- [ ] the exact review commit is pushed and present in both the draft MR/PR and preview
 - [ ] authoritative project registry updated
 
-If a mandatory item fails, report `STATUS: BLOCKED` with the exact next action.
-Never report completion without both a verified preview URL and PR URL.
+If a mandatory Stage 2 item fails, report `CODEX_PHASE_2: BLOCKED` with the exact
+next action. Otherwise report:
+
+```text
+ANTIGRAVITY_PHASE_1: APPROVED
+CODEX_PHASE_2: MR_READY_FOR_ANTIGRAVITY_VALIDATION
+ANTIGRAVITY_PHASE_3: PENDING | PASS | FAIL | SKIPPED_BY_USER
+```
+
+Never report the website fully validated, production ready, or complete until
+Antigravity has performed Stage 3 and returned its result.
+Keep Antigravity corrections on the same open MR/PR and normally request a new
+Stage 3 pass for the updated review commit. Merge immediately when the user
+explicitly authorizes the current scoped MR/PR; record skipped Stage 3 honestly.

@@ -1,23 +1,34 @@
 ---
 name: normalize-web-portfolio
-description: Audit, document, clean up, standardize, and modernize all existing websites listed in the repository's website project table. Use when the user asks to clean up, normalize, migrate, unify, audit, modernize, or systematically improve the existing website portfolio. Classify each site and route by its primary creative, service, or information responsibility, preserve the responsibility that may not fail and each site's distinct identity, then apply the matching design, UX, QA, preview, and analytics standards. Use scoped Codex smoke checks and hand comprehensive browser and visual regression QA to Antigravity.
+description: Coordinate Codex Stage 2 implementation across all existing websites listed in the repository's website project table after Antigravity supplies approved creative direction. Use when the user asks to clean up, normalize, migrate, unify, audit, modernize, or systematically improve the portfolio. Classify each site and route by Creative, Service, or Information responsibility; preserve distinct identity; add feasibility, shared engineering, production implementation, preliminary smoke checks, previews, and draft PRs; then hand every website-facing batch to Antigravity Stage 3 complete validation. Do not originate Stage 1 creative direction or claim final QA.
 ---
 
 # Normalize Web Portfolio
 
 ## Mission
 
-Audit every website in the repository's authoritative website project table, document how each site is currently designed and implemented, then actively migrate the portfolio toward one shared six-stage web standard capable of supporting both simple editorial sites and complex dynamic web applications.
+Audit every website in the repository's authoritative website project table, document how each site is currently designed and implemented, then execute one shared Codex Stage 2 production standard capable of supporting both simple editorial sites and complex dynamic web applications.
 
 This is not an audit-only skill unless the user explicitly says "audit only".
+
+## Mandatory three-stage ownership
+
+Read and obey `antigravity-codex-web-workflow`. This skill coordinates only
+Codex Stage 2 across the portfolio.
+
+- Antigravity owns each site's Stage 1 creative direction and approved change package.
+- Codex may inventory and audit read-only before Stage 1 is complete, but must not write website-facing redesigns without the approved package.
+- Codex adds feasibility, shared infrastructure, actual production work, and preliminary checks.
+- Antigravity owns Stage 3 complete route, viewport, state, interaction, accessibility, console/network, content, and visual-regression validation.
+- Do not use normalization to make every website resemble one Codex-generated design system.
 
 Default behavior:
 1. inspect;
 2. document;
-3. design the target architecture;
+3. translate approved Antigravity direction into a feasible target architecture;
 4. implement safe standardization;
-5. verify;
-6. create reviewable branches / draft PRs with previews.
+5. run preliminary Codex checks;
+6. create reviewable branches / draft PRs with previews and hand them to Antigravity Stage 3.
 
 Never modify `main` directly.
 
@@ -70,10 +81,10 @@ If multiple conflicting project tables exist:
 
 Use the relevant installed capabilities automatically.
 
-Preferred capabilities:
-- Product Design for UX, flows, audits, prototypes, and design QA
-- Creative Production for visual assets and visual-system refinement
-- Figma for design systems, variables, components, responsive screens, and design source of truth
+Preferred capabilities during Codex Stage 2:
+- Product Design for implementation mapping, prototypes, and preliminary checks without replacing Antigravity direction
+- Creative Production for approved asset production and visual-system implementation
+- Figma for reading or technically annotating Antigravity's design source when authorized
 - Browser / Computer Use for a basic rendered-page smoke check
 - Antigravity for comprehensive route, viewport, interaction, console/network, accessibility, and visual-regression QA
 - GitHub for branches, commits, PRs, issues, and repository history
@@ -87,12 +98,15 @@ If a required external capability is unavailable:
 - record the exact blocker;
 - never pretend the blocked stage was completed.
 
-Figma is required for sites being migrated into the shared design-system standard.
+An approved Antigravity creative source, commonly Figma, is required before a
+website-facing migration changes visual identity, information structure, or
+task behavior. Codex must not create a substitute creative direction merely to
+unblock Stage 2.
 Do not silently skip Figma.
 
 ---
 
-# Phase 0 — Repository and portfolio inventory
+# Stage 2 Workstream 0 — Repository and portfolio inventory
 
 Before modifying code:
 
@@ -244,7 +258,7 @@ If the branch name already exists, the base is uncertain, or the branch contains
 
 ---
 
-# Phase 1 — Product / UX audit
+# Stage 2 Workstream 1 — Product / UX feasibility audit
 
 For every website, inspect both:
 - source code
@@ -357,7 +371,7 @@ Explain the classification.
 
 ---
 
-# Phase 2 — Visual system audit and normalization
+# Stage 2 Workstream 2 — Approved visual-system implementation
 
 Inspect the actual rendered design.
 
@@ -563,19 +577,11 @@ Before editing:
 - preserve every accepted site-specific choice that the creator did not name.
 
 When the creator supplies a folder, maintain a placement ledger with filename,
-approved site/page, role, reuse restriction, alt/caption, provenance status,
-source path, mirror path, and shipped status. Do not claim the request is
-complete while relevant requested assets remain unused or while a restricted
-asset has been repurposed. Treat hero art, portfolio-card covers, video posters,
-directly displayed video media, maps, evidence images, portraits, logos, and
-decorative motifs as distinct roles unless the creator explicitly approves
-reuse. Use positive captions; add historical or representational distinctions
-only when they prevent plausible confusion, not as repetitive lectures.
-
-Keep production narration out of public copy. Notes about palette transitions,
-upcoming background sections, screen counts, layout rationales, asset swaps, or
-implementation plans belong in design, technical, audit, or handoff records
-unless the production process is itself the published subject.
+approved site/page, role, alt/caption, provenance status, source path, mirror
+path, and shipped status. Do not claim the request is complete while relevant
+requested assets remain unused. Use positive captions; add historical or
+representational distinctions only when they prevent plausible confusion, not
+as repetitive lectures.
 
 Repair accidental constraints before adding more CSS. Inspect the feedback
 viewport and check usable grid width, hierarchy, contrast, overlap, peer
@@ -583,28 +589,16 @@ alignment, intentional empty space, and Chinese one- or two-character final
 lines. Avoid arbitrary `max-width`, manual breaks, or font shrinking that fixes
 only one screenshot.
 
-Before changing a shared selector, design token, component, registry entry,
-generator, or build template, enumerate every site, route, item, and mirror
-that consumes it. Inspect the named target and all affected peers. A fix for one
-portrait, logo, carousel item, card, or figure must not enlarge or reposition
-the rest of the portfolio; prefer a site- or item-specific rule when only one
-consumer is defective.
-
-Audit media geometry at four levels: intrinsic dimensions and alpha, wrapper or
-stage geometry, the rendered `img` or `video` box, and the visible content after
-`object-fit`, `object-position`, clipping, or masking. Equal outer card or
-carousel dimensions do not prove equal perceived scale, correct cropping, or
-appropriate emphasis.
-
 Use the same open PR for iterative corrections until it merges. After merge,
 open a new branch and PR. Always edit the authoritative source, run the
 site-specific rebuild, synchronize committed mirrors, and bump static cache
 keys when necessary.
 
-Explicit creator authorization to "publish directly" or "merge now" applies
-only to the current scoped PR. If the creator also declines more checks or
-hands extended QA to Antigravity, stop discretionary QA loops, record skipped
-checks and `Antigravity QA pending`, and never present unrun QA as passed.
+Explicit creator authorization to "publish directly", "merge now", or skip
+Antigravity grants merge authority for the current scoped PR even when Stage 3
+is pending. Run the proportional minimum Codex checks, record skipped checks,
+and use `ANTIGRAVITY_PHASE_3: SKIPPED_BY_USER`. Never present skipped
+Antigravity validation as passed or reuse the authority for another PR.
 Minimum deployable source/mirror generation and high-risk safety checks are not
 optional.
 
@@ -630,7 +624,7 @@ insufficient.
 
 Do not require full-page captures, all routes, all breakpoints, pixel diffs, or overlay review before commit / PR.
 
-## Antigravity extended QA
+## Antigravity Stage 3 complete validation
 
 Hand Antigravity the preview URL, changed routes and states, baseline reference, and known risks. Antigravity owns:
 
@@ -664,7 +658,13 @@ Hand Antigravity the preview URL, changed routes and states, baseline reference,
 
 Do not pass even the basic smoke check when the target page does not load, required assets are missing, the requested change is absent, obvious layout breakage appears, or a material change lacks user approval.
 
-Missing Antigravity output does not block commit, push, PR, or a creator-authorized merge. Report `Antigravity QA pending` and do not claim comprehensive visual preservation until it passes.
+Missing Antigravity Stage 3 output does not block Codex from committing,
+pushing, creating the Draft MR/PR, or producing its preview; those actions must
+happen before Stage 3 begins. It does block any claim of complete validation
+and, by default, blocks merge. Report `ANTIGRAVITY_PHASE_3: PENDING`. Merge after
+Stage 3 passes, or immediately when the user explicitly authorizes the current
+scoped PR and the proportional minimum Codex checks pass; in the latter case,
+report `ANTIGRAVITY_PHASE_3: SKIPPED_BY_USER`.
 
 Include in every migration PR:
 
@@ -676,15 +676,18 @@ Include in every migration PR:
 
 ---
 
-# Phase 3 — Figma design-system migration
+# Stage 2 Workstream 3 — Antigravity/Figma implementation mapping
 
-Figma is a required stage for migrated sites.
+An approved Antigravity/Figma creative source is required for website-facing
+migrations that change visual identity, information structure, or task
+behavior. Codex uses it during Stage 2; Codex does not originate it.
 
 First search for existing Figma files and reusable libraries.
 
-Reuse before creating new assets.
+Reuse the approved creative source before producing implementation assets.
 
-Create or update a shared structure conceptually equivalent to:
+Map the approved source into an implementation structure conceptually
+equivalent to:
 
 TSRat Web Design System
 ├── Foundations
@@ -717,9 +720,9 @@ TSRat Web Design System
 
 For each migrated site:
 
-1. Capture or inspect the existing rendered design.
-2. Reconstruct the useful visual system into editable Figma structures.
-3. Extract and normalize:
+1. Inspect the Antigravity/Figma source and existing rendered design.
+2. Map approved foundations, components, themes, frames, and states to code.
+3. Extract and normalize implementation equivalents for:
    - variables
    - text roles
    - spacing
@@ -727,15 +730,18 @@ For each migrated site:
    - reusable components
    - variants
 4. Preserve site-specific theme variables.
-5. Create at minimum:
-   - representative desktop frame
-   - representative mobile frame
-   - key reusable components
-   - key states for interactive sites
+5. Confirm the approved creative source covers at minimum:
+   - a representative desktop frame;
+   - a representative mobile frame;
+   - key reusable components;
+   - key states for interactive sites.
 
-Do not merely paste screenshots and call that a Figma migration.
+If required creative frames or states are missing, return the gap to
+Antigravity Stage 1. Do not create a substitute direction in order to continue.
 
-A screenshot may be used as reference, but the result must contain editable design structure.
+When explicitly authorized, Codex may add technical annotations or
+implementation mappings to the supplied Figma file, but must not replace its
+creative decisions.
 
 Record:
 - Figma file URL
@@ -746,7 +752,7 @@ in the repository audit documentation.
 
 ---
 
-# Phase 4 — Interactive prototype and behavior standard
+# Stage 2 Workstream 4 — Interactive implementation prototype
 
 For every site, determine its required interaction tier.
 
@@ -807,15 +813,15 @@ For interactive sites implement and verify as relevant:
 
 Prototype key flows before large production rewrites when behavior is materially changing.
 
-Run design QA between:
-- Figma / accepted visual target
+Run preliminary implementation comparison between:
+- Antigravity Figma / accepted creative target
 - rendered implementation
 
 Fix high-impact discrepancies before handoff.
 
 ---
 
-# Phase 5 — Production engineering normalization
+# Stage 2 Workstream 5 — Production engineering normalization
 
 Do not force one framework purely for uniformity.
 
@@ -895,7 +901,7 @@ Use a real browser for this smoke check. Assign major-route sweeps, console/netw
 
 ---
 
-# Phase 6 — Data / Analytics standard
+# Stage 2 Workstream 6 — Approved Data / Analytics implementation
 
 For every site document:
 
@@ -990,7 +996,7 @@ Required fields:
 
 Also create or update the resolved platform standard file.
 
-Describe the shared six-stage standard and which rules are mandatory versus optional by site tier.
+Describe the shared Codex Stage 2 workstream standard and which rules are mandatory versus optional by site tier.
 
 ---
 
@@ -1029,9 +1035,9 @@ Do not create or maintain an obsolete `gh-pages` source branch if the repository
 
 ---
 
-# Acceptance criteria
+# Codex Stage 2 handoff criteria
 
-This skill is not complete until:
+Codex Stage 2 is not ready for Antigravity validation until:
 
 1. Every project-table website has been inspected or has a named blocker.
 2. The resolved portfolio audit file contains every website and is stored in a repository-approved, version-controlled source location.
@@ -1041,30 +1047,36 @@ This skill is not complete until:
    an unacceptable failure; route exceptions are recorded.
 6. Shared versus site-specific design decisions are explicit.
 7. Responsibility-specific preservation and repair obligations are explicit.
-8. Migrated sites have Figma design-system coverage.
+8. Migrated sites map to the approved Antigravity creative source and implementation contract.
 9. Migrated code passes the applicable build/test checks.
-10. One representative changed flow or page passed Codex browser smoke QA; extended coverage is assigned to Antigravity.
+10. One representative changed flow or page passed Codex preliminary browser smoke; complete coverage is assigned to Antigravity Stage 3.
 11. A dedicated task branch was created from a verified base before repository writes, contains no unrelated work, and no production branch was modified directly.
 12. Reviewable PRs exist for implemented migration batches.
 13. Every website-facing batch has a verified Preview URL that is reachable before merge.
 14. The website project table is updated to reflect new implementation, Figma, preview, and status information.
-15. Every migrated existing site passes the Codex basic gate and records whether Antigravity QA is pending or passed.
+15. Every migrated existing site passes the Codex preliminary gate and records whether Antigravity Stage 3 is pending, passed, or failed.
 16. Typography-affecting migrations introduce no unapproved alignment, spacing, wrapping, or Chinese orphan regressions.
-17. Major REBUILD routes pass the applicable Creative, Service, or Information
-    blueprint and QA gates.
+17. Major REBUILD routes have an approved Antigravity package and pass the
+    applicable preliminary Creative, Service, or Information implementation gates.
 18. Changed public-facing routes establish the object or task before abstract
     meaning, retain the necessary intermediate steps, and use media, containers,
     and interactions for a concrete explanatory or task purpose.
 19. Repeated collections pass full-record section, entity-introduction,
     punctuation, source-link, asset, route, and renderer-parity contracts.
-20. Preview and post-merge production checks bypass stale caches and confirm the
-    requested DOM, computed styles, assets, and layout on the deployed commit.
-21. Creator assets retain their approved roles and reuse restrictions; public
-    copy contains no accidental production notes.
-22. Every shared selector, token, component, registry, generator, or template
-    change has a documented consumer inventory and peer check.
-23. Media-affecting migrations distinguish intrinsic, wrapper, rendered-box,
-    and visible-content geometry rather than judging only outer frame size.
+20. Preview smoke checks bypass stale caches and confirm the requested review
+    commit is present; Antigravity Stage 3 remains responsible for complete
+    deployed DOM, computed-style, asset, layout, and regression validation.
+
+After the criteria pass, report:
+
+```text
+ANTIGRAVITY_PHASE_1: APPROVED
+CODEX_PHASE_2: MR_READY_FOR_ANTIGRAVITY_VALIDATION
+ANTIGRAVITY_PHASE_3: PENDING | PASS | FAIL | SKIPPED_BY_USER
+```
+
+Do not call the portfolio migration complete or production ready until
+Antigravity has returned the Stage 3 result.
 
 Final response must summarize:
 
@@ -1077,6 +1089,6 @@ Final response must summarize:
 - Figma deliverables
 - PR links
 - preview links
-- Codex smoke result, Antigravity QA status, and approved intentional differences
+- Codex preliminary smoke result, Antigravity Stage 3 status, and approved intentional differences
 - blocked items
 - remaining migration queue

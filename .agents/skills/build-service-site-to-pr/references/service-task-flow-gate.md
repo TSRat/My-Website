@@ -1,5 +1,14 @@
 # Service Task and State Gate
 
+## Phase ownership
+
+Treat every task blueprint, state matrix, and visual-direction requirement in
+this reference as an Antigravity Stage 1 intake criterion. Codex may verify
+feasibility and implement the approved contract during Stage 2, but must not
+invent or approve task logic, consequences, policy, or creative direction.
+Treat all `CODEX_*_GATE` results below as `CODEX_PRELIM_*_GATE` evidence for
+Antigravity Stage 3, not complete QA.
+
 ## Contents
 
 1. Responsibility contract
@@ -314,9 +323,9 @@ mobile touch, long translation, and slow network.
 Record:
 
 ```text
-CODEX_TASK_GATE: PASS | FAIL
-CODEX_STATE_GATE: PASS | FAIL
-CODEX_SAFETY_GATE: PASS | FAIL
+CODEX_PRELIM_TASK_GATE: PASS | FAIL
+CODEX_PRELIM_STATE_GATE: PASS | FAIL
+CODEX_PRELIM_SAFETY_GATE: PASS | FAIL
 ```
 
 ## 12. Blueprint template

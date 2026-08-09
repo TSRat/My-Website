@@ -90,46 +90,17 @@ the sticky viewport and each repeated page have a top-right corner. Mark the
 ambiguity and request one short clarification when the repair would differ.
 
 For creator-supplied asset folders, create a coverage ledger with filename,
-intended screen, role, reuse restriction, alt/caption, and current use. A folder
-request is not fulfilled when none of its relevant files appear, when requested
-placement is silently changed, or when a restricted asset is reused for a
-different job. Treat hero art, archive-card covers, video posters, directly
-displayed video media, maps, evidence images, portraits, and decorative motifs
-as distinct roles unless the creator explicitly approves reuse. Prefer positive
-identification in captions. Do not pad the page or report with obvious lectures
-about what an image is not; add a historical, reconstructed, film-still, or
-modern distinction only when it prevents a plausible material misunderstanding.
-
-Flag production notes that have leaked into public copy. Phrases about changing
-the palette, introducing the next chapter, adding background, selecting an
-image, counting screens, or explaining the layout belong in design, technical,
-or handoff records unless the production process is itself the subject. Public
-copy should tell the story or explain the object, not narrate how the page was
-made.
+intended screen, role, alt/caption, and current use. A folder request is not
+fulfilled when none of its relevant files appear, or when requested placement
+is silently changed. Prefer positive identification in captions. Do not pad the
+page or report with obvious lectures about what an image is not; add a
+historical, reconstructed, film-still, or modern distinction only when it
+prevents a plausible material misunderstanding.
 
 Treat arbitrary width caps, unexplained empty columns, one- or two-character
 headline lines, low-contrast dark surfaces, overlaps, and misaligned peers as
 comprehension defects, not merely visual polish. Inspect the creator's actual
 viewport before prescribing a new width or breakpoint.
-
-Audit media geometry at four levels: intrinsic image dimensions and alpha,
-wrapper or stage geometry, the rendered `img` or `video` box, and the visible
-content after `object-fit`, `object-position`, clipping, or masking. Equal outer
-frames do not prove that portraits, covers, or figures have an appropriate
-visible scale.
-
-When a defect may come from a shared selector, token, component, registry, or
-generator, enumerate every consumer before recommending the fix. Inspect the
-named target and all affected peers. A correction for one portrait, logo, card,
-carousel item, or repeated figure must not silently resize or reposition the
-others; prefer a target-specific rule when only one item is defective.
-
-For historical and multilingual material, create a terminology ledger covering
-names, transliterations, dates, places, translations, and key terms across
-headings, body copy, captions, maps, navigation, alt text, metadata, and
-committed mirrors. Also record the approved narrative horizon: a viewpoint-led
-story must not reveal later political or geographic context before the intended
-turning point merely because the author or designer already knows it.
 
 ## Establish the reader model
 

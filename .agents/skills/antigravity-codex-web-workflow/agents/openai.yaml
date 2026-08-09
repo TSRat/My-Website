@@ -1,0 +1,4 @@
+interface:
+  display_name: "Antigravity × Codex Web Workflow"
+  short_description: "协调网页三阶段职责及用户明确授权的小修快速合并工作流"
+  default_prompt: "使用 $antigravity-codex-web-workflow 协调网页制作职责；默认交给 Antigravity 完整验证，但在我明确授权时允许当前小修 MR/PR 快速合并并如实记录跳过项。"

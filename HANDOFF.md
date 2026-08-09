@@ -100,6 +100,305 @@ Portfolio Normalization into one generic process.
   modified, stashed, or included.
 - Commit, push, and Pull Request: pending.
 
+## 2026-07-27: Add working-branch gates to repository skills
+
+### Current target
+
+Require both repository website skills to create and verify a new task branch
+before writing repository files.
+
+### Completed
+
+- Added a `Working Branch Gate` to
+  `.agents/skills/normalize-web-portfolio/SKILL.md`.
+- Added a `Working Branch Gate` to
+  `.agents/skills/build-new-site-to-pr/SKILL.md`.
+- Required an exact base commit, a task-specific branch, a clean worktree, and
+  post-creation branch verification.
+- Added explicit protection against silently stashing, resetting, discarding,
+  or carrying unrelated changes into a new branch.
+- Added branch-gate checks to each skill's implementation and completion
+  criteria.
+
+### Validation
+
+- Skill validation: passed for both updated skills with `quick_validate.py`.
+- `git diff --check`: passed; no trailing whitespace was found in the two
+  skills or this handoff update.
+- Repository build: not run because this skill-only edit does not affect a
+  website, and the current worktree already contains unrelated in-progress
+  generated-mirror changes that a full Pages build could rewrite.
+
+### Git state
+
+- Current working branch: `codex/zhangyong-content-rebuild`.
+- Existing unrelated Zhang Yong and generated philosophy-site changes were
+  present before this skill-only edit and were not modified.
+- Commit, push, PR, and merge: not performed.
+
+## 2026-07-27: Add typography, layout, and Chinese orphan controls
+
+### Current target
+
+Strengthen both website skills against inconsistent spacing, weak alignment,
+unstable wrapping, and one- or two-character Chinese final lines.
+
+### Completed
+
+- Added a detailed mandatory typography and layout reference to
+  `build-new-site-to-pr`.
+- Required typography roles, spacing tokens, grids, alignment anchors, Figma
+  layout variables, production token usage, and five fixed QA viewports.
+- Made the Codex layout gate blocking while keeping Antigravity responsible for
+  broader browsers, devices, states, content stress cases, and visual diffs.
+- Added explicit Chinese `text-wrap`, line-breaking, short semantic no-wrap,
+  manual-break, and orphan-control rules.
+- Added only the migration-relevant preservation rules to
+  `normalize-web-portfolio`.
+
+### Validation
+
+- Skill validation: passed for both skills with `quick_validate.py`.
+- Text and diff checks: passed; `git diff --check` found no errors and the
+  edited skill/reference/handoff files contain no trailing whitespace.
+- Repository build: not required for this skill-only change.
+
+### Git state
+
+- Current working branch: `codex/zhangyong-content-rebuild`.
+- Existing unrelated website and generated-mirror changes were preserved.
+- Commit, push, PR, and merge: not performed.
+
+## 2026-07-28: Require a beginner screen outline before new-site implementation
+
+### Current target
+
+Make `build-new-site-to-pr` read the complete Antigravity visual system and
+obtain explicit approval for a full screen-by-screen outline before it creates
+a task branch or begins the six-stage implementation.
+
+### Completed
+
+- Added a blocking `Beginner Screen Outline Approval Gate` before the existing
+  Working Branch Gate.
+- Required the outline to cover every route, meaningful scroll scene, modal,
+  interaction state, responsive variation, and multilingual implication.
+- Required each screen to be judged from the perspective of a viewer who has
+  never heard of the subject, including what they know before entering, what
+  they can understand on that screen, and what may still confuse them.
+- Added 30-second, 3-minute, 15-minute, transition, and teach-back
+  comprehension audits.
+- Required explicit user approval before branch creation, Figma production,
+  asset generation, repository writes, or any of the six implementation phases.
+- Made the approved outline the structural source of truth and required renewed
+  approval for material route, sequence, screen-purpose, or explanation changes.
+- Added a detailed reusable outline template and synchronized the skill's
+  user-facing entry metadata.
+
+### Validation
+
+- Skill validation: passed with `quick_validate.py`.
+- `git diff --check`: passed; no trailing whitespace was found in the edited
+  skill, reference, metadata, or handoff files.
+- Repository build is not required for this skill-documentation-only change.
+
+### Git state
+
+- Current working branch: `codex/zhangyong-content-rebuild`.
+- Existing unrelated website, Zhang Yong asset, philosophy mirror, and other
+  skill changes were preserved.
+- Commit, push, PR, and merge: not performed.
+
+## 2026-07-28: Add context-first cognitive hierarchy checks
+
+### Current target
+
+Convert the reviewed Mesoamerica screen's beginner-comprehension problem into
+general, blocking rules for every new website.
+
+### Completed
+
+- Required subject, place, time, actors, and relationships to be established
+  before a dependent conclusion or editorial slogan receives visual dominance.
+- Defined stable semantic roles for eyebrows, main headings, subheadings, body
+  copy, and example cards.
+- Added headline-specificity, object-before-evaluation, unfamiliar-entity,
+  historical-terminology, and standalone-entry screenshot tests.
+- Added a visual-versus-semantic hierarchy audit so font size, position, and
+  emphasis follow the newcomer's learning order.
+- Added `CODEX_CONTEXT_GATE: PASS` as a blocking result for both the approved
+  outline and the rendered implementation.
+- Updated the reusable outline template, approval checklist, completion gate,
+  design QA, and skill entry metadata.
+
+### Validation
+
+- Skill validation: passed with `quick_validate.py`.
+- `git diff --check`: passed; no trailing whitespace was found in the edited
+  skill, reference, metadata, or handoff files.
+- Repository build is not required for this skill-documentation-only change.
+
+### Git state
+
+- Current working branch: `codex/zhangyong-content-rebuild`.
+- Existing unrelated website, Zhang Yong asset, philosophy mirror, and other
+  skill changes were preserved.
+- Commit, push, PR, and merge: not performed.
+
+## 2026-07-28: Reject screenshot-first type and empty-card composition
+
+### Current target
+
+Turn the reviewed editorial-spread and card-layout failures into reusable
+reading-scale, information-container, and card-composition gates.
+
+### Completed
+
+- Required live webpage reading sizes to take priority over fitting an entire
+  composition into one screenshot or first viewport.
+- Added default CSS-pixel ranges and explicit floors for body, explanatory,
+  card, supporting-label, and nonessential metadata text.
+- Required responsive reflow, scrolling, or a different content sequence
+  instead of uniformly shrinking a desktop spread.
+- Added rules for choosing cards, lists, tables, relationship diagrams, maps,
+  timelines, and charts according to the actual information relationship.
+- Required card content sufficiency, useful empty space, internal rhythm,
+  semantic geometry, and clear connection to the surrounding argument.
+- Required strong colors, sizes, shapes, borders, and groupings to have
+  consistent explained meaning, including non-color cues.
+- Added background-grid interference rules plus three-second, ten-second,
+  one-minute, thumbnail, and deletion tests.
+- Added blocking `CODEX_READING_SCALE_GATE` and
+  `CODEX_CARD_COMPOSITION_GATE` results under the existing layout gate.
+- Updated the approved screen-outline requirements, completion checklist, and
+  skill entry metadata.
+
+### Validation
+
+- Skill validation: passed with `quick_validate.py`.
+- `git diff --check`: passed; no trailing whitespace was found in the edited
+  skill, references, metadata, or handoff files.
+- Repository build is not required for this skill-documentation-only change.
+
+### Git state
+
+- Current working branch: `codex/zhangyong-content-rebuild`.
+- Existing unrelated website, Zhang Yong asset, philosophy mirror, and other
+  skill changes were preserved.
+- Commit, push, PR, and merge: not performed.
+
+## 2026-07-28: Split new-site production by website responsibility
+
+### Current target
+
+Replace the single new-site workflow with three independently triggered skills
+for Creative, Service, and Information websites, then make existing-site
+normalization use the same responsibility model.
+
+### Completed
+
+- Replaced `build-new-site-to-pr` with:
+  - `build-creative-site-to-pr`;
+  - `build-service-site-to-pr`;
+  - `build-information-site-to-pr`.
+- Defined selection by the visitor's primary goal and the failure that would
+  make the site unacceptable, rather than by industry, framework, or visual
+  style.
+- Added hybrid handling: select one primary responsibility and import only the
+  necessary secondary gates instead of running three complete workflows.
+- Creative sites now require an approved experience storyboard, impression
+  contract, identity/orientation, repeatable visual grammar, emotional and
+  density rhythm, purposeful motion/sound/media, static fallbacks, performance
+  budgets, and identity/memory/live-use QA.
+- Service sites now require an approved task-and-state blueprint, complete
+  state matrix, form rules, feedback, error prevention, recovery, undo/retry,
+  high-risk consequence protection, privacy, real data boundaries, and
+  task/state/safety QA.
+- Information sites retain and specialize the approved zero-knowledge screen
+  outline, context hierarchy, direct-entry orientation, reading-scale,
+  information-container, card-composition, Chinese line-breaking, source, and
+  comprehension gates.
+- All three retain the Antigravity visual-system review, explicit pre-write
+  approval, dedicated working branch, six-stage standard, editable Figma,
+  browser verification, live preview, analytics, and PR requirements.
+- Updated `normalize-web-portfolio` to classify each site and material route as
+  Creative, Service, or Information with primary/secondary/supporting
+  responsibilities and an unacceptable failure.
+- Added responsibility-specific preservation and repair rules, route-level
+  hybrid handling, and matching new-site gates for major REBUILD work.
+- Regenerated all four user-facing skill metadata files.
+
+### Validation
+
+- Skill validation: all four resulting skills passed `quick_validate.py`.
+- Reference check: every required Creative, Service, and Information reference
+  file exists.
+- Legacy check: no TODO placeholder or `build-new-site-to-pr` reference remains
+  under `.agents/skills`.
+- `git diff --check`: passed; no trailing whitespace was found in the edited
+  skills, references, metadata, or handoff file.
+- Repository build is not required for this skill-documentation-only change.
+
+### Git state
+
+- Current working branch: `codex/zhangyong-content-rebuild`.
+- Existing unrelated website, Zhang Yong asset, philosophy mirror, and earlier
+  skill changes were preserved.
+- Commit, push, PR, and merge: not performed.
+
+## 2026-07-29: Remove disclaimer-first information writing
+
+### Current target
+
+Replace disclaimer-heavy, five-part information entries with a maximum
+three-part beginner explanation and descriptive, directly clickable sources.
+
+### Completed
+
+- Added `beginner-content-writing-gate.md` to
+  `build-information-site-to-pr`.
+- Prohibited standalone reader-facing sections such as "Evidence and
+  boundaries," "What this source cannot prove," "Not a direct fact," and
+  generic methodological cautions.
+- Required short entries to default to three parts: what it is, how it works,
+  and why it deserves attention.
+- Added sentence-level tests for concrete subjects, actions, dates, causes,
+  relationships, and one-read newcomer paraphrasing.
+- Required source links to use descriptive destination names and real clickable
+  anchors instead of raw URLs, generic "source" labels, or numeric codes.
+- Added rules for direct institutional attribution and short local qualifiers
+  only when removing them would make a material factual claim false.
+- Added `CODEX_PLAIN_LANGUAGE_GATE` to outline approval, rendered QA, and
+  completion.
+- Updated `normalize-web-portfolio` so information-site repairs remove
+  disclaimer blocks, artificial five-part structures, and poor source links.
+- Regenerated the Information and Normalize skill metadata.
+
+### Current content limitation
+
+- No local source file containing the supplied Andy Goldsworthy `Red Flags`
+  passage was found anywhere under the current workspace.
+- The replacement three-part copy and verified direct source links are provided
+  in the task response, but no website page was edited or built.
+
+### Validation
+
+- Skill validation: `build-information-site-to-pr` and
+  `normalize-web-portfolio` passed `quick_validate.py`.
+- Reference check: `beginner-content-writing-gate.md` exists and is linked from
+  the Information skill.
+- `git diff --check`: passed; no trailing whitespace was found in the edited
+  skills, reference, metadata, or handoff file.
+- Website build and browser smoke were not run because the target page is not
+  present in this workspace.
+
+### Git state
+
+- Current working branch: `codex/zhangyong-content-rebuild`.
+- Existing unrelated website, Zhang Yong asset, philosophy mirror, and earlier
+  skill changes were preserved.
+- Commit, push, PR, and merge: not performed.
+
 ## 2026-08-09: Portfolio-wide TSRat logo navigation
 
 ### Current target

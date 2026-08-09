@@ -1,5 +1,13 @@
 # Creative Experience Gate
 
+## Phase ownership
+
+Treat every storyboard and creative-direction requirement in this reference as
+an Antigravity Stage 1 intake criterion. Codex may verify traceability,
+feasibility, and implementation completeness during Stage 2, but must not
+author or approve the creative package. Treat all `CODEX_*_GATE` results below
+as `CODEX_PRELIM_*_GATE` evidence for Antigravity Stage 3, not complete QA.
+
 ## Contents
 
 1. Responsibility contract
@@ -299,9 +307,9 @@ At required viewports and 100% zoom, verify:
 Record:
 
 ```text
-CODEX_IDENTITY_GATE: PASS | FAIL
-CODEX_EXPERIENCE_GATE: PASS | FAIL
-CODEX_CREATIVE_USABILITY_GATE: PASS | FAIL
+CODEX_PRELIM_IDENTITY_GATE: PASS | FAIL
+CODEX_PRELIM_EXPERIENCE_GATE: PASS | FAIL
+CODEX_PRELIM_CREATIVE_USABILITY_GATE: PASS | FAIL
 ```
 
 ## 12. Storyboard template

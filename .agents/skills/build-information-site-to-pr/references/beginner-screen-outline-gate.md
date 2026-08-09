@@ -1,7 +1,8 @@
 # Beginner Screen Outline Gate
 
-This reference defines the mandatory pre-implementation outline and approval
-process for `build-information-site-to-pr`.
+This reference defines the mandatory Antigravity Stage 1 outline package that
+Codex must verify before implementing `build-information-site-to-pr` Stage 2.
+Codex must not author or approve the outline.
 
 The goal is not merely to list sections. The goal is to prove, before design or
 code begins, that a person who knows nothing about the subject can enter the
@@ -35,17 +36,16 @@ Follow this exact order:
 ```text
 Read-only repository and content inspection
 → complete Antigravity visual-system review
-→ complete route and screen inventory
-→ zero-knowledge screen-by-screen outline
-→ beginner comprehension audit
-→ present the complete outline in chat
-→ explicit user approval
+→ receive Antigravity route and screen inventory
+→ receive Antigravity zero-knowledge screen-by-screen outline
+→ verify the package against the beginner comprehension criteria
+→ confirm the Antigravity package and its approval record are complete
 → Working Branch Gate
 → save the approved outline in the repository
-→ execute the six implementation phases
+→ execute the Codex Stage 2 implementation workstreams
 ```
 
-Before explicit approval, do not:
+Before the approved Antigravity package is complete, do not:
 
 - create or switch to a task branch;
 - write product, design, or handoff documents into the repository;
@@ -92,9 +92,9 @@ If the artifact is missing or cannot be read, report `STATUS: BLOCKED`.
 If it is readable but incomplete:
 
 1. identify the missing decisions;
-2. make only reversible, clearly labeled assumptions needed to draft the outline;
-3. place those assumptions in the approval checklist;
-4. do not implement them until the user approves the outline containing them.
+2. distinguish bounded engineering questions from missing creative/content decisions;
+3. return missing creative/content decisions to Antigravity Stage 1;
+4. do not implement assumptions that materially change the approved outline.
 
 Do not invent a generic design system and attribute it to Antigravity.
 
@@ -533,7 +533,7 @@ context.
 Before outline approval and again during rendered design QA, record:
 
 ```text
-CODEX_CONTEXT_GATE: PASS
+CODEX_PRELIM_CONTEXT_GATE: PASS
 ```
 
 Pass only when:
@@ -545,7 +545,7 @@ Pass only when:
 - terminology is precise at first use;
 - visual prominence matches semantic and pedagogical importance.
 
-Otherwise record `CODEX_CONTEXT_GATE: FAIL`, revise, and rerun the checks.
+Otherwise record `CODEX_PRELIM_CONTEXT_GATE: FAIL`, revise, and rerun the checks.
 
 ---
 
@@ -653,7 +653,7 @@ For every route, verify:
 - the system remains recognizable across routes without making every page identical.
 
 The outline does not need to freeze every pixel. It must freeze the logic that
-the six phases will implement.
+the Codex Stage 2 workstreams will implement.
 
 ---
 
@@ -707,17 +707,20 @@ Do not assume that identical screen geometry works for every language.
 
 ---
 
-## 12. Approval protocol
+## 12. Antigravity package intake protocol
 
-Present the complete outline in chat before creating repository content.
+Verify the complete Antigravity outline and approval record before creating
+repository content. Do not present a Codex-authored replacement outline.
 
-End the presentation with:
+When the package is missing or incomplete, report:
 
 ```text
-STATUS: WAITING_FOR_OUTLINE_APPROVAL
+ANTIGRAVITY_PHASE_1: MISSING | CHANGES_REQUIRED
+CODEX_PHASE_2: BLOCKED
+STATUS: WAITING_FOR_ANTIGRAVITY_CREATIVE_PACKAGE
 ```
 
-Ask the user to approve:
+Confirm that Antigravity Stage 1 has resolved and approved:
 
 - the route map;
 - the complete screen inventory;
@@ -729,41 +732,31 @@ Ask the user to approve:
 - labeled assumptions and unresolved decisions;
 - production dependencies and known risks.
 
-Approval must be explicit and refer to the outline, for example:
+If the package requires changes:
 
-- "批准这个逐屏大纲";
-- "按这版逐屏大纲进入六阶段";
-- "I approve this screen-by-screen outline."
-
-An earlier selection of the Antigravity concept is not outline approval.
-Silence is not approval. A generic "continue" is insufficient unless the
-surrounding message unmistakably approves the presented outline.
-
-If the user requests changes:
-
-1. revise every affected screen and downstream dependency;
-2. rerun the comprehension audit;
-3. show the changed outline or a complete replacement when changes are broad;
-4. request explicit approval again.
+1. identify every affected screen and downstream dependency;
+2. return the comprehension gap and evidence to Antigravity;
+3. wait for a revised Antigravity package and approval record;
+4. rerun the Stage 2 intake check.
 
 ---
 
-## 13. Post-approval rules
+## 13. Stage 2 post-intake rules
 
-After approval:
+After receiving the approved package:
 
-1. record the approval wording or an accurate dated summary;
+1. record the Antigravity package source and approval wording or dated summary;
 2. pass the Working Branch Gate;
 3. create `<site-doc-root>/<slug>/screen-outline.md`;
 4. include the Antigravity traceability table, full outline, audit, assumptions,
    and approval record;
-5. reference the outline from Product/UX, visual, Figma, implementation, QA,
-   analytics, and PR documents;
-6. implement the six phases against the approved structure.
+5. reference the outline from feasibility, visual implementation, Figma
+   mapping, code, preliminary-check, analytics, and draft-PR documents;
+6. implement Codex Stage 2 against the approved structure.
 
 The approved outline is the structural source of truth.
 
-Return for renewed approval when a change materially affects:
+Return to Antigravity Stage 1 when a change materially affects:
 
 - route or navigation structure;
 - number or order of major screens;
@@ -789,8 +782,8 @@ Report `STATUS: BLOCKED` when:
 - implementation has begun but the approved structure must materially change
   and renewed approval has not been received.
 
-Report `STATUS: WAITING_FOR_OUTLINE_APPROVAL` when the outline is ready but
-explicit approval has not yet been received.
+Report `STATUS: WAITING_FOR_ANTIGRAVITY_CREATIVE_PACKAGE` when the outline or
+its Antigravity approval record is missing or incomplete.
 
 Never bypass the gate because:
 
@@ -882,7 +875,7 @@ Never bypass the gate because:
 | --- | --- | --- | --- | --- | --- |
 
 ### Context gate
-`CODEX_CONTEXT_GATE: PASS / FAIL`
+`CODEX_PRELIM_CONTEXT_GATE: PASS / FAIL`
 
 ## Comprehension audit
 ### After 30 seconds
@@ -901,7 +894,7 @@ Never bypass the gate because:
 - [ ] Complete screen inventory
 - [ ] Beginner learning sequence
 - [ ] Cognitive hierarchy and contextual-orientation audit
-- [ ] `CODEX_CONTEXT_GATE: PASS`
+- [ ] `CODEX_PRELIM_CONTEXT_GATE: PASS`
 - [ ] Reading-scale floors and screenshot-first rejection
 - [ ] Information-container and card-composition rationale
 - [ ] 30-second, 3-minute, and 15-minute outcomes
