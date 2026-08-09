@@ -1,5 +1,74 @@
 # Repository handoff
 
+## 2026-08-09: Repository workspace triage and branch retirement
+
+### Current target
+
+Untangle the mixed Git workspace, preserve every attributable unfinished
+change, remove generated and obsolete state, verify the current production
+portfolio, and leave only branches that still have active review work.
+
+### Completed
+
+- Isolated the uncommitted website-workflow Skill suite, integrated it with
+  current `origin/main`, validated all seven Skill packages and pushed the
+  consolidated result to PR #35.
+- Moved eight private Zhang Yong source PDFs out of the public repository into
+  `/Users/ASUS/Documents/Codex/2026-07-23/qi/My-Website-private-recovery/2026-08-09/zhangyong-source-pdfs/`.
+- Removed reproducible philosophy-mirror build-id churn without changing its
+  authoritative source, pruned 16 stale worktree registrations and retired all
+  clean temporary worktrees.
+- Deleted 31 remote branches already merged into `origin/main`, 32 matching
+  merged local branches, two superseded local-only branches and one orphaned
+  `sites/main` remote-tracking ref.
+- Removed roughly 2 GB of ignored dependencies, build caches, Pages artifacts
+  and Finder metadata after validation; all are reproducible from lockfiles and
+  repository scripts.
+- Confirmed the current production Pages run is successful for
+  `main@eb5876d`, then opened the archive root and all 11 public sites with a
+  cache-resistant query. Every route returned its expected title and heading,
+  no eagerly requested image was broken and no page-level horizontal overflow
+  was observed. IVORY links the current `2026-08-09` briefing.
+- Full-suite validation exposed missing intrinsic dimensions on the Zhang Yong
+  footer logo. The source and generated mirror fix passed all checks and is
+  isolated in PR #45 with exact-commit live previews.
+
+### Verification
+
+- `npm run validate:sites`: passed for all 11 maintenance packages.
+- `npm run build:pages`: passed for all 11 sites.
+- `npm run validate:pages`: passed, 1029 local references across 105 HTML/CSS
+  files.
+- `npm test`: passed, 44/44 after the Zhang Yong fix.
+- `npm run lint`: passed with 24 pre-existing warnings and no errors.
+- Skill Creator `quick_validate.py`: all seven consolidated packages passed;
+  all seven `agents/openai.yaml` files parsed and met the short-description
+  length contract.
+- `git diff --check`: passed for both active branches.
+- Production check level: basic smoke passed; Antigravity extended QA pending.
+
+### Remaining work
+
+- PR #45 is clean and mergeable but cannot be merged until the creator gives a
+  separate explicit `merge PR #45` authorization. After merge, wait for the
+  Pages workflow and repeat the two production-route checks.
+- PR #35 remains the only other active work branch and awaits normal review.
+- Antigravity extended route, viewport, interaction, accessibility, network and
+  visual-regression QA remains pending.
+
+### Final branch and workspace state
+
+- Local branches: `main`, `codex/refresh-website-skills`, and
+  `codex/fix-zhangyong-logo-dimensions`.
+- Remote branches: the same three branches; the two `codex/*` branches map to
+  open PR #35 and PR #45 respectively.
+- Primary worktree: clean on `codex/fix-zhangyong-logo-dimensions` at
+  `012c2a8`.
+- Recovery commit used during classification was deleted only after its Skill
+  tree was byte-identical to PR #35 and all seven unique handoff sections were
+  confirmed present there.
+- No untracked or ignored files remain in the primary repository workspace.
+
 ## 2026-07-29: IVORY ARCHIVE lessons added to five website skills
 
 ### Current target
