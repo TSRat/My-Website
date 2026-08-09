@@ -9,6 +9,7 @@ const readRepositoryFile = (path) =>
   readFile(join(repositoryRoot, path), "utf8");
 
 const logoSurfaces = [
+  ["website-archive", "scripts/build-github-pages.mjs", /<footer><a class="portfolio-home-link" href="THE-LIVING-ATLAS\/"[\s\S]*portfolio-home-logo/],
   ["living-atlas-en", "sites/living-atlas/index.html", /href="\.\/"[^>]*><img class="portfolio-home-logo"/],
   ["living-atlas-zh", "sites/living-atlas/zh.html", /href="\.\/"[^>]*><img class="portfolio-home-logo"/],
   ["ivory-archive", "sites/ivory-archive/site-shell.tsx", /href="\.\.\/THE-LIVING-ATLAS\/"[\s\S]*portfolio-home-logo/],

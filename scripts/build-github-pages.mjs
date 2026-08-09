@@ -116,7 +116,7 @@ ${staticSites.map(staticSiteCard).join("")}
       </div>
     </section>
   </main>
-  <footer><span>TSRat</span><span>GitHub Pages · Public Static Archive</span></footer>
+  <footer><a class="portfolio-home-link" href="THE-LIVING-ATLAS/" aria-label="前往 The Living Atlas 主页"><img class="portfolio-home-logo" src="THE-LIVING-ATLAS/tsrat-logo.png" alt="TSRat Logo"></a><span>TSRat</span><span>GitHub Pages · Public Static Archive</span></footer>
 </body>
 </html>`;
 }

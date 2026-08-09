@@ -4,15 +4,19 @@
 
 ### Current target
 
-Ensure every website in the 11-project registry shows the creator's TSRat logo
-in its header or footer and makes that logo a link to The Living Atlas. Logos
-on dark footer surfaces must render as white silhouettes without changing each
-site's existing identity, routes, navigation, or deployment architecture.
+Ensure the public Website Archive and every website in the 11-project registry
+show the creator's TSRat logo in their header or footer and make that logo a
+link to The Living Atlas. Logos on dark footer surfaces must render as white
+silhouettes without changing each site's existing identity, routes, navigation,
+or deployment architecture.
 
 ### Completed
 
-- Audited all 11 registered website packages, including the English and Chinese
-  Living Atlas homepages and both public Zhang Yong routes.
+- Audited the root Website Archive and all 11 registered website packages,
+  including the English and Chinese Living Atlas homepages and both public
+  Zhang Yong routes.
+- Added the linked logo to the root Website Archive footer as well as every
+  registered website.
 - Made the existing Living Atlas header logos self-link to the Living Atlas
   homepage.
 - Wrapped the existing footer logos in Ivory Archive, Enheduanna, La Malinche,
@@ -33,10 +37,10 @@ site's existing identity, routes, navigation, or deployment architecture.
 - `node --test tests/portfolio-logo-navigation.test.mjs`: passed, 2/2.
 - `npm run build:pages`: passed; refreshed the 10 committed static mirrors and
   generated Ivory Archive in the Pages artifact.
-- `npm run validate:pages`: passed; 1004 local references across 103 HTML/CSS
+- `npm run validate:pages`: passed; 1006 local references across 103 HTML/CSS
   files.
 - Targeted portfolio and maintenance tests: passed, 3/3.
-- Browser basic smoke passed on all 13 audited public surfaces at `1800 × 933`
+- Browser basic smoke passed on all 14 audited public surfaces at `1800 × 933`
   and `390 × 844`: every logo loaded, remained within the viewport, had a
   Living Atlas destination, and used the white filter where required.
 - Antigravity extended visual, accessibility, interaction, and cross-browser QA:
@@ -48,9 +52,9 @@ site's existing identity, routes, navigation, or deployment architecture.
   no Figma or new Antigravity creative package is required for Codex Stage 2.
 - Header logos that already serve as in-page home controls were preserved unless
   the footer could satisfy the new cross-site navigation requirement.
-- The root Website Archive is the registry shell rather than one of its 11
-  website projects and was not changed; modifying its generated shell would
-  expand into deployment-generator scope beyond this request.
+- The root Website Archive remains the registry shell rather than a twelfth
+  project, but it is included as a public surface under the creator's literal
+  “all websites” request.
 
 ### Files and Git state
 
