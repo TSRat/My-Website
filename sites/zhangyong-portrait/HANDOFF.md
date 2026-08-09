@@ -33,8 +33,6 @@ existing rendered logo size and the red alternate's parody boundary.
 
 ### Remaining delivery
 
-- Push the dedicated branch, create its review PR and verify an exact-commit
-  live preview before merging.
 - Confirm the GitHub Pages workflow deploys the merged commit, then repeat the
   production smoke check.
 - Antigravity extended visual and accessibility QA remains pending.
@@ -43,7 +41,11 @@ existing rendered logo size and the red alternate's parody boundary.
 
 - Branch: `codex/fix-zhangyong-logo-dimensions`.
 - Base: `eb5876d` (`origin/main` on 2026-08-09).
-- Commit, push, preview and Pull Request: pending.
+- Implementation commit: `b5bb4d2`.
+- Exact-commit previews:
+  - <https://raw.githack.com/TSRat/My-Website/b5bb4d2e564c5da1f3cc1e6a1d3955e512f41403/ZHANGYONG-PORTRAIT/index.html>
+  - <https://raw.githack.com/TSRat/My-Website/b5bb4d2e564c5da1f3cc1e6a1d3955e512f41403/ZHANGYONG-PORTRAIT/red.html>
+- Pull Request: <https://github.com/TSRat/My-Website/pull/45>.
 
 ## Current target
 
