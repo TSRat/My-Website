@@ -25,7 +25,9 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="page-frame footer-grid">
         <div className="footer-identity">
-          <Image className="footer-logo" src="/tsrat-logo.png" alt="TS鼠 Logo" width={1104} height={293} unoptimized />
+          <a className="portfolio-home-link" href="../THE-LIVING-ATLAS/" aria-label="前往 The Living Atlas 主页">
+            <Image className="footer-logo portfolio-home-logo portfolio-home-logo--light" src="/tsrat-logo.png" alt="TSRat Logo" width={1104} height={293} unoptimized />
+          </a>
           <p className="footer-brand">TS鼠 · 每日思想简报</p>
           <p>先介绍人物与概念，再讲事件、细节和影响，让第一次接触的人也能读懂。</p>
         </div>

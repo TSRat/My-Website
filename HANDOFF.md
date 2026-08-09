@@ -1,5 +1,79 @@
 # Repository handoff
 
+## 2026-08-09: Portfolio-wide TSRat logo navigation
+
+### Current target
+
+Ensure the public Website Archive and every website in the 11-project registry
+show the creator's TSRat logo in their header or footer and make that logo a
+link to The Living Atlas. Logos on dark footer surfaces must render as white
+silhouettes without changing each site's existing identity, routes, navigation,
+or deployment architecture.
+
+### Completed
+
+- Audited the root Website Archive and all 11 registered website packages,
+  including the English and Chinese Living Atlas homepages and both public
+  Zhang Yong routes.
+- Added the linked logo to the root Website Archive footer as well as every
+  registered website.
+- Made the existing Living Atlas header logos self-link to the Living Atlas
+  homepage.
+- Wrapped the existing footer logos in Ivory Archive, Enheduanna, La Malinche,
+  and Hypatia with Living Atlas links.
+- Added restrained footer logo links to Hildegard, both Sartre guides,
+  Melromarc Sisters, both Zhang Yong routes, and Two Swans.
+- Reused each site's existing local logo when available. Sites without a local
+  copy reference `../THE-LIVING-ATLAS/tsrat-logo.png`, avoiding duplicated
+  binaries and preserving the public subdirectory architecture.
+- Applied `brightness(0) invert(1)` only on dark surfaces. Living Atlas,
+  Enheduanna, and the light Sartre footer retain the original logo colors.
+- Added `tests/portfolio-logo-navigation.test.mjs` to protect all registered
+  surfaces, the generated Ivory renderer, link targets, and dark-surface
+  silhouette behavior.
+
+### Verification
+
+- `node --test tests/portfolio-logo-navigation.test.mjs`: passed, 2/2.
+- `npm run build:pages`: passed; refreshed the 10 committed static mirrors and
+  generated Ivory Archive in the Pages artifact.
+- `npm run validate:pages`: passed; 1006 local references across 103 HTML/CSS
+  files.
+- Targeted portfolio and maintenance tests: passed, 3/3.
+- Browser basic smoke passed on all 14 audited public surfaces at `1800 × 933`
+  and `390 × 844`: every logo loaded, remained within the viewport, had a
+  Living Atlas destination, and used the white filter where required.
+- Antigravity extended visual, accessibility, interaction, and cross-browser QA:
+  pending.
+
+### Important decisions
+
+- This is a bounded correction to existing accepted interfaces, not a redesign;
+  no Figma or new Antigravity creative package is required for Codex Stage 2.
+- Header logos that already serve as in-page home controls were preserved unless
+  the footer could satisfy the new cross-site navigation requirement.
+- The root Website Archive remains the registry shell rather than a twelfth
+  project, but it is included as a public surface under the creator's literal
+  “all websites” request.
+
+### Files and Git state
+
+- Authoritative source: the affected `sites/*` entrypoints and styles,
+  `scripts/build-github-pages.mjs`, and
+  `tests/portfolio-logo-navigation.test.mjs`.
+- Generated mirrors: `ENHEDUANNA/`, `EXISTENTIALISM-HUMANISM-GUIDE/`,
+  `HILDEGARD/`, `HYPATIA/`, `LA-MALINCHE/`,
+  `MALTY-MELTY-CHILDHOOD/`, `MELROMARC-SISTERS/`,
+  `SARTRE-NAUSEA-GUIDE/`, `THE-LIVING-ATLAS/`, and
+  `ZHANGYONG-PORTRAIT/`.
+- Branch: `codex/portfolio-logo-navigation` from `origin/main` at `c3f0f15`.
+- At the time of this handoff entry, the scoped implementation and generated
+  mirrors are pending their task commit; no unrelated dirty-worktree changes
+  are present in the isolated worktree.
+- Next step: commit, push, create a draft PR, open the exact-commit preview, and
+  hand the preview to Antigravity for Stage 3 validation. Merge still requires
+  explicit creator authorization.
+
 ## 2026-07-29: Malinche 70-screen last-four-chapter rebuild
 
 ### Current target

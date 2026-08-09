@@ -829,6 +829,9 @@ export default function Home() {
       </main>
 
       <footer>
+        <a className="portfolio-home-link" href="../THE-LIVING-ATLAS/" aria-label="前往 The Living Atlas 主页">
+          <img className="portfolio-home-logo" src="../THE-LIVING-ATLAS/tsrat-logo.png" alt="TSRat Logo" />
+        </a>
         <div><b>《恶心》入门</b><span>一份供初读者使用的互动田野笔记</span></div>
         <button onClick={() => scrollToId("top")}>回到页首 ↑</button>
         <p>Jean-Paul Sartre · La Nausée · 1938</p>

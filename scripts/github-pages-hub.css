@@ -94,6 +94,8 @@ section { padding: 58px 0 96px; }
 .card-copy strong span { margin-left: 6px; }
 
 footer { display: flex; justify-content: space-between; padding: 22px 0 34px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; }
+.portfolio-home-link { display: inline-flex; align-items: center; }
+.portfolio-home-logo { width: 116px; height: auto; }
 .not-found { min-height: 100vh; display: grid; align-content: center; justify-items: start; }
 .not-found h1 { max-width: 720px; margin: 10px 0 32px; font: 600 clamp(2.8rem, 7vw, 6rem)/1.08 "Noto Serif SC", serif; }
 .not-found a { color: var(--wine); font-weight: 600; }
