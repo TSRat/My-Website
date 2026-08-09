@@ -1,5 +1,47 @@
 # IVORY ARCHIVE handoff
 
+## 2026-08-09 · Issue 24 daily publication
+
+### Current target
+
+发布第 24 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-09 第 24 期：GaHee Park 美国首场机构个展、Quadracci
+  Pavilion 二十五周年公共记忆计划、工作日微休息能量策略研究、NASA
+  IMAP 七台仪器首批开放数据，以及阿富汗难民女性医疗可及性质性研究。
+- 每则先解释陌生人物、制度或研究对象，再分开记录事件、带句号细节和
+  分析；小时层面的关联、仪器数据准备状态和质性访谈没有被写成单一因果
+  结论或总体发生率。
+- 与此前 115 则日刊及两个历史基线按人物、作品、事件、核心判断和内容
+  转化角度逐项比较，最终五则均无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充艺术家作品、建筑实景、研究
+  参与者、NASA 影像、患者或医疗文件。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 24 期图片
+
+### Verification
+
+- 发布前运行 `npm run build:pages`、`npm run validate:pages`、
+  `npm run build:ivory`、renderer parity / 内容合同测试、`npm run lint` 与
+  `git diff --check`。
+- 五张图片统一验证为 1672×941、sRGB、渐进式 JPEG，并核对首页卡片与
+  当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- Base commit: `888508c0419df99142f7e43e03eb2aab891805c6`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
 ## 2026-08-03 · Issue 21 daily publication
 
 ### Current target
