@@ -24,14 +24,14 @@ portfolio, and leave only branches that still have active review work.
 - Removed roughly 2 GB of ignored dependencies, build caches, Pages artifacts
   and Finder metadata after validation; all are reproducible from lockfiles and
   repository scripts.
-- Confirmed the current production Pages run is successful for
-  `main@eb5876d`, then opened the archive root and all 11 public sites with a
+- Confirmed the final production Pages run is successful for
+  `main@cd22191`, then opened the archive root and all 11 public sites with a
   cache-resistant query. Every route returned its expected title and heading,
   no eagerly requested image was broken and no page-level horizontal overflow
   was observed. IVORY links the current `2026-08-09` briefing.
 - Full-suite validation exposed missing intrinsic dimensions on the Zhang Yong
-  footer logo. The source and generated mirror fix passed all checks and is
-  isolated in PR #45 with exact-commit live previews.
+  footer logo. The source and generated mirror fix passed all checks, merged
+  through PR #45, deployed successfully and passed production verification.
 
 ### Verification
 
@@ -45,25 +45,23 @@ portfolio, and leave only branches that still have active review work.
   all seven `agents/openai.yaml` files parsed and met the short-description
   length contract.
 - `git diff --check`: passed for both active branches.
+- Pages workflow run
+  <https://github.com/TSRat/My-Website/actions/runs/31316211654>: passed for
+  merge commit `cd22191`, including build, asset validation and deployment.
 - Production check level: basic smoke passed; Antigravity extended QA pending.
 
 ### Remaining work
 
-- PR #45 is clean and mergeable but cannot be merged until the creator gives a
-  separate explicit `merge PR #45` authorization. After merge, wait for the
-  Pages workflow and repeat the two production-route checks.
-- PR #35 remains the only other active work branch and awaits normal review.
+- PR #35 remains the only active work branch and awaits normal review.
 - Antigravity extended route, viewport, interaction, accessibility, network and
   visual-regression QA remains pending.
 
 ### Final branch and workspace state
 
-- Local branches: `main`, `codex/refresh-website-skills`, and
-  `codex/fix-zhangyong-logo-dimensions`.
-- Remote branches: the same three branches; the two `codex/*` branches map to
-  open PR #35 and PR #45 respectively.
-- Primary worktree: clean on `codex/fix-zhangyong-logo-dimensions` at
-  `012c2a8`.
+- Local branches: `main` and `codex/refresh-website-skills`.
+- Remote branches: the same two branches; the single `codex/*` branch maps to
+  open PR #35.
+- Primary worktree: clean on `main` at `cd22191`.
 - Recovery commit used during classification was deleted only after its Skill
   tree was byte-identical to PR #35 and all seven unique handoff sections were
   confirmed present there.
