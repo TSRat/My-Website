@@ -1,5 +1,50 @@
 # 张勇的生活切片 · Handoff
 
+## 2026-08-09: Restore intrinsic dimensions on portfolio logos
+
+### Current target
+
+Repair the full-suite regression that removed intrinsic dimensions from the
+TSRat footer logo on both maintained Zhang Yong routes, while preserving the
+existing rendered logo size and the red alternate's parody boundary.
+
+### Completed
+
+- Added the verified source dimensions, `1104 × 293`, to the footer-logo image
+  on `index.html` and `red.html`.
+- Regenerated the matching `ZHANGYONG-PORTRAIT/` public mirror from the
+  authoritative source package.
+- Preserved the existing 116px rendered width on the original route and the
+  existing CSS-controlled presentation on the red route.
+
+### Verification
+
+- `npm run build:zhangyong`: passed; source and public mirror match.
+- `node --test tests/living-atlas-static-sites.test.mjs`: passed, 5/5.
+- `npm test`: passed, 44/44.
+- `npm run lint`: passed with 24 pre-existing warnings and no errors.
+- `npm run build:pages`: passed for all 11 website packages.
+- `npm run validate:pages`: passed, 1029 local references across 105 HTML/CSS
+  files.
+- Local browser smoke: both routes loaded with zero page-level horizontal
+  overflow; the footer logo lazy-loaded at natural width 1104 with no broken
+  images; the red route retained its non-official and fictional-counter labels.
+- `git diff --check`: passed.
+
+### Remaining delivery
+
+- Push the dedicated branch, create its review PR and verify an exact-commit
+  live preview before merging.
+- Confirm the GitHub Pages workflow deploys the merged commit, then repeat the
+  production smoke check.
+- Antigravity extended visual and accessibility QA remains pending.
+
+### Git state
+
+- Branch: `codex/fix-zhangyong-logo-dimensions`.
+- Base: `eb5876d` (`origin/main` on 2026-08-09).
+- Commit, push, preview and Pull Request: pending.
+
 ## Current target
 
 Resolve the Web Interface Guidelines audit findings on both maintained routes
