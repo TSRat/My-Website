@@ -1,5 +1,24 @@
 # Handoff: The Living Atlas
 
+## 2026-08-12 · 阿拉伯通史知识库入口
+
+### 当前目标与完成内容
+
+把新建的阿拉伯通史数字档案馆加入 Knowledge / Humanities & Arts，而不改变三大学科、四种内容身份或现有视觉系统。
+
+- `knowledge-registry.js` 新增 `arab-history-archive`：`book / published / featured`，真实目标为 `../ARAB-HISTORY-ARCHIVE/`。
+- 中英文人文与艺术页面的 `<noscript>` 都加入真实入口。
+- 八个知识库页面与 registry import 的 cache key 更新为 `knowledge-library-20260812-1`。
+- 当前 allowlist 为 11 条，published 记录为 7 条。
+- `npm run build:living-atlas`、Knowledge targeted tests 和本地浏览器入口检查通过；生成镜像已同步。
+- 本次不改 Worlds、Featured World 人物轮播、社交入口、背景音乐或 Living Atlas 视觉语言。
+
+### 状态
+
+- Branch：`codex/arab-history-archive`
+- Delivery commit / PR / exact preview：见阿拉伯通史站点 HANDOFF 和最终交付报告。
+- Antigravity extended knowledge-route QA：Pending。
+
 ## 2026-07-31 · 小红书入口与马琳切封面
 
 ### 当前目标

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "site": {
+    "id": "arab-history-archive",
+    "name": "阿拉伯通史数字档案馆",
+    "locale": "zh-CN",
+    "publicPath": "/My-Website/ARAB-HISTORY-ARCHIVE/",
+    "contentStatus": "ongoing",
+    "publishedVolumes": 6,
+    "historicalEras": 4
+  },
+  "content": {
+    "source": "committed Obsidian Markdown snapshots",
+    "historicalCopyGeneration": "disabled",
+    "glossaryTransform": "build-time",
+    "glossaryEndpoints": ["api/glossary", "api/glossary.json"],
+    "futureVolumeSpace": true,
+    "imagePublicationStatus": "pending provenance and rights confirmation"
+  },
+  "experience": {
+    "desktopGrid": "70/30",
+    "tabletGrid": "60/40",
+    "mobileGlossary": "bottom-sheet",
+    "reducedMotion": true,
+    "noJavaScriptReadable": true
+  },
+  "analytics": {
+    "provider": null,
+    "cookies": false,
+    "persistentStorage": false,
+    "events": ["era_enter", "era_navigation", "glossary_open", "glossary_close"],
+    "delivery": "local CustomEvent only"
+  },
+  "design": {
+    "figmaUrl": "https://www.figma.com/design/Try0RtGSWgs0YTpTGcifCZ",
+    "approvedSource": "creator-provided Codex-Ready Handoff Packet"
+  }
+}

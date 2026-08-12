@@ -33,7 +33,7 @@ test("Knowledge library keeps three public disciplines and four internal types",
 });
 
 test("Knowledge states never create fake destinations", () => {
-  assert.equal(getPublishedKnowledgeRecords().length, 6);
+  assert.equal(getPublishedKnowledgeRecords().length, 7);
 
   knowledgeLibrary.records.forEach((record) => {
     assert.ok(knowledgeLibrary.disciplines.some(({ id }) => id === record.discipline));
@@ -88,7 +88,7 @@ test("Knowledge provides eight bilingual routes with no-script access", async ()
     assert.match(page, /data-knowledge-search/);
     assert.match(page, /data-knowledge-filter="all"/);
     assert.match(page, /<noscript>/);
-    assert.match(page, /knowledge\.js\?v=knowledge-library-20260804-1/);
+    assert.match(page, /knowledge\.js\?v=knowledge-library-20260812-1/);
     assert.match(page, /class="knowledge-nav__brand"[^>]+aria-label=/);
     assert.doesNotMatch(page, /<span>TSRat<\/span>/);
     assert.doesNotMatch(page, /fonts\.googleapis|fonts\.gstatic|preconnect/);

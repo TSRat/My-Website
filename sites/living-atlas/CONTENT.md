@@ -28,7 +28,7 @@
 
 ## 知识库公开层
 
-- `knowledge/knowledge-registry.js` 是公开知识条目的唯一数据源，初始收录 10 条 allowlist 记录。
+- `knowledge/knowledge-registry.js` 是公开知识条目的唯一数据源，当前收录 11 条 allowlist 记录；阿拉伯通史数字档案馆以 `book / published` 进入人文与艺术。
 - 公开一级结构固定为三大学科；`Start Here`、`Knowledge Map`、`Featured`、四种内容身份与 `Recently Updated` 是页面内部组织方式。
 - `published` 记录必须有真实目的地；`mapping / planned` 记录必须没有 `href`，只显示状态和摘要。
 - 私人 Obsidian 仍是研究来源，不是线上运行时依赖。私人日志、系统目录、缓存、本地路径、临时 URL 与令牌化链接不得进入公开注册表。

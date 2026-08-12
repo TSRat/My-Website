@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">阿拉伯通史数字档案馆抽象封面</title>
+  <desc id="desc">沙色、纸白、灰色与夜蓝四个时代色块围绕档案书页展开的抽象视觉隐喻；不是历史地图或文物图像。</desc>
+  <rect width="1200" height="800" fill="#D7B593"/>
+  <path d="M0 520 420 310l330 170 450-270v590H0Z" fill="#F4EFE6"/>
+  <path d="M0 650 380 470l340 150 480-260v440H0Z" fill="#E8E9EB"/>
+  <path d="M0 760 430 560l300 130 470-250v360H0Z" fill="#0B1320"/>
+  <circle cx="920" cy="180" r="94" fill="none" stroke="#3A2F28" stroke-width="2" opacity=".5"/>
+  <circle cx="920" cy="180" r="62" fill="none" stroke="#3A2F28" stroke-width="2" opacity=".35"/>
+  <path d="M120 118h530M120 150h410" stroke="#3A2F28" stroke-width="3" opacity=".55"/>
+  <text x="120" y="258" fill="#3A2F28" font-family="Noto Serif SC,serif" font-size="72" font-weight="700">阿拉伯通史</text>
+  <text x="124" y="306" fill="#3A2F28" font-family="Noto Sans SC,sans-serif" font-size="23" letter-spacing="5">DIGITAL HISTORY ARCHIVE</text>
+</svg>

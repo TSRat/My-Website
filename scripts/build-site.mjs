@@ -1,7 +1,6 @@
 import { access, cp, mkdir, readFile, rm } from "node:fs/promises";
 import { basename, dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
-import { build as viteBuild } from "vite";
 import { loadSiteProjects, repositoryRoot } from "./site-projects.mjs";
 
 const sourceOnlyNames = new Set([
@@ -64,7 +63,14 @@ export async function buildSite(siteId) {
   await rm(stagingDirectory, { recursive: true, force: true });
   await mkdir(dirname(stagingDirectory), { recursive: true });
 
-  if (site.source.mode === "vite-static") {
+  if (site.source.mode === "generated-static") {
+    const { buildArabHistoryArchive } = await import(
+      "./build-arab-history-archive.mjs"
+    );
+    await buildArabHistoryArchive({ site, stagingDirectory });
+    await verifyStaticEntry(site.id, stagingDirectory, false);
+  } else if (site.source.mode === "vite-static") {
+    const { build: viteBuild } = await import("vite");
     await viteBuild({
       configFile: join(site.packageRoot, site.source.viteConfig),
       build: {
