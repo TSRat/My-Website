@@ -1,5 +1,46 @@
 # IVORY ARCHIVE handoff
 
+## 2026-08-12 · Issue 27 daily publication
+
+### Current target
+
+发布第 27 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-12 第 27 期：中文茶箱标签来源更正、Della Robbia 釉陶
+  雕塑修复与重新归属、失语症与逻辑推理分离、La Mojana 古代集体水利，
+  以及亚洲四地同性关系法律改革后的公共话语与安全感变化。
+- 每则先解释陌生人物、制度或研究对象，再分开记录事件、带句号细节和
+  分析；两名失语个案、考古劳动模型及法律改革前后关联没有被写成总体
+  能力、唯一治理形式或已经证明的单向因果关系。
+- 与此前 130 则日刊及两个历史基线按人物、作品、事件、核心判断和内容
+  转化角度逐项比较，最终五则均无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充历史文物、艺术家作品、脑部
+  扫描、考古地图、研究图、社交平台界面或真实人物。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 27 期图片
+
+### Verification
+
+- 发布前运行 `npm run build:pages`、`npm run validate:pages`、
+  `npm run build:ivory`、renderer parity / 内容合同测试、`npm run lint` 与
+  `git diff --check`。
+- 五张图片统一验证为 1672×941、sRGB、渐进式 JPEG，并核对首页卡片与
+  当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
 ## 2026-08-11 · Issue 26 daily publication
 
 ### Current target
