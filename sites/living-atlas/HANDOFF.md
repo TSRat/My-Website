@@ -16,7 +16,9 @@
 ### 状态
 
 - Branch：`codex/arab-history-archive`
-- Delivery commit / PR / exact preview：见阿拉伯通史站点 HANDOFF 和最终交付报告。
+- Implementation commit：`6686565`。
+- Knowledge entry preview：<https://raw.githack.com/TSRat/My-Website/6686565/THE-LIVING-ATLAS/knowledge/humanities-arts/zh.html>。
+- Draft PR：<https://github.com/TSRat/My-Website/pull/46>；未授权合并。
 - Antigravity extended knowledge-route QA：Pending。
 
 ## 2026-07-31 · 小红书入口与马琳切封面

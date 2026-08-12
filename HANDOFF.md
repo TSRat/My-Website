@@ -23,7 +23,10 @@ Add a twelfth maintained site under the Living Atlas Knowledge / Humanities & Ar
 - Pages build and validation: Passed — 1,039 local references across 107 HTML/CSS files.
 - Local browser smoke: desktop 1440×900, mobile 390×844, Era switching, glossary interaction, Escape/focus return, no overflow, Living Atlas destination and zero console errors all passed.
 - Full build produced unrelated Next.js hash churn in the two philosophy mirrors; it was excluded from this branch after validation.
-- Branch: `codex/arab-history-archive`; delivery commit, exact preview and Draft PR pending this handoff's final Git step.
+- Branch: `codex/arab-history-archive`; implementation commit: `6686565`.
+- Exact implementation preview: <https://raw.githack.com/TSRat/My-Website/6686565/ARAB-HISTORY-ARCHIVE/index.html>.
+- Knowledge entry preview: <https://raw.githack.com/TSRat/My-Website/6686565/THE-LIVING-ATLAS/knowledge/humanities-arts/zh.html>.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/46>; no merge is authorized.
 - Antigravity full route/device/browser/console/network/keyboard/accessibility/visual regression review: Pending.
 
 ## 2026-08-09: Portfolio-wide TSRat logo navigation

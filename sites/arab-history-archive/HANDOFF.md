@@ -39,7 +39,7 @@
 
 - [x] 更新 Living Atlas 知识库、仓库注册表与文档。
 - [x] 完成 targeted tests、Pages 构建、资源验证和基本浏览器 smoke。
-- [ ] commit、push、exact preview、Draft PR。
+- [x] commit、push、exact implementation preview、Draft PR。
 - [ ] Antigravity 全路线、多设备、多浏览器、控制台/网络、键盘、可访问性与视觉回归 QA。
 - [ ] 原笔记图片 provenance / rights / alt 审计。
 - [ ] 在 exact preview 上测量网络 LCP；本地 build 不作为 `< 1.2s` 证明。
@@ -48,7 +48,9 @@
 
 - Branch：`codex/arab-history-archive`
 - Base：`origin/main` at `cd22191`
-- Delivery commit：pending
-- Preview / PR：pending
+- Implementation commit：`6686565`
+- Exact implementation preview：<https://raw.githack.com/TSRat/My-Website/6686565/ARAB-HISTORY-ARCHIVE/index.html>
+- Knowledge entry preview：<https://raw.githack.com/TSRat/My-Website/6686565/THE-LIVING-ATLAS/knowledge/humanities-arts/zh.html>
+- Draft PR：<https://github.com/TSRat/My-Website/pull/46>；未授权合并
 
-本文件在最终提交前必须补齐验证结果、commit、preview 和 PR。
+本次文档收尾提交只记录交付状态，不改变已验证的网站产物；最终 branch HEAD 与远端预览结果见 PR 和交付报告。
