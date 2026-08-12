@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Beginner Content"
+  short_description: "Audit whether first-time readers can understand the content"
+  default_prompt: "Use $audit-beginner-content to inspect this content or screenshot from a first-time reader perspective, audit direct-entry introductions and repeated collections across every renderer, interpret creator feedback literally, and report prioritized fixes without rewriting it."

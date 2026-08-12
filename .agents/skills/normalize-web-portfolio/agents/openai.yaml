@@ -1,4 +1,4 @@
 interface:
   display_name: "Normalize Web Portfolio"
-  short_description: "Standardize sites with scoped QA and Antigravity handoff"
-  default_prompt: "Use $normalize-web-portfolio to modernize the website portfolio, run basic submission checks, and hand comprehensive browser and visual regression QA to Antigravity."
+  short_description: "按批准方案维护网站作品集并支持授权的低风险小修快速合并"
+  default_prompt: "Use $normalize-web-portfolio to implement the approved portfolio directions, preserve each site's responsibility and identity, and run preliminary Codex checks; default to Antigravity Stage 3, but use the scoped fast-merge path when I explicitly authorize it."

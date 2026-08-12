@@ -1,4 +1,0 @@
-interface:
-  display_name: "Build New Site to PR"
-  short_description: "Build an approved site through smoke-tested preview and PR"
-  default_prompt: "Use $build-new-site-to-pr to turn the approved design direction into a smoke-tested preview and pull request, with extended browser QA assigned to Antigravity."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Information Site to PR"
+  short_description: "制作已批准的信息网站并支持授权后快速合并低风险小修"
+  default_prompt: "Use $build-information-site-to-pr to implement the approved information package, run preliminary Codex checks, and prepare the preview and draft PR; default to Antigravity Stage 3, but use the scoped fast-merge path when I explicitly authorize it."

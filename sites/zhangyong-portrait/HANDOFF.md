@@ -29,23 +29,32 @@ existing rendered logo size and the red alternate's parody boundary.
 - Local browser smoke: both routes loaded with zero page-level horizontal
   overflow; the footer logo lazy-loaded at natural width 1104 with no broken
   images; the red route retained its non-official and fictional-counter labels.
+- Production browser smoke after deployment: the archive root, all 11 public
+  sites and `red.html` loaded with expected titles/headings, no broken eagerly
+  requested images and no page-level horizontal overflow. Both Zhang Yong
+  routes expose `width="1104" height="293"`, load the logo at natural width
+  1104 and preserve the parody disclosure.
 - `git diff --check`: passed.
 
 ### Remaining delivery
 
-- Confirm the GitHub Pages workflow deploys the merged commit, then repeat the
-  production smoke check.
 - Antigravity extended visual and accessibility QA remains pending.
 
 ### Git state
 
-- Branch: `codex/fix-zhangyong-logo-dimensions`.
+- Delivery branch: `codex/fix-zhangyong-logo-dimensions` (deleted after merge).
 - Base: `eb5876d` (`origin/main` on 2026-08-09).
 - Implementation commit: `b5bb4d2`.
+- Merge commit: `cd22191`.
+- Pages workflow:
+  <https://github.com/TSRat/My-Website/actions/runs/31316211654> (passed).
 - Exact-commit previews:
   - <https://raw.githack.com/TSRat/My-Website/b5bb4d2e564c5da1f3cc1e6a1d3955e512f41403/ZHANGYONG-PORTRAIT/index.html>
   - <https://raw.githack.com/TSRat/My-Website/b5bb4d2e564c5da1f3cc1e6a1d3955e512f41403/ZHANGYONG-PORTRAIT/red.html>
-- Pull Request: <https://github.com/TSRat/My-Website/pull/45>.
+- Pull Request: <https://github.com/TSRat/My-Website/pull/45> (merged).
+- Production:
+  - <https://tsrat.github.io/My-Website/ZHANGYONG-PORTRAIT/>
+  - <https://tsrat.github.io/My-Website/ZHANGYONG-PORTRAIT/red.html>
 
 ## Current target
 
