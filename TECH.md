@@ -13,7 +13,8 @@ Default branch: `main`
 3. `sites/living-atlas/`、`sites/hypatia/`、`sites/hildegard/`、
    `sites/la-malinche/`、`sites/zhangyong-portrait/` 与
    `sites/malty-melty-childhood/` 的直接静态工程。
-4. `sites/sartre-nausea-guide/` 与 `sites/existentialism-humanism-guide/` 的 Next.js 静态导出工程。
+4. `sites/arab-history-archive/` 的 Markdown + registry 生成式静态工程。
+5. `sites/sartre-nausea-guide/` 与 `sites/existentialism-humanism-guide/` 的 Next.js 静态导出工程。
 
 这些站点共享维护文档、`site.config.json`、构建控制面和 Pages 发布约定，但不共享视觉皮肤或强制同一框架。不要把 `npm run build` 的 `dist/` 与 `npm run build:pages` 的 `docs/` 混为一谈。
 
@@ -49,6 +50,7 @@ Default branch: `main`
 | `/My-Website/EXISTENTIALISM-HUMANISM-GUIDE/` | `sites/existentialism-humanism-guide/` 经 Next.js 静态导出更新镜像 | React / TypeScript + Next.js | `EXISTENTIALISM-HUMANISM-GUIDE/index.html` |
 | `/My-Website/MELROMARC-SISTERS/` | `sites/melromarc-sisters/` 经 Vite 生成 `MELROMARC-SISTERS/` 镜像 | React / TypeScript + Vite | `MELROMARC-SISTERS/index.html` |
 | `/My-Website/THE-LIVING-ATLAS/` | `sites/living-atlas/` 经共享直接静态构建器更新 `THE-LIVING-ATLAS/` | HTML/CSS/ES modules | `THE-LIVING-ATLAS/index.html` |
+| `/My-Website/ARAB-HISTORY-ARCHIVE/` | `sites/arab-history-archive/content/` 经生成器更新 `ARAB-HISTORY-ARCHIVE/` | Markdown / JSON / HTML / CSS / JS | `ARAB-HISTORY-ARCHIVE/index.html` |
 | `/My-Website/ZHANGYONG-PORTRAIT/` | `sites/zhangyong-portrait/` 经共享直接静态构建器更新 `ZHANGYONG-PORTRAIT/` | HTML/CSS/ES modules | `ZHANGYONG-PORTRAIT/index.html` |
 | `/My-Website/MALTY-MELTY-CHILDHOOD/` | `sites/malty-melty-childhood/` 经共享直接静态构建器更新 `MALTY-MELTY-CHILDHOOD/` | HTML/CSS/ES modules | `MALTY-MELTY-CHILDHOOD/index.html` |
 
@@ -64,9 +66,10 @@ Default branch: `main`
 | `npm run build:pages` | 生成 GitHub Pages 多站点 artifact | `docs/` |
 | `npm run sync:philosophy-sites` | 从两个哲学导读源码重建受版本控制的静态 Pages 输入镜像 | `SARTRE-NAUSEA-GUIDE/`、`EXISTENTIALISM-HUMANISM-GUIDE/` |
 | `npm run validate:pages` | 检查 `docs/` 内 HTML/CSS 的本地资源引用 | 只读；缺失或越界引用时退出失败 |
-| `npm run validate:sites` | 检查十一个站点包、维护文档、配置、入口、manifest 与 npm scripts | 只读 |
-| `npm run build:sites` | 按每站配置刷新十个大写 Pages 镜像 | `.site-build/` 与大写镜像 |
+| `npm run validate:sites` | 检查十二个站点包、维护文档、配置、入口、manifest 与 npm scripts | 只读 |
+| `npm run build:sites` | 按每站配置刷新十一个大写 Pages 镜像 | `.site-build/` 与大写镜像 |
 | `npm run dev:living-atlas` / `build:living-atlas` | 开发或同步 Living Atlas | `THE-LIVING-ATLAS/` |
+| `npm run build:arab-history` | 校验 Markdown checksum、生成全文与词条 API并同步阿拉伯通史镜像 | `.site-build/arab-history-archive/`、`ARAB-HISTORY-ARCHIVE/` |
 | `npm run dev:ivory` / `build:ivory` | 开发或构建 IVORY 动态应用 | `dist/` |
 | `npm run dev:enheduanna` | 运行 Enheduanna Vite 开发服务器 | 本地服务 |
 | `npm run build:enheduanna` | 从 `sites/enheduanna/` 更新 Enheduanna 镜像 | `.site-build/enheduanna/`、`ENHEDUANNA/` |
@@ -137,14 +140,14 @@ Do not replace the existing GitHub Actions deployment architecture with
 
 `scripts/build-github-pages.mjs` 会：
 
-- 读取十一个 `sites/<site-id>/site.config.json` 并先刷新十个大写静态镜像。
+- 读取十二个 `sites/<site-id>/site.config.json` 并先刷新十一个大写静态镜像。
 - 删除并重建 `docs/IVORY-ARCHIVE/`。
 - 删除旧的 `docs/briefings/` legacy redirect。
 - 生成 `docs/index.html`、`docs/hub.css`、`docs/404.html` 和 `.nojekyll`。
 - 从 `sites/ivory-archive/briefings.ts` 读取字面量数据，生成 IVORY 首页及每期详情页。
 - 从 `public/story-images/` 复制本期使用的图片。
 - 为旧 `/My-Website/briefings/<date>/` 路径生成到 IVORY 的 redirect。
-- 递归复制十个由站点包生成的大写镜像到 `docs/`。
+- 递归复制十一个由站点包生成的大写镜像到 `docs/`。
 
 `docs/` 已在 `.gitignore` 中，应该由 Actions 每次生成，不应成为另一个手工维护分支。
 

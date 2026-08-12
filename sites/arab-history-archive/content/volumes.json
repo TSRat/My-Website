@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "sourcePolicy": "Every published body paragraph is generated from the committed Obsidian Markdown snapshots. Editorial UI labels are explicitly separated from historical content.",
+  "eras": [
+    {
+      "index": 0,
+      "id": "desert",
+      "number": "00",
+      "title": "游牧与沙海",
+      "background": "#D7B593",
+      "text": "#3A2F28",
+      "glossaryBackground": "#C4A17E",
+      "highlight": "#5A3927"
+    },
+    {
+      "index": 1,
+      "id": "revelation",
+      "number": "01",
+      "title": "神启与典籍",
+      "background": "#F4EFE6",
+      "text": "#1A1A1A",
+      "glossaryBackground": "#E2D8C9",
+      "highlight": "#6C3A17"
+    },
+    {
+      "index": 2,
+      "id": "empire",
+      "number": "02",
+      "title": "帝国与网络",
+      "background": "#E8E9EB",
+      "text": "#1A1A1A",
+      "glossaryBackground": "#D3D6DA",
+      "highlight": "#1C4B5F"
+    },
+    {
+      "index": 3,
+      "id": "dome",
+      "number": "03",
+      "title": "信仰的穹顶",
+      "background": "#0B1320",
+      "text": "#E0E0E0",
+      "glossaryBackground": "#182230",
+      "highlight": "#F4C95D"
+    }
+  ],
+  "volumes": [
+    {
+      "id": "pre-islamic-era",
+      "order": 1,
+      "status": "published",
+      "title": "伊斯兰教之前的时代",
+      "eraIndex": 0,
+      "file": "volumes/01-pre-islamic-era.md",
+      "sourceLabel": "Obsidian 卷册 01",
+      "sha256": "2a3cc0a8aa35572ca3ffc943d7122c0c1b5a79190fc693a7775178781cb8d65f"
+    },
+    {
+      "id": "rise-and-caliphate",
+      "order": 2,
+      "status": "published",
+      "title": "伊斯兰教的兴起和哈里发政府",
+      "eraIndex": 1,
+      "file": "volumes/02-rise-and-caliphate.md",
+      "sourceLabel": "Obsidian 卷册 02",
+      "sha256": "d2497b7591a493bd1fcac81f00750650d8fe899c9b76d4c5b4cf43f509174886"
+    },
+    {
+      "id": "umayyad",
+      "order": 3,
+      "status": "published",
+      "title": "倭马亚王朝",
+      "eraIndex": 2,
+      "file": "volumes/03-umayyad.md",
+      "sourceLabel": "Obsidian 卷册 03",
+      "sha256": "d931b9cd39ab6e3f01df9e8e5ad8e63672620babc932fedff14e7579a2342b4b"
+    },
+    {
+      "id": "abbasid-founding",
+      "order": 4,
+      "status": "published",
+      "title": "阿拔斯王朝的建立",
+      "eraIndex": 3,
+      "file": "volumes/04-abbasid-founding.md",
+      "sourceLabel": "Obsidian 卷册 04",
+      "sha256": "fbff131629efa226fdcbb608874d4b429d29ec03f365bd652c7fb15c6bafb6f2"
+    },
+    {
+      "id": "abbasid-golden-age-a",
+      "order": 5,
+      "status": "published",
+      "title": "阿拔斯王朝的全盛时代（上）",
+      "eraIndex": 3,
+      "file": "volumes/05-abbasid-golden-age-a.md",
+      "sourceLabel": "Obsidian 卷册 05",
+      "sha256": "473711f11e13e69d2c480800c01a59cc6e357216e82b6fc8106126badc2bc7ad"
+    },
+    {
+      "id": "abbasid-golden-age-b",
+      "order": 6,
+      "status": "published",
+      "title": "阿拔斯王朝的全盛时代（下）",
+      "eraIndex": 3,
+      "file": "volumes/06-abbasid-golden-age-b.md",
+      "sourceLabel": "Obsidian 卷册 06",
+      "sha256": "628f21adf78f7ad1ecfdf1c7f6e0ceede1f171ed772df280ea83353fdff2c29e"
+    }
+  ],
+  "futureVolumes": {
+    "enabled": true,
+    "title": "阿拉伯通史仍在继续",
+    "policy": "Do not pre-name, date, summarize, or assign an era to an unpublished note. New Markdown remains in Future Neutral until an editor adds a published registry record with an explicit eraIndex.",
+    "background": "#EEEAE4",
+    "text": "#2F2C29"
+  }
+}

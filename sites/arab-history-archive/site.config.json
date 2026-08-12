@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "arab-history-archive",
+  "title": "阿拉伯通史数字档案馆",
+  "slug": "ARAB-HISTORY-ARCHIVE",
+  "status": "published",
+  "interactionTier": "B",
+  "classification": "REBUILD",
+  "maintenanceRoot": "sites/arab-history-archive",
+  "documents": ["CONTENT.md", "DESIGN.md", "TECH.md", "HANDOFF.md"],
+  "source": {
+    "mode": "generated-static",
+    "entry": "content/volumes.json",
+    "assets": ["assets"]
+  },
+  "build": {
+    "command": "npm run build:arab-history",
+    "staging": ".site-build/arab-history-archive",
+    "mirror": "ARAB-HISTORY-ARCHIVE",
+    "mirrorPolicy": "replace"
+  },
+  "publicPath": "/My-Website/ARAB-HISTORY-ARCHIVE/",
+  "manifest": "site-manifest.json",
+  "figmaUrl": "https://www.figma.com/design/Try0RtGSWgs0YTpTGcifCZ",
+  "hub": {
+    "order": 11,
+    "className": "arab-history",
+    "cover": "assets/hub-cover.svg",
+    "eyebrow": "KNOWLEDGE ARCHIVE · 001",
+    "description": "从六册本地读书笔记生成的阿拉伯通史长卷：四个时代、构建时典籍注疏，以及为后续卷册保留的开放结构。",
+    "metadata": [["类型", "历史笔记档案"], ["状态", "持续更新"]]
+  }
+}

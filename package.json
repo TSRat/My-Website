@@ -13,6 +13,7 @@
     "build:sites": "node scripts/build-site.mjs --all",
     "dev:living-atlas": "vite sites/living-atlas",
     "build:living-atlas": "node scripts/build-site.mjs living-atlas",
+    "build:arab-history": "node scripts/build-site.mjs arab-history-archive",
     "dev:ivory": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vite",
     "build:ivory": "bash scripts/build-verified.sh",
     "dev:enheduanna": "vite --config sites/enheduanna/vite.config.ts",

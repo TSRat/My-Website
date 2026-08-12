@@ -3,7 +3,7 @@
 - Audit date: 2026-07-25
 - Branch: `codex/sites-six-stage-import`
 - Base commit: `636c198`
-- Last implementation update: 2026-07-25 on `codex/sites-six-stage-import`
+- Last implementation update: 2026-08-12 on `codex/arab-history-archive`
 - Authoritative registry: [`README.md`](../README.md#当前项目)
 - Platform standard: [`web/platform-standard.md`](./platform-standard.md)
 - Figma: [TSRat Web Design System · Portfolio Normalization](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt)
@@ -15,6 +15,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 | Site | Classification | Interaction tier | Migration status | Primary blocker |
 | --- | --- | --- | --- | --- |
 | The Living Atlas | REFACTOR | B — Interactive | Content system merged in PR #13; Data / starter and ambiguity correction merged in PR #14 | Shared runtime publication needs explicit Pages build-map authorization |
+| 阿拉伯通史数字档案馆 | REBUILD | B — Interactive editorial | Six-stage implementation on `codex/arab-history-archive` | Exact preview, Draft PR and Antigravity extended QA |
 | IVORY ARCHIVE | PRESERVE | B — Interactive | Six-stage implementation merged in PR #15 | Antigravity extended QA remains optional follow-up |
 | Enheduanna | REFACTOR | A — Editorial | Maintainable rebuild merged in PR #17 | Antigravity extended visual QA remains optional follow-up |
 | La Malinche / 马琳切 | REBUILD | B — Interactive editorial | 41-screen beginner-first editorial with Spanish background and expanded siege sequence | Live preview, PR review and Antigravity extended QA |
@@ -26,7 +27,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 | 张勇的生活切片 | PRESERVE | A — Editorial | Direct static migration merged in PR #21 | Antigravity section QA pending |
 | 两只天鹅 | REFACTOR | B — Interactive | Direct static migration merged in PR #21 | Antigravity interaction QA pending |
 
-Counts: 11 audited; 4 PRESERVE; 5 REFACTOR; 2 REBUILD.
+Counts: 12 audited; 4 PRESERVE; 5 REFACTOR; 3 REBUILD.
 
 ## Remaining migration queue
 
@@ -57,6 +58,23 @@ The current local Pages artifact was rendered in the Codex in-app browser at:
 The Figma page `03 · Baselines & Handoff` contains all 18 accepted fixed-viewport captures. The page `02 · Site Themes & Screens` contains the six theme systems, 12 representative desktop/mobile references, and editable theme anatomy.
 
 Fixed-viewport captures are valid. Full-page capture is not accepted as evidence because the current browser backend repeats or omits sticky and reveal-driven regions while composing a long screenshot. When extended migration review is requested, Antigravity should use deterministic section or anchor captures under matching viewport, font, content, and interaction state.
+
+## 阿拉伯通史数字档案馆
+
+- **Site / slug / live URL:** 阿拉伯通史数字档案馆；`ARAB-HISTORY-ARCHIVE`；<https://tsrat.github.io/My-Website/ARAB-HISTORY-ARCHIVE/>（合并前尚未生产发布）。
+- **Source path:** `sites/arab-history-archive/`；`ARAB-HISTORY-ARCHIVE/` 是生成镜像。
+- **Product purpose:** 将六册创作者 Obsidian 读书笔记整理为可连续阅读、可就地查词且可继续扩展的历史档案。
+- **Routes and navigation:** 单路由长卷；四时代锚点、卷册锚点、Living Atlas 人文与艺术返回入口；`api/glossary` 为静态数据端点。
+- **Visual direction:** 从沙海、纸页、制度网络到夜蓝穹顶的渐进色；Future Neutral 明确保留后续笔记空间，但不虚构标题、年代或数量。
+- **Typography / layout:** Noto Serif SC 正文、Noto Sans SC 元数据、Amiri 阿拉伯文；70/30 desktop、60/40 tablet、mobile bottom sheet。
+- **Framework / rendering:** 零运行时依赖的 Node build-time Markdown renderer + static HTML/CSS/JS；`IntersectionObserver` 负责换肤。
+- **Content model:** `content/volumes.json` 是卷册注册表，六篇 Markdown 共 15,027 行且以 SHA-256 锁定；`content/glossary.json` 保存来源定位词条。
+- **Provenance:** 原笔记的 188 处图片引用当前不进入公开站点，等待来源与发布权确认；抽象 SVG 封面不作为历史证据。
+- **Accessibility / enhancement:** skip link、语义标题、可见焦点、键盘词条、Escape、BiDi、Reduced Motion；No-JS 保留全文与完整词汇表。
+- **Analytics:** Provider none；无 Cookie、身份、持久化或网络发送，仅发出本地 provider-neutral CustomEvent。
+- **Figma URL:** [阿拉伯通史数字档案馆](https://www.figma.com/design/Try0RtGSWgs0YTpTGcifCZ)。
+- **Classification:** **REBUILD** — 从本地 Markdown 建立新的可维护公开站点，同时严格保留来源边界。
+- **Delivery:** Preview / PR pending；Antigravity 全路线、多设备、多浏览器、控制台/网络、键盘、可访问性与视觉回归 QA pending。
 
 ## The Living Atlas
 
