@@ -1,5 +1,36 @@
 # Handoff：阿拉伯通史数字档案馆
 
+## 2026-08-12 · 六篇笔记目录
+
+### 当前目标与完成内容
+
+在 Hero 后增加以“整篇笔记”为单位的目录，不解析第一篇笔记内部的章节标题。
+
+- 目录按 `volumes.json` 的 `order` 展示当前六篇 published 笔记，并链接到对应 `volume-*` 卷册开头。
+- 第六项为“阿拔斯王朝的全盛时代（下）”；六篇正文、时代映射、注疏与来源内容均未删改。
+- 页面尾部 Future Neutral 预留区继续保留，后续笔记仍通过 Markdown 快照和卷册注册表扩展。
+- 桌面采用说明 / 六行索引双栏；移动端折叠为单栏。No-JS 锚点跳转和 Reduced Motion 降级均可继续使用。
+- Implementation commit：`f5660c8`。
+- Exact implementation preview：<https://raw.githack.com/TSRat/My-Website/f5660c8/ARAB-HISTORY-ARCHIVE/index.html>。
+- Draft PR：<https://github.com/TSRat/My-Website/pull/46>；未授权合并。
+
+### 验证
+
+- `npm run build:arab-history`：Passed；权威源与 `ARAB-HISTORY-ARCHIVE/` 镜像同步。
+- Targeted Node tests：Passed，15/15；目录项严格对应注册表前六条 published 记录，六个目标锚点均存在。
+- `npm run validate:sites`：Passed；12 个维护包。
+- `npm run build:pages`：Passed。
+- `npm run validate:pages`：Passed；1,039 个本地引用、107 个 HTML/CSS 文件。
+- Browser desktop `1440 × 900`：Passed；六项、双栏目录、跳转至卷册 06、`scrollWidth=1440`，console 0 error / 0 warning。
+- Browser mobile `390 × 844`：Passed；六项单栏完整显示、`scrollWidth=390`，console 0 error / 0 warning。
+- Exact preview：Passed；桌面端第六项跳转至 `#volume-abbasid-golden-age-b`，移动端六项完整、`scrollWidth=390`。
+- Antigravity extended QA：Pending。
+
+### 尚未完成与已知问题
+
+- Draft PR 尚未合并。
+- Antigravity 全路线、多设备、多浏览器、键盘、可访问性与视觉回归 QA 待执行。
+
 ## 2026-08-12 · 多级列表层级修复
 
 ### 当前目标与完成内容
