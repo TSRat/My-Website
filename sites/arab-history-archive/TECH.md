@@ -18,7 +18,7 @@ npm run build:arab-history
 
 1. 读取卷册注册表与词条库；
 2. 校验四时代、Future Volume 开关、唯一 ID、明确 era 映射和 Markdown checksum；
-3. 移除 frontmatter，把 Markdown 转为语义 HTML；
+3. 移除 frontmatter，把 Markdown 转为语义 HTML；列表按原始空格或 Tab 缩进建立层级栈，保留无序、有序及两者混排的父子关系；
 4. 在正文文本节点中进行最长词条匹配并生成 `GlossaryTrigger`；
 5. 包裹阿拉伯字符以保证 BiDi；
 6. 写入静态 HTML、CSS、JS、manifest 与 glossary JSON API；
@@ -49,6 +49,6 @@ npm run build:arab-history
 
 ## 已知边界
 
-- 当前最小 Markdown 渲染器保留标题、段落、列表、引用、代码、表格、强调与链接；Obsidian 内链显示为非跳转参考文本。
+- 当前最小 Markdown 渲染器保留标题、段落、多级列表、引用、代码、表格、强调与链接；Obsidian 内链显示为非跳转参考文本。
 - 原笔记图片尚未公开；待逐项补齐 provenance、rights、alt 和证据角色后再进入 `assets/`。
 - 完整多浏览器、全路线、键盘和视觉回归由 Antigravity 最终验证。

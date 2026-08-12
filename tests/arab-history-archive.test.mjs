@@ -86,6 +86,47 @@ test("generated archive preserves all volumes, glossary, BiDi and no-JS access",
   assert.equal(manifest.analytics.persistentStorage, false);
 });
 
+test("generated lists preserve every source item and its nested semantics", async () => {
+  const [html, registry] = await Promise.all([
+    readRepo("ARAB-HISTORY-ARCHIVE/index.html"),
+    parseJson("sites/arab-history-archive/content/volumes.json"),
+  ]);
+  let sourceListItems = 0;
+  for (const volume of registry.volumes) {
+    const markdown = await readRepo(`sites/arab-history-archive/content/${volume.file}`);
+    const body = markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/u, "");
+    sourceListItems += body
+      .split(/\r?\n/u)
+      .filter((line) => /^[ \t]*(?:[-+*]|\d+[.)])\s+/u.test(line)).length;
+  }
+  assert.equal((html.match(/<li>/gu) ?? []).length, sourceListItems + 3);
+
+  const hierarchyStart = html.indexOf("阿拉伯半岛作为闪族发源地的假说");
+  const hierarchyEnd = html.indexOf("闪含两族的关系", hierarchyStart);
+  const hierarchy = html.slice(hierarchyStart, hierarchyEnd).replace(/\s+/gu, " ");
+  assert.match(
+    hierarchy,
+    /<li>但<strong>阿拉伯半岛说<\/strong>似乎<strong>更可信<\/strong>。\s*<ul>\s*<li>反驳<strong>东非说<\/strong>：[\s\S]*?<li><strong>反驳美索不达米亚说<\/strong>：不符合社会发展的普遍规律。\s*<ul>\s*<li>美索不达米亚是一个[\s\S]*?<\/ul>\s*<\/li>\s*<li><strong>支持阿拉伯半岛说<\/strong>：\s*<ol>\s*<li><strong>周期性向外迁移<\/strong>/u,
+  );
+  assert.doesNotMatch(
+    hierarchy,
+    /<\/ul> <ol><li><strong>周期性向外迁移<\/strong>/u,
+  );
+
+  const stack = [];
+  for (const match of html.matchAll(/<(\/)?(ul|ol|li)>/gu)) {
+    const [, closing, tag] = match;
+    if (!closing) {
+      if (tag === "li") assert.match(stack.at(-1), /^(?:ul|ol)$/u);
+      if (tag !== "li" && stack.length) assert.equal(stack.at(-1), "li");
+      stack.push(tag);
+    } else {
+      assert.equal(stack.pop(), tag);
+    }
+  }
+  assert.deepEqual(stack, []);
+});
+
 test("generated-static implementation stays registry-driven", async () => {
   const [builder, runtime, css, config] = await Promise.all([
     readRepo("scripts/build-arab-history-archive.mjs"),
@@ -103,4 +144,6 @@ test("generated-static implementation stays registry-driven", async () => {
   assert.match(css, /prefers-reduced-motion: reduce/u);
   assert.match(css, /grid-template-columns: minmax\(0, 70vw\)/u);
   assert.match(css, /max-height: min\(50svh, 32rem\)/u);
+  assert.match(css, /\.markdown-body li > ul/u);
+  assert.match(css, /list-style-type: circle/u);
 });

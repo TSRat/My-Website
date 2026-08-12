@@ -92,7 +92,6 @@ function renderMarkdown(markdown, { glossary, volume }) {
   const lines = stripFrontmatter(markdown).replaceAll("\r\n", "\n").split("\n");
   const html = [];
   const paragraph = [];
-  let listType = null;
   let inCode = false;
   let code = [];
   let imageNotes = 0;
@@ -109,16 +108,55 @@ function renderMarkdown(markdown, { glossary, volume }) {
     html.push(`<p>${renderInline(paragraph.join(" ").trim())}</p>`);
     paragraph.length = 0;
   };
-  const closeList = () => {
-    if (!listType) return;
-    html.push(`</${listType}>`);
-    listType = null;
+  const parseListItem = (rawLine) => {
+    const match = /^([ \t]*)([-+*]|\d+[.)])\s+(.+)$/.exec(rawLine);
+    if (!match) return null;
+    return {
+      indent: match[1].replaceAll("\t", "    ").length,
+      type: /^\d/u.test(match[2]) ? "ol" : "ul",
+      content: match[3],
+    };
   };
-  const startList = (type) => {
-    if (listType === type) return;
-    closeList();
-    listType = type;
-    html.push(`<${type}>`);
+  const renderListBlock = (startIndex) => {
+    const items = [];
+    let cursor = startIndex;
+    while (cursor < lines.length) {
+      const item = parseListItem(lines[cursor]);
+      if (!item) break;
+      items.push(item);
+      cursor += 1;
+    }
+
+    const stack = [];
+    const openList = (item) => {
+      html.push(`<${item.type}>`);
+      html.push(`<li>${renderInline(item.content)}`);
+      stack.push({ indent: item.indent, type: item.type });
+    };
+    const closeList = () => {
+      const current = stack.pop();
+      html.push(`</li></${current.type}>`);
+    };
+
+    for (const item of items) {
+      while (stack.length && item.indent < stack.at(-1).indent) closeList();
+
+      if (!stack.length || item.indent > stack.at(-1).indent) {
+        openList(item);
+        continue;
+      }
+
+      if (item.type === stack.at(-1).type) {
+        html.push(`</li>\n<li>${renderInline(item.content)}`);
+        continue;
+      }
+
+      closeList();
+      openList(item);
+    }
+
+    while (stack.length) closeList();
+    return cursor;
   };
 
   for (let index = 0; index < lines.length; index += 1) {
@@ -127,7 +165,6 @@ function renderMarkdown(markdown, { glossary, volume }) {
 
     if (line.startsWith("```")) {
       flushParagraph();
-      closeList();
       if (inCode) {
         html.push(`<pre><code>${escapeHtml(code.join("\n"))}</code></pre>`);
         code = [];
@@ -141,18 +178,15 @@ function renderMarkdown(markdown, { glossary, volume }) {
     }
     if (!line) {
       flushParagraph();
-      closeList();
       continue;
     }
     if (/^!\[[^\]]*\]\([^)]+\)$/.test(line)) {
       flushParagraph();
-      closeList();
       imageNotes += 1;
       continue;
     }
     if (/^([-*_])\1{2,}$/.test(line)) {
       flushParagraph();
-      closeList();
       html.push("<hr>");
       continue;
     }
@@ -160,25 +194,20 @@ function renderMarkdown(markdown, { glossary, volume }) {
     const heading = /^(#{1,6})\s+(.+)$/.exec(line);
     if (heading) {
       flushParagraph();
-      closeList();
       const level = Math.min(6, heading[1].length + 1);
       const id = uniqueId(heading[2]);
       html.push(`<h${level} id="${escapeHtml(id)}">${renderInline(heading[2], { highlight: false })}</h${level}>`);
       continue;
     }
 
-    const unordered = /^[-+*]\s+(.+)$/.exec(line);
-    const ordered = /^\d+[.)]\s+(.+)$/.exec(line);
-    if (unordered || ordered) {
+    if (parseListItem(rawLine)) {
       flushParagraph();
-      startList(ordered ? "ol" : "ul");
-      html.push(`<li>${renderInline((ordered ?? unordered)[1])}</li>`);
+      index = renderListBlock(index) - 1;
       continue;
     }
 
     if (line.startsWith(">")) {
       flushParagraph();
-      closeList();
       const quoteLines = [];
       while (index < lines.length && lines[index].trim().startsWith(">")) {
         quoteLines.push(lines[index].trim().replace(/^>\s?/, ""));
@@ -191,7 +220,6 @@ function renderMarkdown(markdown, { glossary, volume }) {
 
     if (line.startsWith("|") && lines[index + 1]?.trim().match(/^\|?\s*:?-{3,}/)) {
       flushParagraph();
-      closeList();
       const tableLines = [line];
       index += 2;
       while (index < lines.length && lines[index].trim().startsWith("|")) {
@@ -208,7 +236,6 @@ function renderMarkdown(markdown, { glossary, volume }) {
     paragraph.push(line);
   }
   flushParagraph();
-  closeList();
   if (inCode && code.length) html.push(`<pre><code>${escapeHtml(code.join("\n"))}</code></pre>`);
   return { html: html.join("\n"), imageNotes };
 }
