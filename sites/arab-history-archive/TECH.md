@@ -19,10 +19,11 @@ npm run build:arab-history
 1. 读取卷册注册表与词条库；
 2. 校验四时代、Future Volume 开关、唯一 ID、明确 era 映射和 Markdown checksum；
 3. 移除 frontmatter，把 Markdown 转为语义 HTML；列表按原始空格或 Tab 缩进建立层级栈，保留无序、有序及两者混排的父子关系；
-4. 在正文文本节点中进行最长词条匹配并生成 `GlossaryTrigger`；
-5. 包裹阿拉伯字符以保证 BiDi；
-6. 写入静态 HTML、CSS、JS、manifest 与 glossary JSON API；
-7. 更新 `ARAB-HISTORY-ARCHIVE/` 镜像。
+4. 从卷册注册表按 `order` 提取当前六篇 published 笔记，生成无脚本可用的笔记目录，并链接到对应卷册开头；
+5. 在正文文本节点中进行最长词条匹配并生成 `GlossaryTrigger`；
+6. 包裹阿拉伯字符以保证 BiDi；
+7. 写入静态 HTML、CSS、JS、manifest 与 glossary JSON API；
+8. 更新 `ARAB-HISTORY-ARCHIVE/` 镜像。
 
 构建器不访问 Obsidian 路径。GitHub Actions 只读取仓库内快照，因此发布可复现且不会暴露本地绝对路径。
 

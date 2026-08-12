@@ -99,7 +99,8 @@ test("generated lists preserve every source item and its nested semantics", asyn
       .split(/\r?\n/u)
       .filter((line) => /^[ \t]*(?:[-+*]|\d+[.)])\s+/u.test(line)).length;
   }
-  assert.equal((html.match(/<li>/gu) ?? []).length, sourceListItems + 3);
+  const directoryListItems = (html.match(/data-note-nav=/gu) ?? []).length;
+  assert.equal((html.match(/<li>/gu) ?? []).length, sourceListItems + 3 + directoryListItems);
 
   const hierarchyStart = html.indexOf("阿拉伯半岛作为闪族发源地的假说");
   const hierarchyEnd = html.indexOf("闪含两族的关系", hierarchyStart);
@@ -127,6 +128,28 @@ test("generated lists preserve every source item and its nested semantics", asyn
   assert.deepEqual(stack, []);
 });
 
+test("note directory exposes the six registered notes", async () => {
+  const [html, registry] = await Promise.all([
+    readRepo("ARAB-HISTORY-ARCHIVE/index.html"),
+    parseJson("sites/arab-history-archive/content/volumes.json"),
+  ]);
+  const publishedNotes = registry.volumes
+    .filter(({ status }) => status === "published")
+    .toSorted((left, right) => left.order - right.order);
+  const directory = html.match(/<nav class="note-directory"[\s\S]*?<\/nav>/u)?.[0] ?? "";
+  const links = [...directory.matchAll(/<a href="#volume-([^"]+)" data-note-nav="(\d)">/gu)];
+
+  assert.match(directory, /<h2 id="note-directory-title">六篇笔记目录<\/h2>/u);
+  assert.equal(links.length, 6);
+  assert.deepEqual(links.map((match) => Number(match[2])), [1, 2, 3, 4, 5, 6]);
+  assert.deepEqual(links.map((match) => match[1]), publishedNotes.slice(0, 6).map(({ id }) => id));
+  publishedNotes.slice(0, 6).forEach(({ id, title }) => {
+    assert.match(directory, new RegExp(title, "u"));
+    assert.match(directory, new RegExp(`href="#volume-${id}"`, "u"));
+  });
+  links.forEach((match) => assert.match(html, new RegExp(`id="volume-${match[1]}"`, "u")));
+});
+
 test("generated-static implementation stays registry-driven", async () => {
   const [builder, runtime, css, config] = await Promise.all([
     readRepo("scripts/build-arab-history-archive.mjs"),
@@ -138,6 +161,7 @@ test("generated-static implementation stays registry-driven", async () => {
   assert.match(builder, /registry\.volumes\.filter/u);
   assert.match(builder, /createHash\("sha256"\)/u);
   assert.match(builder, /futureVolumes\?\.enabled/u);
+  assert.match(builder, /NOTE_DIRECTORY_LIMIT = 6/u);
   assert.match(runtime, /IntersectionObserver/u);
   assert.match(runtime, /requestAnimationFrame\(updateProgress\)/u);
   assert.match(runtime, /arab-history:interaction/u);
@@ -146,4 +170,5 @@ test("generated-static implementation stays registry-driven", async () => {
   assert.match(css, /max-height: min\(50svh, 32rem\)/u);
   assert.match(css, /\.markdown-body li > ul/u);
   assert.match(css, /list-style-type: circle/u);
+  assert.match(css, /\.note-directory/u);
 });

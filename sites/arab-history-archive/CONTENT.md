@@ -24,6 +24,8 @@
 
 构建器只渲染 `status: published` 的记录。正文中的词条在构建阶段转换为可访问按钮；词条卡片和 `/api/glossary` 静态 JSON 都来自同一个 `glossary.json`。
 
+Hero 后的笔记目录按 `order` 展示当前六篇 published 笔记，并直接链接到对应卷册开头。它以笔记为单位，不读取单篇 Markdown 内部的章节标题；后续笔记仍通过卷册注册表和页面尾部的 Future Neutral 区域扩展。
+
 ## 后续笔记空间
 
 新增笔记时：

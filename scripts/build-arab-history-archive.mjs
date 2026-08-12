@@ -2,6 +2,8 @@ import { createHash } from "node:crypto";
 import { cp, mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 
+const NOTE_DIRECTORY_LIMIT = 6;
+
 const escapeHtml = (value = "") => String(value)
   .replaceAll("&", "&amp;")
   .replaceAll("<", "&lt;")
@@ -257,7 +259,13 @@ const navigation = (registry) => registry.eras.map((era) => `
   </a>`).join("");
 
 function pageTemplate({ registry, glossary, volumes, totalImageNotes }) {
-  const publishedVolumes = registry.volumes.filter(({ status }) => status === "published");
+  const publishedVolumes = registry.volumes
+    .filter(({ status }) => status === "published")
+    .toSorted((left, right) => left.order - right.order);
+  const directoryNotes = publishedVolumes.slice(0, NOTE_DIRECTORY_LIMIT);
+  if (directoryNotes.length !== NOTE_DIRECTORY_LIMIT) {
+    throw new Error(`Arab History Archive requires ${NOTE_DIRECTORY_LIMIT} published notes for its directory`);
+  }
   const eraSections = registry.eras.map((era) => {
     const eraVolumes = volumes.filter(({ meta }) => meta.eraIndex === era.index);
     return `
@@ -287,7 +295,7 @@ function pageTemplate({ registry, glossary, volumes, totalImageNotes }) {
   <meta name="theme-color" content="#D7B593">
   <title>阿拉伯通史数字档案馆</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260812-1">
+  <link rel="stylesheet" href="styles.css?v=20260812-2">
   <link rel="alternate" type="application/json" href="api/glossary" title="术语库 API">
 </head>
 <body data-era="0">
@@ -311,6 +319,29 @@ function pageTemplate({ registry, glossary, volumes, totalImageNotes }) {
           <div><dt>状态</dt><dd>持续更新</dd></div>
         </dl>
       </section>
+      <nav class="note-directory" aria-labelledby="note-directory-title">
+        <header class="note-directory__intro">
+          <p class="eyebrow">READING NOTES · 06</p>
+          <h2 id="note-directory-title">六篇笔记目录</h2>
+          <p>目录收录目前已发布的六篇笔记；后续笔记仍按登记顺序保留扩展空间。</p>
+        </header>
+        <ol>
+          ${directoryNotes.map((note, index) => {
+            const era = registry.eras.find(({ index: eraIndex }) => eraIndex === note.eraIndex);
+            return `
+            <li>
+              <a href="#volume-${escapeHtml(note.id)}" data-note-nav="${index + 1}">
+                <span class="note-directory__number">${String(index + 1).padStart(2, "0")}</span>
+                <span class="note-directory__entry">
+                  <strong>${escapeHtml(note.title)}</strong>
+                  <small>${escapeHtml(note.sourceLabel)} · ${escapeHtml(era?.title || "")}</small>
+                </span>
+                <span class="note-directory__arrow" aria-hidden="true">↓</span>
+              </a>
+            </li>`;
+          }).join("")}
+        </ol>
+      </nav>
       ${eraSections}
       <section class="future-volumes" id="future-volumes" aria-labelledby="future-title">
         <p>ARCHIVE CONTINUES</p>

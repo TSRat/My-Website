@@ -188,6 +188,7 @@ button {
 }
 
 .hero,
+.note-directory,
 .era-section,
 .future-volumes,
 .provenance {
@@ -272,6 +273,93 @@ button {
   margin: 0;
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+.note-directory {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(2.5rem, 6vw, 7rem);
+  padding-block: clamp(4.5rem, 8vw, 8rem);
+  border-block: 1px solid color-mix(in srgb, var(--text-color) 25%, transparent);
+}
+
+.note-directory__intro h2 {
+  max-width: 7ch;
+  margin: 0.8rem 0 1.25rem;
+  font-size: clamp(2.4rem, 4.5vw, 4.8rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.note-directory__intro > p:last-child {
+  max-width: 20rem;
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.72;
+}
+
+.note-directory ol {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid color-mix(in srgb, var(--text-color) 25%, transparent);
+  list-style: none;
+}
+
+.note-directory li {
+  margin: 0;
+}
+
+.note-directory a {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: start;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--text-color) 25%, transparent);
+  text-decoration: none;
+}
+
+.note-directory__number,
+.note-directory__entry small {
+  font-family: var(--sans);
+}
+
+.note-directory__number {
+  padding-top: 0.25rem;
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.62;
+}
+
+.note-directory__entry {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.note-directory__entry strong {
+  font-size: clamp(1.1rem, 1.7vw, 1.4rem);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.note-directory__entry small {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  opacity: 0.62;
+}
+
+.note-directory__arrow {
+  padding-top: 0.05rem;
+  font-size: 1.15rem;
+  transition: transform 160ms ease;
+}
+
+.note-directory a:hover .note-directory__arrow,
+.note-directory a:focus-visible .note-directory__arrow {
+  transform: translateY(0.25rem);
 }
 
 .era-section {
@@ -744,6 +832,22 @@ button {
     gap: 1rem;
   }
 
+  .note-directory {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-block: 4.5rem;
+  }
+
+  .note-directory__intro h2 {
+    max-width: none;
+    font-size: clamp(2.5rem, 12vw, 3.8rem);
+  }
+
+  .note-directory a {
+    grid-template-columns: 2rem minmax(0, 1fr) auto;
+    gap: 0.75rem;
+  }
+
   .era-heading {
     margin-bottom: 6rem;
   }
@@ -858,6 +962,10 @@ button {
   .site-header,
   .glossary-panel,
   .glossary-trigger {
+    transition: none !important;
+  }
+
+  .note-directory__arrow {
     transition: none !important;
   }
 }

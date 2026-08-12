@@ -35,6 +35,7 @@ Future Neutral 只表示“尚待编辑映射”，不得被描述成新的历�
 - GlossaryTrigger：默认虚线，hover 实线，active 使用低饱和背景；不改变文本流。
 - GlossaryPanel：切换词条不跳转正文。移动端支持关闭按钮、Escape 和向下滑动。
 - Era skinning：进入 Era 时更新全局 CSS 变量；颜色 1 秒过渡。
+- Note Directory：Hero 后使用档案索引式分隔行展示当前六篇已发布笔记；不是卡片墙，也不替代四时代导航。桌面为说明/索引双栏，移动端折叠为单栏。
 
 ## 动效与可访问性
 
