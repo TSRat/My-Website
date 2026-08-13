@@ -1,5 +1,42 @@
 # Repository handoff
 
+## 2026-08-13: IVORY ARCHIVE daily briefing issue 28
+
+### Current target
+
+Publish the 2026-08-13 daily briefing with five source-verified stories,
+semantic deduplication against all 135 published stories and two historical
+baselines, five production-safe editor illustrations, and synchronized Sites
+and GitHub Pages releases.
+
+### Editorial scope
+
+- Blanche Lazzell's WVU retrospective and the networks behind white-line
+  woodblock modernism.
+- Tony Cokes' multi-site Tina Turner commission and public memory in St. Louis.
+- MIT's HECIA atlas linking extreme-habitat design and behavioral health.
+- MoM-BH*-1 and the distinction between JWST observations and the proposed
+  gas-enshrouded black-hole-star model.
+- Gestational diabetes and longer-term cardiovascular-kidney-metabolic
+  outcomes in a 1.15-million-person claims cohort.
+
+### Deduplication decision
+
+All five stories are distinct from the 135 published archive stories and the
+two historical baselines in subject, event, central claim, and creation angle.
+The archive's earlier postpartum Medicaid coverage item concerns state benefit
+duration and access; the new gestational-diabetes item concerns a new cohort,
+multi-system risk estimates, and longitudinal clinical follow-up.
+
+### Intended files and verification
+
+- Authoritative data: `sites/ivory-archive/briefings.ts`.
+- Sites mirror data: `app/briefings.ts`.
+- Five JPEG editor illustrations in `public/story-images/`.
+- Run the complete multi-site Pages build and reference validation, the Ivory
+  production build and renderer parity tests, lint, Sites tests, local preview,
+  and public response/image checks before reporting publication.
+
 ## 2026-08-09: Portfolio-wide TSRat logo navigation
 
 ### Current target
