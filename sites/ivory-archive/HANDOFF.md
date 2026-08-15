@@ -1,5 +1,46 @@
 # IVORY ARCHIVE handoff
 
+## 2026-08-15 · Issue 30 daily publication
+
+### Current target
+
+发布第 30 期，同时补齐此前仅完成 Sites 发布、未进入 GitHub `main` 的第 29 期，
+并沿用多站点 Actions artifact 架构更新 GitHub Pages。
+
+### Completed
+
+- 新增 2026-08-15 第 30 期：de Young 女性纸本艺术与承诺赠礼、美国高校
+  AI 艺术教育基准、州级驱逐暂缓令与寄养照护进入、性与性别多元青年
+  心理健康服务轨迹，以及东日本大地震后十五年创伤反应随访。
+- 同步恢复第 29 期的五则数据和五张图片，使 GitHub 源码与 Sites 内容重新
+  一致；第 29 期仍保持 2026-08-14 原始日期、来源和限定语。
+- 与此前 145 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。女性艺术家收藏条目与既有个展的对象不同；住房
+  政策条目也没有重复第 17 期福利悬崖的个体收益机制，最终五则均无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充展品、艺术家、真实课堂、家庭、
+  性与性别多元青年、灾难现场、病历或研究图。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下第 29 与第 30 期共十张图片
+
+### Verification
+
+- 发布前运行 `npm run build:pages`、`npm run validate:pages`、
+  `npm run build:ivory`、renderer parity / 内容合同测试、`npm run lint` 与
+  `git diff --check`。
+- 第 30 期五张图片统一验证为 1672×941、sRGB、渐进式 JPEG，并核对首页
+  卡片与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
 ## 2026-08-12 · Issue 27 daily publication
 
 ### Current target
