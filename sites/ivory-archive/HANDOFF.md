@@ -1,5 +1,48 @@
 # IVORY ARCHIVE handoff
 
+## 2026-08-16 · Issue 31 daily publication
+
+### Current target
+
+发布第 31 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-16 第 31 期：MoMA 百年动画制作档案、《“Shangri”
+  罗摩衍那》分散画页与数字重组、磁星周围真空双折射候选证据、三十一国
+  熟人网络与不平等态度，以及印度面向女性的无条件现金转移与照护承认。
+- 每则先解释陌生媒介、宗教文本、物理效应、调查指标或福利制度，再分开
+  记录事件、带句号细节和分析；数字重组没有被写成原件替代，跨波段偏振
+  没有被写成最终确认，横截面网络关联也没有被写成因果影响。
+- 与此前 150 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。动画制作档案与既有电影放映基础设施不同，史诗
+  画页重组与第 22 期手稿制作工艺不同，现金转移也不同于第 17 期福利悬崖，
+  最终五则均无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充 MoMA 展品、Pahari 画页、天文
+  观测、研究图、调查参与者、政策受益者或真实支付界面。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 31 期渐进式 JPEG 图片
+
+### Verification
+
+- 发布前运行 `npm run build:pages`、`npm run validate:pages`、
+  `npm run build:ivory`、renderer parity / 内容合同测试、`npm run lint` 与
+  `git diff --check`。
+- 五张图片统一验证为 1672×941、8-bit sRGB 渐进式 JPEG，并核对首页卡片与当日
+  日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
 ## 2026-08-15 · Issue 30 daily publication
 
 ### Current target
