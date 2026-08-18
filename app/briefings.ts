@@ -8,6 +8,8 @@ export type BriefingStory = {
   background: string;
   happened: string;
   whyItMatters: string;
+  importance?: string;
+  creatorAngle?: string;
   facts: string[];
   sourceName: string;
   sourceUrl: string;
@@ -33,6 +35,143 @@ export const knownHistoryTopics = [
 ];
 
 export const briefings: Briefing[] = [
+  {
+    "date": "2026-08-18",
+    "displayDate": "2026.08.18",
+    "issueNo": "33",
+    "theme": "谁在塑造理解：语言延续、照护教育、文化身体、抗争记忆与宇宙普查",
+    "intro": "本期从 Christian Thompson 以 Bidjara 语言组织的新展、Kansas 博物馆把照护写进 K–12 艺术教育、文化心理学新书《Beyond Biology》、跨 Argentina、Chile、Mexico 与 Spain 的女性主义运动口述史，以及 Euclid 对早期类星体的首次成批发现出发，观察理解并非只来自对象本身，也来自保存语言、设计课堂、讲述身体、传递策略与建造巡天基础设施的方式。",
+    "learningGoal": "学会把文化延续与静态保存分开，把照护视为教育制度而非情绪标签，把文化与生物的相关路径同简单因果分开，并区分运动经验的可转译部分与地方条件；同时看见天文发现如何依赖大面积巡天和地面光谱复核。",
+    "connection": "五则故事都在重新安排谁能够成为知识的主体：原住民语言不再只是被归档的遗存，教师与学生共同解释馆藏，日常文化进入身体研究，运动参与者成为政治经验的叙述者，而巡天望远镜把过去只能逐个寻找的遥远天体变成可以比较的群体。",
+    "uniqueCount": 5,
+    "topics": [
+      "艺术人文",
+      "社会科学",
+      "女性主义"
+    ],
+    "stories": [
+      {
+        "category": "艺术人文 × 原住民语言 × 当代艺术",
+        "image": "/story-images/future-ancestor.jpg",
+        "imageAlt": "匿名侧影、手势、植物形态与声波丝带连接祖辈档案和未来空间的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释语言延续、视觉文化与代际传递，并非 Christian Thompson 的作品、展览现场、真实人物或 Bidjara 文化物件",
+        "title": "Christian Thompson 让 Bidjara 语言从“被保存的遗产”变成正在发生的艺术",
+        "summary": "Christian Thompson 是 Bidjara 艺术家，使用摄影、影像、声音与表演讨论身份和殖民历史。Spencer Museum of Art 今天开幕的《Future Ancestor》把 Bidjara 语言放进多媒体装置，主张只要仍有词语被说出，语言就不能被简单宣告为沉默或消失。",
+        "background": "Bidjara 是 Australian Aboriginal 语言之一，语言分类中的“灭绝”通常描述代际母语使用中断，却可能遮住词汇、记忆、复兴实践与说话者仍然存在。Thompson 的创作把声音、身体和图像并置，让语言延续成为当下行动，而不只是博物馆保存的过去。",
+        "happened": "《Future Ancestor》于 2026 年 8 月 18 日在 University of Kansas 的 Spencer Museum of Art 开幕，展至 2027 年 1 月 10 日。馆方将它描述为一件编织历史、语言与想象未来的多媒体装置，并把语言保存与文化生存列为展览的核心。",
+        "facts": [
+          "Thompson 1978 年出生于 Gawler，媒介包括摄影、影像、雕塑、表演与声音。",
+          "展览位于 Larry & Barbara Marshall Family Balcony，展期从 2026 年 8 月 18 日至 2027 年 1 月 10 日。",
+          "馆方介绍以“只要还有一个词继续被说出，语言就从未真正沉默”为开端。",
+          "装置把故事、视觉文化、声音和手势交织起来，并明确把 Bidjara 的代际共鸣视为艺术方法。",
+          "Thompson 于 2015 年在 Oxford 的 Trinity College 获得美术哲学博士；2018 年因视觉艺术贡献获 Order of Australia 官佐勋章。",
+          "展览由全球原住民艺术与生活方式策展人 Ryan Clasby 策划，并获馆方 Arts Research Integration 项目支持。"
+        ],
+        "sourceName": "Spencer Museum of Art／Christian Thompson: Future Ancestor",
+        "sourceUrl": "https://spencerart.ku.edu/exhibitions-and-events/exhibitions/upcoming-exhibitions/christian-thompson-future-ancestor",
+        "sourceDate": "展览开幕 2026-08-18；展至 2027-01-10",
+        "whyItMatters": "把语言放进表演和装置，会改变“保存”的方向：不是由机构替一个静止对象保管，而是让说话、观看与身体实践继续生产关系。值得追踪的问题是，展览期间谁实际说、听和解释 Bidjara；博物馆能否把语言权威留给社群，并记录词语在新一代作品中怎样改变，而不把复兴再次冻结成标签。",
+        "importance": "把语言放进表演和装置，会改变“保存”的方向：不是由机构替一个静止对象保管，而是让说话、观看与身体实践继续生产关系。作品把是否仍有大量母语者，与语言是否仍能承载文化行动分开。",
+        "creatorAngle": "值得追踪：展览期间谁实际说、听和解释 Bidjara？博物馆能否把语言权威留给社群，并记录词语在新一代作品中怎样改变，而不把复兴再次冻结成标签？"
+      },
+      {
+        "category": "艺术人文 × 教育制度 × 照护",
+        "image": "/story-images/looking-after.jpg",
+        "imageAlt": "抽象课堂与博物馆桥梁横跨平原，匿名手势围绕作品、笔记与探索路线的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释艺术教育中的照护、合作与学习基础设施，并非展览现场、真实师生、馆藏作品或 Kansas 地景照片",
+        "title": "一场 Kansas 新展把“照护”写进艺术教育的制度设计",
+        "summary": "Spencer Museum of Art 是 University of Kansas 的教学型博物馆，50 多年来与全州幼儿园至高中教师合作。今天开幕的《Looking After》不是把照护当作展览口号，而是用馆藏、教师伙伴关系和公开培训展示艺术如何支持提问、对话与容纳不确定性。",
+        "background": "博物馆教育常被理解为参观后的附加讲解，但该馆的 Partners in Education Across Kansas（PEAK）把教师、学生、馆藏和州级课程标准连接为长期网络。展览因此同时回顾作品怎样进入课堂，也公开展示维持这种关系的组织结构。",
+        "happened": "《Looking After: Art and Care in Education Across Kansas》于 2026 年 8 月 18 日开幕，展至 2027 年 1 月 10 日。馆方选出曾用于教育项目的馆藏作品，并公布 9 月 18 至 19 日面向 Kansas K–12 教师的免费会议，把展厅回顾接到下一轮专业学习。",
+        "facts": [
+          "展览覆盖中央庭院和两个画廊，由学校与教师参与协调员 Rachel Straughn-Navarro、教育与诠释总监 Kristina Walker 共同策展。",
+          "馆方称其服务 Kansas K–12 教师和学生已有 50 多年，并把支持州学术标准列为教育经验的一部分。",
+          "展示对象包括约 1908 至 1910 年的《Daisy Field》、1965 至 1967 年的版画，以及 2008 年和 2010 年作品。",
+          "PEAK 是展览点名的州级伙伴计划，馆藏作品被用于连接既有知识、开启对话和鼓励好奇。",
+          "2026 年 9 月 18 至 19 日的教师会议免费向全州 K–12 教师开放，艺术家 Nathalie Miebach 将作公开主题演讲。",
+          "项目获得 Kansas Arts Commission、National Endowment for the Arts、社区基金会和私人捐赠等多层资助。"
+        ],
+        "sourceName": "Spencer Museum of Art／Looking After: Art and Care in Education Across Kansas",
+        "sourceUrl": "https://spencerart.ku.edu/exhibitions-and-events/exhibitions/upcoming-exhibitions/looking-after-art-and-care-education-across-kansas",
+        "sourceDate": "展览开幕 2026-08-18；教师会议 2026-09-18 至 09-19",
+        "whyItMatters": "这里的照护不是把课堂变得柔和，而是给教师时间、共同语言、可重复使用的馆藏资源和专业网络。它提醒我们，学习中的安全感与开放问题依赖预算、岗位和伙伴关系。可以继续比较参与学校的地域分布、教师复用作品的方式，以及项目是否改变学生提出问题和处理歧义的能力，而不是只统计参观人数。",
+        "importance": "这里的照护不是把课堂变得柔和，而是给教师时间、共同语言、可重复使用的馆藏资源和专业网络。它提醒我们，学习中的安全感与开放问题依赖预算、岗位和伙伴关系。",
+        "creatorAngle": "可以继续比较参与学校的地域分布、教师复用作品的方式，以及项目是否改变学生提出问题和处理歧义的能力，而不是只统计参观人数。"
+      },
+      {
+        "category": "社会科学 × 文化心理学 × 身体与日常",
+        "image": "/story-images/beyond-biology.jpg",
+        "imageAlt": "匿名人物由语言节奏、饮食仪式、音乐、地图、社交手势和 DNA 螺旋交织而成的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释文化与生物相互作用的多条路径，并非实验结果、医学影像、基因数据或真实人物",
+        "title": "《Beyond Biology》把文化从“背景”移到身体与选择的形成过程",
+        "summary": "文化心理学研究社会共享的习惯、意义和制度怎样与人的认知和行为相关。Jason Martens 今天出版的《Beyond Biology: How Culture Created You》面向普通读者，讨论语言、饮食、音乐和社会规范为何不仅表现差异，也可能与身体、偏好和健康分布一起变化。",
+        "background": "Martens 是 Capilano University 心理学教师，拥有社会人格心理学博士学位。书名中的“超越生物学”并不是否定生物过程，而是反对把个人特征只解释为基因或独立选择；它要求把学习、制度和长期环境放回解释。",
+        "happened": "Dundurn Press 于 2026 年 8 月 18 日发行全书 340 页的平装本。出版方把它定位为文化心理学导论，并用多个跨领域例子讨论文化如何与完美音高、饮食规则、疾病地理分布、身体形态、吸引偏好甚至 DNA 变化相联系。",
+        "facts": [
+          "平装本 ISBN 为 978-1-4597-5693-9，出版与销售日期为 2026 年 8 月 18 日。",
+          "全书 340 页，面向 psychology、anthropology 和 sociology 的普通读者。",
+          "出版简介以 Mandarin 使用者中的完美音高比例、Italy 的咖啡加奶时间习惯和 multiple sclerosis 的地区差异作为例子。",
+          "作者还讨论脚与眼睛形态、吸引偏好和 DNA，强调文化影响可能进入看似纯粹生物的层面。",
+          "Martens 在 University of British Columbia 完成社会人格心理学博士训练，研究人们如何理解世界以及文化的作用。",
+          "这些例子来自不同研究传统；书的综合叙事不能替代对每项研究样本、测量和替代解释的分别核查。"
+        ],
+        "sourceName": "University of Toronto Press Distribution／Dundurn Press／Beyond Biology",
+        "sourceUrl": "https://utpdistribution.com/9781459756939/beyond-biology/",
+        "sourceDate": "出版 2026-08-18；ISBN 9781459756939",
+        "whyItMatters": "把文化纳入身体解释，可以打破“天生如此”和“个人选择”的二分，但也容易把国家或语言群体说成同质。阅读时值得为每个例子画出机制链：谁在什么制度中学习哪种习惯，测量到的相关性是什么，哪些生物与物质条件同时存在。进一步可比较同一习惯在移民、代际与阶层变化中是否保持，检验文化标签究竟解释了什么。",
+        "importance": "把文化纳入身体解释，可以打破“天生如此”和“个人选择”的二分，但也容易把国家或语言群体说成同质。关键是为每个例子分开学习机制、统计相关、生物条件与物质环境。",
+        "creatorAngle": "可把书中的每个例子画成机制链，并比较同一习惯在移民、代际与阶层变化中是否保持，以检验文化标签究竟解释了什么。"
+      },
+      {
+        "category": "女性主义 × 社会运动 × 跨国政治",
+        "image": "/story-images/sex-and-dissent.jpg",
+        "imageAlt": "四条不同颜色的匿名街头组织路径通过围巾、扩音器、家属照片框和议会文件汇入共同广场的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释跨国女性主义组织、记忆与策略流动，并非抗议现场、真实活动者、受害者照片、组织标志或新闻影像",
+        "title": "《Sex and Dissent》比较四场女性主义运动怎样把愤怒转成制度改变",
+        "summary": "记者 Meaghan Beatley 的新书《Sex and Dissent》用十年报道串联 Argentina 的堕胎权运动、Chile 的学生女性主义、Spain 围绕同意的法律争论，以及 Mexico 对 femicide 的追责。它关注的不只是抗议规模，而是参与者如何把私人伤害变成可传播的公共语言和组织策略。",
+        "background": "四地运动面对的法律、政党、暴力和媒体环境不同，不能被压缩成一套全球模板。Beatley 曾在 Chile 和 Argentina 任编辑，并在七国报道；书中通过活动者、学生、前游击队员和寻求正义的母亲，把制度变化与个人经验并置。",
+        "happened": "Penguin Books 于 2026 年 8 月 4 日发行 384 页版本。出版方把四个案例分别连到 Argentina 堕胎合法化、Chile 结构性不平等与宪法进程、Spain 对同意定义的重写，以及 Mexico 学生占领政府建筑以迫使 femicide 进入公共议程。",
+        "facts": [
+          "全书 ISBN 为 978-0-14-313844-0，平装与电子书于 2026 年 8 月 4 日发行。",
+          "Argentina 章节追踪堕胎权议题如何借助大众媒体进入全国动员，并最终推动合法化。",
+          "Chile 章节关注年轻女性主义者在高校反性骚扰与更广泛宪法政治之间建立连接。",
+          "Spain 章节以一宗广受关注的群体性侵案件为节点，记录公众如何争论并改变法律中的同意概念。",
+          "Mexico 章节记录学生占领政府建筑、失去女儿的母亲和其他组织者如何迫使 femicide 获得持续可见性。",
+          "书的材料来自十年沉浸式报道；它提供运动叙事和策略比较，不等同于对每种策略效果的实验性评估。"
+        ],
+        "sourceName": "Penguin Random House／Meaghan Beatley, Sex and Dissent",
+        "sourceUrl": "https://www.penguinrandomhouse.com/books/753031/sex-and-dissent-by-meaghan-beatley/",
+        "sourceDate": "出版 2026-08-04；384 页；ISBN 9780143138440",
+        "whyItMatters": "四个案例的共同点不是同一口号，而是把经验翻译为联盟、媒体事件、占领、法律文本和代际记忆的能力。真正可转译的是组织问题而非表面动作：谁承担风险，谁能代表受害者，议题怎样跨越政党与阶层。可以继续把每地的触发事件、组织结构、法律节点和反弹排成时间线，比较胜利之后哪些基础设施仍在运作。",
+        "importance": "四个案例的共同点不是同一口号，而是把经验翻译为联盟、媒体事件、占领、法律文本和代际记忆的能力。真正可转译的是组织问题而非表面动作：谁承担风险，谁能代表受害者，议题怎样跨越政党与阶层。",
+        "creatorAngle": "可把每地的触发事件、组织结构、法律节点和反弹排成时间线，比较胜利之后哪些基础设施仍在运作，哪些策略只在特定地方条件下成立。"
+      },
+      {
+        "category": "社会科学 × 天文学 × 巡天基础设施",
+        "image": "/story-images/euclid-quasars.jpg",
+        "imageAlt": "宽幅宇宙网格中许多微弱光点被筛选，再由三座地面望远镜复核成早期类星体样本的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 Euclid 巡天、候选筛选与地面光谱复核，并非真实类星体图像、观测数据、天空位置图或任务界面",
+        "title": "Euclid 一次增加 31 个早期类星体，把罕见纪录变成可比较样本",
+        "summary": "类星体是星系中心超大质量黑洞吸积物质时出现的短暂高亮阶段。Euclid 在约 3,000 平方度首批巡天区域发现 31 个高红移类星体，其中 12 个来自宇宙诞生后约 7.7 亿年内，令此前已知的这一时期样本数增加一倍以上。",
+        "background": "早期类星体稀少、遥远，近红外光又容易与银河系恒星混淆。Euclid 原本为绘制暗物质与暗能量相关的大尺度宇宙设计，但它的大面积可见光与近红外巡天，也适合先批量筛出候选，再交给地面大望远镜取得光谱确认。",
+        "happened": "Euclid Consortium 于 2026 年 7 月 6 日在《Astronomy & Astrophysics》发表首批高红移类星体搜索。团队从任务前一年半的宽场巡天中筛选候选，并用 Keck、Magellan 和 Large Binocular Telescope 复核，确认 31 个红移 6.6 至 7.8 的新类星体。",
+        "facts": [
+          "搜索覆盖约 3,000 平方度，使用 Euclid 的 I、Y、J、H 波段图像，并在可用时加入 z 波段资料。",
+          "候选筛选结合多种 machine-learning 与概率方法，最终天体身份由地面光谱确认。",
+          "31 个新类星体中有 12 个红移不低于 7，使此前已知的同类样本数增加一倍以上。",
+          "最高红移天体 EUCL J172902.75+641018.1 的红移约 7.77，超过 2021 年纪录 7.64。",
+          "两颗最早天体发光时宇宙年龄约 6.7 亿年，约为当前年龄的 5%。",
+          "样本的近红外亮度延伸到较暗一端，因此不只包含最容易被发现的极亮异常体；论文仍需后续观测测量宿主星系和黑洞质量。"
+        ],
+        "sourceName": "European Space Agency／Astronomy & Astrophysics／Euclid Consortium",
+        "sourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_the_most_ancient_quasar_in_the_Universe",
+        "sourceDate": "论文与 ESA 结果发布 2026-07-06；doi:10.1051/0004-6361/202658883",
+        "whyItMatters": "从两颗纪录保持者到 31 个对象，研究问题会从“最远是谁”转向“这一时期的分布怎样”。但样本仍由巡天深度、颜色筛选和光谱时间塑造。可以继续追踪候选中哪些被排除、较暗端的完整度，以及 Euclid 与地面望远镜如何分配复核资源；这些制度与技术选择将决定我们以为早期黑洞有多常见。",
+        "importance": "从两颗纪录保持者到 31 个对象，研究问题会从“最远是谁”转向“这一时期的分布怎样”。但样本仍由巡天深度、颜色筛选和光谱时间塑造，发现数量并不是脱离基础设施的自然计数。",
+        "creatorAngle": "可以继续追踪候选中哪些被排除、较暗端的完整度，以及 Euclid 与地面望远镜如何分配复核资源；这些选择将决定我们以为早期黑洞有多常见。"
+      }
+    ]
+  },
   {
     "date": "2026-08-17",
     "displayDate": "2026.08.17",
