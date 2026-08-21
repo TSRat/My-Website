@@ -36,6 +36,147 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    "date": "2026-08-21",
+    "displayDate": "2026.08.21",
+    "issueNo": "35",
+    "theme": "谁能留下可见痕迹：版画协作、女性主义机构、公共意见、支付改革与黑洞旁的恒星",
+    "intro": "本期从 Tamarind Institute 被忽略的全球协作史、University of Michigan 女性与性别研究机构的三十年档案、FDA 规则制定中成批复制的公众意见、Medicare 责任医疗组织未能整体缩小的低收入照护差距，以及紧贴银河系中心黑洞运行的恒星 S301 出发，观察记录、分类与基础设施怎样决定哪些劳动、声音、差距和微弱信号能够进入公共知识。",
+    "learningGoal": "学会辨认艺术作品背后的协作者和机构条件，区分公共参与的数量与来源，读懂差分中的差分研究所报告的平均变化与机构差异，并把已经测得的恒星轨道、模型推断和未来可检验的黑洞自旋分开。",
+    "connection": "五则故事都不是只发现一个新对象，而是在重做可见性的制度：档案给印刷技师署名，纪念展把跨学科女性主义变成组织史，文本分析追踪谁大量复制政策意见，医疗支付研究检验平均绩效是否触及基线不平等，而干涉仪把过去淹没在黑洞附近强光和拥挤星场中的一颗暗星分离出来。",
+    "uniqueCount": 5,
+    "topics": [
+      "艺术人文",
+      "社会科学",
+      "女性主义"
+    ],
+    "stories": [
+      {
+        "category": "艺术人文 × 版画史 × 隐形协作劳动",
+        "image": "/story-images/tamarind-global-printmaking.jpg",
+        "imageAlt": "版画石、滚筒、多双匿名手与跨地域连线组成协作网络的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 Tamarind Institute 的国际版画协作与印刷技师劳动；并非真实版画、艺术家或技师肖像、档案影像或展览现场",
+        "title": "Tamarind 展出三十五年全球合作史，版画不再只剩艺术家一个署名",
+        "summary": "Tamarind Institute 是 University of New Mexico 的专业石版画工作室与培训机构，艺术家在这里与掌握制版、套色和印刷的 master printer 共同完成作品。UNM Art Museum 本周开幕的《Tamarind Goes Global (1985–2020)》首次集中梳理一段较少被记录的国际合作史，并在展签中明确给印刷技师署名。",
+        "background": "Tamarind Lithography Workshop 1960 年在 Los Angeles 成立，目标之一是复兴美国一度衰落的艺术石版画制作；1970 年迁到 Albuquerque 并成为 UNM 的 Tamarind Institute。馆藏保存该机构每一种正式出版版画的留存印样，因此既记录艺术家的图像，也记录工作室怎样培训技师、组织旅行和建立跨国关系。",
+        "happened": "展览 8 月 18 日开放，8 月 21 日举行公众开幕活动，展至 2027 年 3 月 12 日。策展人 Angel Jiang 与 Hannah Cerne 利用版画、照片、档案文件、新录口述史和一段从未公开的 8 毫米搬迁影片，把 1985 至 2020 年的作品放回项目、旅程和共同制作的过程。",
+        "facts": [
+          "UNM Art Museum 的 Tamarind 档案收藏超过 6,000 件版画，原则上包括该机构每一种出版版画的一个留存印样。",
+          "展览聚焦 1985 至 2020 年，因为这一时期在此前机构史中记录相对不足，却包含 Eastern Europe、Africa、Americas 与 Australia 的合作。",
+          "被重访的项目包括 Mexico Nueve（1984）、Trickster（1999）、Exquisite Corpse（2000—2015）、Connections（2002—2004）和 Landmarks（2015）。",
+          "馆方把技术交流放在 Cold War、文化外交、移民与身份政治的历史背景中，而不是把“国际”只当作地理名单。",
+          "展签同时列出艺术家与 master printer，强调后者不是按按钮的执行者，而是在材料、颜色、压力和版次中共同解决问题的专业合作者。",
+          "展览数字化一段记录 1970 年工作室从 Los Angeles 迁往 Albuquerque 的 8 毫米影片，并新增与国际项目参与者的口述史访谈。",
+          "这是这些国际合作项目的原作首次在同一展览中并置，使观众能比较项目如何从单次访问发展为持续网络。"
+        ],
+        "sourceName": "UNM Art Museum／Tamarind Goes Global (1985–2020)",
+        "sourceUrl": "https://artmuseum.unm.edu/exhibition/tamarind-goes-global/",
+        "sourceDate": "展览开放 2026-08-18；公众开幕 2026-08-21；展至 2027-03-12",
+        "whyItMatters": "把印刷技师和档案材料放回展厅，会改变版画史的主语：图像仍由艺术家发起，却依赖高度专业化、经常跨语言的共同劳动才能稳定成为版次。这里的价值不是用“集体创作”抹平角色差异，而是让技术判断、机构资金和旅行网络都能被追问。",
+        "importance": "这场展览把作品目录变成劳动与基础设施目录。它也说明艺术机构的国际化不只是把成品运到更多国家，而是由培训、签证、翻译、设备、印刷标准和长期信任共同搭成；档案是否记录这些条件，会决定后来的艺术史能看见谁。",
+        "creatorAngle": "可以选同一国际项目中的艺术家说明、技师口述史、试印与最终版逐层比较：谁提出视觉目标，谁解决材料问题，展签怎样分配作者身份？再追踪这些合作是否在项目结束后留下当地工作室、培训机会或新的依赖关系。"
+      },
+      {
+        "category": "女性主义 × 大学制度 × 知识史",
+        "image": "/story-images/irwg-resistance-fertile.jpg",
+        "imageAlt": "档案盒、索引卡与书页生长成相互连接的植物枝条的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释女性与性别研究的机构记忆、跨学科协作与集体照护；并非真实档案、人物、校园或展览现场",
+        "title": "《Resistance is Fertile》回看三十年：女性主义研究怎样从边缘议题变成大学基础设施",
+        "summary": "University of Michigan 的 Institute for Research on Women and Gender（IRWG）是支持女性、性别与 sexuality 跨学科研究的校级机构。正在展出的《Resistance is Fertile》以档案、里程碑和参与者故事回看三十年，重点不是宣告一条直线上升的胜利史，而是说明研究为什么需要资金、空间、岗位和合作网络才能不被留在学科边缘。",
+        "background": "IRWG 的成立来自一群教师的共同判断：关于 women、gender 与 sexuality 的研究若只依赖个别课程或个人热情，很容易被既有院系边界拆散。研究所因此承担种子资助、学术社群、公开活动与跨单位协调等功能，把“值得研究”转化为可以持续工作的制度条件。",
+        "happened": "三十周年展在 Lane Hall 展出至 8 月 28 日。机构用保存下来的材料和成员叙事梳理自身怎样回应学科壁垒、知识边缘化与制度阻力，同时把 collaboration、intellectual creativity 和 collective care 作为组织发展的线索。",
+        "facts": [
+          "展览以档案材料、机构里程碑和社群故事共同叙述 IRWG 的演变，而不只罗列负责人或获奖项目。",
+          "研究所的创立理由是：women、gender 与 sexuality 研究需要持续的机构承诺，不能只停留在传统院系的外围。",
+          "馆方把 disciplinary silos、marginalization 与 institutional peripherality 明确列为三十年间需要抵抗的结构。",
+          "展览标题把 resistance 与 fertile 并置，强调抵抗不仅是否定既有规则，也可能培育新研究问题、合作方法和照护关系。",
+          "IRWG 的跨学科定位使历史、人文、社会科学、健康与公共政策研究能够围绕性别问题共享资源，但各领域的方法与证据标准仍需分别保留。",
+          "当前机构首页列出的展期为 2026 年 3 月 23 日至 8 月 28 日，展览地点为 Lane Hall。"
+        ],
+        "sourceName": "University of Michigan Institute for Research on Women and Gender／Resistance is Fertile",
+        "sourceUrl": "https://irwg.umich.edu/events/resistance-is-fertile-celebrating-30-years-of-cultivating-change-39",
+        "sourceDate": "三十周年展 2026-03-23 至 2026-08-28；本期核验 2026-08-21",
+        "whyItMatters": "女性主义知识进入大学，并不表示它从此自动稳定。档案显示，跨学科研究要被持续生产，需要有人维护预算、评审、空间、合作规范和代际记忆；这些行政劳动本身也是知识史的一部分。",
+        "importance": "用周年展书写机构史的风险，是把争论压平为连续成长；它的机会，则是公开哪些研究曾被认为“不属于这里”、哪些联盟改变了资源分配，以及 collective care 何时成为真正的工作制度，而不只是价值词。",
+        "creatorAngle": "可以把三十年档案按资金、岗位、研究主题和合作单位制作成制度时间线，再寻找中断与缺席：谁的项目最容易获得支持，临时教师、学生和行政人员的劳动如何保存，性别研究进入主流后是否产生了新的边缘。"
+      },
+      {
+        "category": "社会科学 × 公共政策 × 传播与游说",
+        "image": "/story-images/menthol-public-comments.jpg",
+        "imageAlt": "公共意见收件箱被大量重复纸张覆盖，少数不同形状的独立意见仍然可见的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释规则制定中的批量表单信、独立意见与企业关联文本；不含真实品牌、提交者、烟草产品或政府文件",
+        "title": "二十四万份 FDA 意见中九成以上是表单信：参与数量不能替代来源透明",
+        "summary": "美国联邦规则制定允许公众对拟议政策提交意见。FDA 2022 年提出禁止 menthol cigarettes 与 flavored cigars 后收到 246,808 份评论；新研究发现两类意见中 97% 与 93% 是高度重复的表单信，真正独特的文本只有 4,774 份，而且大量反对内容能追溯到烟草公司或相关倡议。",
+        "background": "表单信是组织提供模板、支持者复制或少量修改后提交的政策意见。它可以降低参与门槛，也能让资源充足的组织制造巨大的文本数量；如果机构把数量直接当作公众偏好的代表，就可能混淆动员强度、独立论证和实际人口支持。",
+        "happened": "《JAMA Network Open》8 月 20 日发表对全部公开意见的混合方法分析。研究团队先识别重复文本和已知组织模板，再对独特评论进行定性编码，发现反对禁令的论点集中在收入损失、非法市场和替代监管路径；作者主张政策机关报告意见时应同时披露独特文本、模板来源与可识别的组织关联。",
+        "facts": [
+          "数据包括 175,285 份 menthol cigarette 评论和 71,523 份 flavored cigar 评论，总计 246,808 份。",
+          "169,440 份 menthol 评论（97%）和 66,640 份 cigar 评论（93%）属于表单信；两类合计只有 4,774 份独特评论。",
+          "独特评论中，96% 反对 menthol 禁令，99% 反对 flavored cigar 禁令。",
+          "反对者最常提出销售或收入损失，menthol 与 cigar 独特评论中分别占 35% 和 49%；非法市场论点分别占 25% 和 38%。",
+          "77,445 份 menthol 表单信，占该类表单信 46%，含有可识别的烟草公司关联内容；其中 54,835 份来自 RAI 的 Own It Voice It 模板，20,370 份来自 Marlboro 模板。",
+          "支持禁令的 menthol 表单信为 3,210 份，占 2%；flavored cigar 表单信中没有识别出支持模板。",
+          "多数提交缺少完整的身份、地区或组织元数据，因此“未识别企业关联”不等于可以确认完全独立。"
+        ],
+        "sourceName": "JAMA Network Open／Public Comments and Federal Rulemaking for Menthol Cigarettes and Flavored Cigars",
+        "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2853096",
+        "sourceDate": "在线发表 2026-08-20；doi:10.1001/jamanetworkopen.2026.29962",
+        "whyItMatters": "研究没有证明每位提交表单信的人都被企业操纵；模板也可能表达真实立场。它揭示的是另一层问题：当复制几乎没有成本、来源信息又残缺时，评论总数不足以衡量意见的独立性、代表性或论据质量。",
+        "importance": "公共咨询的正当性不能只靠开放一个输入框。政策机构还需要发布去重方法、组织关联、独特论点分布和如何回应证据，否则最擅长大规模动员的一方会同时影响媒体叙事与行政时间表。",
+        "creatorAngle": "可以把 246,808 份评论拆成“独特文本—模板家族—可识别发起者”三层网络，并比较 FDA 最终规则文本引用了哪些论点。更值得追踪的是：若要求模板披露赞助者，会扩大透明度，还是增加普通参与者负担？"
+      },
+      {
+        "category": "社会科学 × 健康政策 × 收入不平等",
+        "image": "/story-images/medicare-aco-disparities.jpg",
+        "imageAlt": "两组患者路径穿过责任医疗组织网络，平均质量曲线改善但基线差距仍保留的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 Medicare 责任医疗组织、低收入差距与机构间差异；并非真实患者、医院、理赔记录或因果效果图",
+        "title": "585 个责任医疗组织没有整体缩小低收入差距，平均绩效掩盖了相反方向的机构",
+        "summary": "Medicare Shared Savings Program 让 accountable care organization（ACO）对一组参保者的照护质量与总成本共同负责，节省且达标时可分享收益。对 2010 至 2019 年超过 3,500 万人的研究发现，ACO 成立三年后，低收入与较高收入患者在可避免急诊、可防住院和再入院上的差距平均没有显著缩小。",
+        "background": "ACO 改革的核心激励通常是总体质量和总支出，并不自动奖励缩小群体差距。研究把 Medicare Part D 低收入补助资格作为低收入指标，并用三重差分比较 ACO 内外、改革前后及两个收入组；这样能估计相对变化，但仍属于观察性准实验。",
+        "happened": "《JAMA Network Open》8 月 20 日发表对 585 个 ACO 的分析。总体平均结果为零附近，但机构层面并非都没有变化：76 个 ACO 在至少一项指标上缩小差距且没有牺牲较高收入组质量，68 个则扩大差距，提示同一支付模型在地方执行中可能产生相反结果。",
+        "facts": [
+          "分析样本为 35,025,903 名传统 Medicare 参保者，其中 9,977,829 人被归为低收入，25,048,074 人属于较高收入组。",
+          "低收入组中 2,545,201 人归属 ACO，较高收入组中 7,479,877 人归属 ACO。",
+          "改革前低收入患者三项不良结果率约为较高收入患者的 1.6 至 3 倍，说明起点差距很大。",
+          "ACO 成立三年后，可避免急诊、ambulatory care–sensitive admission 与 30 天非计划再入院都没有出现显著的收入组差异变化。",
+          "76 个 ACO，占 13.0%，在至少一项指标上缩小差距并维持或改善较高收入组；68 个，占 11.6%，在至少一项上扩大差距。",
+          "可避免急诊差距改善的 ACO 为 58 个、恶化为 50 个；可防住院为 39 对 46；再入院为 46 对 40。",
+          "缩小差距的 ACO 往往起始差距更大，但在规模、乡村位置、医院领导、低收入患者比例和 federally qualified health center 参与等观察特征上没有明显一致差别。"
+        ],
+        "sourceName": "JAMA Network Open／Medicare Shared Savings Program and Disparities for Patients With Low Income",
+        "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2853100",
+        "sourceDate": "在线发表 2026-08-20；doi:10.1001/jamanetworkopen.2026.29369",
+        "whyItMatters": "“平均没有变化”并不等于每个 ACO 都无效：一部分缩小差距，另一部分扩大差距，互相抵消。研究真正提出的是设计问题——如果合同只奖励总体均值，组织缺少识别并投资于交通、初级照护可及性与复杂社会需求的直接动力。",
+        "importance": "这项研究支持把公平指标从事后分层报告转成支付设计的一部分，同时要求研究那些改善机构实际做了什么。限制在于低收入由药物补助资格近似，理赔记录看不到患者体验；结果支持项目参与与差距变化的关联，不证明 ACO 单独造成每个机构的变化。",
+        "creatorAngle": "可以跟踪 76 个改善 ACO 的基层照护、出院衔接、交通和社区合作策略，再与 68 个恶化者比较；还应模拟若 shared savings 同时要求总体进步和差距缩小，哪些机构会获得或失去奖励。"
+      },
+      {
+        "category": "社会科学 × 天文学 × 观测基础设施",
+        "image": "/story-images/s301-black-hole-spin.jpg",
+        "imageAlt": "暗淡恒星沿极紧椭圆轨道掠过银河系中心黑洞，四台望远镜光束汇合成干涉图样的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 S301 轨道、VLTI 干涉测量与未来黑洞自旋检验；并非真实观测图、恒星比例、黑洞照片或已测得的自旋结果",
+        "title": "S301 以八点七年绕过银河系中心：新轨道把测量黑洞自旋推进到可规划阶段",
+        "summary": "Sagittarius A* 是银河系中心约四百万个太阳质量的超大质量黑洞。ESO 团队发现的暗星 S301 每 8.7 年绕它一周，在最近点约距黑洞 12 个天文单位、速度超过光速 8%；这是目前已知绕 Sagittarius A* 最近且最快的恒星，但论文尚未宣称已经测出黑洞自旋。",
+        "background": "黑洞附近拥挤且被尘埃遮挡，单台望远镜很难分开微弱恒星。GRAVITY 仪器把 Very Large Telescope 的四台 8 米级望远镜组合成近红外干涉仪，提供远高于单镜的角分辨率；研究者再把 2023 年的识别向前追溯到 2017 年资料，拟合完整轨道。",
+        "happened": "研究 8 月 19 日发表于《Nature》，NASA 8 月 21 日的 Astronomy Picture of the Day 用时间序列解释这条轨道。测量显示 S301 已呈现广义相对论预言的 Schwarzschild 进动；由于其轨道极紧，未来更长的干涉测量和 Extremely Large Telescope 光谱可能分离更微弱的 frame-dragging 信号。",
+        "facts": [
+          "S301 是一颗微弱主序星，K 波段视星等约 19.3，轨道周期为 8.7 年。",
+          "最近点约为 12 个天文单位，接近 Saturn 与 Sun 距离的尺度；峰值速度约 25,000 千米每秒，超过光速 8%。",
+          "GRAVITY 在 2023 年识别该星，团队随后在 2017 年起的既有数据中找回它的位置，使轨道约束覆盖更长时间。",
+          "仪器结合 ESO Very Large Telescope 的四个 Unit Telescopes，通过干涉条纹而不是单张直接照片测量极小位置变化。",
+          "现有轨道已显示 Schwarzschild precession，也就是不旋转黑洞时广义相对论预言的近星点进动。",
+          "旋转黑洞还应通过 Lense–Thirring frame dragging 产生更小的轨道变化；S301 对这一效应特别敏感，但目前结果只是建立未来检验条件。",
+          "研究团队预计 2031 年附近的下一次近距离经过，配合持续 GRAVITY 观测和未来 ELT 光谱，可能进一步约束 Sagittarius A* 的自旋。"
+        ],
+        "sourceName": "ESO／Nature／A star in a nine-year orbit around Sgr A*",
+        "sourceUrl": "https://www.eso.org/public/news/eso2612/",
+        "sourceDate": "论文与 ESO 公告 2026-08-19；Nature doi:10.1038/s41586-026-10894-w；NASA APOD 2026-08-21",
+        "whyItMatters": "轨道本身是已观测结果，气体和尘埃包围黑洞的视觉想象、恒星形成路径和自旋值则仍需模型或后续数据。把这些层次分开，才能看清突破来自十年尺度的仪器校准、档案回溯和位置测量，而不是一张“黑洞照片”。",
+        "importance": "如果未来测得 frame dragging，天文学家将能在超大质量黑洞附近检验旋转时空，并限制 Sagittarius A* 的自旋；但最重要的近期结果是找到了一只更灵敏的轨道探针，并为下一次近星点观测给出明确时间窗口。",
+        "creatorAngle": "可以制作一条 2017—2031 观测时间轴，把已测位置、轨道拟合、Schwarzschild 进动与预期 frame dragging 分层显示；同时追踪哪些结论依赖 GRAVITY、哪些要等 ELT 光谱，避免把“最有希望测量”写成“已经证实”。"
+      }
+    ]
+  },
+  {
     "date": "2026-08-20",
     "displayDate": "2026.08.20",
     "issueNo": "34",
