@@ -77,7 +77,7 @@ export const briefings: Briefing[] = [
       },
       {
         "category": "女性主义 × 大学制度 × 知识史",
-        "image": "/story-images/irwg-resistance-fertile.jpg",
+        "image": "/story-images/irwg-resistance-fertile-2026.jpg",
         "imageAlt": "档案盒、索引卡与书页生长成相互连接的植物枝条的编辑插图",
         "imageCredit": "编辑插图 · AI 生成，用于解释女性与性别研究的机构记忆、跨学科协作与集体照护；并非真实档案、人物、校园或展览现场",
         "title": "《Resistance is Fertile》回看三十年：女性主义研究怎样从边缘议题变成大学基础设施",
