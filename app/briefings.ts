@@ -36,6 +36,148 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    "date": "2026-08-22",
+    "displayDate": "2026.08.22",
+    "issueNo": "36",
+    "theme": "边界不是一条线：影像档案、监狱时间、跨州照护、居家治疗与月球污染",
+    "intro": "本期从非洲肖像摄影中的家庭与社区档案、Maria Gaspar 对监狱墙和等待时间的持续介入、Dobbs 判决后涌向 North Carolina 的跨州堕胎照护、乳腺癌患者在保险规则夹缝中的居家注射，以及可能随人类进入月球阴影的地球微生物出发，观察制度边界如何变成可见性、距离、时间、费用和知识污染。",
+    "learningGoal": "学会区分殖民档案与社区自我呈现、拆除建筑与拆除惩罚逻辑、政策变化与观察到的出行变化、试点可行性与可普及性，并把微生物存活、繁殖和月球原生生命严格分开。",
+    "connection": "五则故事都把抽象边界还原为物质过程：照片由谁保存与重组，监狱怎样用墙和等待组织身体，州法怎样把照护转化为数百英里的旅程，支付规则怎样决定治疗能否回到家中，而靴印大小的阴影又怎样改变行星保护的证据标准。",
+    "uniqueCount": 5,
+    "topics": [
+      "艺术人文",
+      "社会科学",
+      "女性主义"
+    ],
+    "stories": [
+      {
+        "category": "艺术人文 × 摄影史 × 档案权力",
+        "image": "/story-images/african-portrait-archives-2026.jpg",
+        "imageAlt": "旧照片边框、织物纹理、暗房光线和虚构人物剪影层叠成社区档案的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释非洲肖像摄影、家庭档案与当代再阐释；并非参展作品、摄影师或被摄者肖像、真实档案或展览现场",
+        "title": "六位摄影师把非洲肖像档案从‘被记录’改写为社区怎样选择被看见",
+        "summary": "Stanley Museum of Art 今天开幕的《Portraiture & Archives in African Photography》汇集六位非洲及其离散社群摄影师，把 1963 至 2024 年的肖像并置。展览不把档案只理解为国家或殖民机构保存的旧照片，而是把家庭、朋友和社区主动选择的形象也视为历史证据。",
+        "background": "Malick Sidibé 与 Tijani Sitou 分别在 Mali 的 Bamako 和 Mopti 从事肖像摄影；Sidibé 尤其以 1960 年 Mali 脱离 France 后的日常生活、舞会与青年文化闻名。摄影档案常被当作过去的静态容器，但照片的姿势、服装、保存者与后来使用方式都会改变它表达的身份。",
+        "happened": "展览 8 月 22 日在 University of Iowa 的 Stanley Museum 开放，展至 12 月 13 日。它在 Eskenazi Museum 原展基础上加入 Stanley 新藏的 Hassan Hajjaj 与 Zanele Muholi 作品，并让 Senegal 摄影师 Ibrahima Thiam 同时担任参展艺术家、客座策展人和展陈合作者。",
+        "facts": [
+          "六位艺术家是 Malick Sidibé、Tijani Sitou、Zohra Opoku、Ibrahima Thiam、Hassan Hajjaj 与 Zanele Muholi；作品时间跨度为 1963 至 2024 年。",
+          "他们的实践连接 Ghana、Senegal、Mali、Morocco、South Africa 及非洲离散社群，并把摄影与织物、绘画等媒介结合。",
+          "展览以 Sidibé 与 Sitou 的二十世纪 Mali 肖像为历史支点，同时追踪四位当代艺术家怎样重新使用或回应摄影档案。",
+          "Thiam 2019 年开始进入 Indiana University 的学术交流，2024 年以驻馆策展人身份研究 Sidibé 与 Sitou 馆藏，并参与选片和展陈设计。",
+          "这是 Eskenazi Museum 首次邀请艺术家担任展览共同策展人；Thiam 的目标是让家庭与社区按自己选择的形象进入叙事。",
+          "Tijani Sitou 之子 Malick Sitou授权 Thiam 复制其父作品并制作新作，说明档案再利用同时涉及家属、版权与解释权。",
+          "Iowa 版本由两所 Big Ten Academic Alliance 大学博物馆合作完成，并加入 Stanley 近年收藏的 Hajjaj 与 Muholi 作品。"
+        ],
+        "sourceName": "University of Iowa Stanley Museum of Art／Portraiture & Archives in African Photography",
+        "sourceUrl": "https://stanleymuseum.uiowa.edu/portraiture-archives-african-photography",
+        "sourceDate": "展览 2026-08-22 至 2026-12-13；馆方新闻稿 2026-08-04",
+        "whyItMatters": "把家庭与社区收藏纳入档案，不等于它们天然没有权力关系；真正的变化是策展主语被重新分配。被摄者如何摆姿势、家属是否同意复制、当代艺术家怎样重组旧图，都成为与照片内容同样重要的证据。",
+        "importance": "这场展览把‘非洲摄影’从地理标签变成一组关于作者、被摄者和保存者的关系。它也提醒博物馆：让当代艺术家进入策展并非象征性代表，而是会改变哪些照片并置、哪些继承关系被承认，以及档案如何继续产生新意义。",
+        "creatorAngle": "可以选择一张历史肖像与一件当代重组作品，逐层追踪拍摄、保存、授权、复制和展陈的决定；再问同一张照片在家庭相册、大学博物馆与国际艺术市场中分别被谁解释、谁获得收益。"
+      },
+      {
+        "category": "艺术人文 × 女性主义 × 监狱与社会实践",
+        "image": "/story-images/gaspar-carceral-time-2026.jpg",
+        "imageAlt": "钢墙网格被手掌轮廓、声波、时间刻痕和街区地图穿过的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 Maria Gaspar 对监狱建筑、时间、声音与社区关系的艺术研究；并非真实监狱、被拘押者、艺术作品或表演现场",
+        "title": "六十小时拆墙影像并不等于监狱消失，Maria Gaspar 把惩罚制度的时间留在展厅",
+        "summary": "Maria Gaspar 是在 Chicago 长大的跨媒介艺术家，二十年来围绕其童年社区 Little Village 旁的 Cook County Correctional Facility 工作。Blaffer Art Museum 今天开幕的《We Press Our Hands to the Steel Curtain》用影像、照片、牢房钢条、声音和明信片追问：建筑被拆除之后，监禁的心理、行政与社区时间是否仍在继续。",
+        "background": "Cook County Correctional Facility 被馆方称为美国最大的单址监狱，平均每天约关押 9,000 人。Gaspar 既在设施内部为被拘押者组织工作坊，也在墙外做公共艺术、录音和社区项目；她的对象不是把监狱当作视觉奇观，而是研究它如何重塑附近街区、感知与等待。",
+        "happened": "展览于 8 月 22 日在 University of Houston 的 Blaffer Art Museum 开放，展至 11 月 21 日。新展把一个监区从开始到结束的拆除记录、拆下的物件和公众参与式‘消失’动作放在一起，使物理拆墙与废除惩罚制度之间的距离变得可见。",
+        "facts": [
+          "《Clamour》是一段超过 60 小时的影像，从头到尾记录 Cook County 监狱一个住宿单元的拆除。",
+          "2023 年摄影系列《Tumbling》把同一次拆除留下的碎片从全景中分离出来，迫使观众细看材料而不是只看爆破瞬间。",
+          "从牢房回收的钢条被改造成声音雕塑，并将在 2025 年作品《We Lit the Fire and Trusted the Heat (after Angela Davis)》的表演中被激活。",
+          "展览新增《Disappearance Jail》系列委托；该系列自 2021 年起以明信片记录美国不同监禁设施。",
+          "观众会被邀请在明信片上打孔，把‘监狱消失’变成重复的手部动作，而不是电脑里一次性删除的图像。",
+          "展名来自 Gloria Anzaldúa 的《The Homeland, Aztlán/El otro México》，把墙同时理解为物质边界和塑造心理、社会与文化地形的结构。",
+          "Gaspar 的长期方法包括被拘押者工作坊、公共项目和建筑录音；这些关系性劳动不能只由最终展品数量衡量。"
+        ],
+        "sourceName": "Blaffer Art Museum／Maria Gaspar: We Press Our Hands to the Steel Curtain",
+        "sourceUrl": "https://blafferartmuseum.org/maria-gaspar/",
+        "sourceDate": "展览 2026-08-22 至 2026-11-21；开幕活动 2026-08-22",
+        "whyItMatters": "拆掉一栋监区可以被准确记录，却不能证明惩罚制度已被拆除。Gaspar 把录像时长、等待、反复打孔和被回收的钢条组织成不同时间尺度，让观众看到制度会在法律、预算、记忆与社区关系中继续存在。",
+        "importance": "社会实践艺术最容易被展览压缩成几件可陈列的对象。这里的关键是保留作品背后的长期合作与不对称：谁能离开展厅、谁仍被关押，谁的声音可以被录下，谁承担公开叙述的风险。",
+        "creatorAngle": "可以把一段拆除时间轴与同一时期的拘押人数、预算和社区服务变化对照，检验‘建筑消失’是否伴随制度迁移；也可追踪观众打孔后的明信片最终如何保存，避免参与只停留在象征动作。"
+      },
+      {
+        "category": "女性主义 × 生育正义 × 地理与政策",
+        "image": "/story-images/post-dobbs-travel-2026.jpg",
+        "imageAlt": "美国东南部抽象州界、交错道路、时钟和匿名旅行者剪影组成照护网络的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 Dobbs 判决后跨州堕胎照护的距离、延迟与区域网络；不含真实患者、胎儿、诊所、政党符号或新闻现场",
+        "title": "Dobbs 之后，来 North Carolina 接受堕胎照护的外州人数增至三倍多，平均路程又多一百英里",
+        "summary": "美国最高法院 2022 年 Dobbs v Jackson 判决取消联邦宪法层面的堕胎权保障，各州随后采用不同限制。对 North Carolina 全州 79,433 次堕胎的研究发现，判决后一年外州患者从 5,596 人增至 17,703 人，而州内总量几乎没有变化；区域限制被转化为更长旅程和更晚孕周。",
+        "background": "North Carolina 被限制更严的东南部州包围，2023 年以前仍能提供部分第二孕期服务，因此成为区域照护节点。研究使用州法律要求上报的个体层级、去标识化数据，比较 Dobbs 前后各一年；Dobbs 是政策转折的代理变量，并不能单独隔离同时发生的每项州法变化。",
+        "happened": "《JAMA Network Open》8 月 21 日发布研究。外州患者每日中位数从 16 人升到 53 人，平均出行距离从 156 英里升到 258 英里，抵达时的孕周中位数从 7 周变为 8 周；增加最明显的来源州包括 Georgia、Alabama、Tennessee 与 South Carolina。",
+        "facts": [
+          "研究纳入 2021 年 6 月 24 日至 2023 年 6 月 25 日在 North Carolina 提供的全部 79,433 次药物流产和手术流产。",
+          "Dobbs 前后各一年，外州患者总数从 5,596 增至 17,703；州内患者分别为 28,077 与 28,057。",
+          "外州患者每日中位数从 16 增至 53，估计每天增加 37.5 人；州内每天变化为 2.6 人，置信区间跨过零。",
+          "外州患者平均出行距离从 156 英里增至 258 英里；州内患者约为 46.6 与 45.3 英里。",
+          "外州患者抵达时孕周中位数从 7 周上升到 8 周，13 至 20 周的外州病例从 767 增至 2,647。",
+          "来自 Georgia 的病例从 127 增至 6,513，Alabama 从 5 增至 1,208，Tennessee 从 218 增至 1,644，South Carolina 从 4,272 增至 6,165。",
+          "外州患者中非 Hispanic 黑人占 Dobbs 前的 59.9% 与之后的 58.7%；其每日中位数从 10 增至 33，构成增加量中最大的种族族裔组。"
+        ],
+        "sourceName": "JAMA Network Open／Out-of-State Travel for Abortion Care Before and After the Dobbs v Jackson Decision",
+        "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2853162",
+        "sourceDate": "在线发表 2026-08-21；doi:10.1001/jamanetworkopen.2026.29968",
+        "whyItMatters": "判决没有让需求消失，而是重新分配了距离、时间、交通、住宿和失去工作的成本。人数上升与孕周推迟同时出现，说明地理是照护制度的一部分；但观察性前后比较不能把每个变化都归因于 Dobbs 单一事件。",
+        "importance": "把 North Carolina 称为‘保留通道’仍不完整：一个州吸收邻州需求时，诊所容量也会在本地与外州患者之间重新排队。研究显示谁实际抵达，却看不到因费用、照护责任或移民风险而未能旅行的人，因此可见流量只是制度负担的下限。",
+        "creatorAngle": "可以把来源州、距离、孕周与诊所容量做成四层流动图，再追踪 2023 年 North Carolina 自身限制收紧后的第二次重排；更应采访无法完成旅程的人，避免把成功跨州者当作所有需求的代表。"
+      },
+      {
+        "category": "女性主义 × 癌症照护 × 支付制度",
+        "image": "/story-images/breast-cancer-home-injection-2026.jpg",
+        "imageAlt": "居家注射工具、视频通话窗口、保险闸门与医院旅行路线构成的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释乳腺癌居家注射、护理支持与保险支付障碍；并非真实患者、药品包装、医疗操作或疗效图",
+        "title": "乳腺癌注射能安全移到家里之前，先被保险审批和共付额挡在门外",
+        "summary": "部分绝经前乳腺癌患者需要长期注射 GnRH agonist 抑制卵巢功能，通常每月或每三个月到诊所完成。Memorial Sloan Kettering 的小型改进项目显示，接受护士培训与可选视频监督的 24 名女性中，23 人完成至少一次居家注射；但 54 名愿意参加者里，19 人因保险不批准而无法开始。",
+        "background": "GnRH agonist 如 leuprolide 可与 tamoxifen 或 aromatase inhibitor 配合，用于 hormone receptor–positive breast cancer 的卵巢功能抑制。注射本身时间很短，现行给付却常把药品与诊所操作绑定，使患者为一次操作承担往返、候诊、工作与照护安排。",
+        "happened": "《JAMA Network Open》8 月 21 日发表 2024 年 10 月至 2025 年 8 月的质量改进试点。项目在四个门诊肿瘤实践招募 105 名合资格患者，54 人愿意参加，最终 24 人取得药物居家配发；成功率与满意度高，但样本高度富裕、受教育且来自单一癌症中心。",
+        "facts": [
+          "105 名合资格患者中 54 人选择参加，只有 24 人最终取得保险覆盖并进入居家注射。",
+          "24 名参与者年龄中位数 44 岁，范围 33 至 53 岁；23 人接受辅助或新辅助治疗，1 人治疗转移性疾病。",
+          "23 人，占 95.8%，完成至少一次居家注射；19 人完成两次，18 人在项目结束后选择继续。",
+          "20 名填写背景问卷者中 19 人具有大学学历，13 人家庭年收入超过 10 万美元；这限制了对更广泛患者的外推。",
+          "患者估计一次常规诊所就诊从出门到回家中位数需要 2 小时，范围为 1 至 15 小时；5 人住在诊所 50 英里以外。",
+          "17 名满意度调查者中，15 人报告节省时间和更能控制日程，13 人认为方便，9 人认为也方便照护者或家人。",
+          "54 名有意参加者中 19 人因保险不批准居家用药无法继续；30 名获批者中 18 人在从诊所给药改为居家配药后产生共付额。"
+        ],
+        "sourceName": "JAMA Network Open／A Telemedicine-Supported Home-Injection Model for Patients With Breast Cancer",
+        "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2853159",
+        "sourceDate": "在线发表 2026-08-21；doi:10.1001/jamanetworkopen.2026.29406",
+        "whyItMatters": "试点说明技术上能做与制度上能获得是两件事。护士培训、药品配送、病历确认和可选视频监督共同构成安全路径；保险把同一种注射按场所采用不同覆盖方式，则可能让最有时间和经济资源的人先获得便利。",
+        "importance": "居家化不应被写成把医疗劳动转交患者的自动进步。真正节省的时间需要与患者意愿、手部能力、隐私、照护者负担和紧急支持一起评估；支付政策若不变，规模化反而可能扩大差距。",
+        "creatorAngle": "可以把一次诊所注射与一次居家注射的药品、护理、交通、候诊和共付成本逐项画出，再比较 Medicare、商业保险和不同州规则；还应追踪谁拒绝居家、谁因数字或身体条件无法参加。"
+      },
+      {
+        "category": "社会科学 × 天文学 × 行星保护",
+        "image": "/story-images/lunar-microbial-niches-2026.jpg",
+        "imageAlt": "月球南极阴影、靴印大小的微环境、紫外线轨迹和抽象微生物形态组成的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释月球南极地形遮蔽、微生物存活模型与行星保护；并非真实月面微生物、任务照片、生命发现或精确科学地图",
+        "title": "月球阴影可能让地球微生物存活至少七天，行星保护必须先记录人类带去了什么",
+        "summary": "月球大部分表面受强紫外线、真空和极端温度作用，不利于生命。NASA 与 University of Maryland 的新模型把微生物耐受实验、Lunar Reconnaissance Orbiter 地形和光照追踪结合，发现南极候选着陆区从宽阔坑底到靴印大小的阴影都可能允许部分地球微生物保持存活；这不是月球生命发现，也没有证明它们能繁殖。",
+        "background": "未来载人任务关注月球南极，因为低倾角太阳会让山脊长期受光、附近低地长期阴影并可能保存水冰。人类皮肤、舱内空气和航天服不可避免地携带微生物；如果任务前没有污染基线，后来检测到的有机物或细胞信号就更难判断来自月球还是访客。",
+        "happened": "《Science Advances》8 月 19 日发表研究。团队模拟 Nobile Rim、Connecting Ridge 与 De Gerlache Rim 三个 Artemis III 候选区域，比较五类常见航天或皮肤相关微生物对最大温度和累计紫外线的耐受，并绘制最长七天的潜在存活区。",
+        "facts": [
+          "研究对象包括 Bacillus subtilis、Staphylococcus aureus、Deinococcus radiodurans、Aspergillus niger 与数种 Fusarium，涵盖三类细菌和两组真菌。",
+          "模型使用 Lunar Reconnaissance Orbiter 的高程与温度数据，并以光线追踪计算太阳光如何被坑壁、山脊、石块和小尺度起伏遮挡。",
+          "团队把‘存活’定义为至少保持活性一个地球日，重点绘制最多七天的条件；它不等于生长或复制。",
+          "Aspergillus 对紫外线最耐受，在月球冬季仍可能于 15% 至 30% 接受部分日照的区域存活。",
+          "在三处研究区，每种微生物都找到潜在存活区；Aspergillus 在约 3% 的绘图地表可达到至少七天。",
+          "把散射紫外线也计入后，五类微生物仍可能在 De Gerlache Rim 部分永久阴影中存活。",
+          "潜在微环境尺度从数英里宽的坑底到一枚宇航员靴印；研究没有发现液态水、适宜大气或任何支持繁殖的直接证据。"
+        ],
+        "sourceName": "NASA Science／Science Advances／Potential survivable niches for microbial life on the lunar south pole",
+        "sourceUrl": "https://science.nasa.gov/humans-in-space/human-related-microbes-may-survive-moons-south-pole-nasa-finds/",
+        "sourceDate": "NASA 与论文发布 2026-08-19；doi:10.1126/sciadv.aec0811",
+        "whyItMatters": "模型把‘无生命环境’改写为证据管理问题：微生物不必繁殖，只要在样本采集窗口内保持可检测，就可能干扰对古老化学或生命迹象的解释。结果来自已知耐受阈值与遥感模型，而不是月面实地培养。",
+        "importance": "行星保护不只是把设备消毒到某个数字，还要在任务前记录化学与微生物基线、追踪每次舱外活动的释放路径，并保存足够元数据让后人区分原生信号与人类影响。月球因此既是科学对象，也可能成为研究不可避免污染的天然实验室。",
+        "creatorAngle": "可以把一个候选着陆区分成任务前基线、人员到达、样本采集和多年后复访四个证据阶段，追踪靴印、排气与废弃物的元数据如何保存；再比较月球与 Mars 的污染阈值为何不能直接照搬。"
+      }
+    ]
+  },
+  {
     "date": "2026-08-21",
     "displayDate": "2026.08.21",
     "issueNo": "35",
