@@ -36,6 +36,148 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    "date": "2026-08-23",
+    "displayDate": "2026.08.23",
+    "issueNo": "37",
+    "theme": "形式怎样继续变化：活材料、旧博物馆、价值错位、科研治理与流星证据",
+    "intro": "本期从 Hammer Museum 闭幕日仍在滴落、干裂和蒸发的活材料作品、Durham 一座关闭十年的军团博物馆改造后重新开放、X 的推荐信息流与用户自述价值之间的偏移、新任 NICHD 主任将接手的十七亿美元级科研制度，以及四台相机合成的一千七百零六颗流星出发，追问一个对象何时才算完成，以及谁在记录它的变化。",
+    "learningGoal": "学会区分材料变化与作品损坏、建筑更新与机构问题解决、互动行为与真实偏好、领导履历与未来政策，并把一张华丽的流星合成图读回相机、时间、对齐和分类过程。",
+    "connection": "五则故事都要求把静态结果拆回过程：展品会衰变，旧建筑同时容纳军事记忆与当代艺术，信息流把愤怒回复误读为偏好，研究机构通过预算和资助组合塑造知识，而观测网络把稍纵即逝的光迹转成可比较的数据。",
+    "uniqueCount": 5,
+    "topics": [
+      "艺术人文",
+      "社会科学",
+      "女性主义"
+    ],
+    "stories": [
+      {
+        "category": "艺术人文 × 材料文化 × 博物馆保存",
+        "image": "/story-images/living-materials-2026.jpg",
+        "imageAlt": "牛油果、可可、胭脂虫红、黏土和天然染料沿时间梯度滴落、干裂与蒸发的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释活材料随时间发生的滴落、干裂、碎裂与蒸发；并非参展作品、艺术家作品复制、真实展厅或保存记录",
+        "title": "展览闭幕时作品已不是开幕时的样子，二十二位艺术家让材料变化成为作品的一部分",
+        "summary": "Hammer Museum 今天闭幕的《Several Eternities in a Day》汇集来自 North、Central 与 South America 的二十二位艺术家。作品使用牛油果、可可、胭脂树籽、胭脂虫、石头、黏土和天然染料；这些材料会滴落、碎裂、蒸发和腐变，因此博物馆不能只把“保持原样”当作保存目标。",
+        "background": "博物馆通常通过恒温、控湿和修复延缓物件变化，但许多 Indigenous 与 Brown 艺术实践把材料视为承载关系、记忆和时间的生命体。所谓“活材料”不是一种统一媒介，也不意味着作品可以不受照料；关键是艺术家是否把预期变化写进作品的结构与授权。",
+        "happened": "展览在 4 月 5 日开放，并于 8 月 23 日结束。闭幕日使持续四个多月的材料变化成为可观察结果：开幕图、展期维护记录和最后状态不再只是幕后档案，而共同决定作品如何被理解。",
+        "facts": [
+          "展览包含二十二位来自 North、Central 与 South America 的艺术家，媒介包括大型装置、绘画、纸上作品和混合媒介雕塑。",
+          "馆方列出的材料包括牛油果、可可、胭脂树籽、胭脂虫、石头、黏土与天然染料。",
+          "官方说明明确把演变、腐变、滴落、碎裂和蒸发列为作品材料的行为，而不是笼统称为自然灵感。",
+          "参展者跨越不同世代，包括 Ana Mendieta、Carlos Mérida、Francisco Toledo、Mary Sully、Raven Chacon、Rose B. Simpson 与 Santiago Yahuarcani 等。",
+          "策展论述把材料连接到 Brown 与 Indigenous worlds 的精神、记忆和知识，并把它们视为生活记录与宇宙记忆的储存者。",
+          "展览由 Pablo José Ramírez 策展、Jessi DiTillio 协助；Hammer Museum 对公众免门票。",
+          "展期从 4 月 5 日持续至 8 月 23 日，因而任何状态比较都必须同时记录时间、环境、维护动作和艺术家指示。"
+        ],
+        "sourceName": "Hammer Museum／Several Eternities in a Day: Form in the Age of Living Materials",
+        "sourceUrl": "https://hammer.ucla.edu/exhibitions/2026/several-eternities-day-form-age-living-materials",
+        "sourceDate": "展览 2026-04-05 至 2026-08-23",
+        "whyItMatters": "把变化纳入作品，并不等于博物馆可以放任材料消失。二十二位艺术家、七类具体材料和四个多月展期共同说明，保存工作需要从“恢复到原点”转向记录可接受的变化范围、维护劳动与艺术家意图。",
+        "importance": "这会改变作品的价值与责任如何分配：收藏者购买的是固定物件、更新配方还是一套照料协议？若只保留闭幕照片，展期内气味、湿度、滴落和工作人员介入又会被谁书写。",
+        "creatorAngle": "可以为同一件作品制作开幕、展中、闭幕三张材料状态图，并把每次补水、清洁、替换与不干预的决定列在旁边；再比较活材料作品进入永久收藏后，艺术家、修复师和原材料社群分别拥有什么决定权。"
+      },
+      {
+        "category": "艺术人文 × 建筑再利用 × 公共记忆",
+        "image": "/story-images/the-light-durham-2026.jpg",
+        "imageAlt": "旧博物馆剖面中军团档案与当代光艺术展厅由开放门厅连接的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释旧军团博物馆的建筑再利用、军事记忆与当代艺术并置；并非 The Light 建筑、展品、艺术家作品或真实开幕现场",
+        "title": "Durham 的旧军团博物馆关闭十年后重开，公共建筑要同时处理军事记忆与当代艺术",
+        "summary": "The Light 是 Durham County Council 把原 Durham Light Infantry Museum and Art Gallery 改造而成的新文化场馆。它在关闭十年、投入一千七百万英镑后于本周末开放：楼内一边保留军团历史，另一边以二十六位艺术家的光作品开启当代艺术计划。",
+        "background": "原馆因访客量低和财务不可持续于 2016 年关闭，引发地方争议。新场馆没有抹去建筑与 Durham Light Infantry 的关系，而是把军团藏品的永久保管移至姐妹机构 The Story，并在旧址设置免费的《We Are The Durhams》常设展。",
+        "happened": "The Light 于 8 月 22 日向公众开放，8 月 22 至 23 日举行免费开幕周末。首展《Victory Over the Sun: Encounters with Light》延续至 2027 年 1 月 17 日，把人工光视为材料、讯息与隐喻，同时让新展厅的收费边界与免费军团展并存。",
+        "facts": [
+          "项目投资一千七百万英镑，改造对象是关闭十年的 Durham Light Infantry Museum and Art Gallery。",
+          "建筑新增约 550 平方米临时展览空间，并保留专门的 Durham Light Infantry 展厅；军团档案和全部收藏的永久库房位于姐妹机构 The Story。",
+          "《Victory Over the Sun》展出二十六位国际艺术家的作品，时间跨度从 1960 年代至今天，技术包括荧光灯、霓虹、LED 与数字媒介。",
+          "参展者包括 Dan Flavin、Félix González-Torres、Jenny Holzer、Olafur Eliasson、Tracey Emin、Steve McQueen、Chila Burman 与 Liz West。",
+          "展名借用 1913 年 Russian Futurist 歌剧，并以 County Durham 出生的电灯先驱 Joseph Swan 连接地方科技史。",
+          "进入 The Light 和《We Are The Durhams》免费；首展成人票线上十英镑、现场十二点五英镑，未满十八岁二点五英镑。",
+          "开幕展策展人 Natasha Howes 明确增加女性与 global majority 艺术家的比例；这是一项策展选择，并不自动证明长期收藏与聘用结构已经改变。"
+        ],
+        "sourceName": "Durham County Council／The Light；The Light／Victory Over the Sun",
+        "sourceUrl": "https://www.durham.gov.uk/article/36119/News-Opening-date-confirmed-for-The-Light",
+        "sourceDate": "场馆开放 2026-08-22；首展 2026-08-22 至 2027-01-17",
+        "whyItMatters": "旧馆的低访客量、十年关闭、军团收藏的分址保存和当代展厅收费同时出现，说明建筑重开不是单一的文化复兴结论。真正要检验的是地方公众能否持续使用、军事记忆怎样被解释，以及国际展览的预算与免费公共服务如何共存。",
+        "importance": "公共建筑再利用经常被面积和投资额讲成完成式，但 The Light 的难题才刚开始：一座以军团命名历史形成的场所，能否让退伍军人、移民、年轻艺术家和普通访客都拥有发言位置，而不是把冲突分隔到不同楼层。",
+        "creatorAngle": "可以在开放一年后比较免费常设展与收费首展的访客量、停留时间、邮编和回访率，并追踪二十六位首展艺术家的性别与地域承诺是否进入下一季委托、采购和岗位，而非只停留在开幕名单。"
+      },
+      {
+        "category": "社会科学 × 传播研究 × 推荐系统",
+        "image": "/story-images/x-values-feed-2026.jpg",
+        "imageAlt": "抽象信息卡沿互动回路前进、个人价值罗盘指向另一方向的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释互动排序与用户自述价值之间的错位；并非 X 界面、真实帖子、用户肖像或算法内部结构",
+        "title": "X 的‘For You’越会抓住回复，越可能偏离用户说自己真正重视什么",
+        "summary": "推荐信息流常把停留、转发和回复当成兴趣代理。Stanford 团队调查七百一十五名美国 X 用户的十九项基本价值，并比较他们主动关注的 Following feed 与算法选择的 For You feed，发现后者更常放大与用户自述价值不一致的帖子。",
+        "background": "Schwartz 基本人类价值框架把谦逊、享乐、传统、安全与普遍关怀等十九项价值放在可比较结构中。研究不是询问用户喜欢哪条帖子，而是先测量他们认为重要的价值，再查看两个实际信息流中的内容如何映射到这些价值。",
+        "happened": "《PNAS》8 月 18 日发表研究。团队用浏览器扩展收集参与者在 2024 年秋季实际看到的 Following 与 For You 内容，并制作一个按自述价值重新排序的 Chrome 原型；作者同时警告，单纯追随个人价值也可能形成回音室。",
+        "facts": [
+          "样本包括七百一十五名活跃的美国 X 用户，招募时间为 2024 年 9 至 10 月，并按族裔、性别与党派设置配额以接近全国构成。",
+          "参与者完成 Schwartz 基本人类价值调查，研究将十九项价值与其信息流帖文分别编码。",
+          "Following feed 主要来自用户主动关注的账号；For You feed 则由平台从更广泛内容中算法选择。",
+          "Following feed 的内容总体更贴近参与者自述价值，For You feed 则更可能放大价值不一致的内容。",
+          "研究提出的解释是回复等互动既可能表示赞同，也可能表示愤怒；排序系统若把两者都当作想看更多，就会误读行为。",
+          "论文观察到的错位在不同政治群体中程度不同，但研究对象限于特定时期的美国 X 用户，不能直接外推到所有平台或国家。",
+          "团队制作的浏览器扩展能依据用户自述价值重排信息流；作者没有把它当作最终方案，并明确指出它可能加强个人口味的回音室。"
+        ],
+        "sourceName": "Stanford Report／PNAS／Value misalignments in X's feed algorithm",
+        "sourceUrl": "https://news.stanford.edu/stories/2026/08/social-media-for-you-algorithms-engagement-outrage",
+        "sourceDate": "论文与 Stanford 报道 2026-08-18；PNAS 123(34), e2610388123",
+        "whyItMatters": "七百一十五人的双信息流比较说明，互动可预测性与价值一致性不是同一个目标。结果支持“愤怒回复可能被误读”为一种解释，但没有直接公开 X 的排序权重，因此不能把观察到的错位写成已经证明的单一因果机制。",
+        "importance": "治理推荐系统时，只让用户点击更多偏好开关可能仍不够，因为人会主动接触反感内容，也会需要跨价值对话。更有用的设计问题是：平台能否区分赞同、求证、批评和骚扰，并让用户看到每种信号怎样改变排序。",
+        "creatorAngle": "可以让参与者分别标记‘重要但不喜欢’、‘喜欢但不重要’与‘反对所以回复’的内容，再与真实排序比较；同时设置共享价值、个人价值和纯互动三种信息流，测试哪一种既减少错位又不封闭分歧。"
+      },
+      {
+        "category": "女性主义 × 健康政策 × 科研机构治理",
+        "image": "/story-images/nichd-research-infrastructure-2026.jpg",
+        "imageAlt": "科研预算、资助节点、母婴健康与残障研究路径交织成公共机构网络的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 NICHD 的预算、人员、资助组合与健康研究责任；并非 John Gaitanis 肖像、真实患者、实验室或政府文件",
+        "title": "新任 NICHD 主任今天到任，一百七十亿美元级预算怎样分配比履历本身更值得追踪",
+        "summary": "NICHD 是美国 NIH 下属机构，负责生殖健康、孕产与妇科健康、儿童发育，以及智力和发育障碍研究。儿科神经科医师 John Gaitanis 今天出任主任，将管理约十七亿美元年度预算、一千一百名员工和约二千三百项研究项目。",
+        "background": "医学研究机构的主任并不直接决定每一项临床结论，但会通过战略计划、项目公告、预算分配、招募与跨机构合作塑造哪些问题能被持续研究。NICHD 把女性、儿童与残障者置于同一任务范围，也要求外界警惕女性健康是否只在生育或照护他人时才获得资源。",
+        "happened": "NIH 8 月 21 日宣布任命，Gaitanis 于 8 月 23 日开始任职。他有近三十年儿童神经学、癫痫、自闭症和复杂神经发育障碍经验；公告特别提到无口语自闭症人士的沟通、自主与尊严，但没有公布新的预算细目或政策调整。",
+        "facts": [
+          "NICHD 年度预算约十七亿美元，任务覆盖孕产、妇科、儿童健康以及智力和发育障碍人士健康。",
+          "该所约有一千一百名员工，并在美国及国际机构支持约二千三百项研究资助和项目。",
+          "John Gaitanis 过去担任 Tufts Medical Center 儿童神经科主任及 Brown Medical School 儿童神经科负责人。",
+          "他的专长包括复杂神经发育障碍、癫痫与自闭症，并有近三十年临床、学术和领导经验。",
+          "NIH 公告强调他在无口语自闭症人士沟通需要、自主和尊严方面的临床教育工作。",
+          "Dorothy Fink 从 8 月 9 日起在领导交接期间担任代理主任。",
+          "任命公告提供的是职责规模与个人经历，不包含未来资助比例、审查标准或女性健康项目的具体改变。"
+        ],
+        "sourceName": "National Institutes of Health／NICHD director appointment",
+        "sourceUrl": "https://www.nih.gov/news-events/news-releases/pediatric-neurologist-dr-john-gaitanis-lead-nihs-eunice-kennedy-shriver-national-institute-child-health-human-development",
+        "sourceDate": "NIH 公告 2026-08-21；到任 2026-08-23",
+        "whyItMatters": "十七亿美元、二千三百个项目和一千一百名员工说明，这不是一则个人升迁新闻，而是研究基础设施的责任转移。履历可以提示经验范围，却不能证明未来优先级；真正证据将来自预算、征集主题、评审结构与研究参与者的变化。",
+        "importance": "女性主义的健康政策追踪不应只在新疗法发表时出现。谁定义‘人类发展’，妇科与孕产研究是否各自获得稳定资源，残障者能否参与研究设计，都会在数年后决定哪些临床问题拥有数据。",
+        "creatorAngle": "可以建立到任基线，记录 NICHD 现有妇科、孕产、儿童与残障研究的预算和项目数，再逐年比较新项目公告、咨询委员会构成与患者参与机制；不要用一篇任命稿提前替未来政策下结论。"
+      },
+      {
+        "category": "社会科学 × 天文学 × 观测基础设施",
+        "image": "/story-images/perseids-camera-network-2026.jpg",
+        "imageAlt": "四个相机孔径围绕全天空穹顶记录多组流星辐射点的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释四台相机、全天空合成和流星辐射点分类；并非 2026 年英仙座流星雨实拍、精确星图或观测数据复制",
+        "title": "一千七百零六条光迹不是一张瞬间照片，四台相机把整夜流星变成可分类的证据",
+        "summary": "NASA 的 Astronomy Picture of the Day 昨日发布一张 2026 年英仙座流星雨合成图。Czechia 的 Valašské Meziříčí Observatory 用四台专用流星相机记录 8 月 12 至 13 日整夜，再对齐全天空图像；共计一千七百零六颗流星，多数可沿轨迹回溯到 Perseus 的同一辐射点。",
+        "background": "流星雨的‘辐射点’是多条轨迹向后延长后看似汇聚的天空位置，是 Earth 穿过同一尘埃流时产生的透视效果。相机看到的是不同时间出现的短暂光迹；把它们叠在一张图上能显示群体结构，却不能当作肉眼在某一瞬间看到的天空。",
+        "happened": "四台相机在 2026 年 Perseids 峰值夜连续监测，观测站随后对齐并合成整夜全天空资料。强势的 Perseids 之外，研究者仍能从交叉轨迹辨认 Kappa Cygnids，以及靠近 Aquarius、位于太阳反方向的微弱 antihelion complex。",
+        "facts": [
+          "观测发生在 8 月 12 至 13 日夜间，地点是 Czechia 的 Valašské Meziříčí Observatory。",
+          "资料来自四台专门监测流星的相机，不是一台相机的一次曝光。",
+          "整夜计数为一千七百零六颗流星；由于恰逢 2026 年 Perseids 峰值，多数属于该流星雨。",
+          "Perseids 轨迹向后延长都指向画面右上方 Perseus 星座内的共同辐射点。",
+          "与主要轨迹交叉的一组流星指向 Cygnus 的另一个辐射点，因此被归为较弱的 Kappa Cygnids。",
+          "合成图还显示 Aquarius 附近、位于太阳反方向的 antihelion complex 是一个微弱流星来源。",
+          "一千七百零六是单一观测站、一个夜晚和特定相机系统的检测总数，不能视为全球流星数量或人眼可见数。"
+        ],
+        "sourceName": "NASA Astronomy Picture of the Day／Mostly Perseids",
+        "sourceUrl": "https://science.nasa.gov/image-article/apod/apod-2026-august-22-mostly-perseids/",
+        "sourceDate": "观测 2026-08-12 至 2026-08-13；发布 2026-08-22",
+        "whyItMatters": "四台相机、整夜对齐、一千七百零六次检测和三个辐射来源说明，壮观图像首先是一套分类基础设施。合成让人看见群体方向，却也压平了时间，因此可靠解读必须把每条光迹重新连接到时间戳、相机覆盖、天气和检测阈值。",
+        "importance": "公众天文图像常被当作透明窗口，这张图反而适合展示测量如何制造可见性。只有知道什么被叠加、什么被排除，以及相机在哪些方向更灵敏，才能把视觉密度转成流星雨强度。",
+        "creatorAngle": "可以把最终合成图拆成四台相机与逐小时图层，再用颜色区分 Perseids、Kappa Cygnids、antihelion complex 和未分类轨迹；同时公开阈值与天气，让观众看到‘一千七百零六’怎样被计算出来。"
+      }
+    ]
+  },
+  {
     "date": "2026-08-22",
     "displayDate": "2026.08.22",
     "issueNo": "36",
