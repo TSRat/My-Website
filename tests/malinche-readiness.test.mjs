@@ -75,10 +75,10 @@ test("La Malinche keeps the 70-screen beginner-first editorial and evidence cont
   assert.match(html, /她回到奥卢特拉/);
   assert.match(html, /她何时被写成“叛徒”/);
   assert.match(html, /1826 · 墨西哥独立之后/);
-  assert.match(html, /Malinchismo：一个后世造出的词/);
+  assert.match(html, /Malinchismo：[\s\S]{0,100}一个后世造出的词/);
   assert.match(html, /女性主义者重新阅读她/);
   assert.match(html, /纪念她，也争夺她的形象/);
-  assert.match(html, /替征服者承担罪责/);
+  assert.match(html, /替征服者[\s\S]{0,80}承担罪责/);
   assert.match(html, /malinche-statue-1982\.jpg/);
   assert.match(html, /malinche-mural-tlaxcala\.jpg/);
   assert.doesNotMatch(`${html}\n${js}`, /波通昌/);
@@ -86,6 +86,15 @@ test("La Malinche keeps the 70-screen beginner-first editorial and evidence cont
   assert.doesNotMatch(`${html}\n${css}\n${js}\n${registry}`, /cover-(?:green|red)\.webp/);
   assert.doesNotMatch(html, /创作者提供|创作者解释性地图|并非十六世纪|不是马琳切的历史肖像/);
   assert.match(css, /--scene-caption-size:\s*clamp\(1rem,\s*1\.2vw,\s*1\.16rem\)/);
+  assert.match(html, /id="reading-screen">00 \/ 69/);
+  assert.match(html, /data-short="背叛者"/);
+  assert.match(html, /mobile-scene-cue/);
+  assert.match(html, /controlled-wrap/);
+  assert.match(css, /\.video-meta > span/);
+  assert.match(css, /\.badge\.interpretation\s*\{\s*background:\s*var\(--bone\)/);
+  assert.match(css, /\.origin-figure\s*\{\s*inset:\s*8% 5% 7% 42%/);
+  assert.match(js, /readingScreen\.textContent = `\$\{screen\} \/ 69`/);
+  assert.match(js, /prologue:\s*"序章"/);
   assert.match(css, /\.route-copy p:not\(\.eyebrow\)/);
   assert.match(css, /\.threshold-spain p:not\(\.eyebrow\)/);
   assert.match(css, /\.navigation-copy > p:not\(\.navigation-terms,\s*\.eyebrow\)/);

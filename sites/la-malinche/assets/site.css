@@ -1913,6 +1913,206 @@ p { line-height: 1.85; }
   .late-scene .scene-number { flex: 0 0 auto; }
 }
 
+/* 2026-08 typography, orientation, and responsive composition polish */
+.reading-status {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: .55rem;
+  align-items: center;
+  padding-right: 1rem;
+  border-right: 1px solid rgba(244,236,220,.35);
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+.reading-status #reading-screen { color: var(--gold); font-variant-numeric: tabular-nums; }
+.reading-status #reading-chapter { color: var(--bone); }
+.progress-rail a { position: relative; }
+.progress-rail a[aria-current="true"]::after {
+  position: absolute;
+  right: calc(100% + .55rem);
+  top: 50%;
+  width: max-content;
+  padding: .35rem .5rem;
+  border: 1px solid rgba(244,236,220,.45);
+  background: rgba(17,16,13,.9);
+  color: var(--bone);
+  content: attr(data-short);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  transform: translateY(-50%);
+}
+
+.controlled-wrap,
+.controlled-wrap > span,
+.eyebrow-label {
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+.controlled-wrap > span { white-space: nowrap; }
+.eyebrow-label { min-width: 0; text-wrap: balance; }
+
+.asset-caption,
+figure figcaption { font-size: .875rem; line-height: 1.55; }
+.badge {
+  margin-right: .55rem;
+  padding: .18rem .42rem;
+  background: var(--jade-dark);
+  color: var(--bone);
+  font-size: .78rem;
+  line-height: 1.5;
+  letter-spacing: .05em;
+}
+.badge.interpretation { background: var(--bone); color: #741b15; }
+.badge.framing { background: var(--blue); color: var(--bone); }
+.evidence-note p { font-size: 1rem; }
+.hero-overline,
+.scroll-cue,
+.hero-facts dt,
+.name-control small,
+.name-control em,
+.primer-panels b,
+.evidence-line b,
+.gate-note,
+.arrival-list,
+.polity-field span,
+.tribute-flow i,
+.ledger span,
+.map-chooser button,
+.route-coordinate,
+.landing-steps b,
+.translation-world > span,
+.translation-bridge small,
+.threshold-meso span,
+.context-key b,
+.alliance-route b,
+.alliance-outcome > span,
+.watch-head > span,
+.video-meta b,
+.site-footer p { font-size: .78rem; }
+.hero-copy .body-copy,
+.primer-panels p,
+.evidence-line p,
+.route-copy p:not(.eyebrow),
+.landing-steps p,
+.translation-bridge p,
+.decision-balance p,
+.context-ledger dd,
+.source-caution,
+.expedition-grid p,
+.context-key p,
+.cholula-basics dd,
+.cholula-verdict p,
+.rupture-explainer p,
+.mediation-contrast p,
+.causal-warning p,
+.blockade-facts span,
+.counterweight p,
+.source-columns p,
+.source-columns li { font-size: 1rem; }
+.hero-copy .body-copy { word-break: normal; overflow-wrap: break-word; }
+.hero-facts dd,
+.ledger em,
+.watch-head p,
+.video-meta > span,
+.video-meta a,
+.reflection-options span,
+.archive-links a,
+.site-footer a { font-size: .875rem; }
+
+.video-meta h3 { font-size: clamp(1.65rem, 2.4vw, 2.6rem); line-height: 1.25; }
+.video-meta h3 > span { font-size: inherit; }
+
+.origin-figure { inset: 8% 5% 7% 42%; }
+.origin-figure img { background: var(--bone); object-fit: contain; }
+
+.mobile-scene-cue { display: none; }
+.siege-sequence {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  border-top: 3px solid var(--red);
+  padding-top: .65rem;
+  color: var(--red);
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+@media (max-width: 900px) {
+  .reading-status { gap: .35rem; padding-right: .65rem; font-size: .72rem; }
+  .origin-figure { inset: 49% 5% 7% 8%; }
+
+  .mobile-scene-cue {
+    position: absolute;
+    z-index: 3;
+    left: 1rem;
+    top: 4.5rem;
+    display: grid;
+    gap: .25rem;
+    padding: .7rem .8rem;
+    border-left: 5px solid var(--gold);
+    background: rgba(17,16,13,.88);
+    color: var(--bone);
+  }
+  .mobile-scene-cue b { color: var(--gold); font-size: .78rem; letter-spacing: .1em; }
+  .mobile-scene-cue span { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; }
+
+  .voice-triptych article { order: -1; min-height: auto; }
+  .voice-triptych figure {
+    display: grid;
+    grid-template-columns: minmax(120px,.72fr) 1fr;
+    gap: .8rem 1.25rem;
+    align-items: start;
+  }
+  .voice-triptych figure img { grid-column: 1; grid-row: 1 / 3; width: 100%; height: 38vh; min-height: 320px; }
+  .voice-triptych figure b { grid-column: 2; grid-row: 1; margin: 0 0 1rem; }
+  .voice-triptych figure p { grid-column: 2; grid-row: 2; margin: 0; }
+  .voice-triptych figure figcaption { grid-column: 1 / -1; grid-row: 3; min-height: 0; }
+
+  .late-brigantines .brigantine-image { order: -1; min-height: 72svh; }
+  .late-brigantines .brigantine-copy {
+    position: relative;
+    z-index: 2;
+    width: 94%;
+    margin: -3.5rem 0 0 auto;
+    padding-top: 5rem;
+    border-top: 8px solid var(--gold);
+    background: var(--paper);
+  }
+
+  .late-two-worlds .world-map { min-height: 72svh; }
+  .late-two-worlds .world-copy {
+    position: relative;
+    z-index: 2;
+    width: 94%;
+    margin: -4rem 0 0 auto;
+    padding-top: 5rem;
+    border-top: 8px solid var(--gold);
+    background: var(--blue);
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header { gap: .6rem; }
+  .header-actions { gap: .55rem; }
+  .brand-logo { width: 4.9rem; }
+  .reading-status { grid-template-columns: 1fr; gap: 0; padding-right: .5rem; font-size: .68rem; line-height: 1.35; }
+  .origin-copy h3 { font-size: 2.45rem; }
+  .chapter-before .gate-copy h2 { font-size: 2.35rem; }
+  .navigation-copy h2 { font-size: 2.35rem; }
+  .steps-title h2 { font-size: 2.55rem; }
+  .late-three-voices .late-heading h2 { font-size: 2.7rem; }
+  .brigantine-copy h2 { font-size: 2.42rem; }
+  .world-copy h2 { font-size: 2.5rem; }
+  .memory-question { max-width: none; font-size: 2rem !important; letter-spacing: -.04em; white-space: nowrap; }
+  .word-title h2 { font-size: 2.4rem; }
+  .final-ledger-title h2 { font-size: 2.55rem; }
+  .late-scene figure figcaption { font-size: .875rem; }
+  .voice-triptych figure { grid-template-columns: minmax(112px,.7fr) 1fr; }
+  .voice-triptych figure img { min-height: 280px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
