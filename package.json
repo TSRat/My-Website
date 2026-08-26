@@ -21,6 +21,8 @@
     "build:malinche": "node scripts/build-site.mjs la-malinche",
     "dev:hildegard": "vite sites/hildegard",
     "build:hildegard": "node scripts/build-site.mjs hildegard",
+    "dev:delacroix": "vite sites/delacroix-archive",
+    "build:delacroix": "node scripts/build-site.mjs delacroix-archive",
     "dev:hypatia": "vite sites/hypatia",
     "build:hypatia": "node scripts/build-site.mjs hypatia",
     "dev:melromarc": "vite --config sites/melromarc-sisters/vite.config.ts",
@@ -39,7 +41,7 @@
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "test": "npm run build && node --test tests/*.test.mjs",
     "validate:artifact": "bash scripts/validate-artifact.sh",
-    "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .site-build --ignore-pattern docs --ignore-pattern IVORY-ARCHIVE --ignore-pattern ENHEDUANNA --ignore-pattern LA-MALINCHE --ignore-pattern HILDEGARD --ignore-pattern HYPATIA --ignore-pattern MELROMARC-SISTERS --ignore-pattern THE-LIVING-ATLAS --ignore-pattern ZHANGYONG-PORTRAIT --ignore-pattern MALTY-MELTY-CHILDHOOD --ignore-pattern SARTRE-NAUSEA-GUIDE --ignore-pattern EXISTENTIALISM-HUMANISM-GUIDE --ignore-pattern sites/sartre-nausea-guide --ignore-pattern sites/existentialism-humanism-guide --ignore-pattern briefings",
+    "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .site-build --ignore-pattern docs --ignore-pattern IVORY-ARCHIVE --ignore-pattern ENHEDUANNA --ignore-pattern LA-MALINCHE --ignore-pattern HILDEGARD --ignore-pattern DELACROIX-ARCHIVE --ignore-pattern HYPATIA --ignore-pattern MELROMARC-SISTERS --ignore-pattern THE-LIVING-ATLAS --ignore-pattern ZHANGYONG-PORTRAIT --ignore-pattern MALTY-MELTY-CHILDHOOD --ignore-pattern SARTRE-NAUSEA-GUIDE --ignore-pattern EXISTENTIALISM-HUMANISM-GUIDE --ignore-pattern sites/sartre-nausea-guide --ignore-pattern sites/existentialism-humanism-guide --ignore-pattern briefings",
     "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate"
   },
   "dependencies": {

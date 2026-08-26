@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "delacroix-archive",
+  "title": "欧仁·德拉克洛瓦数字档案",
+  "slug": "DELACROIX-ARCHIVE",
+  "status": "published",
+  "languages": ["zh-Hans", "en", "fr"],
+  "contentModel": "trilingual historical artist research archive",
+  "renderers": [
+    {
+      "id": "pages",
+      "source": "sites/delacroix-archive/",
+      "runtime": "static HTML, CSS and JavaScript modules"
+    }
+  ],
+  "capabilities": {
+    "trilingualReading": true,
+    "hashRoutes": true,
+    "workFilters": true,
+    "timelineDossiers": true,
+    "sourceReverseMapping": true,
+    "localFavorites": true,
+    "localResearchNotes": true
+  },
+  "privacy": {
+    "analyticsProvider": null,
+    "analyticsNetworkRequests": false,
+    "cookies": false,
+    "identity": false,
+    "localStorage": true,
+    "localOnlyFields": ["language", "reading period", "saved works", "work notes"]
+  }
+}

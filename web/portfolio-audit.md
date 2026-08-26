@@ -16,6 +16,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 | --- | --- | --- | --- | --- |
 | The Living Atlas | REFACTOR | B — Interactive | Content system merged in PR #13; Data / starter and ambiguity correction merged in PR #14 | Shared runtime publication needs explicit Pages build-map authorization |
 | IVORY ARCHIVE | PRESERVE | B — Interactive | Six-stage implementation merged in PR #15 | Antigravity extended QA remains optional follow-up |
+| Delacroix Archive | REBUILD | B — Interactive | Trilingual research archive prepared for public Pages publication | Antigravity extended QA skipped by explicit publication request |
 | Enheduanna | REFACTOR | A — Editorial | Maintainable rebuild merged in PR #17 | Antigravity extended visual QA remains optional follow-up |
 | La Malinche / 马琳切 | REBUILD | B — Interactive editorial | 41-screen beginner-first editorial with Spanish background and expanded siege sequence | Live preview, PR review and Antigravity extended QA |
 | Hildegard | PRESERVE | A — Editorial | Six-stage implementation merged in PR #16 | Antigravity deterministic-section visual QA remains optional follow-up |
@@ -26,7 +27,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 | 张勇的生活切片 | PRESERVE | A — Editorial | Direct static migration merged in PR #21 | Antigravity section QA pending |
 | 两只天鹅 | REFACTOR | B — Interactive | Direct static migration merged in PR #21 | Antigravity interaction QA pending |
 
-Counts: 11 audited; 4 PRESERVE; 5 REFACTOR; 2 REBUILD.
+Counts: 12 audited; 4 PRESERVE; 5 REFACTOR; 3 REBUILD.
 
 ## Remaining migration queue
 
@@ -57,6 +58,29 @@ The current local Pages artifact was rendered in the Codex in-app browser at:
 The Figma page `03 · Baselines & Handoff` contains all 18 accepted fixed-viewport captures. The page `02 · Site Themes & Screens` contains the six theme systems, 12 representative desktop/mobile references, and editable theme anatomy.
 
 Fixed-viewport captures are valid. Full-page capture is not accepted as evidence because the current browser backend repeats or omits sticky and reveal-driven regions while composing a long screenshot. When extended migration review is requested, Antigravity should use deterministic section or anchor captures under matching viewport, font, content, and interaction state.
+
+## Delacroix Archive
+
+- **Site / slug / live URL:** 欧仁·德拉克洛瓦数字档案; `DELACROIX-ARCHIVE`; <https://tsrat.github.io/My-Website/DELACROIX-ARCHIVE/>.
+- **Source path:** `sites/delacroix-archive/`; `DELACROIX-ARCHIVE/` is the generated Pages mirror.
+- **Status:** Public trilingual artist research archive.
+- **Product purpose:** Help newcomers and experienced readers connect Delacroix's biography, works, dated events, journal practice and exact evidence records.
+- **Primary audience and goal:** Chinese-, English- and French-reading visitors who need either a guided introduction or a traceable route back to artwork and research records.
+- **Major routes and navigation:** Home, biography, works, individual work, chronology, individual event dossier, journal, sources and individual source record; all use stable hash routes.
+- **Visual direction:** Bordeaux photographic prologue, pine-green biographical archive and blue viewing room, with gold rules, square geometry and restrained nineteenth-century editorial references.
+- **Typography / color / layout:** Song/serif-led Chinese reading; italic Latin display voice; desktop editorial grids and a single-column mobile fallback.
+- **Framework / language / rendering:** Direct static HTML/CSS and JavaScript modules; explicit Chinese, English and French content fields.
+- **Content/data model:** Six fixed life periods, 20 works, 29 event dossiers, five journal groups and 12 source records with evidence and reverse mappings.
+- **State/interactivity:** Search, filters, details, image dialog, viewing experiments, local saved works, local notes and language/period persistence.
+- **Build system / deployment:** `npm run build:delacroix` produces the uppercase mirror; the existing GitHub Actions Pages artifact copies that mirror.
+- **Analytics and privacy:** No provider, cookies, account, identity or network upload. Reading preferences, saved works and notes remain in browser `localStorage`.
+- **Tests / CI:** Dedicated contract/assets test, shared site-package validation, Pages asset validation and basic desktop/mobile browser smoke.
+- **Accessibility state:** Skip link, semantic main/navigation, visible focus, named dialogs, localized image alternatives, keyboard search and reduced-motion support.
+- **Classification:** **REBUILD** — this is a new maintainable archive package added to the portfolio rather than a migration of an older public slug.
+- **Shared-core adoption:** Source/mirror build contract, project registry, Pages hub card, portfolio logo link, privacy manifest and delivery checks.
+- **Site-specific theme:** Preserve the red/green/blue room sequence, Pierre Petit portrait, signature, trilingual voice and evidence-led scholarly identity.
+- **Figma URL:** [Portfolio infrastructure reference](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt). The approved implemented site, not a project-specific Figma frame, is the Delacroix visual baseline.
+- **Remaining risks:** Full Safari, Firefox, screen-reader and cross-platform font review was not run. Public source-link health and future museum metadata changes require later maintenance.
 
 ## The Living Atlas
 

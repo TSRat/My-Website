@@ -1,5 +1,48 @@
 # Repository handoff
 
+## 2026-08-27: Delacroix Archive public site
+
+### Current target
+
+Publish the accepted trilingual Eugène Delacroix research archive through the
+existing multi-site GitHub Pages repository and register it in the Website
+Archive without disturbing the user's active Arab History worktree.
+
+### Completed in the publication branch
+
+- Added `sites/delacroix-archive/` as the authoritative direct-static package
+  and `DELACROIX-ARCHIVE/` as its generated mirror.
+- Registered the twelfth site in the root project table, shared build control
+  plane, portfolio audit and generated Website Archive hub.
+- Added `build:delacroix`, a dedicated readiness test, privacy manifest,
+  source/mirror contract and six-stage handoff documents.
+- Preserved the three complete languages, six life periods, 20 works, 29 event
+  dossiers, five journal groups, 12 source records, 1862 Pierre Petit portrait
+  and local-only saved works/notes.
+- Added canonical publication metadata and a linked TSRat footer logo returning
+  to The Living Atlas.
+- Removed the stale unrendered edition-warning block that the creator had
+  explicitly rejected; version metadata remains only where attached to a
+  concrete journal or source record.
+
+### Verification state
+
+- `npm run validate:sites`: passed — 12 packages.
+- Delacroix, maintenance and portfolio-logo targeted tests: passed — 5/5.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed — 1,402 local references across 139 HTML/CSS
+  files.
+- Exact branch preview, PR, merge commit, Pages run and live-site browser smoke
+  remain to be recorded after commit/push.
+- `ANTIGRAVITY_FINAL_VALIDATION: SKIPPED_BY_USER` because the creator explicitly
+  requested public publication rather than an additional final review cycle.
+
+### Git state
+
+- Work completed in a clean isolated worktree.
+- Branch: `codex/delacroix-archive`, based on `origin/main` at `3b6e028`.
+- The separate dirty `codex/arab-history-archive` worktree remains untouched.
+
 ## 2026-08-13: IVORY ARCHIVE daily briefing issue 28
 
 ### Current target
