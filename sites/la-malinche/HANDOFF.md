@@ -1,5 +1,65 @@
 # La Malinche handoff
 
+## 2026-08-27 · 全站字体、对齐与移动结构复核
+
+### 当前目标
+
+落实创作者确认的 `ABA` 优先级：先消除过小正文和中文标题孤字，再完成
+审计中列出的地图裁切、视频标题误缩、证据标签、移动端结构重复和长页
+阅读定位问题；不改变既有 70 屏史实、论证顺序或视觉身份。
+
+### 已完成
+
+- 顶部新增 `当前屏 / 69 + 当前章节` 阅读状态；桌面章节轨道同时显示当前
+  章节短名。
+- 提升正文、题注、链接、证据说明与密集标签的最低字号，并修复
+  `.video-meta span` 误把视频大标题缩成元信息字号的问题。
+- 为 `04`、`08`、`23`、`32`、`37`、`47`、`53`、`61`、`65`、`69`
+  设置经过 390px 实测的人工换行；全站 `00–69` 标题扫描没有剩余一至
+  两个汉字独占一行的警报。
+- `08` 地图改为完整包含显示，桌面与 390px 均无右侧裁切或页面横向溢出。
+- 证据标签改为不透明高对比底色；实测对比度为 `10.57:1` 与 `9.36:1`。
+- 移动端保留后半段结构差异：`37` 使用三声部对照，`47` 舰船图与纸张
+  说明重叠，`53` 地图与蓝色说明层重叠；围城段新增 `06 / 10` 节奏标记。
+- 权威源码已通过 `npm run build:malinche` 同步到 `LA-MALINCHE/` 镜像。
+
+### 修改文件
+
+- `sites/la-malinche/index.html`
+- `sites/la-malinche/assets/site.css`
+- `sites/la-malinche/assets/site.js`
+- `sites/la-malinche/DESIGN.md`
+- `sites/la-malinche/TECH.md`
+- `sites/la-malinche/HANDOFF.md`
+- `tests/malinche-readiness.test.mjs`
+- `LA-MALINCHE/index.html` 与对应 CSS / JS 镜像
+
+### 当前检查
+
+- `node --check sites/la-malinche/assets/site.js`：通过。
+- `node --test tests/malinche-readiness.test.mjs`：通过，2/2。
+- `npm run build:malinche`：通过。
+- `npm run validate:sites`：通过，11 个站点维护包。
+- `npm run build:pages`：通过。
+- `npm run validate:pages`：通过，137 个 HTML / CSS 文件中的 1397 个
+  本地引用有效。
+- `git diff --check`（本任务范围）：通过。
+- 内置浏览器基本 smoke：`1440 × 900` 与 `390 × 844` 均无横向溢出；
+  已直接检查 `08`、`37`、`41`、`47`、`53`、视频剧场与 `69`。
+- 不可变提交预览已在 `1440 × 900` 与 `390 × 844` 打开：70 个编号场景、
+  顶部 `NN / 69` 状态、首图和 `08` 地图均加载，页面无横向溢出。
+- 完整 Pages 构建产生的 3 个无关 `docs/` 生成变动已从本任务范围排除。
+- Antigravity 的跨浏览器、完整交互与视觉回归扩展 QA：待后续执行。
+
+### 当前分支与下一步
+
+- Branch: `codex/malinche-typeset-polish`
+- Implementation commit: `a8363ff`。
+- Draft PR: <https://github.com/TSRat/My-Website/pull/47>。
+- Verified exact-implementation preview:
+  <https://raw.githack.com/TSRat/My-Website/a8363ff7d7856ee93a68ce75c3c720e10307d10f/LA-MALINCHE/index.html>。
+- 下一步：由 Antigravity 执行扩展 QA；合并仍需要创作者另行明确授权。
+
 ## 2026-07-29 · 后四章 35–69 屏重构
 
 ### 当前目标
