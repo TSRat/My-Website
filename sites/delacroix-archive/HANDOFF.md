@@ -41,7 +41,16 @@ other public websites.
 - Basic browser smoke: desktop `1440 × 900` and French mobile `390 × 844`;
   timeline expansion, evidence links, local images, responsive containment and
   console/page errors passed.
-- Exact branch preview, PR, merge commit, Pages run and live URL remain to be
-  recorded after the Git delivery steps.
+- Implementation commit: `66b1d160e2c6988673b0e5626f00113861ed5883`.
+- Pull Request: [#48](https://github.com/TSRat/My-Website/pull/48), merged as
+  `088dba825fbecb4a51f060b1ed93daada8014b44`.
+- Exact implementation preview:
+  <https://raw.githack.com/TSRat/My-Website/66b1d160e2c6988673b0e5626f00113861ed5883/DELACROIX-ARCHIVE/index.html>.
+- Pages run [33000235134](https://github.com/TSRat/My-Website/actions/runs/33000235134):
+  passed, including artifact build, local-reference validation, upload and
+  deployment.
+- Production URL: <https://tsrat.github.io/My-Website/DELACROIX-ARCHIVE/>.
+  Cache-resistant desktop and French mobile checks passed; the Website Archive
+  root showed 12 cards and the Delacroix card loaded its portrait and target.
 
 `ANTIGRAVITY_FINAL_VALIDATION: SKIPPED_BY_USER`
