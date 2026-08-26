@@ -32,8 +32,16 @@ Archive without disturbing the user's active Arab History worktree.
 - `npm run build:pages`: passed.
 - `npm run validate:pages`: passed — 1,402 local references across 139 HTML/CSS
   files.
-- Exact branch preview, PR, merge commit, Pages run and live-site browser smoke
-  remain to be recorded after commit/push.
+- Implementation commit: `66b1d160e2c6988673b0e5626f00113861ed5883`.
+- PR [#48](https://github.com/TSRat/My-Website/pull/48) merged as
+  `088dba825fbecb4a51f060b1ed93daada8014b44`.
+- Exact preview:
+  <https://raw.githack.com/TSRat/My-Website/66b1d160e2c6988673b0e5626f00113861ed5883/DELACROIX-ARCHIVE/index.html>.
+- Pages run [33000235134](https://github.com/TSRat/My-Website/actions/runs/33000235134):
+  passed in 1m56s.
+- Production: <https://tsrat.github.io/My-Website/DELACROIX-ARCHIVE/>.
+  Cache-resistant desktop and French mobile checks passed; the root Website
+  Archive showed 12 cards and the Delacroix card pointed to the live site.
 - `ANTIGRAVITY_FINAL_VALIDATION: SKIPPED_BY_USER` because the creator explicitly
   requested public publication rather than an additional final review cycle.
 

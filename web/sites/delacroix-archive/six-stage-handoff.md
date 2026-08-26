@@ -19,3 +19,11 @@ current publication PR. This is not a claim of comprehensive multi-browser or
 visual-regression review.
 
 `ANTIGRAVITY_FINAL_VALIDATION: SKIPPED_BY_USER`
+
+## Delivery coordinates
+
+- Implementation commit: `66b1d160e2c6988673b0e5626f00113861ed5883`.
+- Merged PR: <https://github.com/TSRat/My-Website/pull/48>.
+- Production merge: `088dba825fbecb4a51f060b1ed93daada8014b44`.
+- Successful Pages run: <https://github.com/TSRat/My-Website/actions/runs/33000235134>.
+- Live site: <https://tsrat.github.io/My-Website/DELACROIX-ARCHIVE/>.
