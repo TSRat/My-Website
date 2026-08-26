@@ -35,7 +35,8 @@ npm run build:pages
 
 Renderer adapters remain proportional to the site:
 
-- direct static copy for Living Atlas, Hypatia, and Hildegard;
+- direct static copy for Living Atlas, Hypatia, Hildegard, Delacroix Archive,
+  La Malinche, Zhang Yong Portrait, and Two Swans;
 - Vite static build for Enheduanna and Melromarc Sisters;
 - Vinext plus a dedicated Pages renderer for IVORY ARCHIVE.
 

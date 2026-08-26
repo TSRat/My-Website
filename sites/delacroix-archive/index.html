@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#4a010a" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <meta
+      name="description"
+      content="一个关于欧仁·德拉克洛瓦生平、作品、日记、资料与观看方法的三语研究型数字档案。"
+    />
+    <link rel="canonical" href="https://tsrat.github.io/My-Website/DELACROIX-ARCHIVE/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="欧仁·德拉克洛瓦｜数字档案" />
+    <meta property="og:description" content="三语阅读德拉克洛瓦的生平、作品、日记、资料与观看方法。" />
+    <meta property="og:url" content="https://tsrat.github.io/My-Website/DELACROIX-ARCHIVE/" />
+    <meta property="og:image" content="https://tsrat.github.io/My-Website/DELACROIX-ARCHIVE/assets/pierre-petit-delacroix-1862.png" />
+    <title>欧仁·德拉克洛瓦｜数字档案</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <div id="offline-banner" class="offline-banner" role="status" hidden></div>
+    <header class="site-header" id="site-header">
+      <button class="brand" type="button" data-route="home">德拉克洛瓦</button>
+      <nav class="primary-nav" id="primary-nav" aria-label="主要导航"></nav>
+      <div class="header-actions">
+        <button class="search-trigger" id="search-trigger" type="button" aria-haspopup="dialog">
+          <span aria-hidden="true">⌕</span>
+          <span class="search-label"></span>
+        </button>
+        <div class="language-switcher" role="group" aria-label="语言">
+          <button type="button" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+        </div>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main id="main" tabindex="-1"></main>
+
+    <footer class="site-footer" id="site-footer"></footer>
+
+    <dialog class="search-dialog" id="search-dialog">
+      <form method="dialog" class="dialog-bar">
+        <p class="eyebrow" id="search-eyebrow"></p>
+        <button class="icon-button" value="close" aria-label="关闭">×</button>
+      </form>
+      <label class="search-field">
+        <span class="sr-only" id="search-field-label"></span>
+        <input id="global-search" type="search" autocomplete="off" />
+        <kbd>/</kbd>
+      </label>
+      <div id="search-results" class="search-results" aria-live="polite"></div>
+    </dialog>
+
+    <dialog class="image-dialog" id="image-dialog">
+      <form method="dialog" class="dialog-bar image-dialog-bar">
+        <p id="image-dialog-title"></p>
+        <button class="icon-button" value="close" aria-label="关闭">×</button>
+      </form>
+      <figure>
+        <img id="image-dialog-image" alt="" />
+        <figcaption id="image-dialog-caption"></figcaption>
+      </figure>
+    </dialog>
+
+    <noscript>
+      <section class="noscript">
+        本原型需要 JavaScript 来切换语言和页面。首页肖像与核心资料仍保存在本地文件中。
+      </section>
+    </noscript>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
