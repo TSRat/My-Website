@@ -41,6 +41,8 @@ The shared direct-static builder copies deployable source into `.site-build/la-m
 
 - All chapters and primary content exist in HTML.
 - JavaScript adds scrollspy, lens selection, subtle reveal transforms, map switching, and the local reflection response.
+- The same chapter observer updates the header's `NN / 69` reading position and
+  short Chinese chapter label; the underlying scene numbering remains `00–69`.
 - The final reflection is not persisted.
 - The analytics adapter is a no-op with no network request.
 
@@ -65,6 +67,9 @@ The shared direct-static builder copies deployable source into `.site-build/la-m
 - Automated layout smoke counts all 70 scenes, checks image load state and
   document overflow, and flags display / copy collisions and one- or
   two-character display-title endings.
+- The readiness test also guards the reading-status hook, authored wrap class,
+  mobile scene cues, non-cropped origin-map inset, video-title selector, and
+  opaque evidence-badge treatment introduced by the typography polish pass.
 - `cover-green.webp` is referenced only by `site.config.json` for the generated
   parent Website Archive card. It is not referenced by La Malinche HTML / CSS
   or the Living Atlas carousel. `cover-red.webp` remains unreferenced.

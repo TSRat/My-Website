@@ -164,6 +164,20 @@
       '.progress-rail a, .chapter-menu a',
     ),
   ];
+  const chapterLabels = {
+    prologue: "序章",
+    before: "前世",
+    translator: "翻译者",
+    conqueror: "征服者",
+    killing: "杀戮",
+    rupture: "撕裂",
+    endgame: "终局",
+    survivor: "幸存者",
+    traitor: "背叛者",
+  };
+  const readingStatus = document.querySelector(".reading-status");
+  const readingScreen = document.querySelector("#reading-screen");
+  const readingChapter = document.querySelector("#reading-chapter");
   const chapterIds = new Set([
     "before",
     "translator",
@@ -184,6 +198,16 @@
       if (!visible) return;
 
       const chapter = visible.target.dataset.chapter;
+      const screen = visible.target.dataset.screen;
+      const chapterLabel = chapterLabels[chapter] ?? "正文";
+      if (screen && readingScreen && readingChapter) {
+        readingScreen.textContent = `${screen} / 69`;
+        readingChapter.textContent = chapterLabel;
+        readingStatus?.setAttribute(
+          "aria-label",
+          `当前阅读位置：${screen} / 69，${chapterLabel}`,
+        );
+      }
       if (!chapterIds.has(chapter)) return;
 
       chapterLinks.forEach((link) => {
