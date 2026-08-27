@@ -36,6 +36,142 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    "date": "2026-08-27",
+    "displayDate": "2026.08.27",
+    "issueNo": "41",
+    "theme": "成品之外的支撑面：私人创作、记忆方法、追逐地理、生命史与深空通信",
+    "intro": "本期从科幻插画家 Paul Lehr 生前未公开的雕塑、诗人 Dorothea Lasky 对 Bernadette Mayer《Memory》的跨代回应、美国警车追逐死亡的县域机会差异、绝经时间与晚年脑变化的长期队列，以及新加入 NASA 深空网络的 DSS-23 天线出发，追问一件作品、一段生命或一次太空任务背后，哪些不易看见的媒介、制度和基础设施决定了我们最后能够理解什么。",
+    "learningGoal": "学会把艺术家的公共职业与私人实践分开，把记忆视为一种写作方法而非事实仓库，区分县域关联与个体因果、绝经时间标记与确定性诊断，并理解深空探测为什么同样受地面通信容量约束。",
+    "connection": "五则故事都在把被成品遮住的支撑面重新显影：家属保存让私人雕塑进入公共艺术史，前辈作品为新的记忆写作提供结构，县域机会指数揭示追逐死亡并非均匀分布，生殖生命史连接了中年经验与晚年观察，而天线阵列把遥远航天器的数据变成地球上可接收的信号。",
+    "uniqueCount": 5,
+    "topics": [
+      "艺术人文",
+      "社会科学",
+      "女性主义"
+    ],
+    "stories": [
+      {
+        "category": "艺术人文 × 插画史 × 私人档案",
+        "image": "/story-images/paul-lehr-hidden-universe.jpg",
+        "imageAlt": "一间想象中的工作室里，宇宙插画与木质、金属抽象雕塑并置的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 Paul Lehr 的商业科幻插画与私人雕塑实践；并非真实艺术家、作品、工作室、展览现场或档案照片",
+        "title": "Paul Lehr 回顾展把数百本科幻封面背后、从未公开的私人雕塑带进艺术史",
+        "summary": "Paul Lehr 是美国科幻插画家，曾为 Isaac Asimov、Robert Heinlein 与 H. G. Wells 等作家的数百本书绘制封面，也为杂志工作。他 1998 年去世后，家人保存的一批金属与木质雕塑长期未进入公众视野；Pennsylvania College of Technology 的新展首次把这些私人作品与他熟悉的宇宙绘画放在一起。",
+        "background": "商业封面必须在书名、市场和印刷规格中工作，常常比创作者本人更广为流传；私人雕塑则可能没有委托、复制与发行记录。把两者并置，不是用‘隐藏杰作’取代插画职业，而是让材料、尺度和创作条件的差异进入同一位艺术家的研究。",
+        "happened": "The Gallery at Penn College 于 8 月 26 日公布回顾展《A Hidden Universe: The Art of Paul Lehr》。展览持续至 11 月 22 日，作品由 Lehr 的女儿 Diana Lehr 从家族收藏借出；她还将在 10 月 1 日讲述父亲的职业与这批此前未公开的雕塑。",
+        "facts": [
+          "Paul Lehr 在三十余年职业生涯里为数百本科幻小说绘制封面，合作作者包括 Isaac Asimov、Robert Heinlein 与 H. G. Wells。",
+          "展览同时呈现原作绘画、金属雕塑和木质雕塑。馆方称这些雕塑是在相对孤立的私人环境中制作，艺术家生前没有公开展出。",
+          "全部展品来自 Lehr 的女儿 Diana Lehr 所保存的家族收藏，说明本次回顾展的可见范围取决于家属保存、选择与借展。",
+          "Lehr 曾在 1969 年实际登月前近十年画出一幅想象月球着陆的作品。该画目前属于 Smithsonian National Air and Space Museum。",
+          "展览于 2026 年 8 月 20 日开放，持续至 11 月 22 日。10 月 1 日将举办招待会和 Diana Lehr 的公开讲座。",
+          "馆方把本展称为回顾展，但公开页面没有提供完整作品目录、创作年份或私人雕塑总量，因此不能据此把本次选择等同于艺术家的全部遗存。"
+        ],
+        "sourceName": "Pennsylvania College of Technology／Sci-fi work of Paul Lehr on exhibit at The Gallery at Penn College",
+        "sourceUrl": "https://www.pct.edu/news/articles/2026/08/26/sci-fi-work-of-paul-lehr-on-exhibit-at-the-gallery-at-penn-college",
+        "sourceDate": "发布 2026-08-26；展览 2026-08-20 至 2026-11-22",
+        "whyItMatters": "三十余年商业图像的高流通与私人物件的低可见度会制造艺术史偏差：最常被复制的未必代表创作者的全部实践，最私密的也未必天然更真实。家属保存让木材和金属作品进入公共叙事，也说明所谓发现是一条所有权、档案与策展链。研究时需要同时保留委托条件、复制规模、材料证据与家族叙述。",
+        "creatorAngle": "可以选择同一时期三张书封与三件雕塑，比较重复出现的空间、机械和地貌形态；再追踪封面上的书名排版、印刷裁切与出版营销，观察一种私人视觉语言如何被商业格式改变。"
+      },
+      {
+        "category": "艺术人文 × 诗学 × 女性记忆史",
+        "image": "/story-images/dorothea-lasky-memory.jpg",
+        "imageAlt": "胶卷、录音盘、手稿和多代人物轮廓在档案桌上层叠的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 Dorothea Lasky 对 Bernadette Mayer《Memory》的跨代诗学回应；并非真实人物、手稿、照片、录音、书封或档案材料",
+        "title": "Dorothea Lasky 用《Memory》回应 Bernadette Mayer：记忆不是仓库，而是一种组织意识的写法",
+        "summary": "Dorothea Lasky 是诗人，也是 Columbia University School of the Arts 诗歌方向负责人。她的新书《Memory》是一组‘诗人的随笔’，把祖辈、个人经历和诗歌记忆放进联想式结构；书名与方法明确向女性实验诗人 Bernadette Mayer 1971 年每天拍摄、记录一个月的同名项目致意。",
+        "background": "Bernadette Mayer 的《Memory》把一整卷每日拍摄的 35 毫米胶片与连续录音结合，挑战记忆必须事后回想、按顺序讲述的假定。Lasky 没有复刻摄影日志，而是把这套方法转化为随笔：私人丧失、文学引用与对意识的追问可以相邻出现，不必被整理成单一结论。",
+        "happened": "Columbia News 于 8 月 26 日刊出对 Lasky 的访谈。她解释，《Memory》的写作受到父亲 Herbert Lasky 在 2010 年因阿尔茨海默病去世的影响，也延续 Mayer 对记忆和记录形式的实验；她将书中短章称为‘诗人的随笔’，强调美学与联想逻辑，而不是传统论证。",
+        "facts": [
+          "Lasky 现任 Columbia University School of the Arts 诗歌方向负责人和副教授，《Memory》是她最新出版的书。",
+          "书中讨论祖辈记忆、个人记忆、诗歌记忆、人格与意识，并把文学分析、自传片段和联想式写作放在同一结构中。",
+          "Lasky 的父亲、法官 Herbert Lasky 于 2010 年因阿尔茨海默病去世。这段经历让她持续追问记忆消失时人格如何被理解。",
+          "Bernadette Mayer 在 1971 年一个月里每天拍完一卷 35 毫米胶片，累计超过一千一百张照片，并录下六小时以上的文字与声音。",
+          "Mayer 的项目于 1972 年首次展出，文字在 1975 年出版。Siglio Press 于 2020 年首次把完整文字和全部图像收入同一版本。",
+          "Lasky 把自己的形式称为‘诗人的随笔’：段落依靠联想和审美连续性推进，不承诺传统随笔的线性证明。",
+          "新书是对 Mayer 方法的回应而非复制。访谈没有声称文学结构能够解释或治疗阿尔茨海默病。"
+        ],
+        "sourceName": "Columbia University／School of the Arts Professor Dorothea Lasky Discusses Memory",
+        "sourceUrl": "https://news.columbia.edu/news/school-arts-professor-dorothea-lasky-discusses-memory",
+        "sourceDate": "发布 2026-08-26",
+        "whyItMatters": "把父亲的疾病、祖辈经验和另一位女性诗人的媒介实验放在一起，让记忆成为选择顺序、停顿和邻接关系的方法。跨代致意因此不是简单引用，而是在照片、录音与随笔之间测试同一问题会产生哪些盲点。私人哀悼不应被浪漫化为医学解释；作品的知识价值来自它暴露经验如何被组织，不来自替代临床证据。",
+        "creatorAngle": "可以把 Mayer 的一天影像—录音结构与 Lasky 的一个短章并排，标出时间顺序、重复、空白和引用怎样工作；再邀请不同年龄读者用同一事件制作照片日志、口述记录和联想随笔，比较三种媒介各自遗漏什么。"
+      },
+      {
+        "category": "社会科学 × 警务制度 × 地理不平等",
+        "image": "/story-images/fatal-police-pursuits-opportunity.jpg",
+        "imageAlt": "抽象美国县域机会分层图与夜间道路、警车剪影并置的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释美国警车追逐死亡与县域儿童机会水平的关联；并非真实地图、警员、车辆、追逐、事故现场或研究图表",
+        "title": "美国低机会县的致命警车追逐率高出六成，但现有数据还不能分开追逐次数与致死风险",
+        "summary": "警车追逐是执法车辆为迫使逃逸驾驶者停车而进行的高速追踪，也会危及乘员和旁观者。覆盖美国三千一百一十四个县的研究发现，2017 至 2021 年低儿童机会县的致命追逐事件率比高机会县高百分之六十三；这是一项县域关联，不能说明贫困本身直接导致某一次死亡。",
+        "background": "Child Opportunity Index 3.0 用教育、健康与环境、社会与经济共四十四项指标衡量社区给儿童成长提供的条件。研究把这一指数与死亡证明和媒体资料识别的致命追逐相连，目的是观察风险怎样分布，而不是评判某名驾驶者或警员的个体决定。",
+        "happened": "《JAMA Network Open》8 月 26 日发表县—年份纵向生态研究。研究者分析 2017 至 2021 年三千零四起致命追逐；控制城乡类型、人口构成和暴力犯罪率后，低机会县在总体指数及三个分领域上仍有更高事件率。",
+        "facts": [
+          "研究覆盖美国三千一百一十四个县和一万五千五百七十个县—年份观察，分析期为 2017 至 2021 年。",
+          "原始资料在 2017 至 2022 年识别三千三百三十六起致命追逐。因为 2022 年资料不完整，主要分析限于前五年的三千零四起。",
+          "儿童机会指数按全国百分位分为低机会、中等机会和高机会。三个范围分别为不超过第四十百分位、第四十至第六十百分位和高于第六十百分位。",
+          "在调整城乡类型、人口结构和县级暴力犯罪率后，低机会县相对高机会县的致命追逐事件率比为 1.63，百分之九十五置信区间为 1.37 至 1.94。",
+          "教育、健康与环境、社会与经济三个分指数的低机会县事件率比分别为 1.59、1.66 和 1.69。",
+          "Child Opportunity Index 不覆盖 Alaska、Hawaii 与美国岛屿领地，研究结果不能自动推广到这些地区。",
+          "研究没有全国一致的全部追逐次数作为分母，因此无法判断低机会县究竟发生了更多追逐，还是每次追逐更容易致命。生态设计也不能把县级关联转为个体因果。"
+        ],
+        "sourceName": "JAMA Network Open／Neighborhood Opportunity and Fatal Police Pursuits in the US",
+        "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2853299",
+        "sourceDate": "在线发表 2026-08-26；9(8):e2630679；doi:10.1001/jamanetworkopen.2026.30679",
+        "whyItMatters": "百分之六十三的县域差异把道路条件、急救可达性、社区资源和执法环境带入追逐政策，但汇总四十四项条件的机会指数不能指出哪一项机制在起作用。政策评估不能只数死亡总量，还应公开追逐频率、启动理由、速度、时长、终止决定与受害者身份。只有补齐一致的追逐分母和地方政策资料，才能比较‘减少不必要追逐’与‘降低既有追逐致死率’两种干预。",
+        "creatorAngle": "可以为不同城市制作一份追逐政策与公开数据矩阵：哪些违法行为允许启动，谁能命令终止，是否记录旁观者、速度和碰撞，是否公布全部追逐次数；再把政策变化前后的分母和伤亡率分开追踪。"
+      },
+      {
+        "category": "女性主义 × 生殖生命史 × 脑健康",
+        "image": "/story-images/menopause-brain-aging.jpg",
+        "imageAlt": "女性生命历程的植物年轮与抽象脑部白质纹理相连的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释绝经年龄与晚年认知和脑影像轨迹的队列研究；并非真实人物、脑扫描、组织切片、诊断结果或医学图表",
+        "title": "更早绝经与晚年认知下降和白质变化相关，手术与自然绝经不能被当作同一条路径",
+        "summary": "绝经是卵巢功能下降、月经永久停止的生命阶段，也可能因切除卵巢等手术提前发生。对两千六百零三名高龄女性的长期研究发现，较早绝经与更快的认知下降、较早的阿尔茨海默病出现和更多脑白质高信号累积相关；不同结果在自然绝经与手术绝经组的强度并不相同。",
+        "background": "脑白质高信号是磁共振图像上可见的亮区，常与小血管和老化相关，但不是阿尔茨海默病的单独诊断。绝经年龄同时受遗传、疾病、手术、社会条件和照护经历影响，因此既可能是生殖激素暴露的线索，也可能标记更广泛的生命历程。",
+        "happened": "《JAMA Network Open》8 月 25 日发表 Religious Orders Study 与 Rush Memory and Aging Project 的队列分析。参与者入组平均年龄七十八点三岁，中位随访七年；更早绝经与若干认知和影像轨迹相关，但总体阿尔茨海默病病理负担没有显示同样关联。",
+        "facts": [
+          "研究纳入两千六百零三名女性，其中一千七百五十三人报告自然绝经，八百五十人报告手术绝经。",
+          "参与者入组平均年龄为七十八点三岁，中位随访七年。样本百分之九十二点二为白人，平均受教育十六点零七年。",
+          "总体绝经年龄中位数为四十九岁。自然绝经组为五十岁，手术绝经组为四十三岁。",
+          "较早绝经与更快的总体认知和情景记忆下降、较早出现阿尔茨海默病诊断，以及更快累积白质高信号相关。",
+          "七百七十四名参与者有重复脑部磁共振资料。总脑容量的关联较弱，而白质高信号轨迹提供了较清楚的结构性差异。",
+          "结果在绝经类型间并不一致：自然绝经组的部分脑结构关联更明显，手术绝经组的阿尔茨海默病时间关联更清楚。总体阿尔茨海默病病理负担没有显著关联。",
+          "绝经年龄来自回顾性自报，样本人口结构有限，研究为观察性设计。它不能证明更早绝经或手术直接造成脑变化，也不能把群体关联用于个体预测。"
+        ],
+        "sourceName": "JAMA Network Open／Age at Menopause and Brain Atrophy Among Older Women",
+        "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2853260",
+        "sourceDate": "在线发表 2026-08-25；9(8):e2630973；doi:10.1001/jamanetworkopen.2026.30973",
+        "whyItMatters": "研究把中年生殖经历带入晚年脑健康，也说明自然变化、疾病与手术不能被压成同一条绝经路径。它不支持把早绝经者视为注定患病，也没有证明单一激素机制。更实际的启示是让生殖史成为长期健康记录的一部分，在多样人群中前瞻性追踪绝经类型、治疗、血管风险与照护可及性。",
+        "creatorAngle": "可以设计一份跨专科生命史表，区分自然绝经、手术原因、治疗、心血管指标和认知随访；再追问妇科、基层医疗与神经科之间哪些资料会丢失，以及谁承担重复叙述病史的劳动。"
+      },
+      {
+        "category": "社会科学 × 天文学 × 科学基础设施",
+        "image": "/story-images/dss-23-deep-space-network.jpg",
+        "imageAlt": "多座巨型射电天线在地球弧线上协同接收遥远航天器信号的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 NASA Deep Space Network 的天线容量、阵列与全球覆盖；并非真实 DSS-23、Goldstone 站、航天器、控制室或观测现场",
+        "title": "DSS-23 正式加入 NASA 深空网络：探索瓶颈不只在航天器，也在地球能否同时听见它们",
+        "summary": "NASA Deep Space Network 是分布在美国 California、西班牙 Madrid 附近和澳大利亚 Canberra 附近的全球无线电通信系统，负责向遥远航天器发送指令并接收数据。Goldstone 新建的三十四米天线 DSS-23 已于 8 月 3 日投入运行，为同时服务四十多个深空任务增加容量。",
+        "background": "行星探测器发回的信号极弱，需要地球随自转在三个相隔约一百二十度的站点之间交接。新任务增加后，通信时间成为共享资源；天线口径、支持频段、维修窗口和多天线阵列能力会直接影响科学数据能够下载多少、命令能否按时送达。",
+        "happened": "NASA 于 8 月 25 日公布 DSS-23 完成建设与测试。项目 2020 年 2 月开工，2024 年 12 月安装重达一百三十三吨的反射面框架，2026 年 5 至 7 月通过测试；首个运行任务是追踪 Chandra X-ray Observatory，随后服务 Mars Reconnaissance Orbiter、Psyche、Juno 和 Voyager 1 等航天器。",
+        "facts": [
+          "DSS-23 是一座口径三十四米、约一百一十四英尺的多频段波束波导天线，位于 California Barstow 附近的 Goldstone Deep Space Communications Complex。",
+          "它是 Goldstone 的第五座深空天线。该站另有三座三十四米天线和一座七十米天线。",
+          "NASA 的 Aperture Enhancement Project 始于 2009 年，目标是在全球网络增加六座三十四米多频段天线。DSS-23 是其中第五座。",
+          "工程于 2020 年 2 月开工，2024 年 12 月把一百三十三吨反射面框架吊装到基座，2026 年 5 至 7 月完成系统测试，并于 8 月 3 日投入运行。",
+          "DSS-23 首先追踪 Chandra X-ray Observatory，之后已支持 Mars Reconnaissance Orbiter、Psyche、Juno 和 Voyager 1 等任务。",
+          "三十四米天线可组合成阵列，在需要时提高接收能力，并为网络中已连续服务五十多年、维护成本较高的单座七十米天线提供冗余。",
+          "第六座新天线 DSS-33 正在 Canberra 建造，计划 2029 年上线。完成后网络将拥有十三座三十四米天线。"
+        ],
+        "sourceName": "NASA／New Next-Gen Dish Adds Muscle to NASA’s Deep Space Network",
+        "sourceUrl": "https://www.nasa.gov/technology/space-comms/deep-space-network/new-next-gen-dish-adds-muscle-to-nasas-deep-space-network/",
+        "sourceDate": "发布 2026-08-25；DSS-23 于 2026-08-03 开始运行",
+        "whyItMatters": "DSS-23 把地面排班、维护和信号处理重新放回太空科学链条。新天线能通过并行和阵列缓解任务竞争，却不等于每个任务自动获得更多时间；网络仍要在导航、指令、紧急事件与科学下载之间调度。评估基础设施效果，应追踪可用小时、阵列使用、维护停机和任务积压，而不只统计天线数量。",
+        "creatorAngle": "可以把一份二十四小时深空网络排班做成可视化：地球自转如何触发三站交接，哪些任务需要单天线、哪些需要阵列，突发故障会挤掉谁；再比较新增一座三十四米天线与延寿一座七十米天线的不同价值。"
+      }
+    ]
+  },
+  {
     "date": "2026-08-26",
     "displayDate": "2026.08.26",
     "issueNo": "40",
@@ -63,10 +199,10 @@ export const briefings: Briefing[] = [
           "第八届 FotoFocus Biennial 以《The Long View》为题，共有七十四个展览和六十五处场地，是主办方称为美国同类活动中规模最大的区域摄影双年展。",
           "场地跨越 Greater Cincinnati、Dayton、Columbus 与 Northern Kentucky，并包括博物馆、画廊、大学、剧院、非营利文化中心、公园、酒店和图书馆。",
           "开幕计划从 2026 年 9 月 30 日持续至 10 月 3 日，完整双年展在十月展开。",
-          "主要个展包括 Trevor Paglen、Paul Mpagi Sepuya、Nancy Rexroth 与 Widline Cadet；Daniel Immerwahr 将以历史学者身份作主题演讲。",
-          "免费 Biennial Pass 覆盖七十多个摄影与镜头媒介展览；部分场馆本来免费，另一些场馆凭通行证免票。",
+          "主要个展包括 Trevor Paglen、Paul Mpagi Sepuya、Nancy Rexroth 与 Widline Cadet。Daniel Immerwahr 将以历史学者身份作主题演讲。",
+          "免费 Biennial Pass 覆盖七十多个摄影与镜头媒介展览。部分场馆本来免费，另一些场馆凭通行证免票。",
           "主办方安排 Dayton、Columbus 与 Cincinnati 三个地区聚焦周末，并提供从 Cincinnati 出发的免费往返巴士。",
-          "免费票与巴士降低部分门槛，但活动仍需注册、按时段移动，而且并非每处场馆都能在同一天抵达；公开数量不能直接等同于均等使用。"
+          "免费票与巴士降低部分门槛，但活动仍需注册、按时段移动，而且并非每处场馆都能在同一天抵达。公开数量不能直接等同于均等使用。"
         ],
         "sourceName": "FotoFocus／2026 Biennial Opening Program and Biennial Pass Launch",
         "sourceUrl": "https://www.fotofocus.org/2026/08/25/2026-biennial-opening-program-and-biennial-pass-launch/",
@@ -90,8 +226,8 @@ export const briefings: Briefing[] = [
           "历史范围从二十世纪五十年代延伸至当代，用来追踪艺术家怎样借儿童的开放性与好奇心质疑艺术惯例。",
           "公告称儿童将作为关键合作者，展览会纳入他们的想法与观看方式，并以此挑战长期塑造博物馆实践的成人中心假设。",
           "目前公布的参展者包括 Monster Chetwynd、Aki Kondo、Suh Aami、Suh Omi、Do Ho Suh 与 Yuriko Sasaoka，名单仍可能调整。",
-          "策展团队包括 Manabu Yahagi、Hirokazu Tokuyama 与 Victor Wang；公告尚未说明儿童合作者的遴选、报酬、署名或决定权范围。",
-          "Mori Art Museum 将从 2027 年 9 月 24 日关闭翻新，预计 2028 年 4 月下旬重新开放；展览结束与机构暂停发生在相邻时间。"
+          "策展团队包括 Manabu Yahagi、Hirokazu Tokuyama 与 Victor Wang。公告尚未说明儿童合作者的遴选、报酬、署名或决定权范围。",
+          "Mori Art Museum 将从 2027 年 9 月 24 日关闭翻新，预计 2028 年 4 月下旬重新开放。展览结束与机构暂停发生在相邻时间。"
         ],
         "sourceName": "Mori Art Museum／Mori Art Museum FY2027 Exhibition Schedule Announced!",
         "sourceUrl": "https://www.mori.art.museum/en/news/2026/08/8903/",
@@ -113,9 +249,9 @@ export const briefings: Briefing[] = [
           "研究纳入二十九州四万二千三百八十五名五至十八岁学生，资料来自主要服务低收入和中低收入家庭的社区健康机构。",
           "样本中百分之五十一点九为女性，百分之八十点二由公共保险覆盖，百分之八十点三来自收入低于联邦贫困线百分之一百八十五的家庭。",
           "研究只比较原本不符合其他联邦普惠校餐项目的较低贫困学校，并按住址匹配指定学校。",
-          "全国豁免于 2022 年 6 月结束；八个州以临时延长或永久政策继续普惠校餐，其他州的相关学校恢复个人收入资格。",
+          "全国豁免于 2022 年 6 月结束。八个州以临时延长或永久政策继续普惠校餐，其他州的相关学校恢复个人收入资格。",
           "第一政策后学年，失去与保留普惠资格组之间的 BMI z 分数差异接近零，未达到统计显著。",
-          "第二政策后学年，保留普惠资格组平均 BMI z 分数比基线下降 0.08；失去资格组相对少降 0.03，差异中之差的百分之九十五置信区间为 0.01 至 0.06。",
+          "第二政策后学年，保留普惠资格组平均 BMI z 分数比基线下降 0.08。失去资格组相对少降 0.03，差异中之差的百分之九十五置信区间为 0.01 至 0.06。",
           "研究没有直接测量每名学生实际吃了哪些校餐，住址指定学校也可能不同于实际就读学校，因此结果支持政策关联，不能证明退出普惠校餐直接造成个体体重变化。"
         ],
         "sourceName": "JAMA Network Open／Loss of Access to Universal Free School Meals and Body Mass Index in Students",
@@ -136,12 +272,12 @@ export const briefings: Briefing[] = [
         "happened": "8 月 25 日发表的分析从原试验三百六十人中选出二百六十六名有焦虑、抑郁或两者诊断者。四个月病历显示，干预组基层情绪筛查为百分之三十三点三、对照组百分之十五点六；有心理讨论或计划的就诊为百分之三十九点九与百分之二十四点二。",
         "facts": [
           "试验于 2022 年 11 月至 2023 年 10 月在 Massachusetts 一家医院产科门诊和五家社区产科门诊进行，采用一比一分层随机分配。",
-          "二次分析纳入二百六十六人，其中一百二十八人为对照组、一百三十八人为干预组；平均年龄三十三点七岁。",
+          "二次分析纳入二百六十六人，其中一百二十八人为对照组、一百三十八人为干预组。平均年龄三十三点七岁。",
           "干预包括说明产后基层照护价值、默认安排约产后三个月的年度基层预约，以及产后约一个月和预约前一周的短信与电子病历提醒。",
           "四个月时，干预组与对照组的基层就诊率为百分之四十三点五与百分之二十八点九，调整后相差 14.8 个百分点。",
-          "包含情绪筛查的基层就诊为百分之三十三点三与百分之十五点六，相差 18.3 个百分点；包含心理讨论或计划的就诊为百分之三十九点九与百分之二十四点二，相差 15.9 个百分点。",
+          "包含情绪筛查的基层就诊为百分之三十三点三与百分之十五点六，相差 18.3 个百分点。包含心理讨论或计划的就诊为百分之三十九点九与百分之二十四点二，相差 15.9 个百分点。",
           "五个月问卷中，基层就诊内获得处方或转诊者为百分之二十三点二与百分之十点一，调整后相差 12.8 个百分点。",
-          "整体情绪药物获得率和心理专科就诊率没有显著组间差异；分析是未预设多重比较调整的探索性二次分析，且样本多数为白人、私人保险和较高教育程度者。"
+          "整体情绪药物获得率和心理专科就诊率没有显著组间差异。分析是未预设多重比较调整的探索性二次分析，且样本多数为白人、私人保险和较高教育程度者。"
         ],
         "sourceName": "JAMA Network Open／Facilitated Transitions to Postpartum Primary Care and Mental Health Care Services",
         "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2853265",
@@ -160,13 +296,13 @@ export const briefings: Briefing[] = [
         "background": "行星从恒星前方经过时，少量星光穿过行星大气并留下分子波长特征；但望远镜同时接收整颗恒星的光。主恒星表面的暗斑和亮斑会随自转改变，若没有长时间同步测量，就可能把恒星变化误解为行星成分。",
         "happened": "NASA 于 8 月 25 日宣布 Pandora 仪器状态良好、正式进入科学阶段。卫星 1 月 11 日进入近地轨道；一年主要任务中，每个目标将观测十次，每次连续二十四小时并包含一次凌日，用小卫星的长时间专注补足 Webb 难以经常提供的观测节奏。",
         "facts": [
-          "Pandora 是 NASA Astrophysics Pioneers 计划首颗发射的卫星；该计划以较快、较低成本和较高失败容忍度探索特定天体物理问题。",
+          "Pandora 是 NASA Astrophysics Pioneers 计划首颗发射的卫星。该计划以较快、较低成本和较高失败容忍度探索特定天体物理问题。",
           "卫星于 2026 年 1 月 11 日发射至近地轨道，8 月完成调试后开始科学观测。",
           "任务将研究至少二十颗系外行星，目标包括区分大气中的雾、云和水等成分与主恒星自身的光谱变化。",
           "Pandora 使用直径约四十五厘米的全铝望远镜，同时取得恒星可见光亮度、恒星近红外光谱与凌日期间的行星近红外光谱。",
-          "一年主要任务中，每个目标计划观测十次；每次连续二十四小时，并包含一次行星凌日。",
-          "近红外探测器原本是为 James Webb Space Telescope 制作的备用件；Pandora 数据将与 Webb 观测结合。",
-          "NASA Ames 负责数据处理，科学数据进入 NASA Exoplanet Archive；Goddard、Lawrence Livermore、University of Arizona、Corning 与 Blue Canyon Technologies 分担仪器、工程、运行和处理。"
+          "一年主要任务中，每个目标计划观测十次。每次连续二十四小时，并包含一次行星凌日。",
+          "近红外探测器原本是为 James Webb Space Telescope 制作的备用件。Pandora 数据将与 Webb 观测结合。",
+          "NASA Ames 负责数据处理，科学数据进入 NASA Exoplanet Archive。Goddard、Lawrence Livermore、University of Arizona、Corning 与 Blue Canyon Technologies 分担仪器、工程、运行和处理。"
         ],
         "sourceName": "NASA／NASA’s Pandora Mission Begins Study of Exoplanets, Host Stars",
         "sourceUrl": "https://science.nasa.gov/missions/pandora-missions/nasas-pandora-mission-begins-study-of-exoplanets-host-stars/",
@@ -206,9 +342,9 @@ export const briefings: Briefing[] = [
           "Baskett 在 2025 年规划五百万美元赠款，用于支持馆方时装与纺织品收藏，并设立受资助的策展职位。",
           "遗赠还包括她的日本时装收藏与艺术史研究资料，馆方列出 Issey Miyake、Rei Kawakubo、Yohji Yamamoto 等设计者。",
           "首展《Gesture and Meaning》完全从这批日本先锋时装中选择作品，因此新空间的第一次历史排序与一位捐赠者的收藏判断紧密相连。",
-          "Baskett 1965 至 1971 年担任馆方版画策展人，并帮助建立重要的二十世纪日本版画收藏；她后来从事画廊经营与大学教学。",
+          "Baskett 1965 至 1971 年担任馆方版画策展人，并帮助建立重要的二十世纪日本版画收藏。她后来从事画廊经营与大学教学。",
           "该馆时装艺术与纺织品收藏约有一万五千件，整馆藏品超过七万三千件、跨越六千多年。",
-          "Baskett 于 2026 年 7 月 15 日去世，享年八十五岁；展厅开放因此也成为一项生前规划如何转为机构遗产的具体节点。"
+          "Baskett 于 2026 年 7 月 15 日去世，享年八十五岁。展厅开放因此也成为一项生前规划如何转为机构遗产的具体节点。"
         ],
         "sourceName": "Cincinnati Art Museum／Cincinnati Art Museum Opens Its First Dedicated Fashion Gallery",
         "sourceUrl": "https://www.cincinnatiartmuseum.org/about/press-room/cincinnati-art-museum-opens-its-first-dedicated-fashion-gallery-named-in-honor-of-mary-w-baskett/",
@@ -229,7 +365,7 @@ export const briefings: Briefing[] = [
         "facts": [
           "展览由 Christian Viveros-Fauné 策展，包含四组作品，覆盖 1999 至 2025 年，并免费向公众开放。",
           "《The Disappointed Tourist》自 2019 年持续发展，目前包含三百多幅十八乘二十四英寸的油彩与丙烯画，外观近似旧黑白明信片。",
-          "该项目网站已收到来自三十多个国家的四百多份投稿，地点从原始 Parthenon 到已经关闭的 CBGBs；消失原因并不相同。",
+          "该项目网站已收到来自三十多个国家的四百多份投稿，地点从原始 Parthenon 到已经关闭的 CBGBs。消失原因并不相同。",
           "《The Mermaid: Two Incompatible Systems Intimately Linked》是一幅一百英尺长的绘画，以卫星视角并置 Everglades 与 Greater Miami。",
           "《The New York Beautification Project》在 1999 至 2001 年间把小型传统风景油画直接画到 New York City 的涂鸦地点。",
           "《The Utopia Machine》自 2024 年发展，由一百多幅绘画呈现公共图书馆访客对‘什么能让世界成为乌托邦’的回答。",
@@ -255,10 +391,10 @@ export const briefings: Briefing[] = [
           "综述纳入十九个纵向队列、二十三篇论文、九十四个相对风险估计和八万二千四百九十八名未满二十五岁的参与者。",
           "研究检索从数据库建库至 2025 年 9 月 2 日，纳入的队列来自十个高收入国家，没有低收入或中等收入国家。",
           "高营销暴露与低暴露相比，后续饮酒的合并相对风险为 1.50，百分之九十五置信区间为 1.37 至 1.63。",
-          "全部估计中百分之八十六为正向关系；电视广告的合并关联最强，但在线内容、娱乐植入、促销、品牌商品与复合暴露也被纳入。",
+          "全部估计中百分之八十六为正向关系。电视广告的合并关联最强，但在线内容、娱乐植入、促销、品牌商品与复合暴露也被纳入。",
           "综述同时观察首次饮酒、当前饮酒、重度或有害饮酒等结果，各队列的年龄、暴露测量和随访时间并不完全一致。",
           "研究把剂量反应作为提高证据确定性的理由，但所有研究至少在部分环节依赖自报饮酒，且观察设计仍可能存在残余混杂。",
-          "作者把态度与认知变化列为可能的中介路径；现有队列没有证明每个营销渠道都通过同一心理机制产生结果。"
+          "作者把态度与认知变化列为可能的中介路径。现有队列没有证明每个营销渠道都通过同一心理机制产生结果。"
         ],
         "sourceName": "JAMA Pediatrics／Alcohol Marketing and Alcohol Use Among Youth",
         "sourceUrl": "https://jamanetwork.com/journals/jamapediatrics/fullarticle/2853248",
@@ -278,11 +414,11 @@ export const briefings: Briefing[] = [
         "happened": "《Communications Engineering》8 月 14 日发表开放获取文章。作者把步行审计、共同设计、混合用途规划、按多段短途调整票价、可见性、座椅、坡道、厕所与哺乳空间整理为专业行动，并要求在概念、预算、实施和使用后评估各阶段持续检验性别影响。",
         "facts": [
           "文章综合城市规划、工程、交通、公共健康与女性主义研究的既有文献和案例，目标是把理论翻译为建成环境专业人员可以采用的行动。",
-          "作者引用的全球行业数据中，女性仅占建筑与规划公司最高层职位约百分之十；United Kingdom 工程师中女性约占百分之十三。",
-          "照护者更常进行 trip chaining，也更依赖步行和公共交通；只优化郊区到市中心的单一通勤会漏掉多段短途的时间与票价成本。",
+          "作者引用的全球行业数据中，女性仅占建筑与规划公司最高层职位约百分之十。United Kingdom 工程师中女性约占百分之十三。",
+          "照护者更常进行 trip chaining，也更依赖步行和公共交通。只优化郊区到市中心的单一通勤会漏掉多段短途的时间与票价成本。",
           "World Bank 2024 年资料显示，一百九十个经济体中只有三十九个具有禁止公共空间性骚扰的法律。",
           "文章引用的 United Kingdom 调查中，十八至三十四岁女性公共交通使用者有百分之五十四报告过去十二个月遭遇性骚扰或不受欢迎、具威胁性的行为。",
-          "文章引用的青少年公园研究发现，部分场地使用者中男孩占百分之八十八，多用途球场中男孩占百分之九十二；比例来自既有研究，不是本篇新采集数据。",
+          "文章引用的青少年公园研究发现，部分场地使用者中男孩占百分之八十八，多用途球场中男孩占百分之九十二。比例来自既有研究，不是本篇新采集数据。",
           "建议包括 walk audit、故事讲述与共同设计、十五分钟城市和混合用途、不过度惩罚多段短途的票价，以及较小且可见的公园空间、厕所、座椅、坡道与哺乳设施。"
         ],
         "sourceName": "Communications Engineering／Equal access in urban spaces: Gendered perspectives and actions for greater equity",
@@ -303,12 +439,12 @@ export const briefings: Briefing[] = [
         "happened": "APOD 在 8 月 25 日发布这幅以二十二年资料制作的可视化，并提醒本周稍后将有新的月食，较佳观测区域包括 North 与 South America、Europe 和 Africa。页面把长期合成与即将发生的单次事件分开，没有把合成图冒充一次完整观测。",
         "facts": [
           "图像由二十二年间多次月食的月面影像构成，不是一台相机在一个夜晚记录的连续序列。",
-          "每个月面显示 Earth 圆形本影边缘的一部分；将多个位置组合后，完整暗圆才变得可见。",
+          "每个月面显示 Earth 圆形本影边缘的一部分。将多个位置组合后，完整暗圆才变得可见。",
           "地球圆影至少自 Aristotle 时代就被用作地球为球形的观察证据，今日合成则以数字图像把几何关系集中显示。",
           "月球轨道相对地球绕 Sun 的轨道平面略有倾斜，因此大多数满月从本影上方或下方经过，不会每月发生月食。",
-          "部分月面边缘可见淡蓝色带；官方说明把它解释为 Earth 大气对穿过的太阳光进行波长选择性过滤的结果。",
+          "部分月面边缘可见淡蓝色带。官方说明把它解释为 Earth 大气对穿过的太阳光进行波长选择性过滤的结果。",
           "APOD 预告本周稍后有新的月食，较佳观测区域覆盖 North America、South America、Europe 与 Africa 的部分地区。",
-          "合成图能清楚显示形状，却不会自动保留每次月食的天气、曝光、镜头、位置与色彩处理差异；这些元数据仍需另行记录。"
+          "合成图能清楚显示形状，却不会自动保留每次月食的天气、曝光、镜头、位置与色彩处理差异。这些元数据仍需另行记录。"
         ],
         "sourceName": "NASA／Astronomy Picture of the Day／Earth's Shadow Visualized with Lunar Eclipses",
         "sourceUrl": "https://science.nasa.gov/image-article/apod-2026-august-25-earths-shadow-visualized-with-lunar-eclipses/",
@@ -346,11 +482,11 @@ export const briefings: Briefing[] = [
         "facts": [
           "《Woven in Wool》展期为 2025 年 9 月 13 日至 2026 年 8 月 30 日，内容同时包括历史织物、当代作品、工具、原料、可触摸复制品和织者音频。",
           "Coast Salish Wool Weaving Center 的任务是保存并推动 Salish Sea territory 的羊毛织造传统，并开设采集、处理、纺线、染色和织造课程。",
-          "六位共同策展人是 Susan Pavel、Janice George、Tillie Jones、Kelly Sullivan、Gail White Eagle 与 Tahnee Hawk Miller；她们的部族关系、学习年资与社群职责并不相同。",
+          "六位共同策展人是 Susan Pavel、Janice George、Tillie Jones、Kelly Sullivan、Gail White Eagle 与 Tahnee Hawk Miller。她们的部族关系、学习年资与社群职责并不相同。",
           "今日时装秀列出的新织物创作者还包括共同策展顾问 Willard ‘Buddy’ Joseph，珠宝由顾问与贡献者 Al Charles Jr. 制作。",
           "展厅展示山羊毛、香蒲、棉白杨绒、天鹅绒羽与雪松皮的季节性采集，并以蘑菇、橡果和莓果说明天然染色。",
           "部分祖传织物借展回到 Coast Salish territory，是约一个世纪以来首次回到这一地区。",
-          "活动普通票五十五美元、会员票四十五美元且已售罄；售罄说明需求，也意味着当晚现场不能代表所有社群成员的参与经验。"
+          "活动普通票五十五美元、会员票四十五美元且已售罄。售罄说明需求，也意味着当晚现场不能代表所有社群成员的参与经验。"
         ],
         "sourceName": "Burke Museum／Woven in Wool；Weaving into the Future",
         "sourceUrl": "https://www.burkemuseum.org/exhibits/woven-wool-resilience-coast-salish-weaving",
@@ -375,7 +511,7 @@ export const briefings: Briefing[] = [
           "第一项核心论点是，黑人女性形成了超出规范亲属边界的情感生活，挑战 racial capitalism 对关系的限制。",
           "第二项核心论点是，黑人女性在奴隶制及其延续结构中发展出具有历史特异性的情感行为与实践。",
           "论文把情感与抵抗、亲密关系、劳动和联邦政府联系起来，但并不把所有黑人女性经验压缩为单一共同感受。",
-          "这是一场博士论文公开答辩；活动让方法与论点进入学术评议，不等同于已经出版的专著或完成全部公共档案开放。"
+          "这是一场博士论文公开答辩。活动让方法与论点进入学术评议，不等同于已经出版的专著或完成全部公共档案开放。"
         ],
         "sourceName": "Princeton University Department of History／Camille Borders Final Public Oral Exam",
         "sourceUrl": "https://history.princeton.edu/news-events/events/final-public-oral-exam-camille-borders",
@@ -394,12 +530,12 @@ export const briefings: Briefing[] = [
         "background": "过去的脑成像研究常把不同参与者的激活位置平均在一起，但语言与执行控制区域位置接近且个体差异明显，平均可能模糊边界。‘精密 fMRI’先在每位参与者脑内分别定位两个网络，再比较它们的范围、反应强度、侧化和连接。",
         "happened": "研究 8 月 24 日发表于《Nature Communications》。结果反对‘老化会让所有网络普遍去分化’的简单模型：语言网络仍偏左侧、内部同步且对语言困难敏感；multiple demand network 则激活较弱、范围较小、个体位置更不一致且内部连接下降。",
         "facts": [
-          "较年长组有六十四人，年龄四十一至八十岁、平均五十九点七岁，其中三十六人为女性；年轻组有四百八十三人，年龄十七至三十九岁、平均二十三点八岁，其中二百七十八人为女性。",
-          "语言定位任务比较阅读句子与可发音无意义词串；执行控制定位任务要求记住三乘四网格中的八个困难位置或四个简单位置。",
+          "较年长组有六十四人，年龄四十一至八十岁、平均五十九点七岁，其中三十六人为女性。年轻组有四百八十三人，年龄十七至三十九岁、平均二十三点八岁，其中二百七十八人为女性。",
+          "语言定位任务比较阅读句子与可发音无意义词串。执行控制定位任务要求记住三乘四网格中的八个困难位置或四个简单位置。",
           "语言网络在两组中的激活范围、左半球侧化、选择性与内部功能连接相似，语言反应强度随年龄仅略有增加。",
           "较年长组的 multiple demand network 激活更弱、显著体素更少、激活峰位置更可变，内部功能连接也较低。",
           "听故事的子样本中，两组对陌生词和不寻常语法结构都出现相似的语言网络反应增强。",
-          "较年长样本由两个独立队列合并；其中一个队列接受 MMSE-2 一般认知筛查，参与者均在正常范围。",
+          "较年长样本由两个独立队列合并。其中一个队列接受 MMSE-2 一般认知筛查，参与者均在正常范围。",
           "研究比较不同年龄组的横截面脑活动，没有直接纵向跟踪同一个人的变化，也没有在本研究中测量完整日常语言能力。"
         ],
         "sourceName": "Nature Communications／MIT News／Preserved language network in older brains",
@@ -419,13 +555,13 @@ export const briefings: Briefing[] = [
         "background": "‘A 与 B 相关’允许共同原因、反向关系和测量偏差存在；‘A 改变 B’则需要更强识别设计与假设。论文用专家编码验证 GPT-4o 与 BERT 分类器，再把文章趋势、读者实验和五种语言模型总结放进同一研究，测试措辞怎样改变证据理解。",
         "happened": "《Nature Human Behaviour》8 月 24 日发表开放获取论文。结果不仅显示因果语言长期上升，还发现人类读者会被原摘要影响，简化或强调实际影响的模型提示也更容易去掉限定词；加入方法说明、改写为关联措辞或要求谨慎总结能降低但不能消除夸张。",
         "facts": [
-          "主分析包含 194,631 篇 1980 至 2024 年的横截面论文；46.3% 的标题或摘要被分类为含直接、暗示或条件式因果语言。",
+          "主分析包含 194,631 篇 1980 至 2024 年的横截面论文。46.3% 的标题或摘要被分类为含直接、暗示或条件式因果语言。",
           "年度比例从 1980 至 2000 年约 20% 的平台期，上升到 2024 年超过 60%。",
           "2024 年五个学科中，business 为 84%、economics 67%、psychology 55%、political science 53%、sociology 46%。",
-          "在可连接期刊排名的 127,598 篇文章中，高于影响指标中位数的期刊因果措辞率为 54.4%，低于中位数者为 43.3%；这是相关关系，不证明期刊声望造成夸张。",
+          "在可连接期刊排名的 127,598 篇文章中，高于影响指标中位数的期刊因果措辞率为 54.4%，低于中位数者为 43.3%。这是相关关系，不证明期刊声望造成夸张。",
           "人类实验招募一千一百零五名受过大学教育的美国成年人，并从二十八篇顶级期刊摘要中随机呈现原文、关联改写、方法提示或 AI 反馈等条件。",
-          "在第一轮 GPT-4.1 实验中，原摘要生成的总结有 99.3% 含因果措辞；加入方法提示后为 41.7%，加入 AI 反馈后为 30.3%，仍未降到零。",
-          "第二轮让 GPT-4.1、GPT-5.1、GPT-5.4、DeepSeek Chat-V3.2 与 Claude Sonnet 4.6 各总结一百篇文章；简化与实际影响提示普遍增加无保留因果语言，谨慎提示则降低。"
+          "在第一轮 GPT-4.1 实验中，原摘要生成的总结有 99.3% 含因果措辞。加入方法提示后为 41.7%，加入 AI 反馈后为 30.3%，仍未降到零。",
+          "第二轮让 GPT-4.1、GPT-5.1、GPT-5.4、DeepSeek Chat-V3.2 与 Claude Sonnet 4.6 各总结一百篇文章。简化与实际影响提示普遍增加无保留因果语言，谨慎提示则降低。"
         ],
         "sourceName": "Nature Human Behaviour／Quantifying overreaching causal claims in social science",
         "sourceUrl": "https://www.nature.com/articles/s41562-026-02553-x",
@@ -448,7 +584,7 @@ export const briefings: Briefing[] = [
           "2026 年发生两次意外爆发，合计让它在当前阶段比通常亮约二万倍，可用双筒望远镜与长曝光摄影记录。",
           "它绕 Sun 的周期超过五年，轨道位于 Mars 与 Jupiter 之间。",
           "APOD 使用的长曝光照片在发布前十天于 South Africa 拍摄，显示明亮绿色彗发和短尘尾。",
-          "地下气体压力释放或所谓彗星震是候选机制；官方页面没有宣布已确定爆发原因。",
+          "地下气体压力释放或所谓彗星震是候选机制。官方页面没有宣布已确定爆发原因。",
           "彗星预计十月以约一个天文单位的距离经过 Earth，随后朝轨道远端返回并快速变暗。",
           "亮度增加二万倍描述的是观测光度变化，不表示彗核扩大二万倍，也不意味着它正接近撞击 Earth。"
         ],
@@ -491,7 +627,7 @@ export const briefings: Briefing[] = [
           "官方说明明确把演变、腐变、滴落、碎裂和蒸发列为作品材料的行为，而不是笼统称为自然灵感。",
           "参展者跨越不同世代，包括 Ana Mendieta、Carlos Mérida、Francisco Toledo、Mary Sully、Raven Chacon、Rose B. Simpson 与 Santiago Yahuarcani 等。",
           "策展论述把材料连接到 Brown 与 Indigenous worlds 的精神、记忆和知识，并把它们视为生活记录与宇宙记忆的储存者。",
-          "展览由 Pablo José Ramírez 策展、Jessi DiTillio 协助；Hammer Museum 对公众免门票。",
+          "展览由 Pablo José Ramírez 策展、Jessi DiTillio 协助。Hammer Museum 对公众免门票。",
           "展期从 4 月 5 日持续至 8 月 23 日，因而任何状态比较都必须同时记录时间、环境、维护动作和艺术家指示。"
         ],
         "sourceName": "Hammer Museum／Several Eternities in a Day: Form in the Age of Living Materials",
@@ -512,12 +648,12 @@ export const briefings: Briefing[] = [
         "happened": "The Light 于 8 月 22 日向公众开放，8 月 22 至 23 日举行免费开幕周末。首展《Victory Over the Sun: Encounters with Light》延续至 2027 年 1 月 17 日，把人工光视为材料、讯息与隐喻，同时让新展厅的收费边界与免费军团展并存。",
         "facts": [
           "项目投资一千七百万英镑，改造对象是关闭十年的 Durham Light Infantry Museum and Art Gallery。",
-          "建筑新增约 550 平方米临时展览空间，并保留专门的 Durham Light Infantry 展厅；军团档案和全部收藏的永久库房位于姐妹机构 The Story。",
+          "建筑新增约 550 平方米临时展览空间，并保留专门的 Durham Light Infantry 展厅。军团档案和全部收藏的永久库房位于姐妹机构 The Story。",
           "《Victory Over the Sun》展出二十六位国际艺术家的作品，时间跨度从 1960 年代至今天，技术包括荧光灯、霓虹、LED 与数字媒介。",
           "参展者包括 Dan Flavin、Félix González-Torres、Jenny Holzer、Olafur Eliasson、Tracey Emin、Steve McQueen、Chila Burman 与 Liz West。",
           "展名借用 1913 年 Russian Futurist 歌剧，并以 County Durham 出生的电灯先驱 Joseph Swan 连接地方科技史。",
-          "进入 The Light 和《We Are The Durhams》免费；首展成人票线上十英镑、现场十二点五英镑，未满十八岁二点五英镑。",
-          "开幕展策展人 Natasha Howes 明确增加女性与 global majority 艺术家的比例；这是一项策展选择，并不自动证明长期收藏与聘用结构已经改变。"
+          "进入 The Light 和《We Are The Durhams》免费。首展成人票线上十英镑、现场十二点五英镑，未满十八岁二点五英镑。",
+          "开幕展策展人 Natasha Howes 明确增加女性与 global majority 艺术家的比例。这是一项策展选择，并不自动证明长期收藏与聘用结构已经改变。"
         ],
         "sourceName": "Durham County Council／The Light；The Light／Victory Over the Sun",
         "sourceUrl": "https://www.durham.gov.uk/article/36119/News-Opening-date-confirmed-for-The-Light",
@@ -538,11 +674,11 @@ export const briefings: Briefing[] = [
         "facts": [
           "样本包括七百一十五名活跃的美国 X 用户，招募时间为 2024 年 9 至 10 月，并按族裔、性别与党派设置配额以接近全国构成。",
           "参与者完成 Schwartz 基本人类价值调查，研究将十九项价值与其信息流帖文分别编码。",
-          "Following feed 主要来自用户主动关注的账号；For You feed 则由平台从更广泛内容中算法选择。",
+          "Following feed 主要来自用户主动关注的账号。For You feed 则由平台从更广泛内容中算法选择。",
           "Following feed 的内容总体更贴近参与者自述价值，For You feed 则更可能放大价值不一致的内容。",
-          "研究提出的解释是回复等互动既可能表示赞同，也可能表示愤怒；排序系统若把两者都当作想看更多，就会误读行为。",
+          "研究提出的解释是回复等互动既可能表示赞同，也可能表示愤怒。排序系统若把两者都当作想看更多，就会误读行为。",
           "论文观察到的错位在不同政治群体中程度不同，但研究对象限于特定时期的美国 X 用户，不能直接外推到所有平台或国家。",
-          "团队制作的浏览器扩展能依据用户自述价值重排信息流；作者没有把它当作最终方案，并明确指出它可能加强个人口味的回音室。"
+          "团队制作的浏览器扩展能依据用户自述价值重排信息流。作者没有把它当作最终方案，并明确指出它可能加强个人口味的回音室。"
         ],
         "sourceName": "Stanford Report／PNAS／Value misalignments in X's feed algorithm",
         "sourceUrl": "https://news.stanford.edu/stories/2026/08/social-media-for-you-algorithms-engagement-outrage",
@@ -588,7 +724,7 @@ export const briefings: Briefing[] = [
         "facts": [
           "观测发生在 8 月 12 至 13 日夜间，地点是 Czechia 的 Valašské Meziříčí Observatory。",
           "资料来自四台专门监测流星的相机，不是一台相机的一次曝光。",
-          "整夜计数为一千七百零六颗流星；由于恰逢 2026 年 Perseids 峰值，多数属于该流星雨。",
+          "整夜计数为一千七百零六颗流星。由于恰逢 2026 年 Perseids 峰值，多数属于该流星雨。",
           "Perseids 轨迹向后延长都指向画面右上方 Perseus 星座内的共同辐射点。",
           "与主要轨迹交叉的一组流星指向 Cygnus 的另一个辐射点，因此被归为较弱的 Kappa Cygnids。",
           "合成图还显示 Aquarius 附近、位于太阳反方向的 antihelion complex 是一个微弱流星来源。",
@@ -628,11 +764,11 @@ export const briefings: Briefing[] = [
         "background": "Malick Sidibé 与 Tijani Sitou 分别在 Mali 的 Bamako 和 Mopti 从事肖像摄影；Sidibé 尤其以 1960 年 Mali 脱离 France 后的日常生活、舞会与青年文化闻名。摄影档案常被当作过去的静态容器，但照片的姿势、服装、保存者与后来使用方式都会改变它表达的身份。",
         "happened": "展览 8 月 22 日在 University of Iowa 的 Stanley Museum 开放，展至 12 月 13 日。它在 Eskenazi Museum 原展基础上加入 Stanley 新藏的 Hassan Hajjaj 与 Zanele Muholi 作品，并让 Senegal 摄影师 Ibrahima Thiam 同时担任参展艺术家、客座策展人和展陈合作者。",
         "facts": [
-          "六位艺术家是 Malick Sidibé、Tijani Sitou、Zohra Opoku、Ibrahima Thiam、Hassan Hajjaj 与 Zanele Muholi；作品时间跨度为 1963 至 2024 年。",
+          "六位艺术家是 Malick Sidibé、Tijani Sitou、Zohra Opoku、Ibrahima Thiam、Hassan Hajjaj 与 Zanele Muholi。作品时间跨度为 1963 至 2024 年。",
           "他们的实践连接 Ghana、Senegal、Mali、Morocco、South Africa 及非洲离散社群，并把摄影与织物、绘画等媒介结合。",
           "展览以 Sidibé 与 Sitou 的二十世纪 Mali 肖像为历史支点，同时追踪四位当代艺术家怎样重新使用或回应摄影档案。",
           "Thiam 2019 年开始进入 Indiana University 的学术交流，2024 年以驻馆策展人身份研究 Sidibé 与 Sitou 馆藏，并参与选片和展陈设计。",
-          "这是 Eskenazi Museum 首次邀请艺术家担任展览共同策展人；Thiam 的目标是让家庭与社区按自己选择的形象进入叙事。",
+          "这是 Eskenazi Museum 首次邀请艺术家担任展览共同策展人。Thiam 的目标是让家庭与社区按自己选择的形象进入叙事。",
           "Tijani Sitou 之子 Malick Sitou授权 Thiam 复制其父作品并制作新作，说明档案再利用同时涉及家属、版权与解释权。",
           "Iowa 版本由两所 Big Ten Academic Alliance 大学博物馆合作完成，并加入 Stanley 近年收藏的 Hajjaj 与 Muholi 作品。"
         ],
@@ -656,10 +792,10 @@ export const briefings: Briefing[] = [
           "《Clamour》是一段超过 60 小时的影像，从头到尾记录 Cook County 监狱一个住宿单元的拆除。",
           "2023 年摄影系列《Tumbling》把同一次拆除留下的碎片从全景中分离出来，迫使观众细看材料而不是只看爆破瞬间。",
           "从牢房回收的钢条被改造成声音雕塑，并将在 2025 年作品《We Lit the Fire and Trusted the Heat (after Angela Davis)》的表演中被激活。",
-          "展览新增《Disappearance Jail》系列委托；该系列自 2021 年起以明信片记录美国不同监禁设施。",
+          "展览新增《Disappearance Jail》系列委托。该系列自 2021 年起以明信片记录美国不同监禁设施。",
           "观众会被邀请在明信片上打孔，把‘监狱消失’变成重复的手部动作，而不是电脑里一次性删除的图像。",
           "展名来自 Gloria Anzaldúa 的《The Homeland, Aztlán/El otro México》，把墙同时理解为物质边界和塑造心理、社会与文化地形的结构。",
-          "Gaspar 的长期方法包括被拘押者工作坊、公共项目和建筑录音；这些关系性劳动不能只由最终展品数量衡量。"
+          "Gaspar 的长期方法包括被拘押者工作坊、公共项目和建筑录音。这些关系性劳动不能只由最终展品数量衡量。"
         ],
         "sourceName": "Blaffer Art Museum／Maria Gaspar: We Press Our Hands to the Steel Curtain",
         "sourceUrl": "https://blafferartmuseum.org/maria-gaspar/",
@@ -679,12 +815,12 @@ export const briefings: Briefing[] = [
         "happened": "《JAMA Network Open》8 月 21 日发布研究。外州患者每日中位数从 16 人升到 53 人，平均出行距离从 156 英里升到 258 英里，抵达时的孕周中位数从 7 周变为 8 周；增加最明显的来源州包括 Georgia、Alabama、Tennessee 与 South Carolina。",
         "facts": [
           "研究纳入 2021 年 6 月 24 日至 2023 年 6 月 25 日在 North Carolina 提供的全部 79,433 次药物流产和手术流产。",
-          "Dobbs 前后各一年，外州患者总数从 5,596 增至 17,703；州内患者分别为 28,077 与 28,057。",
-          "外州患者每日中位数从 16 增至 53，估计每天增加 37.5 人；州内每天变化为 2.6 人，置信区间跨过零。",
-          "外州患者平均出行距离从 156 英里增至 258 英里；州内患者约为 46.6 与 45.3 英里。",
+          "Dobbs 前后各一年，外州患者总数从 5,596 增至 17,703。州内患者分别为 28,077 与 28,057。",
+          "外州患者每日中位数从 16 增至 53，估计每天增加 37.5 人。州内每天变化为 2.6 人，置信区间跨过零。",
+          "外州患者平均出行距离从 156 英里增至 258 英里。州内患者约为 46.6 与 45.3 英里。",
           "外州患者抵达时孕周中位数从 7 周上升到 8 周，13 至 20 周的外州病例从 767 增至 2,647。",
           "来自 Georgia 的病例从 127 增至 6,513，Alabama 从 5 增至 1,208，Tennessee 从 218 增至 1,644，South Carolina 从 4,272 增至 6,165。",
-          "外州患者中非 Hispanic 黑人占 Dobbs 前的 59.9% 与之后的 58.7%；其每日中位数从 10 增至 33，构成增加量中最大的种族族裔组。"
+          "外州患者中非 Hispanic 黑人占 Dobbs 前的 59.9% 与之后的 58.7%。其每日中位数从 10 增至 33，构成增加量中最大的种族族裔组。"
         ],
         "sourceName": "JAMA Network Open／Out-of-State Travel for Abortion Care Before and After the Dobbs v Jackson Decision",
         "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2853162",
@@ -704,12 +840,12 @@ export const briefings: Briefing[] = [
         "happened": "《JAMA Network Open》8 月 21 日发表 2024 年 10 月至 2025 年 8 月的质量改进试点。项目在四个门诊肿瘤实践招募 105 名合资格患者，54 人愿意参加，最终 24 人取得药物居家配发；成功率与满意度高，但样本高度富裕、受教育且来自单一癌症中心。",
         "facts": [
           "105 名合资格患者中 54 人选择参加，只有 24 人最终取得保险覆盖并进入居家注射。",
-          "24 名参与者年龄中位数 44 岁，范围 33 至 53 岁；23 人接受辅助或新辅助治疗，1 人治疗转移性疾病。",
-          "23 人，占 95.8%，完成至少一次居家注射；19 人完成两次，18 人在项目结束后选择继续。",
-          "20 名填写背景问卷者中 19 人具有大学学历，13 人家庭年收入超过 10 万美元；这限制了对更广泛患者的外推。",
-          "患者估计一次常规诊所就诊从出门到回家中位数需要 2 小时，范围为 1 至 15 小时；5 人住在诊所 50 英里以外。",
+          "24 名参与者年龄中位数 44 岁，范围 33 至 53 岁。23 人接受辅助或新辅助治疗，1 人治疗转移性疾病。",
+          "23 人，占 95.8%，完成至少一次居家注射。19 人完成两次，18 人在项目结束后选择继续。",
+          "20 名填写背景问卷者中 19 人具有大学学历，13 人家庭年收入超过 10 万美元。这限制了对更广泛患者的外推。",
+          "患者估计一次常规诊所就诊从出门到回家中位数需要 2 小时，范围为 1 至 15 小时。5 人住在诊所 50 英里以外。",
           "17 名满意度调查者中，15 人报告节省时间和更能控制日程，13 人认为方便，9 人认为也方便照护者或家人。",
-          "54 名有意参加者中 19 人因保险不批准居家用药无法继续；30 名获批者中 18 人在从诊所给药改为居家配药后产生共付额。"
+          "54 名有意参加者中 19 人因保险不批准居家用药无法继续。30 名获批者中 18 人在从诊所给药改为居家配药后产生共付额。"
         ],
         "sourceName": "JAMA Network Open／A Telemedicine-Supported Home-Injection Model for Patients With Breast Cancer",
         "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2853159",
@@ -730,11 +866,11 @@ export const briefings: Briefing[] = [
         "facts": [
           "研究对象包括 Bacillus subtilis、Staphylococcus aureus、Deinococcus radiodurans、Aspergillus niger 与数种 Fusarium，涵盖三类细菌和两组真菌。",
           "模型使用 Lunar Reconnaissance Orbiter 的高程与温度数据，并以光线追踪计算太阳光如何被坑壁、山脊、石块和小尺度起伏遮挡。",
-          "团队把‘存活’定义为至少保持活性一个地球日，重点绘制最多七天的条件；它不等于生长或复制。",
+          "团队把‘存活’定义为至少保持活性一个地球日，重点绘制最多七天的条件。它不等于生长或复制。",
           "Aspergillus 对紫外线最耐受，在月球冬季仍可能于 15% 至 30% 接受部分日照的区域存活。",
-          "在三处研究区，每种微生物都找到潜在存活区；Aspergillus 在约 3% 的绘图地表可达到至少七天。",
+          "在三处研究区，每种微生物都找到潜在存活区。Aspergillus 在约 3% 的绘图地表可达到至少七天。",
           "把散射紫外线也计入后，五类微生物仍可能在 De Gerlache Rim 部分永久阴影中存活。",
-          "潜在微环境尺度从数英里宽的坑底到一枚宇航员靴印；研究没有发现液态水、适宜大气或任何支持繁殖的直接证据。"
+          "潜在微环境尺度从数英里宽的坑底到一枚宇航员靴印。研究没有发现液态水、适宜大气或任何支持繁殖的直接证据。"
         ],
         "sourceName": "NASA Science／Science Advances／Potential survivable niches for microbial life on the lunar south pole",
         "sourceUrl": "https://science.nasa.gov/humans-in-space/human-related-microbes-may-survive-moons-south-pole-nasa-finds/",
@@ -820,11 +956,11 @@ export const briefings: Briefing[] = [
         "happened": "《JAMA Network Open》8 月 20 日发表对全部公开意见的混合方法分析。研究团队先识别重复文本和已知组织模板，再对独特评论进行定性编码，发现反对禁令的论点集中在收入损失、非法市场和替代监管路径；作者主张政策机关报告意见时应同时披露独特文本、模板来源与可识别的组织关联。",
         "facts": [
           "数据包括 175,285 份 menthol cigarette 评论和 71,523 份 flavored cigar 评论，总计 246,808 份。",
-          "169,440 份 menthol 评论（97%）和 66,640 份 cigar 评论（93%）属于表单信；两类合计只有 4,774 份独特评论。",
+          "169,440 份 menthol 评论（97%）和 66,640 份 cigar 评论（93%）属于表单信。两类合计只有 4,774 份独特评论。",
           "独特评论中，96% 反对 menthol 禁令，99% 反对 flavored cigar 禁令。",
-          "反对者最常提出销售或收入损失，menthol 与 cigar 独特评论中分别占 35% 和 49%；非法市场论点分别占 25% 和 38%。",
-          "77,445 份 menthol 表单信，占该类表单信 46%，含有可识别的烟草公司关联内容；其中 54,835 份来自 RAI 的 Own It Voice It 模板，20,370 份来自 Marlboro 模板。",
-          "支持禁令的 menthol 表单信为 3,210 份，占 2%；flavored cigar 表单信中没有识别出支持模板。",
+          "反对者最常提出销售或收入损失，menthol 与 cigar 独特评论中分别占 35% 和 49%。非法市场论点分别占 25% 和 38%。",
+          "77,445 份 menthol 表单信，占该类表单信 46%，含有可识别的烟草公司关联内容。其中 54,835 份来自 RAI 的 Own It Voice It 模板，20,370 份来自 Marlboro 模板。",
+          "支持禁令的 menthol 表单信为 3,210 份，占 2%。flavored cigar 表单信中没有识别出支持模板。",
           "多数提交缺少完整的身份、地区或组织元数据，因此“未识别企业关联”不等于可以确认完全独立。"
         ],
         "sourceName": "JAMA Network Open／Public Comments and Federal Rulemaking for Menthol Cigarettes and Flavored Cigars",
@@ -848,8 +984,8 @@ export const briefings: Briefing[] = [
           "低收入组中 2,545,201 人归属 ACO，较高收入组中 7,479,877 人归属 ACO。",
           "改革前低收入患者三项不良结果率约为较高收入患者的 1.6 至 3 倍，说明起点差距很大。",
           "ACO 成立三年后，可避免急诊、ambulatory care–sensitive admission 与 30 天非计划再入院都没有出现显著的收入组差异变化。",
-          "76 个 ACO，占 13.0%，在至少一项指标上缩小差距并维持或改善较高收入组；68 个，占 11.6%，在至少一项上扩大差距。",
-          "可避免急诊差距改善的 ACO 为 58 个、恶化为 50 个；可防住院为 39 对 46；再入院为 46 对 40。",
+          "76 个 ACO，占 13.0%，在至少一项指标上缩小差距并维持或改善较高收入组。68 个，占 11.6%，在至少一项上扩大差距。",
+          "可避免急诊差距改善的 ACO 为 58 个、恶化为 50 个。可防住院为 39 对 46。再入院为 46 对 40。",
           "缩小差距的 ACO 往往起始差距更大，但在规模、乡村位置、医院领导、低收入患者比例和 federally qualified health center 参与等观察特征上没有明显一致差别。"
         ],
         "sourceName": "JAMA Network Open／Medicare Shared Savings Program and Disparities for Patients With Low Income",
@@ -870,11 +1006,11 @@ export const briefings: Briefing[] = [
         "happened": "研究 8 月 19 日发表于《Nature》，NASA 8 月 21 日的 Astronomy Picture of the Day 用时间序列解释这条轨道。测量显示 S301 已呈现广义相对论预言的 Schwarzschild 进动；由于其轨道极紧，未来更长的干涉测量和 Extremely Large Telescope 光谱可能分离更微弱的 frame-dragging 信号。",
         "facts": [
           "S301 是一颗微弱主序星，K 波段视星等约 19.3，轨道周期为 8.7 年。",
-          "最近点约为 12 个天文单位，接近 Saturn 与 Sun 距离的尺度；峰值速度约 25,000 千米每秒，超过光速 8%。",
+          "最近点约为 12 个天文单位，接近 Saturn 与 Sun 距离的尺度。峰值速度约 25,000 千米每秒，超过光速 8%。",
           "GRAVITY 在 2023 年识别该星，团队随后在 2017 年起的既有数据中找回它的位置，使轨道约束覆盖更长时间。",
           "仪器结合 ESO Very Large Telescope 的四个 Unit Telescopes，通过干涉条纹而不是单张直接照片测量极小位置变化。",
           "现有轨道已显示 Schwarzschild precession，也就是不旋转黑洞时广义相对论预言的近星点进动。",
-          "旋转黑洞还应通过 Lense–Thirring frame dragging 产生更小的轨道变化；S301 对这一效应特别敏感，但目前结果只是建立未来检验条件。",
+          "旋转黑洞还应通过 Lense–Thirring frame dragging 产生更小的轨道变化。S301 对这一效应特别敏感，但目前结果只是建立未来检验条件。",
           "研究团队预计 2031 年附近的下一次近距离经过，配合持续 GRAVITY 观测和未来 ELT 光谱，可能进一步约束 Sagittarius A* 的自旋。"
         ],
         "sourceName": "ESO／Nature／A star in a nine-year orbit around Sgr A*",
@@ -911,12 +1047,12 @@ export const briefings: Briefing[] = [
         "background": "Evans 的画面常把花、鸟、天使、动物和注视的脸组织成密集而近乎对称的结构，来源包括梦、灵性启示、流行文化、圣经与花园环境。她没有经过学院训练，但“self-taught”如果只被当成风格分类，也会遮住黑人女性的劳动条件、可获得的材料、展览中介和她主动形成的复杂视觉语言。",
         "happened": "《The Lost World: The Art of Minnie Evans》在 High Museum of Art 首展后巡回至 Whitney Museum of American Art，8 月 20 日开始会员预展，8 月 22 日向公众开放，展至 2027 年 1 月 10 日。Whitney 同时公开了作品清单、展厅文字和墙签，让观众能够比较展览怎样叙述她，而不只看宣传摘要。",
         "facts": [
-          "High Museum 首展汇集超过一百件作品；Whitney 版本覆盖 1935 至 1981 年的素描、绘画与拼贴。",
+          "High Museum 首展汇集超过一百件作品。Whitney 版本覆盖 1935 至 1981 年的素描、绘画与拼贴。",
           "Evans 在 56 岁时结束数十年的家务劳动，转到 Airlie Gardens 收取门票，并在空闲时创作、把作品挂在花园铁门附近出售或送给访客。",
-          "她 1966 年在 New York 一所教堂的展览已使用《The Lost World of Minnie Evans》之名；1975 年成为较早在 Whitney 获得个展的黑人艺术家之一。",
+          "她 1966 年在 New York 一所教堂的展览已使用《The Lost World of Minnie Evans》之名。1975 年成为较早在 Whitney 获得个展的黑人艺术家之一。",
           "展览把她的梦境和灵性经验与 Jim Crow South 的双重现实并置，而不是把作品只写成脱离历史的神秘想象。",
           "《My Very First》始于祖母 1934 年去世之后，早期自动绘画中的细小符号后来发展为更复杂的中心式结构。",
-          "1940 年代颜料短缺曾压缩 Crayola 色盒的色域；1958 年六十四色色盒普及后，她在中晚期作品中获得更丰富的颜色条件。",
+          "1940 年代颜料短缺曾压缩 Crayola 色盒的色域。1958 年六十四色色盒普及后，她在中晚期作品中获得更丰富的颜色条件。",
           "本次是她自 1990 年代以来首个大型博物馆展，也是 1975 年 Whitney 个展后的重要机构重访。"
         ],
         "sourceName": "Whitney Museum of American Art／The Lost World: The Art of Minnie Evans",
@@ -939,10 +1075,10 @@ export const briefings: Briefing[] = [
           "展览跨越约五十年创作，重点包括 1960 至 1970 年代早期作品、连续摄影、流行媒体挪用以及图像与语言的关系。",
           "1966—1968 年的《Clement Greenberg》由商业招牌画师抄写一段赞扬 Abstract Expressionism 的文字，故意拆开创意、制作与作者署名。",
           "Baldessari 从电影、广告、报纸和流行文化建立视觉档案，再通过裁切、排列与文字改变图像含义。",
-          "展品主要来自 Craig Robins Collection；Robins 自 1993 年开始收藏 Baldessari，并在近三十年间形成重要私人持有群。",
+          "展品主要来自 Craig Robins Collection。Robins 自 1993 年开始收藏 Baldessari，并在近三十年间形成重要私人持有群。",
           "该展此前在 Argentina 与 Uruguay 展出，Miami 版本是美国首展，也是艺术家与这座城市公共委托关系的一次回返。",
           "配套双语图录包含全部展品彩色图版、插图年表及多位艺术家、策展人与收藏者的文章。",
-          "PAMM 自身只收藏三件 Baldessari 作品；因此这次大型叙事高度依赖私人收藏可借出的作品结构。"
+          "PAMM 自身只收藏三件 Baldessari 作品。因此这次大型叙事高度依赖私人收藏可借出的作品结构。"
         ],
         "sourceName": "Pérez Art Museum Miami／John Baldessari: The End of the Line",
         "sourceUrl": "https://www.pamm.org/en/press/perez-art-museum-miami-presents-john-baldessari-the-end-of-the-line/",
@@ -961,12 +1097,12 @@ export const briefings: Briefing[] = [
         "background": "临床试验通常针对特定诊断，使用严格筛选、合成药物和受训治疗师；Oregon 模式允许成年人因多种理由参加，持牌引导师不必具有临床专业训练。两种环境的参与者、支持强度和风险管理不同，因此试验结果不能直接替代现实服务监测。",
         "happened": "Oregon Health & Science University 建立 OPEN 实践研究网络，在 26 个活跃持牌中心中的 24 个招募参与者。研究于 8 月 19 日发表于《JAMA Network Open》，报告 2024 年 11 月至 2026 年 3 月入组、截至 6 月完成的基线、一周、一个月和三个月随访。",
         "facts": [
-          "队列共 346 人，平均年龄 49.5 岁；52.5% 为女性，86.7% 为白人，76.6% 完成大学教育，29.0% 家庭年收入超过 20 万美元。",
-          "参与者由 83 名持牌引导师在 24 个服务中心监督，平均裸盖菇素剂量为 31.9 毫克；44.2% 此前没有经典迷幻药体验。",
-          "三个月仍有 312 人完成随访，留存率 90.2%；研究把同一个人的后续分数与其基线比较。",
-          "一个月时 296 人，占 92.2%，认为自己获益；188 人，占 58.6%，把体验列入一生最有意义的十次经历。",
-          "三个月时，中重度抑郁、焦虑和 PTSD 症状相对基线的风险比分别为 0.40、0.29 和 0.35；心理福祉和生活满意度也有统计学改善。",
-          "4 人，占 1.2%，出现需要医疗处理的严重行为反应，而且全部为首次使用者；三个月时 7 人，占 2.3%，把体验评价为有害。",
+          "队列共 346 人，平均年龄 49.5 岁。52.5% 为女性，86.7% 为白人，76.6% 完成大学教育，29.0% 家庭年收入超过 20 万美元。",
+          "参与者由 83 名持牌引导师在 24 个服务中心监督，平均裸盖菇素剂量为 31.9 毫克。44.2% 此前没有经典迷幻药体验。",
+          "三个月仍有 312 人完成随访，留存率 90.2%。研究把同一个人的后续分数与其基线比较。",
+          "一个月时 296 人，占 92.2%，认为自己获益。188 人，占 58.6%，把体验列入一生最有意义的十次经历。",
+          "三个月时，中重度抑郁、焦虑和 PTSD 症状相对基线的风险比分别为 0.40、0.29 和 0.35。心理福祉和生活满意度也有统计学改善。",
+          "4 人，占 1.2%，出现需要医疗处理的严重行为反应，而且全部为首次使用者。三个月时 7 人，占 2.3%，把体验评价为有害。",
           "研究没有随机对照组，参与者知道自己接受了服务，且样本明显偏白人、高教育和高收入，因此不能把随时间改善直接写成裸盖菇素造成的治疗效果。"
         ],
         "sourceName": "JAMA Network Open／Safety and Mental Health Outcomes of Oregon State-Regulated Psilocybin Services",
@@ -986,13 +1122,13 @@ export const briefings: Briefing[] = [
         "background": "美国黑人女性较白人女性更早发生心血管疾病并承担更高死亡风险，但只比较传统危险因素可能漏掉长期社会压力。该队列自 1995 年招募约 59,000 名黑人女性，每两年收集生活、社会经济和健康信息，使研究者能够把早年与制度性经历放到几十年的时间尺度上。",
         "happened": "《JAMA Network Open》8 月 18 日发表新的前瞻性队列分析：种族主义经历以 1997 年问卷为基线，童年和青春期虐待以 2005 年问卷为基线，随访截至 2023 年，中位时间 24 年。研究在起点排除已有心力衰竭者，共记录 1,343 个新发事件。",
         "facts": [
-          "48,320 名参与者基线年龄中位数为 40 岁，居住地覆盖美国各区域；研究观察到 1,343 例心力衰竭。",
-          "58% 报告就业歧视，36% 报告住房歧视，23% 报告警务互动中的歧视；11% 同时经历三个领域。",
+          "48,320 名参与者基线年龄中位数为 40 岁，居住地覆盖美国各区域。研究观察到 1,343 例心力衰竭。",
+          "58% 报告就业歧视，36% 报告住房歧视，23% 报告警务互动中的歧视。11% 同时经历三个领域。",
           "调整年龄、BMI、教育、地区、社区社会经济状况、运动、吸烟、糖尿病、高血压和既往心肌梗死后，三个领域均经历歧视者的风险比为 1.27。",
           "单独看日常种族主义分数时，最高四分位在仅调年龄模型中风险较高，但加入临床危险因素后风险比降至 1.04，置信区间跨过 1。",
-          "青春期遭受至少四次性侵与之后心力衰竭仍显著相关，完全调整后的风险比为 1.44；童年性侵的对应估计在调整后不再显著。",
+          "青春期遭受至少四次性侵与之后心力衰竭仍显著相关，完全调整后的风险比为 1.44。童年性侵的对应估计在调整后不再显著。",
           "BMI 在频繁童年或青春期性侵与心力衰竭的关联中解释约 19.6% 至 35.9%，只构成部分中介，不是完整机制。",
-          "心力衰竭主要依靠参与者每两年自报；有充分病历可核查的 51 例中，40 例符合 probable 或 definite 标准，因此结局测量仍存在误差。"
+          "心力衰竭主要依靠参与者每两年自报。有充分病历可核查的 51 例中，40 例符合 probable 或 definite 标准，因此结局测量仍存在误差。"
         ],
         "sourceName": "JAMA Network Open／Psychosocial Stressors and Heart Failure Risk Among Black Women in the US",
         "sourceUrl": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2852966",
@@ -1014,10 +1150,10 @@ export const briefings: Briefing[] = [
           "Swift 于 2004 年发射，主要研究伽马射线暴和其他快速变化的宇宙事件，原始主要任务期仅两年。",
           "NASA 于 2025 年 9 月向 Katalyst 授予商业在轨服务合同，目标是在不足一年内设计、发射并执行机器人升轨。",
           "LINK 7 月 3 日搭乘 Northrop Grumman Pegasus XL 从 South Pacific 的 Kwajalein Atoll 发射。",
-          "7 月下旬出现姿态控制问题；8 月初团队降低自旋，8 月 11 日又上传新算法以利用剩余执行器维持稳定。",
+          "7 月下旬出现姿态控制问题。8 月初团队降低自旋，8 月 11 日又上传新算法以利用剩余执行器维持稳定。",
           "8 月 19 日决定不再实施捕获和升轨，但保留交会与近距离操作，以测试导航、控制和未来卫星服务能力。",
-          "Swift 已暂停科学观测以优先维持轨道寿命；NASA 同时准备让现有任务分担快速宇宙事件响应。",
-          "NASA 预计在没有新干预时 Swift 可能于今年晚些时候再入；具体再入时间仍会受轨道和太阳活动变化影响。"
+          "Swift 已暂停科学观测以优先维持轨道寿命。NASA 同时准备让现有任务分担快速宇宙事件响应。",
+          "NASA 预计在没有新干预时 Swift 可能于今年晚些时候再入。具体再入时间仍会受轨道和太阳活动变化影响。"
         ],
         "sourceName": "NASA／Updates Next Steps for Commercial Swift Boost Mission",
         "sourceUrl": "https://www.nasa.gov/news-release/nasa-updates-next-steps-for-commercial-swift-boost-mission/",
@@ -1057,7 +1193,7 @@ export const briefings: Briefing[] = [
           "展览位于 Larry & Barbara Marshall Family Balcony，展期从 2026 年 8 月 18 日至 2027 年 1 月 10 日。",
           "馆方介绍以“只要还有一个词继续被说出，语言就从未真正沉默”为开端。",
           "装置把故事、视觉文化、声音和手势交织起来，并明确把 Bidjara 的代际共鸣视为艺术方法。",
-          "Thompson 于 2015 年在 Oxford 的 Trinity College 获得美术哲学博士；2018 年因视觉艺术贡献获 Order of Australia 官佐勋章。",
+          "Thompson 于 2015 年在 Oxford 的 Trinity College 获得美术哲学博士。2018 年因视觉艺术贡献获 Order of Australia 官佐勋章。",
           "展览由全球原住民艺术与生活方式策展人 Ryan Clasby 策划，并获馆方 Arts Research Integration 项目支持。"
         ],
         "sourceName": "Spencer Museum of Art／Christian Thompson: Future Ancestor",
@@ -1106,7 +1242,7 @@ export const briefings: Briefing[] = [
           "出版简介以 Mandarin 使用者中的完美音高比例、Italy 的咖啡加奶时间习惯和 multiple sclerosis 的地区差异作为例子。",
           "作者还讨论脚与眼睛形态、吸引偏好和 DNA，强调文化影响可能进入看似纯粹生物的层面。",
           "Martens 在 University of British Columbia 完成社会人格心理学博士训练，研究人们如何理解世界以及文化的作用。",
-          "这些例子来自不同研究传统；书的综合叙事不能替代对每项研究样本、测量和替代解释的分别核查。"
+          "这些例子来自不同研究传统。书的综合叙事不能替代对每项研究样本、测量和替代解释的分别核查。"
         ],
         "sourceName": "University of Toronto Press Distribution／Dundurn Press／Beyond Biology",
         "sourceUrl": "https://utpdistribution.com/9781459756939/beyond-biology/",
@@ -1130,7 +1266,7 @@ export const briefings: Briefing[] = [
           "Chile 章节关注年轻女性主义者在高校反性骚扰与更广泛宪法政治之间建立连接。",
           "Spain 章节以一宗广受关注的群体性侵案件为节点，记录公众如何争论并改变法律中的同意概念。",
           "Mexico 章节记录学生占领政府建筑、失去女儿的母亲和其他组织者如何迫使 femicide 获得持续可见性。",
-          "书的材料来自十年沉浸式报道；它提供运动叙事和策略比较，不等同于对每种策略效果的实验性评估。"
+          "书的材料来自十年沉浸式报道。它提供运动叙事和策略比较，不等同于对每种策略效果的实验性评估。"
         ],
         "sourceName": "Penguin Random House／Meaghan Beatley, Sex and Dissent",
         "sourceUrl": "https://www.penguinrandomhouse.com/books/753031/sex-and-dissent-by-meaghan-beatley/",
@@ -1154,7 +1290,7 @@ export const briefings: Briefing[] = [
           "31 个新类星体中有 12 个红移不低于 7，使此前已知的同类样本数增加一倍以上。",
           "最高红移天体 EUCL J172902.75+641018.1 的红移约 7.77，超过 2021 年纪录 7.64。",
           "两颗最早天体发光时宇宙年龄约 6.7 亿年，约为当前年龄的 5%。",
-          "样本的近红外亮度延伸到较暗一端，因此不只包含最容易被发现的极亮异常体；论文仍需后续观测测量宿主星系和黑洞质量。"
+          "样本的近红外亮度延伸到较暗一端，因此不只包含最容易被发现的极亮异常体。论文仍需后续观测测量宿主星系和黑洞质量。"
         ],
         "sourceName": "European Space Agency／Astronomy & Astrophysics／Euclid Consortium",
         "sourceUrl": "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_the_most_ancient_quasar_in_the_Universe",

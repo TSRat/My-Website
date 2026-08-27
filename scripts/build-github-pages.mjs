@@ -207,8 +207,8 @@ function issuePage(briefing) {
         <section class="story-section"><h3>背景</h3><p>${escapeHtml(story.background)}</p></section>
         <section class="story-section happened-block"><h3>事件</h3><p>${escapeHtml(story.happened)}</p></section>
         <section class="story-section background-block"><h3>细节</h3><ul>${story.facts.map((fact) => `<li>${escapeHtml(fact)}</li>`).join("")}</ul></section>
-        <section class="story-section analysis-block"><h3>分析</h3><p>${escapeHtml(story.importance ?? story.whyItMatters)}</p></section>
-        ${story.creatorAngle ? `<section class="story-section"><h3>创作角度</h3><p>${escapeHtml(story.creatorAngle)}</p></section>` : ""}
+        <section class="story-section analysis-block"><h3>分析</h3><p>${escapeHtml(story.whyItMatters)}</p></section>
+${story.creatorAngle ? `        <section class="story-section"><h3>创作角度</h3><p>${escapeHtml(story.creatorAngle)}</p></section>` : ""}
         <aside class="story-source-link"><a data-analytics-event="source_opened" data-analytics-target="${escapeHtml(`${briefing.date}:${storyIndex + 1}:analysis`)}" href="${escapeHtml(story.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(story.sourceName)}｜${escapeHtml(story.title)} ↗</a><small class="source-url">${escapeHtml(story.sourceDate)} · 点开即可阅读原文</small></aside>
       </div>
       <a class="back-to-top" href="#content">回到本期顶部 ↑</a>

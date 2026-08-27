@@ -89,7 +89,7 @@ export default async function BriefingPage({ params }: { params: Promise<{ date:
                   </section>
                   <section>
                     <h3>分析</h3>
-                    <p>{story.importance ?? story.whyItMatters}</p>
+                    <p>{story.whyItMatters}</p>
                   </section>
                   {story.creatorAngle ? (
                     <section>

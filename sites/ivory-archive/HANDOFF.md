@@ -1,5 +1,58 @@
 # IVORY ARCHIVE handoff
 
+## 2026-08-27 · Issue 41 daily publication
+
+### Current target
+
+发布第 41 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-27 第 41 期：Paul Lehr 的商业科幻插画与私人雕塑、
+  Dorothea Lasky 对 Bernadette Mayer《Memory》的跨代回应、美国县域机会
+  与致命警车追逐、绝经年龄与晚年认知和脑影像轨迹，以及 NASA DSS-23
+  深空通信天线正式运行。
+- 每则先解释陌生人物、作品、研究指标或技术网络，再分开记录事件、带句号
+  的细节、分析和创作角度。县域与绝经研究均保留关联边界，DSS-23 也没有
+  被写成单座天线自动解决全部任务排班。
+- 与此前 200 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。Lehr 条目区别于既有展览与科幻媒介故事，Lasky
+  条目聚焦跨代记忆方法，追逐研究有独立县域分母问题，绝经研究不同于既有
+  更年期文化和健康老化条目，DSS-23 则聚焦地面通信容量，最终五则均无
+  实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充艺术家、作品、档案、警车追逐、
+  县域地图、研究图、脑扫描、NASA 天线或真实观测现场。
+- 补回根应用缺失的 `site-shell` 薄适配文件，使应用路由继续复用权威站点
+  组件；统一动态与 Pages 渲染器读取 `whyItMatters` 分析字段，并把九十条
+  旧事实项目中的分号机械规范为完整句号，使既有内容合同测试恢复通过。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `app/briefings.ts`
+- `sites/ivory-archive/briefings/[date]/page.tsx`
+- `app/briefings/[date]/page.tsx`
+- `app/site-shell.tsx`
+- `scripts/build-github-pages.mjs`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 41 期渐进式 JPEG 图片
+
+### Verification
+
+- `npm run build:pages`、`npm run validate:pages`、完整 `npm test`（46/46）、
+  `npm run lint` 与源文件范围 `git diff --check` 均通过；lint 仅保留其他
+  既有站点的 27 条 warning，没有 error。
+- Pages 生成器验证 1,425 项本地引用；五张图片统一验证为 1672×941、
+  8-bit sRGB 渐进式 JPEG，并核对首页卡片与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
 ## 2026-08-16 · Issue 31 daily publication
 
 ### Current target
