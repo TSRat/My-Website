@@ -1,5 +1,50 @@
 # IVORY ARCHIVE handoff
 
+## 2026-08-28 · Issue 42 daily publication
+
+### Current target
+
+发布第 42 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-28 第 42 期：Ulrich Museum 尝试展示大部分七千三百件
+  馆藏、nia love 与父亲 Ed Love 的雕塑—舞蹈跨代对话、美国 Women’s Pro
+  Baseball League 首赛季、城市自然可达性指标审计，以及阿塔卡马罕见降雪
+  迫使 ALMA 等天文台暂停运行。
+- 每则先解释陌生机构、作品、历史制度、空间指标或观测设施，再分开记录事件、
+  带句号的细节、分析和创作角度。城市研究保留三城样本与规格敏感性边界，
+  卫星影像也没有被写成气候归因或天文台损失统计。
+- 与此前 205 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。馆藏开放区别于第 39 期私人遗赠塑造永久展厅，
+  nia love 条目区别于既有奴隶制记忆展与监狱声音实践，女子棒球区别于
+  体育资格筛查，城市自然指标审计区别于第 39 期性别公平照护行程设计，
+  阿塔卡马条目则聚焦异常天气与天文台保护协议，最终五则均无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充馆藏、艺术家、历史人物、球员、
+  联赛标志、城市地图、研究图、NASA 卫星影像、ALMA 或真实现场。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `app/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 42 期渐进式 JPEG 图片
+
+### Verification
+
+- 发布前运行 `npm run build:pages`、`npm run validate:pages`、完整
+  `npm test`、`npm run lint` 与 `git diff --check`。
+- 五张图片统一验证为 1672×941、8-bit sRGB 渐进式 JPEG，并核对首页卡片
+  与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
 ## 2026-08-27 · Issue 41 daily publication
 
 ### Current target
