@@ -1,5 +1,51 @@
 # IVORY ARCHIVE handoff
 
+## 2026-08-29 · Issue 43 daily publication
+
+### Current target
+
+发布第 43 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-29 第 43 期：Walter Wick 隐藏物件摄影的布景与注意力
+  设计、Kathleen Deagan 五十余年的考古职业与馆藏网络、危机妊娠中心和
+  堕胎服务的全国地理差异、澳大利亚未满十六岁社交媒体账户限制实施前
+  基线，以及 Galápagos 珊瑚记录的千年 El Niño 变率。
+- 每则先解释陌生人物、制度、服务类型或气候指标，再分开记录事件、带句号
+  的细节、分析和创作角度。两项 JAMA 研究均保留横断面与意向测量边界，
+  珊瑚代用记录也没有被写成仪器观测或单次事件归因。
+- 与此前 210 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。Wick 区别于既有 Ed Young 图画书历史，Deagan
+  区别于既有 Roman 陶器工坊和黑人女性情感档案，生殖服务地图区别于
+  第 36 期 Dobbs 后跨州就诊结果，澳大利亚账户限制区别于既有家庭限用
+  试验与 X 推荐信息流研究，珊瑚条目则首次聚焦千年 ENSO 代用记录，最终
+  五则均无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充艺术家、作品、考古学家、遗址、
+  诊所、患者、青少年、平台界面、珊瑚样本、研究图或真实现场。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `app/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 43 期渐进式 JPEG 图片
+
+### Verification
+
+- 发布前运行 `npm run build:pages`、`npm run validate:pages`、完整
+  `npm test`、`npm run lint` 与 `git diff --check`。
+- 五张图片统一验证为 1672×941、8-bit sRGB 渐进式 JPEG，并核对首页卡片
+  与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
 ## 2026-08-28 · Issue 42 daily publication
 
 ### Current target
