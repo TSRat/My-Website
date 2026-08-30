@@ -1,5 +1,48 @@
 # IVORY ARCHIVE handoff
 
+## 2026-08-30 · Issue 44 daily publication
+
+### Current target
+
+发布第 44 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-30 第 44 期：Hirshhorn 馆藏手册的选择机制、Duke
+  Kunshan “Art at the Margins”会议、Toronto 酷儿移民与难民的非稳定
+  就业叙事、美国宫颈癌从未筛查趋势，以及 Roman Space Telescope 成功
+  升空后通往 L2、调试和公共档案的连续基础设施。
+- 每则先解释陌生机构、制度、研究对象或任务，再分开记录事件、带句号的
+  细节、分析与创作角度。两项健康与劳动研究保留小样本、自报资料、横断
+  面趋势与非因果边界；Roman 的未来发现数也没有被写成既有结果。
+- 与此前 215 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。五则在人物、事件、结论和创作角度上均无实质重复，
+  结果为 5/5。
+- 新增五张明确标注的 AI 编辑插图，不冒充馆藏、艺术作品、讲者、受访者、
+  患者、医疗图像、火箭、航天器或新闻现场。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `app/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 44 期渐进式 JPEG 图片
+
+### Verification
+
+- 运行 `npm run lint`、`npm run test`、`npm run build:pages` 与
+  `git diff --check`；IVORY 静态引用检查为 735 项、零缺失。
+- 五张图片统一验证为 1672×941、8-bit sRGB 渐进式 JPEG，并核对首页卡片
+  与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；仓库没有
+  `gh-pages` 分支，因此不创建或改写该分支。
+
 ## 2026-08-29 · Issue 43 daily publication
 
 ### Current target
