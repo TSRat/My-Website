@@ -12,6 +12,13 @@
   achievement, not as proof of a simple political conversion.
 - Keep life and chronology distinct. Every chronology item expands with image
   where available, beginner context, longer explanation and exact sources.
+- Journal evidence retains exact French text in the data and uses exact dates,
+  localized excerpts and printed-page locators. French mode shows historical
+  wording beside a modern restatement; source evidence and editorial analysis
+  remain visually distinct.
+- Public source cards never expose internal filenames or acquisition channels.
+  They show full citations, verified identifiers, lawful-access status and
+  reverse mappings to supported claims.
 
 ## Implementation map
 

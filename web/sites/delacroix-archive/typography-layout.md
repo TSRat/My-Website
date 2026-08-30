@@ -4,6 +4,9 @@
   fallbacks; UI metadata uses the sans stack.
 - English and French display headings may use italic serif styling; controls,
   dates and evidence locators remain upright and explicit.
+- Timeline period tabs use the sans stack for both dates and labels. They flex
+  from a 205px minimum instead of forcing narrow serif labels into awkward
+  two-character final lines.
 - The hero name is two intentional full lines, never a single orphaned final
   character. General headings and body copy apply end protection without
   changing dates into mismatched glyph runs.
