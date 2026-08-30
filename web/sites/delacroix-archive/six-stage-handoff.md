@@ -7,8 +7,8 @@
 | 1 · Product / content | `EXTEND_COMPLETE` | Beginner audit revision: 13-source graph, 11 exact-date journal readings and distinct page jobs |
 | 2 · Visual direction | `REUSE_COMPLETE` | Accepted Bordeaux / pine / blue room system and real imagery |
 | 3 · Implementation mapping | `EXTEND_COMPLETE` | First-visit defaults, focus and scroll contract, mobile menu state and guided viewing flow implemented |
-| 4 · Prototype / preliminary QA | `IN_PROGRESS` | Source/mirror tests and local browser checks run in this revision; Stage 3 validation remains separate |
-| 5 · Engineering / preview / PR | `IN_PROGRESS` | Isolated revision branch; draft PR and exact preview pending final checks |
+| 4 · Prototype / preliminary QA | `EXTEND_COMPLETE` | Contract/build checks plus headed 1440×900 and 390×844 local browser checks; Stage 3 validation remains separate |
+| 5 · Engineering / preview / PR | `DRAFT_PR_CREATED` | Commit `c80f27a`, draft PR #50 and immutable preview; production remains unchanged |
 | 6 · Data / analytics | `EXTEND_COMPLETE` | No-provider adapter, allowed event vocabulary and local-only privacy contract documented |
 
 ## Final-validation state
@@ -32,5 +32,9 @@ visual-regression review.
 
 - Branch: `codex/delacroix-beginner-audit-fixes`.
 - Authority remains `sites/delacroix-archive/`; `DELACROIX-ARCHIVE/` is rebuilt.
-- This handoff will become `CODEX_PHASE_2: READY_FOR_ANTIGRAVITY_VALIDATION`
-  after the branch build, bounded browser checks and draft PR are complete.
+- Implementation commit: `c80f27a`.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/50>.
+- Exact preview: <https://raw.githack.com/TSRat/My-Website/c80f27a/DELACROIX-ARCHIVE/index.html>.
+- Production remains unchanged until explicit merge authorization.
+
+`CODEX_PHASE_2: READY_FOR_ANTIGRAVITY_VALIDATION`
