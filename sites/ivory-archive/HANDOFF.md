@@ -1,5 +1,48 @@
 # IVORY ARCHIVE handoff
 
+## 2026-08-31 · Issue 45 daily publication
+
+### Current target
+
+发布第 45 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-31 第 45 期：Houdini 研究型魔术图书馆、Ursula von
+  Rydingsvard 将腐朽雪松装置重构为单件青铜作品、Ibadan 家庭食品安全与
+  城市基础设施、医师隐性种族偏见与明确血管照护指南，以及早期职业医生
+  考虑和实际采用兼职安排的性别差异。
+- 每则先解释陌生人物、作品、制度或研究对象，再分开记录事件、带句号的
+  细节、分析与创作角度。三项观察性研究保留选择偏差、测量范围与非因果
+  边界；艺术重构也没有被写成原作修复。
+- 与此前 220 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。另重点复核既有活材料展、馆藏史、种族变量研究、
+  妊娠糖尿病随访与照护劳动条目，最终五则均无实质重复，结果为 5/5。
+- 新增五张明确标注的 AI 编辑插图，不冒充历史资料、艺术作品、城市地图、
+  研究图、医生、患者、医院排班或新闻现场。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `app/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 45 期渐进式 JPEG 图片
+
+### Verification
+
+- 运行 `npm run lint`、`npm test`、`npm run build:pages`、
+  `npm run validate:pages` 与 `git diff --check`。
+- 五张图片统一验证为 1672×941、8-bit sRGB 渐进式 JPEG，并核对首页卡片
+  与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；仓库没有
+  `gh-pages` 分支，因此不创建或改写该分支。
+
 ## 2026-08-30 · Issue 44 daily publication
 
 ### Current target
