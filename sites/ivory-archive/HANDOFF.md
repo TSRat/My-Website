@@ -1,5 +1,48 @@
 # IVORY ARCHIVE handoff
 
+## 2026-09-01 · Issue 46 daily publication
+
+### Current target
+
+发布第 46 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-09-01 第 46 期：Maryam Adib 的 Aminah Robinson 艺术驻地、
+  Arkansas 三位女性艺术家的《Words Become Matter》、青年心理健康药物试验
+  代表性审计、西南 Ethiopia 产后不健康体重控制行为，以及 Petermann Glacier
+  冰岛断裂、漂移与卫星追踪。
+- 每则先解释陌生人物、制度或研究对象，再分开记录事件、带句号的细节、
+  编辑分析与创作角度。两项健康研究保留横断面或综述边界，冰川条目也没有
+  把单次崩解写成气候变化的直接证明。
+- 与此前 225 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较；另排除一条与既有青年使用 AI 求助心理问题故事
+  实质重合的候选，最终五则均无实质重复，结果为 5/5。
+- 新增五张明确标注的 AI 编辑插图，不冒充艺术家、作品、研究参与者、
+  临床现场、卫星影像、冰川或新闻现场。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `app/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 46 期渐进式 JPEG 图片
+
+### Verification
+
+- 运行 `npm run lint`、`npm test`、`npm run build:pages`、
+  `npm run validate:pages` 与 `git diff --check`。
+- 五张图片统一验证为 1672×941、8-bit sRGB 渐进式 JPEG，并核对首页卡片
+  与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；仓库没有
+  `gh-pages` 分支，因此不创建或改写该分支。
+
 ## 2026-08-31 · Issue 45 daily publication
 
 ### Current target

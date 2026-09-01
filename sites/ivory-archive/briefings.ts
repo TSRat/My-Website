@@ -36,6 +36,148 @@ export const knownHistoryTopics = [
 
 export const briefings: Briefing[] = [
   {
+    "date": "2026-09-01",
+    "displayDate": "2026.09.01",
+    "issueNo": "46",
+    "theme": "把“被看见”拆成条件：工作室、地方提名、试验样本、产后照护与卫星轨迹",
+    "intro": "本期从 Maryam Adib 进入 Aminah Robinson 的旧居与工作室、Arkansas 三位女性艺术家把语言转成材料、青年心理健康药物试验的代表性审计、西南 Ethiopia 产后女性的不健康体重控制行为，以及 Petermann Glacier 断裂冰岛的卫星追踪出发，追问一个人、一件作品或一种风险被看见之前，哪些空间、提名网络、纳入标准、照护入口与观测基础设施已经决定了可见范围。",
+    "learningGoal": "学会区分艺术家的个人成就与驻地提供的物质条件、女性艺术展览与长期提名网络、试验疗效与样本代表性、产后身体行为与相关压力因素，以及单次冰川崩解与长期气候趋势；同时识别每条证据能说明什么、不能说明什么。",
+    "connection": "五则故事都在讨论可见性的制度条件：工作室与现金让创作时间成为可能，地方委员会和策展人决定谁进入全国性展览路径，临床试验的排除规则决定疗效证据适用于谁，产后咨询与社会压力塑造身体选择，而雷达和光学卫星把一块快速漂移的冰变成可连续追踪的公共事实。",
+    "uniqueCount": 5,
+    "topics": [
+      "艺术人文",
+      "社会科学",
+      "女性主义"
+    ],
+    "stories": [
+      {
+        "category": "艺术人文 × 黑人艺术 × 驻地制度",
+        "image": "/story-images/maryam-adib-residency-2026.jpg",
+        "imageAlt": "透明肖像、缝线画布、草本植物与跨代档案路径共同组成艺术工作室的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 Maryam Adib 驻地中的工作空间、家族记忆、社区访谈与新作计划；并非真实艺术家、人物、工作室、作品、照片或展览现场",
+        "title": "Maryam Adib 进入 Aminah Robinson 的旧工作室：艺术驻地把空间、现金和遗产变成新作品的条件",
+        "summary": "Maryam Adib 是 Columbus 的油画家、壁画家与服装设计师，创作围绕记忆、家族谱系、黑人叙事、民间传说与幻想。9 月 1 日，她开始在已故艺术家 Aminah Brenda Lynn Robinson 的旧居与工作室进行三个月驻留，并获得不受用途限制的现金支持；她将为 2027 年展览《Inner Knowings》发展一组关于黑人社区如何从医疗创伤中疗愈的新作。",
+        "background": "Aminah Robinson 是 Columbus 艺术家，以绘画、雕塑、书籍、布料与 found materials 记录黑人历史和社区生活。她 2015 年去世后把遗产留给 Columbus Museum of Art；博物馆自 2020 年起以驻地、奖学金和社区外展延续她的 Legacy Project。驻地因此不只是纪念，也是住房、工作空间、现金、档案和机构关系的具体配置。",
+        "happened": "Columbus Museum of Art 于 8 月 25 日宣布 Adib 为 2026 年 Aminah Robinson Artist in Residence。她从 9 月 1 日起在修复后的 Robinson 住宅兼工作室生活与创作三个月，并为 2027 年 4 月在 Ithaca CAP Gallery 开幕的双人展进行访谈和材料实验。",
+        "facts": [
+          "Adib 的驻留期为三个月，地点是 Aminah Robinson 经修复的住宅与工作室；项目同时提供不受用途限制的现金奖励。",
+          "她计划为《Inner Knowings》发展新作；该双人展定于 2027 年 4 月在 Ithaca 的 CAP Gallery 开幕。",
+          "新作聚焦黑人社区怎样通过社区关系、草本知识与自然回应医疗创伤，并将以访谈作为创作材料之一。",
+          "Adib 计划先把油彩稀释成半透明肖像，再在画布上加入类似 quilting 的缝线，使绘画表面同时承担图像与手工结构。",
+          "她现有实践把记忆、家庭谱系、梦、黑人故事、民间传说与幻想视为可形成档案的材料。",
+          "Aminah Robinson Legacy Project 于 2020 年设立，驻地是三项核心计划之一；Columbus Museum of Art 保存世界上规模最大的 Robinson 作品收藏。",
+          "遴选委员会由五位艺术家、学者和社区代表组成，包括 Brittany Webb、Lowery Stokes Sims、Currecia Gamble、Katherine Brodbeck 与 Alexandria Couch。"
+        ],
+        "sourceName": "Columbus Museum of Art／Maryam Adib as the 2026 Aminah Robinson Artist in Residence",
+        "sourceUrl": "https://www.columbusmuseum.org/newsroom/posts/columbus-museum-of-art-announces-maryam-adib-as-the-2026-aminah-robinson-artist-in-residence",
+        "sourceDate": "公布 2026-08-25；驻地开始 2026-09-01",
+        "whyItMatters": "把驻地拆成住所、工作室、现金、馆藏关系和三个月连续时间，会发现所谓艺术家突破并不只是个人灵感。Robinson 的遗产在这里没有被封成纪念物，而是转化为另一位黑人艺术家可以使用的创作条件；机构责任则是说明这种使用怎样尊重原居所、社区记忆与被访谈者。",
+        "importance": "驻地公布说明了计划与资源，却还不能证明新作如何处理医疗创伤访谈、社区知识或 Robinson 遗产。真正的成效需要在驻留结束和 2027 年展览时比较创作过程、参与者授权、作品呈现与机构后续支持。",
+        "creatorAngle": "可以制作一张‘作品之前’的资源地图，把居住时间、工作室、现金、档案访问、社区访谈与策展网络逐一连接到新作；再追踪 2027 年展览中哪些条件仍可见，哪些又被压缩成个人作者署名。"
+      },
+      {
+        "category": "艺术人文 × 女性主义 × 地方艺术网络",
+        "image": "/story-images/words-become-matter-2026.jpg",
+        "imageAlt": "三位女性围绕纸张、陶土、线材与文字碎片共同工作的非纪实编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释《Words Become Matter》中语言、材料与地方女性艺术网络的关系；并非真实艺术家、人物、作品、展厅或活动现场",
+        "title": "三位 Arkansas 女性艺术家把词语变成纸、线与形体，地方提名也在决定谁被看见",
+        "summary": "《Words Become Matter》是 Lyon College 展出的三人展，汇集 K. Nelson Harper、Acadia Kandora 与 Rebecca Resinski。三位 Arkansas 艺术家分别从自然经验、材料过程与文字结构出发，让语言、观念和个人经历变成可触摸的作品；展览同时属于 National Museum of Women in the Arts 的 Women to Watch 地方遴选路径。",
+        "background": "Women to Watch 通过地方委员会和策展人发现尚未充分进入全国视野的女性艺术家。这样的网络能把地域实践带到更大平台，也意味着‘值得关注’不是自然浮现：提名范围、策展主题、委员会资源和展出地点都会塑造候选名单。",
+        "happened": "Lyon College 于 8 月 31 日发布展览介绍。展览已经开放并持续至 10 月 3 日，9 月 10 日举行免费公众招待会；Arkansas Museum of Fine Arts 的 drawings curator Catherine Walworth 负责策展，并把三位艺术家的作品放进‘词语怎样成为物质’的共同命题。",
+        "facts": [
+          "展览由 Lyon College Art Gallery 呈现，展期持续至 2026 年 10 月 3 日，9 月 10 日举行免费公众招待会。",
+          "三位参展者为 K. Nelson Harper、Acadia Kandora 与 Rebecca Resinski，均与 Arkansas 的艺术实践和社区有关。",
+          "策展人为 Arkansas Museum of Fine Arts 的 drawings curator Catherine Walworth。",
+          "展览属于 Arkansas Committee of the National Museum of Women in the Arts 的 Women to Watch 项目，地方组织在全国性可见度之前承担发现与提名工作。",
+          "公开介绍把主题概括为语言、观念与个人经验如何获得物质形态，而不是把三位艺术家仅以性别归为一组。",
+          "页面列出的作品包括《Naked, North of the Arctic Circle》《Windswept》与《But Just Now》，显示自然、运动和时间语言的不同入口。",
+          "展览免费开放，但公开页面没有说明最终 Women to Watch 遴选结果、艺术家报酬、作品借展条件或后续巡展安排。"
+        ],
+        "sourceName": "Lyon College／Words Become Matter exhibit showcases women artists",
+        "sourceUrl": "https://www.lyon.edu/news/posts/words-become-matter-exhibit-at-lyon-college-showcases-women-artists",
+        "sourceDate": "消息发布 2026-08-31；展至 2026-10-03",
+        "whyItMatters": "这场展览把‘女性艺术家获得机会’拆成地方委员会、外部策展人、学院画廊和全国博物馆网络的接力。材料主题能避免把参展者压缩成单一身份标签；但若要判断制度是否扩大艺术史，仍要看提名如何形成、资源如何分配，以及地方曝光能否转成收藏、委托与持续研究。",
+        "importance": "三人共同展出不能证明她们的实践或处境相同。展览新闻提供的是策展入口，不是完整制度评估；地方网络带来可见度的同时，也应公开候选范围、选择标准和艺术家获得的实际支持。",
+        "creatorAngle": "可以沿‘地方创作—委员会提名—策展选择—学院展览—全国平台’画出一件作品的移动路径，并在每一站记录谁拥有决定权、作品获得什么资源、哪些候选人退出视野。"
+      },
+      {
+        "category": "社会科学 × 研究制度 × 性别与代表性",
+        "image": "/story-images/youth-mental-health-trials-inclusion-2026.jpg",
+        "imageAlt": "临床试验漏斗、不同颜色的人形点阵与被排除在样本外的轮廓组成的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释青年心理健康试验中的性别、种族、地域与排除标准；并非真实儿童、患者、研究场景、数据图或药物广告",
+        "title": "三百九十七项青年心理药物试验里，女孩仅占百分之二十八点三",
+        "summary": "随机对照试验是把参与者随机分组、比较治疗结果的研究设计。对三百九十七项儿童与青少年心理疾病药物或营养补充剂试验的系统综述发现，四万六千九百八十九名参与者中女孩只占百分之二十八点三；种族信息经常缺失，Africa 没有试验，且许多研究排除了自闭症、学习障碍或有自杀风险的青年。",
+        "background": "一项治疗在试验中有效，不等于证据同样适用于临床上所有青年。疾病诊断的性别差异会影响招募，但研究地点、费用、同意程序和排除标准也会系统性地缩小样本；若论文不报告种族或社会条件，读者更难判断谁被证据代表。",
+        "happened": "《Nature Mental Health》于 8 月 31 日发表系统综述与 meta-analysis。团队汇总符合 DSM 或 ICD 儿童青少年精神疾病诊断的药物和 nutraceutical 随机试验，比较五十年来参与者的性别、种族、地区、共病排除和研究偏倚，并检验代表性是否随时间改善。",
+        "facts": [
+          "综述纳入三百九十七项随机对照试验、四万六千九百八十九名参与者，覆盖四十九个国家；平均年龄为十点二岁。",
+          "试验主题中百分之三十四点五为 attention-deficit/hyperactivity disorder，百分之二十九点七为 autism spectrum disorder。",
+          "女性参与者仅占百分之二十八点三；除 ADHD 试验外，五十年来整体女性比例没有显著增加。",
+          "只有百分之五十三点七的试验报告种族；在已报告样本中，白人占百分之七十五、黑人占百分之十点一、Hispanic 占百分之六点二、Asian 占百分之二。",
+          "百分之五十八点二的试验位于 North America，其中二百一十八项在 United States；Africa 没有纳入试验，South America 只有两项。",
+          "百分之五十六点五的试验排除 autistic individuals，百分之四十四点三排除 learning disabilities；抑郁症试验中百分之七十六排除有自杀风险的参与者。",
+          "偏倚评估中百分之四十二点六为低风险、百分之四十二点八存在一些疑虑、百分之十四点七为高风险。"
+        ],
+        "sourceName": "Nature Mental Health／Representation and inclusivity in youth mental health clinical trials",
+        "sourceUrl": "https://www.nature.com/articles/s44220-026-00722-5",
+        "sourceDate": "在线发表 2026-08-31；DOI 10.1038/s44220-026-00722-5",
+        "whyItMatters": "女孩占比、种族缺报、地区集中和共病排除不是四个孤立数字：它们共同决定临床指南面对真实青年时要跨越多大的证据距离。尤其当有自杀风险者在多数抑郁试验中被排除，最需要治疗的人反而可能最少进入疗效与安全性证据。",
+        "importance": "这项综述只覆盖药物与营养补充剂随机试验，不代表心理治疗、学校干预或社区支持研究。诊断患病率的性别差异可以解释部分样本构成，但不能替代对招募、报告和排除规则的具体审计。",
+        "creatorAngle": "可以为一种常见治疗制作‘证据护照’，分别列出试验中的性别、种族、地区、共病和风险排除，再与实际门诊人群比较；追踪新试验是否增加代表性，同时没有牺牲必要的安全保护。"
+      },
+      {
+        "category": "女性主义 × 产后健康 × 身体政治",
+        "image": "/story-images/postpartum-weight-control-ethiopia-2026.jpg",
+        "imageAlt": "产后身体轮廓周围连接社交媒体、食物、家庭压力、哺乳与诊所咨询节点的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释产后体重控制行为与身体不满、社会压力和照护入口的相关网络；并非真实女性、家庭、诊所、问卷或医疗建议",
+        "title": "西南 Ethiopia 四成产后女性报告不健康减重行为，压力与照护缺口一起出现",
+        "summary": "不健康体重控制行为包括为减重而采用可能伤害身体或营养状况的限制、药物或其他做法。Southwest Ethiopia 一项对分娩后六至九个月女性的研究发现，三百二十人中百分之四十一报告过这类行为；身体不满、社会压力、媒体影响、首次生育、低收入、非计划妊娠、非纯母乳喂养与缺少咨询均与更高报告几率相关。",
+        "background": "产后身体同时承受恢复、喂养、睡眠、家庭角色和审美期待。把减重行为只当成个人自律，会忽略媒体、亲友评价、收入与产后服务怎样改变可选路径；横断面研究可以识别需要干预的共同出现因素，却不能确定谁先发生或证明直接原因。",
+        "happened": "《Scientific Reports》于 8 月 31 日发表研究。团队在 2025 年 5 至 6 月访问 Ilubabor 与 Buno Bedele 多家公共医疗机构内、分娩后六至九个月的女性，以访谈问卷和身体测量估计行为比例，并用多变量模型分析相关因素。",
+        "facts": [
+          "研究原计划招募三百三十二人，最终三百二十人完成，回应率为百分之九十六点四。",
+          "参与者均处于产后六至九个月，并在 Southwest Ethiopia 的 Ilubabor 与 Buno Bedele 公共医疗机构接受调查。",
+          "报告不健康体重控制行为的比例为百分之四十一，百分之九十五置信区间为百分之三十五点六至四十六点四。",
+          "身体不满与较高报告几率的关联最强，调整后 odds ratio 为四点五；感到社会压力的调整后 odds ratio 为三点二，媒体影响为二点三。",
+          "首次生育的调整后 odds ratio 为二点六五，低收入为二点一，非计划妊娠为二点二。",
+          "非纯母乳喂养与较高报告几率相关，调整后 odds ratio 为二点一；没有获得相关咨询的调整后 odds ratio 为二点四。",
+          "研究采用一次性 facility-based 横断面设计，依赖自报行为；关联不能说明身体不满、媒体或咨询缺口直接造成这些行为。"
+        ],
+        "sourceName": "Scientific Reports／Unhealthy weight control practices among postpartum women in Southwest Ethiopia",
+        "sourceUrl": "https://www.nature.com/articles/s41598-026-68856-1",
+        "sourceDate": "在线发表 2026-08-31；DOI 10.1038/s41598-026-68856-1",
+        "whyItMatters": "百分之四十一不是单纯的个人选择统计。身体不满与社会压力的强关联、低收入和非计划妊娠的同时出现，以及咨询入口的缺失，共同提示产后服务应同时讨论营养、心理状态、哺乳、媒体和家庭评价，而不是只要求女性尽快恢复孕前体形。",
+        "importance": "样本来自公共医疗机构，未覆盖没有进入这些服务的产后女性；研究也没有建立时间顺序。数据最适合用来设计更包容的筛查与纵向研究，而不是给单个相关因素贴上原因标签。",
+        "creatorAngle": "可以把一次产后复诊改写成多入口服务地图：身体感受、饮食与哺乳、媒体压力、家庭支持、收入和危险减重行为分别由谁询问、转介与跟进；再比较咨询是否真正减少行为，而非只增加知识。"
+      },
+      {
+        "category": "社会科学 × 地理学 × 遥感基础设施",
+        "image": "/story-images/petermann-ice-island-2026.jpg",
+        "imageAlt": "巨大平顶冰岛在狭窄海峡撞上岛屿转向，上方卫星以轨迹线连续观测的编辑插图",
+        "imageCredit": "编辑插图 · AI 生成，用于解释 Petermann Glacier 冰岛的断裂、漂移、碰撞与卫星追踪；并非真实卫星影像、地图、冰川、岛屿或观测现场",
+        "title": "七十六平方公里冰岛撞上 Joe Island 后没有碎裂，卫星追踪把一次漂移放回冰架稳定性",
+        "summary": "Petermann Glacier 是 Greenland 北部一条流入海洋的巨大冰川，其浮冰舌会阻挡内陆冰更快流向海洋。8 月初，一块面积超过七十六平方公里的平顶冰岛从冰川断裂；Sentinel-1 与 Landsat 9 影像显示它平均每天漂移约三公里，撞上 Joe Island 后转向却没有像 2010 年冰山那样碎裂。",
+        "background": "冰川断裂本是海洋终止冰川的自然质量损失过程，一次事件不能单独证明气候趋势。重要的是连续遥感怎样测量面积、速度、厚度、裂缝与碰撞，并把单次漂移放进浮冰舌长期后退、航行风险和海平面贡献的共同档案。",
+        "happened": "NASA Earth Observatory 于 9 月 1 日发布分析。研究者 Adam Garbo 首先在 8 月 4 日的 ESA Sentinel-1 雷达资料中发现断裂，随后以 Landsat 9 在 8 月 23 至 24 日的光学影像确认冰岛绕 Joe Island 旋转、沿 Nares Strait 向西南移动，并持续监测冰川上另外两道裂缝。",
+        "facts": [
+          "新冰岛面积超过七十六平方公里，约二十九平方英里，大小接近 Saint Thomas；厚度不到一百五十米。",
+          "这是 Arctic 自 2020 年以来最大的冰川崩解事件，也是 Petermann Glacier 自 2012 年约一百三十平方公里断裂以来最大的一次。",
+          "Sentinel-1 资料显示，断裂后一周冰岛平均每天移动约三公里，并受风与洋流推动向西南穿过 Nares Strait。",
+          "Landsat 9 的 Operational Land Imager 在 8 月 23 与 24 日记录它撞上并绕 Joe Island 转动；冰体在碰撞后保持完整。",
+          "2010 年从 Petermann 断裂的一块更大冰岛曾在同一岛屿附近分裂，因此这次没有碎裂提供了不同的厚度、裂缝或碰撞条件案例。",
+          "冰川上另有两道被持续监测的裂缝，未来可能产生约九十四与八十四平方公里的冰岛，但具体时间仍无法确定。",
+          "Petermann 的浮冰舌像闸门一样减缓内陆冰流入海洋；冰架长期稳定与海平面有关，但单次崩解不能独立归因于气候变化。"
+        ],
+        "sourceName": "NASA Earth Observatory／Iceberg from Petermann Glacier Speeds Away",
+        "sourceUrl": "https://science.nasa.gov/earth/earth-observatory/iceberg-from-petermann-glacier-speeds-away/",
+        "sourceDate": "发布 2026-09-01；Sentinel-1 首次识别 2026-08-04；Landsat 9 影像 2026-08-23 至 2026-08-24",
+        "whyItMatters": "一次碰撞是否碎裂看似只是冰山新闻，实际连接了雷达全天候监测、光学影像判读、海峡航行与冰架动力学。持续记录才能区分例行崩解、异常尺度与长期后退；也让未来两道裂缝的预警不依赖有人恰好看见一张影像。",
+        "importance": "面积、速度和碰撞来自多时相遥感解释，冰厚与未来裂缝规模仍有不确定性。对公众最关键的区分是：冰岛本身融化不会像陆地冰直接增加同等海平面，但浮冰舌减弱可能让后方陆地冰更快入海。",
+        "creatorAngle": "可以做一条从 8 月 4 日发现、每日漂移、Joe Island 碰撞到后续融化的可更新轨迹，并把每个判断标注为雷达、光学影像、模型或历史比较；继续追踪另外两道裂缝何时改变、谁负责发布航行预警。"
+      }
+    ]
+  },
+  {
     "date": "2026-08-31",
     "displayDate": "2026.08.31",
     "issueNo": "45",
