@@ -1,5 +1,47 @@
 # IVORY ARCHIVE handoff
 
+## 2026-09-02 · Issue 47 daily publication
+
+### Current target
+
+发布第 47 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-09-02 第 47 期：Sunil Gupta 五十年摄影回顾展、Medicare
+  医师工作价值的三阶段决策、Mexico 青少年电视食品广告政策模拟、老年
+  谵妄患者出院后的家庭照护，以及 LUX-ZEPLIN 的单个异常候选事件。
+- 每则先解释陌生人物、制度或研究对象，再分开记录事件、带句号的细节、
+  编辑分析与创作角度。食品广告条目明确区分模型结果与已观察政策成效，
+  照护访谈保留单中心小样本边界，LZ 条目没有把 2.6 sigma 写成发现。
+- 与此前 230 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。食品广告模型与第 39 期青年酒精营销综述最接近，
+  但研究对象、方法、结论与政策问题均不同；最终五则无实质重复，结果为 5/5。
+- 新增五张明确标注的 AI 编辑插图，不冒充摄影作品、被摄者、临床会议、
+  食品广告、青少年、患者、照护者、探测器数据或新闻现场。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `app/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 47 期渐进式 JPEG 图片
+
+### Verification
+
+- 运行 `npm run lint`、`npm test`、`npm run build:pages`、
+  `npm run validate:artifact` 与 `git diff --check`。
+- 五张图片统一验证为 1672×941、8-bit sRGB 渐进式 JPEG，并核对首页卡片
+  与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；仓库没有
+  `gh-pages` 分支，因此不创建或改写该分支。
+
 ## 2026-09-01 · Issue 46 daily publication
 
 ### Current target
