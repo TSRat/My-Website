@@ -28,15 +28,20 @@ export const researchUi = {
     entryReading: "条目摘读",
     entryContext: "这一天发生了什么",
     editorReading: "它帮助我们理解什么",
-    quotation: "短引文",
+    sourceText: "法文原文",
+    translatedExcerpt: "中文摘译",
+    translation: "本页译文",
     editionAndPage: "版本与定位",
     sourceLibrary: "资料库",
-    sourceLibraryIntro: "11份用户提供的研究文件与馆藏记录分别登记；每份资料都列出它实际支持的事件和日志。",
+    sourceLibraryIntro: "用户提供的11份研究材料、法文公版日记与馆藏记录分别登记；每份资料都列出完整书目信息、合法获取状态，以及它实际支持的事件和日志。",
     materialType: "材料性质",
     documentLanguage: "文献语言",
     coverage: "内容覆盖",
     edition: "版本／出版",
-    localFile: "本地文件",
+    bibliography: "完整书目",
+    identifiers: "书目识别号",
+    accessStatus: "获取状态",
+    accessLinks: "合法获取与馆藏检索",
     howUsed: "本应用怎样使用它",
     usedBy: "在本应用中用于",
     noLinkedClaims: "目前尚未用于具体条目，保留供后续研究。",
@@ -79,15 +84,20 @@ export const researchUi = {
     entryReading: "Entry reading",
     entryContext: "What was happening that day",
     editorReading: "What it helps us understand",
-    quotation: "Short quotation",
+    sourceText: "French source text",
+    translatedExcerpt: "English excerpt",
+    translation: "Translation on this page",
     editionAndPage: "Edition and location",
     sourceLibrary: "Source library",
-    sourceLibraryIntro: "Eleven user-supplied research files and museum records are registered separately. Each source lists the events and journal readings it actually supports.",
+    sourceLibraryIntro: "Eleven user-supplied research materials, the public-domain French journal, and museum records are registered separately. Each entry gives a full citation, lawful access status, and the claims it actually supports.",
     materialType: "Material type",
     documentLanguage: "Document language",
     coverage: "Coverage",
     edition: "Edition / publication",
-    localFile: "Local file",
+    bibliography: "Full citation",
+    identifiers: "Bibliographic identifiers",
+    accessStatus: "Access status",
+    accessLinks: "Lawful access and catalogues",
     howUsed: "How this app uses it",
     usedBy: "Used in this app for",
     noLinkedClaims: "Not yet attached to a specific entry; retained for later research.",
@@ -130,15 +140,20 @@ export const researchUi = {
     entryReading: "Lecture d’une entrée",
     entryContext: "Ce qui se passe ce jour-là",
     editorReading: "Ce que cela permet de comprendre",
-    quotation: "Courte citation",
+    sourceText: "Texte source français",
+    translatedExcerpt: "Extrait français",
+    translation: "Traduction sur cette page",
     editionAndPage: "Édition et repérage",
     sourceLibrary: "Bibliothèque des sources",
-    sourceLibraryIntro: "Onze fichiers de recherche fournis par l’utilisateur et les notices muséales sont enregistrés séparément. Chaque source indique les événements et lectures du Journal qu’elle fonde réellement.",
+    sourceLibraryIntro: "Onze documents de recherche fournis par l’utilisateur, le Journal français du domaine public et les notices muséales sont enregistrés séparément. Chaque entrée donne une référence complète, le statut d’accès légal et les affirmations qu’elle fonde réellement.",
     materialType: "Nature du document",
     documentLanguage: "Langue du document",
     coverage: "Période couverte",
     edition: "Édition / publication",
-    localFile: "Fichier local",
+    bibliography: "Référence complète",
+    identifiers: "Identifiants bibliographiques",
+    accessStatus: "Statut d’accès",
+    accessLinks: "Accès légal et catalogues",
     howUsed: "Usage dans l’application",
     usedBy: "Utilisé dans l’application pour",
     noLinkedClaims: "Pas encore rattaché à une notice précise ; conservé pour la recherche ultérieure.",
@@ -280,7 +295,7 @@ export const glossary = {
 export const sourceLibrary = [
   {
     id: "sand-manuscript", level: "original", coverage: "1837—1863",
-    file: "德拉克洛瓦与乔治桑书信集.pdf", image: "./assets/sources/george-sand-letter-manuscript.jpg",
+    image: "./assets/sources/george-sand-letter-manuscript.jpg",
     name: { zh: "德拉克洛瓦致乔治·桑书信手稿", en: "Delacroix’s manuscript letters to George Sand", fr: "Lettres manuscrites de Delacroix à George Sand" },
     type: { zh: "原始书信影像", en: "Original manuscript images", fr: "Images des manuscrits originaux" },
     language: { zh: "法文手稿", en: "French manuscripts", fr: "Manuscrits français" },
@@ -289,8 +304,18 @@ export const sourceLibrary = [
     howUsed: { zh: "用于乔治·桑、诺昂、肖邦、疾病、工作和晚年友谊；引用时按手稿件号定位。", en: "Used for George Sand, Nohant, Chopin, illness, work, and late friendship; references use manuscript item numbers.", fr: "Utilisé pour George Sand, Nohant, Chopin, la maladie, le travail et l’amitié tardive ; les références suivent les numéros de pièces." },
   },
   {
+    id: "journal-flat-piot", level: "edited", coverage: "1822—1863",
+    image: null,
+    name: { zh: "《欧仁·德拉克洛瓦日记》法文公版", en: "Journal de Eugène Delacroix, public-domain French edition", fr: "Journal de Eugène Delacroix, édition française du domaine public" },
+    type: { zh: "经编辑的一手材料", en: "Edited primary material", fr: "Source primaire éditée" },
+    language: { zh: "法文", en: "French", fr: "Français" },
+    edition: { zh: "保罗·弗拉特、勒内·皮奥编，普隆出版社，三卷，1893—1895年", en: "Edited by Paul Flat and René Piot, Plon, three volumes, 1893–95", fr: "Édition Paul Flat et René Piot, Plon, trois tomes, 1893–1895" },
+    summary: { zh: "可公开检索的法文历史版本。本页日志摘录按具体日期和印刷页定位，并与编者解释分开显示。", en: "A publicly searchable historical French edition. Journal excerpts on this site are located by exact date and printed page and remain visually distinct from editorial interpretation.", fr: "Édition historique française librement consultable. Les extraits sont repérés par date et page imprimée, et séparés visuellement de l’interprétation éditoriale." },
+    howUsed: { zh: "作为本页法文短引文和精确日期的主定位版本；现代译本用于翻译对照。", en: "The principal locator for French excerpts and exact dates on this site; modern translations are used for comparison.", fr: "Édition principale pour le texte français et les dates exactes ; les traductions modernes servent au contrôle comparatif." },
+  },
+  {
     id: "journal-norton", level: "edited", coverage: "1822—1863",
-    file: "The_Journal_of_Eugene_Delacroix.pdf", image: "./assets/sources/journal-norton-title.jpg",
+    image: "./assets/sources/journal-norton-title.jpg",
     name: { zh: "《德拉克洛瓦日记》露西·诺顿英译选本", en: "The Journal of Eugène Delacroix, Lucy Norton selection", fr: "Journal d’Eugène Delacroix, choix traduit par Lucy Norton" },
     type: { zh: "经编辑的一手材料", en: "Edited primary material", fr: "Source primaire éditée" },
     language: { zh: "英文", en: "English", fr: "Anglais" },
@@ -300,7 +325,7 @@ export const sourceLibrary = [
   },
   {
     id: "journal-li", level: "edited", coverage: "1822—1863",
-    file: "德拉克洛瓦日记 (德拉克洛瓦) (Z-Library).pdf", image: "./assets/sources/journal-li-title.jpg",
+    image: "./assets/sources/journal-li-title.jpg",
     name: { zh: "《德拉克洛瓦日记》李嘉熙中文本", en: "Delacroix’s Journal, Chinese translation by Li Jiaxi", fr: "Journal de Delacroix, traduction chinoise de Li Jiaxi" },
     type: { zh: "中文译本", en: "Chinese translation", fr: "Traduction chinoise" },
     language: { zh: "中文", en: "Chinese", fr: "Chinois" },
@@ -310,7 +335,7 @@ export const sourceLibrary = [
   },
   {
     id: "journal-pach", level: "edited", coverage: "1822—1863",
-    file: "Eugène Delacroix Journal.pdf", image: "./assets/sources/journal-pach-title.jpg",
+    image: "./assets/sources/journal-pach-title.jpg",
     name: { zh: "《德拉克洛瓦日记》沃尔特·帕赫英译本", en: "The Journal of Eugène Delacroix, Walter Pach translation", fr: "Journal d’Eugène Delacroix, traduction de Walter Pach" },
     type: { zh: "经编辑的一手材料", en: "Edited primary material", fr: "Source primaire éditée" },
     language: { zh: "英文", en: "English", fr: "Anglais" },
@@ -320,7 +345,7 @@ export const sourceLibrary = [
   },
   {
     id: "essays-zh", level: "edited", coverage: "1829—1862",
-    file: "德拉克洛瓦  论美术与美术家_9787208076464_11959750.pdf", image: "./assets/sources/essays-chinese-title.jpg",
+    image: "./assets/sources/essays-chinese-title.jpg",
     name: { zh: "《德拉克洛瓦论美术与美术家》", en: "Delacroix on Art and Artists", fr: "Écrits de Delacroix sur l’art et les artistes" },
     type: { zh: "艺术家文章中文编译本", en: "Chinese compilation of the artist’s essays", fr: "Compilation chinoise des écrits de l’artiste" },
     language: { zh: "中文", en: "Chinese", fr: "Chinois" },
@@ -330,7 +355,7 @@ export const sourceLibrary = [
   },
   {
     id: "planet-memoir", level: "contemporary", coverage: "1838—1844",
-    file: "0644_doucet_8d1872.pdf", image: "./assets/sources/planet-memoir-title.jpg",
+    image: "./assets/sources/planet-memoir-title.jpg",
     name: { zh: "路易·德·普拉内《与德拉克洛瓦共同进行绘画工程的回忆》", en: "Louis de Planet, Recollections of Painting Projects with Delacroix", fr: "Louis de Planet, Souvenirs de travaux de peinture avec Delacroix" },
     type: { zh: "工作室助手回忆", en: "Studio assistant’s memoir", fr: "Souvenirs d’un assistant d’atelier" },
     language: { zh: "法文", en: "French", fr: "Français" },
@@ -340,7 +365,7 @@ export const sourceLibrary = [
   },
   {
     id: "cambridge", level: "modern", coverage: "1798—1863",
-    file: "Cambridge Companion to Delacroix(1).pdf", image: "./assets/sources/cambridge-contents.jpg",
+    image: "./assets/sources/cambridge-contents.jpg",
     name: { zh: "《德拉克洛瓦剑桥指南》", en: "The Cambridge Companion to Delacroix", fr: "The Cambridge Companion to Delacroix" },
     type: { zh: "现代论文集", en: "Modern essay collection", fr: "Recueil d’études modernes" },
     language: { zh: "英文", en: "English", fr: "Anglais" },
@@ -350,7 +375,7 @@ export const sourceLibrary = [
   },
   {
     id: "journal-art-zh", level: "edited", coverage: "1822—1863",
-    file: "13033055.pdf", image: "./assets/sources/journal-art-chinese-title.jpg",
+    image: "./assets/sources/journal-art-chinese-title.jpg",
     name: { zh: "《德拉克洛瓦艺术日志》中文图文版", en: "Delacroix’s Art Journal, illustrated Chinese edition", fr: "Journal artistique de Delacroix, édition chinoise illustrée" },
     type: { zh: "中文图文编译本", en: "Illustrated Chinese edition", fr: "Édition chinoise illustrée" },
     language: { zh: "中文", en: "Chinese", fr: "Chinois" },
@@ -360,7 +385,7 @@ export const sourceLibrary = [
   },
   {
     id: "lee", level: "modern", coverage: "1798—1863",
-    file: "Delacroix(1).pdf", image: "./assets/sources/simon-lee-title.jpg",
+    image: "./assets/sources/simon-lee-title.jpg",
     name: { zh: "西蒙·李《德拉克洛瓦》", en: "Simon Lee, Delacroix", fr: "Simon Lee, Delacroix" },
     type: { zh: "现代图文专著", en: "Modern illustrated monograph", fr: "Monographie moderne illustrée" },
     language: { zh: "英文", en: "English", fr: "Anglais" },
@@ -370,7 +395,7 @@ export const sourceLibrary = [
   },
   {
     id: "baudelaire-zh", level: "contemporary", coverage: "1845—1864",
-    file: "我看德拉克洛瓦_11383742.pdf", image: "./assets/sources/baudelaire-chinese-title.jpg",
+    image: "./assets/sources/baudelaire-chinese-title.jpg",
     name: { zh: "《我看德拉克洛瓦》", en: "Baudelaire and others on Delacroix", fr: "Baudelaire et d’autres auteurs sur Delacroix" },
     type: { zh: "同时代评论与后世编选", en: "Contemporary criticism and later compilation", fr: "Critique contemporaine et compilation ultérieure" },
     language: { zh: "中文", en: "Chinese", fr: "Chinois" },
@@ -380,7 +405,7 @@ export const sourceLibrary = [
   },
   {
     id: "letters-burty", level: "edited", coverage: "1815—1863",
-    file: "lettresdeeugnede00dela.pdf", image: "./assets/sources/letters-burty-title.jpg",
+    image: "./assets/sources/letters-burty-title.jpg",
     name: { zh: "《欧仁·德拉克洛瓦书信集（1815—1863）》", en: "Letters of Eugène Delacroix, 1815–1863", fr: "Lettres d’Eugène Delacroix, 1815 à 1863" },
     type: { zh: "法文书信编集", en: "Edited French letter collection", fr: "Recueil édité de lettres françaises" },
     language: { zh: "法文", en: "French", fr: "Français" },
@@ -390,7 +415,7 @@ export const sourceLibrary = [
   },
   {
     id: "museum-records", level: "record", coverage: "1822—1863",
-    file: "外部馆藏记录（作品页逐件链接）", image: "./assets/artworks/liberty-leading-people.jpg",
+    image: "./assets/artworks/liberty-leading-people.jpg",
     name: { zh: "博物馆与机构作品记录", en: "Museum and institutional object records", fr: "Notices d’œuvres des musées et institutions" },
     type: { zh: "馆藏对象记录", en: "Collection object records", fr: "Notices d’objets de collection" },
     language: { zh: "法文、英文等", en: "French, English, and others", fr: "Français, anglais et autres" },
@@ -399,6 +424,70 @@ export const sourceLibrary = [
     howUsed: { zh: "用于作品事实、图像和作品事件；历史解释不只依赖馆藏说明。", en: "Used for object facts, images, and work-related events; historical interpretation does not rely on museum prose alone.", fr: "Utilisé pour les données d’objet, les images et les événements liés aux œuvres ; l’interprétation historique ne repose pas sur les seuls textes muséaux." },
   },
 ];
+
+export const sourceAccess = {
+  "sand-manuscript": {
+    bibliography: { zh: "Eugène Delacroix，《致乔治·桑书信》，1837—1863，法国国家艺术史研究院图书馆，Ms 236。", en: "Eugène Delacroix, letters to George Sand, 1837–63, Bibliothèque de l’Institut national d’histoire de l’art, Ms 236.", fr: "Eugène Delacroix, lettres à George Sand, 1837–1863, Bibliothèque de l’Institut national d’histoire de l’art, Ms 236." },
+    identifiers: ["INHA Ms 236"],
+    access: { zh: "馆藏数字化；公开阅览范围以INHA目录为准。", en: "Digitised collection; public availability follows the INHA catalogue.", fr: "Collection numérisée ; disponibilité publique selon le catalogue de l’INHA." },
+    links: [{ label: { zh: "INHA数字图书馆", en: "INHA digital library", fr: "Bibliothèque numérique de l’INHA" }, url: "https://bibliotheque-numerique.inha.fr/" }],
+  },
+  "journal-flat-piot": {
+    bibliography: { zh: "Eugène Delacroix，《Journal de Eugène Delacroix》，Paul Flat、René Piot编，巴黎：Plon-Nourrit，三卷，1893—1895年。", en: "Eugène Delacroix, Journal de Eugène Delacroix, ed. Paul Flat and René Piot, 3 vols. (Paris: Plon-Nourrit, 1893–95).", fr: "Eugène Delacroix, Journal de Eugène Delacroix, éd. Paul Flat et René Piot, 3 vol. (Paris : Plon-Nourrit, 1893–1895)." },
+    identifiers: ["OCLC 7052310", "Open Library OL22963031M"],
+    access: { zh: "公版法文转录可公开阅读全文；Open Library保存版本记录。", en: "The public-domain French transcription is freely readable; Open Library preserves the edition record.", fr: "La transcription française du domaine public est librement lisible ; Open Library conserve la notice d’édition." },
+    links: [
+      { label: { zh: "Wikisource法文全文", en: "French text on Wikisource", fr: "Texte français sur Wikisource" }, url: "https://fr.wikisource.org/wiki/Journal_(Eug%C3%A8ne_Delacroix)" },
+      { label: { zh: "Open Library版本记录", en: "Open Library edition record", fr: "Notice Open Library" }, url: "https://openlibrary.org/books/OL22963031M/Journal_de_Eugene_Delacroix_..." },
+    ],
+  },
+  "journal-norton": {
+    bibliography: { zh: "Eugène Delacroix，《The Journal of Eugène Delacroix》，Hubert Wellington编选，Lucy Norton英译，伦敦：Phaidon。", en: "Eugène Delacroix, The Journal of Eugène Delacroix, selected and introduced by Hubert Wellington, trans. Lucy Norton (London: Phaidon).", fr: "Eugène Delacroix, The Journal of Eugène Delacroix, choix et introduction d’Hubert Wellington, trad. Lucy Norton (Londres : Phaidon)." },
+    identifiers: ["ISBN 978-0-7148-3359-0", "OCLC 19612940"],
+    access: { zh: "现代英译本仍受版权保护；本站不提供全文下载，仅链接书目记录。", en: "The modern English translation remains copyrighted; this site provides a catalogue record, not a full-text download.", fr: "La traduction anglaise moderne reste protégée ; le site fournit une notice, non un téléchargement intégral." },
+    links: [{ label: { zh: "WorldCat书目记录", en: "WorldCat record", fr: "Notice WorldCat" }, url: "https://search.worldcat.org/title/19612940" }],
+  },
+  "journal-li": {
+    bibliography: { zh: "Eugène Delacroix，《德拉克洛瓦日记》，李嘉熙译；书目信息据用户提供的中文扫描本。", en: "Eugène Delacroix, Delacroix’s Journal, Chinese trans. Li Jiaxi; bibliographic description based on the user-supplied scan.", fr: "Eugène Delacroix, Journal de Delacroix, trad. chinoise de Li Jiaxi ; description bibliographique d’après la numérisation fournie par l’utilisateur." },
+    identifiers: [], access: { zh: "用户提供的研究用扫描本；本站不公开下载地址。", en: "User-supplied research scan; no download address is published here.", fr: "Numérisation de recherche fournie par l’utilisateur ; aucune adresse de téléchargement n’est publiée ici." }, links: [],
+  },
+  "journal-pach": {
+    bibliography: { zh: "Eugène Delacroix，《The Journal of Eugène Delacroix》，Walter Pach英译，纽约：Hacker Art Books，1980年重印；1937年初版。", en: "Eugène Delacroix, The Journal of Eugène Delacroix, trans. Walter Pach (New York: Hacker Art Books, 1980 reissue; first published 1937).", fr: "Eugène Delacroix, The Journal of Eugène Delacroix, trad. Walter Pach (New York : Hacker Art Books, rééd. 1980 ; 1re éd. 1937)." },
+    identifiers: ["ISBN 0-87817-275-0", "LCCN 79-57638"], access: { zh: "用户提供研究本；现代译文可能仍受版权保护，本站不公开全文。", en: "Research copy supplied by the user; the modern translation may remain copyrighted and is not reproduced in full.", fr: "Exemplaire de recherche fourni par l’utilisateur ; la traduction moderne peut rester protégée et n’est pas reproduite intégralement." }, links: [],
+  },
+  "essays-zh": {
+    bibliography: { zh: "Eugène Delacroix，《德拉克洛瓦论美术与美术家》，上海：上海人民出版社，2008年。", en: "Eugène Delacroix, Delacroix on Art and Artists, Chinese edition (Shanghai: Shanghai People’s Publishing House, 2008).", fr: "Eugène Delacroix, Écrits sur l’art et les artistes, éd. chinoise (Shanghai : Shanghai People’s Publishing House, 2008)." },
+    identifiers: ["ISBN 978-7-208-07646-4"], access: { zh: "在版中文图书；请通过图书馆或正规书店获取。", en: "In-copyright Chinese book; consult a library or authorised bookseller.", fr: "Livre chinois protégé ; à consulter en bibliothèque ou auprès d’un libraire autorisé." }, links: [],
+  },
+  "planet-memoir": {
+    bibliography: { zh: "Louis de Planet，《Souvenirs de travaux de peinture avec Monsieur Eugène Delacroix》，André Joubin编，巴黎，1929年。", en: "Louis de Planet, Souvenirs de travaux de peinture avec Monsieur Eugène Delacroix, ed. André Joubin (Paris, 1929).", fr: "Louis de Planet, Souvenirs de travaux de peinture avec Monsieur Eugène Delacroix, éd. André Joubin (Paris, 1929)." },
+    identifiers: ["Bibliothèque de l’INHA, fonds Doucet"], access: { zh: "历史出版物；用户提供研究本，公开状态以INHA目录为准。", en: "Historical publication; research copy supplied by the user, with public status governed by the INHA catalogue.", fr: "Publication historique ; exemplaire fourni par l’utilisateur, statut public selon le catalogue de l’INHA." }, links: [{ label: { zh: "INHA数字图书馆", en: "INHA digital library", fr: "Bibliothèque numérique de l’INHA" }, url: "https://bibliotheque-numerique.inha.fr/" }],
+  },
+  cambridge: {
+    bibliography: { zh: "Beth S. Wright编，《The Cambridge Companion to Delacroix》，剑桥：Cambridge University Press，2001年。", en: "Beth S. Wright, ed., The Cambridge Companion to Delacroix (Cambridge: Cambridge University Press, 2001).", fr: "Beth S. Wright (dir.), The Cambridge Companion to Delacroix (Cambridge : Cambridge University Press, 2001)." },
+    identifiers: ["ISBN 0-521-65077-1", "ISBN 0-521-65889-6"], access: { zh: "现代学术著作；可通过图书馆或Internet Archive受控借阅，开放情况可能变化。", en: "Modern scholarly book; available through libraries or controlled borrowing at Internet Archive, subject to availability.", fr: "Ouvrage scientifique moderne ; accessible en bibliothèque ou par prêt contrôlé sur Internet Archive, selon disponibilité." }, links: [{ label: { zh: "Internet Archive受控借阅", en: "Internet Archive controlled borrowing", fr: "Prêt contrôlé sur Internet Archive" }, url: "https://archive.org/details/cambridgecompani0000unse_l0k1" }],
+  },
+  "journal-art-zh": {
+    bibliography: { zh: "《德拉克洛瓦艺术日志》中文图文版；书目信息据用户提供的扫描本。", en: "Delacroix’s Art Journal, illustrated Chinese edition; bibliographic description based on the user-supplied scan.", fr: "Journal artistique de Delacroix, édition chinoise illustrée ; description d’après la numérisation fournie." },
+    identifiers: [], access: { zh: "用户提供的研究用扫描本；本站不公开下载地址。", en: "User-supplied research scan; no download address is published here.", fr: "Numérisation de recherche fournie par l’utilisateur ; aucune adresse de téléchargement n’est publiée ici." }, links: [],
+  },
+  lee: {
+    bibliography: { zh: "Simon Lee，《Delacroix》，伦敦：Phaidon，Art & Ideas系列，1998年。", en: "Simon Lee, Delacroix (London: Phaidon, Art & Ideas, 1998).", fr: "Simon Lee, Delacroix (Londres : Phaidon, coll. Art & Ideas, 1998)." },
+    identifiers: ["ISBN 978-0-7148-3983-7"], access: { zh: "现代专著仍受版权保护；可通过出版社、书店或图书馆获取。", en: "Modern copyrighted monograph; available from the publisher, booksellers, and libraries.", fr: "Monographie moderne protégée ; disponible auprès de l’éditeur, des libraires et des bibliothèques." }, links: [{ label: { zh: "Phaidon出版社页面", en: "Phaidon publisher page", fr: "Page de l’éditeur Phaidon" }, url: "https://www.phaidon.com/en-ca/products/delacroix" }],
+  },
+  "baudelaire-zh": {
+    bibliography: { zh: "《我看德拉克洛瓦》，中文编选本，2005年；以Charles Baudelaire 1863年评论为核心。", en: "Baudelaire and Others on Delacroix, Chinese compilation (2005), centred on Charles Baudelaire’s 1863 essay.", fr: "Baudelaire et d’autres auteurs sur Delacroix, compilation chinoise (2005), centrée sur l’essai de Charles Baudelaire de 1863." },
+    identifiers: [], access: { zh: "用户提供研究本；中文编选与译文仍可能受版权保护，本站不公开全文。", en: "Research copy supplied by the user; the Chinese compilation and translations may remain copyrighted and are not reproduced in full.", fr: "Exemplaire fourni par l’utilisateur ; compilation et traductions chinoises peuvent rester protégées et ne sont pas reproduites intégralement." }, links: [],
+  },
+  "letters-burty": {
+    bibliography: { zh: "Eugène Delacroix，《Lettres d’Eugène Delacroix, 1815 à 1863》，Philippe Burty编，巴黎：A. Quantin，1878年。", en: "Eugène Delacroix, Lettres d’Eugène Delacroix, 1815 à 1863, ed. Philippe Burty (Paris: A. Quantin, 1878).", fr: "Eugène Delacroix, Lettres d’Eugène Delacroix, 1815 à 1863, recueillies et publiées par Philippe Burty (Paris : A. Quantin, 1878)." },
+    identifiers: ["Internet Archive: lettresdeeugnede00dela"], access: { zh: "公版历史书信集，可在Internet Archive阅读全文。", en: "Public-domain historical letter collection, freely readable at Internet Archive.", fr: "Recueil historique du domaine public, librement consultable sur Internet Archive." }, links: [{ label: { zh: "Internet Archive全文", en: "Full text at Internet Archive", fr: "Texte intégral sur Internet Archive" }, url: "https://archive.org/details/lettresdeeugnede00dela" }],
+  },
+  "museum-records": {
+    bibliography: { zh: "卢浮宫、大都会艺术博物馆及相关收藏机构的德拉克洛瓦作品在线对象记录；每件作品在作品页单独列明。", en: "Online object records for Delacroix works from the Louvre, Metropolitan Museum of Art, and other holding institutions; cited individually on each work page.", fr: "Notices d’objets en ligne du Louvre, du Metropolitan Museum of Art et d’autres collections ; citées séparément sur chaque page d’œuvre." },
+    identifiers: ["Object accession numbers on individual work pages"], access: { zh: "机构公开对象页面；开放状态与图像许可按各馆记录。", en: "Public institutional object pages; availability and image licences follow each museum record.", fr: "Notices institutionnelles publiques ; disponibilité et licences d’image selon chaque musée." }, links: [],
+  },
+};
 
 export const evidenceRefs = {
   cambridgeChronology: {
@@ -455,6 +544,50 @@ export const evidenceRefs = {
     sourceId: "journal-pach",
     locator: { zh: "1861年条目，印刷第691—694页", en: "Entries for 1861, printed pp. 691–94", fr: "Entrées de 1861, p. imprimées 691–694" },
     support: { zh: "记录圣叙尔比斯工程结束前后的身体、返工和工作状态。", en: "Records health, revision, and work around the completion of Saint-Sulpice.", fr: "Consigne santé, reprises et travail autour de l’achèvement de Saint-Sulpice." },
+  },
+  journalFrench1822Sep3: {
+    sourceId: "journal-flat-piot", locator: { zh: "1893年法文版，第1卷，第1—4页；1822年9月3日", en: "1893 French ed., vol. 1, pp. 1–4; 3 September 1822", fr: "Éd. française de 1893, t. I, p. 1–4 ; 3 septembre 1822" },
+    support: { zh: "核对开始写日记的日期、原文与自我训练意图。", en: "Verifies the date, French text, and self-training purpose of the journal’s opening.", fr: "Vérifie la date, le texte français et le projet d’exercice de soi à l’ouverture du Journal." },
+  },
+  journalFrench1824May9: {
+    sourceId: "journal-flat-piot", locator: { zh: "1893年法文版，第1卷，第113—114页；1824年5月9日", en: "1893 French ed., vol. 1, pp. 113–14; 9 May 1824", fr: "Éd. française de 1893, t. I, p. 113–114 ; 9 mai 1824" },
+    support: { zh: "核对《希俄斯岛的屠杀》工作状态及原文。", en: "Verifies the state of work on The Massacre at Chios and the French wording.", fr: "Vérifie l’état du travail des Massacres de Scio et la formulation française." },
+  },
+  journalFrench1832Feb21: {
+    sourceId: "journal-flat-piot", locator: { zh: "1893年法文版，第1卷，第154—157页；1832年2月21日", en: "1893 French ed., vol. 1, pp. 154–57; 21 February 1832", fr: "Éd. française de 1893, t. I, p. 154–157 ; 21 février 1832" },
+    support: { zh: "核对丹吉尔犹太婚礼、乐师和人物记录的确切日期。", en: "Verifies the exact date of the Tangier Jewish wedding and its notes on musicians and figures.", fr: "Vérifie la date exacte de la noce juive à Tanger et les notes sur musiciens et figures." },
+  },
+  journalFrench1832Mar15: {
+    sourceId: "journal-flat-piot", locator: { zh: "1893年法文版，第1卷，第168—170页；1832年3月15日", en: "1893 French ed., vol. 1, pp. 168–70; 15 March 1832", fr: "Éd. française de 1893, t. I, p. 168–170 ; 15 mars 1832" },
+    support: { zh: "核对前往梅克内斯途中关于服装、明暗与队列的视觉笔记。", en: "Verifies the visual note on dress, value, and procession on the route to Meknes.", fr: "Vérifie la note visuelle sur vêtements, valeurs et cortège en route vers Meknès." },
+  },
+  journalFrench1847Jan19: {
+    sourceId: "journal-flat-piot", locator: { zh: "1893年法文版，第1卷，第235—239页；1847年1月19日", en: "1893 French ed., vol. 1, pp. 235–39; 19 January 1847", fr: "Éd. française de 1893, t. I, p. 235–239 ; 19 janvier 1847" },
+    support: { zh: "核对日记中断后二十三年的重新开始及其明确表述。", en: "Verifies the journal’s explicit resumption after a twenty-three-year interruption.", fr: "Vérifie la reprise explicite du Journal après vingt-trois ans d’interruption." },
+  },
+  journalFrench1851Jan2: {
+    sourceId: "journal-flat-piot", locator: { zh: "1895年法文版，第2卷，第46页；1851年1月2日", en: "1895 French ed., vol. 2, p. 46; 2 January 1851", fr: "Éd. française de 1895, t. II, p. 46 ; 2 janvier 1851" },
+    support: { zh: "核对圣叙尔比斯天顶椭圆的实际测量数据。", en: "Verifies the recorded measurements of the Saint-Sulpice ceiling oval.", fr: "Vérifie les mesures consignées de l’ovale du plafond de Saint-Sulpice." },
+  },
+  journalFrench1855May25: {
+    sourceId: "journal-flat-piot", locator: { zh: "1895年法文版，第3卷，第24—25页；1855年5月25日", en: "1895 French ed., vol. 3, pp. 24–25; 25 May 1855", fr: "Éd. française de 1895, t. III, p. 24–25 ; 25 mai 1855" },
+    support: { zh: "核对世界博览会期间同僚反馈与沙龙声望。", en: "Verifies colleagues’ responses and Salon reputation during the Exposition Universelle.", fr: "Vérifie les réactions des collègues et la réputation au Salon pendant l’Exposition universelle." },
+  },
+  journalFrench1855Aug11: {
+    sourceId: "journal-flat-piot", locator: { zh: "1895年法文版，第3卷，第65—66页；1855年8月11日", en: "1895 French ed., vol. 3, pp. 65–66; 11 August 1855", fr: "Éd. française de 1895, t. III, p. 65–66 ; 11 août 1855" },
+    support: { zh: "核对公开声望之下的日程压力与身体疲劳。", en: "Verifies scheduling pressure and physical fatigue beneath public prestige.", fr: "Vérifie la pression du calendrier et la fatigue physique sous le prestige public." },
+  },
+  journalFrench1857Jan13: {
+    sourceId: "journal-flat-piot", locator: { zh: "1895年法文版，第3卷，第203—225页；1857年1月13日", en: "1895 French ed., vol. 3, pp. 203–25; 13 January 1857", fr: "Éd. française de 1895, t. III, p. 203–225 ; 13 janvier 1857" },
+    support: { zh: "核对艺术词典中关于达盖尔银版、摄影与错视画的条目规划。", en: "Verifies planned dictionary entries on daguerreotype, photography, illusion, and trompe-l’œil.", fr: "Vérifie les entrées projetées du dictionnaire sur daguerréotype, photographie, illusion et trompe-l’œil." },
+  },
+  journalFrench1860Apr7: {
+    sourceId: "journal-flat-piot", locator: { zh: "1895年法文版，第3卷，第394—395页；1860年4月7日", en: "1895 French ed., vol. 3, pp. 394–95; 7 April 1860", fr: "Éd. française de 1895, t. III, p. 394–395 ; 7 avril 1860" },
+    support: { zh: "核对圣叙尔比斯工程中助手缺席与进度责任的具体冲突。", en: "Verifies a concrete conflict over an assistant’s absence and responsibility for delays at Saint-Sulpice.", fr: "Vérifie un conflit précis sur l’absence d’un assistant et la responsabilité des retards à Saint-Sulpice." },
+  },
+  journalFrench1860Dec31: {
+    sourceId: "journal-flat-piot", locator: { zh: "1895年法文版，第3卷，第423—424页；1860年12月31日", en: "1895 French ed., vol. 3, pp. 423–24; 31 December 1860", fr: "Éd. française de 1895, t. III, p. 423–424 ; 31 décembre 1860" },
+    support: { zh: "核对他对素描课程、自然研究、动物和文学插图的分类计划。", en: "Verifies his classification plan for drawing lessons, studies from nature, animals, and literary illustration.", fr: "Vérifie son projet de classement des cours de dessin, études d’après nature, animaux et illustrations littéraires." },
   },
   planetProjects: {
     sourceId: "planet-memoir",
@@ -589,49 +722,49 @@ export const timelineEventDetails = [
 
 export const journalReadings = [
   {
-    id: "1822", date: "1822—1824", refs: ["journal1822", "journalLi"],
+    id: "1822", date: "1822—1824", refs: ["journalFrench1822Sep3", "journalFrench1824May9", "journalLi"],
     title: { zh: "把日记当作自我训练", en: "Using the journal as self-training", fr: "Faire du Journal un exercice de soi" },
     intro: { zh: "二十四岁的德拉克洛瓦刚凭《但丁之舟》进入沙龙。日记同时记录绘画、阅读、社交、欲望、懒散和重新振作，不是一份只列成功的履历。", en: "At twenty-four Delacroix had just entered the Salon with The Barque of Dante. The journal records painting, reading, sociability, desire, idleness, and renewed effort—not a résumé of successes.", fr: "À vingt-quatre ans, Delacroix vient d’entrer au Salon avec La Barque de Dante. Le Journal consigne peinture, lecture, sociabilité, désir, paresse et reprise—non un curriculum de réussites." },
     entries: [
-      { date: "1822年9月", heading: { zh: "为什么开始写", en: "Why begin writing", fr: "Pourquoi commencer à écrire" }, reading: { zh: "他把日记当成稳定注意力和检查自己的工具：记下工作是否推进、时间怎样浪费、情绪如何干扰行动。", en: "He treats the journal as a way to steady attention and inspect himself: whether work advances, how time is wasted, and how feeling interferes with action.", fr: "Il traite le Journal comme un moyen de fixer l’attention et de s’examiner : avance du travail, temps perdu, émotions qui gênent l’action." }, meaning: { zh: "这不是透明的“真实内心”，而是一种主动塑造自己的写作。", en: "This is not a transparent ‘true self’ but writing used to shape the self.", fr: "Ce n’est pas un « moi vrai » transparent, mais une écriture qui façonne le sujet." }, locator: "journal1822" },
-      { date: "1824年", heading: { zh: "作品与生活混在同一天", en: "Work and life in the same day", fr: "Œuvre et vie dans une même journée" }, reading: { zh: "条目把《希俄斯岛的屠杀》的工作、朋友来访、音乐和身体状态放在一起。职业史中的“名作完成”在日记里表现为被打断的连续劳动。", en: "Entries place work on The Massacre at Chios beside visitors, music, and bodily condition. The career milestone ‘masterpiece completed’ appears as interrupted daily labour.", fr: "Les entrées placent le travail des Massacres de Scio à côté des visites, de la musique et de l’état du corps. Le « chef-d’œuvre achevé » de la carrière apparaît comme un travail quotidien interrompu." }, meaning: { zh: "日志让作品从结果重新变成过程。", en: "The journal turns the finished result back into a process.", fr: "Le Journal retransforme le résultat achevé en processus." }, locator: "journal1822" },
+      { date: "1822年9月3日", heading: { zh: "为什么开始写", en: "Why begin writing", fr: "Pourquoi commencer à écrire" }, sourceExcerpt: "Je mets à exécution le projet formé tant de fois d’écrire un journal.", translation: { zh: "我终于把多次想过的写日记计划付诸实行。", en: "I am at last carrying out the plan, so often formed, of keeping a journal.", fr: "Je réalise enfin le projet, souvent formé, de tenir un journal." }, reading: { zh: "二十四岁的画家没有用宣言开篇，而是把一项反复拖延的计划变成当天的行动。随后条目把工作、阅读、社交与自我批评放在同一记录系统里。", en: "The twenty-four-year-old painter does not open with a manifesto. He turns a repeatedly postponed plan into an action dated that day, then places work, reading, sociability, and self-criticism in one record.", fr: "Le peintre de vingt-quatre ans n’ouvre pas par un manifeste : il transforme un projet souvent différé en action datée, puis réunit travail, lecture, sociabilité et examen de soi." }, meaning: { zh: "日记不是透明的“真实内心”，而是他主动训练注意力和行动的一种工具。", en: "The journal is not a transparent ‘true self’ but a tool for actively training attention and action.", fr: "Le Journal n’est pas un « moi vrai » transparent, mais un outil pour exercer activement attention et action." }, locator: "journalFrench1822Sep3" },
+      { date: "1824年5月9日", heading: { zh: "名作仍是不断改向的工作", en: "A masterpiece was still work changing direction", fr: "Le chef-d’œuvre reste un travail qui change de direction" }, sourceExcerpt: "Mon tableau prend une tournure différente. Le sombre remplace le décousu qui y régnait.", translation: { zh: "我的画开始转向另一种面貌；阴暗取代了先前支离破碎的状态。", en: "My painting is taking a different turn; darkness is replacing the disjointed quality that prevailed.", fr: "Mon tableau change d’orientation : le sombre remplace l’aspect décousu qui dominait." }, reading: { zh: "这里的“我的画”指向正在推进的《希俄斯岛的屠杀》。他记录的不是完成日期，而是画面整体气氛如何在修改中发生变化。", en: "‘My painting’ points to The Massacre at Chios in progress. He records not a completion date but a change in the picture’s overall atmosphere through revision.", fr: "« Mon tableau » renvoie aux Massacres de Scio en cours. Il ne note pas une date d’achèvement, mais la transformation de l’atmosphère générale par les reprises." }, meaning: { zh: "日志把后来稳定的馆藏名作重新变成仍可失败、改向和变暗的过程。", en: "The journal turns a later museum masterpiece back into a process that could fail, change course, and darken.", fr: "Le Journal rend au futur chef-d’œuvre de musée son état de processus susceptible d’échouer, de bifurquer et de s’assombrir." }, locator: "journalFrench1824May9" },
     ],
   },
   {
-    id: "1832", date: "1832", refs: ["journal1832", "cambridgeColonial"],
+    id: "1832", date: "1832", refs: ["journalFrench1832Feb21", "journalFrench1832Mar15", "cambridgeColonial"],
     title: { zh: "旅行中的快速观看", en: "Rapid looking while travelling", fr: "Le regard rapide du voyage" },
     intro: { zh: "摩洛哥记录不是后来作品的说明书，而是现场速记：人名、颜色、服装、马匹、音乐、路线和判断混在一起。它保存观察，也暴露观察受到什么限制。", en: "The Morocco entries are not instructions for later paintings but field notes mixing names, colours, dress, horses, music, routes, and judgements. They preserve observation and expose its limits.", fr: "Les notes marocaines ne sont pas le mode d’emploi des tableaux futurs, mais des notations mêlant noms, couleurs, vêtements, chevaux, musique, itinéraires et jugements. Elles conservent le regard et ses limites." },
     entries: [
-      { date: "1832年2月，丹吉尔", heading: { zh: "婚礼不是匿名风俗", en: "A wedding is not anonymous custom", fr: "Une noce n’est pas une coutume anonyme" }, reading: { zh: "他通过本希莫尔家族参加一场犹太婚礼，记下空间、服装、乐师和人群。后来画作来自这些记录，却经过多年重组。", en: "Through the Benchimol family he attends a Jewish wedding and notes space, dress, musicians, and crowd. The later painting draws on these records after years of reorganisation.", fr: "Grâce à la famille Benchimol, il assiste à une noce juive et note espace, vêtements, musiciens et foule. Le tableau ultérieur reprend ces éléments après des années de réorganisation." }, meaning: { zh: "恢复中介者和家庭名字，可以避免把真实社交网络抹成“东方场景”。", en: "Restoring intermediaries and family names prevents a real social network from dissolving into an ‘Oriental scene.’", fr: "Rétablir intermédiaires et noms de famille empêche un réseau social réel de se dissoudre en « scène orientale »." }, locator: "journal1832" },
-      { date: "1832年3月，梅克内斯", heading: { zh: "外交仪式怎样变成绘画记忆", en: "How diplomacy became pictorial memory", fr: "Comment la diplomatie devient mémoire picturale" }, reading: { zh: "觐见苏丹时，他必须快速观察队列、马匹、服装和建筑；现场并不允许从容完成一幅画。", en: "At the audience with the sultan he had to observe procession, horses, dress, and architecture quickly; the occasion did not permit a finished picture on site.", fr: "Lors de l’audience du sultan, il doit saisir rapidement cortège, chevaux, vêtements et architecture ; la situation ne permet pas de tableau achevé sur place." }, meaning: { zh: "十三年后的大画是记录、想象和外交视角的综合，不是现场照片。", en: "The large painting thirteen years later is a synthesis of notes, imagination, and diplomatic viewpoint—not an on-site photograph.", fr: "Le grand tableau, treize ans plus tard, synthétise notes, imagination et point de vue diplomatique ; ce n’est pas une photographie sur place." }, locator: "journal1832" },
+      { date: "1832年2月21日，丹吉尔", heading: { zh: "婚礼先以人、入口和乐师出现", en: "The wedding first appears as people, entrance, and musicians", fr: "La noce apparaît d’abord par les personnes, l’entrée et les musiciens" }, sourceExcerpt: "La noce juive. Les Maures et les Juifs à l’entrée. Les deux musiciens.", translation: { zh: "犹太婚礼。入口处的摩尔人与犹太人。两位乐师。", en: "The Jewish wedding. Moors and Jews at the entrance. The two musicians.", fr: "La noce juive : Maures et Juifs à l’entrée, puis les deux musiciens." }, reading: { zh: "这是一串现场提示词，不是后来画作的完整构图。通过本希莫尔家族获得的进入机会，让具体人群和乐师进入笔记。", en: "This is a sequence of field prompts, not the later painting’s complete composition. Access through the Benchimol family brought specific groups and musicians into the note.", fr: "C’est une suite d’indices de terrain, non la composition complète du futur tableau. L’accès obtenu par la famille Benchimol fait entrer groupes précis et musiciens dans la note." }, meaning: { zh: "恢复日期、中介者和人物关系，可以避免把真实社交网络抹成匿名“东方风俗”。", en: "Restoring date, intermediaries, and relationships prevents a real social network from dissolving into anonymous ‘Oriental custom.’", fr: "Rétablir date, intermédiaires et relations empêche un réseau social réel de se dissoudre en coutume « orientale » anonyme." }, locator: "journalFrench1832Feb21" },
+      { date: "1832年3月15日，前往梅克内斯途中", heading: { zh: "他把远处队列拆成明暗关系", en: "He breaks a distant procession into value relations", fr: "Il décompose le cortège lointain en rapports de valeurs" }, sourceExcerpt: "Très beau coup d’œil en regardant derrière nous cette quantité de figures bigarrées ou noires ; le blanc des vêtements terne sur le fond.", translation: { zh: "回头望去，许多斑斓或黑色的人影形成极美的景象；衣服的白色在背景上显得灰暗。", en: "Looking back, the many variegated or black figures made a beautiful sight; the white clothing appeared subdued against the ground.", fr: "En se retournant, les figures bigarrées ou noires forment une très belle vue ; le blanc des vêtements paraît assourdi sur le fond." }, reading: { zh: "外交使团在路上移动时，他只能快速记录队列的颜色和明暗。笔记保留的不是每个人的身份，而是远观时仍有效的视觉组织。", en: "As the diplomatic mission moved, he could only record the procession’s colours and values rapidly. The note preserves not each identity but the visual organisation that survives at a distance.", fr: "Pendant le déplacement de la mission, il ne peut noter que rapidement couleurs et valeurs du cortège. La note conserve moins chaque identité que l’organisation visuelle encore lisible de loin." }, meaning: { zh: "多年后的摩洛哥画面综合了这种速记、记忆和外交位置，不是现场照片。", en: "The later Moroccan paintings synthesize such shorthand, memory, and diplomatic position; they are not on-site photographs.", fr: "Les futurs tableaux marocains synthétisent notation rapide, mémoire et position diplomatique ; ce ne sont pas des photographies sur place." }, locator: "journalFrench1832Mar15" },
     ],
   },
   {
-    id: "1847", date: "1847—1851", refs: ["journal1847", "planetProjects"],
+    id: "1847", date: "1847—1851", refs: ["journalFrench1847Jan19", "journalFrench1851Jan2", "planetProjects"],
     title: { zh: "二十三年后重新开始", en: "Beginning again after twenty-three years", fr: "Recommencer après vingt-trois ans" },
     intro: { zh: "日记从1824年中断到1847年。恢复写作时，他已经不是初出茅庐的沙龙画家，而是同时管理议会、卢浮宫和教堂工程的公共艺术家。", en: "The journal breaks off in 1824 and resumes in 1847. By then he is no longer a young Salon painter but a public artist managing parliamentary, Louvre, and church projects.", fr: "Le Journal s’interrompt en 1824 et reprend en 1847. Delacroix n’est plus un jeune peintre de Salon, mais un artiste public gérant chantiers parlementaires, Louvre et église." },
     entries: [
-      { date: "1847年4月", heading: { zh: "重新记录不是重新生活", en: "Writing resumes, not life itself", fr: "L’écriture reprend, non la vie elle-même" }, reading: { zh: "他明确意识到长时间停写，并重新用日期记录工作、阅读、拜访和身体。空白只说明日记缺失，不说明这二十三年没有材料。", en: "He recognises the long interruption and again dates work, reading, visits, and health. The blank marks missing journal, not an empty twenty-three years.", fr: "Il reconnaît la longue interruption et date de nouveau travail, lectures, visites et santé. Le blanc signale l’absence de Journal, non vingt-trois années vides." }, meaning: { zh: "生平必须用书信、作品和助手回忆补足日记空白。", en: "Letters, works, and assistants’ memoirs must fill the journal gap in a biography.", fr: "Lettres, œuvres et souvenirs d’assistants doivent compléter le vide du Journal dans la biographie." }, locator: "journal1847" },
-      { date: "1849—1851", heading: { zh: "同时推进多处公共工程", en: "Several public projects at once", fr: "Plusieurs chantiers publics simultanés" }, reading: { zh: "条目反复在阿波罗长廊、圣叙尔比斯、助手、会议、天气和疾病之间切换。宏大工程在日常里表现为协调和返工。", en: "Entries move repeatedly among the Galerie d’Apollon, Saint-Sulpice, assistants, meetings, weather, and illness. Monumental work appears day to day as coordination and revision.", fr: "Les entrées passent sans cesse de la galerie d’Apollon à Saint-Sulpice, aux assistants, réunions, au temps et à la maladie. Le monumental apparaît au quotidien comme coordination et reprise." }, meaning: { zh: "这补充了普拉内对实际施工流程的回忆。", en: "This complements Planet’s recollection of the actual production process.", fr: "Cela complète le souvenir de Planet sur le processus matériel de réalisation." }, locator: "journal1847" },
+      { date: "1847年1月19日", heading: { zh: "二十三年后，他买下一本新日程册", en: "After twenty-three years, he buys a new diary", fr: "Après vingt-trois ans, il achète un nouvel agenda" }, sourceExcerpt: "J’écris ceci au coin de mon feu, enchanté d’avoir été, avant de rentrer, acheter cet agenda, que je commence un jour heureux.", translation: { zh: "我在炉火旁写下这些；回家前买到这本日程册令我高兴，我在一个快乐的日子开始写它。", en: "I write this by my fire, delighted that before coming home I bought this diary, which I begin on a happy day.", fr: "J’écris près du feu, heureux d’avoir acheté avant de rentrer cet agenda que je commence en un jour heureux." }, reading: { zh: "日记从1824年中断到这一天。重新开始被写成一次具体购买和一个具体夜晚，而不是抽象的“晚年反思”。", en: "The journal had stopped in 1824. Its return appears as a specific purchase and evening, not an abstract phase of ‘late reflection.’", fr: "Interrompu depuis 1824, le Journal reprend par un achat et une soirée précis, non par une abstraite « réflexion tardive »." }, meaning: { zh: "空白只说明日志缺失；这二十三年的生平仍必须由书信、作品、展览和助手回忆重建。", en: "The blank means the journal is missing; those twenty-three years still have to be reconstructed from letters, works, exhibitions, and assistants’ memoirs.", fr: "Le blanc signale l’absence du Journal ; les vingt-trois années doivent être reconstruites par lettres, œuvres, expositions et souvenirs d’assistants." }, locator: "journalFrench1847Jan19" },
+      { date: "1851年1月2日", heading: { zh: "所谓“大墙”先是一组尺寸", en: "The ‘great wall’ begins as measurements", fr: "Le « grand mur » commence par des mesures" }, sourceExcerpt: "Ovale du plafond de Saint-Sulpice : 5 mètres = 15 pieds 4 pouces ; 3 mètres 84 cent. = 12 pieds.", translation: { zh: "圣叙尔比斯天顶椭圆：5米，即15英尺4英寸；3米84厘米，即12英尺。", en: "Oval of the Saint-Sulpice ceiling: 5 metres, or 15 feet 4 inches; 3 metres 84 centimetres, or 12 feet.", fr: "Ovale du plafond de Saint-Sulpice : cinq mètres, soit quinze pieds quatre pouces ; trois mètres quatre-vingt-quatre, soit douze pieds." }, reading: { zh: "这不是一面含糊的巨墙，而是圣天使礼拜堂天顶的椭圆表面。它与两幅侧墙画共同组成建筑中的三画面系统。", en: "This is not a vague gigantic wall but the oval ceiling surface in the Chapel of the Holy Angels, part of a three-image architectural ensemble with two wall paintings.", fr: "Il ne s’agit pas d’un mur gigantesque et vague, mais de l’ovale du plafond de la chapelle des Saints-Anges, associé à deux peintures murales." }, meaning: { zh: "尺寸把公共装饰从“大师神话”拉回测量、脚手架、助手和建筑协调。", en: "Measurements return public decoration from a master myth to scaffolding, assistants, and architectural coordination.", fr: "Les mesures ramènent le décor public du mythe du maître vers échafaudages, assistants et coordination architecturale." }, locator: "journalFrench1851Jan2" },
     ],
   },
   {
-    id: "1855", date: "1855", refs: ["journal1855", "cambridgeChronology"],
+    id: "1855", date: "1855", refs: ["journalFrench1855May25", "journalFrench1855Aug11", "cambridgeChronology"],
     title: { zh: "回顾展并没有暂停日常生活", en: "A retrospective did not suspend daily life", fr: "La rétrospective ne suspend pas la vie quotidienne" },
     intro: { zh: "世界博览会把三十多件作品汇成职业回顾，但日记没有把这一年写成持续庆典。展览、评判、公共工程、社交、音乐和身体疲劳仍然交错。", en: "The Exposition Universelle gathered more than thirty works into a career survey, but the journal does not turn the year into a continuous celebration. Display, judgement, public work, sociability, music, and fatigue remain interwoven.", fr: "L’Exposition universelle réunit plus de trente œuvres en bilan de carrière, mais le Journal ne transforme pas l’année en fête continue. Exposition, jugement, travaux publics, sociabilité, musique et fatigue restent mêlés." },
     entries: [
-      { date: "1855年春夏", heading: { zh: "自己的过去被同时陈列", en: "Seeing one’s past displayed at once", fr: "Voir son propre passé exposé d’un coup" }, reading: { zh: "早期沙龙画、北非题材和较新的作品在同一展览中相遇。对艺术家而言，这既是声望确认，也是被公众和评审重新排序。", en: "Early Salon pictures, North African subjects, and recent works meet in one exhibition. For the artist this is both recognition and a new ordering of his career by public and jury.", fr: "Premiers tableaux du Salon, sujets nord-africains et œuvres récentes se rencontrent dans une exposition. Pour l’artiste, c’est à la fois reconnaissance et nouveau classement par public et jury." }, meaning: { zh: "“回顾展”不是中立总览，它会选择哪些阶段代表一个人。", en: "A retrospective is not a neutral overview; it chooses which periods stand for a person.", fr: "Une rétrospective n’est pas un bilan neutre : elle choisit les périodes qui représenteront une personne." }, locator: "journal1855" },
-      { date: "1855年", heading: { zh: "声望与疲劳同时出现", en: "Prestige and fatigue together", fr: "Prestige et fatigue ensemble" }, reading: { zh: "公共承认没有消除健康、工期和社交负担。日记把官方成功拉回到一个仍要计算体力和时间的人。", en: "Public recognition does not remove health problems, schedules, or social obligations. The journal returns official success to a person still calculating strength and time.", fr: "La reconnaissance publique n’efface ni santé, ni calendrier, ni obligations sociales. Le Journal ramène le succès officiel à un homme qui calcule encore ses forces et son temps." }, meaning: { zh: "这能避免把1855年只写成奖章和数字。", en: "This prevents 1855 from becoming only medals and numbers.", fr: "Cela empêche de réduire 1855 aux médailles et aux chiffres." }, locator: "journal1855" },
+      { date: "1855年5月25日", heading: { zh: "成功首先以别人的转述抵达", en: "Success first arrives through other people’s reports", fr: "Le succès arrive d’abord par les propos rapportés" }, sourceExcerpt: "Les collègues, comme les autres, remarquent mon Salon, et me parlent des compliments qu’ils en entendent faire.", translation: { zh: "同僚和其他人一样注意到了我的沙龙展出，并告诉我他们听到的赞美。", en: "My colleagues, like everyone else, notice my Salon display and tell me of the compliments they hear about it.", fr: "Les collègues remarquent mon Salon et me rapportent les compliments qu’ils entendent à son sujet." }, reading: { zh: "世界博览会把三十多件作品集中展出；日记记录的却不是宏大的奖章叙事，而是同僚怎样把公众反应转述给他。", en: "The Exposition Universelle gathered more than thirty works, yet the diary records not a grand medal narrative but colleagues relaying public response.", fr: "L’Exposition universelle réunit plus de trente œuvres ; le Journal note moins le grand récit des médailles que les réactions du public rapportées par les collègues." }, meaning: { zh: "回顾展既确认声望，也通过选择和评论重新排列一个人的职业历史。", en: "A retrospective confirms reputation while reordering a career through selection and commentary.", fr: "Une rétrospective confirme une réputation tout en réordonnant une carrière par sélection et commentaire." }, locator: "journalFrench1855May25" },
+      { date: "1855年8月11日", heading: { zh: "声望没有取消体力账本", en: "Prestige does not cancel the body’s ledger", fr: "Le prestige n’abolit pas le compte des forces" }, sourceExcerpt: "J’étais fatigué de ma journée : ce sont trop d’allées et venues pour une petite constitution.", translation: { zh: "这一天使我疲惫；对我这样弱小的体质而言，来回奔波太多了。", en: "I was tired from my day; there was too much coming and going for a slight constitution.", fr: "J’étais fatigué par cette journée : trop d’allées et venues pour une constitution fragile." }, reading: { zh: "展览、社交和公共工程继续交错。官方承认没有消除移动、会面、工期和疾病，只让它们发生在更高的公共可见度中。", en: "Exhibition, sociability, and public work remain interwoven. Official recognition does not remove travel, meetings, schedules, or illness; it makes them occur under greater visibility.", fr: "Exposition, sociabilité et travaux publics restent mêlés. La reconnaissance officielle n’efface ni déplacements, ni rencontres, ni calendriers, ni maladie ; elle les rend plus visibles." }, meaning: { zh: "1855年不能只写成展出数量和奖章，还必须看见维持成功所耗费的身体。", en: "The year 1855 cannot be reduced to numbers and medals; it must include the body spent sustaining success.", fr: "1855 ne se réduit ni aux chiffres ni aux médailles : il faut voir le corps dépensé pour soutenir le succès." }, locator: "journalFrench1855Aug11" },
     ],
   },
   {
-    id: "1863", date: "1856—1863", refs: ["journal1859", "journal1860", "journal1861", "lettersLate"],
+    id: "1863", date: "1856—1863", refs: ["journalFrench1857Jan13", "journalFrench1860Apr7", "journalFrench1860Dec31", "lettersLate"],
     title: { zh: "身体、分类和最后的壁画组", en: "Body, classification, and the final mural cycle", fr: "Corps, classement et dernier cycle mural" },
     intro: { zh: "晚期日记不是等待死亡的单线记录。它在疾病、圣叙尔比斯、沙龙批评、奥维德、艺术词典、素描分类、阅读和朋友之间来回移动。", en: "The late journal is not a single line toward death. It moves among illness, Saint-Sulpice, Salon criticism, Ovid, the art dictionary, classification of drawings, reading, and friends.", fr: "Le Journal tardif n’est pas une ligne unique vers la mort. Il circule entre maladie, Saint-Sulpice, critique du Salon, Ovide, dictionnaire des arts, classement des dessins, lectures et amis." },
     entries: [
-      { date: "1859年9月1日", heading: { zh: "记忆怎样帮助绘画选择", en: "How memory helps painting select", fr: "Comment la mémoire aide la peinture à choisir" }, reading: { zh: "他比较绘画与摄影，认为眼睛和记忆会主动选择、连接并删去细节；画面不是把可见世界逐项抄完。", en: "Comparing painting and photography, he argues that eye and memory select, connect, and omit detail rather than copy the visible world item by item.", fr: "Comparant peinture et photographie, il affirme que l’œil et la mémoire choisissent, relient et omettent les détails au lieu de copier le visible élément par élément." }, quote: { zh: "“绘画只需一瞥便能吸引并固定目光。”", en: "“Painting is fortunate in demanding no more than a glance.”", fr: "« La peinture a l’avantage de ne demander qu’un regard. »" }, meaning: { zh: "这段话直接解释他为何把现场记录重组成色彩和动作，而不是追求照片式完整。", en: "This directly explains why he reorganised field notes into colour and movement rather than photographic completeness.", fr: "Cela explique directement pourquoi il réorganise les notes de terrain en couleur et mouvement plutôt qu’en totalité photographique." }, locator: "journal1859" },
-      { date: "1860年1月7日", heading: { zh: "给一生的图像分类", en: "Classifying a lifetime of images", fr: "Classer les images d’une vie" }, reading: { zh: "他列出素描分类：动物、风景、议会、卢浮宫天顶、圣叙尔比斯、摩洛哥、古代、版画等。整理不是退休后的附属工作，而是重新理解自己的创作。", en: "He lists categories for drawings: animals, landscapes, parliament, Louvre ceiling, Saint-Sulpice, Morocco, antiquity, prints, and more. Classification is not retirement housekeeping but a new reading of his work.", fr: "Il classe ses dessins : animaux, paysages, Chambre, plafond du Louvre, Saint-Sulpice, Maroc, antique, estampes, etc. Le classement n’est pas un rangement de retraite, mais une relecture de l’œuvre." }, meaning: { zh: "资料库可以沿用他的分类意识，但必须同时保留现代检索关系。", en: "An archive can learn from his categories while also preserving modern searchable relationships.", fr: "Une archive peut apprendre de ses catégories tout en conservant des relations de recherche modernes." }, locator: "journal1860" },
-      { date: "1861年", heading: { zh: "圣叙尔比斯完成前后", en: "Around the completion of Saint-Sulpice", fr: "Autour de l’achèvement de Saint-Sulpice" }, reading: { zh: "工程开放并不意味着轻松收尾。条目仍涉及返工、身体不适、画面判断和下一项工作。", en: "Public opening does not mean an effortless finish. Entries continue to register revision, illness, pictorial judgement, and the next task.", fr: "L’ouverture au public ne signifie pas une fin sans effort. Les entrées notent encore reprises, maladie, jugement pictural et tâche suivante." }, meaning: { zh: "“晚年大师”应被还原为在具体墙面、时间和体力限制中工作的画家。", en: "The ‘late master’ should be returned to a painter working within specific walls, time, and bodily limits.", fr: "Le « vieux maître » doit redevenir un peintre travaillant avec des murs, un temps et des limites corporelles précis." }, locator: "journal1861" },
+      { date: "1857年1月13日", heading: { zh: "学院席位之外，他还在计划一部词典", en: "Beyond the Academy seat, he was planning a dictionary", fr: "Au-delà du fauteuil à l’Académie, il projette un dictionnaire" }, sourceExcerpt: "Essai du Dictionnaire des Beaux-Arts : Daguerréotype. Photographie. Illusion, trompe-l’œil.", translation: { zh: "《美术词典》试稿：达盖尔银版。摄影。幻觉，错视画。", en: "Draft Dictionary of Fine Arts: Daguerreotype. Photography. Illusion, trompe-l’œil.", fr: "Projet du Dictionnaire des beaux-arts : daguerréotype, photographie, illusion, trompe-l’œil." }, reading: { zh: "同一条长记录还涉及学院选举与艺术概念清单。制度承认没有让他停止提问；他试图把画家的经验整理成可传授的词条。", en: "The same long entry also concerns the Academy election and a list of art concepts. Institutional recognition did not end inquiry; he tried to organise a painter’s experience into teachable entries.", fr: "La même longue entrée touche à l’élection académique et à une liste de notions. La reconnaissance institutionnelle n’arrête pas l’enquête : il veut organiser l’expérience du peintre en articles transmissibles." }, meaning: { zh: "1857年不只是“终于当选”；它也是把实践转化为写作和知识分类的一年。", en: "1857 is not only ‘finally elected’; it is also a year of turning practice into writing and classification.", fr: "1857 n’est pas seulement l’année de l’élection : c’est aussi celle où la pratique devient écriture et classement du savoir." }, locator: "journalFrench1857Jan13" },
+      { date: "1860年4月7日", heading: { zh: "宏大壁画也会卡在一个助手没有到场", en: "A monumental mural can stall because one assistant does not arrive", fr: "Un décor monumental peut s’arrêter parce qu’un assistant n’arrive pas" }, sourceExcerpt: "À Saint-Sulpice, où Boulangé ne m’attendait pas. […] il ne vient pas, ne travaille pas et m’attribue ces retards.", translation: { zh: "到圣叙尔比斯，布朗热并没有等我……他不来、不工作，却把延误归到我身上。", en: "At Saint-Sulpice, where Boulangé was not waiting for me … he does not come, does not work, and attributes these delays to me.", fr: "À Saint-Sulpice, Boulangé ne m’attend pas ; il ne vient pas, ne travaille pas et m’attribue les retards." }, reading: { zh: "圣天使礼拜堂的三幅画已经持续十一年。这里出现的不是孤独大师，而是具体助手、约定时间和责任争执。", en: "The three paintings in the Chapel of the Holy Angels had been under way for eleven years. What appears here is not a solitary master but a named assistant, an appointment, and disputed responsibility.", fr: "Les trois peintures de la chapelle des Saints-Anges durent depuis onze ans. On voit non un maître solitaire, mais un assistant nommé, un rendez-vous et une responsabilité contestée." }, meaning: { zh: "大型公共装饰是协作工程；艺术家的署名并不会抹去施工组织、返工和冲突。", en: "Large public decoration is collaborative work; the artist’s signature does not erase organisation, revision, and conflict.", fr: "Le grand décor public est collectif ; la signature de l’artiste n’efface ni organisation, ni reprises, ni conflits." }, locator: "journalFrench1860Apr7" },
+      { date: "1860年12月31日", heading: { zh: "年末不是总结名作，而是继续分类练习", en: "Year’s end classifies exercises rather than masterpieces", fr: "La fin d’année classe les exercices plutôt que les chefs-d’œuvre" }, sourceExcerpt: "Sous ce titre : Cours de dessin, mettre les Études d’après nature, d’après les maîtres. Études d’animaux de toutes sortes.", translation: { zh: "在“素描课程”这一标题下，列入写生、临摹大师，以及各种动物研究。", en: "Under the heading ‘Drawing course,’ place studies from nature, after the masters, and studies of animals of every kind.", fr: "Sous « Cours de dessin », placer les études d’après nature, d’après les maîtres et les études d’animaux de toutes sortes." }, reading: { zh: "他继续为素描、动物、文学插图和教学材料安排类别。整理并非退休后的清点，而是在重组一生的视觉知识。", en: "He continues arranging categories for drawing, animals, literary illustration, and teaching material. This is not retirement inventory but a reorganisation of a lifetime’s visual knowledge.", fr: "Il poursuit le classement du dessin, des animaux, de l’illustration littéraire et du matériel pédagogique. Ce n’est pas un inventaire de retraite, mais une réorganisation du savoir visuel d’une vie." }, meaning: { zh: "资料库可以借鉴他的分类冲动，但还要把日期、作品、人物和来源交叉连接起来。", en: "An archive can learn from his drive to classify while cross-linking dates, works, people, and sources.", fr: "Une archive peut apprendre de son désir de classement tout en croisant dates, œuvres, personnes et sources." }, locator: "journalFrench1860Dec31" },
     ],
   },
 ];

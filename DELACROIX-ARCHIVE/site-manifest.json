@@ -18,7 +18,9 @@
     "hashRoutes": true,
     "workFilters": true,
     "timelineDossiers": true,
+    "datedJournalEvidence": true,
     "sourceReverseMapping": true,
+    "guidedViewingExperiment": true,
     "localFavorites": true,
     "localResearchNotes": true
   },
@@ -28,6 +30,7 @@
     "cookies": false,
     "identity": false,
     "localStorage": true,
-    "localOnlyFields": ["language", "reading period", "saved works", "work notes"]
+    "localOnlyFields": ["language", "reading period", "saved works", "work notes"],
+    "providerNeutralEvents": ["archive_route_opened", "timeline_event_toggled", "viewing_task_completed"]
   }
 }
