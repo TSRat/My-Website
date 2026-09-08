@@ -68,3 +68,51 @@ test("Delacroix source assets and generated Pages mirror are complete", async ()
     await access(repoFile(path));
   }
 });
+
+test("Delacroix bounded redesign keeps exact destinations, local privacy, and the archival visual grammar", async () => {
+  const [app, css] = await Promise.all([
+    readText("sites/delacroix-archive/app.js"),
+    readText("sites/delacroix-archive/styles.css"),
+  ]);
+  const worksRenderer = app.slice(app.indexOf("function renderWorks()"), app.indexOf("function tabContent(work)"));
+
+  assert.match(app, /class="hero-identity"[\s\S]*class="hero-portrait"[\s\S]*class="hero-premise"/);
+  assert.doesNotMatch(app, /mobile-hero-entry/);
+  assert.match(css, /grid-template-areas:\s*"identity portrait"\s*"premise portrait"/);
+  assert.match(css, /grid-template-areas:\s*"identity"\s*"portrait"\s*"premise"/);
+  assert.match(css, /\.work-hero-image\s*\{[^}]*margin:\s*0;/s);
+  assert.match(css, /\.hero-portrait img\s*\{[^}]*border-radius:\s*0;/s);
+
+  assert.match(app, /Biography period|生平阶段|Période biographique/);
+  assert.match(app, /Timeline event|时间线事件|Événement chronologique/);
+  assert.match(app, /Journal entry|日志条目|Entrée du Journal/);
+  assert.match(app, /Source record|资料记录|Notice de source/);
+  assert.match(app, /data-search-life-period/);
+  assert.match(app, /data-search-journal-period/);
+  assert.match(app, /data-search-target/);
+  assert.match(app, /route:\s*"timeline",\s*id:\s*event\.id/);
+  assert.match(app, /route:\s*"sources",\s*id:\s*source\.id/);
+
+  assert.match(app, /timeline-direct-header/);
+  assert.match(app, /renderEventPanel\(event, false\)/);
+  assert.match(app, /timeline-breadcrumb/);
+
+  assert.match(worksRenderer, /state\.saved\.has\(work\.id\) \|\| workHasNote\(work\.id\)/);
+  assert.match(worksRenderer, /data-filter="local"/);
+  assert.match(worksRenderer, /gallery-zero-state/);
+  assert.match(worksRenderer, /work-local-states/);
+  assert.doesNotMatch(worksRenderer, /localStorage\.getItem\(`delacroix-note-/);
+
+  const accent = css.match(/--blue-text-accent:\s*(#[0-9a-f]{6})/i)?.[1];
+  assert.ok(accent, "the blue-room small-text accent token must exist");
+  const relativeLuminance = (hex) => {
+    const channels = hex.match(/[0-9a-f]{2}/gi).map((value) => Number.parseInt(value, 16) / 255);
+    const [red, green, blue] = channels.map((value) => value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4);
+    return 0.2126 * red + 0.7152 * green + 0.0722 * blue;
+  };
+  const contrast = (foreground, background) => {
+    const values = [relativeLuminance(foreground), relativeLuminance(background)].sort((a, b) => b - a);
+    return (values[0] + 0.05) / (values[1] + 0.05);
+  };
+  assert.ok(contrast(accent, "#0f325b") >= 4.5, `${accent} must meet WCAG AA against the imperial-blue room`);
+});

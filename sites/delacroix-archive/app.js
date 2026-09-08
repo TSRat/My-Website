@@ -26,6 +26,7 @@ const state = {
   observeTask: null,
   observeStep: "choose",
   saved: new Set(JSON.parse(localStorage.getItem("delacroix-saved") || "[]")),
+  pendingSearchTarget: null,
 };
 
 const main = document.querySelector("#main");
@@ -150,6 +151,42 @@ function getTimelineEvent(id) {
   return timelineEventDetails.find((event) => event.id === id);
 }
 
+function workHasNote(id) {
+  return Boolean((localStorage.getItem(`delacroix-note-${id}`) || "").trim());
+}
+
+function returningReaderCopy() {
+  return {
+    zh: {
+      group: "本地回访",
+      filter: "已收藏或有笔记",
+      saved: "已收藏",
+      noted: "有私密笔记",
+      states: "本地阅读状态",
+      empty: "此浏览器中还没有收藏或笔记。你的笔记内容只会留在具体作品的观看页中。",
+      showAll: "查看全部作品",
+    },
+    en: {
+      group: "Return locally",
+      filter: "Saved or noted",
+      saved: "Saved",
+      noted: "Private note present",
+      states: "Local reading state",
+      empty: "This browser has no saved or noted works yet. Note contents remain only in each work’s viewing page.",
+      showAll: "Show all works",
+    },
+    fr: {
+      group: "Revenir localement",
+      filter: "Enregistrées ou annotées",
+      saved: "Enregistrée",
+      noted: "Note privée présente",
+      states: "État de lecture local",
+      empty: "Ce navigateur ne contient encore aucune œuvre enregistrée ou annotée. Le contenu des notes reste uniquement dans la page de regard de chaque œuvre.",
+      showAll: "Voir toutes les œuvres",
+    },
+  }[state.lang];
+}
+
 function getEventRecord(detail) {
   const period = periods.find((item) => item.id === detail.periodId);
   const [date, description] = period?.[state.lang]?.events?.[detail.eventIndex] || ["", ""];
@@ -255,18 +292,19 @@ function renderHome() {
   return `
     <article class="page theme-home">
       <div class="page-shell hero">
-        <div class="hero-copy">
+        <div class="hero-identity">
           <p class="eyebrow">${e(h.place)}</p>
           <h1 class="display-title">${titleLines(h.title)}</h1>
           <div class="hero-signature" aria-label="Eugène Delacroix">Eug. Delacroix</div>
-          <p class="lede">${e(h.subtitle)}</p>
-          <div class="hero-start-card"><span>${e(state.lang === "zh" ? "从这里开始" : state.lang === "en" ? "Start here" : "Commencer ici")}</span><button class="line-button" type="button" data-route="life">${e(h.enter)}</button></div>
         </div>
         <figure class="hero-portrait">
           <img src="./assets/pierre-petit-delacroix-1862.png" alt="${e(h.caption)}" />
           <figcaption>${e(h.caption)}</figcaption>
-          <button class="mobile-hero-entry" type="button" data-route="life">${e(h.enter)} →</button>
         </figure>
+        <div class="hero-premise">
+          <p class="lede">${e(h.subtitle)}</p>
+          <div class="hero-start-card"><span>${e(state.lang === "zh" ? "从这里开始" : state.lang === "en" ? "Start here" : "Commencer ici")}</span><button class="line-button" type="button" data-route="life">${e(h.enter)}</button></div>
+        </div>
       </div>
     </article>`;
 }
@@ -343,7 +381,7 @@ function renderLife() {
         </header>
         <div class="life-layout">
           <nav class="period-nav" aria-label="${e(intro.eyebrow)}">${periodButtons(selected.id)}</nav>
-          <section class="period-detail" aria-live="polite">
+          <section class="period-detail" id="life-period-${e(selected.id)}" aria-live="polite">
             <p class="period-kicker">${e(selected.years)} · ${e(p.label)}</p>
             <p class="section-label">${e(t.stageQuestion)}</p>
             <h2 class="chapter-question">${e(content.question)}</h2>
@@ -364,7 +402,13 @@ function renderLife() {
 function renderWorks() {
   const intro = worksIntro[state.lang];
   const t = currentUI();
-  const filtered = state.workFilter === "all" ? works : works.filter((work) => work.category === state.workFilter);
+  const local = returningReaderCopy();
+  const localWorks = works.filter((work) => state.saved.has(work.id) || workHasNote(work.id));
+  const filtered = state.workFilter === "all"
+    ? works
+    : state.workFilter === "local"
+      ? localWorks
+      : works.filter((work) => work.category === state.workFilter);
   const categoryButtons = ["all", ...Object.keys(t.categories)]
     .map((category) => `<button class="filter-button" type="button" data-filter="${category}" aria-pressed="${category === state.workFilter}">${e(category === "all" ? t.all : t.categories[category])}</button>`)
     .join("");
@@ -375,15 +419,26 @@ function renderWorks() {
           <div><p class="eyebrow">${e(intro.eyebrow)}</p><h1 class="page-title">${e(intro.title)}</h1><p class="lede">${e(intro.lede)}</p></div>
           <aside class="page-aside"><strong>${e(intro.asideTitle)}</strong>${e(intro.aside)}</aside>
         </header>
-        <div class="gallery-toolbar"><div class="filter-list" role="group">${categoryButtons}</div><span class="result-count">${filtered.length} ${e(t.result)}</span></div>
-        <div class="gallery-grid">
-          ${filtered.map((work, index) => `<article class="work-card">
-            <button type="button" data-work="${work.id}">
-              <div class="work-image-wrap"><img src="${work.image}" alt="${e(text(work.title))}" loading="lazy" /><span class="work-number">${String(index + 1).padStart(2, "0")}</span>${work.featured ? `<span class="work-tier">${e(t.masterwork)}</span>` : ""}</div>
-              <h2>${e(text(work.title))}</h2><p>${e(localizedDate(work.date))} · ${e(text(work.medium))}</p>
-            </button>
-          </article>`).join("")}
+        <div class="gallery-toolbar">
+          <div class="gallery-filters">
+            <div class="filter-list" role="group" aria-label="${e(t.nav.works)}">${categoryButtons}</div>
+            <div class="reader-filter"><span>${e(local.group)}</span><button class="filter-button" type="button" data-filter="local" aria-pressed="${state.workFilter === "local"}">${e(local.filter)} <strong>${localWorks.length}</strong></button></div>
+          </div>
+          <span class="result-count" aria-live="polite">${filtered.length} ${e(t.result)}</span>
         </div>
+        ${filtered.length ? `<div class="gallery-grid">
+          ${filtered.map((work, index) => {
+            const saved = state.saved.has(work.id);
+            const noted = workHasNote(work.id);
+            return `<article class="work-card">
+              <button type="button" data-work="${work.id}">
+                <div class="work-image-wrap"><img src="${work.image}" alt="${e(text(work.title))}" loading="lazy" /><span class="work-number">${String(index + 1).padStart(2, "0")}</span>${work.featured ? `<span class="work-tier">${e(t.masterwork)}</span>` : ""}</div>
+                <h2>${e(text(work.title))}</h2><p>${e(localizedDate(work.date))} · ${e(text(work.medium))}</p>
+                ${saved || noted ? `<span class="work-local-states" aria-label="${e(local.states)}">${saved ? `<span>${e(local.saved)}</span>` : ""}${noted ? `<span>${e(local.noted)}</span>` : ""}</span>` : ""}
+              </button>
+            </article>`;
+          }).join("")}
+        </div>` : `<div class="gallery-zero-state" role="status"><p>${e(local.empty)}</p><button class="line-button" type="button" data-filter="all">${e(local.showAll)}</button></div>`}
       </div>
     </article>`;
 }
@@ -440,7 +495,7 @@ function renderWork(id) {
   </article>`;
 }
 
-function renderEventPanel(event) {
+function renderEventPanel(event, includePermalink = true) {
   const t = currentResearchUI();
   const context = periodContext[event.periodId];
   return `<div class="event-panel" id="panel-${event.id}">
@@ -451,7 +506,7 @@ function renderEventPanel(event) {
     ${renderTerms(event.terms)}
     ${event.workIds?.length ? `<section class="event-section"><h4>${e(t.relatedWork)}</h4>${renderWorkLinks(event.workIds)}</section>` : ""}
     <section class="event-section"><h4>${e(t.evidence)}</h4>${renderEvidence(event.refs)}</section>
-    <a class="event-permalink" href="#/timeline/${event.id}">${e(t.openEntry)} →</a>
+    ${includePermalink ? `<a class="event-permalink" href="#/timeline/${event.id}">${e(t.openEntry)} →</a>` : ""}
   </div>`;
 }
 
@@ -474,13 +529,27 @@ function renderTimeline(routeId) {
   const selected = periods.find((p) => p.id === selectedId) || periods[4];
   const p = selected[state.lang];
   const t = currentResearchUI();
-  const title = directDetail ? t.eventDossier : (state.lang === "zh" ? "把艺术家放回历史" : state.lang === "en" ? "Put the artist back into history" : "Replacer l’artiste dans l’histoire");
-  const events = directDetail ? [getEventRecord(directDetail)] : eventRecordsForPeriod(selected.id);
+  if (directDetail) {
+    const event = getEventRecord(directDetail);
+    return `<article class="page theme-life"><div class="page-shell timeline-direct-shell">
+      <nav class="timeline-breadcrumb" aria-label="${e(currentUI().nav.timeline)}"><a href="#/timeline">← ${e(t.backTimeline)}</a><span>${e(selected.years)} · ${e(p.label)}</span></nav>
+      <header class="timeline-direct-header">
+        <p class="eyebrow">${e(t.eventDossier)}</p>
+        <p class="timeline-direct-date">${e(event.date)}</p>
+        <h1 class="page-title">${e(event.description)}</h1>
+      </header>
+      <section class="timeline-events timeline-events--direct" aria-label="${e(t.eventDossier)}">
+        <article class="timeline-event" data-expanded="true">${renderEventPanel(event, false)}</article>
+      </section>
+    </div></article>`;
+  }
+  const title = state.lang === "zh" ? "把艺术家放回历史" : state.lang === "en" ? "Put the artist back into history" : "Replacer l’artiste dans l’histoire";
+  const events = eventRecordsForPeriod(selected.id);
   return `<article class="page theme-life"><div class="page-shell">
-    <header class="timeline-header"><div><p class="eyebrow">${e(t.beginnerGuide)} · ${e(currentUI().nav.timeline)}</p><h1 class="page-title">${e(title)}</h1><p class="lede">${e(directDetail ? t.directEntry : t.timelinePurpose)}</p></div><aside class="page-aside"><strong>${e(selected.years)}</strong>${e(p.label)}</aside></header>
-    ${directDetail ? `<a class="back-link" href="#/timeline">← ${e(t.backTimeline)}</a>` : `<nav class="timeline-rail" aria-label="${e(currentUI().nav.timeline)}">${periodButtons(selected.id, "timeline")}</nav>`}
+    <header class="timeline-header"><div><p class="eyebrow">${e(t.beginnerGuide)} · ${e(currentUI().nav.timeline)}</p><h1 class="page-title">${e(title)}</h1><p class="lede">${e(t.timelinePurpose)}</p></div><aside class="page-aside"><strong>${e(selected.years)}</strong>${e(p.label)}</aside></header>
+    <nav class="timeline-rail" aria-label="${e(currentUI().nav.timeline)}">${periodButtons(selected.id, "timeline")}</nav>
     <div class="timeline-intro"><div><p class="period-kicker">${e(selected.years)} · ${e(p.label)}</p><h2 class="section-title">${e(p.title)}</h2><p class="period-summary">${e(p.summary)}</p></div><p class="timeline-instruction"><strong>${events.length} ${e(t.eventCount)}</strong>${e(t.directEntry)}</p></div>
-    <section class="timeline-events" aria-live="polite">${events.map((event) => renderTimelineEvent(event, Boolean(directDetail))).join("")}</section>
+    <section class="timeline-events" aria-live="polite">${events.map((event) => renderTimelineEvent(event)).join("")}</section>
   </div></article>`;
 }
 
@@ -492,8 +561,8 @@ function renderJournal() {
   return `<article class="page theme-life"><div class="page-shell">
     <header class="page-intro"><div><p class="eyebrow">${e(t.beginnerGuide)} · ${e(currentUI().nav.journal)}</p><h1 class="page-title">${e(title)}</h1><p class="lede">${e(lede)}</p></div><aside class="page-aside"><strong>1822—1863</strong>${e(t.journalPurpose)}</aside></header>
     <div class="journal-layout"><nav class="side-index" aria-label="${e(currentUI().nav.journal)}">${journalReadings.map((item) => `<button type="button" data-journal="${item.id}" aria-pressed="${item.id === selected.id}"><span>${e(item.date)}</span><strong>${e(text(item.title))}</strong></button>`).join("")}</nav>
-    <section class="journal-reading"><p class="entry-date">${e(selected.date)}</p><h2>${e(text(selected.title))}</h2><p class="journal-intro">${e(text(selected.intro))}</p>
-      <div class="journal-reading-list">${selected.entries.map((entry) => `<article class="journal-entry-card">
+    <section class="journal-reading" id="journal-group-${e(selected.id)}"><p class="entry-date">${e(selected.date)}</p><h2>${e(text(selected.title))}</h2><p class="journal-intro">${e(text(selected.intro))}</p>
+      <div class="journal-reading-list">${selected.entries.map((entry, index) => `<article class="journal-entry-card" id="journal-entry-${e(selected.id)}-${index}">
         <p class="journal-date">${e(localizedJournalDate(entry.date))}</p><h3>${e(text(entry.heading))}</h3>
         <figure class="journal-source-text"><figcaption>${e(state.lang === "fr" ? t.sourceText : t.translatedExcerpt)} · ${e(localizedJournalDate(entry.date))}</figcaption><blockquote lang="${state.lang === "zh" ? "zh-Hans" : state.lang}">${e(state.lang === "fr" ? entry.sourceExcerpt : text(entry.translation))}</blockquote>${state.lang === "fr" ? `<div class="journal-translation"><h4>${e(t.translation)}</h4><p>${e(text(entry.translation))}</p></div>` : ""}</figure>
         <div class="journal-entry-grid"><section><h4>${e(t.entryContext)}</h4><p>${e(text(entry.reading))}</p></section><section><h4>${e(t.editorReading)}</h4><p>${e(text(entry.meaning))}</p></section></div>
@@ -590,6 +659,8 @@ function render() {
   else if (route.page === "journal") main.innerHTML = renderJournal();
   else if (route.page === "sources") main.innerHTML = renderSources(route.id);
   else main.innerHTML = renderWork(route.id);
+  const pendingSearchTarget = state.pendingSearchTarget;
+  state.pendingSearchTarget = null;
   bindPageEvents();
   applyWidowProtection();
   const pageHeading = main.querySelector("h1");
@@ -604,7 +675,14 @@ function render() {
     requestAnimationFrame(() => {
       if (routeChanged) pageHeading?.focus({ preventScroll: true });
       if (routeOpened) analytics.track("archive_route_opened", { contentId: nextRouteKey, interactionSource: routeChanged ? "route_change" : "initial_load" });
-      if (routeChanged && route.page === "sources" && route.id) {
+      if (pendingSearchTarget) {
+        const target = document.querySelector(`#${CSS.escape(pendingSearchTarget)}`);
+        if (target) {
+          target.tabIndex = -1;
+          target.focus({ preventScroll: true });
+          target.scrollIntoView({ block: "start", behavior: "auto" });
+        }
+      } else if (routeChanged && route.page === "sources" && route.id) {
         document.querySelector(`#source-${CSS.escape(route.id)}`)?.scrollIntoView({ block: "start", behavior: "auto" });
       } else {
         window.scrollTo({ top: targetScrollY, behavior: "auto" });
@@ -686,17 +764,78 @@ function bindPageEvents() {
   }, { once: true }));
 }
 
+function searchTypeCopy() {
+  return {
+    zh: { biography: "生平阶段", timeline: "时间线事件", journalGroup: "日志时期", journalEntry: "日志条目", source: "资料记录", work: "作品" },
+    en: { biography: "Biography period", timeline: "Timeline event", journalGroup: "Journal period", journalEntry: "Journal entry", source: "Source record", work: "Work" },
+    fr: { biography: "Période biographique", timeline: "Événement chronologique", journalGroup: "Période du Journal", journalEntry: "Entrée du Journal", source: "Notice de source", work: "Œuvre" },
+  }[state.lang];
+}
+
 function searchIndex() {
   const t = currentUI();
-  const pageRecords = [
-    ["life", t.nav.life, `${lifeIntro[state.lang].title} ${periods.map((p) => `${p.years} ${p[state.lang].label} ${biographyChapters[p.id][state.lang].question} ${biographyChapters[p.id][state.lang].story.join(" ")}`).join(" ")}`],
-    ["timeline", t.nav.timeline, timelineEventDetails.map((detail) => { const event = getEventRecord(detail); return `${event.date} ${event.description} ${text(detail.why)}`; }).join(" ")],
-    ["journal", t.nav.journal, journalReadings.map((group) => `${group.date} ${text(group.title)} ${text(group.intro)} ${group.entries.map((entry) => `${text(entry.heading)} ${text(entry.reading)}`).join(" ")}`).join(" ")],
-    ["sources", t.nav.sources, sourceLibrary.map((source) => `${text(source.name)} ${source.coverage} ${text(source.type)} ${text(source.summary)}`).join(" ")],
-  ];
+  const types = searchTypeCopy();
   return [
-    ...pageRecords.map(([route, title, keywords]) => ({ route, title, keywords, type: t.match })),
-    ...works.map((work) => ({ route: "work", id: work.id, title: text(work.title), keywords: `${work.date} ${text(work.summary)} ${text(work.medium)} ${t.categories[work.category]}`, type: t.nav.works })),
+    ...periods.map((period) => {
+      const chapter = biographyChapters[period.id][state.lang];
+      const periodText = period[state.lang];
+      return {
+        route: "life",
+        title: `${period.years} · ${periodText.label}`,
+        context: chapter.question,
+        keywords: `${periodText.title} ${periodText.summary} ${chapter.story.join(" ")} ${chapter.method} ${chapter.people.join(" ")} ${chapter.remember}`,
+        type: types.biography,
+        lifePeriod: period.id,
+        targetId: `life-period-${period.id}`,
+      };
+    }),
+    ...timelineEventDetails.map((detail) => {
+      const event = getEventRecord(detail);
+      return {
+        route: "timeline",
+        id: event.id,
+        title: `${event.date} · ${event.description}`,
+        context: `${event.period.years} · ${event.period[state.lang].label}`,
+        keywords: `${text(detail.why)} ${text(periodContext[detail.periodId])}`,
+        type: types.timeline,
+      };
+    }),
+    ...journalReadings.flatMap((group) => [
+      {
+        route: "journal",
+        title: `${group.date} · ${text(group.title)}`,
+        context: text(group.intro),
+        keywords: group.entries.map((entry) => `${localizedJournalDate(entry.date)} ${text(entry.heading)} ${text(entry.translation)} ${text(entry.reading)} ${text(entry.meaning)}`).join(" "),
+        type: types.journalGroup,
+        journalPeriod: group.id,
+        targetId: `journal-group-${group.id}`,
+      },
+      ...group.entries.map((entry, index) => ({
+        route: "journal",
+        title: `${localizedJournalDate(entry.date)} · ${text(entry.heading)}`,
+        context: `${group.date} · ${text(group.title)}`,
+        keywords: `${entry.sourceExcerpt} ${text(entry.translation)} ${text(entry.reading)} ${text(entry.meaning)}`,
+        type: types.journalEntry,
+        journalPeriod: group.id,
+        targetId: `journal-entry-${group.id}-${index}`,
+      })),
+    ]),
+    ...sourceLibrary.map((source) => ({
+      route: "sources",
+      id: source.id,
+      title: text(source.name),
+      context: `${text(source.type)} · ${source.coverage}`,
+      keywords: `${text(source.summary)} ${text(source.howUsed)} ${text(source.edition)}`,
+      type: types.source,
+    })),
+    ...works.map((work) => ({
+      route: "work",
+      id: work.id,
+      title: text(work.title),
+      context: `${localizedDate(work.date)} · ${text(work.medium)} · ${t.categories[work.category]}`,
+      keywords: `${text(work.summary)} ${text(work.analysis)} ${text(work.context)} ${text(work.collection)}`,
+      type: types.work,
+    })),
   ];
 }
 
@@ -708,11 +847,23 @@ function updateSearch() {
     return;
   }
   const tokens = query.split(/\s+/).filter(Boolean);
-  const results = searchIndex().filter((record) => tokens.every((token) => `${record.title} ${record.keywords}`.toLocaleLowerCase(state.lang).includes(token)));
+  const results = searchIndex().filter((record) => tokens.every((token) => `${record.title} ${record.context} ${record.keywords}`.toLocaleLowerCase(state.lang).includes(token)));
   searchResults.innerHTML = results.length
-    ? results.map((record) => `<button class="search-result" type="button" data-search-route="${record.route}" ${record.id ? `data-search-id="${record.id}"` : ""}><span class="match">${e(record.type)}</span><strong>${e(record.title)}</strong><span>${e(t.open)} →</span></button>`).join("")
+    ? results.map((record) => `<button class="search-result" type="button" data-search-route="${record.route}" ${record.id ? `data-search-id="${e(record.id)}"` : ""} ${record.lifePeriod ? `data-search-life-period="${e(record.lifePeriod)}"` : ""} ${record.journalPeriod ? `data-search-journal-period="${e(record.journalPeriod)}"` : ""} ${record.targetId ? `data-search-target="${e(record.targetId)}"` : ""}><span class="match">${e(record.type)}</span><span class="search-result-copy"><strong>${e(record.title)}</strong><small>${e(record.context)}</small></span><span class="search-open">${e(t.open)} →</span></button>`).join("")
     : `<p>${e(t.searchNone)}</p><button class="line-button" type="button" data-search-route="timeline">${e(t.nav.timeline)}</button>`;
-  searchResults.querySelectorAll("[data-search-route]").forEach((button) => button.addEventListener("click", () => { searchDialog.close(); routeTo(button.dataset.searchRoute, button.dataset.searchId || ""); }));
+  searchResults.querySelectorAll("[data-search-route]").forEach((button) => button.addEventListener("click", () => {
+    if (button.dataset.searchLifePeriod) {
+      state.lifePeriod = button.dataset.searchLifePeriod;
+      localStorage.setItem("delacroix-life-period", state.lifePeriod);
+    }
+    if (button.dataset.searchJournalPeriod) {
+      state.journalPeriod = button.dataset.searchJournalPeriod;
+      localStorage.setItem("delacroix-journal-period", state.journalPeriod);
+    }
+    state.pendingSearchTarget = button.dataset.searchTarget || null;
+    searchDialog.close();
+    routeTo(button.dataset.searchRoute, button.dataset.searchId || "");
+  }));
 }
 
 document.addEventListener("click", (event) => {
