@@ -227,7 +227,7 @@ function renderEvidence(refIds = []) {
 function renderTerms(termIds = []) {
   const t = currentResearchUI();
   if (!termIds.length) return "";
-  return `<section class="event-section"><h4>${e(t.terms)}</h4><dl class="term-list">${termIds.map((termId) => {
+  return `<section class="event-section"><h2>${e(t.terms)}</h2><dl class="term-list">${termIds.map((termId) => {
     const term = glossary[termId];
     return term ? `<div class="term-note"><dt>${e(text(term.name))}</dt><dd>${e(text(term.definition))}</dd></div>` : "";
   }).join("")}</dl></section>`;
@@ -316,6 +316,7 @@ function viewingExperimentCopy() {
       choosePrompt: "先选一个问题。滤镜只是工具，不是答案。", operatePrompt: "先看画面十秒：不要急着解释题材，只跟随任务寻找证据。",
       observed: "我已观察，继续", answerPrompt: "只回答这一问", answerPlaceholder: "写下画面中可指认的位置、颜色或方向……",
       conclude: "查看结论", reset: "重新选择任务", complete: "本轮观看完成。你的记录只保存在此浏览器。",
+      selectionFeedback: { color: "已选择颜色任务；保留原始彩色画面。", values: "已选择明暗任务；画面已切换为灰度。", blur: "已选择轮廓任务；画面已切换为模糊视图。" },
       tasks: {
         color: { label: "颜色怎样组织注意力？", question: "你的视线最先被哪一组颜色吸引？它把你带向哪里？", conclusion: "德拉克洛瓦常用相邻与互补色建立路径；颜色不仅填充物体，也安排观看顺序。" },
         values: { label: "明暗还能否撑住构图？", question: "去掉色彩后，最亮与最暗的区域怎样连接主要人物？", conclusion: "去色让明暗骨架更清楚，也会暴露哪些关系主要依赖色相而非亮度。" },
@@ -327,6 +328,7 @@ function viewingExperimentCopy() {
       choosePrompt: "Choose one question first. The filter is a tool, not an answer.", operatePrompt: "Look for ten seconds. Do not interpret the subject yet; follow the task and locate evidence.",
       observed: "I have looked — continue", answerPrompt: "Answer only this question", answerPlaceholder: "Name a specific area, colour, or direction in the image…",
       conclude: "See the conclusion", reset: "Choose another task", complete: "This viewing round is complete. Your note remains only in this browser.",
+      selectionFeedback: { color: "Colour task selected; the original colour view is retained.", values: "Value task selected; the image is now grayscale.", blur: "Contour task selected; the image is now blurred." },
       tasks: {
         color: { label: "How does colour direct attention?", question: "Which colour group catches your eye first, and where does it lead you?", conclusion: "Delacroix often uses neighbouring and complementary colours to build a path. Colour does not merely fill objects; it orders the act of looking." },
         values: { label: "Can value alone hold the composition?", question: "Without colour, how do the lightest and darkest areas connect the main figures?", conclusion: "Grayscale exposes the light-dark armature and also reveals which relations depend on hue rather than brightness." },
@@ -338,6 +340,7 @@ function viewingExperimentCopy() {
       choosePrompt: "Choisissez d’abord une question. Le filtre est un outil, non une réponse.", operatePrompt: "Regardez dix secondes. N’interprétez pas encore le sujet : suivez la tâche et repérez des indices.",
       observed: "J’ai observé — continuer", answerPrompt: "Répondez seulement à cette question", answerPlaceholder: "Nommez une zone, une couleur ou une direction précise…",
       conclude: "Voir la conclusion", reset: "Choisir une autre tâche", complete: "Cette séquence est terminée. Votre note reste uniquement dans ce navigateur.",
+      selectionFeedback: { color: "Tâche de couleur choisie ; la vue originale en couleur est conservée.", values: "Tâche de valeurs choisie ; l’image est maintenant en niveaux de gris.", blur: "Tâche de contours choisie ; l’image est maintenant floutée." },
       tasks: {
         color: { label: "Comment la couleur dirige-t-elle l’attention ?", question: "Quel groupe de couleurs attire d’abord votre regard, et où vous conduit-il ?", conclusion: "Delacroix construit souvent un parcours par couleurs voisines et complémentaires. La couleur ne remplit pas seulement les objets : elle ordonne le regard." },
         values: { label: "Les valeurs suffisent-elles à tenir la composition ?", question: "Sans couleur, comment les zones les plus claires et les plus sombres relient-elles les figures principales ?", conclusion: "Le noir et blanc révèle l’armature des valeurs et montre aussi quelles relations dépendent de la teinte plutôt que de la luminosité." },
@@ -456,7 +459,7 @@ function tabContent(work) {
       <div class="observe-controls"><p class="eyebrow">${e(t.observation)}</p><h2 class="section-title">${e(x.title)}</h2>
         <ol class="experiment-progress" aria-label="${e(x.title)}">${steps.map((step, index) => `<li aria-current="${index === activeStep ? "step" : "false"}" data-complete="${index < activeStep}">${index + 1}<span>${e(x[step])}</span></li>`).join("")}</ol>
         ${state.observeStep === "choose" ? `<div class="experiment-step"><p>${e(x.choosePrompt)}</p><div class="experiment-task-list">${Object.entries(x.tasks).map(([mode, item]) => `<button type="button" data-observe-task="${mode}"><span>${e(mode === "color" ? t.modeColor : mode === "values" ? t.modeValues : t.modeBlur)}</span><strong>${e(item.label)}</strong></button>`).join("")}</div></div>` : ""}
-        ${state.observeStep === "operate" && task ? `<div class="experiment-step"><p class="experiment-question">${e(task.label)}</p><p>${e(x.operatePrompt)}</p><button class="line-button" type="button" data-observe-next="observe">${e(x.observed)}</button><p class="experiment-feedback" role="status">${e(state.lang === "zh" ? "任务已选，画面已切换。" : state.lang === "en" ? "Task selected; the image has changed." : "Tâche choisie ; l’image a changé.")}</p></div>` : ""}
+        ${state.observeStep === "operate" && task ? `<div class="experiment-step"><p class="experiment-question">${e(task.label)}</p><p>${e(x.operatePrompt)}</p><button class="line-button" type="button" data-observe-next="observe">${e(x.observed)}</button><p class="experiment-feedback" role="status">${e(x.selectionFeedback[state.observeTask])}</p></div>` : ""}
         ${state.observeStep === "observe" && task ? `<div class="experiment-step"><p class="section-label">${e(x.answerPrompt)}</p><p class="experiment-question">${e(task.question)}</p><label class="sr-only" for="research-note">${e(t.researchNote)}</label><textarea id="research-note" class="observation-note" placeholder="${e(x.answerPlaceholder)}">${e(note)}</textarea><button class="line-button" type="button" data-observe-next="conclusion">${e(x.conclude)}</button><p class="meta-line" id="note-status">${e(t.noteSaved)}</p></div>` : ""}
         ${state.observeStep === "conclusion" && task ? `<div class="experiment-step experiment-conclusion"><p class="section-label">${e(x.conclusion)}</p>${note ? `<blockquote>${e(note)}</blockquote>` : ""}<p>${e(task.conclusion)}</p><p class="experiment-feedback" role="status">${e(x.complete)}</p><button class="line-button" type="button" data-observe-reset>${e(x.reset)}</button></div>` : ""}
       </div>
@@ -500,12 +503,12 @@ function renderEventPanel(event, includePermalink = true) {
   const context = periodContext[event.periodId];
   return `<div class="event-panel" id="panel-${event.id}">
     <div class="event-context-grid">
-      <section class="event-section"><h4>${e(t.beforeYouRead)}</h4><p>${e(text(context))}</p></section>
-      <section class="event-section event-importance"><h4>${e(t.whyItMatters)}</h4><p>${e(text(event.why))}</p></section>
+      <section class="event-section"><h2>${e(t.beforeYouRead)}</h2><p>${e(text(context))}</p></section>
+      <section class="event-section event-importance"><h2>${e(t.whyItMatters)}</h2><p>${e(text(event.why))}</p></section>
     </div>
     ${renderTerms(event.terms)}
-    ${event.workIds?.length ? `<section class="event-section"><h4>${e(t.relatedWork)}</h4>${renderWorkLinks(event.workIds)}</section>` : ""}
-    <section class="event-section"><h4>${e(t.evidence)}</h4>${renderEvidence(event.refs)}</section>
+    ${event.workIds?.length ? `<section class="event-section"><h2>${e(t.relatedWork)}</h2>${renderWorkLinks(event.workIds)}</section>` : ""}
+    <section class="event-section"><h2>${e(t.evidence)}</h2>${renderEvidence(event.refs)}</section>
     ${includePermalink ? `<a class="event-permalink" href="#/timeline/${event.id}">${e(t.openEntry)} →</a>` : ""}
   </div>`;
 }

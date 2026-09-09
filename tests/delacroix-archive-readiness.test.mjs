@@ -23,9 +23,13 @@ test("Delacroix archive keeps its trilingual beginner-first research contract", 
   assert.equal(Object.keys(research.biographyChapters).length, 6);
   assert.equal(research.timelineEventDetails.length, 29);
   assert.equal(research.journalReadings.length, 5);
-  assert.equal(research.sourceLibrary.length, 13);
-  assert.equal(Object.keys(research.sourceAccess).length, 13);
+  assert.equal(research.sourceLibrary.length, 14);
+  assert.equal(Object.keys(research.sourceAccess).length, 14);
   assert.ok(research.sourceLibrary.every((source) => research.sourceAccess[source.id]));
+  assert.ok(research.sourceLibrary.some((source) => source.id === "fraser-patrimony"));
+  assert.equal(research.evidenceRefs.fraserPaternity?.sourceId, "fraser-patrimony");
+  assert.ok(research.biographyChapters["1798-1815"].refs.includes("fraserPaternity"));
+  assert.ok(research.timelineEventDetails.find((event) => event.id === "1798-birth")?.refs.includes("fraserPaternity"));
   assert.equal(research.journalReadings.flatMap((group) => group.entries).length, 11);
   assert.ok(research.journalReadings.flatMap((group) => group.entries).every((entry) => entry.sourceExcerpt && entry.translation.zh && entry.translation.en && entry.translation.fr));
   assert.ok(research.journalReadings.flatMap((group) => group.entries).every((entry) => research.evidenceRefs[entry.locator]?.sourceId === "journal-flat-piot"));

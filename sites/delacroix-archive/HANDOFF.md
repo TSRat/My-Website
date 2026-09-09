@@ -1,5 +1,40 @@
 # Delacroix archive handoff
 
+## 2026-09-09 Audience readability repair
+
+This bounded implementation responds to an Audience review of the current
+trilingual site. It preserves the established four-step viewing interaction,
+the 1798 factual correction and its source boundary, and the Romantic Archive
+visual system.
+
+- `AUD-LE-01`: the guided viewing experiment now gives task-specific, truthful
+  feedback in Chinese, English, and French. Selecting the colour baseline says
+  that the original colour view is retained; grayscale and blur state the
+  actual image change.
+- `AUD-LE-02`: the 1798 event keeps the complete allegation, indirect clues,
+  evidence limit, legal-father and uncertainty conclusion in **Before you
+  read**. Its **Why it matters** text now gives only the non-duplicative
+  interpretation: documented family network, schooling, and early loss better
+  explain the childhood.
+- `AUD-LE-03`: direct timeline dossiers now use `h2` section labels rather
+  than jumping from the dossier `h1` to `h4`. The existing event-section
+  heading styling is retained for the new semantic level.
+
+Changed maintainable files: `app.js`, `research-content.js`, `styles.css`, and
+this handoff. The uppercase `DELACROIX-ARCHIVE/` mirror must be rebuilt only by
+`npm run build:delacroix`; it is never hand edited.
+
+Bounded implementer checks passed: `npm run build:delacroix`; `node --check`
+for both changed source modules and their generated-mirror counterparts; and
+`git diff --check`. A local browser smoke check confirmed the 1798 direct
+dossier exposes `h2` section labels and the colour-task feedback appears with
+its correct Chinese, English, and French meaning. The targeted readiness test
+also now expects the current 14-source library and protects the
+`fraserPaternity` → `fraser-patrimony` mapping in both 1798 reading paths;
+`node --test tests/delacroix-archive-readiness.test.mjs` passed 3/3. Independent audience
+rereview, technical verification, slop review, Git commit/merge, and deployment
+remain outside this handoff.
+
 ## 2026-09-09 post-acceptance real-site accessibility repair
 
 The user explicitly requested an actual website change for the issues described
