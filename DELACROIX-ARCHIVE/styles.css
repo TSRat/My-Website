@@ -1502,6 +1502,10 @@ main h1:focus {
   background: color-mix(in srgb, var(--page-deep) 46%, transparent);
 }
 
+.timeline-event-heading {
+  margin: 0;
+}
+
 .event-toggle {
   display: grid;
   grid-template-columns: 130px minmax(0, 1fr) auto;

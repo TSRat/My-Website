@@ -224,10 +224,10 @@ function renderEvidence(refIds = []) {
   }).join("")}</div>`;
 }
 
-function renderTerms(termIds = []) {
+function renderTerms(termIds = [], headingTag = "h2") {
   const t = currentResearchUI();
   if (!termIds.length) return "";
-  return `<section class="event-section"><h2>${e(t.terms)}</h2><dl class="term-list">${termIds.map((termId) => {
+  return `<section class="event-section"><${headingTag}>${e(t.terms)}</${headingTag}><dl class="term-list">${termIds.map((termId) => {
     const term = glossary[termId];
     return term ? `<div class="term-note"><dt>${e(text(term.name))}</dt><dd>${e(text(term.definition))}</dd></div>` : "";
   }).join("")}</dl></section>`;
@@ -465,7 +465,7 @@ function tabContent(work) {
       </div>
     </div></section>`;
   }
-  const content = state.detailTab === "overview" ? text(work.summary) : state.detailTab === "analysis" ? text(work.analysis) : text(work.context);
+  const content = state.detailTab === "overview" ? text(work.analysis) : state.detailTab === "analysis" ? text(work.analysis) : text(work.context);
   const heading = t.tabs[state.detailTab];
   const evidenceItems = [
     `<a href="${work.source}" target="_blank" rel="noreferrer">${e(t.museumRecord)} ↗</a>`,
@@ -473,7 +473,7 @@ function tabContent(work) {
     `<span class="status-tag">${e(state.detailTab === "context" ? t.modern : t.original)}</span>`,
   ];
   return `<section class="analysis-panel">
-    <div class="analysis-body"><h2>${e(heading)}</h2><p>${e(content)}</p>${state.detailTab === "overview" ? `<p>${e(text(work.analysis))}</p>` : ""}</div>
+    <div class="analysis-body"><h2>${e(heading)}</h2><p>${e(content)}</p></div>
     <aside class="evidence-stack"><h3>${e(t.evidence)}</h3>${evidenceItems.join("")}</aside>
   </section>`;
 }
@@ -498,17 +498,17 @@ function renderWork(id) {
   </article>`;
 }
 
-function renderEventPanel(event, includePermalink = true) {
+function renderEventPanel(event, includePermalink = true, sectionHeadingTag = "h2") {
   const t = currentResearchUI();
   const context = periodContext[event.periodId];
   return `<div class="event-panel" id="panel-${event.id}">
     <div class="event-context-grid">
-      <section class="event-section"><h2>${e(t.beforeYouRead)}</h2><p>${e(text(context))}</p></section>
-      <section class="event-section event-importance"><h2>${e(t.whyItMatters)}</h2><p>${e(text(event.why))}</p></section>
+      <section class="event-section"><${sectionHeadingTag}>${e(t.beforeYouRead)}</${sectionHeadingTag}><p>${e(text(context))}</p></section>
+      <section class="event-section event-importance"><${sectionHeadingTag}>${e(t.whyItMatters)}</${sectionHeadingTag}><p>${e(text(event.why))}</p></section>
     </div>
-    ${renderTerms(event.terms)}
-    ${event.workIds?.length ? `<section class="event-section"><h2>${e(t.relatedWork)}</h2>${renderWorkLinks(event.workIds)}</section>` : ""}
-    <section class="event-section"><h2>${e(t.evidence)}</h2>${renderEvidence(event.refs)}</section>
+    ${renderTerms(event.terms, sectionHeadingTag)}
+    ${event.workIds?.length ? `<section class="event-section"><${sectionHeadingTag}>${e(t.relatedWork)}</${sectionHeadingTag}>${renderWorkLinks(event.workIds)}</section>` : ""}
+    <section class="event-section"><${sectionHeadingTag}>${e(t.evidence)}</${sectionHeadingTag}>${renderEvidence(event.refs)}</section>
     ${includePermalink ? `<a class="event-permalink" href="#/timeline/${event.id}">${e(t.openEntry)} →</a>` : ""}
   </div>`;
 }
@@ -517,12 +517,12 @@ function renderTimelineEvent(event, standalone = false) {
   const t = currentResearchUI();
   const expanded = standalone || state.expandedEvent === event.id;
   return `<article class="timeline-event" data-expanded="${expanded}">
-    <button class="event-toggle" type="button" data-event="${event.id}" aria-expanded="${expanded}" aria-controls="panel-${event.id}" ${standalone ? "disabled" : ""}>
-      <time>${e(event.date)}</time>
-      <span class="event-summary"><span class="event-action">${e(t.whatHappened)}</span><strong>${e(event.description)}</strong></span>
-      ${standalone ? "" : `<span class="event-expand">${e(expanded ? t.collapse : t.expand)} ${expanded ? "−" : "+"}</span>`}
-    </button>
-    ${expanded ? renderEventPanel(event) : ""}
+    <h3 class="timeline-event-heading"><button class="event-toggle" type="button" data-event="${event.id}" aria-expanded="${expanded}" aria-controls="panel-${event.id}" ${standalone ? "disabled" : ""}>
+        <time>${e(event.date)}</time>
+        <span class="event-summary"><span class="event-action">${e(t.whatHappened)}</span><strong>${e(event.description)}</strong></span>
+        ${standalone ? "" : `<span class="event-expand">${e(expanded ? t.collapse : t.expand)} ${expanded ? "−" : "+"}</span>`}
+      </button></h3>
+    ${expanded ? renderEventPanel(event, true, "h4") : ""}
   </article>`;
 }
 
@@ -618,6 +618,7 @@ function renderSources(routeId) {
       return `<details class="source-record" id="source-${source.id}" ${shouldOpen ? "open" : ""}>
         <summary><span class="source-number">${String(index + 1).padStart(2, "0")}</span><span><strong>${e(text(source.name))}</strong><small>${e(text(source.type))} · ${e(source.coverage)}</small></span><span class="source-open">＋</span></summary>
         <div class="source-record-body" data-has-image="${Boolean(source.image)}">
+          ${shouldOpen ? `<h2 class="sr-only source-record-title" id="source-title-${source.id}">${e(text(source.name))}</h2>` : ""}
           ${source.image ? `<figure><img src="${source.image}" alt="${e(t.sourceImage)}：${e(text(source.name))}" loading="lazy" /><figcaption>${e(text(source.edition))}</figcaption></figure>` : ""}
           <div class="source-record-copy"><p class="source-summary">${e(text(source.summary))}</p>
             <dl class="source-metadata">

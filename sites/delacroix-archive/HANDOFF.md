@@ -1,5 +1,42 @@
 # Delacroix archive handoff
 
+## 2026-09-09 full audience sweep — structural readability repair
+
+This bounded source-first repair implements the three accepted findings from a
+full Audience review. It preserves all trilingual historical content, stable
+routes, the 1798 evidence boundary, local reading state, and the Romantic
+Archive visual grammar.
+
+- `AUD-FULL-01`: each timeline event in `#/timeline` is now a real `h3`
+  heading-bearing unit. Its expandable control remains a button inside that
+  heading, while its explanatory sections render as `h4`; this preserves the
+  direct-dossier `h1` → `h2` structure and avoids invalid heading-inside-button
+  markup. A one-rule heading-margin reset retains the existing event geometry.
+- `AUD-FULL-02`: opening `#/sources/:sourceId` now exposes the selected source
+  record as an `h2` in the document outline, with its existing access, method,
+  and usage sections below at `h3`. The already-visible disclosure summary is
+  retained, so the semantic repair adds no competing visual title.
+- `AUD-FULL-03`: the default work tab now moves directly from the header’s
+  retained orientation summary to the existing analysis. This removes the
+  previously repeated summary for all 20 works without changing source-backed
+  work content.
+
+Changed maintainable files: `app.js`, `styles.css`,
+`tests/delacroix-archive-readiness.test.mjs`, and this handoff. The uppercase
+`DELACROIX-ARCHIVE/` mirror is generated only by `npm run build:delacroix`; it
+is never hand edited.
+
+Bounded implementer checks passed: `npm run build:delacroix` (which regenerated
+the mirror), `node --test tests/delacroix-archive-readiness.test.mjs` (3/3),
+`node --check` for both source and generated `app.js`, source/mirror parity for
+`app.js` and `styles.css`, and `git diff --check`. A local browser smoke check
+observed the timeline outline as `h1` → period `h2` → event `h3` → expanded
+explanatory `h4` sections; a direct Fraser source route as source-library `h1`
+→ source-record `h2` → record-section `h3`; and the default Liberty work tab
+showing the analysis exactly once after its header summary. Independent audience
+rereview, slop review, Git commit/merge, push, and deployment remain outside
+this implementation handoff.
+
 ## 2026-09-09 Audience readability repair
 
 This bounded implementation responds to an Audience review of the current
