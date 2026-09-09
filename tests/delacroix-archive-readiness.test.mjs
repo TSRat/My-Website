@@ -101,6 +101,16 @@ test("Delacroix bounded redesign keeps exact destinations, local privacy, and th
   assert.match(app, /timeline-direct-header/);
   assert.match(app, /renderEventPanel\(event, false\)/);
   assert.match(app, /timeline-breadcrumb/);
+  assert.match(app, /<h3 class="timeline-event-heading"><button class="event-toggle"/);
+  assert.match(app, /renderEventPanel\(event, true, "h4"\)/);
+  assert.match(app, /function renderTerms\(termIds = \[\], headingTag = "h2"\)/);
+  assert.match(app, /<h2 class="sr-only source-record-title" id="source-title-\$\{source\.id\}">/);
+  assert.match(css, /\.timeline-event-heading\s*\{\s*margin:\s*0;/s);
+
+  const workContentRenderer = app.slice(app.indexOf("function tabContent(work)"), app.indexOf("function renderWork(id)"));
+  assert.match(workContentRenderer, /state\.detailTab === "overview" \? text\(work\.analysis\)/);
+  assert.doesNotMatch(workContentRenderer, /state\.detailTab === "overview" \? `<p>/);
+  assert.doesNotMatch(workContentRenderer, /work\.summary/);
 
   assert.match(html, /id="search-dialog" aria-labelledby="search-eyebrow"/);
   assert.match(html, /id="image-dialog" aria-labelledby="image-dialog-title"/);
