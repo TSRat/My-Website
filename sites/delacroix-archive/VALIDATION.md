@@ -1,5 +1,29 @@
 # 验证记录
 
+## 2026-09-09 Regression D 独立验证
+
+本轮以 `ba9eb48c34ca5e6c79230bd053a838052e170dc9` 为起点，在独立 worktree
+中完成真实 Design/Product 评审、七项边界明确的修复、同视口 BEFORE/AFTER
+复拍、独立技术验证与定向复审。没有发布、部署或修改生产站点。
+
+- `npm run build:delacroix`：通过。
+- `node --check sites/delacroix-archive/app.js`：通过。
+- `node --test tests/delacroix-archive-readiness.test.mjs`：3/3 通过。
+- source/mirror 的 `app.js` 与 `styles.css`：逐字节一致。
+- Chrome 真实浏览器矩阵：9条代表路由 × 1440×900、1024×768、390×844，共27项。
+- 27项均有唯一非空H1与路由标题，无横向文档溢出、可检测文字/控件裁切、控制台警告/错误、HTTP 4xx或失败请求。
+- 搜索“1855”可分别到达生平时期、时间线事件、日志时期与日志条目；作品与资料也可直达匹配记录。
+- 本地回访测试在刷新后找回2件“收藏或有笔记”的作品，画廊未泄露测试笔记正文。
+- 《自由引导人民》移动端主图使用354px可用内容宽度，保持原图比例与 `object-fit: contain`。
+- 小号蓝色房间文本 `#B9A574` 对 `#0F325B` 的对比度约5.34:1。
+- 首页肖像计算样式 `border-radius: 0px`；仍可见的圆角属于1862年历史底片本身。
+- Design 定向复审：3项解决、1项部分解决、0项未解决；Product 定向复审：4项解决、0项部分/未解决。
+
+未验证：Safari、Firefox、真实屏幕阅读器、Windows高对比模式、Core Web
+Vitals与全量外链健康。另记录一个非本轮引入、非阻断的LOW问题：搜索与图片
+对话框容器缺少程序化可访问名称。由此本轮属于 `WEB_PARTIAL_BEHAVIORAL`，
+不宣称 `WEB_E2E_VALIDATED` 或 Final Judge 接受。
+
 验证日期：2026-08-27
 
 本文件保留设计阶段的本地浏览器记录。文中 `output/playwright/*` 截图仍

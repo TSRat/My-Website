@@ -1,5 +1,75 @@
 # Delacroix archive handoff
 
+## 2026-09-09 post-acceptance real-site accessibility repair
+
+The user explicitly requested an actual website change for the issues described
+in the redesign report. The seven primary report repairs were already present
+in the real maintainable source at `8648ff0`; this follow-up closes the one
+concrete, nonblocking issue that the report left open.
+
+- Added `aria-labelledby="search-eyebrow"` to the search dialog and
+  `aria-labelledby="image-dialog-title"` to the enlarged-artwork dialog.
+- The labels are populated in the active Chinese, English, or French interface,
+  so assistive technology receives a meaningful dialog name instead of an
+  unnamed container.
+- Rebuilt the generated `DELACROIX-ARCHIVE/` mirror from
+  `sites/delacroix-archive/`; no mirror was hand edited.
+- Added a readiness assertion that prevents either dialog label relationship
+  from being removed accidentally.
+
+Verification for this narrow change: `npm run build:delacroix`,
+`node --check sites/delacroix-archive/app.js`, and
+`node --test tests/delacroix-archive-readiness.test.mjs` passed (3/3).
+At 390 × 844 in a real Chrome session, both the search dialog and the
+enlarged-artwork dialog opened with their localized visible title content.
+
+No push, pull request, merge, deployment, or Final Judge rerun had been
+performed at the time of local validation. The earlier Final Judge acceptance
+remains historical evidence for its prior frozen commit; it is not extended to
+this post-acceptance source change. The broader browser and
+assistive-technology lanes remain unverified.
+
+## 2026-09-09 real-application redesign
+
+Regression D was executed against the newest clean Delacroix branch state in an
+isolated worktree on `codex/delacroix-real-redesign-20260909`, starting from
+`ba9eb48c34ca5e6c79230bd053a838052e170dc9`. The production site was not used as
+the mutation target because it still reflected an older `main` revision; no
+push, pull request, merge, Pages deployment or production mutation was made.
+
+The bounded redesign preserved the trilingual archive, red/green/blue room
+system, Pierre Petit portrait, signature, stable hash routes, evidence graph,
+artworks and local-only data model. It changed only the following product and
+visual behavior:
+
+- mobile home now reads identity -> portrait -> premise -> one Biography action;
+- work-detail figures use the full mobile content column without cropping;
+- search returns named biography periods, timeline events, journal records,
+  sources and works, and reveals the selected record on arrival;
+- direct timeline URLs lead with the requested event and its evidence;
+- small blue-room labels use a lighter accessible accent while large display
+  gold and metallic rules remain unchanged;
+- CSS-imposed portrait rounding was removed (the historical source plate itself
+  retains rounded photographic corners);
+- Works provides a subordinate local saved/noted return filter without exposing
+  private note text.
+
+Independent Technical Verification passed the build, syntax, 3/3 targeted
+tests, source/mirror parity, and a 27-case Chrome matrix covering nine routes at
+1440x900, 1024x768 and 390x844. That matrix found no horizontal overflow,
+detected clipping, console warning/error, HTTP 4xx response or failed request.
+Design targeted rereview closed three findings and left the intrinsic portrait
+silhouette partially resolved; Product targeted rereview closed all four
+original findings. The only new technical backlog record is a nonblocking,
+pre-existing LOW issue: the search and image dialog containers lack a
+programmatic accessible name.
+
+Broader Safari, Firefox, native screen-reader, Windows high-contrast, exhaustive
+external-link and formal Antigravity Stage 3 lanes were not run. Therefore this
+work is `REAL_APPLICATION_EXECUTED`, `BEHAVIORAL_EVIDENCE_ADDED` and
+`WEB_PARTIAL_BEHAVIORAL`, not `WEB_E2E_VALIDATED`. No Final Judge acceptance is
+claimed.
+
 ## Current target
 
 Publish the accepted trilingual Delacroix archive in `TSRat/My-Website` using
