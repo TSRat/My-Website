@@ -1,5 +1,34 @@
 # Delacroix archive handoff
 
+## 2026-09-09 post-acceptance real-site accessibility repair
+
+The user explicitly requested an actual website change for the issues described
+in the redesign report. The seven primary report repairs were already present
+in the real maintainable source at `8648ff0`; this follow-up closes the one
+concrete, nonblocking issue that the report left open.
+
+- Added `aria-labelledby="search-eyebrow"` to the search dialog and
+  `aria-labelledby="image-dialog-title"` to the enlarged-artwork dialog.
+- The labels are populated in the active Chinese, English, or French interface,
+  so assistive technology receives a meaningful dialog name instead of an
+  unnamed container.
+- Rebuilt the generated `DELACROIX-ARCHIVE/` mirror from
+  `sites/delacroix-archive/`; no mirror was hand edited.
+- Added a readiness assertion that prevents either dialog label relationship
+  from being removed accidentally.
+
+Verification for this narrow change: `npm run build:delacroix`,
+`node --check sites/delacroix-archive/app.js`, and
+`node --test tests/delacroix-archive-readiness.test.mjs` passed (3/3).
+At 390 × 844 in a real Chrome session, both the search dialog and the
+enlarged-artwork dialog opened with their localized visible title content.
+
+No push, pull request, merge, deployment, or Final Judge rerun had been
+performed at the time of local validation. The earlier Final Judge acceptance
+remains historical evidence for its prior frozen commit; it is not extended to
+this post-acceptance source change. The broader browser and
+assistive-technology lanes remain unverified.
+
 ## 2026-09-09 real-application redesign
 
 Regression D was executed against the newest clean Delacroix branch state in an

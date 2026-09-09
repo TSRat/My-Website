@@ -70,7 +70,8 @@ test("Delacroix source assets and generated Pages mirror are complete", async ()
 });
 
 test("Delacroix bounded redesign keeps exact destinations, local privacy, and the archival visual grammar", async () => {
-  const [app, css] = await Promise.all([
+  const [html, app, css] = await Promise.all([
+    readText("sites/delacroix-archive/index.html"),
     readText("sites/delacroix-archive/app.js"),
     readText("sites/delacroix-archive/styles.css"),
   ]);
@@ -96,6 +97,9 @@ test("Delacroix bounded redesign keeps exact destinations, local privacy, and th
   assert.match(app, /timeline-direct-header/);
   assert.match(app, /renderEventPanel\(event, false\)/);
   assert.match(app, /timeline-breadcrumb/);
+
+  assert.match(html, /id="search-dialog" aria-labelledby="search-eyebrow"/);
+  assert.match(html, /id="image-dialog" aria-labelledby="image-dialog-title"/);
 
   assert.match(worksRenderer, /state\.saved\.has\(work\.id\) \|\| workHasNote\(work\.id\)/);
   assert.match(worksRenderer, /data-filter="local"/);
