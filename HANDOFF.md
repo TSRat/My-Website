@@ -1,5 +1,9 @@
 # Repository handoff
 
+## 2026-09-04: DailyAlbum public website integration
+
+Added the existing bilingual DailyAlbum site as `sites/dailyalbum/` with generated `DAILYALBUM/` mirror, a registry entry and build command. This uses the existing Actions Pages architecture. The owner approved `theshamerider0@gmail.com` as the public support contact. The app repository will use the intended `/My-Website/DAILYALBUM/` endpoints after deployment. Branch: `codex/dailyalbum-public-site`, base `393feec`. See `sites/dailyalbum/HANDOFF.md` for exact verification and preview status. No production merge is authorized yet; unrelated site source and private app material are excluded.
+
 ## 2026-08-27: Delacroix Archive public site
 
 ### Current target

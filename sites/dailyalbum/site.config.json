@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "dailyalbum",
+  "title": "DailyAlbum · 每天一张，不猜口味",
+  "slug": "DAILYALBUM",
+  "status": "preview",
+  "interactionTier": "A",
+  "classification": "PRESERVE",
+  "maintenanceRoot": "sites/dailyalbum",
+  "documents": ["CONTENT.md", "DESIGN.md", "TECH.md", "HANDOFF.md"],
+  "source": {"mode": "direct-static", "entry": "index.html", "assets": []},
+  "build": {"command": "npm run build:dailyalbum", "staging": ".site-build/dailyalbum", "mirror": "DAILYALBUM", "mirrorPolicy": "replace"},
+  "publicPath": "/My-Website/DAILYALBUM/",
+  "manifest": "site-manifest.json",
+  "designSource": "design/implementation-map.md",
+  "hub": {
+    "order": 13,
+    "className": "dailyalbum",
+    "cover": "app-icon.png",
+    "artLabel": "DailyAlbum",
+    "eyebrow": "MUSIC · LISTENING JOURNAL",
+    "description": "从经典榜单随机发现一张专辑，用评分、时间线与回忆记录自己的聆听。产品介绍、使用帮助与隐私说明。",
+    "metadata": [["平台", "iPhone / iPad"], ["语言", "中文 / English"]]
+  }
+}

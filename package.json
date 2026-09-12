@@ -6,6 +6,8 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "dev:dailyalbum": "vite sites/dailyalbum",
+    "build:dailyalbum": "node scripts/build-site.mjs dailyalbum",
     "build:pages": "node scripts/build-github-pages.mjs",
     "sync:philosophy-sites": "node scripts/sync-philosophy-site-mirrors.mjs",
     "validate:pages": "node scripts/validate-pages-assets.mjs",
