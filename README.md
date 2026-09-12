@@ -17,6 +17,7 @@
 
 | 项目 | 用途 | 主要维护位置 | GitHub Pages URL | 审核分级 | 迁移 / 审查状态 |
 | --- | --- | --- | --- | --- | --- |
+| DailyAlbum | 专辑随机发现与聆听记录 App 的中英文官网、隐私及支持页面 | `sites/dailyalbum/`；`npm run build:dailyalbum` 更新 `DAILYALBUM/` 镜像 | [DailyAlbum（待发布）](https://tsrat.github.io/My-Website/DAILYALBUM/) | PRESERVE | 沿用现有官网设计，独立分支准备预览；尚未合并或部署 |
 | The Living Atlas | 总入口主站，一个人的开放档案馆 | `sites/living-atlas/`；`THE-LIVING-ATLAS/` 是构建镜像 | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) | REFACTOR | 内容系统通过 [PR #13](https://github.com/TSRat/My-Website/pull/13) 合并；Data / starter 与 Worlds 含混性修正通过 [PR #14](https://github.com/TSRat/My-Website/pull/14) 合并 |
 | IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `sites/ivory-archive/`；`app/` 是 Vinext 路由适配器，`public/` 是框架资源根 | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) | PRESERVE | 六阶段迁移已通过 [PR #15](https://github.com/TSRat/My-Website/pull/15) 合并：双渲染 parity、manifest、Data 入口与 provider-neutral events |
 | Eugène Delacroix / 欧仁·德拉克洛瓦 | 三语艺术家研究档案；生平、20件作品、29个事件档案、日志与逐条来源映射 | `sites/delacroix-archive/`；`npm run build:delacroix` 更新 `DELACROIX-ARCHIVE/` Pages 镜像 | [欧仁·德拉克洛瓦数字档案](https://tsrat.github.io/My-Website/DELACROIX-ARCHIVE/) | REBUILD | 已完成中文、英文、法文界面与初学者导向内容；通过当前发布 PR 接入统一构建和总入口 |

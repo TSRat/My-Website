@@ -37,6 +37,9 @@ Default branch: `main`
 
 ## Source and deployment map
 
+DailyAlbum adds a direct-static maintenance package at `sites/dailyalbum/`.
+`npm run build:dailyalbum` produces `DAILYALBUM/`, which the existing registry-driven Pages build copies to `/My-Website/DAILYALBUM/`. No workflow, permissions, triggers or existing route is changed. Its preserved HTML/CSS design is documented locally instead of claiming a nonexistent Figma source. A `preview` registry status records pre-merge delivery honestly.
+
 | 公开路径 | Pages artifact 来源 | 可读上游源码 | 入口文件 |
 | --- | --- | --- | --- |
 | `/My-Website/` | `scripts/build-github-pages.mjs` 生成 | 生成函数和 `scripts/github-pages-hub.css` | `docs/index.html`（构建时生成） |
