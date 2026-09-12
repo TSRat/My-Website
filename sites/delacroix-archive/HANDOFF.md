@@ -1,5 +1,147 @@
 # Delacroix archive handoff
 
+## 2026-09-09 full audience sweep — structural readability repair
+
+This bounded source-first repair implements the three accepted findings from a
+full Audience review. It preserves all trilingual historical content, stable
+routes, the 1798 evidence boundary, local reading state, and the Romantic
+Archive visual grammar.
+
+- `AUD-FULL-01`: each timeline event in `#/timeline` is now a real `h3`
+  heading-bearing unit. Its expandable control remains a button inside that
+  heading, while its explanatory sections render as `h4`; this preserves the
+  direct-dossier `h1` → `h2` structure and avoids invalid heading-inside-button
+  markup. A one-rule heading-margin reset retains the existing event geometry.
+- `AUD-FULL-02`: opening `#/sources/:sourceId` now exposes the selected source
+  record as an `h2` in the document outline, with its existing access, method,
+  and usage sections below at `h3`. The already-visible disclosure summary is
+  retained, so the semantic repair adds no competing visual title.
+- `AUD-FULL-03`: the default work tab now moves directly from the header’s
+  retained orientation summary to the existing analysis. This removes the
+  previously repeated summary for all 20 works without changing source-backed
+  work content.
+
+Changed maintainable files: `app.js`, `styles.css`,
+`tests/delacroix-archive-readiness.test.mjs`, and this handoff. The uppercase
+`DELACROIX-ARCHIVE/` mirror is generated only by `npm run build:delacroix`; it
+is never hand edited.
+
+Bounded implementer checks passed: `npm run build:delacroix` (which regenerated
+the mirror), `node --test tests/delacroix-archive-readiness.test.mjs` (3/3),
+`node --check` for both source and generated `app.js`, source/mirror parity for
+`app.js` and `styles.css`, and `git diff --check`. A local browser smoke check
+observed the timeline outline as `h1` → period `h2` → event `h3` → expanded
+explanatory `h4` sections; a direct Fraser source route as source-library `h1`
+→ source-record `h2` → record-section `h3`; and the default Liberty work tab
+showing the analysis exactly once after its header summary. Independent audience
+rereview, slop review, Git commit/merge, push, and deployment remain outside
+this implementation handoff.
+
+## 2026-09-09 Audience readability repair
+
+This bounded implementation responds to an Audience review of the current
+trilingual site. It preserves the established four-step viewing interaction,
+the 1798 factual correction and its source boundary, and the Romantic Archive
+visual system.
+
+- `AUD-LE-01`: the guided viewing experiment now gives task-specific, truthful
+  feedback in Chinese, English, and French. Selecting the colour baseline says
+  that the original colour view is retained; grayscale and blur state the
+  actual image change.
+- `AUD-LE-02`: the 1798 event keeps the complete allegation, indirect clues,
+  evidence limit, legal-father and uncertainty conclusion in **Before you
+  read**. Its **Why it matters** text now gives only the non-duplicative
+  interpretation: documented family network, schooling, and early loss better
+  explain the childhood.
+- `AUD-LE-03`: direct timeline dossiers now use `h2` section labels rather
+  than jumping from the dossier `h1` to `h4`. The existing event-section
+  heading styling is retained for the new semantic level.
+
+Changed maintainable files: `app.js`, `research-content.js`, `styles.css`, and
+this handoff. The uppercase `DELACROIX-ARCHIVE/` mirror must be rebuilt only by
+`npm run build:delacroix`; it is never hand edited.
+
+Bounded implementer checks passed: `npm run build:delacroix`; `node --check`
+for both changed source modules and their generated-mirror counterparts; and
+`git diff --check`. A local browser smoke check confirmed the 1798 direct
+dossier exposes `h2` section labels and the colour-task feedback appears with
+its correct Chinese, English, and French meaning. The targeted readiness test
+also now expects the current 14-source library and protects the
+`fraserPaternity` → `fraser-patrimony` mapping in both 1798 reading paths;
+`node --test tests/delacroix-archive-readiness.test.mjs` passed 3/3. Independent audience
+rereview, technical verification, slop review, Git commit/merge, and deployment
+remain outside this handoff.
+
+## 2026-09-09 post-acceptance real-site accessibility repair
+
+The user explicitly requested an actual website change for the issues described
+in the redesign report. The seven primary report repairs were already present
+in the real maintainable source at `8648ff0`; this follow-up closes the one
+concrete, nonblocking issue that the report left open.
+
+- Added `aria-labelledby="search-eyebrow"` to the search dialog and
+  `aria-labelledby="image-dialog-title"` to the enlarged-artwork dialog.
+- The labels are populated in the active Chinese, English, or French interface,
+  so assistive technology receives a meaningful dialog name instead of an
+  unnamed container.
+- Rebuilt the generated `DELACROIX-ARCHIVE/` mirror from
+  `sites/delacroix-archive/`; no mirror was hand edited.
+- Added a readiness assertion that prevents either dialog label relationship
+  from being removed accidentally.
+
+Verification for this narrow change: `npm run build:delacroix`,
+`node --check sites/delacroix-archive/app.js`, and
+`node --test tests/delacroix-archive-readiness.test.mjs` passed (3/3).
+At 390 × 844 in a real Chrome session, both the search dialog and the
+enlarged-artwork dialog opened with their localized visible title content.
+
+No push, pull request, merge, deployment, or Final Judge rerun had been
+performed at the time of local validation. The earlier Final Judge acceptance
+remains historical evidence for its prior frozen commit; it is not extended to
+this post-acceptance source change. The broader browser and
+assistive-technology lanes remain unverified.
+
+## 2026-09-09 real-application redesign
+
+Regression D was executed against the newest clean Delacroix branch state in an
+isolated worktree on `codex/delacroix-real-redesign-20260909`, starting from
+`ba9eb48c34ca5e6c79230bd053a838052e170dc9`. The production site was not used as
+the mutation target because it still reflected an older `main` revision; no
+push, pull request, merge, Pages deployment or production mutation was made.
+
+The bounded redesign preserved the trilingual archive, red/green/blue room
+system, Pierre Petit portrait, signature, stable hash routes, evidence graph,
+artworks and local-only data model. It changed only the following product and
+visual behavior:
+
+- mobile home now reads identity -> portrait -> premise -> one Biography action;
+- work-detail figures use the full mobile content column without cropping;
+- search returns named biography periods, timeline events, journal records,
+  sources and works, and reveals the selected record on arrival;
+- direct timeline URLs lead with the requested event and its evidence;
+- small blue-room labels use a lighter accessible accent while large display
+  gold and metallic rules remain unchanged;
+- CSS-imposed portrait rounding was removed (the historical source plate itself
+  retains rounded photographic corners);
+- Works provides a subordinate local saved/noted return filter without exposing
+  private note text.
+
+Independent Technical Verification passed the build, syntax, 3/3 targeted
+tests, source/mirror parity, and a 27-case Chrome matrix covering nine routes at
+1440x900, 1024x768 and 390x844. That matrix found no horizontal overflow,
+detected clipping, console warning/error, HTTP 4xx response or failed request.
+Design targeted rereview closed three findings and left the intrinsic portrait
+silhouette partially resolved; Product targeted rereview closed all four
+original findings. The only new technical backlog record is a nonblocking,
+pre-existing LOW issue: the search and image dialog containers lack a
+programmatic accessible name.
+
+Broader Safari, Firefox, native screen-reader, Windows high-contrast, exhaustive
+external-link and formal Antigravity Stage 3 lanes were not run. Therefore this
+work is `REAL_APPLICATION_EXECUTED`, `BEHAVIORAL_EVIDENCE_ADDED` and
+`WEB_PARTIAL_BEHAVIORAL`, not `WEB_E2E_VALIDATED`. No Final Judge acceptance is
+claimed.
+
 ## Current target
 
 Publish the accepted trilingual Delacroix archive in `TSRat/My-Website` using
