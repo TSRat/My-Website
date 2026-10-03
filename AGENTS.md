@@ -29,6 +29,7 @@
 | Enheduanna | `sites/enheduanna/`；发布前运行 `npm run build:enheduanna` | 只改 TSX 却忽略 `ENHEDUANNA/` 镜像 |
 | Hypatia | `sites/hypatia/`；`npm run build:hypatia` 更新 `HYPATIA/` 镜像 | 大写镜像及其中未被入口引用的旧 bundle 或样式文件 |
 | Hildegard | `sites/hildegard/`；`npm run build:hildegard` 更新 `HILDEGARD/` 镜像 | 直接手改大写发布镜像 |
+| Delacroix Archive | `sites/delacroix-archive/`；`npm run build:delacroix` 更新 `DELACROIX-ARCHIVE/` 镜像 | 直接手改大写发布镜像 |
 | Melromarc Sisters | `sites/melromarc-sisters/`；发布前运行 `npm run build:melromarc` | 旧 Vinext bundle、带哈希的编译文件或 `MELROMARC-SISTERS/` 镜像 |
 
 如果真实上游源码或重建命令无法确认，停止高风险实现并把问题写入 `HANDOFF.md`。不要假装存在可重建流程。

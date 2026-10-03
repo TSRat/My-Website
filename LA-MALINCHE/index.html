@@ -39,6 +39,10 @@
         <span class="brand-series">Daughters of Time · 003</span>
       </a>
       <div class="header-actions">
+        <div class="reading-status" aria-label="当前阅读位置">
+          <span id="reading-screen">00 / 69</span>
+          <span id="reading-chapter">序章</span>
+        </div>
         <a class="header-link" href="#watch">观看上下集</a>
         <a class="header-link" href="#traitor">谁背叛了谁？</a>
         <button
@@ -66,14 +70,14 @@
     </div>
 
     <nav class="progress-rail" aria-label="八章阅读进度">
-      <a href="#before" title="第一章 前世">01</a>
-      <a href="#translator" title="第二章 翻译者">02</a>
-      <a href="#conqueror" title="第三章 征服者">03</a>
-      <a href="#killing" title="第四章 杀戮">04</a>
-      <a href="#rupture" title="第五章 撕裂">05</a>
-      <a href="#endgame" title="第六章 终局">06</a>
-      <a href="#survivor" title="第七章 幸存者">07</a>
-      <a href="#traitor" title="第八章 背叛者">08</a>
+      <a href="#before" title="第一章 前世" data-short="前世">01</a>
+      <a href="#translator" title="第二章 翻译者" data-short="翻译者">02</a>
+      <a href="#conqueror" title="第三章 征服者" data-short="征服者">03</a>
+      <a href="#killing" title="第四章 杀戮" data-short="杀戮">04</a>
+      <a href="#rupture" title="第五章 撕裂" data-short="撕裂">05</a>
+      <a href="#endgame" title="第六章 终局" data-short="终局">06</a>
+      <a href="#survivor" title="第七章 幸存者" data-short="幸存者">07</a>
+      <a href="#traitor" title="第八章 背叛者" data-short="背叛者">08</a>
     </nav>
 
     <main id="top">
@@ -186,7 +190,7 @@
         <div class="gate-number" aria-hidden="true">01</div>
         <div class="gate-copy" data-reveal>
           <span class="chapter-index">第一章</span>
-          <h2 class="display-lines"><span>她出生以前，</span><span>世界怎样运转？</span></h2>
+          <h2 class="display-lines controlled-wrap"><span>她出生以前，</span><span>世界怎样运转？</span></h2>
           <p class="lead">
             十六世纪初的中部美洲没有统一的“墨西哥国家”。数百座城邦各有统治者、军队、神庙与政治选择。
           </p>
@@ -263,7 +267,7 @@
       <section class="scene origin-map" data-screen="08" data-chapter="before">
         <div class="origin-copy" data-reveal>
           <p class="eyebrow"><span class="scene-number">08</span>约 1500 · 奥卢特拉</p>
-          <h3 class="display-lines"><span>她出生在</span><span>贡赋圈的边缘。</span></h3>
+          <h3 class="display-lines controlled-wrap"><span>她出生在</span><span>贡赋圈的边缘。</span></h3>
           <p>
             她大约出生于今天墨西哥湾沿岸附近。具体年份、地点与出生名都无人知晓。
             奥卢特拉附近连接纳瓦语与玛雅语世界，也连接海岸贸易、地方权力与人口转卖网络。
@@ -535,10 +539,11 @@
             loading="lazy"
           />
           <figcaption>坎蒂诺世界地图 · 1502 · Biblioteca Estense Universitaria / Wikimedia Commons · Public Domain</figcaption>
+          <div class="mobile-scene-cue" aria-hidden="true"><b>23 / 69</b><span>欧洲走向远洋</span></div>
         </figure>
         <div class="navigation-copy" data-reveal>
           <p class="eyebrow"><span class="scene-number">23</span>十五世纪 · 欧洲走向远洋</p>
-          <h2>船、风与海图，把战争带过海洋。</h2>
+          <h2 class="display-lines controlled-wrap"><span>船、风与海图，</span><span>把战争带过海洋。</span></h2>
           <p>
             改进的帆船、罗盘、天文导航和海图，让伊比利亚王国能够在大西洋建立更长的航线。
             航海与贸易、传教、战争、奴役和争夺贵金属同时发生。
@@ -740,7 +745,7 @@
       <section class="scene negotiation-steps" data-screen="32" data-chapter="killing">
         <div class="steps-title" data-reveal>
           <p class="eyebrow"><span class="scene-number">32</span>特拉斯卡拉 · 从战争到联盟</p>
-          <h2>先战斗，再谈判，再结盟。</h2>
+          <h2 class="display-lines controlled-wrap"><span>先战斗，再谈判，</span><span>再结盟。</span></h2>
           <p>
             一支来历不明的武装力量进入领地，首先引发的是抵抗。数周冲突后，
             双方才在损失、技术差距与共同敌人的现实中重新计算利益。
@@ -853,8 +858,8 @@
 
       <section class="scene late-scene late-three-voices" data-screen="37" data-chapter="rupture">
         <div class="late-heading late-heading-light" data-reveal>
-          <p class="eyebrow"><span class="scene-number">37</span>1519 年 11 月 8 日 · 第一次正式会面</p>
-          <h2>三个人，三套政治语言。</h2>
+          <p class="eyebrow"><span class="scene-number">37</span><span class="eyebrow-label">1519 年 11 月 8 日 ·<wbr />第一次正式会面</span></p>
+          <h2 class="display-lines controlled-wrap"><span>三个人，</span><span>三套政治语言。</span></h2>
           <p>蒙特苏马、科尔特斯与马琳切站在同一场会面中，却拥有完全不同的位置与权力。</p>
         </div>
         <div class="voice-triptych">
@@ -1039,7 +1044,7 @@
       <section class="scene late-scene late-brigantines" data-screen="47" data-chapter="endgame">
         <div class="brigantine-copy" data-reveal>
           <p class="eyebrow"><span class="scene-number">47</span>特斯科科湖 · 船只工程</p>
-          <h2>十三艘双桅帆船被拆开，又在湖边组装。</h2>
+          <h2 class="display-lines controlled-wrap"><span>十三艘双桅帆船</span><span>被拆开，<wbr />又在湖边组装。</span></h2>
           <p>船体部件从特拉斯卡拉经陆路搬运到湖边，在特斯科科重新组装。它们比独木舟更适合搭载火炮与武装人员，改变了湖面战斗的条件。</p>
           <div class="brigantine-count" aria-label="十三艘双桅帆船">
             <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span>
@@ -1069,6 +1074,7 @@
 
       <section class="scene late-scene late-pressure" data-screen="49" data-chapter="endgame">
         <div class="pressure-title" data-reveal>
+          <span class="siege-sequence">围城进程 · 06 / 10</span>
           <p class="eyebrow"><span class="scene-number">49</span>1521 年春夏 · 数月围攻</p>
           <h2>围城一步步收紧。</h2>
           <p>联军每天推进、填平缺口、拆毁房屋，又在夜间遭遇守军反击。胜负由一连串反复争夺累积而成。</p>
@@ -1128,10 +1134,11 @@
         <figure class="world-map">
           <img src="./assets/archive/cantino-planisphere.webp" alt="1502 年坎蒂诺世界地图" width="3600" height="2160" loading="lazy" />
           <figcaption>坎蒂诺世界地图 · 1502 · Biblioteca Estense / Wikimedia Commons · Public Domain</figcaption>
+          <div class="mobile-scene-cue" aria-hidden="true"><b>53 / 69</b><span>同一扩张时代</span></div>
         </figure>
         <div class="world-copy" data-reveal>
           <p class="eyebrow"><span class="scene-number">53</span>1522 年 9 月 · 另一条航线</p>
-          <h2>一年后，维多利亚号回到西班牙。</h2>
+          <h2 class="display-lines controlled-wrap"><span>一年后，</span><span>维多利亚号</span><span>回到西班牙。</span></h2>
           <p>麦哲伦远征的幸存船只维多利亚号完成环球航行。马琳切参与的战争与这次航行发生在同一扩张时代：欧洲王权、商人和征服者正在把海洋、贸易与殖民据点连接成更大的体系。</p>
           <div class="world-years"><span><b>1521</b>特诺奇蒂特兰陷落</span><span><b>1522</b>维多利亚号返航</span></div>
           <span class="evidence-tag">全球背景 Historical context</span>
@@ -1287,7 +1294,7 @@
         <div class="memory-title" data-reveal>
           <span class="chapter-index">第八章 · 死后的形象</span>
           <p class="eyebrow"><span class="scene-number">61</span>五百年的改写</p>
-          <h2>她何时被写成“叛徒”？</h2>
+          <h2 class="controlled-wrap memory-question">她何时被写成“叛徒”？</h2>
           <p>征服发生在十六世纪，“马琳切等于民族叛徒”的熟悉形象却在几百年后逐渐形成。要理解这个指控，必须先看是谁、在什么时代使用了她。</p>
         </div>
         <div class="memory-axis">
@@ -1347,7 +1354,7 @@
       <section class="scene late-scene late-word" data-screen="65" data-chapter="traitor">
         <div class="word-title" data-reveal>
           <p class="eyebrow"><span class="scene-number">65</span>二十世纪 · 词语的政治</p>
-          <h2>Malinchismo：一个后世造出的词。</h2>
+          <h2 class="display-lines controlled-wrap"><span>Malinchismo：</span><span>一个后世造出的词。</span></h2>
           <p>在现代墨西哥西班牙语中，malinchismo 常用来批评偏爱外国事物、贬低本国文化或向外部利益屈服。这个词把复杂的殖民历史浓缩成她的名字。</p>
         </div>
         <div class="word-anatomy" aria-label="Malinchismo 词语结构">
@@ -1406,7 +1413,7 @@
       <section class="scene late-scene late-final-ledger" data-screen="69" data-chapter="traitor">
         <div class="final-ledger-title" data-reveal>
           <p class="eyebrow"><span class="scene-number">69</span>谁背叛了背叛者？</p>
-          <h2>她参与了征服，也被后世用来替征服者承担罪责。</h2>
+          <h2 class="display-lines controlled-wrap"><span>她参与了征服，</span><span>也被后世用来<wbr />替征服者</span><span>承担罪责。</span></h2>
         </div>
         <div class="responsibility-ledger">
           <article>

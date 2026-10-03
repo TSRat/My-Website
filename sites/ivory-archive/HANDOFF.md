@@ -1,5 +1,486 @@
 # IVORY ARCHIVE handoff
 
+## 2026-09-02 · Issue 47 daily publication
+
+### Current target
+
+发布第 47 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-09-02 第 47 期：Sunil Gupta 五十年摄影回顾展、Medicare
+  医师工作价值的三阶段决策、Mexico 青少年电视食品广告政策模拟、老年
+  谵妄患者出院后的家庭照护，以及 LUX-ZEPLIN 的单个异常候选事件。
+- 每则先解释陌生人物、制度或研究对象，再分开记录事件、带句号的细节、
+  编辑分析与创作角度。食品广告条目明确区分模型结果与已观察政策成效，
+  照护访谈保留单中心小样本边界，LZ 条目没有把 2.6 sigma 写成发现。
+- 与此前 230 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。食品广告模型与第 39 期青年酒精营销综述最接近，
+  但研究对象、方法、结论与政策问题均不同；最终五则无实质重复，结果为 5/5。
+- 新增五张明确标注的 AI 编辑插图，不冒充摄影作品、被摄者、临床会议、
+  食品广告、青少年、患者、照护者、探测器数据或新闻现场。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `app/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 47 期渐进式 JPEG 图片
+
+### Verification
+
+- 运行 `npm run lint`、`npm test`、`npm run build:pages`、
+  `npm run validate:artifact` 与 `git diff --check`。
+- 五张图片统一验证为 1672×941、8-bit sRGB 渐进式 JPEG，并核对首页卡片
+  与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；仓库没有
+  `gh-pages` 分支，因此不创建或改写该分支。
+
+## 2026-09-01 · Issue 46 daily publication
+
+### Current target
+
+发布第 46 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-09-01 第 46 期：Maryam Adib 的 Aminah Robinson 艺术驻地、
+  Arkansas 三位女性艺术家的《Words Become Matter》、青年心理健康药物试验
+  代表性审计、西南 Ethiopia 产后不健康体重控制行为，以及 Petermann Glacier
+  冰岛断裂、漂移与卫星追踪。
+- 每则先解释陌生人物、制度或研究对象，再分开记录事件、带句号的细节、
+  编辑分析与创作角度。两项健康研究保留横断面或综述边界，冰川条目也没有
+  把单次崩解写成气候变化的直接证明。
+- 与此前 225 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较；另排除一条与既有青年使用 AI 求助心理问题故事
+  实质重合的候选，最终五则均无实质重复，结果为 5/5。
+- 新增五张明确标注的 AI 编辑插图，不冒充艺术家、作品、研究参与者、
+  临床现场、卫星影像、冰川或新闻现场。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `app/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 46 期渐进式 JPEG 图片
+
+### Verification
+
+- 运行 `npm run lint`、`npm test`、`npm run build:pages`、
+  `npm run validate:pages` 与 `git diff --check`。
+- 五张图片统一验证为 1672×941、8-bit sRGB 渐进式 JPEG，并核对首页卡片
+  与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；仓库没有
+  `gh-pages` 分支，因此不创建或改写该分支。
+
+## 2026-08-31 · Issue 45 daily publication
+
+### Current target
+
+发布第 45 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-31 第 45 期：Houdini 研究型魔术图书馆、Ursula von
+  Rydingsvard 将腐朽雪松装置重构为单件青铜作品、Ibadan 家庭食品安全与
+  城市基础设施、医师隐性种族偏见与明确血管照护指南，以及早期职业医生
+  考虑和实际采用兼职安排的性别差异。
+- 每则先解释陌生人物、作品、制度或研究对象，再分开记录事件、带句号的
+  细节、分析与创作角度。三项观察性研究保留选择偏差、测量范围与非因果
+  边界；艺术重构也没有被写成原作修复。
+- 与此前 220 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。另重点复核既有活材料展、馆藏史、种族变量研究、
+  妊娠糖尿病随访与照护劳动条目，最终五则均无实质重复，结果为 5/5。
+- 新增五张明确标注的 AI 编辑插图，不冒充历史资料、艺术作品、城市地图、
+  研究图、医生、患者、医院排班或新闻现场。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `app/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 45 期渐进式 JPEG 图片
+
+### Verification
+
+- 运行 `npm run lint`、`npm test`、`npm run build:pages`、
+  `npm run validate:pages` 与 `git diff --check`。
+- 五张图片统一验证为 1672×941、8-bit sRGB 渐进式 JPEG，并核对首页卡片
+  与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；仓库没有
+  `gh-pages` 分支，因此不创建或改写该分支。
+
+## 2026-08-30 · Issue 44 daily publication
+
+### Current target
+
+发布第 44 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-30 第 44 期：Hirshhorn 馆藏手册的选择机制、Duke
+  Kunshan “Art at the Margins”会议、Toronto 酷儿移民与难民的非稳定
+  就业叙事、美国宫颈癌从未筛查趋势，以及 Roman Space Telescope 成功
+  升空后通往 L2、调试和公共档案的连续基础设施。
+- 每则先解释陌生机构、制度、研究对象或任务，再分开记录事件、带句号的
+  细节、分析与创作角度。两项健康与劳动研究保留小样本、自报资料、横断
+  面趋势与非因果边界；Roman 的未来发现数也没有被写成既有结果。
+- 与此前 215 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。五则在人物、事件、结论和创作角度上均无实质重复，
+  结果为 5/5。
+- 新增五张明确标注的 AI 编辑插图，不冒充馆藏、艺术作品、讲者、受访者、
+  患者、医疗图像、火箭、航天器或新闻现场。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `app/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 44 期渐进式 JPEG 图片
+
+### Verification
+
+- 运行 `npm run lint`、`npm run test`、`npm run build:pages` 与
+  `git diff --check`；IVORY 静态引用检查为 735 项、零缺失。
+- 五张图片统一验证为 1672×941、8-bit sRGB 渐进式 JPEG，并核对首页卡片
+  与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；仓库没有
+  `gh-pages` 分支，因此不创建或改写该分支。
+
+## 2026-08-29 · Issue 43 daily publication
+
+### Current target
+
+发布第 43 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-29 第 43 期：Walter Wick 隐藏物件摄影的布景与注意力
+  设计、Kathleen Deagan 五十余年的考古职业与馆藏网络、危机妊娠中心和
+  堕胎服务的全国地理差异、澳大利亚未满十六岁社交媒体账户限制实施前
+  基线，以及 Galápagos 珊瑚记录的千年 El Niño 变率。
+- 每则先解释陌生人物、制度、服务类型或气候指标，再分开记录事件、带句号
+  的细节、分析和创作角度。两项 JAMA 研究均保留横断面与意向测量边界，
+  珊瑚代用记录也没有被写成仪器观测或单次事件归因。
+- 与此前 210 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。Wick 区别于既有 Ed Young 图画书历史，Deagan
+  区别于既有 Roman 陶器工坊和黑人女性情感档案，生殖服务地图区别于
+  第 36 期 Dobbs 后跨州就诊结果，澳大利亚账户限制区别于既有家庭限用
+  试验与 X 推荐信息流研究，珊瑚条目则首次聚焦千年 ENSO 代用记录，最终
+  五则均无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充艺术家、作品、考古学家、遗址、
+  诊所、患者、青少年、平台界面、珊瑚样本、研究图或真实现场。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `app/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 43 期渐进式 JPEG 图片
+
+### Verification
+
+- 发布前运行 `npm run build:pages`、`npm run validate:pages`、完整
+  `npm test`、`npm run lint` 与 `git diff --check`。
+- 五张图片统一验证为 1672×941、8-bit sRGB 渐进式 JPEG，并核对首页卡片
+  与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
+## 2026-08-28 · Issue 42 daily publication
+
+### Current target
+
+发布第 42 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-28 第 42 期：Ulrich Museum 尝试展示大部分七千三百件
+  馆藏、nia love 与父亲 Ed Love 的雕塑—舞蹈跨代对话、美国 Women’s Pro
+  Baseball League 首赛季、城市自然可达性指标审计，以及阿塔卡马罕见降雪
+  迫使 ALMA 等天文台暂停运行。
+- 每则先解释陌生机构、作品、历史制度、空间指标或观测设施，再分开记录事件、
+  带句号的细节、分析和创作角度。城市研究保留三城样本与规格敏感性边界，
+  卫星影像也没有被写成气候归因或天文台损失统计。
+- 与此前 205 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。馆藏开放区别于第 39 期私人遗赠塑造永久展厅，
+  nia love 条目区别于既有奴隶制记忆展与监狱声音实践，女子棒球区别于
+  体育资格筛查，城市自然指标审计区别于第 39 期性别公平照护行程设计，
+  阿塔卡马条目则聚焦异常天气与天文台保护协议，最终五则均无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充馆藏、艺术家、历史人物、球员、
+  联赛标志、城市地图、研究图、NASA 卫星影像、ALMA 或真实现场。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `app/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 42 期渐进式 JPEG 图片
+
+### Verification
+
+- 发布前运行 `npm run build:pages`、`npm run validate:pages`、完整
+  `npm test`、`npm run lint` 与 `git diff --check`。
+- 五张图片统一验证为 1672×941、8-bit sRGB 渐进式 JPEG，并核对首页卡片
+  与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
+## 2026-08-27 · Issue 41 daily publication
+
+### Current target
+
+发布第 41 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-27 第 41 期：Paul Lehr 的商业科幻插画与私人雕塑、
+  Dorothea Lasky 对 Bernadette Mayer《Memory》的跨代回应、美国县域机会
+  与致命警车追逐、绝经年龄与晚年认知和脑影像轨迹，以及 NASA DSS-23
+  深空通信天线正式运行。
+- 每则先解释陌生人物、作品、研究指标或技术网络，再分开记录事件、带句号
+  的细节、分析和创作角度。县域与绝经研究均保留关联边界，DSS-23 也没有
+  被写成单座天线自动解决全部任务排班。
+- 与此前 200 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。Lehr 条目区别于既有展览与科幻媒介故事，Lasky
+  条目聚焦跨代记忆方法，追逐研究有独立县域分母问题，绝经研究不同于既有
+  更年期文化和健康老化条目，DSS-23 则聚焦地面通信容量，最终五则均无
+  实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充艺术家、作品、档案、警车追逐、
+  县域地图、研究图、脑扫描、NASA 天线或真实观测现场。
+- 补回根应用缺失的 `site-shell` 薄适配文件，使应用路由继续复用权威站点
+  组件；统一动态与 Pages 渲染器读取 `whyItMatters` 分析字段，并把九十条
+  旧事实项目中的分号机械规范为完整句号，使既有内容合同测试恢复通过。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `app/briefings.ts`
+- `sites/ivory-archive/briefings/[date]/page.tsx`
+- `app/briefings/[date]/page.tsx`
+- `app/site-shell.tsx`
+- `scripts/build-github-pages.mjs`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 41 期渐进式 JPEG 图片
+
+### Verification
+
+- `npm run build:pages`、`npm run validate:pages`、完整 `npm test`（46/46）、
+  `npm run lint` 与源文件范围 `git diff --check` 均通过；lint 仅保留其他
+  既有站点的 27 条 warning，没有 error。
+- Pages 生成器验证 1,425 项本地引用；五张图片统一验证为 1672×941、
+  8-bit sRGB 渐进式 JPEG，并核对首页卡片与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
+## 2026-08-16 · Issue 31 daily publication
+
+### Current target
+
+发布第 31 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-16 第 31 期：MoMA 百年动画制作档案、《“Shangri”
+  罗摩衍那》分散画页与数字重组、磁星周围真空双折射候选证据、三十一国
+  熟人网络与不平等态度，以及印度面向女性的无条件现金转移与照护承认。
+- 每则先解释陌生媒介、宗教文本、物理效应、调查指标或福利制度，再分开
+  记录事件、带句号细节和分析；数字重组没有被写成原件替代，跨波段偏振
+  没有被写成最终确认，横截面网络关联也没有被写成因果影响。
+- 与此前 150 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。动画制作档案与既有电影放映基础设施不同，史诗
+  画页重组与第 22 期手稿制作工艺不同，现金转移也不同于第 17 期福利悬崖，
+  最终五则均无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充 MoMA 展品、Pahari 画页、天文
+  观测、研究图、调查参与者、政策受益者或真实支付界面。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 31 期渐进式 JPEG 图片
+
+### Verification
+
+- 发布前运行 `npm run build:pages`、`npm run validate:pages`、
+  `npm run build:ivory`、renderer parity / 内容合同测试、`npm run lint` 与
+  `git diff --check`。
+- 五张图片统一验证为 1672×941、8-bit sRGB 渐进式 JPEG，并核对首页卡片与当日
+  日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
+## 2026-08-15 · Issue 30 daily publication
+
+### Current target
+
+发布第 30 期，同时补齐此前仅完成 Sites 发布、未进入 GitHub `main` 的第 29 期，
+并沿用多站点 Actions artifact 架构更新 GitHub Pages。
+
+### Completed
+
+- 新增 2026-08-15 第 30 期：de Young 女性纸本艺术与承诺赠礼、美国高校
+  AI 艺术教育基准、州级驱逐暂缓令与寄养照护进入、性与性别多元青年
+  心理健康服务轨迹，以及东日本大地震后十五年创伤反应随访。
+- 同步恢复第 29 期的五则数据和五张图片，使 GitHub 源码与 Sites 内容重新
+  一致；第 29 期仍保持 2026-08-14 原始日期、来源和限定语。
+- 与此前 145 则日刊及两个历史基线按人物、作品、制度、研究、核心判断和
+  内容转化角度逐项比较。女性艺术家收藏条目与既有个展的对象不同；住房
+  政策条目也没有重复第 17 期福利悬崖的个体收益机制，最终五则均无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充展品、艺术家、真实课堂、家庭、
+  性与性别多元青年、灾难现场、病历或研究图。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下第 29 与第 30 期共十张图片
+
+### Verification
+
+- 发布前运行 `npm run build:pages`、`npm run validate:pages`、
+  `npm run build:ivory`、renderer parity / 内容合同测试、`npm run lint` 与
+  `git diff --check`。
+- 第 30 期五张图片统一验证为 1672×941、sRGB、渐进式 JPEG，并核对首页
+  卡片与当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
+## 2026-08-12 · Issue 27 daily publication
+
+### Current target
+
+发布第 27 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-12 第 27 期：中文茶箱标签来源更正、Della Robbia 釉陶
+  雕塑修复与重新归属、失语症与逻辑推理分离、La Mojana 古代集体水利，
+  以及亚洲四地同性关系法律改革后的公共话语与安全感变化。
+- 每则先解释陌生人物、制度或研究对象，再分开记录事件、带句号细节和
+  分析；两名失语个案、考古劳动模型及法律改革前后关联没有被写成总体
+  能力、唯一治理形式或已经证明的单向因果关系。
+- 与此前 130 则日刊及两个历史基线按人物、作品、事件、核心判断和内容
+  转化角度逐项比较，最终五则均无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充历史文物、艺术家作品、脑部
+  扫描、考古地图、研究图、社交平台界面或真实人物。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 27 期图片
+
+### Verification
+
+- 发布前运行 `npm run build:pages`、`npm run validate:pages`、
+  `npm run build:ivory`、renderer parity / 内容合同测试、`npm run lint` 与
+  `git diff --check`。
+- 五张图片统一验证为 1672×941、sRGB、渐进式 JPEG，并核对首页卡片与
+  当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
+## 2026-08-11 · Issue 26 daily publication
+
+### Current target
+
+发布第 26 期，把五则新故事与五张编辑插图同步到 Sites 和 GitHub Pages，
+同时保持初学者四段式内容合同与多站点 Actions artifact 架构。
+
+### Completed
+
+- 新增 2026-08-11 第 26 期：武田秀雄《源平》讽刺版画、美国犹太
+  政治生活档案展、三种文化的挠痒身体地图、三十四国感恩干预大型研究，
+  以及居住环境与黑人女性卵巢癌生存差异研究。
+- 每则先解释陌生人物、制度或研究对象，再分开记录事件、带句号细节和
+  分析；跨文化相似、即时干预变化和观察性生存关联没有被写成普遍人性、
+  长期心理疗效或已经证明的因果机制。
+- 与此前 125 则日刊及两个历史基线按人物、作品、事件、核心判断和内容
+  转化角度逐项比较，最终五则均无实质重复。
+- 新增五张明确标注的 AI 编辑插图，不冒充艺术家作品、历史档案、研究
+  身体图、参与者通信、患者、地图、病历或统计图。
+
+### Modified files
+
+- `sites/ivory-archive/briefings.ts`
+- `sites/ivory-archive/CONTENT.md`
+- `sites/ivory-archive/HANDOFF.md`
+- `public/story-images/` 下五张第 26 期图片
+
+### Verification
+
+- 发布前运行 `npm run build:pages`、`npm run validate:pages`、
+  `npm run build:ivory`、renderer parity / 内容合同测试、`npm run lint` 与
+  `git diff --check`。
+- 五张图片统一验证为 1672×941、sRGB、渐进式 JPEG，并核对首页卡片与
+  当日日刊正文均引用全部图片。
+
+### Delivery state
+
+- Base branch: `main`.
+- GitHub Pages 继续由现有 Actions artifact workflow 发布；不创建或更新
+  `gh-pages` 分支。
+
 ## 2026-08-09 · Issue 24 daily publication
 
 ### Current target

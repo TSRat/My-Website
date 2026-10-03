@@ -63,7 +63,7 @@ export async function loadSiteProjects() {
 }
 
 async function validateSiteProjects(projects) {
-  assert(projects.length === 12, `Expected 12 site packages, found ${projects.length}`);
+  assert(projects.length === 14, `Expected 14 site packages, found ${projects.length}`);
 
   const ids = new Set();
   const slugs = new Set();
@@ -89,7 +89,7 @@ async function validateSiteProjects(projects) {
       project.maintenanceRoot === `sites/${project.id}`,
       `${label}: maintenanceRoot must be sites/${project.id}`,
     );
-    assert(project.status === "published", `${label}: status must be published`);
+    assert(["published", "preview"].includes(project.status), `${label}: status must be published or preview`);
     assert(
       supportedTiers.has(project.interactionTier),
       `${label}: interactionTier must be A, B, or C`,
@@ -98,10 +98,16 @@ async function validateSiteProjects(projects) {
       supportedClassifications.has(project.classification),
       `${label}: unsupported classification ${project.classification}`,
     );
-    assert(
-      /^https:\/\/www\.figma\.com\/design\//.test(project.figmaUrl ?? ""),
-      `${label}: missing Figma design source`,
-    );
+    if (project.designSource) {
+      assert(project.classification === "PRESERVE", `${label}: local design source is only for a preserved interface`);
+      assert(project.designSource === "design/implementation-map.md", `${label}: invalid local design source`);
+      await assertPath(join(project.packageRoot, project.designSource), `${label}: missing preserved design implementation map`);
+    } else {
+      assert(
+        /^https:\/\/www\.figma\.com\/design\//.test(project.figmaUrl ?? ""),
+        `${label}: missing Figma design source`,
+      );
+    }
     assert(
       JSON.stringify(project.documents) === JSON.stringify(expectedDocuments),
       `${label}: documents must use the shared maintenance contract`,

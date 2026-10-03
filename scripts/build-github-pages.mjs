@@ -1,13 +1,11 @@
 import { copyFile, cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { buildAllDeployMirrors } from "./build-site.mjs";
 import { loadSiteProjects } from "./site-projects.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const pagesRoot = join(root, "docs");
 const siteSlug = "IVORY-ARCHIVE";
-await buildAllDeployMirrors();
 const staticSites = (await loadSiteProjects())
   .filter((project) => project.build.mirror && project.hub)
   .sort((left, right) => left.hub.order - right.hub.order)
@@ -206,10 +204,11 @@ function issuePage(briefing) {
       <header><span class="long-number">${String(storyIndex + 1).padStart(2, "0")}</span><div><span class="tag">${escapeHtml(story.category)}</span><h2>${escapeHtml(story.title)}</h2><p>${escapeHtml(story.summary)}</p></div></header>
       <figure><img loading="lazy" src="../../story-images/${escapeHtml(storyImageName(story))}" alt="${escapeHtml(story.imageAlt)}"><figcaption>${escapeHtml(story.imageCredit)}</figcaption></figure>
       <div class="story-learning-flow">
-        <section class="story-section"><p class="section-step">01 · Background</p><h3>背景</h3><p>${escapeHtml(story.background)}</p></section>
-        <section class="story-section happened-block"><p class="section-step">02 · Event</p><h3>事件</h3><p>${escapeHtml(story.happened)}</p></section>
-        <section class="story-section background-block"><p class="section-step">03 · Details</p><h3>细节</h3><ul>${story.facts.map((fact) => `<li>${escapeHtml(fact)}</li>`).join("")}</ul></section>
-        <section class="story-section analysis-block"><p class="section-step">04 · Analysis</p><h3>分析</h3><p>${escapeHtml(story.whyItMatters)}</p></section>
+        <section class="story-section"><h3>背景</h3><p>${escapeHtml(story.background)}</p></section>
+        <section class="story-section happened-block"><h3>事件</h3><p>${escapeHtml(story.happened)}</p></section>
+        <section class="story-section background-block"><h3>细节</h3><ul>${story.facts.map((fact) => `<li>${escapeHtml(fact)}</li>`).join("")}</ul></section>
+        <section class="story-section analysis-block"><h3>分析</h3><p>${escapeHtml(story.whyItMatters)}</p></section>
+${story.creatorAngle ? `        <section class="story-section"><h3>创作角度</h3><p>${escapeHtml(story.creatorAngle)}</p></section>` : ""}
         <aside class="story-source-link"><a data-analytics-event="source_opened" data-analytics-target="${escapeHtml(`${briefing.date}:${storyIndex + 1}:analysis`)}" href="${escapeHtml(story.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(story.sourceName)}｜${escapeHtml(story.title)} ↗</a><small class="source-url">${escapeHtml(story.sourceDate)} · 点开即可阅读原文</small></aside>
       </div>
       <a class="back-to-top" href="#content">回到本期顶部 ↑</a>
@@ -259,8 +258,8 @@ for (const briefing of briefings) {
 
 for (const site of staticSites) {
   const target = join(pagesRoot, site.slug);
-  await rm(target, { recursive: true, force: true });
-  await cp(join(root, site.slug), target, { recursive: true });
+  await mkdir(target, { recursive: true });
+  await cp(join(root, site.slug), target, { recursive: true, force: false, errorOnExist: false });
 }
 
-console.log(`Generated ${siteSlug}, refreshed every static site directory, and built the multi-site hub.`);
+console.log(`Generated ${siteSlug}, preserved existing static site directories, and built the multi-site hub.`);

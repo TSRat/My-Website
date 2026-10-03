@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "delacroix-archive",
+  "title": "欧仁·德拉克洛瓦数字档案",
+  "slug": "DELACROIX-ARCHIVE",
+  "status": "published",
+  "interactionTier": "B",
+  "classification": "REBUILD",
+  "maintenanceRoot": "sites/delacroix-archive",
+  "documents": ["CONTENT.md", "DESIGN.md", "TECH.md", "HANDOFF.md"],
+  "source": {
+    "mode": "direct-static",
+    "entry": "index.html",
+    "assets": ["assets"]
+  },
+  "build": {
+    "command": "npm run build:delacroix",
+    "staging": ".site-build/delacroix-archive",
+    "mirror": "DELACROIX-ARCHIVE",
+    "mirrorPolicy": "replace"
+  },
+  "publicPath": "/My-Website/DELACROIX-ARCHIVE/",
+  "manifest": "site-manifest.json",
+  "figmaUrl": "https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt",
+  "hub": {
+    "order": 11,
+    "className": "delacroix",
+    "cover": "assets/pierre-petit-delacroix-1862.png",
+    "eyebrow": "ARTIST ARCHIVE · 1798—1863",
+    "description": "从生平、名作、日记与史料进入德拉克洛瓦：三语阅读、29个事件档案、20件作品与逐条来源定位。",
+    "metadata": [["语言", "中文 · EN · FR"], ["类型", "研究型数字档案"]]
+  }
+}

@@ -1,5 +1,118 @@
 # Repository handoff
 
+## 2026-10-04: PR #46 current-main conflict reconciliation
+
+### Current target and changes
+
+Reconcile `codex/arab-history-archive` at `95d93ad` with current main `2517464` in an isolated merge worktree. The actual union has 14 maintenance packages and 13 static mirror configurations, with IVORY generated separately. Preserve main DailyAlbum / Delacroix and feature Arab History, including all six whole-note directory anchors, content, annotations, assets and public paths.
+
+Resolved the five conflicted working files: `HANDOFF.md`, `README.md`, `scripts/site-projects.mjs`, `tests/site-maintenance-structure.test.mjs` and `web/portfolio-audit.md`. `TECH.md` contains minimal current package/mirror count and build-description corrections. The only additional semantic merge edit is `sites/arab-history-archive/site.config.json` → `hub.order: 11` to `14`, appending Arab after current main entries while preserving their order. Both branches' historical handoff and audit entries remain; their historical verification numbers are unchanged. No narrative or visual source, image, dependency, public URL or workflow was edited.
+
+### Checks and current Git state
+
+- Initial targeted tests: 9/10; `validate:sites` failed because Arab and Delacroix both used `hub.order = 11`. The parent authorized only the Arab order field change to 14; the uniqueness assertion remains intact.
+- Re-run `node --test tests/site-maintenance-structure.test.mjs tests/arab-history-archive.test.mjs tests/delacroix-archive-readiness.test.mjs`: PASS, 10/10.
+- `npm run validate:sites`: PASS, 14 packages / 13 non-null mirrors.
+- `npm run build:pages`: PASS; the current script generates Pages output and copies existing mirrors, without rebuilding site source.
+- `npm run validate:pages`: PASS, 1,661 local references across 164 HTML/CSS files.
+- Tracked build side effects are limited to `docs/index.html`, `docs/IVORY-ARCHIVE/index.html` and `docs/IVORY-ARCHIVE/briefings/2026-08-17/index.html`; generated output is not manually staged. No philosophy mirror churn, dependency installation or dependency link was needed.
+- These are bounded implementer checks; independent technical verification remains required.
+- Worktree HEAD is detached at `95d93ad9544676fbd473afa7022f229198794387`; MERGE_HEAD is `2517464b4dbb2a163e8bc8f89f24f67b34521f9f`.
+- Current main auto-merged paths remain attributed to the repository operator's merge, not to these edits. Working-file resolution does not stage or clear unmerged index entries.
+- Next: independent technical verification, then repository operator handles the real two-parent merge commit, ordinary feature push and preservation checks. PR merge into main and production deployment remain outside this task.
+
+## 2026-09-04: DailyAlbum public website integration
+
+Added the existing bilingual DailyAlbum site as `sites/dailyalbum/` with generated `DAILYALBUM/` mirror, a registry entry and build command. This uses the existing Actions Pages architecture. The owner approved `theshamerider0@gmail.com` as the public support contact. The app repository will use the intended `/My-Website/DAILYALBUM/` endpoints after deployment. Branch: `codex/dailyalbum-public-site`, base `393feec`. See `sites/dailyalbum/HANDOFF.md` for exact verification and preview status. No production merge is authorized yet; unrelated site source and private app material are excluded.
+
+## 2026-08-27: Delacroix Archive public site
+
+### Current target
+
+Publish the accepted trilingual Eugène Delacroix research archive through the
+existing multi-site GitHub Pages repository and register it in the Website
+Archive without disturbing the user's active Arab History worktree.
+
+### Completed in the publication branch
+
+- Added `sites/delacroix-archive/` as the authoritative direct-static package
+  and `DELACROIX-ARCHIVE/` as its generated mirror.
+- Registered the twelfth site in the root project table, shared build control
+  plane, portfolio audit and generated Website Archive hub.
+- Added `build:delacroix`, a dedicated readiness test, privacy manifest,
+  source/mirror contract and six-stage handoff documents.
+- Preserved the three complete languages, six life periods, 20 works, 29 event
+  dossiers, five journal groups, 12 source records, 1862 Pierre Petit portrait
+  and local-only saved works/notes.
+- Added canonical publication metadata and a linked TSRat footer logo returning
+  to The Living Atlas.
+- Removed the stale unrendered edition-warning block that the creator had
+  explicitly rejected; version metadata remains only where attached to a
+  concrete journal or source record.
+
+### Verification state
+
+- `npm run validate:sites`: passed — 12 packages.
+- Delacroix, maintenance and portfolio-logo targeted tests: passed — 5/5.
+- `npm run build:pages`: passed.
+- `npm run validate:pages`: passed — 1,402 local references across 139 HTML/CSS
+  files.
+- Implementation commit: `66b1d160e2c6988673b0e5626f00113861ed5883`.
+- PR [#48](https://github.com/TSRat/My-Website/pull/48) merged as
+  `088dba825fbecb4a51f060b1ed93daada8014b44`.
+- Exact preview:
+  <https://raw.githack.com/TSRat/My-Website/66b1d160e2c6988673b0e5626f00113861ed5883/DELACROIX-ARCHIVE/index.html>.
+- Pages run [33000235134](https://github.com/TSRat/My-Website/actions/runs/33000235134):
+  passed in 1m56s.
+- Production: <https://tsrat.github.io/My-Website/DELACROIX-ARCHIVE/>.
+  Cache-resistant desktop and French mobile checks passed; the root Website
+  Archive showed 12 cards and the Delacroix card pointed to the live site.
+- `ANTIGRAVITY_FINAL_VALIDATION: SKIPPED_BY_USER` because the creator explicitly
+  requested public publication rather than an additional final review cycle.
+
+### Git state
+
+- Work completed in a clean isolated worktree.
+- Branch: `codex/delacroix-archive`, based on `origin/main` at `3b6e028`.
+- The separate dirty `codex/arab-history-archive` worktree remains untouched.
+
+## 2026-08-13: IVORY ARCHIVE daily briefing issue 28
+
+### Current target
+
+Publish the 2026-08-13 daily briefing with five source-verified stories,
+semantic deduplication against all 135 published stories and two historical
+baselines, five production-safe editor illustrations, and synchronized Sites
+and GitHub Pages releases.
+
+### Editorial scope
+
+- Blanche Lazzell's WVU retrospective and the networks behind white-line
+  woodblock modernism.
+- Tony Cokes' multi-site Tina Turner commission and public memory in St. Louis.
+- MIT's HECIA atlas linking extreme-habitat design and behavioral health.
+- MoM-BH*-1 and the distinction between JWST observations and the proposed
+  gas-enshrouded black-hole-star model.
+- Gestational diabetes and longer-term cardiovascular-kidney-metabolic
+  outcomes in a 1.15-million-person claims cohort.
+
+### Deduplication decision
+
+All five stories are distinct from the 135 published archive stories and the
+two historical baselines in subject, event, central claim, and creation angle.
+The archive's earlier postpartum Medicaid coverage item concerns state benefit
+duration and access; the new gestational-diabetes item concerns a new cohort,
+multi-system risk estimates, and longitudinal clinical follow-up.
+
+### Intended files and verification
+
+- Authoritative data: `sites/ivory-archive/briefings.ts`.
+- Sites mirror data: `app/briefings.ts`.
+- Five JPEG editor illustrations in `public/story-images/`.
+- Run the complete multi-site Pages build and reference validation, the Ivory
+  production build and renderer parity tests, lint, Sites tests, local preview,
+  and public response/image checks before reporting publication.
+
 ## 2026-08-12: Arab History Archive new site
 
 ### Current target

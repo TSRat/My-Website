@@ -51,6 +51,12 @@ change with the historical argument.
 - Display headings use authored line breaks at wide viewports. No line may be
   left with only one or two Chinese characters; display-to-body spacing is
   governed by `--display-gap` and `--copy-gap`.
+- Editorial display copy that needs a deliberate break uses `controlled-wrap`:
+  each authored line stays intact, while scene-specific mobile sizes keep the
+  line inside the available column instead of producing a one-character tail.
+- The persistent header reports the exact reading position as `当前屏 / 69`
+  together with the current chapter. The desktop chapter rail exposes the
+  active chapter name, not only an unexplained number.
 - Every numbered scene caption uses the responsive size established by `23 ·
   十五世纪 · 欧洲走向远洋`; scene-specific paragraph rules must not shrink or
   enlarge that shared hierarchy.
@@ -72,9 +78,14 @@ change with the historical argument.
 - Desktop uses a sticky progress rail and full split compositions.
 - Tablet removes the fixed rail and reduces monumental type.
 - Mobile stacks the name panels, uses the compact chapter menu, and keeps both translation positions around the central seam.
+- Mobile does not flatten the late chapters into one repeated text-first stack:
+  `37` retains the three-voice comparison, `47` and `53` lead with imagery and
+  overlap their text fields, and `66` keeps the archival-paper construction.
 - The 01 title scales down at `560px` and below so “一个人，三个名字。” remains a
   single complete line without clipping.
-- Maps preserve aspect ratio and stay within the viewport.
+- Maps preserve aspect ratio and stay within the viewport. In particular, the
+  `08` origin map uses `object-fit: contain` and positive insets at desktop and
+  mobile widths so no edge is silently cropped.
 - Image-led mobile scenes retain the image’s intrinsic ratio and place captions
   next to their corresponding image rather than separating them into a generic
   gallery.

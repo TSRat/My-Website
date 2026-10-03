@@ -23,7 +23,7 @@
   "manifest": "site-manifest.json",
   "figmaUrl": "https://www.figma.com/design/Try0RtGSWgs0YTpTGcifCZ",
   "hub": {
-    "order": 11,
+    "order": 14,
     "className": "arab-history",
     "cover": "assets/hub-cover.svg",
     "eyebrow": "KNOWLEDGE ARCHIVE · 001",

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "dailyalbum",
+  "slug": "DAILYALBUM",
+  "title": "DailyAlbum",
+  "status": "preview",
+  "interactionTier": "A",
+  "classification": "PRESERVE",
+  "maintenanceRoot": "sites/dailyalbum",
+  "publicPath": "/My-Website/DAILYALBUM/",
+  "designSource": "design/implementation-map.md",
+  "analytics": {"provider": "none", "storage": "none", "identityCollection": "none"}
+}
