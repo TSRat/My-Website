@@ -17,7 +17,7 @@
 
 | 项目 | 用途 | 主要维护位置 | GitHub Pages URL | 审核分级 | 迁移 / 审查状态 |
 | --- | --- | --- | --- | --- | --- |
-| DailyAlbum | 专辑随机发现与聆听记录 App 的中英文官网、隐私及支持页面 | `sites/dailyalbum/`；`npm run build:dailyalbum` 更新 `DAILYALBUM/` 镜像 | [DailyAlbum（待发布）](https://tsrat.github.io/My-Website/DAILYALBUM/) | PRESERVE | 沿用现有官网设计，独立分支准备预览；尚未合并或部署 |
+| DailyAlbum | 专辑随机发现与聆听记录 App 的中英文官网、隐私及支持页面 | 独立仓库 [TSRat/dailyalbum-site](https://github.com/TSRat/dailyalbum-site)；`sites/dailyalbum/` 只保留外部入口注册记录、卡片图标和迁移说明 | [DailyAlbum 官方网站](https://dailyalbumapp.com/)；旧 `/My-Website/DAILYALBUM/` 八条链接由构建输出跳转兼容 | PRESERVE | 官网已移出本仓库；总入口卡片保留原视觉与顺序，链接指向独立官网 |
 | The Living Atlas | 总入口主站，一个人的开放档案馆 | `sites/living-atlas/`；`THE-LIVING-ATLAS/` 是构建镜像 | [The Living Atlas](https://tsrat.github.io/My-Website/THE-LIVING-ATLAS/) | REFACTOR | 内容系统通过 [PR #13](https://github.com/TSRat/My-Website/pull/13) 合并；Data / starter 与 Worlds 含混性修正通过 [PR #14](https://github.com/TSRat/My-Website/pull/14) 合并 |
 | 阿拉伯通史数字档案馆 | 六册本地读书笔记构成的长卷式历史档案，含构建时典籍注疏与后续卷册空间 | `sites/arab-history-archive/`；`npm run build:arab-history` 更新 `ARAB-HISTORY-ARCHIVE/` Pages 镜像 | [阿拉伯通史数字档案馆](https://tsrat.github.io/My-Website/ARAB-HISTORY-ARCHIVE/) | REBUILD | 六阶段新站点实现位于 `codex/arab-history-archive`，Draft PR 与 exact preview 待本次交付补齐 |
 | IVORY ARCHIVE | 每期 5 则的中文思想简报，覆盖艺术人文、社会科学与女性主义 | `sites/ivory-archive/`；`app/` 是 Vinext 路由适配器，`public/` 是框架资源根 | [IVORY ARCHIVE](https://tsrat.github.io/My-Website/IVORY-ARCHIVE/) | PRESERVE | 六阶段迁移已通过 [PR #15](https://github.com/TSRat/My-Website/pull/15) 合并：双渲染 parity、manifest、Data 入口与 provider-neutral events |
@@ -37,13 +37,15 @@
 ### 真实来源与静态快照
 
 - `IVORY-ARCHIVE/` 是已提交的历史静态快照，最后一次目录级更新停在第 02 期。当前 GitHub Pages 版本由 `sites/ivory-archive/briefings.ts` 和 `public/` 在 Actions 中重新生成；不要把旧快照当作主要内容源。
-- 所有十四个网站的维护入口统一位于 `sites/<site-id>/`。每个站点包都包含 `site.config.json`、`CONTENT.md`、`DESIGN.md`、`TECH.md`、`HANDOFF.md` 与站点特定源码。
-- DailyAlbum、The Living Atlas、Hypatia、Hildegard 和 Delacroix Archive 使用直接静态源码，通过共享站点构建器更新各自大写 Pages 镜像。
+- 十三个本地维护网站的入口统一位于 `sites/<site-id>/`。每个本地站点包都包含 `site.config.json`、`CONTENT.md`、`DESIGN.md`、`TECH.md`、`HANDOFF.md` 与站点特定源码。
+- The Living Atlas、Hypatia、Hildegard 和 Delacroix Archive 使用直接静态源码，通过共享站点构建器更新各自大写 Pages 镜像。
 - Enheduanna 与 Melromarc 使用 React/TypeScript/Vite；共享构建器先生成 `.site-build/`，再更新大写镜像，并保留未被新入口引用的旧 bundle 作为回滚材料。
 - 两个哲学导读保留独立 Next.js 源码；共享构建器通过静态导出与相对路径重写更新大写镜像。
 - IVORY 的内容、组件和项目文档位于 `sites/ivory-archive/`；Next/Vinext 所需的根 `app/` 只保留路由适配器，`public/` 继续作为框架要求的资源根。
 
-修改任何站点前，先阅读该项目的 `CONTENT.md`、`DESIGN.md`、`TECH.md` 和 `HANDOFF.md`。
+DailyAlbum 是组合中的唯一外部入口，`sites/dailyalbum/` 仅保存外部注册记录，不参与本地网站构建。
+
+修改任何本地站点前，先阅读该项目的 `CONTENT.md`、`DESIGN.md`、`TECH.md` 和 `HANDOFF.md`。
 
 ## 仓库结构
 
@@ -55,8 +57,8 @@ My-Website/
 ├── HANDOFF.md
 ├── web/                         # 组合级网站审计与平台标准（受版本控制的源文档）
 ├── .github/workflows/publish-static-mirror.yml
-├── sites/                       # 十四个网站统一的权威维护目录
-│   ├── dailyalbum/
+├── sites/                       # 十三个维护包与一个外部入口记录
+│   ├── dailyalbum/              # 仅外部入口元数据和卡片图标
 │   ├── living-atlas/
 │   ├── arab-history-archive/
 │   ├── ivory-archive/
@@ -73,7 +75,6 @@ My-Website/
 ├── app/                         # IVORY ARCHIVE 的 Vinext 路由适配器
 ├── public/                      # IVORY ARCHIVE 的图片和公共资源
 ├── scripts/                     # Pages 生成、构建与验证脚本
-├── DAILYALBUM/                  # DailyAlbum 当前发布镜像
 ├── ENHEDUANNA/                  # Enheduanna 当前发布镜像
 ├── LA-MALINCHE/                 # La Malinche 当前发布镜像
 ├── HYPATIA/                     # Hypatia 当前发布镜像
@@ -123,8 +124,6 @@ npm run dev
 每站都有一致的 `dev:<site>` / `build:<site>` 入口：
 
 ```bash
-npm run dev:dailyalbum
-npm run build:dailyalbum
 npm run dev:living-atlas
 npm run build:living-atlas
 npm run build:arab-history
@@ -154,7 +153,7 @@ npm run build:sites
 npm run build:pages
 ```
 
-`build:sites` 按每个 `site.config.json` 刷新十三个大写静态镜像；`build:pages` 生成 IVORY 与完整 Pages artifact，并复制现有镜像。直接静态站点替换镜像；Vite 站点保留未引用的历史 bundle；Next 静态站点执行导出和相对路径重写。
+`build:sites` 按每个 `site.config.json` 刷新十二个大写静态镜像；`build:pages` 生成 IVORY 与完整 Pages artifact，并复制现有镜像。直接静态站点替换镜像；Vite 站点保留未引用的历史 bundle；Next 静态站点执行导出和相对路径重写。
 
 生成结果位于被忽略的 `docs/`。如需本地查看完整多站点路径，可在仓库根目录运行：
 
@@ -190,7 +189,7 @@ npm run lint
 1. 推送到 `main`，或手动触发 workflow。
 2. `.github/workflows/publish-static-mirror.yml` 安装 Node 22 依赖。
 3. workflow 运行 `npm run build:pages`。
-4. `scripts/build-github-pages.mjs` 根据十四个站点包生成总入口与 IVORY ARCHIVE，并复制其余十三个构建镜像。
+4. `scripts/build-github-pages.mjs` 根据十三个维护包和一个外部入口生成十四张总入口卡片与 IVORY ARCHIVE，复制十二个本地构建镜像，并生成八条 DailyAlbum 旧链接跳转。
 5. `npm run validate:pages` 检查生成页面的本地资源引用，workflow 再执行 Hypatia 关键文件 smoke checks。
 6. workflow 上传 `docs/`，再由 `actions/deploy-pages@v4` 发布。
 
@@ -219,7 +218,7 @@ npm run lint
 
 项目文档位置：
 
-- DailyAlbum：[`sites/dailyalbum/`](./sites/dailyalbum/)
+- DailyAlbum（仅外部注册记录与迁移说明）：[`sites/dailyalbum/`](./sites/dailyalbum/)
 - The Living Atlas：[`sites/living-atlas/`](./sites/living-atlas/)
 - 阿拉伯通史数字档案馆：[`sites/arab-history-archive/`](./sites/arab-history-archive/)
 - IVORY ARCHIVE：[`sites/ivory-archive/`](./sites/ivory-archive/)

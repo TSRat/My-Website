@@ -3,7 +3,7 @@
 - Audit date: 2026-07-25
 - Branch: `codex/sites-six-stage-import`
 - Base commit: `636c198`
-- Last implementation update: 2026-10-04; PR #46 current-main conflict reconciliation for `codex/arab-history-archive`
+- Last implementation update: 2026-10-04; DailyAlbum external portfolio entry extraction on `codex/dailyalbum-external-entry-20261004`
 - Authoritative registry: [`README.md`](../README.md#当前项目)
 - Platform standard: [`web/platform-standard.md`](./platform-standard.md)
 - Figma: [TSRat Web Design System · Portfolio Normalization](https://www.figma.com/design/ey07N2cwgxCtNUjvm6Ixgt)
@@ -14,7 +14,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 
 | Site | Classification | Interaction tier | Migration status | Primary blocker |
 | --- | --- | --- | --- | --- |
-| DailyAlbum | PRESERVE | A — Editorial | Preserved bilingual public website package and mirror from current main | Existing site handoff records preview / publication state |
+| DailyAlbum | PRESERVE | External entry | Independent official website; original card retained at order 13 | Migration PR / exact preview delivery; no local website source remains |
 | The Living Atlas | REFACTOR | B — Interactive | Content system merged in PR #13; Data / starter and ambiguity correction merged in PR #14 | Shared runtime publication needs explicit Pages build-map authorization |
 | 阿拉伯通史数字档案馆 | REBUILD | B — Interactive editorial | Six-stage implementation on `codex/arab-history-archive` | Exact preview, Draft PR and Antigravity extended QA |
 | IVORY ARCHIVE | PRESERVE | B — Interactive | Six-stage implementation merged in PR #15 | Antigravity extended QA remains optional follow-up |
@@ -29,7 +29,7 @@ This file is the detailed audit, not a second website registry. Project names, p
 | 张勇的生活切片 | PRESERVE | A — Editorial | Direct static migration merged in PR #21 | Antigravity section QA pending |
 | 两只天鹅 | REFACTOR | B — Interactive | Direct static migration merged in PR #21 | Antigravity interaction QA pending |
 
-Counts: 14 registered packages; 5 PRESERVE; 5 REFACTOR; 4 REBUILD.
+Counts: 14 portfolio entries — 13 maintained sites and 1 external entry; 5 PRESERVE; 5 REFACTOR; 4 REBUILD.
 
 ## Remaining migration queue
 
@@ -63,9 +63,9 @@ Fixed-viewport captures are valid. Full-page capture is not accepted as evidence
 
 ## DailyAlbum
 
-- **Source / public path:** `sites/dailyalbum/`; `/My-Website/DAILYALBUM/`; `DAILYALBUM/` is the generated mirror.
+- **Source / public path:** Independent [TSRat/dailyalbum-site](https://github.com/TSRat/dailyalbum-site); <https://dailyalbumapp.com/>. `sites/dailyalbum/` holds only the existing-registry external entry, unchanged portfolio icon and migration note.
 - **Purpose / classification:** Preserved bilingual album-discovery app website, privacy and support pages; **PRESERVE**.
-- **Build / delivery evidence:** `npm run build:dailyalbum`; see [`sites/dailyalbum/HANDOFF.md`](../sites/dailyalbum/HANDOFF.md) and the authoritative README project row for current delivery state.
+- **Build / delivery evidence:** No local website build or uppercase mirror. The shared Pages builder keeps the order-13 card and generates eight compatibility redirects under `docs/DAILYALBUM/`; see [`sites/dailyalbum/HANDOFF.md`](../sites/dailyalbum/HANDOFF.md) and the authoritative README row. Independent deployment is unchanged.
 
 ## 阿拉伯通史数字档案馆
 

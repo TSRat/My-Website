@@ -42,6 +42,11 @@ export async function buildSite(siteId) {
     );
   }
 
+  if (site.source.mode === "external-link") {
+    console.log(`Skipped ${site.id}: its website is maintained at ${site.publicPath}.`);
+    return;
+  }
+
   if (site.source.mode === "vinext-dual-renderer") {
     console.log(
       `Skipped ${site.id}: its dynamic build uses ${site.build.command}, while Pages are generated separately.`,

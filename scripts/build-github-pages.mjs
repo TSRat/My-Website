@@ -6,12 +6,15 @@ import { loadSiteProjects } from "./site-projects.mjs";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const pagesRoot = join(root, "docs");
 const siteSlug = "IVORY-ARCHIVE";
-const staticSites = (await loadSiteProjects())
-  .filter((project) => project.build.mirror && project.hub)
+const projects = await loadSiteProjects();
+const hubSites = projects
+  .filter((project) => project.hub)
   .sort((left, right) => left.hub.order - right.hub.order)
   .map((project) => ({
     slug: project.slug,
     title: project.title,
+    externalUrl: project.source.mode === "external-link" ? project.publicPath : null,
+    coverUrl: project.source.mode === "external-link" ? `portfolio-assets/${project.id}-${project.hub.cover}` : null,
     ...project.hub,
   }));
 const output = join(pagesRoot, siteSlug);
@@ -58,14 +61,14 @@ const escapeHtml = (value = "") => String(value)
 const storyImageName = (story) => story.image.split("/").at(-1);
 function staticSiteCard(site) {
   const art = site.cover
-    ? `<div class="card-art" aria-hidden="true"><img src="${escapeHtml(site.slug)}/${escapeHtml(site.cover)}" alt=""></div>`
+    ? `<div class="card-art" aria-hidden="true"><img src="${escapeHtml(site.coverUrl ?? `${site.slug}/${site.cover}`)}" alt=""></div>`
     : `<div class="card-art" aria-hidden="true"><span>${site.artLabel}</span></div>`;
   const metadata = site.metadata
     .map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`)
     .join("");
 
   return `
-        <a class="site-card ${escapeHtml(site.className)}" href="${escapeHtml(site.slug)}/">
+        <a class="site-card ${escapeHtml(site.className)}" href="${escapeHtml(site.externalUrl ?? `${site.slug}/`)}">
           ${art}
           <div class="card-copy">
             <p>${escapeHtml(site.eyebrow)}</p>
@@ -110,7 +113,7 @@ function hubPage() {
             <strong>进入网站 <span>→</span></strong>
           </div>
         </a>
-${staticSites.map(staticSiteCard).join("")}
+${hubSites.map(staticSiteCard).join("")}
       </div>
     </section>
   </main>
@@ -123,9 +126,12 @@ function root404Page() {
   return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>页面未找到 · TSRat</title><link rel="stylesheet" href="/My-Website/hub.css"></head><body><main class="not-found"><p class="kicker">404 · ARCHIVE CARD MISSING</p><h1>这个页面还没有被收入档案</h1><a href="/My-Website/">返回网站总入口 →</a></main></body></html>`;
 }
 
-function legacyRedirect(target) {
+function legacyRedirect(target, label = "IVORY ARCHIVE", language = "zh-CN") {
   const safeTarget = escapeHtml(target);
-  return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0; url=${safeTarget}"><link rel="canonical" href="${safeTarget}"><title>正在前往 IVORY ARCHIVE</title><script>location.replace(${JSON.stringify(target)} + location.search + location.hash)</script></head><body><p>页面已迁移至 <a href="${safeTarget}">IVORY ARCHIVE</a>。</p></body></html>`;
+  const safeLabel = escapeHtml(label);
+  const title = language === "en" ? `Redirecting to ${safeLabel}` : `正在前往 ${safeLabel}`;
+  const message = language === "en" ? "This page has moved to" : "页面已迁移至";
+  return `<!doctype html><html lang="${language}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0; url=${safeTarget}"><link rel="canonical" href="${safeTarget}"><title>${title}</title><script>location.replace(${JSON.stringify(target)} + location.search + location.hash)</script></head><body><p>${message} <a href="${safeTarget}">${safeLabel}</a>。</p></body></html>`;
 }
 
 function shell({ title, description, prefix, body }) {
@@ -256,7 +262,19 @@ for (const briefing of briefings) {
   }
 }
 
-for (const site of staticSites) {
+for (const project of projects.filter(({ source }) => source.mode === "external-link")) {
+  // Remove only this registry-owned legacy output, including stale full-site assets.
+  await rm(join(pagesRoot, project.slug), { recursive: true, force: true });
+  await mkdir(join(pagesRoot, "portfolio-assets"), { recursive: true });
+  await copyFile(join(project.packageRoot, project.hub.cover), join(pagesRoot, "portfolio-assets", `${project.id}-${project.hub.cover}`));
+  for (const [route, destination] of Object.entries(project.compatibilityRedirects)) {
+    const directory = join(pagesRoot, project.slug, route);
+    await mkdir(directory, { recursive: true });
+    await writeFile(join(directory, "index.html"), legacyRedirect(destination, "DailyAlbum", route.startsWith("en/") ? "en" : "zh-CN"));
+  }
+}
+
+for (const site of projects.filter(({ build }) => build.mirror)) {
   const target = join(pagesRoot, site.slug);
   await mkdir(target, { recursive: true });
   await cp(join(root, site.slug), target, { recursive: true, force: false, errorOnExist: false });
