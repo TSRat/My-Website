@@ -93,6 +93,23 @@ export const knowledgeLibrary = {
   ],
   records: [
     {
+      id: "arab-history-archive",
+      discipline: "humanities-arts",
+      type: "book",
+      status: "published",
+      featured: true,
+      title: {
+        en: "History of the Arabs Archive",
+        zh: "阿拉伯通史数字档案馆",
+      },
+      summary: {
+        en: "Six source-bound reading notebooks arranged as an evolving historical archive with contextual glossary notes.",
+        zh: "由六册来源受约束的读书笔记生成，按时代展开并提供上下文典籍注疏。",
+      },
+      href: "../ARAB-HISTORY-ARCHIVE/",
+      updatedAt: "2026-08-12",
+    },
+    {
       id: "hypatia",
       discipline: "humanities-arts",
       type: "output",

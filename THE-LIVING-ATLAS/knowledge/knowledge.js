@@ -5,7 +5,7 @@ import {
   getPublishedKnowledgeRecords,
   knowledgeLibrary,
   localizeKnowledge,
-} from "./knowledge-registry.js";
+} from "./knowledge-registry.js?v=knowledge-library-20260812-1";
 
 const SITE_ROOT = new URL("../", import.meta.url);
 

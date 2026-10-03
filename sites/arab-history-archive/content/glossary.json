@@ -1,0 +1,92 @@
+[
+  {
+    "term": "贝杜因人",
+    "arabic": "Bedouins",
+    "definition": "笔记把阿拉比亚居民分为游牧的贝杜因人与定居人民，并强调两者之间存在半游牧、半定居的中间状态；其移动以逐水草放牧为目的。",
+    "geo_location": "阿拉伯半岛",
+    "image_url": null,
+    "source_volume": "pre-islamic-era",
+    "source_locator": "第三章·游牧民族"
+  },
+  {
+    "term": "希贾兹",
+    "arabic": "Hijaz",
+    "definition": "笔记将希贾兹称为伊斯兰教的策源地，并记录当地长期干旱、北部绿洲以及居民游牧生活的情况。",
+    "geo_location": "阿拉伯半岛西部",
+    "image_url": null,
+    "source_volume": "pre-islamic-era",
+    "source_locator": "第二章·气候特征"
+  },
+  {
+    "term": "查希里叶",
+    "arabic": "Jāhilīyah",
+    "definition": "笔记说明这个词通常译为“蒙昧时代”，但核心含义不是文化上的野蛮，而是没有天启经典和受启示先知的时代；书中狭义指伊斯兰教兴起前的一百年。",
+    "geo_location": null,
+    "image_url": null,
+    "source_volume": "pre-islamic-era",
+    "source_locator": "第七章·查希里叶时代"
+  },
+  {
+    "term": "乌玛",
+    "arabic": "Ummat Allāh",
+    "definition": "笔记把迁士和辅士构成、建立在伊斯兰教信仰之上的新社群称为“真主的民族”，即乌玛。",
+    "geo_location": "麦地那",
+    "image_url": null,
+    "source_volume": "rise-and-caliphate",
+    "source_locator": "第九章·新社群：乌玛"
+  },
+  {
+    "term": "天课",
+    "arabic": "Zakāh",
+    "definition": "笔记将天课列为施舍义务，记载通常按个人年收入结余或总资产的百分之二点五计算，并用于公共开支与贫民生活。",
+    "geo_location": null,
+    "image_url": null,
+    "source_volume": "rise-and-caliphate",
+    "source_locator": "第十章·施舍（天课）"
+  },
+  {
+    "term": "哈里发",
+    "arabic": "khalīfah",
+    "definition": "笔记记载，穆罕默德去世后的继承危机中，艾布·伯克尔当选，并被尊为哈里发；该词意为“继承人”。",
+    "geo_location": "麦地那",
+    "image_url": null,
+    "source_volume": "rise-and-caliphate",
+    "source_locator": "第十一章·哈里发制度的建立"
+  },
+  {
+    "term": "麦瓦里",
+    "arabic": "mawālī",
+    "definition": "笔记把被迫或自愿改奉伊斯兰教的新穆斯林称为麦瓦里，即平民或客籍，并记录其在倭马亚时期的财政与社会处境。",
+    "geo_location": "倭马亚帝国",
+    "image_url": null,
+    "source_volume": "umayyad",
+    "source_locator": "第二阶层：新穆斯林（麦瓦里）"
+  },
+  {
+    "term": "阿拔斯王朝",
+    "arabic": "الدولة العباسية",
+    "definition": "卷册笔记以萨法赫建立新王朝、曼苏尔奠定帝国制度为开端，继续整理阿拔斯早期统治、巴格达社会与对外关系。",
+    "geo_location": "巴格达",
+    "image_url": null,
+    "source_volume": "abbasid-golden-age-a",
+    "source_locator": "总体框架"
+  },
+  {
+    "term": "智慧宫",
+    "arabic": "بيت الحكمة",
+    "definition": "笔记在马蒙时期的学术与翻译活动中列出智慧宫，并把它置于巴格达的知识生产与制度环境中。",
+    "geo_location": "巴格达",
+    "image_url": null,
+    "source_volume": "abbasid-golden-age-a",
+    "source_locator": "马蒙时期的学术建设"
+  },
+  {
+    "term": "巴格达",
+    "arabic": "بغداد",
+    "definition": "笔记记载巴格达始建于762年，曼苏尔最初建设的核心是团城，其正式名称为和平城。",
+    "geo_location": "伊拉克",
+    "image_url": null,
+    "source_volume": "abbasid-golden-age-a",
+    "source_locator": "巴格达·团城"
+  }
+]

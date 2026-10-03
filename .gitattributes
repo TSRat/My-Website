@@ -1,0 +1,3 @@
+# Preserve source Markdown byte-for-byte. Trailing spaces are meaningful hard breaks
+# in the imported Obsidian notes and are protected by SHA-256 checksums.
+sites/arab-history-archive/content/volumes/*.md -whitespace

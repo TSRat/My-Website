@@ -1,5 +1,26 @@
 # Repository handoff
 
+## 2026-10-04: PR #46 current-main conflict reconciliation
+
+### Current target and changes
+
+Reconcile `codex/arab-history-archive` at `95d93ad` with current main `2517464` in an isolated merge worktree. The actual union has 14 maintenance packages and 13 static mirror configurations, with IVORY generated separately. Preserve main DailyAlbum / Delacroix and feature Arab History, including all six whole-note directory anchors, content, annotations, assets and public paths.
+
+Resolved the five conflicted working files: `HANDOFF.md`, `README.md`, `scripts/site-projects.mjs`, `tests/site-maintenance-structure.test.mjs` and `web/portfolio-audit.md`. `TECH.md` contains minimal current package/mirror count and build-description corrections. The only additional semantic merge edit is `sites/arab-history-archive/site.config.json` → `hub.order: 11` to `14`, appending Arab after current main entries while preserving their order. Both branches' historical handoff and audit entries remain; their historical verification numbers are unchanged. No narrative or visual source, image, dependency, public URL or workflow was edited.
+
+### Checks and current Git state
+
+- Initial targeted tests: 9/10; `validate:sites` failed because Arab and Delacroix both used `hub.order = 11`. The parent authorized only the Arab order field change to 14; the uniqueness assertion remains intact.
+- Re-run `node --test tests/site-maintenance-structure.test.mjs tests/arab-history-archive.test.mjs tests/delacroix-archive-readiness.test.mjs`: PASS, 10/10.
+- `npm run validate:sites`: PASS, 14 packages / 13 non-null mirrors.
+- `npm run build:pages`: PASS; the current script generates Pages output and copies existing mirrors, without rebuilding site source.
+- `npm run validate:pages`: PASS, 1,661 local references across 164 HTML/CSS files.
+- Tracked build side effects are limited to `docs/index.html`, `docs/IVORY-ARCHIVE/index.html` and `docs/IVORY-ARCHIVE/briefings/2026-08-17/index.html`; generated output is not manually staged. No philosophy mirror churn, dependency installation or dependency link was needed.
+- These are bounded implementer checks; independent technical verification remains required.
+- Worktree HEAD is detached at `95d93ad9544676fbd473afa7022f229198794387`; MERGE_HEAD is `2517464b4dbb2a163e8bc8f89f24f67b34521f9f`.
+- Current main auto-merged paths remain attributed to the repository operator's merge, not to these edits. Working-file resolution does not stage or clear unmerged index entries.
+- Next: independent technical verification, then repository operator handles the real two-parent merge commit, ordinary feature push and preservation checks. PR merge into main and production deployment remain outside this task.
+
 ## 2026-09-04: DailyAlbum public website integration
 
 Added the existing bilingual DailyAlbum site as `sites/dailyalbum/` with generated `DAILYALBUM/` mirror, a registry entry and build command. This uses the existing Actions Pages architecture. The owner approved `theshamerider0@gmail.com` as the public support contact. The app repository will use the intended `/My-Website/DAILYALBUM/` endpoints after deployment. Branch: `codex/dailyalbum-public-site`, base `393feec`. See `sites/dailyalbum/HANDOFF.md` for exact verification and preview status. No production merge is authorized yet; unrelated site source and private app material are excluded.
@@ -91,6 +112,35 @@ multi-system risk estimates, and longitudinal clinical follow-up.
 - Run the complete multi-site Pages build and reference validation, the Ivory
   production build and renderer parity tests, lint, Sites tests, local preview,
   and public response/image checks before reporting publication.
+
+## 2026-08-12: Arab History Archive new site
+
+### Current target
+
+Add a twelfth maintained site under the Living Atlas Knowledge / Humanities & Arts surface: a source-bound Arab History reading archive generated from six creator-provided Obsidian Markdown notebooks, with future-volume space, exact preview and Draft PR.
+
+### Completed
+
+- Added `sites/arab-history-archive/` as the authoritative package and `ARAB-HISTORY-ARCHIVE/` as its generated Pages mirror.
+- Added the `generated-static` build mode, a checksum-enforced Markdown renderer, build-time glossary triggers, exact `/api/glossary` JSON and a `.json` alias.
+- Added four era themes, sticky desktop glossary, mobile Bottom Sheet, Reduced Motion, No-JS full text/glossary and Arabic BiDi handling.
+- Added a registry-driven Future Neutral section so later notes can be added without hard-coded volume counts or invented future content.
+- Added the twelfth README/portfolio registry entry and Living Atlas bilingual Knowledge entry.
+- Added a dedicated Figma source: <https://www.figma.com/design/Try0RtGSWgs0YTpTGcifCZ>.
+- Source images remain unpublished pending provenance and rights review; the abstract SVG cover is explicitly not historical evidence.
+
+### Verification and current state
+
+- Targeted tests: Passed — 13/13.
+- Site package validation: Passed — 12 packages.
+- Pages build and validation: Passed — 1,039 local references across 107 HTML/CSS files.
+- Local browser smoke: desktop 1440×900, mobile 390×844, Era switching, glossary interaction, Escape/focus return, no overflow, Living Atlas destination and zero console errors all passed.
+- Full build produced unrelated Next.js hash churn in the two philosophy mirrors; it was excluded from this branch after validation.
+- Branch: `codex/arab-history-archive`; implementation commit: `6686565`.
+- Exact implementation preview: <https://raw.githack.com/TSRat/My-Website/6686565/ARAB-HISTORY-ARCHIVE/index.html>.
+- Knowledge entry preview: <https://raw.githack.com/TSRat/My-Website/6686565/THE-LIVING-ATLAS/knowledge/humanities-arts/zh.html>.
+- Draft PR: <https://github.com/TSRat/My-Website/pull/46>; no merge is authorized.
+- Antigravity full route/device/browser/console/network/keyboard/accessibility/visual regression review: Pending.
 
 ## 2026-08-09: Portfolio-wide TSRat logo navigation
 
