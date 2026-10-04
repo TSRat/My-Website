@@ -63,7 +63,8 @@ export async function loadSiteProjects() {
 }
 
 async function validateSiteProjects(projects) {
-  assert(projects.length === 14, `Expected 14 site packages, found ${projects.length}`);
+  assert(projects.length === 14, `Expected 14 portfolio records, found ${projects.length}`);
+  assert(projects.filter(({ source }) => source.mode === "external-link").length === 1, "Expected one external portfolio entry");
 
   const ids = new Set();
   const slugs = new Set();
@@ -84,6 +85,29 @@ async function validateSiteProjects(projects) {
     assert(typeof project.slug === "string" && project.slug, `${label}: missing slug`);
     assert(!slugs.has(project.slug), `${label}: duplicate slug`);
     slugs.add(project.slug);
+
+    if (project.source?.mode === "external-link") {
+      const destination = new URL(project.publicPath);
+      assert(destination.protocol === "https:", `${label}: external destination must use HTTPS`);
+      assert(!destination.username && !destination.password, `${label}: external destination must not contain credentials`);
+      assert(project.build?.mirror === null && !project.build?.command && !project.source.entry, `${label}: external entry must not publish a local website`);
+      assert(project.hub && Number.isInteger(project.hub.order) && project.hub.order > 0, `${label}: missing external hub order`);
+      assert(!hubOrders.has(project.hub.order), `${label}: duplicate hub.order ${project.hub.order}`);
+      hubOrders.add(project.hub.order);
+      assert(!publicPaths.has(project.publicPath), `${label}: duplicate publicPath`);
+      publicPaths.add(project.publicPath);
+      await assertPath(join(project.packageRoot, project.hub.cover), `${label}: missing portfolio card image`);
+      await assertPath(join(project.packageRoot, "HANDOFF.md"), `${label}: missing migration handoff`);
+      const redirects = project.compatibilityRedirects ?? {};
+      const legacyRoutes = ["", "privacy/", "support/", "sources/", "en/", "en/privacy/", "en/support/", "en/sources/"];
+      assert(JSON.stringify(Object.keys(redirects).sort()) === JSON.stringify(legacyRoutes.sort()), `${label}: expected eight legacy redirects`);
+      for (const target of Object.values(redirects)) {
+        const redirect = new URL(target);
+        assert(redirect.origin === destination.origin && !redirect.username && !redirect.password, `${label}: redirect must use the official origin`);
+      }
+      assert(readme.includes(`\`sites/${project.id}/\``) && readme.includes(project.publicPath), `${label}: README must identify external registry record and destination`);
+      continue;
+    }
 
     assert(
       project.maintenanceRoot === `sites/${project.id}`,

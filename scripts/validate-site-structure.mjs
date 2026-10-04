@@ -4,8 +4,8 @@ const projects = await loadSiteProjects();
 const summary = projects
   .map(
     ({ id, source, build }) =>
-      `${id}:${source.mode}:${build.mirror ?? "generated-pages"}`,
+      `${id}:${source.mode}:${build.mirror ?? (source.mode === "external-link" ? "external" : "generated-pages")}`,
   )
   .join(", ");
 
-console.log(`Validated ${projects.length} website maintenance packages: ${summary}`);
+console.log(`Validated ${projects.length} portfolio records (${projects.filter(({ source }) => source.mode !== "external-link").length} maintained sites, 1 external entry): ${summary}`);

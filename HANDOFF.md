@@ -1,5 +1,29 @@
 # Repository handoff
 
+## 2026-10-04: DailyAlbum website extraction with retained portfolio entrance
+
+### Current target and implementation
+
+Remove the full DailyAlbum website source and `DAILYALBUM/` mirror from this repository while retaining its original homepage card at order 13, now linking to <https://dailyalbumapp.com/>. The existing registry contains 13 maintained websites and one external entry; the homepage still has 14 cards. Twelve local mirrors plus separately generated IVORY are published as before.
+
+`sites/dailyalbum/` retains only `site.config.json`, the unchanged app-icon card asset and a short migration handoff. The independent maintained website remains in `TSRat/dailyalbum-site`; its redesign source bytes, app/prototype material and old deployment pipeline are not modified here. Removed tracked source/design/stylesheet pages and mirrors remain recoverable at base `6ca8dff87a5991766cd418187fc6f2191c2cbd49`.
+
+The shared Pages builder generates eight tiny compatibility redirect pages, with fallback links: old Chinese routes go to `/cn/` and its matching privacy/support/sources pages; old English routes go to `/en/cn/` equivalents. The homepage card uses the official root for regional routing. No local DailyAlbum dev/build script, second registry, dependency change, CSS redesign, public-site merge or deployment is introduced.
+
+### Checks and Git state
+
+- Targeted existing and extraction tests: PASS, 14/14 (`site-maintenance-structure`, Arab, Delacroix and portfolio-logo tests). The extraction assertions cover all 14 card destinations, DailyAlbum order/style, eight exact redirect targets and fallback links, and the absence of local website source/publication scripts.
+- `npm run validate:sites`: PASS, 14 portfolio records — 13 maintained sites and one external entry.
+- `npm run build:pages`: PASS. `npm run validate:pages`: PASS, 1,574 local references across 163 HTML/CSS files.
+- `node scripts/build-site.mjs dailyalbum`: PASS, external entry skipped without producing a mirror.
+- Byte-preservation probe: PASS, all other source/mirror inputs and 13 registry records unchanged; DailyAlbum original hub metadata and card icon unchanged. Exact authorized deletion count: 25 tracked files.
+- Independent source auxiliary probe: all 38 candidate hashes match the supplied freeze; 16 maintained regional HTML pages, eight legacy HTML pages and 238 local references checked with no failures; six Python modules parse. No independent source, builder, deployment or App material was modified.
+- Build changed three existing tracked snapshots: `docs/index.html`, `docs/IVORY-ARCHIVE/index.html`, `docs/IVORY-ARCHIVE/briefings/2026-08-17/index.html`. The repository operator owns exact restoration/exclusion before source staging; generated output remains for browser/verification evidence. No dependency installation, linking or unrelated mirror churn occurred.
+- These are bounded implementer checks. Parent basic browser smoke and independent technical verification are separate evidence; no review or acceptance is claimed.
+- Branch: `codex/dailyalbum-external-entry-20261004`; base HEAD: `6ca8dff87a5991766cd418187fc6f2191c2cbd49`.
+- Implementation source deletion is exact tracked-file removal authorized by the current extraction instruction; private/untracked data and other source/mirrors remain untouched.
+- Next: independent technical verification and parent browser smoke; repository operator owns staging, dedicated commit, feature push and PR. No main merge or production deployment is authorized.
+
 ## 2026-10-04: PR #46 current-main conflict reconciliation
 
 ### Current target and changes
