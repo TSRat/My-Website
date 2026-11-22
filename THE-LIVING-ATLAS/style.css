@@ -219,6 +219,8 @@ summary:focus-visible {
 
 .search-btn { white-space: nowrap; }
 
+.mobile-header-search { display: none; }
+
 .music-toggle {
   min-width: 92px;
   min-height: 44px;
@@ -386,16 +388,25 @@ body:has(.search-dialog[open]) { overflow: hidden; }
   border-top: 1px solid var(--c-rule);
 }
 
-.search-results a {
+.search-results :is(a, .directory-entry-static) {
   display: block;
   padding: 12px 4px;
   border-bottom: 1px solid var(--c-rule);
   font-family: var(--font-serif);
   font-size: clamp(17px, 1.26vw, 18px);
   font-weight: 600;
+}
+
+.search-results a {
   color: var(--c-cobalt);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.directory-entry-status {
+  display: inline-block;
+  margin-inline-start: 0.5em;
+  font-weight: 400;
 }
 
 .search-results a:focus-visible { outline-offset: -3px; }
@@ -797,10 +808,13 @@ main section {
 
 .index-letter li + li { margin-top: 8px; }
 
-.index-letter a {
+.index-letter :is(a, .directory-entry-static) {
   display: block;
   max-width: 250px;
   overflow-wrap: anywhere;
+}
+
+.index-letter a {
   color: var(--c-cobalt);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -833,6 +847,7 @@ main section {
 /* Responsive */
 @media (max-width: 1120px) {
   .global-nav {
+    --menu-control-width: 4.75rem;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: start;
     min-height: 0;
@@ -849,15 +864,33 @@ main section {
     width: max-content;
     position: relative;
     z-index: 1;
-    pointer-events: none;
   }
 
   .nav-links, .nav-right { display: none; }
+
+  .logo-mark { min-height: 44px; align-items: center; }
 
   .mobile-menu {
     display: block;
     grid-area: 1 / 1 / 2 / -1;
   }
+
+  .mobile-menu summary {
+    min-width: var(--menu-control-width);
+    justify-content: center;
+  }
+
+  .mobile-header-search {
+    display: block;
+    grid-area: 1 / 1 / 2 / -1;
+    align-self: start;
+    justify-self: end;
+    min-width: var(--menu-control-width);
+    min-height: 44px;
+    margin-inline-end: calc(var(--menu-control-width) + 8px);
+    z-index: 1;
+  }
+
 }
 
 @media (max-width: 1024px) {
@@ -953,6 +986,10 @@ main section {
     max-width: none;
     min-height: 44px;
     line-height: 26px;
+  }
+  .index-letter .directory-entry-static {
+    max-width: none;
+    padding-block: 8px;
   }
   .index-letter li + li { margin-top: 0; }
 

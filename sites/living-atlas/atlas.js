@@ -1,4 +1,4 @@
-import { livingAtlasContent } from "./content-registry.js?v=editorial-home-20261122-8";
+import { livingAtlasContent } from "./content-registry.js?v=editorial-home-20261123-2";
 import { analytics } from "./analytics.js";
 import {
   createSearchEntries,
@@ -11,7 +11,7 @@ import {
   renderLatest,
   renderSites,
   renderWorlds,
-} from "./web-core.js?v=editorial-home-20261122-8";
+} from "./web-core.js?v=editorial-home-20261123-2";
 
 const getInteractionSource = (link) => {
   if (link.closest(".mobile-menu")) return "mobile_menu";

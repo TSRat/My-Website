@@ -5,7 +5,7 @@ import {
   getPublishedKnowledgeRecords,
   knowledgeLibrary,
   localizeKnowledge,
-} from "./knowledge-registry.js?v=knowledge-library-20260812-1";
+} from "./knowledge-registry.js?v=knowledge-library-20261123-1";
 
 const SITE_ROOT = new URL("../", import.meta.url);
 
@@ -124,15 +124,18 @@ const renderDisciplines = (container, locale) => {
     link.className = "knowledge-discipline";
     link.href = resolveSiteHref(localizeKnowledge(discipline.href, locale));
     const published = getPublishedKnowledgeRecords(discipline.id).length;
+    const meta = document.createElement("span");
+    meta.className = "knowledge-discipline__meta";
+    meta.append(
+      makeText("span", "", locale === "zh" ? `${published} 个已发布条目` : `${published} published`),
+      " ",
+      makeText("span", "", locale === "zh" ? "进入 ↗" : "Open ↗"),
+    );
     link.append(
       makeText("span", "knowledge-discipline__number", discipline.number),
       makeText("h2", "", localizeKnowledge(discipline.title, locale)),
       makeText("p", "", localizeKnowledge(discipline.description, locale)),
-      makeText(
-        "span",
-        "knowledge-discipline__meta",
-        locale === "zh" ? `${published} 个已发布条目 · 进入 ↗` : `${published} published · open ↗`,
-      ),
+      meta,
     );
     return link;
   });
