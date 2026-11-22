@@ -5,7 +5,7 @@
 
 ## 内容结构 (Content Structure)
 
-- **01 Hero (世界观宣言)**: "NO SINGLE DISCIPLINE IS ENOUGH." 及四大类目标签（History, Feminism, Psychology, Design, Technology, Literature）。
+- **01 Hero (世界观宣言)**: "NO SINGLE DISCIPLINE IS ENOUGH."，下方显示「人文 / 社会 / 科学」与作者身份。
 - **02 Now (当前焦点)**: 记录 TSRat 当前的写作、构建、工作和研究焦点。
 - **03 Featured World (重点特写)**: 以手动轮播呈现 `时间的女儿`
   `001–004`：希帕蒂娅、希尔德加德、马琳切与恩赫杜安娜。每期保留人物名、
@@ -20,7 +20,7 @@
 ## 数据要求 (Data Requirements)
 当前页面继续采用静态 HTML + ES Modules，不迁移框架：
 
-- `content-registry.js` 是 Worlds、Knowledge、Now、Sites、Latest 和 Index 的唯一页面数据源。
+- `content-registry.js` 为 Worlds、Knowledge、Now、Sites、Latest 和 Index 提供共享内容。新增中文索引条目时填入 `indexPinyin`，按题名的实际读法写出无声调拼音。
 - `web-core.js` 负责双语字段、已发布过滤、日期排序、索引、搜索和移动目录。
 - `analytics.js` 提供 provider-neutral 事件信封；默认 no-op，不存储或发送数据。
 - `index.html` 与 `zh.html` 只保留共同的语义容器和各自的界面文案。

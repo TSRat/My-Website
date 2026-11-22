@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TSRat · The Living Atlas</title>
+  <title>TSRat / The Living Atlas</title>
   <meta name="description" content="A living index of TSRat's knowledge, fiction, media, and interactive projects.">
   <link rel="icon" href="favicon.svg?v=20260804-1" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=background-music-20260726-1">
+  <link rel="stylesheet" href="style.css?v=editorial-home-20261122-8">
   <!-- Fonts: Inter (Sans), Noto Serif SC (Serif), Fira Code (Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,10 +31,10 @@
       </ul>
     </div>
     <div class="nav-right">
-      <a href="https://space.bilibili.com" target="_blank" class="social-link">B站</a>
-      <a href="https://www.xiaohongshu.com/user/profile/62cd1c110000000002003151?xsec_token=AB2CPd7NdsVBu3SoGZi-pET-6mVfCuhYq9-jD7L-PtPeI=&amp;xsec_source=pc_search" target="_blank" rel="noopener noreferrer" class="social-link">小红书</a>
+      <a href="https://space.bilibili.com" target="_blank" class="social-link">Bilibili</a>
+      <a href="https://www.xiaohongshu.com/user/profile/62cd1c110000000002003151?xsec_token=AB2CPd7NdsVBu3SoGZi-pET-6mVfCuhYq9-jD7L-PtPeI=&amp;xsec_source=pc_search" target="_blank" rel="noopener noreferrer" class="social-link">Xiaohongshu</a>
       <a href="https://github.com/TSRat" target="_blank" class="social-link">GitHub</a>
-      <a href="zh.html" class="social-link" style="margin-left: 1rem; color: var(--c-cobalt);">中 / EN</a>
+      <a href="zh.html" class="social-link language-switch">ZH / EN</a>
       <button class="search-btn" type="button" data-search-open aria-haspopup="dialog">Search ⌘K</button>
     </div>
     <details class="mobile-menu">
@@ -47,8 +47,10 @@
         <a href="knowledge/">Knowledge</a>
         <a href="#sites">Sites</a>
         <a href="#now">Now</a>
-        <a href="zh.html">中 / EN</a>
-        <a href="https://www.xiaohongshu.com/user/profile/62cd1c110000000002003151?xsec_token=AB2CPd7NdsVBu3SoGZi-pET-6mVfCuhYq9-jD7L-PtPeI=&amp;xsec_source=pc_search" target="_blank" rel="noopener noreferrer">小红书</a>
+        <a href="zh.html">ZH / EN</a>
+        <a href="https://space.bilibili.com" target="_blank">Bilibili</a>
+        <a href="https://github.com/TSRat" target="_blank">GitHub</a>
+        <a href="https://www.xiaohongshu.com/user/profile/62cd1c110000000002003151?xsec_token=AB2CPd7NdsVBu3SoGZi-pET-6mVfCuhYq9-jD7L-PtPeI=&amp;xsec_source=pc_search" target="_blank" rel="noopener noreferrer">Xiaohongshu</a>
         <button type="button" data-search-open aria-haspopup="dialog">Search</button>
       </div>
     </details>
@@ -62,7 +64,10 @@
       <p class="metadata">THE LIVING ATLAS / INDEX</p>
       <h2 id="search-title">Search the archive</h2>
       <label for="archive-search">Sections, worlds, knowledge, and published sites</label>
-      <input id="archive-search" type="search" data-search-input autocomplete="off" placeholder="Try “Hypatia” or “Knowledge”">
+      <div class="search-field">
+        <input id="archive-search" type="search" data-search-input autofocus autocomplete="off" placeholder="Try “Hypatia” or “Knowledge”">
+        <button class="search-clear" type="button" data-search-clear aria-label="Clear search" hidden>×</button>
+      </div>
       <p class="search-status" data-search-status aria-live="polite"></p>
       <ul class="search-results" data-search-results></ul>
     </div>
@@ -71,26 +76,39 @@
   <main id="main-content" tabindex="-1">
     <!-- 01 Hero -->
     <section class="hero-section" id="about">
-      <div class="grid-container">
+      <div class="grid-container hero-grid">
+        <p class="metadata hero-name">TSRat</p>
         <div class="hero-content">
-          <p class="metadata">TSRat</p>
           <h1 class="monumental-title">
             NO SINGLE<br>
             DISCIPLINE<br>
             IS ENOUGH.
           </h1>
           <p class="hero-subtitle">
-            Humanities · Society · Science<br>
+            Humanities / Society / Science<br>
             Feminist
           </p>
-          <div class="hero-stamp">
-            <p class="metadata">ARCHIVE 2019—∞</p>
-            <p class="metadata">Based in Hangzhou<br>Permanently in Wuhan</p>
-          </div>
         </div>
+        <div class="hero-stamp">
+          <p class="metadata">ARCHIVE 2019—∞</p>
+          <p class="metadata">Based in Hangzhou<br>Permanently in Wuhan</p>
+        </div>
+        <button
+          class="music-toggle"
+          type="button"
+          data-music-toggle
+          data-label-off="Music Off"
+          data-label-on="Music On"
+          data-label-error="Retry music"
+          data-aria-off="Play background music"
+          data-aria-on="Pause background music"
+          aria-pressed="false"
+          aria-label="Play background music"
+        >
+          <span data-music-label>Music Off</span>
+        </button>
         <div class="hero-sidebar">
-          <img src="assets/hero-kandinsky.jpg" alt="Archive" style="width: 100%; object-fit: cover; margin-bottom: 0; mix-blend-mode: multiply; filter: contrast(1.1);">
-
+          <img src="assets/hero-kandinsky.jpg" alt="Archive" width="2099" height="3000">
         </div>
       </div>
     </section>
@@ -106,67 +124,65 @@
     </section>
 
     <!-- 03 Featured World -->
-        <section class="featured-world">
-      <div id="slide-1" class="carousel-slide" style="display: block;">
+    <section class="featured-world" aria-label="Featured stories">
+      <p class="sr-only" data-feature-status aria-live="polite"></p>
+      <div id="slide-1" class="carousel-slide">
         <div class="grid-container">
           <div class="section-label">
             <p class="metadata">DAUGHTERS OF TIME / 001</p>
           </div>
-          <div class="featured-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div class="featured-content">
             <div>
               <h2 class="editorial-title">HYPATIA</h2>
               <div class="featured-prose">
                 <p class="serif-text">She did not die to become a symbol.</p>
                 <p class="metadata">Alexandria<br>c. 355–415 AD</p>
-                <br>
                 <a href="../HYPATIA/" class="action-link">ENTER THE STORY →</a>
               </div>
             </div>
-            <div>
+            <div class="featured-image">
               <img class="featured-portrait hypatia-portrait" src="assets/hypatia-sketch-transparent.webp" alt="Hypatia">
             </div>
           </div>
         </div>
       </div>
 
-      <div id="slide-2" class="carousel-slide" style="display: none;">
+      <div id="slide-2" class="carousel-slide" hidden>
         <div class="grid-container">
           <div class="section-label">
             <p class="metadata">DAUGHTERS OF TIME / 002</p>
           </div>
-          <div class="featured-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div class="featured-content">
             <div>
               <h2 class="editorial-title">HILDEGARD</h2>
               <div class="featured-prose">
                 <p class="serif-text">She completed the greatest rebellion in humility.</p>
                 <p class="metadata">Rhineland, Holy Roman Empire<br>1098–1179</p>
-                <br>
                 <a href="../HILDEGARD/" class="action-link">ENTER THE STORY →</a>
               </div>
             </div>
-            <div>
+            <div class="featured-image">
               <img class="featured-portrait" src="assets/Hildegard.png" alt="Hildegard">
             </div>
           </div>
         </div>
       </div>
 
-      <div id="slide-3" class="carousel-slide" style="display: none;">
+      <div id="slide-3" class="carousel-slide" hidden>
         <div class="grid-container">
           <div class="section-label">
             <p class="metadata">DAUGHTERS OF TIME / 003</p>
           </div>
-          <div class="featured-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div class="featured-content">
             <div>
               <h2 class="editorial-title">LA MALINCHE</h2>
               <div class="featured-prose">
                 <p class="serif-text">She survived by translating; history translated her into betrayal.</p>
                 <p class="metadata">Gulf Coast, Mesoamerica<br>c. 1500–date unknown</p>
-                <br>
                 <a href="../LA-MALINCHE/" class="action-link">ENTER THE STORY →</a>
               </div>
             </div>
-            <div>
+            <div class="featured-image">
               <img
                 class="featured-portrait malinche-portrait"
                 src="../LA-MALINCHE/assets/malinche-cutout.png"
@@ -177,32 +193,31 @@
         </div>
       </div>
 
-      <div id="slide-4" class="carousel-slide" style="display: none;">
+      <div id="slide-4" class="carousel-slide" hidden>
         <div class="grid-container">
           <div class="section-label">
             <p class="metadata">DAUGHTERS OF TIME / 004</p>
           </div>
-          <div class="featured-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div class="featured-content">
             <div>
               <h2 class="editorial-title">ENHEDUANNA</h2>
               <div class="featured-prose">
                 <p class="serif-text">She was the first author, but countless stood behind her.</p>
                 <p class="metadata">Ur, Mesopotamia<br>c. 2285–2250 BC</p>
-                <br>
                 <a href="../ENHEDUANNA/" class="action-link">ENTER THE STORY →</a>
               </div>
             </div>
-            <div>
+            <div class="featured-image">
               <img class="featured-portrait" src="assets/Enheduanna.png" alt="Enheduanna">
             </div>
           </div>
         </div>
       </div>
 
-      <div class="grid-container" style="margin-top: 1rem;">
-        <div style="grid-column: 5 / 13; display: flex; gap: 2rem;">
-          <button class="carousel-prev action-link" style="background:none; border:none; border-bottom: 1px solid; cursor: pointer; font-size: var(--text-meta);">← PREV</button>
-          <button class="carousel-next action-link" style="background:none; border:none; border-bottom: 1px solid; cursor: pointer; font-size: var(--text-meta);">NEXT →</button>
+      <div class="grid-container feature-navigation">
+        <div class="feature-controls">
+          <button class="carousel-prev action-link" type="button">← Previous</button>
+          <button class="carousel-next action-link" type="button">Next →</button>
         </div>
       </div>
     </section>
@@ -211,7 +226,7 @@
     <section class="worlds-section" id="worlds">
 
       <div class="grid-container">
-        <div class="section-label" style="grid-column: 1 / 13; margin-bottom: 1rem;">
+        <div class="section-label">
           <p class="metadata">WORLDS</p>
         </div>
         <div class="worlds-list" data-worlds-list></div>
@@ -284,11 +299,11 @@
     </section>
 
     <!-- 10 The Index -->
-    <section class="index-section" id="index">
+    <section class="index-section" id="index" aria-labelledby="index-title">
       <span id="archive" class="legacy-anchor" aria-hidden="true"></span>
       <div class="grid-container">
         <div class="section-label">
-          <p class="metadata">ALL CONTENT / THE INDEX</p>
+          <h2 class="metadata" id="index-title">Index</h2>
         </div>
         <div class="index-shell">
           <div class="index-content" data-index-list></div>
@@ -301,12 +316,12 @@
   <footer class="global-footer">
     <div class="grid-container">
       <div class="footer-left">
-        <p class="metadata">TSRat</p>
-        <p class="metadata">GitHub Pages · Public Static Archive</p>
+        <p class="metadata">GitHub Pages / Public Static Archive</p>
       </div>
       <div class="footer-right">
         <a href="../" class="action-link">← Return to root Hub</a>
       </div>
+      <div class="footer-signature" role="img" aria-label="TSRat"></div>
     </div>
   </footer>
 
@@ -316,21 +331,7 @@
     preload="none"
     loop
   ></audio>
-  <button
-    class="music-toggle"
-    type="button"
-    data-music-toggle
-    data-label-off="Music · Off"
-    data-label-on="Music · On"
-    data-aria-off="Play background music"
-    data-aria-on="Pause background music"
-    aria-pressed="false"
-    aria-label="Play background music"
-  >
-    <span class="music-toggle__indicator" aria-hidden="true"></span>
-    <span data-music-label>Music · Off</span>
-  </button>
 
-  <script type="module" src="atlas.js?v=social-malinche-20260731-1"></script>
+  <script type="module" src="atlas.js?v=editorial-home-20261122-8"></script>
 </body>
 </html>

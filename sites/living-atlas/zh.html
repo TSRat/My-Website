@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TSRat · The Living Atlas</title>
+  <title>TSRat / The Living Atlas</title>
   <meta name="description" content="一个人的开放档案馆：在算法与人性之间建立桥梁。">
   <link rel="icon" href="favicon.svg?v=20260804-1" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=background-music-20260726-1">
+  <link rel="stylesheet" href="style.css?v=editorial-home-20261122-8">
   <!-- Fonts: Inter (Sans), Noto Serif SC (Serif), Fira Code (Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,7 @@
       <a href="https://space.bilibili.com" target="_blank" class="social-link">B站</a>
       <a href="https://www.xiaohongshu.com/user/profile/62cd1c110000000002003151?xsec_token=AB2CPd7NdsVBu3SoGZi-pET-6mVfCuhYq9-jD7L-PtPeI=&amp;xsec_source=pc_search" target="_blank" rel="noopener noreferrer" class="social-link">小红书</a>
       <a href="https://github.com/TSRat" target="_blank" class="social-link">GitHub</a>
-      <a href="index.html" class="social-link" style="margin-left: 1rem; color: var(--c-cobalt);">EN / 中</a>
+      <a href="index.html" class="social-link language-switch">EN / 中</a>
       <button class="search-btn" type="button" data-search-open aria-haspopup="dialog">搜索 ⌘K</button>
     </div>
     <details class="mobile-menu">
@@ -48,6 +48,8 @@
         <a href="#sites">已发布网站</a>
         <a href="#now">最近状态</a>
         <a href="index.html">EN / 中</a>
+        <a href="https://space.bilibili.com" target="_blank">B站</a>
+        <a href="https://github.com/TSRat" target="_blank">GitHub</a>
         <a href="https://www.xiaohongshu.com/user/profile/62cd1c110000000002003151?xsec_token=AB2CPd7NdsVBu3SoGZi-pET-6mVfCuhYq9-jD7L-PtPeI=&amp;xsec_source=pc_search" target="_blank" rel="noopener noreferrer">小红书</a>
         <button type="button" data-search-open aria-haspopup="dialog">搜索</button>
       </div>
@@ -62,7 +64,10 @@
       <p class="metadata">THE LIVING ATLAS / INDEX</p>
       <h2 id="search-title">搜索档案</h2>
       <label for="archive-search">章节、创作宇宙、知识库与已发布网站</label>
-      <input id="archive-search" type="search" data-search-input autocomplete="off" placeholder="试试“希帕蒂娅”或“知识”">
+      <div class="search-field">
+        <input id="archive-search" type="search" data-search-input autofocus autocomplete="off" placeholder="试试“希帕蒂娅”或“知识”">
+        <button class="search-clear" type="button" data-search-clear aria-label="清除搜索" hidden>×</button>
+      </div>
       <p class="search-status" data-search-status aria-live="polite"></p>
       <ul class="search-results" data-search-results></ul>
     </div>
@@ -71,23 +76,36 @@
   <main id="main-content" tabindex="-1">
     <!-- 01 Hero -->
     <section class="hero-section" id="about">
-      <div class="grid-container">
+      <div class="grid-container hero-grid">
+        <p class="metadata hero-name">TSRat</p>
         <div class="hero-content">
-          <p class="metadata">TSRat</p>
-          <h1 class="monumental-title" style="font-size: clamp(32px, 5.5vw, 100px); white-space: nowrap;">
+          <h1 class="monumental-title">
             单一学科远未足够。
           </h1>
           <p class="hero-subtitle">
-            人文 · 社会 · 科学<br>女权主义者
+            人文 / 社会 / 科学<br>女权主义者
           </p>
-          <div class="hero-stamp">
-            <p class="metadata">全站档案 2019—∞</p>
-            <p class="metadata">现居杭州<br>长居武汉</p>
-          </div>
         </div>
+        <div class="hero-stamp">
+          <p class="metadata">全站档案 2019—∞</p>
+          <p class="metadata">现居杭州<br>长居武汉</p>
+        </div>
+        <button
+          class="music-toggle"
+          type="button"
+          data-music-toggle
+          data-label-off="音乐 关"
+          data-label-on="音乐 开"
+          data-label-error="重试音乐"
+          data-aria-off="播放背景音乐"
+          data-aria-on="暂停背景音乐"
+          aria-pressed="false"
+          aria-label="播放背景音乐"
+        >
+          <span data-music-label>音乐 关</span>
+        </button>
         <div class="hero-sidebar">
-          <img src="assets/hero-kandinsky.jpg" alt="Archive" style="width: 100%; object-fit: cover; margin-bottom: 0; mix-blend-mode: multiply; filter: contrast(1.1);">
-
+          <img src="assets/hero-kandinsky.jpg" alt="Archive" width="2099" height="3000">
         </div>
       </div>
     </section>
@@ -103,67 +121,65 @@
     </section>
 
     <!-- 03 Featured World -->
-        <section class="featured-world">
-      <div id="slide-1" class="carousel-slide" style="display: block;">
+    <section class="featured-world" aria-label="人物特写">
+      <p class="sr-only" data-feature-status aria-live="polite"></p>
+      <div id="slide-1" class="carousel-slide">
         <div class="grid-container">
           <div class="section-label">
             <p class="metadata">时间的女儿 / 001</p>
           </div>
-          <div class="featured-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div class="featured-content">
             <div>
               <h2 class="editorial-title">希帕蒂娅</h2>
               <div class="featured-prose">
                 <p class="serif-text">她的死亡不是为了成为一个符号。</p>
                 <p class="metadata">亚历山大里亚<br>约公元 355–415</p>
-                <br>
                 <a href="../HYPATIA/" class="action-link">进入故事 →</a>
               </div>
             </div>
-            <div>
-              <img class="featured-portrait hypatia-portrait" src="assets/hypatia-sketch-transparent.webp" alt="Hypatia">
+            <div class="featured-image">
+              <img class="featured-portrait hypatia-portrait" src="assets/hypatia-sketch-transparent.webp" alt="希帕蒂娅">
             </div>
           </div>
         </div>
       </div>
 
-      <div id="slide-2" class="carousel-slide" style="display: none;">
+      <div id="slide-2" class="carousel-slide" hidden>
         <div class="grid-container">
           <div class="section-label">
             <p class="metadata">时间的女儿 / 002</p>
           </div>
-          <div class="featured-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div class="featured-content">
             <div>
               <h2 class="editorial-title">希尔德加德</h2>
               <div class="featured-prose">
                 <p class="serif-text">她在谦卑中完成最大的反叛。</p>
                 <p class="metadata">莱茵兰，神圣罗马帝国<br>1098–1179</p>
-                <br>
                 <a href="../HILDEGARD/" class="action-link">进入故事 →</a>
               </div>
             </div>
-            <div>
-              <img class="featured-portrait" src="assets/Hildegard.png" alt="Hildegard">
+            <div class="featured-image">
+              <img class="featured-portrait" src="assets/Hildegard.png" alt="希尔德加德">
             </div>
           </div>
         </div>
       </div>
 
-      <div id="slide-3" class="carousel-slide" style="display: none;">
+      <div id="slide-3" class="carousel-slide" hidden>
         <div class="grid-container">
           <div class="section-label">
             <p class="metadata">时间的女儿 / 003</p>
           </div>
-          <div class="featured-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div class="featured-content">
             <div>
               <h2 class="editorial-title">马琳切</h2>
               <div class="featured-prose">
                 <p class="serif-text">她靠翻译活了下来，历史却把她翻译成了背叛。</p>
                 <p class="metadata">中部美洲，墨西哥湾沿岸<br>约 1500–卒年不详</p>
-                <br>
                 <a href="../LA-MALINCHE/" class="action-link">进入故事 →</a>
               </div>
             </div>
-            <div>
+            <div class="featured-image">
               <img
                 class="featured-portrait malinche-portrait"
                 src="../LA-MALINCHE/assets/malinche-cutout.png"
@@ -174,32 +190,31 @@
         </div>
       </div>
 
-      <div id="slide-4" class="carousel-slide" style="display: none;">
+      <div id="slide-4" class="carousel-slide" hidden>
         <div class="grid-container">
           <div class="section-label">
             <p class="metadata">时间的女儿 / 004</p>
           </div>
-          <div class="featured-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div class="featured-content">
             <div>
               <h2 class="editorial-title">恩赫杜安娜</h2>
               <div class="featured-prose">
                 <p class="serif-text">她是第一个作家，但她的背后站着无数人。</p>
                 <p class="metadata">乌尔，美索不达米亚<br>约公元前 2285–2250</p>
-                <br>
                 <a href="../ENHEDUANNA/" class="action-link">进入故事 →</a>
               </div>
             </div>
-            <div>
-              <img class="featured-portrait" src="assets/Enheduanna.png" alt="Enheduanna">
+            <div class="featured-image">
+              <img class="featured-portrait" src="assets/Enheduanna.png" alt="恩赫杜安娜">
             </div>
           </div>
         </div>
       </div>
 
-      <div class="grid-container" style="margin-top: 1rem;">
-        <div style="grid-column: 5 / 13; display: flex; gap: 2rem;">
-          <button class="carousel-prev action-link" style="background:none; border:none; border-bottom: 1px solid; cursor: pointer; font-size: var(--text-meta);">← 上一个</button>
-          <button class="carousel-next action-link" style="background:none; border:none; border-bottom: 1px solid; cursor: pointer; font-size: var(--text-meta);">下一个 →</button>
+      <div class="grid-container feature-navigation">
+        <div class="feature-controls">
+          <button class="carousel-prev action-link" type="button">← 上一个</button>
+          <button class="carousel-next action-link" type="button">下一个 →</button>
         </div>
       </div>
     </section>
@@ -208,8 +223,8 @@
     <section class="worlds-section" id="worlds">
 
       <div class="grid-container">
-        <div class="section-label" style="grid-column: 1 / 13; margin-bottom: 1rem;">
-          <p class="metadata">创作宇宙 ｜ WORLDS</p>
+        <div class="section-label">
+          <p class="metadata">创作宇宙 / WORLDS</p>
         </div>
         <div class="worlds-list" data-worlds-list></div>
       </div>
@@ -251,11 +266,11 @@
     <section class="data-section" id="data" aria-labelledby="data-title">
       <div class="grid-container">
         <div class="section-label">
-          <p class="metadata">数据 ｜ SIGNALS</p>
+          <p class="metadata">数据 / SIGNALS</p>
         </div>
         <div class="data-content">
           <div class="data-empty-state">
-            <p class="metadata data-provider">数据服务 ｜ 未连接</p>
+            <p class="metadata data-provider">数据服务 / 未连接</p>
             <h2 id="data-title">为真实数据预留空间。</h2>
             <p class="section-intro">
               当前没有接入统计服务。只有数据来源获得确认后，这里才会显示内容发现路径、
@@ -281,11 +296,11 @@
     </section>
 
     <!-- 10 The Index -->
-    <section class="index-section" id="index">
+    <section class="index-section" id="index" aria-labelledby="index-title">
       <span id="archive" class="legacy-anchor" aria-hidden="true"></span>
       <div class="grid-container">
         <div class="section-label">
-          <p class="metadata">所有内容 ｜ 总索引</p>
+          <h2 class="metadata" id="index-title">总索引</h2>
         </div>
         <div class="index-shell">
           <div class="index-content" data-index-list></div>
@@ -298,12 +313,12 @@
   <footer class="global-footer">
     <div class="grid-container">
       <div class="footer-left">
-        <p class="metadata">TSRat</p>
-        <p class="metadata">GitHub Pages · Public Static Archive</p>
+        <p class="metadata">GitHub Pages / 公开静态档案</p>
       </div>
       <div class="footer-right">
-        <a href="../" class="action-link">← Return to root Hub</a>
+        <a href="../" class="action-link">← 返回网站总入口</a>
       </div>
+      <div class="footer-signature" role="img" aria-label="TSRat"></div>
     </div>
   </footer>
 
@@ -313,21 +328,7 @@
     preload="none"
     loop
   ></audio>
-  <button
-    class="music-toggle"
-    type="button"
-    data-music-toggle
-    data-label-off="音乐 · 关"
-    data-label-on="音乐 · 开"
-    data-aria-off="播放背景音乐"
-    data-aria-on="暂停背景音乐"
-    aria-pressed="false"
-    aria-label="播放背景音乐"
-  >
-    <span class="music-toggle__indicator" aria-hidden="true"></span>
-    <span data-music-label>音乐 · 关</span>
-  </button>
 
-  <script type="module" src="atlas.js?v=social-malinche-20260731-1"></script>
+  <script type="module" src="atlas.js?v=editorial-home-20261122-8"></script>
 </body>
 </html>
