@@ -23,6 +23,7 @@ test("Living Atlas registry exposes only valid published sites", () => {
   const sites = getPublishedSites(livingAtlasContent);
 
   assert.equal(sites.length, 10);
+  assert.ok(sites.some((site) => site.id === "la-malinche"));
   assert.equal(new Set(sites.map((site) => site.id)).size, sites.length);
   assert.equal(new Set(sites.map((site) => site.number)).size, sites.length);
 
@@ -71,6 +72,40 @@ test("Living Atlas index contains only navigable destinations", () => {
   }
 });
 
+test("Living Atlas indexes use Latin group letters and preserve book title punctuation", () => {
+  const chinese = buildIndexEntries(livingAtlasContent, "zh");
+  const english = buildIndexEntries(livingAtlasContent, "en");
+  assert.deepEqual([...new Set(chinese.map(({ group }) => group))], [..."CEGJLMRSXZ"]);
+  assert.deepEqual([...new Set(english.map(({ group }) => group))], [..."ADEHIKLMNSTZ"]);
+  assert.deepEqual(chinese.slice(0, 2).map(({ group, label }) => [group, label]), [
+    ["C", "《存在主义是一种人道主义》导读"],
+    ["E", "《恶心》入门导读"],
+  ]);
+  assert.equal(chinese.find(({ id }) => id === "hypatia").group, "X");
+  assert.equal(english.find(({ id }) => id === "hypatia").group, "H");
+
+  const additions = {
+    ...livingAtlasContent,
+    sites: [...livingAtlasContent.sites, {
+      id: "digit-example",
+      title: { en: "“2 worlds”", zh: "《２个世界》" },
+      number: "999",
+      status: "published",
+      href: "../DIGIT-EXAMPLE/",
+    }, {
+      id: "accent-example",
+      title: { en: "“École”", zh: "École" },
+      number: "998",
+      status: "published",
+      href: "../ACCENT-EXAMPLE/",
+    }],
+  };
+  const addedGroup = (locale, id) => buildIndexEntries(additions, locale).find((entry) => entry.id === id).group;
+  assert.equal(addedGroup("en", "digit-example"), "T");
+  assert.equal(addedGroup("zh", "digit-example"), "E");
+  assert.equal(addedGroup("en", "accent-example"), "E");
+});
+
 test("Living Atlas language pages use the shared data hooks without fake links", async () => {
   const [english, chinese] = await Promise.all([
     readAtlasPage("index.html"),
@@ -81,6 +116,7 @@ test("Living Atlas language pages use the shared data hooks without fake links",
   assert.match(chinese, /<html lang="zh-CN">/);
 
   for (const page of [english, chinese]) {
+    assert.doesNotMatch(page, /[·・･‧]/u);
     assert.doesNotMatch(page, /href=["']#["']/);
     assert.match(page, /data-worlds-list/);
     assert.match(page, /data-knowledge-list/);
@@ -154,13 +190,15 @@ test("Living Atlas background music is manual, bilingual, and locally bundled", 
     assert.match(page, /src="assets\/who-are-you-the-who\.mp3"/);
     assert.match(page, /preload="none"/);
     assert.match(page, /\sloop/);
-    assert.match(page, /data-music-toggle/);
+    assert.doesNotMatch(page.match(/<nav\b[^>]*>[\s\S]*?<\/nav>/u)?.[0] ?? "", /data-music-toggle/u);
+    assert.match(page, /<div class="grid-container hero-grid">\s*<p class="metadata hero-name">TSRat<\/p>/u);
+    assert.match(page, /<div class="hero-stamp">[\s\S]*?<\/div>\s*<button\b[^>]*data-music-toggle[^>]*>[\s\S]*?<\/button>\s*<div class="hero-sidebar">\s*<img src="assets\/hero-kandinsky\.jpg"/u);
     assert.match(page, /aria-pressed="false"/);
     assert.doesNotMatch(page, /\sautoplay/);
   }
 
-  assert.match(english, /data-label-off="Music · Off"/);
-  assert.match(chinese, /data-label-off="音乐 · 关"/);
+  assert.match(english, /data-label-off="Music Off"/);
+  assert.match(chinese, /data-label-off="音乐 关"/);
   assert.match(script, /const initBackgroundMusic = \(\) =>/);
   assert.match(script, /await audio\.play\(\)/);
   assert.match(script, /audio\.pause\(\)/);

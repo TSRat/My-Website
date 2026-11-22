@@ -4,6 +4,7 @@ export const livingAtlasContent = {
   worlds: [
     {
       id: "knowledge",
+      indexPinyin: "zhi shi",
       number: "01",
       title: { en: "Knowledge", zh: "知识" },
       href: { en: "knowledge/", zh: "knowledge/zh.html" },
@@ -12,6 +13,7 @@ export const livingAtlasContent = {
     },
     {
       id: "fiction",
+      indexPinyin: "gu shi",
       number: "02",
       title: { en: "Story", zh: "故事" },
       href: "#world-fiction",
@@ -20,6 +22,7 @@ export const livingAtlasContent = {
     },
     {
       id: "media",
+      indexPinyin: "mei ti",
       number: "03",
       title: { en: "Media", zh: "媒体" },
       href: "#world-media",
@@ -28,6 +31,7 @@ export const livingAtlasContent = {
     },
     {
       id: "interaction",
+      indexPinyin: "jiao hu",
       number: "04",
       title: { en: "Interaction", zh: "交互" },
       href: "#sites",
@@ -38,6 +42,7 @@ export const livingAtlasContent = {
   knowledge: [
     {
       id: "humanities-arts",
+      indexPinyin: "ren wen yu yi shu",
       title: { en: "Humanities & Arts", zh: "人文与艺术" },
       href: {
         en: "knowledge/humanities-arts/",
@@ -47,6 +52,7 @@ export const livingAtlasContent = {
     },
     {
       id: "social-sciences",
+      indexPinyin: "she hui ke xue",
       title: { en: "Social Sciences", zh: "社会科学" },
       href: {
         en: "knowledge/social-sciences/",
@@ -56,6 +62,7 @@ export const livingAtlasContent = {
     },
     {
       id: "science-technology",
+      indexPinyin: "zi ran ke xue yu ji shu",
       title: { en: "Natural Sciences & Technology", zh: "自然科学与技术" },
       href: {
         en: "knowledge/science-technology/",
@@ -90,26 +97,28 @@ export const livingAtlasContent = {
   sites: [
     {
       id: "la-malinche",
+      indexPinyin: "ma lin qie",
       number: "010",
       status: "published",
       title: { en: "LA MALINCHE", zh: "马琳切" },
       series: {
-        en: "Daughters of Time · 003",
-        zh: "时间的女儿 · 003",
+        en: "Daughters of Time / 003",
+        zh: "时间的女儿 / 003",
       },
       href: "../LA-MALINCHE/",
       thumbnail: "assets/malinche-cover-vol-1.webp",
       thumbnailAlt: {
         en: "Creator-made La Malinche cover reading Who Betrayed the Betrayer?",
-        zh: "创作者制作的《拉·马琳切：谁背叛了背叛者？》封面",
+        zh: "创作者制作的《拉马琳切：谁背叛了背叛者？》封面",
       },
       updatedAt: "2026-07-27",
     },
     {
       id: "sartre-nausea-guide",
+      indexPinyin: "e xin ru men dao du",
       number: "009",
       status: "published",
-      title: { en: "SARTRE · NAUSEA GUIDE", zh: "《恶心》入门导读" },
+      title: { en: "SARTRE / NAUSEA GUIDE", zh: "《恶心》入门导读" },
       series: { en: "Interactive reading guide", zh: "互动阅读导览" },
       href: "../SARTRE-NAUSEA-GUIDE/",
       thumbnail: "assets/thumb-sartre.png",
@@ -121,6 +130,7 @@ export const livingAtlasContent = {
     },
     {
       id: "existentialism-humanism-guide",
+      indexPinyin: "cun zai zhu yi shi yi zhong ren dao zhu yi dao du",
       number: "008",
       status: "published",
       title: {
@@ -138,6 +148,7 @@ export const livingAtlasContent = {
     },
     {
       id: "zhangyong-portrait",
+      indexPinyin: "zhang yong de sheng huo qie pian",
       number: "007",
       status: "published",
       title: { en: "ZHANGYONG PORTRAIT", zh: "张勇的生活切片" },
@@ -152,6 +163,7 @@ export const livingAtlasContent = {
     },
     {
       id: "malty-melty-childhood",
+      indexPinyin: "liang zhi tian e",
       number: "006",
       status: "published",
       title: { en: "TWO SWANS", zh: "两只天鹅" },
@@ -169,10 +181,11 @@ export const livingAtlasContent = {
     },
     {
       id: "hildegard",
+      indexPinyin: "xi er de jia de",
       number: "005",
       status: "published",
       title: { en: "HILDEGARD", zh: "希尔德加德" },
-      series: { en: "Daughters of Time · 002", zh: "时间的女儿 · 002" },
+      series: { en: "Daughters of Time / 002", zh: "时间的女儿 / 002" },
       href: "../HILDEGARD/",
       thumbnail: "assets/thumb-hildegard.jpg",
       thumbnailAlt: {
@@ -183,6 +196,7 @@ export const livingAtlasContent = {
     },
     {
       id: "ivory-archive",
+      indexPinyin: "zhi shi dang an guan",
       number: "004",
       status: "published",
       title: { en: "IVORY ARCHIVE", zh: "知识档案馆" },
@@ -197,10 +211,11 @@ export const livingAtlasContent = {
     },
     {
       id: "hypatia",
+      indexPinyin: "xi pa di ya",
       number: "003",
       status: "published",
       title: { en: "HYPATIA", zh: "希帕蒂娅" },
-      series: { en: "Daughters of Time · 001", zh: "时间的女儿 · 001" },
+      series: { en: "Daughters of Time / 001", zh: "时间的女儿 / 001" },
       href: "../HYPATIA/",
       thumbnail: "assets/thumb-hypatia.jpg",
       thumbnailAlt: {
@@ -211,10 +226,11 @@ export const livingAtlasContent = {
     },
     {
       id: "enheduanna",
+      indexPinyin: "en he du an na",
       number: "002",
       status: "published",
       title: { en: "ENHEDUANNA", zh: "恩赫杜安娜" },
-      series: { en: "Daughters of Time · 004", zh: "时间的女儿 · 004" },
+      series: { en: "Daughters of Time / 004", zh: "时间的女儿 / 004" },
       href: "../ENHEDUANNA/",
       thumbnail: "assets/thumb-enheduanna.jpg",
       thumbnailAlt: {
@@ -225,6 +241,7 @@ export const livingAtlasContent = {
     },
     {
       id: "melromarc-sisters",
+      indexPinyin: "mei er luo ma ke jie mei",
       number: "001",
       status: "published",
       title: { en: "MELROMARC SISTERS", zh: "梅尔罗马克姐妹" },

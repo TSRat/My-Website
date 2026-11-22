@@ -1,4 +1,4 @@
-import { livingAtlasContent } from "./content-registry.js?v=knowledge-library-20260804-1";
+import { livingAtlasContent } from "./content-registry.js?v=editorial-home-20261122-8";
 import { analytics } from "./analytics.js";
 import {
   createSearchEntries,
@@ -11,7 +11,7 @@ import {
   renderLatest,
   renderSites,
   renderWorlds,
-} from "./web-core.js";
+} from "./web-core.js?v=editorial-home-20261122-8";
 
 const getInteractionSource = (link) => {
   if (link.closest(".mobile-menu")) return "mobile_menu";
@@ -45,51 +45,43 @@ const initAnalyticsHooks = () => {
 };
 
 const initCarousel = () => {
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const slides = Array.from(document.querySelectorAll(".carousel-slide"));
   const previousButton = document.querySelector(".carousel-prev");
   const nextButton = document.querySelector(".carousel-next");
+  const status = document.querySelector("[data-feature-status]");
+  if (slides.length < 2 || !previousButton || !nextButton) return;
+
   let currentSlide = 0;
-  let autoplayTimer;
-
-  const showSlide = (index) => {
-    slides.forEach((slide, slideIndex) => {
-      slide.style.display = slideIndex === index ? "block" : "none";
-      slide.style.animation = "none";
-    });
+  const changeSlide = (step) => {
+    currentSlide = (currentSlide + step + slides.length) % slides.length;
+    slides.forEach((slide, index) => { slide.hidden = index !== currentSlide; });
+    if (status) status.textContent = slides[currentSlide].querySelector("h2")?.textContent ?? "";
   };
 
-  const stopAutoplay = () => {
-    window.clearInterval(autoplayTimer);
-    autoplayTimer = undefined;
-  };
+  previousButton.addEventListener("click", () => changeSlide(-1));
+  nextButton.addEventListener("click", () => changeSlide(1));
 
-  const startAutoplay = () => {
-    stopAutoplay();
-    if (reduceMotion.matches || slides.length < 2 || document.hidden) return;
-
-    autoplayTimer = window.setInterval(() => {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    }, 10000);
-  };
-
-  if (slides.length > 0 && previousButton && nextButton) {
-    previousButton.addEventListener("click", () => {
-      currentSlide = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
-      showSlide(currentSlide);
-      startAutoplay();
+  for (const image of document.querySelectorAll(".featured-image")) {
+    let start;
+    image.addEventListener("pointerdown", (event) => {
+      if (event.pointerType !== "touch" || !event.isPrimary) return;
+      start = { id: event.pointerId, x: event.clientX, y: event.clientY };
+      image.setPointerCapture(event.pointerId);
     });
-
-    nextButton.addEventListener("click", () => {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-      startAutoplay();
+    image.addEventListener("pointerup", (event) => {
+      if (event.pointerId !== start?.id) return;
+      const horizontal = event.clientX - start.x;
+      const vertical = event.clientY - start.y;
+      start = undefined;
+      if (Math.abs(horizontal) >= 48 && Math.abs(horizontal) > Math.abs(vertical) * 1.5) {
+        changeSlide(horizontal < 0 ? 1 : -1);
+      }
     });
-
-    document.addEventListener("visibilitychange", startAutoplay);
-    reduceMotion.addEventListener("change", startAutoplay);
-    startAutoplay();
+    const clearGesture = (event) => {
+      if (event.pointerId === start?.id) start = undefined;
+    };
+    image.addEventListener("pointercancel", clearGesture);
+    image.addEventListener("lostpointercapture", clearGesture);
   }
 };
 
@@ -121,9 +113,12 @@ const initBackgroundMusic = () => {
 
     try {
       await audio.play();
-      renderState(true);
-    } catch {
+      renderState(!audio.paused);
+    } catch (error) {
+      if (error.name === "AbortError" || !audio.paused) return;
       renderState(false);
+      label.textContent = toggle.dataset.labelError;
+      toggle.setAttribute("aria-label", toggle.dataset.labelError);
     }
   });
 

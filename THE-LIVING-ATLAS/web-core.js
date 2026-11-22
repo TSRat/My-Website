@@ -19,17 +19,7 @@ export const getSortedUpdates = (registry) =>
 export const formatMonth = (isoDate, locale) => {
   const date = new Date(`${isoDate}T00:00:00Z`);
   return new Intl.DateTimeFormat(locale === "zh" ? "zh-CN" : "en", {
-    month: locale === "zh" ? "long" : "short",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(date);
-};
-
-export const formatDate = (isoDate, locale) => {
-  const date = new Date(`${isoDate}T00:00:00Z`);
-  return new Intl.DateTimeFormat(locale === "zh" ? "zh-CN" : "en", {
-    day: "2-digit",
-    month: "2-digit",
+    month: "long",
     year: "numeric",
     timeZone: "UTC",
   }).format(date);
@@ -55,7 +45,7 @@ export const renderWorlds = (registry, locale, container) => {
     const href = localize(world.href, locale);
     const isKnowledgePortal = world.id === "knowledge" && href;
     const article = document.createElement(isKnowledgePortal ? "a" : "article");
-    article.className = "bento-box world-box-large";
+    article.className = "bento-box";
     article.id = `world-${world.id}`;
     if (isKnowledgePortal) {
       article.href = href;
@@ -71,6 +61,7 @@ export const renderWorlds = (registry, locale, container) => {
     const image = document.createElement("img");
     image.src = world.image;
     image.alt = localize(world.imageAlt, locale);
+    image.loading = "lazy";
     imageWrapper.append(image);
 
     const heading = appendLocalizedText(document.createElement("h3"), world.title, locale);
@@ -112,7 +103,7 @@ export const renderFocus = (registry, locale, container, label) => {
     .at(-1);
   if (label && newestDate) {
     label.textContent = locale === "zh"
-      ? `最近状态 ｜ ${formatMonth(newestDate, locale)}`
+      ? `最近状态 / ${formatMonth(newestDate, locale)}`
       : `NOW / ${formatMonth(newestDate, locale).toLocaleUpperCase()}`;
   }
 
@@ -144,7 +135,7 @@ export const renderSites = (registry, locale, container, label) => {
 
   if (label) {
     label.textContent = locale === "zh"
-      ? `已发布网站 ｜ ${String(sites.length).padStart(3, "0")}`
+      ? `已发布网站 / ${String(sites.length).padStart(3, "0")}`
       : `PUBLISHED SITES / ${String(sites.length).padStart(3, "0")}`;
   }
 
@@ -165,6 +156,7 @@ export const renderSites = (registry, locale, container, label) => {
     image.className = "site-thumbnail";
     image.src = site.thumbnail;
     image.alt = localize(site.thumbnailAlt, locale);
+    image.loading = "lazy";
 
     link.append(copy, image);
     container.append(link);
@@ -178,10 +170,13 @@ export const renderLatest = (registry, locale, container) => {
   getSortedUpdates(registry).forEach((update) => {
     const item = document.createElement("div");
     item.className = "latest-item";
-    item.append(createMetadata(formatDate(update.date, locale)));
+    const date = document.createElement("time");
+    date.className = "metadata";
+    date.dateTime = update.date;
+    date.textContent = update.date;
+    item.append(date);
 
     const copy = document.createElement("p");
-    copy.className = "mono-text";
     const link = document.createElement("a");
     link.href = update.href;
     link.textContent = localize(update.title, locale);
@@ -192,35 +187,64 @@ export const renderLatest = (registry, locale, container) => {
   });
 };
 
+const indexCollator = new Intl.Collator("en", { sensitivity: "base" });
+const digitReadings = {
+  en: ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"],
+  zh: ["ling", "yi", "er", "san", "si", "wu", "liu", "qi", "ba", "jiu"],
+};
+
+const indexKey = (entry, label, locale) => {
+  const title = label.normalize("NFKD").replace(/^[\p{P}\p{S}\s]+/u, "");
+  if (/^\d/.test(title)) {
+    return digitReadings[locale][Number(title[0])] + title.slice(1);
+  }
+  if (locale === "zh" && /^\p{Script=Han}/u.test(title)) {
+    return entry.indexPinyin ?? "";
+  }
+  return title;
+};
+
 export const buildIndexEntries = (registry, locale) => {
   const sections = [
-    { id: "about", title: { en: "About", zh: "关于" }, href: "#about", type: "section" },
-    { id: "data", title: { en: "Data", zh: "数据" }, href: "#data", type: "section" },
-    { id: "now", title: { en: "Now", zh: "最近状态" }, href: "#now", type: "section" },
-    { id: "latest", title: { en: "Latest", zh: "最新动态" }, href: "#latest", type: "section" },
+    { id: "about", title: { en: "About", zh: "关于" }, indexPinyin: "guan yu", href: "#about", type: "section" },
+    { id: "data", title: { en: "Data", zh: "数据" }, indexPinyin: "shu ju", href: "#data", type: "section" },
+    { id: "now", title: { en: "Now", zh: "最近状态" }, indexPinyin: "zui jin zhuang tai", href: "#now", type: "section" },
+    { id: "latest", title: { en: "Latest", zh: "最新动态" }, indexPinyin: "zui xin dong tai", href: "#latest", type: "section" },
   ];
   const worlds = registry.worlds.map((world) => ({
     id: world.id,
     title: world.title,
+    indexPinyin: world.indexPinyin,
     href: localize(world.href, locale) || `#world-${world.id}`,
     type: "world",
   }));
   const knowledge = registry.knowledge.map((category) => ({
     id: category.id,
     title: category.title,
+    indexPinyin: category.indexPinyin,
     href: localize(category.href, locale) || `#knowledge-${category.id}`,
     type: "knowledge",
   }));
   const sites = getPublishedSites(registry).map((site) => ({
     id: site.id,
     title: site.title,
+    indexPinyin: site.indexPinyin,
     href: site.href,
     type: "site",
   }));
 
   return [...sections, ...worlds, ...knowledge, ...sites]
-    .map((entry) => ({ ...entry, label: localize(entry.title, locale) }))
-    .sort((a, b) => a.label.localeCompare(b.label, locale === "zh" ? "zh-CN" : "en"));
+    .map((entry) => {
+      const label = localize(entry.title, locale);
+      const sortKey = indexKey(entry, label, locale);
+      const group = sortKey.match(/^[a-z]/i)?.[0].toUpperCase() ?? null;
+      return { ...entry, label, sortKey, group };
+    })
+    .sort((a, b) => {
+      if (a.group === b.group) return indexCollator.compare(a.sortKey, b.sortKey);
+      if (!a.group || !b.group) return a.group ? -1 : 1;
+      return indexCollator.compare(a.group, b.group);
+    });
 };
 
 export const renderIndex = (registry, locale, container) => {
@@ -229,7 +253,7 @@ export const renderIndex = (registry, locale, container) => {
 
   const groups = new Map();
   buildIndexEntries(registry, locale).forEach((entry) => {
-    const letter = entry.label.slice(0, 1).toLocaleUpperCase();
+    const letter = entry.group;
     const existing = groups.get(letter) ?? [];
     existing.push(entry);
     groups.set(letter, existing);
@@ -238,7 +262,12 @@ export const renderIndex = (registry, locale, container) => {
   groups.forEach((entries, letter) => {
     const group = document.createElement("div");
     group.className = "index-letter";
-    group.append(createMetadata(letter));
+    if (letter) {
+      const heading = document.createElement("h3");
+      heading.className = "metadata";
+      heading.textContent = letter;
+      group.append(heading);
+    }
 
     const list = document.createElement("ul");
     entries.forEach((entry) => {
@@ -274,21 +303,37 @@ export const createSearchEntries = (registry, locale, root = document) => {
   return entries;
 };
 
+const focusDestination = (element) => {
+  if (!element) return;
+  if (!element.hasAttribute("tabindex") && element.tabIndex < 0) {
+    element.setAttribute("tabindex", "-1");
+  }
+  element.focus({ preventScroll: true });
+};
+
 export const initMobileMenu = (root = document) => {
   const menu = root.querySelector(".mobile-menu");
-  const navigation = menu?.closest(".global-nav");
-  const syncOpenState = () => {
-    navigation?.classList.toggle("has-open-menu", Boolean(menu?.open));
-  };
+  const summary = menu?.querySelector("summary");
+  if (!menu || !summary) return;
 
-  menu?.addEventListener("toggle", syncOpenState);
-  menu?.querySelectorAll("a, button").forEach((control) => {
+  menu.addEventListener("keydown", (event) => {
+    if (!menu.open || event.key !== "Escape") return;
+    event.preventDefault();
+    menu.open = false;
+    summary.focus({ preventScroll: true });
+  });
+
+  menu.querySelectorAll("a, button").forEach((control) => {
     control.addEventListener("click", () => {
-      menu.removeAttribute("open");
-      syncOpenState();
+      menu.open = false;
+      const href = control.getAttribute("href");
+      if (href?.startsWith("#")) focusDestination(root.getElementById(href.slice(1)));
     });
   });
 };
+
+const isFollowClick = (event) =>
+  event.button === 0 && !event.metaKey && !event.ctrlKey && !event.altKey && !event.shiftKey;
 
 export const initSearch = (
   entries,
@@ -297,9 +342,10 @@ export const initSearch = (
 ) => {
   const dialog = root.querySelector("[data-search-dialog]");
   const input = dialog?.querySelector("[data-search-input]");
+  const clear = dialog?.querySelector("[data-search-clear]");
   const results = dialog?.querySelector("[data-search-results]");
   const status = dialog?.querySelector("[data-search-status]");
-  const openButtons = root.querySelectorAll("[data-search-open]");
+  const openButtons = Array.from(root.querySelectorAll("[data-search-open]"));
 
   if (!(dialog instanceof HTMLDialogElement) ||
       !(input instanceof HTMLInputElement) ||
@@ -310,35 +356,52 @@ export const initSearch = (
 
   let currentMatches = [];
   let lastReportedQuery = "";
+  let composing = false;
+  let returnFocus = null;
+  let resultDestination = null;
+  const viewport = window.visualViewport;
+
+  const syncViewport = () => {
+    if (!dialog.open || !viewport) return;
+    dialog.style.setProperty("--search-view-height", `${viewport.height}px`);
+    dialog.style.setProperty("--search-view-center", `${viewport.offsetTop + viewport.height / 2}px`);
+  };
 
   const renderResults = () => {
     const query = input.value.trim().toLocaleLowerCase();
-    const matches = entries.filter((entry) =>
+    if (clear) clear.hidden = !input.value;
+    currentMatches = entries.filter((entry) =>
       entry.label.toLocaleLowerCase().includes(query)
     );
-    currentMatches = matches;
 
     results.replaceChildren();
-    matches.forEach((entry) => {
+    results.scrollTop = 0;
+    currentMatches.forEach((entry) => {
       const item = document.createElement("li");
       const link = document.createElement("a");
       link.href = entry.href;
       link.textContent = entry.label;
-      link.addEventListener("click", () => {
+      link.addEventListener("click", (event) => {
         reportSearch();
         onResultOpen?.(entry);
+        if (!isFollowClick(event)) return;
+        resultDestination = entry.href.startsWith("#")
+          ? root.getElementById(entry.href.slice(1))
+          : null;
         dialog.close();
       });
       item.append(link);
       results.append(item);
     });
 
+    const count = currentMatches.length;
     status.textContent = dialog.dataset.searchLocale === "zh"
-      ? `${matches.length} 个结果`
-      : `${matches.length} result${matches.length === 1 ? "" : "s"}`;
+      ? `${count} 个结果`
+      : `${count} result${count === 1 ? "" : "s"}`;
   };
 
   const reportSearch = () => {
+    if (composing) return;
     const query = input.value.trim();
     if (!query || query === lastReportedQuery) return;
     lastReportedQuery = query;
@@ -348,24 +411,60 @@ export const initSearch = (
     });
   };
 
-  const openSearch = () => {
-    if (!dialog.open) dialog.showModal();
+  const openSearch = (trigger) => {
+    if (dialog.open) return;
+    returnFocus = trigger;
+    resultDestination = null;
     input.value = "";
+    composing = false;
     lastReportedQuery = "";
     renderResults();
-    window.requestAnimationFrame(() => input.focus());
+    dialog.showModal();
+    input.focus({ preventScroll: true });
+    syncViewport();
   };
 
-  openButtons.forEach((button) => button.addEventListener("click", openSearch));
-  input.addEventListener("input", renderResults);
+  for (const button of openButtons) {
+    button.addEventListener("click", () => {
+      openSearch(button.closest(".mobile-menu")?.querySelector("summary") ?? button);
+    });
+  }
+  clear?.addEventListener("click", () => {
+    input.value = "";
+    input.focus({ preventScroll: true });
+    renderResults();
+  });
+  input.addEventListener("compositionstart", () => { composing = true; });
+  input.addEventListener("compositionend", () => {
+    composing = false;
+    renderResults();
+  });
+  input.addEventListener("input", (event) => {
+    if (!composing && !event.isComposing) renderResults();
+  });
   input.addEventListener("change", reportSearch);
   input.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") reportSearch();
+    if (event.key === "Enter" && !event.isComposing) reportSearch();
   });
+  dialog.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || event.isComposing || composing) return;
+    event.preventDefault();
+    dialog.close();
+  });
+  dialog.addEventListener("close", () => {
+    if (dialog.open) return;
+    focusDestination(resultDestination ?? returnFocus);
+  });
+  viewport?.addEventListener("resize", syncViewport);
+  viewport?.addEventListener("scroll", syncViewport);
   root.addEventListener("keydown", (event) => {
-    if ((event.metaKey || event.ctrlKey) && event.key.toLocaleLowerCase() === "k") {
-      event.preventDefault();
-      openSearch();
-    }
+    if (event.isComposing || !(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== "k") return;
+    event.preventDefault();
+    const active = root.activeElement;
+    const trigger = active?.closest(".mobile-menu")?.querySelector("summary")
+      ?? (active?.matches("body, html") ? null : active)
+      ?? openButtons.find((button) => button.getClientRects().length > 0)
+      ?? root.querySelector(".mobile-menu summary");
+    openSearch(trigger);
   });
 };
