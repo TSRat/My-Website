@@ -88,7 +88,8 @@ test("Knowledge provides eight bilingual routes with no-script access", async ()
     assert.match(page, /data-knowledge-search/);
     assert.match(page, /data-knowledge-filter="all"/);
     assert.match(page, /<noscript>/);
-    assert.match(page, /knowledge\.js\?v=knowledge-library-20260812-1/);
+    assert.match(page, /knowledge\.js\?v=knowledge-library-20261123-1/);
+    assert.doesNotMatch(page, /[·・･‧]/u);
     assert.match(page, /class="knowledge-nav__brand"[^>]+aria-label=/);
     assert.doesNotMatch(page, /<span>TSRat<\/span>/);
     assert.doesNotMatch(page, /fonts\.googleapis|fonts\.gstatic|preconnect/);

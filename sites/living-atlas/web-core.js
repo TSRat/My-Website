@@ -213,9 +213,9 @@ export const buildIndexEntries = (registry, locale) => {
   ];
   const worlds = registry.worlds.map((world) => ({
     id: world.id,
-    title: world.title,
+    title: world.directoryTitle ?? world.title,
     indexPinyin: world.indexPinyin,
-    href: localize(world.href, locale) || `#world-${world.id}`,
+    href: localize(world.href, locale) || null,
     type: "world",
   }));
   const knowledge = registry.knowledge.map((category) => ({
@@ -247,6 +247,20 @@ export const buildIndexEntries = (registry, locale) => {
     });
 };
 
+const createDirectoryLabel = (entry, locale) => {
+  const label = document.createElement(entry.href ? "a" : "span");
+  label.textContent = entry.label;
+  if (entry.href) {
+    label.href = entry.href;
+  } else {
+    label.className = "directory-entry-static";
+    const status = createMetadata(locale === "zh" ? "暂无分类目录" : "No category listing yet");
+    status.classList.add("directory-entry-status");
+    label.append(" ", status);
+  }
+  return label;
+};
+
 export const renderIndex = (registry, locale, container) => {
   if (!container) return;
   container.replaceChildren();
@@ -272,12 +286,10 @@ export const renderIndex = (registry, locale, container) => {
     const list = document.createElement("ul");
     entries.forEach((entry) => {
       const item = document.createElement("li");
-      const link = document.createElement("a");
-      link.href = entry.href;
-      link.textContent = entry.label;
-      link.dataset.contentType = entry.type;
-      if (entry.type === "site") link.dataset.contentId = entry.id;
-      item.append(link);
+      const label = createDirectoryLabel(entry, locale);
+      label.dataset.contentType = entry.type;
+      if (entry.type === "site") label.dataset.contentId = entry.id;
+      item.append(label);
       list.append(item);
     });
 
@@ -354,6 +366,7 @@ export const initSearch = (
     return;
   }
 
+  const locale = dialog.dataset.searchLocale;
   let currentMatches = [];
   let lastReportedQuery = "";
   let composing = false;
@@ -378,24 +391,24 @@ export const initSearch = (
     results.scrollTop = 0;
     currentMatches.forEach((entry) => {
       const item = document.createElement("li");
-      const link = document.createElement("a");
-      link.href = entry.href;
-      link.textContent = entry.label;
-      link.addEventListener("click", (event) => {
-        reportSearch();
-        onResultOpen?.(entry);
-        if (!isFollowClick(event)) return;
-        resultDestination = entry.href.startsWith("#")
-          ? root.getElementById(entry.href.slice(1))
-          : null;
-        dialog.close();
-      });
-      item.append(link);
+      const label = createDirectoryLabel(entry, locale);
+      if (entry.href) {
+        label.addEventListener("click", (event) => {
+          reportSearch();
+          onResultOpen?.(entry);
+          if (!isFollowClick(event)) return;
+          resultDestination = entry.href.startsWith("#")
+            ? root.getElementById(entry.href.slice(1))
+            : null;
+          dialog.close();
+        });
+      }
+      item.append(label);
       results.append(item);
     });
 
     const count = currentMatches.length;
-    status.textContent = dialog.dataset.searchLocale === "zh"
+    status.textContent = locale === "zh"
       ? `${count} 个结果`
       : `${count} result${count === 1 ? "" : "s"}`;
   };

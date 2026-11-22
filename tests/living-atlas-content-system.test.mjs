@@ -55,18 +55,26 @@ test("Living Atlas updates are rendered newest first", () => {
   assert.deepEqual(dates, [...dates].sort().reverse());
 });
 
-test("Living Atlas index contains only navigable destinations", () => {
+test("Living Atlas index labels real destinations and keeps unlisted categories static", () => {
   for (const locale of livingAtlasContent.locales) {
     const entries = buildIndexEntries(livingAtlasContent, locale);
     assert.ok(entries.length >= 16);
     assert.ok(entries.some((entry) => entry.id === "data" && entry.href === "#data"));
+    assert.deepEqual(entries.filter(({ href }) => !href).map(({ id }) => id).sort(), ["fiction", "media"]);
+    const interaction = entries.find(({ id }) => id === "interaction");
+    assert.equal(interaction.href, "#sites");
+    assert.equal(interaction.label, locale === "zh" ? "交互 / 已发布网站" : "Interaction / Published sites");
+    const knowledge = entries.find(({ id }) => id === "knowledge");
+    assert.equal(knowledge.href, locale === "zh" ? "knowledge/zh.html" : "knowledge/");
     entries.forEach((entry) => {
       assert.ok(entry.id);
       assert.notEqual(entry.href, "#");
-      assert.match(
-        entry.href,
-        /^(#[-a-z0-9]+|\.\.\/[A-Z-]+\/|knowledge\/(?:zh\.html|[-a-z]+\/(?:zh\.html)?)?)$/,
-      );
+      if (entry.href) {
+        assert.match(
+          entry.href,
+          /^(#[-a-z0-9]+|\.\.\/[A-Z-]+\/|knowledge\/(?:zh\.html|[-a-z]+\/(?:zh\.html)?)?)$/,
+        );
+      }
       assert.ok(entry.label);
     });
   }
@@ -127,6 +135,8 @@ test("Living Atlas language pages use the shared data hooks without fake links",
     assert.match(page, /href="#data"/);
     assert.match(page, /<script type="module" src="atlas\.js/);
     assert.doesNotMatch(page, /class="world-description"/);
+    assert.match(page, /<button class="search-btn mobile-header-search"[^>]*\bdata-search-open\b/);
+    assert.doesNotMatch(page.match(/<details class="mobile-menu">[\s\S]*?<\/details>/u)?.[0] ?? "", /data-search-open/u);
   }
 
   assert.equal((english.match(/href="\.\.\/">Website Archive<\/a>/g) ?? []).length, 2);

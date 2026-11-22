@@ -171,7 +171,7 @@ export const knowledgeLibrary = {
       type: "output",
       status: "published",
       featured: false,
-      title: { en: "Sartre · Nausea Guide", zh: "《恶心》入门导读" },
+      title: { en: "Sartre / Nausea Guide", zh: "《恶心》入门导读" },
       summary: {
         en: "An interactive reading path into contingency, existence, and the novel's form.",
         zh: "从偶然性、存在与小说形式进入《恶心》的互动阅读路径。",
